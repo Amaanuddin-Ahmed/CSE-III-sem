@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MGIT CSE Semester III - PYQ Practice & Complete Analysis Platform</title>
+  <meta name="description" content="The ultimate one-stop PYQ practice platform for MGIT CSE 3rd Semester. Filter past papers by year, subject, and chapter for smarter exam preparation.">
+  <meta name="keywords" content="MGIT, CSE, Semester 3, PYQs, Previous Year Questions, Data Structures, COA, Discrete Mathematics, Java, Digital Logic Design">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h1>MGIT CSE-III PYQs</h1>
+          <span>Autonomous • Exam Prep Platform</span>
+        </div>
+      </a>
+
+      <nav class="nav-tabs" id="mainNavTabs">
+        <button class="nav-tab-btn active" data-tab="explorer">
+          <i class="fa-solid fa-magnifying-glass"></i> Explorer
+        </button>
+        <button class="nav-tab-btn" data-tab="analytics">
+          <i class="fa-solid fa-chart-column"></i> Analytics & Trends
+        </button>
+        <button class="nav-tab-btn" data-tab="highyield">
+          <i class="fa-solid fa-fire"></i> High Yield (Must-Prep)
+        </button>
+        <button class="nav-tab-btn" data-tab="mock">
+          <i class="fa-solid fa-file-signature"></i> Mock Exam
+        </button>
+        <button class="nav-tab-btn" data-tab="saved">
+          <i class="fa-solid fa-bookmark"></i> Bookmarks (<span id="savedCount">0</span>)
+        </button>
+        <button class="nav-tab-btn" data-tab="syllabus">
+          <i class="fa-solid fa-book-open"></i> Syllabus
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer" class="github-link">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-shield-halved"></i> MGIT Autonomous & JNTUH R22
+      </div>
+      <h2 class="hero-title">
+        The Ultimate One-Stop <span class="highlight">PYQ Practice</span> Platform
+      </h2>
+      <p class="hero-desc">
+        Filter past papers by <strong>year</strong>, <strong>subject</strong>, and <strong>chapter/unit</strong> for smarter exam preparation. Uncover recurring question patterns, model answers, and high-yield weightages across 2020–2024.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value" id="statTotalQues">0</span>
+          <span class="stat-label">PYQ Bank</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">5</span>
+          <span class="stat-label">Core Subjects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">5 Years</span>
+          <span class="stat-label">2020 – 2024</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="statSolvedProgress">0%</span>
+          <span class="stat-label">Solved Progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main>
+
+    <!-- Subject Quick Chips -->
+    <div class="subject-chips-row" id="subjectChipsContainer">
+      <button class="subject-chip active" data-subject="ALL">
+        <i class="fa-solid fa-border-all"></i> All Subjects
+      </button>
+      <button class="subject-chip" data-subject="DS">
+        <i class="fa-solid fa-cubes"></i> Data Structures
+      </button>
+      <button class="subject-chip" data-subject="COA">
+        <i class="fa-solid fa-microchip"></i> COA
+      </button>
+      <button class="subject-chip" data-subject="DM">
+        <i class="fa-solid fa-square-root-variable"></i> Discrete Maths
+      </button>
+      <button class="subject-chip" data-subject="JAVA">
+        <i class="fa-solid fa-mug-hot"></i> OOP Java
+      </button>
+      <button class="subject-chip" data-subject="DLD">
+        <i class="fa-solid fa-toggle-on"></i> Digital Logic Design
+      </button>
+    </div>
+
+    <!-- TAB 1: EXPLORER VIEW -->
+    <div class="tab-view active" id="view-explorer">
+      <!-- Search & Filters Toolbar -->
+      <section class="search-filter-card">
+        <div class="search-bar-row">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search by question keywords, algorithm (e.g. Booth's, AVL, K-Map, Threads)..." autocomplete="off">
+            <span class="search-shortcut">/ to search</span>
+          </div>
+        </div>
+
+        <div class="filters-grid">
+          <div class="filter-group">
+            <label for="filterSubject">Subject</label>
+            <select id="filterSubject" class="filter-select">
+              <option value="ALL">All Subjects</option>
+              <option value="DS">Data Structures (CS301PC)</option>
+              <option value="COA">Computer Organization & Architecture (CS302PC)</option>
+              <option value="DM">Discrete Mathematics (CS303PC)</option>
+              <option value="JAVA">OOP through Java (CS304PC)</option>
+              <option value="DLD">Digital Logic Design (CS305PC)</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterUnit">Unit / Chapter</label>
+            <select id="filterUnit" class="filter-select">
+              <option value="ALL">All Units (1 - 5)</option>
+              <option value="1">Unit 1</option>
+              <option value="2">Unit 2</option>
+              <option value="3">Unit 3</option>
+              <option value="4">Unit 4</option>
+              <option value="5">Unit 5</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterYear">Exam Year</label>
+            <select id="filterYear" class="filter-select">
+              <option value="ALL">All Years (2020 - 2024)</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterExamType">Exam Session</label>
+            <select id="filterExamType" class="filter-select">
+              <option value="ALL">All (Regular & Supply)</option>
+              <option value="Regular">Regular Exams</option>
+              <option value="Supplementary">Supplementary Exams</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterPart">Question Type / Marks</label>
+            <select id="filterPart" class="filter-select">
+              <option value="ALL">All Marks (2M - 10M)</option>
+              <option value="A">Part A (Short - 2 Marks)</option>
+              <option value="B">Part B (Essay - 10 Marks)</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortBy">Sort By</label>
+            <select id="sortBy" class="filter-select">
+              <option value="frequency">Highest Recurrence First</option>
+              <option value="year-desc">Latest Year (2024 to 2020)</option>
+              <option value="unit">Unit Order (1 to 5)</option>
+              <option value="marks">Marks (High to Low)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <div class="active-count" id="resultsCount">
+            Showing <strong>0</strong> questions
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-secondary" id="resetFiltersBtn">
+              <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filters
+            </button>
+            <button class="btn-secondary" id="expandAllSolutionsBtn">
+              <i class="fa-solid fa-angles-down"></i> Expand Solutions
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Questions List Cards -->
+      <section class="questions-container" id="questionsList">
+        <!-- Rendered by JavaScript -->
+      </section>
+    </div>
+
+    <!-- TAB 2: ANALYTICS & TRENDS -->
+    <div class="tab-view" id="view-analytics">
+      <div class="analytics-grid" id="analyticsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 3: HIGH YIELD (MUST-PREP) -->
+    <div class="tab-view" id="view-highyield">
+      <div class="mock-exam-header">
+        <h3><i class="fa-solid fa-fire" style="color: #ef4444;"></i> High-Yield Recurring Topics (Exam-Day Guaranteed List)</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          These topics have appeared in 80% to 100% of past MGIT Semester III examination papers. Mastering these guaranteed concepts ensures scoring 55+ out of 70 marks.
+        </p>
+      </div>
+      <div class="questions-container" id="highYieldContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 4: MOCK EXAM PAPER GENERATOR -->
+    <div class="tab-view" id="view-mock">
+      <div class="mock-exam-header">
+        <h3><i class="fa-solid fa-file-signature"></i> MGIT Autonomous Mock Question Paper Generator</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          Generate authentic examination papers adhering strictly to the MGIT Autonomous structure: <strong>Part A (10 × 2M = 20M)</strong> and <strong>Part B (5 × 10M = 50M with internal choice)</strong>. Total: <strong>70 Marks</strong>.
+        </p>
+
+        <div class="mock-controls-row">
+          <div class="filter-group" style="min-width: 220px;">
+            <label for="mockSubjectSelect">Select Examination Subject</label>
+            <select id="mockSubjectSelect" class="filter-select">
+              <option value="DS">Data Structures (CS301PC)</option>
+              <option value="COA">Computer Organization & Architecture (CS302PC)</option>
+              <option value="DM">Discrete Mathematics (CS303PC)</option>
+              <option value="JAVA">OOP through Java (CS304PC)</option>
+              <option value="DLD">Digital Logic Design (CS305PC)</option>
+            </select>
+          </div>
+
+          <button class="btn-primary" id="generatePaperBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate New Paper
+          </button>
+          <button class="btn-secondary" id="printPaperBtn">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="exam-paper-container" id="mockPaperDisplay">
+        <!-- Generated Mock Paper Rendered Here -->
+      </div>
+    </div>
+
+    <!-- TAB 5: BOOKMARKS & SAVED -->
+    <div class="tab-view" id="view-saved">
+      <div class="mock-exam-header">
+        <h3><i class="fa-solid fa-bookmark" style="color: var(--accent-amber);"></i> Bookmarked & Flagged Questions</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          Quickly review questions you have starred for revision. Solved status and bookmarks are saved automatically in your browser's LocalStorage.
+        </p>
+      </div>
+      <div class="questions-container" id="savedQuestionsContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 6: SYLLABUS & BLUEPRINT -->
+    <div class="tab-view" id="view-syllabus">
+      <div class="analytics-grid" id="syllabusContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <p><strong>MGIT CSE-III PYQs Practice & Analysis Platform</strong></p>
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
+          Designed for Mahatma Gandhi Institute of Technology (MGIT) B.Tech Computer Science & Engineering students.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i> Repository
+        </a>
+        <a href="https://mgit.ac.in" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-building-columns"></i> MGIT Official
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="pyq-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
