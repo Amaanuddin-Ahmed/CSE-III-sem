@@ -1,180 +1,112 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MGIT PYQ Hub — Mahatma Gandhi Institute of Technology CSE Semester III</title>
-  <meta name="description" content="MGIT PYQ Hub — The ultimate one-stop PYQ practice platform. Filter past papers by year, subject, and chapter for smarter exam preparation.">
-  <meta name="keywords" content="MGIT, PYQ Hub, CSE Semester 3, Previous Year Questions, COA, Discrete Mathematics, DBMS, OOP Java, Software Engineering, Environmental Science">
+  <meta name="description" content="MGIT PYQ Hub — Previous Year Questions, Notes and Study Resources for MGIT CSE Semester III.">
+  <meta name="keywords" content="MGIT, PYQ Hub, CSE Semester 3, Previous Year Questions, DM, COA, OOPJ, DBMS, SE, ES, IE">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
   
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
+  <!-- FontAwesome Icons for clean academic glyphs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <header>
-    <div class="nav-container">
-      <a href="#" class="brand">
-        <div class="brand-icon">
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-group" id="brandHomeLink" role="button" tabindex="0" title="MGIT PYQ Hub Home">
+        <div class="brand-seal">
           <i class="fa-solid fa-graduation-cap"></i>
         </div>
-        <div class="brand-text">
-          <h1>MGIT PYQ Hub</h1>
-          <span>Autonomous • CSE Semester III</span>
+        <div class="brand-info">
+          <h1 class="brand-name">MGIT PYQ Hub</h1>
+          <p class="brand-sub">Autonomous &bull; CSE Semester III</p>
         </div>
-      </a>
+      </div>
 
-      <nav class="nav-tabs" id="mainNavTabs">
-        <button class="nav-tab-btn active" data-tab="explorer">
-          <i class="fa-solid fa-magnifying-glass"></i> PYQs Explorer
-        </button>
-        <button class="nav-tab-btn" data-tab="notes">
-          <i class="fa-solid fa-file-lines"></i> Notes (<span id="notesCountBadge">4</span>)
-        </button>
-        <button class="nav-tab-btn" data-tab="highyield">
-          <i class="fa-solid fa-fire"></i> Most Important
-        </button>
-        <button class="nav-tab-btn" data-tab="analytics">
-          <i class="fa-solid fa-chart-column"></i> Analytics & Trends
-        </button>
-        <button class="nav-tab-btn" data-tab="mock">
-          <i class="fa-solid fa-file-signature"></i> Mock Exam
-        </button>
-        <button class="nav-tab-btn" data-tab="saved">
-          <i class="fa-solid fa-bookmark"></i> Bookmarks (<span id="savedCount">0</span>)
-        </button>
-        <button class="nav-tab-btn" data-tab="syllabus">
-          <i class="fa-solid fa-book-open"></i> Syllabus
-        </button>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="btn-icon" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
-          <i class="fa-solid fa-sun"></i>
-        </button>
-        <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary" title="View Entire SEM 3 Google Drive Folder (101 Files)" style="text-decoration: none;">
+      <div class="header-actions">
+        <!-- Top dynamic Drive button -->
+        <a id="topDriveBtn" 
+           href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="top-drive-btn" 
+           title="Open Google Drive Folder">
           <i class="fa-brands fa-google-drive"></i>
-          <span>View Entire PYQ Folder</span>
+          <span id="topDriveBtnText">View Entire PYQ Folder</span>
         </a>
-        <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer" class="github-link">
-          <i class="fa-brands fa-github"></i>
-          <span>GitHub</span>
-        </a>
+
+        <!-- Admin Login Button -->
+        <button id="adminLoginBtn" class="top-admin-btn" type="button" title="Admin Portal Login">
+          <i class="fa-solid fa-lock"></i>
+          <span>Login as Admin</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <i class="fa-solid fa-shield-halved"></i> MGIT Autonomous & JNTUH R22
+  <!-- Main Application Container -->
+  <main class="main-container">
+
+    <!-- Welcome Section -->
+    <section class="welcome-section" id="welcomeSection">
+      <h2 class="welcome-heading">Welcome to MGIT PYQ Hub</h2>
+      <p class="welcome-desc">Your all-in-one platform for MGIT CSE Semester III Previous Year Questions, Notes and Study Resources.</p>
+    </section>
+
+    <!-- Subjects Section (2 Columns Grid) -->
+    <section class="subjects-section" id="subjectsSection">
+      <div class="section-title-wrap">
+        <h3 class="section-title">Subjects</h3>
+        <p class="section-subtitle">Select a subject to access chapter-wise PYQs, notes, and study resources.</p>
       </div>
-      <h2 class="hero-title">
-        The Ultimate One-Stop <span class="highlight">PYQ Practice</span> Platform
-      </h2>
-      <p class="hero-desc">
-        Filter past papers by <strong>year</strong>, <strong>subject</strong>, and <strong>chapter/unit</strong> for smarter exam preparation. Uncover recurring question patterns, model answers, and high-yield weightages across 2020–2024.
-      </p>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value" id="statTotalQues">0</span>
-          <span class="stat-label">PYQ Bank</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">5</span>
-          <span class="stat-label">Core Subjects</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">5 Years</span>
-          <span class="stat-label">2020 – 2024</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value" id="statSolvedProgress">0%</span>
-          <span class="stat-label">Solved Progress</span>
+      <div class="subjects-grid" id="subjectsGrid">
+        <!-- Dynamically populated 7 subjects via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Subject Detail Section (Shows Two Division Boxes: Notes & PYQs) -->
+    <section class="subject-detail-section" id="subjectDetailSection" style="display: none;">
+      
+      <!-- Detail Navigation Bar -->
+      <div class="detail-header-bar">
+        <button id="backToSubjectsBtn" class="btn-back" type="button">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to All Subjects</span>
+        </button>
+
+        <div class="detail-subject-title" id="detailSubjectTitle">
+          <!-- e.g. Discrete Mathematics (CS303PC) -->
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Main Workspace -->
-  <main>
-
-    <!-- Subject Quick Chips -->
-    <div class="subject-chips-row" id="subjectChipsContainer">
-      <button class="subject-chip active" data-subject="ALL">
-        <i class="fa-solid fa-border-all"></i> All Subjects (101 Papers)
-      </button>
-      <button class="subject-chip" data-subject="COA">
-        <i class="fa-solid fa-microchip"></i> COA (23)
-      </button>
-      <button class="subject-chip" data-subject="DM">
-        <i class="fa-solid fa-square-root-variable"></i> Discrete Maths (24)
-      </button>
-      <button class="subject-chip" data-subject="DBMS">
-        <i class="fa-solid fa-database"></i> DBMS (12)
-      </button>
-      <button class="subject-chip" data-subject="OOP">
-        <i class="fa-solid fa-mug-hot"></i> OOP Java (20)
-      </button>
-      <button class="subject-chip" data-subject="SE">
-        <i class="fa-solid fa-laptop-code"></i> Software Eng. (17)
-      </button>
-      <button class="subject-chip" data-subject="ES">
-        <i class="fa-solid fa-leaf"></i> Env. Science (5)
-      </button>
-      <button class="subject-chip" data-subject="IE">
-        <i class="fa-solid fa-lightbulb"></i> I&E (Contribute)
-      </button>
-      <button class="subject-chip" data-subject="DS">
-        <i class="fa-solid fa-cubes"></i> Data Structures
-      </button>
-    </div>
-
-    <!-- TAB 1: EXPLORER VIEW -->
-    <div class="tab-view active" id="view-explorer">
-      <!-- Search & Filters Toolbar -->
-      <section class="search-filter-card">
-        <div class="search-bar-row">
-          <div class="search-input-wrapper">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" class="search-input" placeholder="Search by question keywords, algorithm (e.g. Booth's, AVL, K-Map, SQL, Threads)..." autocomplete="off">
-            <span class="search-shortcut">/ to search</span>
-          </div>
-        </div>
-
-        <div class="filters-grid">
-          <div class="filter-group">
-            <label for="filterSubject">Subject</label>
-            <select id="filterSubject" class="filter-select">
-              <option value="ALL">All Subjects (7 Core)</option>
-              <option value="COA">Computer Organization & Architecture (CS302PC)</option>
-              <option value="DM">Discrete Mathematics (CS303PC)</option>
-              <option value="DBMS">Database Management Systems (CS304PC)</option>
-              <option value="OOP">OOP through Java (CS305PC)</option>
-              <option value="SE">Software Engineering (CS306PC)</option>
-              <option value="ES">Environmental Science (MC301ES)</option>
-              <option value="IE">Innovation & Entrepreneurship (MC302IE)</option>
-              <option value="DS">Data Structures (CS301PC)</option>
-            </select>
+      <!-- Two Division Boxes Container -->
+      <div class="two-divisions-wrapper">
+        
+        <!-- Division Box 1: Notes -->
+        <div class="division-box notes-division" id="notesDivisionBox">
+          <div class="division-box-header">
+            <div class="division-header-title">
+              <i class="fa-regular fa-file-lines"></i>
+              <h4>Notes & Resources</h4>
+            </div>
+            <button class="btn-contribute" data-contrib-type="Notes" type="button">
+              <i class="fa-solid fa-plus"></i>
+              <span>Contribute</span>
+            </button>
           </div>
 
-          <div class="filter-group">
-            <label for="filterUnit">Unit / Chapter</label>
-            <select id="filterUnit" class="filter-select">
-              <option value="ALL">All Units (1 - 5)</option>
+          <div class="division-controls">
+            <label for="notesChapterSelect" class="control-label">Select Chapter / Unit:</label>
+            <select id="notesChapterSelect" class="form-select">
+              <option value="all">All Chapters</option>
               <option value="1">Unit 1</option>
               <option value="2">Unit 2</option>
               <option value="3">Unit 3</option>
@@ -183,187 +115,380 @@
             </select>
           </div>
 
-          <div class="filter-group">
-            <label for="filterYear">Exam Year</label>
-            <select id="filterYear" class="filter-select">
-              <option value="ALL">All Years (2020 - 2024)</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-              <option value="2020">2020</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filterExamType">Exam Session</label>
-            <select id="filterExamType" class="filter-select">
-              <option value="ALL">All (Regular & Supply)</option>
-              <option value="Regular">Regular Exams</option>
-              <option value="Supplementary">Supplementary Exams</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filterPart">Question Type / Marks</label>
-            <select id="filterPart" class="filter-select">
-              <option value="ALL">All Marks (2M - 10M)</option>
-              <option value="A">Part A (Short - 2 Marks)</option>
-              <option value="B">Part B (Essay - 10 Marks)</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="sortBy">Sort By</label>
-            <select id="sortBy" class="filter-select">
-              <option value="frequency">Highest Recurrence First</option>
-              <option value="year-desc">Latest Year (2024 to 2020)</option>
-              <option value="unit">Unit Order (1 to 5)</option>
-              <option value="marks">Marks (High to Low)</option>
-            </select>
+          <div class="notes-content-list" id="notesListContainer">
+            <!-- Notes list populated dynamically -->
           </div>
         </div>
 
-        <div class="filter-actions">
-          <div class="active-count" id="resultsCount">
-            Showing <strong>0</strong> questions
-          </div>
-          <div style="display: flex; gap: 0.5rem;">
-            <button class="btn-secondary" id="resetFiltersBtn">
-              <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filters
-            </button>
-            <button class="btn-secondary" id="expandAllSolutionsBtn">
-              <i class="fa-solid fa-angles-down"></i> Expand Solutions
+        <!-- Division Box 2: PYQs -->
+        <div class="division-box pyqs-division" id="pyqsDivisionBox">
+          <div class="division-box-header">
+            <div class="division-header-title">
+              <i class="fa-solid fa-book-bookmark"></i>
+              <h4>Previous Year Questions</h4>
+            </div>
+            <button class="btn-contribute" data-contrib-type="PYQ" type="button">
+              <i class="fa-solid fa-plus"></i>
+              <span>Contribute</span>
             </button>
           </div>
-        </div>
-      </section>
 
-      <!-- Questions List Cards -->
-      <section class="questions-container" id="questionsList">
-        <!-- Rendered by JavaScript -->
-      </section>
-    </div>
+          <!-- PYQ Filter Controls: Year Checkboxes -->
+          <div class="pyq-filters-container">
+            <div class="filter-group-header">
+              <span class="filter-heading">Filter by Academic Year:</span>
+            </div>
+            <div class="year-checkboxes-row" id="yearCheckboxesRow">
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2024" checked> 2024
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2023" checked> 2023
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2022" checked> 2022
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2021" checked> 2021
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2020" checked> 2020
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" class="year-filter-cb" value="2019"> 2019
+              </label>
+            </div>
 
-    <!-- TAB: NOTES & CHAPTER STUDY MATERIAL -->
-    <div class="tab-view" id="view-notes">
-      <div class="mock-exam-header">
-        <h3><i class="fa-solid fa-file-lines" style="color: var(--accent-blue);"></i> Approved Chapter Notes & Reference Materials</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">
-          Verified chapter-wise notes and learning resources from the authoritative SEM 3 Google Drive repository. Direct PDF links open in Google Drive.
-        </p>
-      </div>
-      <div class="analytics-grid" id="notesListContainer">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
+            <!-- Dynamic Question Count Summary -->
+            <div class="pyq-count-banner" id="pyqCountBanner">
+              Showing 0 authentic questions from selected years
+            </div>
 
-    <!-- TAB 2: ANALYTICS & TRENDS -->
-    <div class="tab-view" id="view-analytics">
-      <div class="analytics-grid" id="analyticsGrid">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-
-    <!-- TAB 3: HIGH YIELD (MOST IMPORTANT) -->
-    <div class="tab-view" id="view-highyield">
-      <div class="mock-exam-header">
-        <h3><i class="fa-solid fa-fire" style="color: #ef4444;"></i> Most Important Questions (Historical Recurrence Evidence)</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">
-          These topics have appeared in 80% to 100% of past MGIT Semester III examination papers. Prioritized by historical frequency across 2020–2024 papers.
-        </p>
-      </div>
-      <div class="questions-container" id="highYieldContainer">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-
-    <!-- TAB 4: MOCK EXAM PAPER GENERATOR -->
-    <div class="tab-view" id="view-mock">
-      <div class="mock-exam-header">
-        <h3><i class="fa-solid fa-file-signature"></i> MGIT Autonomous Mock Question Paper Generator</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">
-          Generate authentic examination papers adhering strictly to the MGIT Autonomous structure: <strong>Part A (10 × 2M = 20M)</strong> and <strong>Part B (5 × 10M = 50M with internal choice)</strong>. Total: <strong>70 Marks</strong>.
-        </p>
-
-        <div class="mock-controls-row">
-          <div class="filter-group" style="min-width: 220px;">
-            <label for="mockSubjectSelect">Select Examination Subject</label>
-            <select id="mockSubjectSelect" class="filter-select">
-              <option value="COA">Computer Organization & Architecture (CS302PC)</option>
-              <option value="DM">Discrete Mathematics (CS303PC)</option>
-              <option value="DBMS">Database Management Systems (CS304PC)</option>
-              <option value="OOP">OOP through Java (CS305PC)</option>
-              <option value="SE">Software Engineering (CS306PC)</option>
-              <option value="ES">Environmental Science (MC301ES)</option>
-              <option value="DS">Data Structures (CS301PC)</option>
-            </select>
+            <!-- Part A vs Part B Toggle -->
+            <div class="part-toggle-wrapper">
+              <span class="filter-heading">Exam Part:</span>
+              <div class="part-buttons" id="partToggleButtons">
+                <button type="button" class="part-btn active" data-part="all">All Questions</button>
+                <button type="button" class="part-btn" data-part="A">Part A (2 Marks)</button>
+                <button type="button" class="part-btn" data-part="B">Part B (5/10 Marks)</button>
+              </div>
+            </div>
           </div>
 
-          <button class="btn-primary" id="generatePaperBtn">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate New Paper
-          </button>
-          <button class="btn-secondary" id="printPaperBtn">
-            <i class="fa-solid fa-print"></i> Print / Save as PDF
-          </button>
+          <!-- Questions List -->
+          <div class="pyq-questions-list" id="questionsListContainer">
+            <!-- Questions rendered dynamically -->
+          </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Divisions -->
+    <footer class="bottom-footer">
+      <!-- Division 1: WhatsApp Feedback -->
+      <div class="footer-division feedback-division">
+        <a href="https://wa.me/916303191696?text=Hello%20Amaan,%20I%20have%20an%20idea%20to%20improve%20MGIT%20PYQ%20Hub:%20" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Got an Idea to Improve ? Let me know</span>
+        </a>
       </div>
 
-      <div class="exam-paper-container" id="mockPaperDisplay">
-        <!-- Generated Mock Paper Rendered Here -->
+      <!-- Division 2: Attribution -->
+      <div class="footer-division attribution-division">
+        <p class="attribution-text">Made by Amaan..</p>
       </div>
-    </div>
-
-    <!-- TAB 5: BOOKMARKS & SAVED -->
-    <div class="tab-view" id="view-saved">
-      <div class="mock-exam-header">
-        <h3><i class="fa-solid fa-bookmark" style="color: var(--accent-amber);"></i> Bookmarked & Flagged Questions</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">
-          Quickly review questions you have starred for revision. Solved status and bookmarks are saved automatically in your browser's LocalStorage.
-        </p>
-      </div>
-      <div class="questions-container" id="savedQuestionsContainer">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-
-    <!-- TAB 6: SYLLABUS & BLUEPRINT -->
-    <div class="tab-view" id="view-syllabus">
-      <div class="analytics-grid" id="syllabusContainer">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
+    </footer>
 
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div>
-        <p><strong>MGIT PYQ Hub</strong> &bull; Made by Amaan</p>
-        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
-          Autonomous academic resource platform for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III.
-        </p>
+  <!-- Floating Gemini AI Button -->
+  <button id="floatingGeminiBtn" class="floating-gemini-btn" type="button" title="Ask Gemini AI Assistant" aria-label="Open Gemini AI Assistant">
+    <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+      <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+    </svg>
+    <span class="gemini-btn-text">AI Help</span>
+  </button>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: Question Detail Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="questionModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalQuestionTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-badge" id="modalSubjectBadge">COA</span>
+          <span class="modal-badge secondary" id="modalPartBadge">Part A &bull; 2 Marks</span>
+          <span class="modal-badge tertiary" id="modalUnitBadge">Unit 1</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeQuestionModalBtn" aria-label="Close">&times;</button>
       </div>
 
-      <div class="footer-links">
-        <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-google-drive"></i> SEM 3 Drive (101 Files)
-        </a>
-        <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" style="color: #16a34a; font-weight: 600;">
-          <i class="fa-brands fa-whatsapp"></i> Got an idea? Help improve it
-        </a>
-        <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i> Repository
-        </a>
-        <a href="#admin-login" onclick="alert('Admin Login: Use Supabase Dashboard or configured server environment credentials.'); return false;" style="color: var(--text-muted); font-size: 0.75rem;">
-          <i class="fa-solid fa-lock"></i> Login as Admin
-        </a>
+      <div class="modal-body">
+        <h3 class="modal-question-text" id="modalQuestionTitle">Question Text</h3>
+
+        <div class="modal-details-grid">
+          <div class="detail-card">
+            <span class="detail-title">Years Appeared</span>
+            <div class="detail-val" id="modalYearsAppeared">2024, 2022, 2020</div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-title">Recurrence Record</span>
+            <div class="detail-val" id="modalRecurrence">Repeated 3 times</div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-title">Original Paper in Drive</span>
+            <div class="detail-val" id="modalPaperName">Jan 2024 reg.pdf (Page 1)</div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-title">Exam Outcome</span>
+            <div class="detail-val" id="modalOutcome">Course Outcome 1</div>
+          </div>
+        </div>
+
+        <div class="modal-tip-box" id="modalTipContainer">
+          <div class="tip-header">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="tip-label">Exam Tip</span>
+          </div>
+          <p class="tip-content" id="modalTipText">Tip: Provide the memory lookup equation EA = A vs EA = [A] for full marks.</p>
+        </div>
+
+        <div class="modal-actions-bar">
+          <a id="modalOpenDrivePaperBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+            <i class="fa-brands fa-google-drive"></i>
+            <span>Open Original Paper in Google Drive</span>
+          </a>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- Scripts -->
+  <!-- ============================================================== -->
+  <!-- MODAL: Contribution Warning Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="contribWarningModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog small-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-circle-exclamation"></i> Contribution Guidelines</h4>
+        <button type="button" class="modal-close-btn" id="closeWarningModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="guideline-lead">
+          Please do not upload random or irrelevant PDFs at random places.
+        </p>
+        <p class="guideline-sub">
+          To keep MGIT PYQ Hub reliable and high-quality for everyone, please upload only authentic MGIT CSE Semester III question papers, verified lecture notes, or syllabus resources with correct subject and unit tags.
+        </p>
+        <p class="guideline-sub">
+          All uploads are held in a private moderation queue and verified before publication.
+        </p>
+      </div>
+      <div class="modal-footer-buttons">
+        <button type="button" class="btn-secondary-flat" id="cancelContribBtn">Cancel</button>
+        <button type="button" class="btn-action-primary" id="agreeContribBtn">I Understand &amp; Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: File Upload & Metadata Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="contribUploadModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Study Resources</h4>
+        <button type="button" class="modal-close-btn" id="closeUploadModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="contribUploadForm" class="contrib-form">
+          
+          <div class="form-group">
+            <label for="uploadSubjectSelect" class="form-label">Subject *</label>
+            <select id="uploadSubjectSelect" class="form-select" required>
+              <option value="DM">DM — Discrete Mathematics</option>
+              <option value="COA">COA — Computer Organization &amp; Architecture</option>
+              <option value="OOPJ">OOPJ — Object Oriented Programming with Java</option>
+              <option value="DBMS">DBMS — Database Management Systems</option>
+              <option value="SE">SE — Software Engineering</option>
+              <option value="ES">ES — Environmental Studies</option>
+              <option value="IE">I&amp;E — Innovation and Entrepreneurship</option>
+            </select>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="uploadResourceType" class="form-label">Resource Type *</label>
+              <select id="uploadResourceType" class="form-select" required>
+                <option value="PYQ">Previous Year Question Paper (PYQ)</option>
+                <option value="Notes">Lecture Notes / Study Material</option>
+                <option value="Model Paper">Model / Sample Question Paper</option>
+                <option value="Assignment">Assignment / Mid Exam Solution</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="uploadChapterSelect" class="form-label">Chapter / Unit *</label>
+              <select id="uploadChapterSelect" class="form-select" required>
+                <option value="1">Unit 1</option>
+                <option value="2">Unit 2</option>
+                <option value="3">Unit 3</option>
+                <option value="4">Unit 4</option>
+                <option value="5">Unit 5</option>
+                <option value="Mixed">Mixed (Multiple Units / Entire Syllabus)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="uploadExamYear" class="form-label">Exam Year / Session (Optional)</label>
+              <input type="text" id="uploadExamYear" class="form-input" placeholder="e.g. 2024 Regular / Supplementary">
+            </div>
+
+            <div class="form-group">
+              <label for="uploadContributorName" class="form-label">Your Name / Roll No (Optional)</label>
+              <input type="text" id="uploadContributorName" class="form-input" placeholder="e.g. MGIT CSE Student">
+            </div>
+          </div>
+
+          <div class="form-group file-dropzone-group">
+            <label class="form-label">Select Files (PDF, PNG, JPG) *</label>
+            <div class="file-picker-box" id="filePickerBox">
+              <i class="fa-solid fa-file-arrow-up picker-icon"></i>
+              <p class="picker-main">Click here to browse files from your device</p>
+              <p class="picker-sub">Multiple files supported (Max 25 MB per file)</p>
+              <input type="file" id="contribFilesInput" multiple accept=".pdf,.png,.jpg,.jpeg" style="display: none;">
+            </div>
+            <div class="selected-files-list" id="selectedFilesList"></div>
+          </div>
+
+          <div class="modal-footer-buttons">
+            <button type="button" class="btn-secondary-flat" id="cancelUploadBtn">Cancel</button>
+            <button type="submit" class="btn-action-primary" id="submitUploadBtn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Submit for Moderation</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: Admin Portal Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="adminModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog large-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-shield-halved"></i> Admin Management Portal</h4>
+        <button type="button" class="modal-close-btn" id="closeAdminModalBtn" aria-label="Close">&times;</button>
+      </div>
+
+      <!-- Admin Login Form (Shown when logged out) -->
+      <div id="adminLoginFormContainer" class="modal-body">
+        <p class="admin-login-notice">Enter administrator credentials to review pending contributions and manage resources.</p>
+        <form id="adminLoginForm" class="admin-form">
+          <div class="form-group">
+            <label for="adminUsername" class="form-label">Admin Username</label>
+            <input type="text" id="adminUsername" class="form-input" required autocomplete="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="adminPassword" class="form-label">Admin Password</label>
+            <input type="password" id="adminPassword" class="form-input" required autocomplete="current-password" placeholder="Password">
+          </div>
+          <div class="admin-form-actions">
+            <button type="submit" class="btn-action-primary">Sign In as Admin</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Admin Dashboard View (Shown when logged in) -->
+      <div id="adminDashboardContainer" class="modal-body" style="display: none;">
+        <div class="admin-top-stats">
+          <div class="admin-stat-card">
+            <span class="stat-num" id="adminPendingCount">0</span>
+            <span class="stat-lbl">Pending Review</span>
+          </div>
+          <div class="admin-stat-card">
+            <span class="stat-num" id="adminVerifiedCount">101</span>
+            <span class="stat-lbl">Drive Inventory Items</span>
+          </div>
+          <div class="admin-stat-card">
+            <span class="stat-num">7</span>
+            <span class="stat-lbl">Core Subjects</span>
+          </div>
+        </div>
+
+        <div class="moderation-section">
+          <h5 class="moderation-title">Student Contributions Moderation Queue</h5>
+          <div class="moderation-table-wrapper" id="moderationTableWrapper">
+            <p class="empty-queue-msg">No submissions currently pending moderation.</p>
+          </div>
+        </div>
+
+        <div class="admin-footer-bar">
+          <button type="button" id="adminLogoutBtn" class="btn-secondary-flat">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: Gemini AI Assistant Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="geminiModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title">
+          <svg class="gemini-title-icon" viewBox="0 0 24 24" width="20" height="20" fill="#2563eb">
+            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+          </svg>
+          Gemini AI Study Assistant
+        </h4>
+        <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="gemini-intro-text">
+          Ask questions regarding MGIT CSE Semester III subjects, syllabus definitions, or exam question strategies.
+        </p>
+
+        <!-- Prompt suggestions -->
+        <div class="gemini-prompt-chips">
+          <button type="button" class="prompt-chip" data-query="Explain Addressing Modes in Computer Organization (COA)">COA Addressing Modes</button>
+          <button type="button" class="prompt-chip" data-query="Key topics in DBMS Normalization (1NF, 2NF, 3NF, BCNF)">DBMS Normalization</button>
+          <button type="button" class="prompt-chip" data-query="How to solve Recurrence Relations using Characteristic Equation in DM">DM Recurrence Relations</button>
+          <button type="button" class="prompt-chip" data-query="Difference between Overloading and Overriding in Java OOP">Java OOP Differences</button>
+        </div>
+
+        <!-- Chat Output Box -->
+        <div class="gemini-chat-output" id="geminiChatOutput">
+          <div class="ai-msg initial-msg">
+            <p>Hello! I am your MGIT CSE Sem III study assistant. Select a topic above or enter your question below to get concise, syllabus-aligned help.</p>
+          </div>
+        </div>
+
+        <!-- Input Row -->
+        <form id="geminiQueryForm" class="gemini-input-row">
+          <input type="text" id="geminiQueryInput" class="form-input" placeholder="Ask a subject question or concept..." required>
+          <button type="submit" class="btn-action-primary" id="geminiSendBtn">
+            <span>Ask</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Scripts -->
   <script src="pyq-data.js"></script>
   <script src="app.js"></script>
 </body>

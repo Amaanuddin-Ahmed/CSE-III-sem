@@ -1,191 +1,133 @@
-# 🎓 MGIT CSE-III-sem: The Ultimate One-Stop PYQ Practice Platform
+# 🏛️ MGIT PYQ Hub — CSE Semester III
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Curriculum](https://img.shields.io/badge/Curriculum-MGIT%20Autonomous%20%7C%20JNTUH%20R22-purple.svg)](https://mgit.ac.in)
-[![Exam Coverage](https://img.shields.io/badge/PYQs%20Analyzed-2020--2024%20(5%20Years)-emerald.svg)](#-examination-coverage)
-[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20ES6+-orange.svg)](#-project-architecture)
-[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages%20Ready-success.svg)](https://Amaanuddin-Ahmed.github.io/CSE-III-sem/)
+[![Curriculum](https://img.shields.io/badge/Curriculum-MGIT%20Autonomous%20%7C%20CSE%20Semester%20III-1e3a8a.svg)](https://mgit.ac.in)
+[![Source Drive](https://img.shields.io/badge/Google%20Drive-101%20Verified%20Files-2563eb.svg)](https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing)
+[![License: MIT](https://img.shields.io/badge/License-MIT-slate.svg)](LICENSE)
 
-> **The ultimate one-stop PYQ practice platform. Filter past papers by year, subject, and chapter for smarter exam preparation.**
+> **Your all-in-one platform for MGIT CSE Semester III Previous Year Questions, Notes and Study Resources.**
 
 ---
 
 ## 📖 Overview
 
-**MGIT CSE-III-sem** is an interactive, high-performance web platform engineered specifically for **Mahatma Gandhi Institute of Technology (MGIT)** Computer Science and Engineering students (B.Tech II Year, Semester I).
+**MGIT PYQ Hub** is a clean, formal web application specifically engineered for **Mahatma Gandhi Institute of Technology (MGIT)** Computer Science and Engineering students (B.Tech II Year, Semester I / Semester III).
 
-Preparing for university and autonomous semester end examinations often means hunting through scattered PDF question papers without structured solutions or weightage insights. This platform consolidates **5 years (2020–2024)** of Regular and Supplementary examinations into an intuitive, filterable, single-page application equipped with topic frequency analysis, model solutions, exam blueprints, and an authentic mock paper simulator.
-
----
-
-## 🚀 Live Demo
-
-- **Hosted URL**: [https://Amaanuddin-Ahmed.github.io/CSE-III-sem/](https://Amaanuddin-Ahmed.github.io/CSE-III-sem/)
-- **Quick Local Run**: Open [`index.html`](file:///c:/Users/DELL/OneDrive/Desktop/Exm%20prep/CSE-III-sem/index.html) directly in any modern web browser — no build steps or server dependencies required!
+Instead of sifting through fragmented folders, handwritten copies, or unorganized PDFs, MGIT PYQ Hub organizes **101 authentic past papers and lecture notes** from the official SEM 3 Google Drive repository into a streamlined, accessible academic interface.
 
 ---
 
-## ✨ Key Features
+## 📚 Subject Coverage (MGIT CSE Semester III)
 
-| Feature | Description |
-| :--- | :--- |
-| 🔍 **Multi-Dimensional Filter Engine** | Instantly filter past questions simultaneously by **Subject**, **Unit (1 to 5)**, **Year (2020–2024)**, **Exam Session (Regular / Supplementary)**, and **Marks (Part A vs Part B)**. |
-| ⚡ **Instant Real-Time Search** | Fast keyword search covering question text, algorithms, data structures, and tags. Hit `/` anywhere on the page to focus the search bar. |
-| 📊 **Trend & Weightage Analytics** | Visual frequency meters displaying question distributions per unit to reveal recurring question patterns. |
-| 🎯 **High-Yield "Guaranteed" Master List** | Hand-curated list of highest-frequency questions (80%–100% recurrence rate) that consistently yield 50+ out of 70 marks. |
-| 📝 **MGIT Autonomous Mock Exam Generator** | Generates full-length examination question papers matching the exact **MGIT Autonomous Blueprint** (Part A: 20 Marks + Part B: 50 Marks with internal choices). |
-| 🖨️ **Print & PDF Export Mode** | Clean, optimized print styles (`@media print`) enabling one-click generation of offline question papers and revision sheets. |
-| 💡 **Model Solutions & Examiner Tips** | Expandable step-by-step solution guides, C/Java code routines, mathematical derivations, and tips highlighting what MGIT evaluators look for. |
-| 📌 **LocalStorage Progress Tracker** | Mark questions as **Solved** and **Bookmark** difficult questions for revision. Progress is saved locally in your browser. |
-| 🌓 **Modern Dark / Light Theme** | Fluid glassmorphism UI with smooth transitions and full responsive layout for smartphones, tablets, and desktops. |
+The platform strictly covers all **7 syllabus subjects**:
 
----
-
-## 📚 Subject Coverage (MGIT Autonomous / R22)
-
-The platform provides complete chapter-wise breakdowns across all 5 core subjects:
-
-```
-MGIT B.Tech CSE — Semester III
-├── 1. Data Structures (CS301PC)
-│   ├── Unit 1: Stacks, Queues, Circular Queues & Infix-Postfix Conversion
-│   ├── Unit 2: Singly, Doubly & Circular Linked Lists
-│   ├── Unit 3: Trees, Binary Search Trees, AVL Tree Rotations & B-Trees
-│   ├── Unit 4: Graphs, BFS/DFS, Minimum Spanning Trees (Prim's & Kruskal's)
-│   └── Unit 5: Searching, Quick/Merge Sort & Hash Collision Resolution
-│
-├── 2. Computer Organization & Architecture (CS302PC)
-│   ├── Unit 1: Basic Computer Organization & Addressing Modes
-│   ├── Unit 2: CPU Register Organization, ALU & Microprogrammed Control Unit
-│   ├── Unit 3: Computer Arithmetic & Booth's Multiplication Algorithm
-│   ├── Unit 4: Memory Hierarchy, Cache Mapping (Direct, Associative, Set)
-│   └── Unit 5: I/O Organization, DMA Transfer Modes & Pipelining Hazards
-│
-├── 3. Discrete Mathematics (CS303PC / MA303BS)
-│   ├── Unit 1: Mathematical Logic, PDNF/PCNF & Rules of Inference
-│   ├── Unit 2: Set Theory, Divisibility Relations, Hasse Diagrams & Lattices
-│   ├── Unit 3: Algebraic Structures, Groups, Subgroups & Lagrange's Theorem
-│   ├── Unit 4: Combinatorics, Pigeonhole Principle & Recurrence Relations
-│   └── Unit 5: Graph Theory, Euler Circuits & Hamiltonian Cycles
-│
-├── 4. Object-Oriented Programming through Java (CS304PC)
-│   ├── Unit 1: OOP Principles, JVM Architecture & Bytecode Independence
-│   ├── Unit 2: Inheritance, Polymorphism, Diamond Problem & Interfaces
-│   ├── Unit 3: Exception Handling, Custom Exceptions & Thread Synchronization
-│   ├── Unit 4: Java Collections Framework (ArrayList, LinkedList, Maps)
-│   └── Unit 5: File I/O Streams, Serialization & GUI Event Handling
-│
-└── 5. Digital Logic Design (CS305PC)
-    ├── Unit 1: Number Systems, 1's & 2's Complements & De Morgan's Theorems
-    ├── Unit 2: 4-Variable K-Map Minimization & Universal NAND/NOR Realization
-    ├── Unit 3: Combinational Circuits (Full Adders, 8:1 MUX using 4:1 MUX)
-    ├── Unit 4: Sequential Circuits, Flip-Flops & Master-Slave JK Elimination
-    └── Unit 5: Synchronous Up/Down Counter Design using Excitation Tables
-```
+| Code | Subject | Short Code | Verified Drive Files | Notes Available |
+| :--- | :--- | :---: | :---: | :---: |
+| **CS303PC** | Discrete Mathematics | `DM` | 24 Items (22 PYQs + 2 Scanned) | Contribution Mode |
+| **CS302PC** | Computer Organization & Architecture | `COA` | 23 Items (21 PYQs + 2 Notes) | Unit 1 Notes Verified |
+| **CS305PC** | Object-Oriented Programming through Java | `OOPJ` | 20 Java Past Papers | Contribution Mode |
+| **CS301PC** | Database Management Systems | `DBMS` | 12 Past Papers | Contribution Mode |
+| **CS304PC** | Software Engineering | `SE` | 17 Past Papers | Contribution Mode |
+| **MC301HS** | Environmental Studies | `ES` | 5 Items (3 PYQs + 2 Notes) | Unit 1 & 2 Notes Verified |
+| **MC302IE** | Innovation and Entrepreneurship | `I&E` | Drive Bank Pending | Open for Contributions |
 
 ---
 
-## 🎯 Examination Pattern (MGIT Autonomous Scheme)
+## ✨ Key Features & Architecture
 
-The question papers generated by this platform strictly adhere to the MGIT Autonomous End-Semester structure:
+### 1. Clean, Formal Academic Design
+- **Calm, Neutral Palette**: Built with a soft neutral gradient background (`#f7f9fa` to `#edf1f5`) ensuring crisp contrast without stark sterile white or harsh dark themes.
+- **2-Column Responsive Grid**: Clear subject navigation with large subject icons, short codes, and resource metrics.
+- **Zero Gimmicks**: Strictly avoids neon colors, distracting gradients, fake testimonials, and checkmark bullets.
 
-- **Duration**: 3 Hours
-- **Total Marks**: 70 Marks
+### 2. Dynamic Google Drive Integration
+- **Context-Aware Drive Navigation**: Top header features a prominent Drive button that automatically links to the **Entire SEM 3 PYQ Folder** (`1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr`) on the homepage, and dynamically adapts to the specific subject's Drive folder (e.g. COA, DM, OOPJ, DBMS, SE, ES) whenever that subject is opened.
 
-### 1. PART - A (Compulsory: 20 Marks)
-- Contains 10 short questions (2 from each of the 5 units).
-- Each question carries **2 Marks** ($10 \times 2 = 20\text{ Marks}$).
+### 3. Dual-Division Subject Exploration
+When selecting any subject, the workspace opens into two focused divisions:
+- **Notes & Resources**: Chapter-wise dropdown menu (Unit 1 to Unit 5, or All Chapters) displaying verified lecture notes with direct Google Drive view links.
+- **Previous Year Questions (PYQs)**:
+  - **Academic Year Checkboxes**: Filter questions interactively across years (2024, 2023, 2022, 2021, 2020, 2019) with a live dynamic count banner.
+  - **Part A vs Part B Toggle**: Filter by Part A (2 Marks short questions) or Part B (5/10 Marks long answer essay questions).
+  - **Question Detail Modal**: Clicking any question opens an in-depth analysis showing recurrence records, the exact source PDF paper name in Google Drive, page numbers, and concise tips (`Tip: ...`).
 
-### 2. PART - B (Essay Questions with Internal Choice: 50 Marks)
-- Covers all 5 units sequentially.
-- Each unit contains **2 questions with internal choice** (e.g. Q1 OR Q2 for Unit 1).
-- Students answer **one full question per unit**.
-- Each question carries **10 Marks** ($5 \times 10 = 50\text{ Marks}$).
+### 4. Controlled Student Contribution Workflow
+- Every subject provides a **+ Contribute** action in both Notes and PYQs divisions.
+- A **Contribution Guideline Pop-up** instructs contributors not to upload random or unverified files.
+- Mobile and desktop file pickers support multiple-file selection (`.pdf`, `.png`, `.jpg`) with metadata tagging (Subject, Resource Type, Unit 1–5 or "Mixed", and Academic Year).
+- All contributions are safely placed into a private moderation queue for verification.
+
+### 5. Private Admin Portal
+- Accessible via the **Login as Admin** button in the header.
+- Displays live statistics, moderation review queue, and one-click Approve / Reject moderation controls.
+
+### 6. Floating Gemini AI Study Assistant
+- A subtle floating button in the bottom-right corner provides instant access to syllabus-aligned concept explanations and study tips.
+- Interactive prompt chips for rapid guidance on COA Addressing Modes, DBMS Normalization, DM Recurrence Relations, and Java OOP principles.
+
+### 7. Direct Feedback & Attribution
+- Dedicated feedback division connecting directly to WhatsApp: [Got an Idea to Improve ? Let me know](https://wa.me/916303191696).
+- Attribution: **Made by Amaan..**
 
 ---
 
-## 📂 Project Architecture
+## 📁 Repository Structure
 
 ```
 CSE-III-sem/
-├── index.html         # Semantic HTML5 single-page application & responsive UI
-├── style.css          # Glassmorphic dark/light theme & print stylesheet
-├── app.js             # Filter engine, search, bookmark state, & mock paper builder
-├── pyq-data.js        # Structured dataset of MGIT PYQs (2020-2024) with solutions
-├── .gitignore         # Clean repository ignore patterns
-└── README.md          # Comprehensive project documentation
+├── index.html                   # Main single-page application interface
+├── style.css                    # Formal academic light stylesheet
+├── app.js                       # Interactive UI, filters, modal logic & admin queue
+├── pyq-data.js                  # Authentic questions database, notes & Drive metadata
+├── MGIT_PYQ_HUB_MASTER_SPEC.md  # Master product & technical specification
+├── README.md                    # Project documentation
+├── LICENSE                      # MIT License
+├── .gitignore                   # Safe version control ignores
+├── .env.example                 # Environment variables template
+├── docs/                        # Complete Phase 0 & Phase 1 documentation
+│   ├── PROJECT_SPEC.md
+│   ├── ARCHITECTURE.md
+│   ├── DATABASE_SCHEMA.md
+│   ├── DATA_INGESTION.md
+│   ├── DRIVE_SYNC.md
+│   ├── GEMINI_AI.md
+│   ├── SECURITY.md
+│   ├── ADMIN_GUIDE.md
+│   ├── BACKUP_RESTORE.md
+│   ├── DEPLOYMENT.md
+│   ├── ANALYTICS.md
+│   ├── TESTING.md
+│   ├── TROUBLESHOOTING.md
+│   ├── INITIAL_AUDIT.md
+│   └── inventory/
+│       └── source_drive_inventory.md # 101-file verified Drive inventory
+└── .agents/
+    └── skills/
+        └── mgit-pyq-hub/
+            └── SKILL.md         # Antigravity operational skill
 ```
-
-### Zero External Build Dependencies
-This project uses modern standard Web APIs (ES6 Modules/Objects, CSS Custom Properties, LocalStorage, HTML5 Dialog/Accordion). It requires **no `npm install`**, **no webpack**, and **no runtime framework** — guaranteeing lightning-fast load times ($< 0.5\text{s}$) on any mobile device or browser.
 
 ---
 
-## 🛠️ Local Development & Quick Start
+## 🚀 Getting Started
 
-1. **Clone the repository:**
+### Local Setup
+1. Clone the repository:
    ```bash
    git clone https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git
    cd CSE-III-sem
    ```
-
-2. **Open in browser:**
-   - Double click `index.html`, OR
-   - Run a lightweight development server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-
-     # Or using Node.js npx
-     npx serve
-     ```
-   - Navigate to `http://localhost:8000`.
+2. Open [`index.html`](index.html) in any modern web browser:
+   - On Windows: Double-click `index.html` or run `start index.html` in PowerShell.
 
 ---
 
-## 🌐 Deploying to GitHub Pages
-
-To make the website accessible to everyone via `https://Amaanuddin-Ahmed.github.io/CSE-III-sem/`:
-
-1. Go to your repository on GitHub: **[Amaanuddin-Ahmed/CSE-III-sem](https://github.com/Amaanuddin-Ahmed/CSE-III-sem)**.
-2. Click on **Settings** > **Pages** (under the "Code and automation" section).
-3. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`.
-   - **Branch**: Select `main` and folder `/ (root)`.
-4. Click **Save**. Your site will be published within 1–2 minutes!
+## 🔒 Security & Privacy Notice
+- Never commit private API keys, administrator credentials, or `.env` secrets into Git.
+- Student file uploads and database exports are held in private storage and strictly quarantined prior to administrative approval.
 
 ---
 
-## 🗺️ Roadmap & Upcoming Releases
+## 💬 Feedback & Connect
 
-- [x] Initial release with 5 Core Subjects (DS, COA, DM, JAVA, DLD).
-- [x] 2020–2024 Regular and Supplementary PYQ question mapping.
-- [x] MGIT Autonomous Mock Question Paper Generator.
-- [x] LocalStorage Bookmarks and Solved Progress tracker.
-- [ ] Direct PDF download of previous year official question papers.
-- [ ] Expansion to **Semester IV (CSE-IV-sem)**: OS, DBMS, DAA, BEFA, P&S.
-- [ ] Community crowdsourced model answers and review discussions.
-
----
-
-## 🤝 Contributing
-
-Contributions from fellow MGITians and students are warmly welcomed! If you have recent mid-term papers, semester question papers, or improved model solutions:
-
-1. Fork the Project (`Fork` button on top right).
-2. Create your Feature Branch (`git checkout -b feature/Add2025PYQs`).
-3. Commit your Changes (`git commit -m "Add 2025 Mid and Semester PYQs"`).
-4. Push to the Branch (`git push origin feature/Add2025PYQs`).
-5. Open a **Pull Request**.
-
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
-
-<p align="center">
-  Developed with ❤️ for <strong>MGIT CSE</strong> Students • Smart Exam Preparation Made Easy.
-</p>
+- **WhatsApp**: [Got an Idea to Improve ? Let me know](https://wa.me/916303191696)
+- **Maintainer**: Amaan
