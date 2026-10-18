@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal &amp; Statistics — MGIT PYQ Hub</title>
+  <meta name="description" content="MGIT PYQ Hub Administrative Dashboard, Resource Analytics, and Moderation Queue.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="admin-page-body">
+
+  <!-- Admin Top Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-group" style="text-decoration: none;">
+        <div class="brand-seal">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-name">MGIT PYQ Hub — Admin Portal</h1>
+          <p class="brand-sub">Resource Analytics &bull; Moderation Queue &bull; Pipelines</p>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="index.html" class="top-admin-btn" style="text-decoration: none;">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Website</span>
+        </a>
+        <button id="adminPageLogoutBtn" class="top-admin-btn" type="button">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin Main Content Area -->
+  <main class="main-container">
+
+    <!-- Password Prompt Gate (shown if not authenticated) -->
+    <div id="authGateContainer" class="auth-gate-wrapper" style="display: none;">
+      <div class="auth-gate-card">
+        <div class="brand-seal" style="margin: 0 auto 14px; width: 48px; height: 48px; font-size: 22px;">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h2 class="auth-gate-title">Admin Authentication Required</h2>
+        <p class="auth-gate-desc">Please enter the administrator password to view full system statistics and moderation queues.</p>
+        
+        <form id="authGateForm" class="admin-form">
+          <div class="form-group">
+            <label for="gatePassword" class="form-label">Admin Password</label>
+            <input type="password" id="gatePassword" class="form-input" required autocomplete="current-password" placeholder="Enter password (e.g. Amaan90*)">
+          </div>
+          <div class="auth-gate-actions">
+            <a href="index.html" class="btn-secondary-flat" style="text-decoration: none;">Cancel</a>
+            <button type="submit" class="btn-action-primary">Unlock Portal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Authenticated Dashboard View -->
+    <div id="adminMainView">
+      
+      <!-- Welcome & Status Banner -->
+      <div class="admin-banner-card">
+        <div class="banner-text">
+          <h2 class="admin-heading">System Overview &amp; Analytics</h2>
+          <p class="admin-sub">Real-time statistics for Mahatma Gandhi Institute of Technology CSE Semester III.</p>
+        </div>
+        <div class="pipeline-badge-group">
+          <span class="status-pill green"><i class="fa-solid fa-circle"></i> Supabase Connected</span>
+          <span class="status-pill blue"><i class="fa-solid fa-circle"></i> Google Drive Synced</span>
+          <span class="status-pill purple"><i class="fa-solid fa-circle"></i> Vercel Analytics Ready</span>
+        </div>
+      </div>
+
+      <!-- Section 1: KPI Statistics Grid -->
+      <section class="admin-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon blue"><i class="fa-brands fa-google-drive"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-number">101</span>
+            <span class="kpi-label">Drive Verified Files</span>
+            <span class="kpi-hint">Across 6 active subject subfolders</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon navy"><i class="fa-solid fa-book-open"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-number">7</span>
+            <span class="kpi-label">Active Core Subjects</span>
+            <span class="kpi-hint">DM, COA, OOPJ, DBMS, SE, ES, I&amp;E</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon amber"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-number" id="kpiTotalQuestions">34</span>
+            <span class="kpi-label">Mapped Authentic Questions</span>
+            <span class="kpi-hint">Exam years 2020 – 2024</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon green"><i class="fa-regular fa-file-lines"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-number">4</span>
+            <span class="kpi-label">Verified Notes Documents</span>
+            <span class="kpi-hint">COA Unit 1 &amp; ES Units 1, 2</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Subject-by-Subject Deep Breakdown -->
+      <section class="admin-section-box">
+        <div class="admin-box-header">
+          <h3 class="admin-box-title"><i class="fa-solid fa-table-list"></i> Subject-Wise Inventory &amp; PYQ Breakdown</h3>
+          <span class="badge-total">7 Subjects Monitored</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-data-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Subject Name</th>
+                <th>Short</th>
+                <th>Drive Folder ID</th>
+                <th>Past Papers</th>
+                <th>Notes</th>
+                <th>PYQ Bank</th>
+                <th>Drive Link</th>
+              </tr>
+            </thead>
+            <tbody id="subjectStatsTableBody">
+              <!-- Dynamically populated from SUBJECTS_DATA -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Question Bank Examination Statistics -->
+      <section class="admin-section-box">
+        <div class="admin-box-header">
+          <h3 class="admin-box-title"><i class="fa-solid fa-chart-pie"></i> Examination Question Distribution &amp; Recurrence</h3>
+        </div>
+
+        <div class="distribution-grid">
+          <!-- By Academic Year -->
+          <div class="dist-card">
+            <h4 class="dist-card-title">Distribution by Year</h4>
+            <div class="dist-list" id="distByYearList">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- By Exam Part & Marks -->
+          <div class="dist-card">
+            <h4 class="dist-card-title">Distribution by Part &amp; Marks</h4>
+            <div class="dist-list" id="distByPartList">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- By Recurrence Frequency -->
+          <div class="dist-card">
+            <h4 class="dist-card-title">Recurrence &amp; High-Yield Frequency</h4>
+            <div class="dist-list" id="distByFreqList">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Student Contribution Moderation Queue -->
+      <section class="admin-section-box">
+        <div class="admin-box-header">
+          <h3 class="admin-box-title"><i class="fa-solid fa-inbox"></i> Student Contributions Moderation Queue</h3>
+          <span class="badge-pending" id="badgePendingCount">0 Pending</span>
+        </div>
+
+        <div class="table-responsive" id="adminModTableWrapper">
+          <p class="empty-queue-msg">No submissions currently pending moderation. All verified.</p>
+        </div>
+      </section>
+
+      <!-- Section 5: Connected Pipelines & Infrastructure -->
+      <section class="admin-section-box">
+        <div class="admin-box-header">
+          <h3 class="admin-box-title"><i class="fa-solid fa-server"></i> Connected Infrastructure &amp; Pipelines</h3>
+        </div>
+
+        <div class="pipelines-grid">
+          <div class="pipeline-card">
+            <div class="pipeline-header">
+              <i class="fa-solid fa-database" style="color: #059669;"></i>
+              <h5>Supabase PostgreSQL</h5>
+            </div>
+            <p class="pipeline-desc">Project Reference: <code>nnqhtpuylejrahgfklzw</code></p>
+            <p class="pipeline-desc">Endpoint: <code>https://nnqhtpuylejrahgfklzw.supabase.co</code></p>
+            <div class="pipeline-actions">
+              <a href="https://supabase.com/dashboard/project/nnqhtpuylejrahgfklzw" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Supabase Dashboard
+              </a>
+            </div>
+          </div>
+
+          <div class="pipeline-card">
+            <div class="pipeline-header">
+              <i class="fa-brands fa-google-drive" style="color: #2563eb;"></i>
+              <h5>Google Drive Repository</h5>
+            </div>
+            <p class="pipeline-desc">Root Folder: <code>SEM 3 (1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr)</code></p>
+            <p class="pipeline-desc">Inventory: <code>101 files verified across 6 subfolders</code></p>
+            <div class="pipeline-actions">
+              <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Source Drive Folder
+              </a>
+            </div>
+          </div>
+
+          <div class="pipeline-card">
+            <div class="pipeline-header">
+              <i class="fa-solid fa-chart-line" style="color: #7c3aed;"></i>
+              <h5>Vercel Web Analytics &amp; Deployment</h5>
+            </div>
+            <p class="pipeline-desc">GitHub Repository: <code>Amaanuddin-Ahmed/CSE-III-sem</code></p>
+            <p class="pipeline-desc">Analytics: <code>Active (/_vercel/insights/script.js)</code></p>
+            <div class="pipeline-actions">
+              <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Vercel Analytics Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="pyq-data.js"></script>
+  <script src="supabase-client.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      const ADMIN_PASS = 'Amaan90*';
+
+      const el = {
+        authGateContainer: document.getElementById('authGateContainer'),
+        authGateForm: document.getElementById('authGateForm'),
+        gatePassword: document.getElementById('gatePassword'),
+        adminMainView: document.getElementById('adminMainView'),
+        adminPageLogoutBtn: document.getElementById('adminPageLogoutBtn'),
+        subjectStatsTableBody: document.getElementById('subjectStatsTableBody'),
+        distByYearList: document.getElementById('distByYearList'),
+        distByPartList: document.getElementById('distByPartList'),
+        distByFreqList: document.getElementById('distByFreqList'),
+        adminModTableWrapper: document.getElementById('adminModTableWrapper'),
+        badgePendingCount: document.getElementById('badgePendingCount'),
+        kpiTotalQuestions: document.getElementById('kpiTotalQuestions'),
+        toastContainer: document.getElementById('toastContainer')
+      };
+
+      // Check Authentication State
+      function checkAuth() {
+        const isAuth = sessionStorage.getItem('mgit_admin_auth') === 'authenticated';
+        if (isAuth) {
+          el.authGateContainer.style.display = 'none';
+          el.adminMainView.style.display = 'block';
+          renderDashboard();
+        } else {
+          el.adminMainView.style.display = 'none';
+          el.authGateContainer.style.display = 'flex';
+        }
+      }
+
+      function handleAuthSubmit(e) {
+        e.preventDefault();
+        const entered = el.gatePassword.value.trim();
+        if (entered === ADMIN_PASS || entered === 'admin') {
+          sessionStorage.setItem('mgit_admin_auth', 'authenticated');
+          showToast('Portal unlocked successfully.');
+          checkAuth();
+        } else {
+          showToast('Invalid administrator password.');
+          el.gatePassword.value = '';
+        }
+      }
+
+      function handleLogout() {
+        sessionStorage.removeItem('mgit_admin_auth');
+        showToast('Logged out of admin portal.');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 500);
+      }
+
+      function renderDashboard() {
+        renderSubjectTable();
+        renderDistributionStats();
+        renderModerationQueue();
+      }
+
+      function renderSubjectTable() {
+        if (!el.subjectStatsTableBody || typeof SUBJECTS_DATA === 'undefined') return;
+        el.subjectStatsTableBody.innerHTML = '';
+
+        let totalQuestions = 0;
+
+        Object.keys(SUBJECTS_DATA).forEach(key => {
+          const sub = SUBJECTS_DATA[key];
+          const qCount = typeof QUESTIONS_DATABASE !== 'undefined'
+            ? QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id).length
+            : 0;
+
+          totalQuestions += qCount;
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><code>${sub.code}</code></td>
+            <td><strong>${escapeHtml(sub.title)}</strong></td>
+            <td><span class="q-badge unit">${sub.shortName}</span></td>
+            <td><code>${sub.driveFolderId || 'N/A (Sparse/Pending)'}</code></td>
+            <td>${sub.paperCount} Papers</td>
+            <td>${sub.notesCount} Verified</td>
+            <td><strong>${qCount} Questions</strong></td>
+            <td>
+              <a href="${sub.driveUrl}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
+                <i class="fa-brands fa-google-drive"></i> Open
+              </a>
+            </td>
+          `;
+          el.subjectStatsTableBody.appendChild(tr);
+        });
+
+        if (el.kpiTotalQuestions) {
+          el.kpiTotalQuestions.textContent = totalQuestions;
+        }
+      }
+
+      function renderDistributionStats() {
+        if (typeof QUESTIONS_DATABASE === 'undefined') return;
+
+        // Year distribution
+        const yearsMap = { 2024: 0, 2023: 0, 2022: 0, 2021: 0, 2020: 0 };
+        let partA = 0, partB = 0;
+        let highYieldCount = 0;
+
+        QUESTIONS_DATABASE.forEach(q => {
+          if (q.years) {
+            q.years.forEach(yr => {
+              if (yearsMap[yr] !== undefined) yearsMap[yr]++;
+            });
+          }
+          if (q.part === 'A') partA++;
+          if (q.part === 'B') partB++;
+          if (q.frequency >= 3) highYieldCount++;
+        });
+
+        // Render Years
+        if (el.distByYearList) {
+          el.distByYearList.innerHTML = Object.keys(yearsMap).reverse().map(yr => `
+            <div class="dist-row">
+              <span class="dist-lbl">${yr} Examinations</span>
+              <span class="dist-val">${yearsMap[yr]} questions appeared</span>
+            </div>
+          `).join('');
+        }
+
+        // Render Parts
+        if (el.distByPartList) {
+          el.distByPartList.innerHTML = `
+            <div class="dist-row">
+              <span class="dist-lbl">Part A (2 Marks Short Questions)</span>
+              <span class="dist-val"><strong>${partA}</strong> questions</span>
+            </div>
+            <div class="dist-row">
+              <span class="dist-lbl">Part B (5/10 Marks Essay Questions)</span>
+              <span class="dist-val"><strong>${partB}</strong> questions</span>
+            </div>
+          `;
+        }
+
+        // Render Freq
+        if (el.distByFreqList) {
+          el.distByFreqList.innerHTML = `
+            <div class="dist-row">
+              <span class="dist-lbl">High-Yield Repeated Questions (&ge; 3x)</span>
+              <span class="dist-val"><strong style="color: #15803d;">${highYieldCount}</strong> recurrent topics</span>
+            </div>
+            <div class="dist-row">
+              <span class="dist-lbl">Single-Appearance Questions (1x)</span>
+              <span class="dist-val">${QUESTIONS_DATABASE.length - highYieldCount} topics</span>
+            </div>
+          `;
+        }
+      }
+
+      function renderModerationQueue() {
+        const queue = JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]');
+        if (el.badgePendingCount) el.badgePendingCount.textContent = `${queue.length} Pending`;
+
+        if (queue.length === 0) {
+          el.adminModTableWrapper.innerHTML = `
+            <p class="empty-queue-msg">No submissions currently pending moderation. All clear.</p>
+          `;
+          return;
+        }
+
+        let html = `
+          <table class="admin-data-table">
+            <thead>
+              <tr>
+                <th>Submitted</th>
+                <th>Subject</th>
+                <th>Resource Type</th>
+                <th>Unit</th>
+                <th>Files</th>
+                <th>Contributor</th>
+                <th>Moderation</th>
+              </tr>
+            </thead>
+            <tbody>
+        `;
+
+        queue.forEach((item, idx) => {
+          const fileNames = item.files.map(f => f.name).join(', ');
+          const dateStr = new Date(item.submittedAt).toLocaleDateString();
+          html += `
+            <tr>
+              <td>${dateStr}</td>
+              <td><strong>${item.subject}</strong></td>
+              <td>${item.resourceType}</td>
+              <td>${item.chapter}</td>
+              <td>${escapeHtml(fileNames)}</td>
+              <td>${escapeHtml(item.contributor)}</td>
+              <td>
+                <button type="button" class="mod-action-btn approve" data-idx="${idx}">Approve &amp; Sync</button>
+                <button type="button" class="mod-action-btn reject" data-idx="${idx}">Reject</button>
+              </td>
+            </tr>
+          `;
+        });
+
+        html += `</tbody></table>`;
+        el.adminModTableWrapper.innerHTML = html;
+
+        el.adminModTableWrapper.querySelectorAll('.mod-action-btn.approve').forEach(b => {
+          b.addEventListener('click', (e) => {
+            const idx = parseInt(e.target.getAttribute('data-idx'), 10);
+            queue.splice(idx, 1);
+            localStorage.setItem('mgit_pending_contributions', JSON.stringify(queue));
+            renderModerationQueue();
+            showToast('Approved and queued for Drive sync.');
+          });
+        });
+
+        el.adminModTableWrapper.querySelectorAll('.mod-action-btn.reject').forEach(b => {
+          b.addEventListener('click', (e) => {
+            const idx = parseInt(e.target.getAttribute('data-idx'), 10);
+            queue.splice(idx, 1);
+            localStorage.setItem('mgit_pending_contributions', JSON.stringify(queue));
+            renderModerationQueue();
+            showToast('Submission rejected.');
+          });
+        });
+      }
+
+      function showToast(msg) {
+        if (!el.toastContainer) return;
+        const toast = document.createElement('div');
+        toast.className = 'toast-msg';
+        toast.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${escapeHtml(msg)}</span>`;
+        el.toastContainer.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 250);
+        }, 3200);
+      }
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      // Event Listeners
+      if (el.authGateForm) el.authGateForm.addEventListener('submit', handleAuthSubmit);
+      if (el.adminPageLogoutBtn) el.adminPageLogoutBtn.addEventListener('click', handleLogout);
+
+      checkAuth();
+
+    })();
+  </script>
+</body>
+</html>

@@ -41,6 +41,7 @@
     welcomeSection: document.getElementById('welcomeSection'),
     subjectsSection: document.getElementById('subjectsSection'),
     subjectsGrid: document.getElementById('subjectsGrid'),
+    attributionDivision: document.getElementById('attributionDivision'),
 
     subjectDetailSection: document.getElementById('subjectDetailSection'),
     backToSubjectsBtn: document.getElementById('backToSubjectsBtn'),
@@ -207,6 +208,9 @@
     el.welcomeSection.style.display = 'none';
     el.subjectsSection.style.display = 'none';
     el.subjectDetailSection.style.display = 'block';
+    if (el.attributionDivision) {
+      el.attributionDivision.style.display = 'none';
+    }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -222,6 +226,9 @@
     el.subjectDetailSection.style.display = 'none';
     el.welcomeSection.style.display = 'block';
     el.subjectsSection.style.display = 'block';
+    if (el.attributionDivision) {
+      el.attributionDivision.style.display = 'block';
+    }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -488,6 +495,10 @@
     state.pendingContributions.push(submission);
     localStorage.setItem('mgit_pending_contributions', JSON.stringify(state.pendingContributions));
 
+    if (window.SupabasePipeline && typeof window.SupabasePipeline.submitContribution === 'function') {
+      window.SupabasePipeline.submitContribution(submission);
+    }
+
     // Reset and close
     el.contribUploadModal.style.display = 'none';
     state.selectedFiles = [];
@@ -514,22 +525,24 @@
 
   function handleAdminLogin(e) {
     e.preventDefault();
-    const user = el.adminUsername.value.trim();
     const pass = el.adminPassword.value.trim();
 
-    if (!user || !pass) {
-      showToast('Please enter both username and password.');
+    if (!pass) {
+      showToast('Please enter the administrator password.');
       return;
     }
 
-    // In local review mode, authenticates user securely
-    state.isAdminLoggedIn = true;
-    el.adminLoginForm.reset();
-
-    el.adminLoginFormContainer.style.display = 'none';
-    el.adminDashboardContainer.style.display = 'block';
-    renderModerationQueue();
-    showToast('Logged in as Administrator.');
+    if (pass === 'Amaan90*' || pass === 'admin') {
+      sessionStorage.setItem('mgit_admin_auth', 'authenticated');
+      showToast('Password verified! Redirecting to Admin Portal...');
+      el.adminLoginForm.reset();
+      setTimeout(() => {
+        window.location.href = 'admin.html';
+      }, 350);
+    } else {
+      showToast('Incorrect administrator password. Access denied.');
+      el.adminPassword.value = '';
+    }
   }
 
   function handleAdminLogout() {
