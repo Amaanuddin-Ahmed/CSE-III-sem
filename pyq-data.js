@@ -10,21 +10,6 @@
  */
 
 const SUBJECTS_METADATA = {
-  "DS": {
-    id: "DS",
-    code: "CS301PC",
-    title: "Data Structures",
-    regulation: "R22 / Autonomous",
-    icon: "fa-cubes",
-    color: "#3b82f6",
-    units: {
-      1: "Introduction, Stacks, Queues, Circular Queues & Applications",
-      2: "Linked Lists (Singly, Doubly, Circular) & Applications",
-      3: "Trees (Binary Trees, BST, AVL, B-Trees, Red-Black)",
-      4: "Graphs, Traversals (BFS, DFS), Minimum Spanning Trees & Shortest Path",
-      5: "Searching, Sorting Algorithms & Hashing Techniques"
-    }
-  },
   "COA": {
     id: "COA",
     code: "CS302PC",
@@ -32,6 +17,9 @@ const SUBJECTS_METADATA = {
     regulation: "R22 / Autonomous",
     icon: "fa-microchip",
     color: "#10b981",
+    driveFolderId: "1axgSIkJ5-WfD_xZpna8KFKnNxcaZ0AyX",
+    paperCount: 23,
+    notesCount: 2,
     units: {
       1: "Basic Computer Structure, Machine Instructions & Addressing Modes",
       2: "Central Processing Unit (CPU), ALU & Microprogrammed Control",
@@ -47,6 +35,9 @@ const SUBJECTS_METADATA = {
     regulation: "R22 / Autonomous",
     icon: "fa-square-root-variable",
     color: "#8b5cf6",
+    driveFolderId: "1x4QjKc-CXLoCSDTqi6H2NUCtExuBkAMU",
+    paperCount: 24,
+    notesCount: 0,
     units: {
       1: "Mathematical Logic, Predicates, Normal Forms (PCNF/PDNF) & Inference",
       2: "Set Theory, Relations, Hasse Diagrams, Lattices & Functions",
@@ -55,19 +46,112 @@ const SUBJECTS_METADATA = {
       5: "Graph Theory, Isomorphism, Euler/Hamiltonian Graphs & Planarity"
     }
   },
-  "JAVA": {
-    id: "JAVA",
+  "DBMS": {
+    id: "DBMS",
     code: "CS304PC",
+    title: "Database Management Systems",
+    regulation: "R22 / Autonomous",
+    icon: "fa-database",
+    color: "#06b6d4",
+    driveFolderId: "1Af4RdwkOHfK-lM8SuNoeao0aPYiIf6hc",
+    paperCount: 12,
+    notesCount: 0,
+    units: {
+      1: "Database System Concepts, Architecture & ER Data Modeling",
+      2: "Relational Model, Relational Algebra, Calculus & Integrity Constraints",
+      3: "SQL Queries, Nested Queries, Triggers, Views & Normalization (1NF to BCNF)",
+      4: "Transaction Management, ACID Properties, Concurrency Control & Serializability",
+      5: "Storage, Indexing (B+ Trees), Hashing & Query Optimization"
+    }
+  },
+  "OOP": {
+    id: "OOP",
+    code: "CS305PC",
     title: "OOP Through Java",
     regulation: "R22 / Autonomous",
     icon: "fa-mug-hot",
     color: "#f59e0b",
+    driveFolderId: "1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+    paperCount: 20,
+    notesCount: 0,
     units: {
-      1: "OOP Concepts, Java Fundamentals, Classes, Objects & Constructors",
-      2: "Inheritance, Polymorphism, Method Overriding, Interfaces & Packages",
+      1: "OOP Concepts, Java Fundamentals, Classes, Objects & JVM",
+      2: "Inheritance, Polymorphism, Interfaces, Diamond Problem & Packages",
       3: "Exception Handling, Custom Exceptions & Multithreading",
-      4: "Java Collections Framework, Generics & Iterators",
-      5: "File I/O Streams, Serialization, GUI (Swing/AWT) & Event Delegation"
+      4: "Java Collections Framework (List, Set, Map) & Generics",
+      5: "File I/O Streams, Serialization, GUI (Swing/AWT) & Events"
+    }
+  },
+  "SE": {
+    id: "SE",
+    code: "CS306PC",
+    title: "Software Engineering",
+    regulation: "R22 / Autonomous",
+    icon: "fa-laptop-code",
+    color: "#3b82f6",
+    driveFolderId: "16MpaH50OsmOKyAse1V5oQB7vdDqKYQqX",
+    paperCount: 17,
+    notesCount: 0,
+    units: {
+      1: "Software Process, Agile Development, Scrum & Process Models (Waterfall, Spiral)",
+      2: "Requirements Engineering, SRS Document, Feasibility & Use Case Modeling",
+      3: "System Modeling, Architectural Design, Component-Level Design & User Interface",
+      4: "Software Quality, Testing Strategies (Black-box, White-box, Unit, Integration)",
+      5: "Software Maintenance, Risk Management, SCM & Software Metrics"
+    }
+  },
+  "ES": {
+    id: "ES",
+    code: "MC301ES",
+    title: "Environmental Science",
+    regulation: "R22 / Autonomous",
+    icon: "fa-leaf",
+    color: "#10b981",
+    driveFolderId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+    paperCount: 5,
+    notesCount: 2,
+    units: {
+      1: "Ecosystems, Biodiversity, Food Chains & Ecological Pyramids",
+      2: "Natural Resources (Water, Mineral, Energy) & Conservation",
+      3: "Environmental Pollution (Air, Water, Soil, Noise) & Solid Waste Management",
+      4: "Global Environmental Issues (Climate Change, Acid Rain, Ozone Depletion)",
+      5: "Environmental Protection Acts, Field Work & Sustainable Development"
+    }
+  },
+  "IE": {
+    id: "IE",
+    code: "MC302IE",
+    title: "Innovation & Entrepreneurship",
+    regulation: "R22 / Autonomous",
+    icon: "fa-lightbulb",
+    color: "#ec4899",
+    driveFolderId: null,
+    paperCount: 0,
+    notesCount: 0,
+    units: {
+      1: "Introduction to Innovation, Design Thinking & Idea Generation",
+      2: "Entrepreneurship Mindset, Opportunity Recognition & Feasibility Analysis",
+      3: "Business Models, Lean Canvas & Value Proposition Design",
+      4: "Financing New Ventures, Venture Capital, Angel Investors & Pitching",
+      5: "Intellectual Property Rights (IPR), Patents, Trademarks & Scaling"
+    }
+  },
+  "DS": {
+    id: "DS",
+    code: "CS301PC",
+    title: "Data Structures",
+    regulation: "R22 / Autonomous",
+    icon: "fa-cubes",
+    color: "#6366f1",
+    driveFolderId: null,
+    paperCount: 22,
+    notesCount: 0,
+    units: {
+      1: "Introduction, Stacks, Queues, Circular Queues & Applications",
+      2: "Linked Lists (Singly, Doubly, Circular) & Applications",
+      3: "Trees (Binary Trees, BST, AVL, B-Trees, Red-Black)",
+      4: "Graphs, Traversals (BFS, DFS), Minimum Spanning Trees & Shortest Path",
+      5: "Searching, Sorting Algorithms & Hashing Techniques"
     }
   },
   "DLD": {
@@ -77,6 +161,9 @@ const SUBJECTS_METADATA = {
     regulation: "R22 / Autonomous",
     icon: "fa-toggle-on",
     color: "#ef4444",
+    driveFolderId: null,
+    paperCount: 15,
+    notesCount: 0,
     units: {
       1: "Number Systems, Conversions, Complements & Boolean Axioms",
       2: "Gate-Level Minimization, K-Maps (2-5 Vars) & NAND/NOR Implementations",

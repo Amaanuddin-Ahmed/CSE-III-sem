@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MGIT CSE Semester III - PYQ Practice & Complete Analysis Platform</title>
-  <meta name="description" content="The ultimate one-stop PYQ practice platform for MGIT CSE 3rd Semester. Filter past papers by year, subject, and chapter for smarter exam preparation.">
-  <meta name="keywords" content="MGIT, CSE, Semester 3, PYQs, Previous Year Questions, Data Structures, COA, Discrete Mathematics, Java, Digital Logic Design">
+  <title>MGIT PYQ Hub — Mahatma Gandhi Institute of Technology CSE Semester III</title>
+  <meta name="description" content="MGIT PYQ Hub — The ultimate one-stop PYQ practice platform. Filter past papers by year, subject, and chapter for smarter exam preparation.">
+  <meta name="keywords" content="MGIT, PYQ Hub, CSE Semester 3, Previous Year Questions, COA, Discrete Mathematics, DBMS, OOP Java, Software Engineering, Environmental Science">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
@@ -30,20 +30,23 @@
           <i class="fa-solid fa-graduation-cap"></i>
         </div>
         <div class="brand-text">
-          <h1>MGIT CSE-III PYQs</h1>
-          <span>Autonomous • Exam Prep Platform</span>
+          <h1>MGIT PYQ Hub</h1>
+          <span>Autonomous • CSE Semester III</span>
         </div>
       </a>
 
       <nav class="nav-tabs" id="mainNavTabs">
         <button class="nav-tab-btn active" data-tab="explorer">
-          <i class="fa-solid fa-magnifying-glass"></i> Explorer
+          <i class="fa-solid fa-magnifying-glass"></i> PYQs Explorer
+        </button>
+        <button class="nav-tab-btn" data-tab="notes">
+          <i class="fa-solid fa-file-lines"></i> Notes (<span id="notesCountBadge">4</span>)
+        </button>
+        <button class="nav-tab-btn" data-tab="highyield">
+          <i class="fa-solid fa-fire"></i> Most Important
         </button>
         <button class="nav-tab-btn" data-tab="analytics">
           <i class="fa-solid fa-chart-column"></i> Analytics & Trends
-        </button>
-        <button class="nav-tab-btn" data-tab="highyield">
-          <i class="fa-solid fa-fire"></i> High Yield (Must-Prep)
         </button>
         <button class="nav-tab-btn" data-tab="mock">
           <i class="fa-solid fa-file-signature"></i> Mock Exam
@@ -58,11 +61,11 @@
 
       <div class="nav-actions">
         <button class="btn-icon" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
         </button>
-        <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary" title="View Original Question Papers on Google Drive" style="text-decoration: none;">
+        <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary" title="View Entire SEM 3 Google Drive Folder (101 Files)" style="text-decoration: none;">
           <i class="fa-brands fa-google-drive"></i>
-          <span>Source PDFs</span>
+          <span>View Entire PYQ Folder</span>
         </a>
         <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer" class="github-link">
           <i class="fa-brands fa-github"></i>
@@ -112,22 +115,31 @@
     <!-- Subject Quick Chips -->
     <div class="subject-chips-row" id="subjectChipsContainer">
       <button class="subject-chip active" data-subject="ALL">
-        <i class="fa-solid fa-border-all"></i> All Subjects
+        <i class="fa-solid fa-border-all"></i> All Subjects (101 Papers)
+      </button>
+      <button class="subject-chip" data-subject="COA">
+        <i class="fa-solid fa-microchip"></i> COA (23)
+      </button>
+      <button class="subject-chip" data-subject="DM">
+        <i class="fa-solid fa-square-root-variable"></i> Discrete Maths (24)
+      </button>
+      <button class="subject-chip" data-subject="DBMS">
+        <i class="fa-solid fa-database"></i> DBMS (12)
+      </button>
+      <button class="subject-chip" data-subject="OOP">
+        <i class="fa-solid fa-mug-hot"></i> OOP Java (20)
+      </button>
+      <button class="subject-chip" data-subject="SE">
+        <i class="fa-solid fa-laptop-code"></i> Software Eng. (17)
+      </button>
+      <button class="subject-chip" data-subject="ES">
+        <i class="fa-solid fa-leaf"></i> Env. Science (5)
+      </button>
+      <button class="subject-chip" data-subject="IE">
+        <i class="fa-solid fa-lightbulb"></i> I&E (Contribute)
       </button>
       <button class="subject-chip" data-subject="DS">
         <i class="fa-solid fa-cubes"></i> Data Structures
-      </button>
-      <button class="subject-chip" data-subject="COA">
-        <i class="fa-solid fa-microchip"></i> COA
-      </button>
-      <button class="subject-chip" data-subject="DM">
-        <i class="fa-solid fa-square-root-variable"></i> Discrete Maths
-      </button>
-      <button class="subject-chip" data-subject="JAVA">
-        <i class="fa-solid fa-mug-hot"></i> OOP Java
-      </button>
-      <button class="subject-chip" data-subject="DLD">
-        <i class="fa-solid fa-toggle-on"></i> Digital Logic Design
       </button>
     </div>
 
@@ -138,7 +150,7 @@
         <div class="search-bar-row">
           <div class="search-input-wrapper">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" class="search-input" placeholder="Search by question keywords, algorithm (e.g. Booth's, AVL, K-Map, Threads)..." autocomplete="off">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search by question keywords, algorithm (e.g. Booth's, AVL, K-Map, SQL, Threads)..." autocomplete="off">
             <span class="search-shortcut">/ to search</span>
           </div>
         </div>
@@ -147,12 +159,15 @@
           <div class="filter-group">
             <label for="filterSubject">Subject</label>
             <select id="filterSubject" class="filter-select">
-              <option value="ALL">All Subjects</option>
-              <option value="DS">Data Structures (CS301PC)</option>
+              <option value="ALL">All Subjects (7 Core)</option>
               <option value="COA">Computer Organization & Architecture (CS302PC)</option>
               <option value="DM">Discrete Mathematics (CS303PC)</option>
-              <option value="JAVA">OOP through Java (CS304PC)</option>
-              <option value="DLD">Digital Logic Design (CS305PC)</option>
+              <option value="DBMS">Database Management Systems (CS304PC)</option>
+              <option value="OOP">OOP through Java (CS305PC)</option>
+              <option value="SE">Software Engineering (CS306PC)</option>
+              <option value="ES">Environmental Science (MC301ES)</option>
+              <option value="IE">Innovation & Entrepreneurship (MC302IE)</option>
+              <option value="DS">Data Structures (CS301PC)</option>
             </select>
           </div>
 
@@ -230,6 +245,19 @@
       </section>
     </div>
 
+    <!-- TAB: NOTES & CHAPTER STUDY MATERIAL -->
+    <div class="tab-view" id="view-notes">
+      <div class="mock-exam-header">
+        <h3><i class="fa-solid fa-file-lines" style="color: var(--accent-blue);"></i> Approved Chapter Notes & Reference Materials</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          Verified chapter-wise notes and learning resources from the authoritative SEM 3 Google Drive repository. Direct PDF links open in Google Drive.
+        </p>
+      </div>
+      <div class="analytics-grid" id="notesListContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
     <!-- TAB 2: ANALYTICS & TRENDS -->
     <div class="tab-view" id="view-analytics">
       <div class="analytics-grid" id="analyticsGrid">
@@ -237,12 +265,12 @@
       </div>
     </div>
 
-    <!-- TAB 3: HIGH YIELD (MUST-PREP) -->
+    <!-- TAB 3: HIGH YIELD (MOST IMPORTANT) -->
     <div class="tab-view" id="view-highyield">
       <div class="mock-exam-header">
-        <h3><i class="fa-solid fa-fire" style="color: #ef4444;"></i> High-Yield Recurring Topics (Exam-Day Guaranteed List)</h3>
+        <h3><i class="fa-solid fa-fire" style="color: #ef4444;"></i> Most Important Questions (Historical Recurrence Evidence)</h3>
         <p style="color: var(--text-secondary); font-size: 0.9rem;">
-          These topics have appeared in 80% to 100% of past MGIT Semester III examination papers. Mastering these guaranteed concepts ensures scoring 55+ out of 70 marks.
+          These topics have appeared in 80% to 100% of past MGIT Semester III examination papers. Prioritized by historical frequency across 2020–2024 papers.
         </p>
       </div>
       <div class="questions-container" id="highYieldContainer">
@@ -262,11 +290,13 @@
           <div class="filter-group" style="min-width: 220px;">
             <label for="mockSubjectSelect">Select Examination Subject</label>
             <select id="mockSubjectSelect" class="filter-select">
-              <option value="DS">Data Structures (CS301PC)</option>
               <option value="COA">Computer Organization & Architecture (CS302PC)</option>
               <option value="DM">Discrete Mathematics (CS303PC)</option>
-              <option value="JAVA">OOP through Java (CS304PC)</option>
-              <option value="DLD">Digital Logic Design (CS305PC)</option>
+              <option value="DBMS">Database Management Systems (CS304PC)</option>
+              <option value="OOP">OOP through Java (CS305PC)</option>
+              <option value="SE">Software Engineering (CS306PC)</option>
+              <option value="ES">Environmental Science (MC301ES)</option>
+              <option value="DS">Data Structures (CS301PC)</option>
             </select>
           </div>
 
@@ -310,24 +340,24 @@
   <footer>
     <div class="footer-container">
       <div>
-        <p><strong>MGIT CSE-III PYQs Practice & Analysis Platform</strong></p>
+        <p><strong>MGIT PYQ Hub</strong> &bull; Made by Amaan</p>
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
-          Designed for Mahatma Gandhi Institute of Technology (MGIT) B.Tech Computer Science & Engineering students.
+          Autonomous academic resource platform for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III.
         </p>
       </div>
 
       <div class="footer-links">
         <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-google-drive"></i> Source PDFs Drive
+          <i class="fa-brands fa-google-drive"></i> SEM 3 Drive (101 Files)
         </a>
-        <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" style="color: #25d366;">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Feedback
+        <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" style="color: #16a34a; font-weight: 600;">
+          <i class="fa-brands fa-whatsapp"></i> Got an idea? Help improve it
         </a>
         <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem.git" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i> Repository
         </a>
-        <a href="https://mgit.ac.in" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-building-columns"></i> MGIT Official
+        <a href="#admin-login" onclick="alert('Admin Login: Use Supabase Dashboard or configured server environment credentials.'); return false;" style="color: var(--text-muted); font-size: 0.75rem;">
+          <i class="fa-solid fa-lock"></i> Login as Admin
         </a>
       </div>
     </div>

@@ -42,20 +42,21 @@
 [data-theme="light"] {
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-focus: #2563eb;
+  --border-color: rgba(226, 232, 240, 0.95);
+  --border-focus: #3b82f6;
 
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-muted: #64748b;
 
-  --badge-bg: rgba(37, 99, 235, 0.1);
-  --badge-text: #2563eb;
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
-  --glow: 0 0 20px rgba(37, 99, 235, 0.1);
+  --badge-bg: #eff6ff;
+  --badge-text: #1d4ed8;
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 30px -6px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  --glow: 0 0 24px rgba(59, 130, 246, 0.12);
 }
 
 *, *::before, *::after {
@@ -79,6 +80,17 @@ body {
   background-attachment: fixed;
 }
 
+[data-theme="light"] body {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.07) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.045) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.035) 0px, transparent 45%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background-attachment: fixed;
+}
+
 /* ===================================================================
    Header & Navbar
    =================================================================== */
@@ -95,7 +107,37 @@ header {
 }
 
 [data-theme="light"] header {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.95);
+}
+
+[data-theme="light"] .question-card,
+[data-theme="light"] .search-filter-card,
+[data-theme="light"] .analytics-card,
+[data-theme="light"] .mock-exam-header,
+[data-theme="light"] .hero-stats {
+  background: #ffffff;
+  border-color: rgba(226, 232, 240, 0.95);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
+}
+
+[data-theme="light"] .question-card:hover {
+  background: #ffffff;
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .subject-chip {
+  background: #ffffff;
+  border-color: rgba(226, 232, 240, 0.95);
+  color: #475569;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .subject-chip.active {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #1d4ed8;
 }
 
 .nav-container {

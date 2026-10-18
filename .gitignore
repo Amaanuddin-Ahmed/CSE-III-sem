@@ -1,7 +1,27 @@
+# ===================================================================
+# MGIT PYQ Hub - Strict .gitignore Security & Hygiene Configuration
+# ===================================================================
+
+# Environment files & Secrets (CRITICAL: NEVER COMMIT SECRETS)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.p12
+credentials.json
+service-account*.json
+token.json
+
 # Operating System Files
 .DS_Store
 Thumbs.db
 desktop.ini
+ehthumbs.db
 
 # Editor & IDE Directories
 .vscode/
@@ -11,6 +31,8 @@ desktop.ini
 *.njsproj
 *.sln
 *.sw?
+*.sublime-project
+*.sublime-workspace
 
 # Node & Package Managers
 node_modules/
@@ -19,10 +41,26 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .npm
+.yarn/
+.pnpm-store
 
-# Temporary & Build Output
-dist/
+# Next.js Build Output & Cache
+.next/
+out/
 build/
-.cache/
+dist/
+
+# Large Binary Files & Temporary Processing Output
+# Note: Source PDFs reside in Google Drive; do not store mass PDFs in GitHub
+*.pdf
+*.zip
+*.tar.gz
+*.iso
+temp/
 tmp/
 *.tmp
+logs/
+*.log
+
+# Vercel & Deployment
+.vercel

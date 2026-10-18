@@ -35,6 +35,7 @@ const elements = {
   resetFiltersBtn: document.getElementById('resetFiltersBtn'),
   expandAllSolutionsBtn: document.getElementById('expandAllSolutionsBtn'),
   questionsList: document.getElementById('questionsList'),
+  notesListContainer: document.getElementById('notesListContainer'),
   analyticsGrid: document.getElementById('analyticsGrid'),
   highYieldContainer: document.getElementById('highYieldContainer'),
   savedQuestionsContainer: document.getElementById('savedQuestionsContainer'),
@@ -54,15 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventListeners();
   updateStats();
   renderExplorer();
+  renderNotes();
   renderAnalytics();
   renderHighYield();
   renderSyllabus();
-  generateMockPaper('DS');
+  generateMockPaper('COA');
 });
 
 // Theme Management
 function initTheme() {
-  const savedTheme = localStorage.getItem('mgit_theme') || 'dark';
+  const savedTheme = localStorage.getItem('mgit_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 }
@@ -208,7 +210,106 @@ function switchTab(tabName) {
     renderSavedQuestions();
   } else if (tabName === 'analytics') {
     renderAnalytics();
+  } else if (tabName === 'notes') {
+    renderNotes();
   }
+}
+
+// Render Verified Chapter Notes from Drive
+function renderNotes() {
+  if (!elements.notesListContainer) return;
+
+  const VERIFIED_NOTES = [
+    {
+      subject: "COA",
+      subjectTitle: "Computer Organization & Architecture",
+      unit: 1,
+      title: "COA Unit 1: Basic Computer Structure & Machine Instructions",
+      fileName: "Unit 1.pdf",
+      fileSize: "3.1 MB",
+      driveFileId: "1qQQpGKrjNC30plE7BIG-8gNmPg5U9dgn",
+      folderId: "1axgSIkJ5-WfD_xZpna8KFKnNxcaZ0AyX",
+      description: "Comprehensive handwritten and typed lecture notes covering Machine Instructions, Instruction Formats, and Addressing Modes."
+    },
+    {
+      subject: "COA",
+      subjectTitle: "Computer Organization & Architecture",
+      unit: 1,
+      title: "COA Unit 1: Addressing Modes & Execution Architecture",
+      fileName: "Unit 1 Actual.pdf",
+      fileSize: "727 KB",
+      driveFileId: "1Ccju2Q81WPLiycZF58lCyvh7qN4tlufQ",
+      folderId: "1axgSIkJ5-WfD_xZpna8KFKnNxcaZ0AyX",
+      description: "Quick revision notes with effective address (EA) calculation formulas and memory diagram models."
+    },
+    {
+      subject: "ES",
+      subjectTitle: "Environmental Science",
+      unit: 1,
+      title: "ES Unit 1: Ecosystems, Food Chains & Ecological Pyramids",
+      fileName: "Unit 1.pdf",
+      fileSize: "1.8 MB",
+      driveFileId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+      folderId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+      description: "Ecosystem structure, abiotic/biotic components, energy flow, food webs, and ecological succession."
+    },
+    {
+      subject: "ES",
+      subjectTitle: "Environmental Science",
+      unit: 2,
+      title: "ES Unit 2: Natural Resources, Conservation & Mineral Energy",
+      fileName: "Unit 2.pdf",
+      fileSize: "2.2 MB",
+      driveFileId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+      folderId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+      description: "Water resources, dams, mineral resources, energy resources (renewable vs non-renewable) and sustainable practices."
+    }
+  ];
+
+  elements.notesListContainer.innerHTML = VERIFIED_NOTES.map(note => {
+    const sub = SUBJECTS_METADATA[note.subject] || {};
+    return `
+      <div class="analytics-card" style="border-left: 4px solid ${sub.color || '#3b82f6'};">
+        <div class="analytics-card-title">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid ${sub.icon || 'fa-file-lines'}" style="color: ${sub.color};"></i>
+            <span>${note.subjectTitle}</span>
+          </div>
+          <span class="badge badge-unit">Unit ${note.unit}</span>
+        </div>
+
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin: 0.4rem 0 0.25rem;">
+          ${note.title}
+        </h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
+          ${note.description}
+        </p>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 0.65rem; margin-top: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div><i class="fa-regular fa-file-pdf" style="color: #ef4444;"></i> ${note.fileName} (${note.fileSize})</div>
+          <div style="display: flex; gap: 0.4rem;">
+            <a href="https://drive.google.com/file/d/${note.driveFileId}/view" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.78rem;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Drive
+            </a>
+            <a href="https://drive.google.com/drive/folders/${note.folderId}" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.78rem;">
+              <i class="fa-brands fa-google-drive"></i> Subject Folder
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('') + `
+    <div class="analytics-card" style="border: 2px dashed var(--border-color); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem 1.25rem;">
+      <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; color: var(--accent-blue); margin-bottom: 0.75rem;"></i>
+      <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">Contribute Missing Notes</h4>
+      <p style="font-size: 0.82rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1rem;">
+        Have lecture notes for DM, DBMS, Java, or SE? Share them with fellow MGIT CSE-III students!
+      </p>
+      <a href="https://wa.me/916303191696?text=Hi%20Amaan,%20I%20have%20notes%20to%20contribute%20for%20MGIT%20CSE-III" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="text-decoration: none; font-size: 0.82rem;">
+        <i class="fa-brands fa-whatsapp" style="color: #16a34a;"></i> Send Notes via WhatsApp
+      </a>
+    </div>
+  `;
 }
 
 function resetFilters() {
