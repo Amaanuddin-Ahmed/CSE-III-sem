@@ -174,9 +174,9 @@ const PYQ_DATABASE = [
     part: "B",
     marks: 10,
     frequency: 5,
-    repeatProbability: "99% (Guaranteed)",
+    repeatProbability: "99% Historical Recurrence",
     question: "Write an algorithm or C program to implement the following operations on a Singly Linked List: (i) Insert at a specific position, (ii) Delete a node with a given key, (iii) Reverse the linked list without allocating new nodes.",
-    importance: "Tier 1",
+    importance: "Tier 1 - Top Priority",
     tags: ["Linked List", "SLL", "Reverse List", "Pointer Manipulation"],
     solutionHint: `
 **Crucial Pointers for Reverse Operation:**
