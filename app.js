@@ -10,7 +10,7 @@
  * - Admin Portal with Moderation Queue
  * - Floating Gemini AI Assistant
  */
-
+import { Analytics } from "@vercel/analytics/next";
 (function () {
   'use strict';
 
