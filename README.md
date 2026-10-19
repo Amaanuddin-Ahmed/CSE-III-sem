@@ -18,51 +18,41 @@ Instead of sifting through fragmented folders, handwritten copies, or unorganize
 
 ## 📚 Subject Coverage (MGIT CSE Semester III)
 
-The platform strictly covers all **7 syllabus subjects**:
+The platform strictly covers all **7 syllabus subjects**, each organized with dedicated **Notes** and **PYQs** subfolders:
 
-| Code | Subject | Short Code | Verified Drive Files | Notes Available |
-| :--- | :--- | :---: | :---: | :---: |
-| **CS303PC** | Discrete Mathematics | `DM` | 24 Items (22 PYQs + 2 Scanned) | Contribution Mode |
-| **CS302PC** | Computer Organization & Architecture | `COA` | 23 Items (21 PYQs + 2 Notes) | Unit 1 Notes Verified |
-| **CS305PC** | Object-Oriented Programming through Java | `OOPJ` | 20 Java Past Papers | Contribution Mode |
-| **CS301PC** | Database Management Systems | `DBMS` | 12 Past Papers | Contribution Mode |
-| **CS304PC** | Software Engineering | `SE` | 17 Past Papers | Contribution Mode |
-| **MC301HS** | Environmental Studies | `ES` | 5 Items (3 PYQs + 2 Notes) | Unit 1 & 2 Notes Verified |
-| **MC302IE** | Innovation and Entrepreneurship | `I&E` | Drive Bank Pending | Open for Contributions |
+| Subject | Short Code | Verified Past Papers | Notes & Materials | Direct Drive Links |
+| :--- | :---: | :---: | :---: | :---: |
+| Discrete Mathematics | `DM` | 24 Papers (PDF/Scanned) | Ready for Contributions | Dedicated Notes & PYQs Folders |
+| Computer Organization & Architecture | `COA` | 21 Past Papers | 2 Verified Unit Notes | Dedicated Notes & PYQs Folders |
+| Object-Oriented Programming through Java | `OOPJ` | 20 Past Papers | 14 Verified Notes & Question Banks | Dedicated Notes & PYQs Folders |
+| Database Management Systems | `DBMS` | 12 Past Papers | 1 Comprehensive Units 1–3 Guide | Dedicated Notes & PYQs Folders |
+| Software Engineering | `SE` | 17 Past Papers | Ready for Contributions | Dedicated Notes & PYQs Folders |
+| Environmental Studies | `ES` | 3 Papers & Solution Keys | 4 Comprehensive Unit Notes | Dedicated Notes & PYQs Folders |
+| Innovation and Entrepreneurship | `I&E` | Drive Bank Initialized | Ready for Contributions | Dedicated Notes & PYQs Folders |
 
 ---
 
 ## ✨ Key Features & Architecture
 
-### 1. Clean, Formal Academic Design
-- **Calm, Neutral Palette**: Built with a soft neutral gradient background (`#f7f9fa` to `#edf1f5`) ensuring crisp contrast without stark sterile white or harsh dark themes.
-- **2-Column Responsive Grid**: Clear subject navigation with large subject icons, short codes, and resource metrics.
-- **Zero Gimmicks**: Strictly avoids neon colors, distracting gradients, fake testimonials, and checkmark bullets.
+### 1. Two-Step Subject Navigation
+- **Focused Study Category Selection**: When a student selects any subject, the hub presents two clear, tactile choice cards:
+  - **[ 📄 Notes & Resources ]**: Unit-wise lecture notes, question bank answers, and faculty slides.
+  - **[ 📚 Previous Year Questions (PYQs) ]**: Curated semester exam questions with recurrence tracking, filters, and direct PDF links.
+- **Dynamic Category Breadcrumb**: Once inside a category, students can toggle between Notes and PYQs with a single click, or return to choose another subject.
 
-### 2. Dynamic Google Drive Integration
-- **Context-Aware Drive Navigation**: Top header features a prominent Drive button that automatically links to the **Entire SEM 3 PYQ Folder** (`1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr`) on the homepage, and dynamically adapts to the specific subject's Drive folder (e.g. COA, DM, OOPJ, DBMS, SE, ES) whenever that subject is opened.
+### 2. Direct-to-Paper PDF Links
+- Every question card links directly to its verified Google Drive question paper PDF (`driveFileId`), eliminating the need to browse through dozens of unorganized files.
 
-### 3. Dual-Division Subject Exploration
-When selecting any subject, the workspace opens into two focused divisions:
-- **Notes & Resources**: Chapter-wise dropdown menu (Unit 1 to Unit 5, or All Chapters) displaying verified lecture notes with direct Google Drive view links.
-- **Previous Year Questions (PYQs)**:
-  - **Academic Year Checkboxes**: Filter questions interactively across years (2024, 2023, 2022, 2021, 2020, 2019) with a live dynamic count banner.
-  - **Part A vs Part B Toggle**: Filter by Part A (2 Marks short questions) or Part B (5/10 Marks long answer essay questions).
-  - **Question Detail Modal**: Clicking any question opens an in-depth analysis showing recurrence records, the exact source PDF paper name in Google Drive, page numbers, and concise tips (`Tip: ...`).
+### 3. Integrated Google Gemini AI Study Assistant
+- Connected directly to Google Gemini API (`gemini-3.5-flash-lite` & `gemini-3.5-flash`) with standard access for all students.
+- Delivers academic concept explanations, code implementations, formula derivations, and university examination scoring blueprints.
 
-### 4. Controlled Student Contribution Workflow
-- Every subject provides a **+ Contribute** action in both Notes and PYQs divisions.
-- A **Contribution Guideline Pop-up** instructs contributors not to upload random or unverified files.
-- Mobile and desktop file pickers support multiple-file selection (`.pdf`, `.png`, `.jpg`) with metadata tagging (Subject, Resource Type, Unit 1–5 or "Mixed", and Academic Year).
-- All contributions are safely placed into a private moderation queue for verification.
+### 4. Modern, Human-Centric Typography
+- Crafted with modern fonts (**Plus Jakarta Sans** and **Inter**) with comfortable line-height, soft borders, and zero AI-generated visual clutter.
 
-### 5. Private Admin Portal
-- Accessible via the **Login as Admin** button in the header.
-- Displays live statistics, moderation review queue, and one-click Approve / Reject moderation controls.
-
-### 6. Floating Gemini AI Study Assistant
-- A subtle floating button in the bottom-right corner provides instant access to syllabus-aligned concept explanations and study tips.
-- Interactive prompt chips for rapid guidance on COA Addressing Modes, DBMS Normalization, DM Recurrence Relations, and Java OOP principles.
+### 5. Flexible Multi-Format Contributions
+- Students can contribute study notes, question papers, and assignment solutions supporting **PDF, Word (.docx), PowerPoint (.pptx), and Images**.
+- Removed roll number requirement to ensure privacy and frictionless contribution. All submissions enter a secure moderation queue.
 
 ### 7. Direct Feedback & Attribution
 - Dedicated feedback division connecting directly to WhatsApp: [Got an Idea to Improve ? Let me know](https://wa.me/916303191696).

@@ -19,6 +19,7 @@
   // -------------------------------------------------------------
   const state = {
     currentSubject: null,
+    currentMode: null, // 'notes' or 'pyqs'
     notesChapterFilter: 'all',
     selectedYears: [2024, 2023, 2022, 2021, 2020],
     selectedPart: 'all', // 'all', 'A', 'B'
@@ -27,6 +28,9 @@
     pendingContributions: JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]')
   };
 
+  const DEFAULT_GEMINI_KEY = (typeof atob === 'function') 
+    ? atob('QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=') 
+    : '';
   const DRIVE_ROOT_URL = "https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing";
 
   // -------------------------------------------------------------
@@ -46,6 +50,21 @@
     subjectDetailSection: document.getElementById('subjectDetailSection'),
     backToSubjectsBtn: document.getElementById('backToSubjectsBtn'),
     detailSubjectTitle: document.getElementById('detailSubjectTitle'),
+
+    // Two-step Mode Selection Elements
+    modeSelectorWrapper: document.getElementById('modeSelectorWrapper'),
+    chooseNotesCard: document.getElementById('chooseNotesCard'),
+    choosePyqsCard: document.getElementById('choosePyqsCard'),
+    modeNotesCountText: document.getElementById('modeNotesCountText'),
+    modePyqsCountText: document.getElementById('modePyqsCountText'),
+    modeSwitcherBar: document.getElementById('modeSwitcherBar'),
+    switchModeToSelectorBtn: document.getElementById('switchModeToSelectorBtn'),
+    tabSwitchToNotes: document.getElementById('tabSwitchToNotes'),
+    tabSwitchToPyqs: document.getElementById('tabSwitchToPyqs'),
+
+    // Division Containers
+    notesDivisionBox: document.getElementById('notesDivisionBox'),
+    pyqsDivisionBox: document.getElementById('pyqsDivisionBox'),
 
     notesChapterSelect: document.getElementById('notesChapterSelect'),
     notesListContainer: document.getElementById('notesListContainer'),
@@ -187,6 +206,7 @@
   // -------------------------------------------------------------
   function selectSubject(sub) {
     state.currentSubject = sub;
+    state.currentMode = null;
     state.notesChapterFilter = 'all';
 
     // Update Top Drive Button dynamically to this Subject's folder
@@ -199,19 +219,27 @@
       el.topDriveBtnText.textContent = `View Entire PYQ Folder`;
     }
 
-    // Update Header in Detail Section
-    el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title} (${sub.code})`;
+    // Update Header in Detail Section (Zero Course Codes!)
+    el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title}`;
+
+    // Update counts on the Mode Choice Cards
+    const notesCount = NOTES_DATA.filter(n => n.subjectId === sub.id).length;
+    if (el.modeNotesCountText) {
+      el.modeNotesCountText.textContent = `${notesCount} Resource${notesCount === 1 ? '' : 's'}`;
+    }
+    if (el.modePyqsCountText) {
+      el.modePyqsCountText.textContent = `${sub.paperCount} Paper${sub.paperCount === 1 ? '' : 's'}`;
+    }
+
+    // Show Mode Selector first — do not show notes or questions immediately
+    showModeSelector();
 
     // Reset notes chapter dropdown
     if (el.notesChapterSelect) {
       el.notesChapterSelect.value = 'all';
     }
 
-    // Render Two Divisions
-    renderNotesDivision();
-    renderPyqsDivision();
-
-    // Toggle views
+    // Toggle main sections
     el.welcomeSection.style.display = 'none';
     el.subjectsSection.style.display = 'none';
     el.subjectDetailSection.style.display = 'block';
@@ -222,8 +250,60 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  function showModeSelector() {
+    state.currentMode = null;
+    if (el.modeSelectorWrapper) el.modeSelectorWrapper.style.display = 'block';
+    if (el.modeSwitcherBar) el.modeSwitcherBar.style.display = 'none';
+    if (el.notesDivisionBox) el.notesDivisionBox.style.display = 'none';
+    if (el.pyqsDivisionBox) el.pyqsDivisionBox.style.display = 'none';
+
+    if (state.currentSubject && state.currentSubject.driveUrl) {
+      el.topDriveBtn.href = state.currentSubject.driveUrl;
+      el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} Drive Folder`;
+    }
+  }
+
+  function showNotesView() {
+    state.currentMode = 'notes';
+    if (el.modeSelectorWrapper) el.modeSelectorWrapper.style.display = 'none';
+    if (el.modeSwitcherBar) el.modeSwitcherBar.style.display = 'flex';
+    if (el.tabSwitchToNotes) el.tabSwitchToNotes.classList.add('active');
+    if (el.tabSwitchToPyqs) el.tabSwitchToPyqs.classList.remove('active');
+    if (el.notesDivisionBox) el.notesDivisionBox.style.display = 'block';
+    if (el.pyqsDivisionBox) el.pyqsDivisionBox.style.display = 'none';
+
+    if (state.currentSubject) {
+      if (state.currentSubject.notesUrl) {
+        el.topDriveBtn.href = state.currentSubject.notesUrl;
+        el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} Notes Folder`;
+      }
+      renderNotesDivision();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showPyqsView() {
+    state.currentMode = 'pyqs';
+    if (el.modeSelectorWrapper) el.modeSelectorWrapper.style.display = 'none';
+    if (el.modeSwitcherBar) el.modeSwitcherBar.style.display = 'flex';
+    if (el.tabSwitchToNotes) el.tabSwitchToNotes.classList.remove('active');
+    if (el.tabSwitchToPyqs) el.tabSwitchToPyqs.classList.add('active');
+    if (el.notesDivisionBox) el.notesDivisionBox.style.display = 'none';
+    if (el.pyqsDivisionBox) el.pyqsDivisionBox.style.display = 'block';
+
+    if (state.currentSubject) {
+      if (state.currentSubject.pyqsUrl) {
+        el.topDriveBtn.href = state.currentSubject.pyqsUrl;
+        el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} PYQs Folder`;
+      }
+      renderPyqsDivision();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   function returnToSubjectsList() {
     state.currentSubject = null;
+    state.currentMode = null;
 
     // Reset Top Drive Button to Entire Folder
     el.topDriveBtn.href = DRIVE_ROOT_URL;
@@ -258,10 +338,10 @@
     if (notes.length === 0) {
       const chLabel = state.notesChapterFilter === 'all' ? 'this subject' : `Unit ${state.notesChapterFilter}`;
       el.notesListContainer.innerHTML = `
-        <div class="empty-state-box">
-          <div class="empty-state-icon"><i class="fa-regular fa-folder-open"></i></div>
-          <div class="empty-state-title">No notes available for ${chLabel}</div>
-          <div class="empty-state-sub">Be the first to share verified lecture notes for your batch by clicking Contribute.</div>
+        <div class="empty-notes-card">
+          <i class="fa-regular fa-folder-open empty-icon"></i>
+          <h5>No notes uploaded yet for ${escapeHtml(chLabel)}</h5>
+          <p>Be the first to share verified lecture notes or question bank answers! Click the contribute button below to upload study material.</p>
         </div>
       `;
       return;
@@ -273,14 +353,25 @@
 
       const fileLink = note.driveFileId
         ? `https://drive.google.com/file/d/${note.driveFileId}/view?usp=sharing`
-        : note.folderUrl;
+        : (note.folderUrl || (state.currentSubject ? state.currentSubject.notesUrl : DRIVE_ROOT_URL));
+
+      const fn = (note.fileName || '').toLowerCase();
+      let iconClass = 'fa-solid fa-file-pdf';
+      let iconColor = '#dc2626';
+      if (fn.endsWith('.doc') || fn.endsWith('.docx')) {
+        iconClass = 'fa-solid fa-file-word';
+        iconColor = '#2563eb';
+      } else if (fn.endsWith('.ppt') || fn.endsWith('.pptx')) {
+        iconClass = 'fa-solid fa-file-powerpoint';
+        iconColor = '#ea580c';
+      }
 
       item.innerHTML = `
         <div class="note-info">
           <div class="note-title">${escapeHtml(note.title)}</div>
           <div class="note-desc">${escapeHtml(note.description || '')}</div>
           <div class="note-meta">
-            <span><i class="fa-regular fa-file-pdf"></i> ${escapeHtml(note.fileName)}</span> &bull; 
+            <span><i class="${iconClass}" style="color: ${iconColor};"></i> ${escapeHtml(note.fileName)}</span> &bull; 
             <span>${escapeHtml(note.fileSize)}</span> &bull; 
             <span>Unit ${note.chapter}</span>
           </div>
@@ -663,12 +754,12 @@
   function initGeminiKey() {
     const savedKey = localStorage.getItem('mgit_user_gemini_key');
     if (savedKey) {
-      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Custom Gemini AI Active (Key Connected)';
-      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'API Key Active';
+      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Custom Gemini AI Active (Personal Key)';
+      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Personal Key Active';
       if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = savedKey;
     } else {
-      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Instant Knowledge Mode (No Sign-in Required)';
-      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Connect Gemini API Key';
+      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Gemini AI Active (Ready for All Students)';
+      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Use Custom Key (Optional)';
     }
   }
 
@@ -687,7 +778,7 @@
     localStorage.setItem('mgit_user_gemini_key', key);
     initGeminiKey();
     if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
-    showToast('Gemini API Key saved! Live AI queries enabled.');
+    showToast('Personal Gemini API Key saved! Live AI queries enabled.');
   }
 
   function clearUserGeminiKey() {
@@ -695,7 +786,7 @@
     if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = '';
     initGeminiKey();
     if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
-    showToast('API Key cleared. Switched back to instant knowledge mode.');
+    showToast('Switched back to shared default student key.');
   }
 
   async function handleGeminiQuery(queryText) {
@@ -714,23 +805,21 @@
     // Thinking state
     const thinkingMsg = document.createElement('div');
     thinkingMsg.className = 'ai-msg';
-    thinkingMsg.innerHTML = '<em>Consulting MGIT CSE Semester III syllabus and knowledge base...</em>';
+    thinkingMsg.innerHTML = '<em>Thinking with Google Gemini AI...</em>';
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // 1. Try personal user key if provided
-    const userKey = localStorage.getItem('mgit_user_gemini_key');
-    if (userKey) {
-      try {
-        const liveAnswer = await fetchGeminiDirect(userKey, q);
-        if (liveAnswer) {
-          thinkingMsg.innerHTML = formatMarkdown(liveAnswer);
-          el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-          return;
-        }
-      } catch (err) {
-        console.warn('Personal Gemini API key call failed, falling back to local engine:', err);
+    // 1. Direct call to Google Gemini API (using student key or default key)
+    const activeKey = localStorage.getItem('mgit_user_gemini_key') || DEFAULT_GEMINI_KEY;
+    try {
+      const liveAnswer = await fetchGeminiDirect(activeKey, q);
+      if (liveAnswer) {
+        thinkingMsg.innerHTML = formatMarkdown(liveAnswer);
+        el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+        return;
       }
+    } catch (err) {
+      console.warn('Direct Gemini API call failed, trying serverless endpoint:', err);
     }
 
     // 2. Try serverless /api/gemini endpoint
@@ -749,43 +838,59 @@
         }
       }
     } catch (e) {
-      // Serverless not available or static host; proceed to local engine
+      console.warn('Serverless endpoint failed:', e);
     }
 
-    // 3. Supercharged instant knowledge base (covers all 7 subjects, 100% offline & free)
+    // 3. Offline technical guidance fallback (only if network fails completely)
     setTimeout(() => {
       const response = generateGeminiResponse(q);
       thinkingMsg.innerHTML = response;
       el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-    }, 350);
+    }, 250);
   }
 
   async function fetchGeminiDirect(apiKey, query) {
-    const subjectContext = state.currentSubject ? state.currentSubject.title : 'MGIT CSE Semester III';
-    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III.
+    const subjectContext = state.currentSubject ? `${state.currentSubject.shortName} - ${state.currentSubject.title}` : 'MGIT CSE Semester III';
+    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III students.
 Subject Context: ${subjectContext}.
-Answer the student's question with academic depth, complete clarity, correct terminology, standard equations, concise code snippets (where relevant), and practical exam scoring tips.`;
+Answer the student's question clearly, thoroughly, and academically.
+Include:
+- Formal, standard textbook definition and concepts
+- Key equations, proofs, logic tables, or neat code snippets where appropriate
+- Clear bullet points or numbered steps
+- High-yield MGIT exam scoring advice and common pitfalls to avoid.`;
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [
-          {
-            role: 'user',
-            parts: [{ text: `${systemPrompt}\n\nQuestion: ${query}` }]
-          }
-        ],
-        generationConfig: {
-          temperature: 0.4,
-          maxOutputTokens: 1024
+    const models = ['gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    for (const model of models) {
+      try {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [
+              {
+                role: 'user',
+                parts: [{ text: `${systemPrompt}\n\nStudent Question: ${query}` }]
+              }
+            ],
+            generationConfig: {
+              temperature: 0.4,
+              maxOutputTokens: 1200
+            }
+          })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (candidate) return candidate;
         }
-      })
-    });
-    if (!res.ok) throw new Error(`Gemini API returned status ${res.status}`);
-    const data = await res.json();
-    return data.candidates?.[0]?.content?.parts?.[0]?.text;
+      } catch (err) {
+        console.warn(`Error querying ${model}:`, err);
+      }
+    }
+    throw new Error('All direct Gemini model endpoints failed');
   }
 
   function formatMarkdown(text) {
@@ -1069,6 +1174,38 @@ Answer the student's question with academic depth, complete clarity, correct ter
     // Back to subjects
     if (el.backToSubjectsBtn) {
       el.backToSubjectsBtn.addEventListener('click', returnToSubjectsList);
+    }
+
+    // Two-Step Mode Choice Cards
+    if (el.chooseNotesCard) {
+      el.chooseNotesCard.addEventListener('click', showNotesView);
+      el.chooseNotesCard.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showNotesView();
+        }
+      });
+    }
+
+    if (el.choosePyqsCard) {
+      el.choosePyqsCard.addEventListener('click', showPyqsView);
+      el.choosePyqsCard.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showPyqsView();
+        }
+      });
+    }
+
+    // Mode Switcher Bar Tabs
+    if (el.tabSwitchToNotes) {
+      el.tabSwitchToNotes.addEventListener('click', showNotesView);
+    }
+    if (el.tabSwitchToPyqs) {
+      el.tabSwitchToPyqs.addEventListener('click', showPyqsView);
+    }
+    if (el.switchModeToSelectorBtn) {
+      el.switchModeToSelectorBtn.addEventListener('click', showModeSelector);
     }
 
     // Notes Chapter Dropdown

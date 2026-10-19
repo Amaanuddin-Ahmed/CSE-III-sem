@@ -1,24 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
 /* ==========================================================================
-   MGIT PYQ Hub — Formal Academic Light Theme
-   Strictly adheres to:
-   - Soft neutral palette with subtle background gradient (never sterile/pale)
-   - Clean 2-column subjects grid with large icons
-   - Standard system & serif typography (no Inter/Geist/Space Grotesk)
-   - Zero harsh gradients, zero neon colors, zero emojis cluttering text
-   - Crisp borders (1px solid #d8dee4), subtle elevation, 44px+ touch targets
+   MGIT PYQ Hub — Modern Academic Theme
+   Modern, soft typography powered by Plus Jakarta Sans and Inter
    ========================================================================== */
 
 :root {
-  --bg-top: #f7f9fa;
-  --bg-bottom: #edf1f5;
+  --bg-top: #f8fafc;
+  --bg-bottom: #edf2f7;
   --surface-card: #ffffff;
-  --surface-muted: #f4f6f8;
-  --border-subtle: #dbe2e8;
+  --surface-muted: #f8fafc;
+  --border-subtle: #e2e8f0;
   --border-focus: #2563eb;
 
-  --text-main: #1e293b;
-  --text-muted: #526071;
-  --text-light: #7b8a9b;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-light: #64748b;
 
   --brand-navy: #1e3a8a;
   --brand-blue: #2563eb;
@@ -33,13 +30,15 @@
   --whatsapp-green: #15803d;
   --whatsapp-hover: #166534;
 
-  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.06);
-  --shadow-dialog: 0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
+  --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-dialog: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
 }
 
 *, *::before, *::after {
@@ -1922,6 +1921,260 @@ body {
   padding: 6px 12px;
   font-size: 12px;
   min-height: 34px;
+}
+
+/* ==========================================================================
+   Two-Step Mode Selection Screen (Notes vs PYQs)
+   ========================================================================== */
+
+.mode-selector-wrapper {
+  margin: 10px 0 30px;
+}
+
+.mode-selector-intro {
+  margin-bottom: 20px;
+}
+
+.mode-selector-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 6px;
+}
+
+.mode-selector-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.mode-choices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .mode-choices-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.mode-choice-card {
+  background: var(--surface-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.22s ease-in-out;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.mode-choice-card:hover {
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.mode-choice-card:active {
+  transform: translateY(0);
+}
+
+.mode-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.notes-icon {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.pyqs-icon {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.mode-card-content {
+  flex-grow: 1;
+}
+
+.mode-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.mode-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.mode-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: #f1f5f9;
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.mode-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand-blue);
+  transition: color 0.15s ease;
+}
+
+.mode-choice-card:hover .mode-card-action {
+  color: var(--brand-blue-hover);
+}
+
+.mode-card-action i {
+  transition: transform 0.2s ease;
+}
+
+.mode-choice-card:hover .mode-card-action i {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Mode Switcher Bar (Breadcrumb / Switch Bar)
+   ========================================================================== */
+
+.mode-switcher-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 10px 14px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.mode-switch-btn {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  background-color: #ffffff;
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.mode-switch-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--brand-navy);
+  border-color: #cbd5e1;
+}
+
+.mode-switch-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-tab-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.mode-tab-btn:hover {
+  background-color: #ffffff;
+  color: var(--brand-navy);
+  border-color: var(--border-subtle);
+}
+
+.mode-tab-btn.active {
+  background-color: var(--brand-navy);
+  color: #ffffff;
+  border-color: var(--brand-navy);
+  box-shadow: 0 1px 3px rgba(30, 58, 138, 0.2);
+}
+
+/* Bottom Subtle Contribute in Notes */
+.notes-bottom-contribute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+/* Empty Notes State */
+.empty-notes-card {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin: 10px 0;
+}
+
+.empty-notes-card i.empty-icon {
+  font-size: 40px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.empty-notes-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 6px;
+}
+
+.empty-notes-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 
