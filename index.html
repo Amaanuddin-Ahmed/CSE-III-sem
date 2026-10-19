@@ -55,6 +55,12 @@
       </div>
 
       <div class="header-actions">
+        <!-- Tour Guide Button -->
+        <button id="restartTourBtn" class="top-tour-btn" type="button" title="Interactive Website Tour">
+          <i class="fa-solid fa-compass"></i>
+          <span>Guide</span>
+        </button>
+
         <!-- Top dynamic Drive button -->
         <a id="topDriveBtn" 
            href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" 
@@ -78,10 +84,13 @@
   <!-- Main Application Container -->
   <main class="main-container">
 
-    <!-- Welcome Section -->
+    <!-- Welcome Section (Gemini Style) -->
     <section class="welcome-section" id="welcomeSection">
-      <h2 class="welcome-heading">Welcome to MGIT PYQ Hub</h2>
-      <p class="welcome-desc">Your all-in-one platform for MGIT CSE Semester III Previous Year Questions, Notes and Study Resources.</p>
+      <div class="welcome-badge-pill">
+        <i class="fa-solid fa-sparkles"></i> <span>MGIT Autonomous &bull; CSE Department</span>
+      </div>
+      <h2 class="welcome-heading">Welcome to <span class="gemini-title-gradient">MGIT PYQ Hub</span></h2>
+      <p class="welcome-desc">Your intelligent, student-curated platform for MGIT CSE Semester III Previous Year Questions, verified lecture notes, and Google Gemini study assistance.</p>
     </section>
 
     <!-- Subjects Section (2 Columns Grid) -->
@@ -531,40 +540,68 @@
   </div>
 
   <!-- ============================================================== -->
-  <!-- MODAL: Gemini AI Assistant Modal -->
+  <!-- MODAL: Full Gemini AI Assistant App -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="geminiModal" style="display: none;" role="dialog" aria-modal="true">
-    <div class="modal-dialog gemini-dialog">
-      <div class="modal-header">
-        <h4 class="modal-dialog-title">
-          <svg class="gemini-title-icon" viewBox="0 0 24 24" width="22" height="22" fill="#2563eb">
-            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
-          </svg>
-          Gemini AI Study Assistant
-        </h4>
-        <div class="modal-header-actions">
-          <button type="button" class="btn-clear-chat" id="clearGeminiChatBtn" title="Clear chat history">
-            <i class="fa-solid fa-rotate-left"></i> <span>Clear</span>
+    <div class="modal-dialog gemini-dialog gemini-app-layout">
+      
+      <!-- Left Sidebar: Chat History & New Chat -->
+      <aside class="gemini-sidebar" id="geminiSidebar">
+        <div class="gemini-sidebar-top">
+          <button type="button" class="btn-new-chat" id="newChatBtn" title="Start a fresh conversation">
+            <i class="fa-solid fa-plus"></i>
+            <span>New Chat</span>
           </button>
-          <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
         </div>
-      </div>
 
-      <div class="modal-body gemini-modal-body">
-        <div class="gemini-status-bar">
-          <div class="gemini-status-pill">
-            <span class="status-dot"></span>
-            <span id="geminiModeIndicator">Instant Knowledge Mode (No Sign-in Required)</span>
+        <div class="gemini-history-section">
+          <div class="history-label">
+            <span><i class="fa-solid fa-clock-rotate-left"></i> Recent Chats</span>
+            <button type="button" class="btn-clear-all-history" id="clearAllHistoryBtn" title="Clear all chat history">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
           </div>
-          <button type="button" class="btn-api-key-toggle" id="toggleApiKeyBtn">
-            <i class="fa-solid fa-key"></i> <span id="apiKeyBtnLabel">Connect Gemini API Key</span>
-          </button>
+          <div class="gemini-history-list" id="geminiHistoryList">
+            <!-- Dynamically populated from localStorage -->
+          </div>
+        </div>
+
+        <div class="gemini-sidebar-footer">
+          <div class="gemini-user-pill">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>MGIT CSE Sem III</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Chat Workspace -->
+      <section class="gemini-chat-workspace">
+        <!-- Workspace Header -->
+        <div class="modal-header gemini-workspace-header">
+          <div class="gemini-header-left">
+            <button type="button" class="gemini-icon-btn" id="toggleGeminiSidebarBtn" title="Toggle Chat History">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <h4 class="modal-dialog-title gemini-workspace-title">
+              <svg class="gemini-title-icon" viewBox="0 0 24 24" width="22" height="22" fill="#2563eb">
+                <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+              </svg>
+              <span id="geminiCurrentChatTitle">Gemini Study Assistant</span>
+            </h4>
+            <span class="gemini-live-pill"><i class="fa-solid fa-circle"></i> Live 3.5</span>
+          </div>
+          <div class="modal-header-actions">
+            <button type="button" class="btn-api-key-toggle" id="toggleApiKeyBtn" title="Google AI Studio Key">
+              <i class="fa-solid fa-key"></i> <span id="apiKeyBtnLabel">API Key</span>
+            </button>
+            <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
+          </div>
         </div>
 
         <!-- Optional User API Key Drawer -->
         <div class="gemini-key-drawer" id="geminiKeyDrawer" style="display: none;">
           <p class="key-drawer-desc">
-            Want unlimited custom AI answers on any topic? Enter your personal Google Gemini API key from <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a> (saved only in your browser):
+            Want unlimited custom AI answers on any topic? Enter your personal Google Gemini API key from <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>:
           </p>
           <div class="key-input-flex">
             <input type="password" id="userGeminiKeyInput" class="form-input" placeholder="Paste AI Studio Key (AIzaSy...)">
@@ -573,48 +610,133 @@
           </div>
         </div>
 
-        <p class="gemini-intro-text">
-          Ask questions across MGIT CSE Sem III subjects (DM, COA, OOPJ, DBMS, SE, ES, I&amp;E), definitions, or exam strategies:
-        </p>
-
-        <!-- Prompt suggestions -->
-        <div class="gemini-prompt-chips">
-          <button type="button" class="prompt-chip" data-query="Explain Addressing Modes in Computer Organization (COA)">COA Addressing Modes</button>
-          <button type="button" class="prompt-chip" data-query="Key topics in DBMS Normalization (1NF, 2NF, 3NF, BCNF)">DBMS Normalization</button>
-          <button type="button" class="prompt-chip" data-query="How to solve Recurrence Relations using Characteristic Equation in DM">DM Recurrence Relations</button>
-          <button type="button" class="prompt-chip" data-query="Difference between Overloading and Overriding in Java OOP">Java OOP Differences</button>
-          <button type="button" class="prompt-chip" data-query="Booth's Multiplication Algorithm flowchart and working in COA">COA Booth's Algorithm</button>
-          <button type="button" class="prompt-chip" data-query="Software Engineering SDLC Models: Waterfall vs Agile">SE Waterfall vs Agile</button>
-          <button type="button" class="prompt-chip" data-query="Explain ACID properties with real database transaction examples">DBMS ACID Properties</button>
-        </div>
-
-        <!-- Chat Output Box -->
-        <div class="gemini-chat-output" id="geminiChatOutput">
-          <div class="ai-msg initial-msg">
-            <div class="ai-msg-header">
-              <div class="ai-avatar-badge">
-                <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
-                  <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
-                </svg>
-                <span class="ai-sender-name">Gemini Study Assistant</span>
-              </div>
-              <span class="ai-model-tag">Academic Knowledge</span>
+        <!-- Chat Stream Container -->
+        <div class="modal-body gemini-modal-body gemini-stream-body">
+          
+          <!-- Welcoming Landing Screen (Shown before first prompt in a chat) -->
+          <div class="gemini-welcome-screen" id="geminiWelcomeScreen">
+            <div class="gemini-welcome-sparkle">
+              <svg viewBox="0 0 24 24" width="48" height="48">
+                <defs>
+                  <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563eb" />
+                    <stop offset="50%" stop-color="#7c3aed" />
+                    <stop offset="100%" stop-color="#db2777" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#sparkleGradient)" d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+              </svg>
             </div>
-            <div class="ai-msg-body">
-              <p><strong>Welcome to MGIT CSE Sem III Study Assistant!</strong> I can explain concepts, solve question paper problems, provide code snippets, and share university exam scoring strategies across all 7 semester subjects without signing in. Ask anything below!</p>
+            <h2 class="gemini-greet-title">
+              <span class="gemini-shimmer-text">Hello, Engineer</span>
+            </h2>
+            <p class="gemini-greet-sub">What concept, PYQ problem, or exam strategy would you like to explore today?</p>
+            
+            <div class="gemini-prompt-grid">
+              <button type="button" class="gemini-prompt-card" data-query="Explain Addressing Modes in Computer Organization (COA) with clear memory diagrams">
+                <div class="card-icon coa"><i class="fa-solid fa-microchip"></i></div>
+                <div class="card-text">
+                  <strong>COA Addressing Modes</strong>
+                  <span>Direct, Indirect, Indexed &amp; diagrams</span>
+                </div>
+              </button>
+              <button type="button" class="gemini-prompt-card" data-query="DBMS Schema Normalization: Explain 1NF, 2NF, 3NF, BCNF with table decomposition examples">
+                <div class="card-icon dbms"><i class="fa-solid fa-database"></i></div>
+                <div class="card-text">
+                  <strong>DBMS Normalization</strong>
+                  <span>1NF to BCNF closures &amp; anomalies</span>
+                </div>
+              </button>
+              <button type="button" class="gemini-prompt-card" data-query="How to solve Homogeneous Recurrence Relations using Characteristic Equations in Discrete Mathematics (DM)">
+                <div class="card-icon dm"><i class="fa-solid fa-calculator"></i></div>
+                <div class="card-text">
+                  <strong>DM Recurrence Relations</strong>
+                  <span>Roots, characteristic equations &amp; steps</span>
+                </div>
+              </button>
+              <button type="button" class="gemini-prompt-card" data-query="Difference between Method Overloading and Method Overriding in Java OOP with code examples">
+                <div class="card-icon oopj"><i class="fa-solid fa-code"></i></div>
+                <div class="card-text">
+                  <strong>Java OOP Differences</strong>
+                  <span>Overloading vs Overriding rules</span>
+                </div>
+              </button>
+              <button type="button" class="gemini-prompt-card" data-query="Booth's Signed Binary Multiplication Algorithm flowchart and step-by-step example in COA">
+                <div class="card-icon coa"><i class="fa-solid fa-sitemap"></i></div>
+                <div class="card-text">
+                  <strong>Booth's Algorithm</strong>
+                  <span>Signed binary multiplication tables</span>
+                </div>
+              </button>
+              <button type="button" class="gemini-prompt-card" data-query="Software Engineering SDLC Models: Waterfall vs Agile comparison and phase deliverables">
+                <div class="card-icon se"><i class="fa-solid fa-diagram-project"></i></div>
+                <div class="card-text">
+                  <strong>SE SDLC Models</strong>
+                  <span>Waterfall vs Agile trade-offs</span>
+                </div>
+              </button>
             </div>
           </div>
-        </div>
 
-        <!-- Input Row -->
-        <form id="geminiQueryForm" class="gemini-input-row">
-          <input type="text" id="geminiQueryInput" class="form-input" placeholder="Ask any question, concept, or code..." required>
-          <button type="submit" class="btn-action-primary" id="geminiSendBtn">
-            <span>Ask</span>
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
+          <!-- Active Chat Stream (Hidden when in welcome screen) -->
+          <div class="gemini-chat-output" id="geminiChatOutput" style="display: none;">
+            <!-- Messages appended here -->
+          </div>
+
+          <!-- Input Row with Camera, Mic, Image Attachment Preview, and Input Box -->
+          <div class="gemini-input-container">
+            <!-- Attached Image Preview Strip (if photo uploaded) -->
+            <div class="gemini-image-preview-strip" id="geminiImagePreviewStrip" style="display: none;">
+              <div class="image-preview-card">
+                <img id="geminiPreviewImg" src="" alt="Uploaded question paper or diagram">
+                <button type="button" id="removeGeminiImgBtn" class="btn-remove-preview" title="Remove image">&times;</button>
+              </div>
+              <span class="preview-note">Image attached for Gemini analysis</span>
+            </div>
+
+            <form id="geminiQueryForm" class="gemini-modern-input-bar">
+              <!-- Hidden File Input for Camera / Image -->
+              <input type="file" id="geminiCameraInput" accept="image/*" style="display: none;">
+              
+              <button type="button" class="gemini-tool-btn" id="geminiCameraBtn" title="Upload question paper or diagram photo">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+              
+              <button type="button" class="gemini-tool-btn" id="geminiMicBtn" title="Live Voice Input (Speak your question)">
+                <i class="fa-solid fa-microphone"></i>
+              </button>
+
+              <input type="text" id="geminiQueryInput" class="gemini-text-field" placeholder="Ask anything about DM, COA, OOPJ, DBMS, SE, ES..." required autocomplete="off">
+
+              <button type="submit" class="gemini-submit-btn" id="geminiSendBtn" title="Send Question">
+                <i class="fa-solid fa-arrow-up"></i>
+              </button>
+            </form>
+            <p class="gemini-legal-caption">Gemini Study Assistant can make mistakes. Verify critical dates and formulas with official MGIT syllabus.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Interactive Onboarding Spotlight Tour -->
+  <!-- ============================================================== -->
+  <div id="tourOverlay" class="tour-overlay" style="display: none;"></div>
+  <div id="tourTooltip" class="tour-tooltip" style="display: none;" role="dialog" aria-live="polite">
+    <div class="tour-tooltip-header">
+      <span class="tour-step-badge" id="tourStepBadge">Step 1 of 3</span>
+      <button type="button" class="tour-close-btn" id="tourSkipBtn" title="Skip Tour">&times;</button>
+    </div>
+    <h4 class="tour-title" id="tourTitle">Google Drive Master Folder</h4>
+    <p class="tour-desc" id="tourDesc">Click here to view the complete Google Drive repository...</p>
+    <div class="tour-footer">
+      <button type="button" class="btn-tour-secondary" id="tourPrevBtn" disabled>
+        <i class="fa-solid fa-chevron-left"></i> <span>Previous</span>
+      </button>
+      <button type="button" class="btn-tour-primary" id="tourNextBtn">
+        <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </div>
 

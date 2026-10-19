@@ -48,7 +48,7 @@ Formatting guidelines:
 - For math formulas, equations, or exam marks calculations, write standard human-readable math (e.g., 5 × 10 = 50 marks, (5 + 5), 2ⁿ, O(log n)) or standard LaTeX math ($...$ or $$...$$). Never output raw unformatted LaTeX text tags like \\text{...} when simple text suffices.
 - Provide neat syntax-highlighted code blocks with language tags (e.g. \`\`\`java) where relevant.`;
 
-    const models = ['gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
     let lastError = null;
 
     for (const model of models) {

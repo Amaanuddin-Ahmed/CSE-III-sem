@@ -25,7 +25,17 @@
     selectedPart: 'all', // 'all', 'A', 'B'
     isAdminLoggedIn: false,
     selectedFiles: [],
-    pendingContributions: JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]')
+    pendingContributions: JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]'),
+
+    // Onboarding Walkthrough Tour State
+    currentTourStep: 0,
+
+    // Gemini Chat & Sessions State
+    activeChatId: null,
+    geminiChats: JSON.parse(localStorage.getItem('mgit_gemini_chats') || '[]'),
+    pendingGeminiImage: null,
+    isSpeechListening: false,
+    speechRecognition: null
   };
 
   const DEFAULT_GEMINI_KEY = (typeof atob === 'function') 
@@ -41,6 +51,7 @@
     topDriveBtn: document.getElementById('topDriveBtn'),
     topDriveBtnText: document.getElementById('topDriveBtnText'),
     adminLoginBtn: document.getElementById('adminLoginBtn'),
+    restartTourBtn: document.getElementById('restartTourBtn'),
 
     welcomeSection: document.getElementById('welcomeSection'),
     subjectsSection: document.getElementById('subjectsSection'),
@@ -120,13 +131,27 @@
     moderationTableWrapper: document.getElementById('moderationTableWrapper'),
     adminLogoutBtn: document.getElementById('adminLogoutBtn'),
 
-    // Gemini Modal
+    // Gemini Modal & App Elements
     floatingGeminiBtn: document.getElementById('floatingGeminiBtn'),
     geminiModal: document.getElementById('geminiModal'),
     closeGeminiModalBtn: document.getElementById('closeGeminiModalBtn'),
+    geminiSidebar: document.getElementById('geminiSidebar'),
+    toggleGeminiSidebarBtn: document.getElementById('toggleGeminiSidebarBtn'),
+    newChatBtn: document.getElementById('newChatBtn'),
+    clearAllHistoryBtn: document.getElementById('clearAllHistoryBtn'),
+    geminiHistoryList: document.getElementById('geminiHistoryList'),
+    geminiCurrentChatTitle: document.getElementById('geminiCurrentChatTitle'),
+    geminiWelcomeScreen: document.getElementById('geminiWelcomeScreen'),
     geminiChatOutput: document.getElementById('geminiChatOutput'),
     geminiQueryForm: document.getElementById('geminiQueryForm'),
     geminiQueryInput: document.getElementById('geminiQueryInput'),
+    geminiSendBtn: document.getElementById('geminiSendBtn'),
+    geminiCameraBtn: document.getElementById('geminiCameraBtn'),
+    geminiCameraInput: document.getElementById('geminiCameraInput'),
+    geminiMicBtn: document.getElementById('geminiMicBtn'),
+    geminiImagePreviewStrip: document.getElementById('geminiImagePreviewStrip'),
+    geminiPreviewImg: document.getElementById('geminiPreviewImg'),
+    removeGeminiImgBtn: document.getElementById('removeGeminiImgBtn'),
     toggleApiKeyBtn: document.getElementById('toggleApiKeyBtn'),
     apiKeyBtnLabel: document.getElementById('apiKeyBtnLabel'),
     geminiModeIndicator: document.getElementById('geminiModeIndicator'),
@@ -134,7 +159,16 @@
     userGeminiKeyInput: document.getElementById('userGeminiKeyInput'),
     saveGeminiKeyBtn: document.getElementById('saveGeminiKeyBtn'),
     clearGeminiKeyBtn: document.getElementById('clearGeminiKeyBtn'),
-    clearGeminiChatBtn: document.getElementById('clearGeminiChatBtn'),
+
+    // Walkthrough Tour Elements
+    tourOverlay: document.getElementById('tourOverlay'),
+    tourTooltip: document.getElementById('tourTooltip'),
+    tourStepBadge: document.getElementById('tourStepBadge'),
+    tourTitle: document.getElementById('tourTitle'),
+    tourDesc: document.getElementById('tourDesc'),
+    tourPrevBtn: document.getElementById('tourPrevBtn'),
+    tourNextBtn: document.getElementById('tourNextBtn'),
+    tourSkipBtn: document.getElementById('tourSkipBtn'),
 
     // Toast
     toastContainer: document.getElementById('toastContainer')
@@ -154,6 +188,10 @@
     setupEventListeners();
     setupAdminStats();
     initGeminiKey();
+    loadGeminiChats();
+    setupImageAndCameraAttachment();
+    setupSpeechRecognition();
+    initOnboardingTourCheck();
   }
 
   // -------------------------------------------------------------
@@ -744,11 +782,419 @@
   }
 
   // -------------------------------------------------------------
+  // Gemini AI App State & Chat Session Management
+  // -------------------------------------------------------------
+  function loadGeminiChats() {
+    try {
+      const stored = localStorage.getItem('mgit_gemini_chats');
+      state.geminiChats = stored ? JSON.parse(stored) : [];
+    } catch (e) {
+      state.geminiChats = [];
+    }
+
+    if (!Array.isArray(state.geminiChats) || state.geminiChats.length === 0) {
+      createNewGeminiChat();
+    } else {
+      state.activeChatId = state.geminiChats[0].id;
+      renderGeminiHistoryList();
+      renderActiveChat();
+    }
+  }
+
+  function saveGeminiChats() {
+    try {
+      localStorage.setItem('mgit_gemini_chats', JSON.stringify(state.geminiChats));
+    } catch (e) {
+      console.warn('Failed to save chats to localStorage:', e);
+    }
+  }
+
+  function createNewGeminiChat() {
+    const newChat = {
+      id: 'chat_' + Date.now(),
+      title: 'New Conversation',
+      createdAt: Date.now(),
+      messages: []
+    };
+    if (!Array.isArray(state.geminiChats)) {
+      state.geminiChats = [];
+    }
+    state.geminiChats.unshift(newChat);
+    state.activeChatId = newChat.id;
+    saveGeminiChats();
+    renderGeminiHistoryList();
+    renderActiveChat();
+    if (el.geminiSidebar && window.innerWidth <= 820) {
+      el.geminiSidebar.classList.remove('open');
+    }
+  }
+
+  function switchGeminiChat(chatId) {
+    state.activeChatId = chatId;
+    renderGeminiHistoryList();
+    renderActiveChat();
+    if (el.geminiSidebar && window.innerWidth <= 820) {
+      el.geminiSidebar.classList.remove('open');
+    }
+  }
+
+  function deleteGeminiChat(chatId, e) {
+    if (e) e.stopPropagation();
+    state.geminiChats = state.geminiChats.filter(c => c.id !== chatId);
+    saveGeminiChats();
+    if (state.activeChatId === chatId) {
+      if (state.geminiChats.length > 0) {
+        state.activeChatId = state.geminiChats[0].id;
+        renderGeminiHistoryList();
+        renderActiveChat();
+      } else {
+        createNewGeminiChat();
+      }
+    } else {
+      renderGeminiHistoryList();
+    }
+  }
+
+  function clearAllGeminiChats() {
+    state.geminiChats = [];
+    saveGeminiChats();
+    createNewGeminiChat();
+    showToast('All chat history cleared.');
+  }
+
+  function renderGeminiHistoryList() {
+    if (!el.geminiHistoryList) return;
+    el.geminiHistoryList.innerHTML = '';
+    if (!state.geminiChats || state.geminiChats.length === 0) {
+      el.geminiHistoryList.innerHTML = '<div class="empty-history-text" style="padding:14px; color:#94a3b8; font-size:12px; text-align:center;">No previous chats</div>';
+      return;
+    }
+    state.geminiChats.forEach(chat => {
+      const item = document.createElement('div');
+      item.className = 'history-item-btn' + (chat.id === state.activeChatId ? ' active' : '');
+      item.innerHTML = `
+        <i class="fa-regular fa-message"></i>
+        <span class="chat-title">${escapeHtml(chat.title || 'Conversation')}</span>
+        <button type="button" class="btn-del-chat" title="Delete conversation">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      `;
+      item.addEventListener('click', () => switchGeminiChat(chat.id));
+      const delBtn = item.querySelector('.btn-del-chat');
+      if (delBtn) {
+        delBtn.addEventListener('click', (e) => deleteGeminiChat(chat.id, e));
+      }
+      el.geminiHistoryList.appendChild(item);
+    });
+  }
+
+  function renderActiveChat() {
+    const chat = state.geminiChats.find(c => c.id === state.activeChatId);
+    if (!chat) return;
+
+    if (el.geminiCurrentChatTitle) {
+      el.geminiCurrentChatTitle.textContent = chat.title || 'Gemini Study Assistant';
+    }
+
+    if (!chat.messages || chat.messages.length === 0) {
+      if (el.geminiWelcomeScreen) el.geminiWelcomeScreen.style.display = 'flex';
+      if (el.geminiChatOutput) {
+        el.geminiChatOutput.style.display = 'none';
+        el.geminiChatOutput.innerHTML = '';
+      }
+    } else {
+      if (el.geminiWelcomeScreen) el.geminiWelcomeScreen.style.display = 'none';
+      if (el.geminiChatOutput) {
+        el.geminiChatOutput.style.display = 'flex';
+        el.geminiChatOutput.innerHTML = '';
+        chat.messages.forEach(msg => {
+          if (msg.role === 'user') {
+            const userMsg = document.createElement('div');
+            userMsg.className = 'user-msg';
+            let imgHtml = '';
+            if (msg.image) {
+              imgHtml = `<img src="${msg.image}" class="msg-attached-img" alt="Attached study image">`;
+            }
+            userMsg.innerHTML = `${imgHtml}<span>${escapeHtml(msg.text)}</span>`;
+            el.geminiChatOutput.appendChild(userMsg);
+          } else {
+            const aiMsg = document.createElement('div');
+            aiMsg.className = 'ai-msg';
+            updateAiMessageContent(aiMsg, msg.text);
+            el.geminiChatOutput.appendChild(aiMsg);
+          }
+        });
+        el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+      }
+    }
+  }
+
+  function toggleGeminiSidebar() {
+    if (el.geminiSidebar) {
+      el.geminiSidebar.classList.toggle('open');
+    }
+  }
+
+  // -------------------------------------------------------------
+  // Camera & Image Attachment
+  // -------------------------------------------------------------
+  function setupImageAndCameraAttachment() {
+    if (el.geminiCameraBtn && el.geminiCameraInput) {
+      el.geminiCameraBtn.addEventListener('click', () => {
+        el.geminiCameraInput.click();
+      });
+      el.geminiCameraInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+          showToast('Please upload a valid question paper or notes photo (JPEG/PNG).');
+          return;
+        }
+        if (file.size > 8 * 1024 * 1024) {
+          showToast('Image size exceeds 8MB limit. Please upload a smaller image.');
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (loadEvt) => {
+          const dataUrl = loadEvt.target.result;
+          const base64Data = dataUrl.split(',')[1];
+          state.pendingGeminiImage = {
+            dataUrl,
+            base64Data,
+            mimeType: file.type
+          };
+          if (el.geminiPreviewImg) el.geminiPreviewImg.src = dataUrl;
+          if (el.geminiImagePreviewStrip) el.geminiImagePreviewStrip.style.display = 'flex';
+          showToast('Photo attached. Ready to send to Gemini.');
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+    if (el.removeGeminiImgBtn) {
+      el.removeGeminiImgBtn.addEventListener('click', clearImagePreview);
+    }
+  }
+
+  function clearImagePreview() {
+    state.pendingGeminiImage = null;
+    if (el.geminiCameraInput) el.geminiCameraInput.value = '';
+    if (el.geminiImagePreviewStrip) el.geminiImagePreviewStrip.style.display = 'none';
+    if (el.geminiPreviewImg) el.geminiPreviewImg.src = '';
+  }
+
+  // -------------------------------------------------------------
+  // Live Voice Speech Recognition
+  // -------------------------------------------------------------
+  function setupSpeechRecognition() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      try {
+        state.speechRecognition = new SpeechRecognition();
+        state.speechRecognition.continuous = false;
+        state.speechRecognition.interimResults = true;
+        state.speechRecognition.lang = 'en-IN';
+
+        state.speechRecognition.onstart = () => {
+          state.isSpeechListening = true;
+          if (el.geminiMicBtn) el.geminiMicBtn.classList.add('listening');
+          showToast('Listening... Speak your academic question.');
+        };
+
+        state.speechRecognition.onresult = (evt) => {
+          let transcript = '';
+          for (let i = evt.resultIndex; i < evt.results.length; i++) {
+            transcript += evt.results[i][0].transcript;
+          }
+          if (el.geminiQueryInput) {
+            el.geminiQueryInput.value = transcript;
+          }
+        };
+
+        state.speechRecognition.onerror = (evt) => {
+          console.warn('Speech recognition error:', evt.error);
+          state.isSpeechListening = false;
+          if (el.geminiMicBtn) el.geminiMicBtn.classList.remove('listening');
+        };
+
+        state.speechRecognition.onend = () => {
+          state.isSpeechListening = false;
+          if (el.geminiMicBtn) el.geminiMicBtn.classList.remove('listening');
+        };
+      } catch (err) {
+        console.warn('Speech recognition init error:', err);
+      }
+    }
+
+    if (el.geminiMicBtn) {
+      el.geminiMicBtn.addEventListener('click', toggleSpeechRecognition);
+    }
+  }
+
+  function toggleSpeechRecognition() {
+    if (!state.speechRecognition) {
+      showToast('Voice input is not supported in this browser. Please type your query.');
+      return;
+    }
+    if (state.isSpeechListening) {
+      state.speechRecognition.stop();
+    } else {
+      try {
+        state.speechRecognition.start();
+      } catch (err) {
+        console.warn('Could not start speech recognition:', err);
+      }
+    }
+  }
+
+  // -------------------------------------------------------------
+  // Interactive Onboarding Spotlight Tour
+  // -------------------------------------------------------------
+  function initOnboardingTourCheck() {
+    if (!localStorage.getItem('mgit_tour_seen')) {
+      setTimeout(() => {
+        // Trigger only if user is still on homepage and no modal is open
+        if (!state.currentSubject && (!el.geminiModal || el.geminiModal.style.display === 'none')) {
+          startOnboardingTour();
+        }
+      }, 2000);
+    }
+  }
+
+  function startOnboardingTour() {
+    state.currentTourStep = 0;
+    if (el.tourOverlay) el.tourOverlay.style.display = 'block';
+    if (el.tourTooltip) el.tourTooltip.style.display = 'block';
+    renderTourStep(0);
+  }
+
+  function renderTourStep(stepIdx) {
+    document.querySelectorAll('.tour-highlighted').forEach(node => {
+      node.classList.remove('tour-highlighted');
+    });
+
+    const steps = [
+      {
+        target: el.topDriveBtn,
+        badge: 'Step 1 of 3',
+        title: 'Master Google Drive Folder',
+        desc: 'Click here to view the complete Google Drive repository with all 101 authentic past papers and unit-wise notes sorted by subject.',
+        isLast: false
+      },
+      {
+        target: el.subjectsSection,
+        badge: 'Step 2 of 3',
+        title: 'Core Subjects & Notes',
+        desc: 'You can find related PYQs and notes here! Select any subject to explore chapter-wise study materials, recurrence frequencies, and question banks.',
+        isLast: false
+      },
+      {
+        target: el.floatingGeminiBtn,
+        badge: 'Step 3 of 3',
+        title: 'Integrated Gemini AI Assistant',
+        desc: 'Ask questions to integrated Gemini AI and get your work done easier! Upload question paper photos, speak with your mic, or practice exam questions.',
+        isLast: true
+      }
+    ];
+
+    if (stepIdx < 0 || stepIdx >= steps.length) {
+      endTour();
+      return;
+    }
+
+    state.currentTourStep = stepIdx;
+    const step = steps[stepIdx];
+
+    if (step.target) {
+      step.target.classList.add('tour-highlighted');
+      step.target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    if (el.tourStepBadge) el.tourStepBadge.textContent = step.badge;
+    if (el.tourTitle) el.tourTitle.textContent = step.title;
+    if (el.tourDesc) el.tourDesc.textContent = step.desc;
+
+    if (el.tourPrevBtn) {
+      el.tourPrevBtn.disabled = (stepIdx === 0);
+    }
+
+    if (el.tourNextBtn) {
+      if (step.isLast) {
+        el.tourNextBtn.innerHTML = '<span>Finish</span> <i class="fa-solid fa-check"></i>';
+      } else {
+        el.tourNextBtn.innerHTML = '<span>Next</span> <i class="fa-solid fa-chevron-right"></i>';
+      }
+    }
+
+    setTimeout(() => {
+      positionTourTooltip(step.target);
+    }, 120);
+  }
+
+  function positionTourTooltip(targetEl) {
+    if (!targetEl || !el.tourTooltip) return;
+    const rect = targetEl.getBoundingClientRect();
+    const tooltipWidth = 340;
+    const padding = 16;
+
+    let top, left;
+
+    if (targetEl === el.floatingGeminiBtn) {
+      top = Math.max(padding, rect.top - 210);
+      left = Math.max(padding, rect.right - tooltipWidth - 10);
+    } else if (targetEl === el.topDriveBtn) {
+      top = rect.bottom + 12;
+      left = Math.max(padding, rect.left - 40);
+    } else {
+      top = Math.max(80, rect.top + 24);
+      left = Math.max(padding, (window.innerWidth - tooltipWidth) / 2);
+    }
+
+    const maxLeft = window.innerWidth - tooltipWidth - padding;
+    if (left > maxLeft) left = maxLeft;
+    if (left < padding) left = padding;
+
+    const maxTop = window.innerHeight - 230;
+    if (top > maxTop) top = maxTop;
+    if (top < padding) top = padding;
+
+    el.tourTooltip.style.top = `${Math.round(top)}px`;
+    el.tourTooltip.style.left = `${Math.round(left)}px`;
+  }
+
+  function nextTourStep() {
+    if (state.currentTourStep >= 2) {
+      endTour();
+    } else {
+      renderTourStep(state.currentTourStep + 1);
+    }
+  }
+
+  function prevTourStep() {
+    if (state.currentTourStep > 0) {
+      renderTourStep(state.currentTourStep - 1);
+    }
+  }
+
+  function endTour() {
+    if (el.tourOverlay) el.tourOverlay.style.display = 'none';
+    if (el.tourTooltip) el.tourTooltip.style.display = 'none';
+    document.querySelectorAll('.tour-highlighted').forEach(node => {
+      node.classList.remove('tour-highlighted');
+    });
+    localStorage.setItem('mgit_tour_seen', 'true');
+  }
+
+  // -------------------------------------------------------------
   // Floating Gemini AI Study Assistant
   // -------------------------------------------------------------
   function openGeminiModal() {
     el.geminiModal.style.display = 'flex';
     initGeminiKey();
+    if (!state.activeChatId || !state.geminiChats.find(c => c.id === state.activeChatId)) {
+      loadGeminiChats();
+    } else {
+      renderActiveChat();
+    }
     if (el.geminiQueryInput) el.geminiQueryInput.focus();
   }
 
@@ -792,15 +1238,48 @@
 
   async function handleGeminiQuery(queryText) {
     const q = (queryText || (el.geminiQueryInput ? el.geminiQueryInput.value : '')).trim();
-    if (!q) return;
+    const attachedImg = state.pendingGeminiImage;
+    if (!q && !attachedImg) return;
 
-    // Append user message
+    // Ensure active chat exists
+    let chat = state.geminiChats.find(c => c.id === state.activeChatId);
+    if (!chat) {
+      createNewGeminiChat();
+      chat = state.geminiChats.find(c => c.id === state.activeChatId);
+    }
+
+    // Switch view to chat output
+    if (el.geminiWelcomeScreen) el.geminiWelcomeScreen.style.display = 'none';
+    if (el.geminiChatOutput) el.geminiChatOutput.style.display = 'flex';
+
+    // If first message in this chat, update title
+    if (!chat.messages || chat.messages.length === 0) {
+      const titlePrompt = q || (attachedImg ? 'Analyzed Image' : 'Study Question');
+      chat.title = titlePrompt.length > 28 ? titlePrompt.substring(0, 28) + '...' : titlePrompt;
+      if (el.geminiCurrentChatTitle) el.geminiCurrentChatTitle.textContent = chat.title;
+    }
+
+    // Append user message in UI
     const userMsg = document.createElement('div');
     userMsg.className = 'user-msg';
-    userMsg.textContent = q;
+    let imgHtml = '';
+    if (attachedImg) {
+      imgHtml = `<img src="${attachedImg.dataUrl}" class="msg-attached-img" alt="Attached study image">`;
+    }
+    userMsg.innerHTML = `${imgHtml}<span>${escapeHtml(q || 'Please analyze this study material photo.')}</span>`;
     el.geminiChatOutput.appendChild(userMsg);
 
+    // Record user turn in chat messages
+    chat.messages.push({
+      role: 'user',
+      text: q || 'Please analyze this study material photo.',
+      image: attachedImg ? attachedImg.dataUrl : null,
+      timestamp: Date.now()
+    });
+
+    // Clear input & image preview
     if (el.geminiQueryInput) el.geminiQueryInput.value = '';
+    clearImagePreview();
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
     // Thinking state with Gemini badge
@@ -823,12 +1302,15 @@
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // 1. Direct call to Google Gemini API (using student key or default key)
+    // 1. Direct call to Google Gemini API
     const activeKey = localStorage.getItem('mgit_user_gemini_key') || DEFAULT_GEMINI_KEY;
     try {
-      const liveAnswer = await fetchGeminiDirect(activeKey, q);
+      const liveAnswer = await fetchGeminiDirect(activeKey, q, attachedImg);
       if (liveAnswer) {
         updateAiMessageContent(thinkingMsg, liveAnswer);
+        chat.messages.push({ role: 'model', text: liveAnswer, timestamp: Date.now() });
+        saveGeminiChats();
+        renderGeminiHistoryList();
         el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
         return;
       }
@@ -847,6 +1329,9 @@
         const data = await serverRes.json();
         if (data.success && data.text) {
           updateAiMessageContent(thinkingMsg, data.text);
+          chat.messages.push({ role: 'model', text: data.text, timestamp: Date.now() });
+          saveGeminiChats();
+          renderGeminiHistoryList();
           el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
           return;
         }
@@ -855,10 +1340,13 @@
       console.warn('Serverless endpoint failed:', e);
     }
 
-    // 3. Offline technical guidance fallback (only if network fails completely)
+    // 3. Fallback
     setTimeout(() => {
-      const response = generateGeminiResponse(q);
-      updateAiMessageContent(thinkingMsg, response);
+      const fallbackText = generateGeminiResponse(q);
+      updateAiMessageContent(thinkingMsg, fallbackText);
+      chat.messages.push({ role: 'model', text: fallbackText, timestamp: Date.now() });
+      saveGeminiChats();
+      renderGeminiHistoryList();
       el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
     }, 250);
   }
@@ -887,7 +1375,7 @@
     `;
   }
 
-  async function fetchGeminiDirect(apiKey, query) {
+  async function fetchGeminiDirect(apiKey, query, attachedImage) {
     const subjectContext = state.currentSubject ? `${state.currentSubject.shortName} - ${state.currentSubject.title}` : 'MGIT CSE Semester III';
     const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III students.
 Subject Context: ${subjectContext}.
@@ -904,7 +1392,19 @@ Formatting guidelines:
 - For math formulas, equations, or exam marks calculations, write standard human-readable math (e.g., 5 × 10 = 50 marks, (5 + 5), 2ⁿ, O(log n)) or standard LaTeX math ($...$ or $$...$$). Never output raw unformatted LaTeX text tags like \\text{...} when simple text suffices.
 - Provide neat syntax-highlighted code blocks with language tags (e.g. \`\`\`java) where relevant.`;
 
-    const models = ['gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    const userText = query || 'Please analyze this attached question paper / notes photo in detail and explain the solution.';
+    const parts = [{ text: `${systemPrompt}\n\nStudent Question: ${userText}` }];
+
+    if (attachedImage && attachedImage.base64Data && attachedImage.mimeType) {
+      parts.push({
+        inlineData: {
+          mimeType: attachedImage.mimeType,
+          data: attachedImage.base64Data
+        }
+      });
+    }
+
+    const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
     for (const model of models) {
       try {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
@@ -915,7 +1415,7 @@ Formatting guidelines:
             contents: [
               {
                 role: 'user',
-                parts: [{ text: `${systemPrompt}\n\nStudent Question: ${query}` }]
+                parts: parts
               }
             ],
             generationConfig: {
@@ -1589,7 +2089,7 @@ Formatting guidelines:
       el.adminLogoutBtn.addEventListener('click', handleAdminLogout);
     }
 
-    // Floating Gemini Button
+    // Floating Gemini Button & Modal
     if (el.floatingGeminiBtn) {
       el.floatingGeminiBtn.addEventListener('click', openGeminiModal);
     }
@@ -1598,27 +2098,18 @@ Formatting guidelines:
         el.geminiModal.style.display = 'none';
       });
     }
-    if (el.clearGeminiChatBtn) {
-      el.clearGeminiChatBtn.addEventListener('click', () => {
-        el.geminiChatOutput.innerHTML = `
-          <div class="ai-msg initial-msg">
-            <div class="ai-msg-header">
-              <div class="ai-avatar-badge">
-                <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
-                  <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
-                </svg>
-                <span class="ai-sender-name">Gemini Study Assistant</span>
-              </div>
-              <span class="ai-model-tag">Academic Knowledge</span>
-            </div>
-            <div class="ai-msg-body">
-              <p><strong>Chat cleared!</strong> Ready for your next question on DM, COA, OOPJ, DBMS, SE, ES, or I&amp;E. Ask anything below!</p>
-            </div>
-          </div>
-        `;
-        showToast('Chat history cleared.');
-      });
+
+    // Gemini Chat Sidebar Controls
+    if (el.newChatBtn) {
+      el.newChatBtn.addEventListener('click', createNewGeminiChat);
     }
+    if (el.clearAllHistoryBtn) {
+      el.clearAllHistoryBtn.addEventListener('click', clearAllGeminiChats);
+    }
+    if (el.toggleGeminiSidebarBtn) {
+      el.toggleGeminiSidebarBtn.addEventListener('click', toggleGeminiSidebar);
+    }
+
     if (el.geminiQueryForm) {
       el.geminiQueryForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -1637,25 +2128,48 @@ Formatting guidelines:
       el.clearGeminiKeyBtn.addEventListener('click', clearUserGeminiKey);
     }
 
-    // Gemini Prompt Chips
-    document.querySelectorAll('.prompt-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        const query = chip.getAttribute('data-query');
+    // Gemini Prompt Cards (Landing screen quick queries)
+    document.querySelectorAll('.gemini-prompt-card, .prompt-chip').forEach(card => {
+      card.addEventListener('click', () => {
+        const query = card.getAttribute('data-query');
         if (query) {
-          el.geminiQueryInput.value = query;
+          if (el.geminiQueryInput) el.geminiQueryInput.value = query;
           handleGeminiQuery(query);
         }
       });
     });
 
-    // Global ESC key to close open modals
+    // Walkthrough Tour Buttons
+    if (el.tourNextBtn) {
+      el.tourNextBtn.addEventListener('click', nextTourStep);
+    }
+    if (el.tourPrevBtn) {
+      el.tourPrevBtn.addEventListener('click', prevTourStep);
+    }
+    if (el.tourSkipBtn) {
+      el.tourSkipBtn.addEventListener('click', endTour);
+    }
+    if (el.restartTourBtn) {
+      el.restartTourBtn.addEventListener('click', startOnboardingTour);
+    }
+
+    // Reposition tour tooltip on window resize
+    window.addEventListener('resize', () => {
+      if (el.tourTooltip && el.tourTooltip.style.display !== 'none') {
+        const targets = [el.topDriveBtn, el.subjectsSection, el.floatingGeminiBtn];
+        positionTourTooltip(targets[state.currentTourStep]);
+      }
+    });
+
+    // Global ESC key to close open modals & active tour
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (el.questionModal.style.display === 'flex') closeQuestionModal();
-        if (el.contribWarningModal.style.display === 'flex') el.contribWarningModal.style.display = 'none';
-        if (el.contribUploadModal.style.display === 'flex') el.contribUploadModal.style.display = 'none';
-        if (el.adminModal.style.display === 'flex') el.adminModal.style.display = 'none';
-        if (el.geminiModal.style.display === 'flex') el.geminiModal.style.display = 'none';
+        if (el.tourTooltip && el.tourTooltip.style.display !== 'none') endTour();
+        if (el.questionModal && el.questionModal.style.display === 'flex') closeQuestionModal();
+        if (el.contribWarningModal && el.contribWarningModal.style.display === 'flex') el.contribWarningModal.style.display = 'none';
+        if (el.contribUploadModal && el.contribUploadModal.style.display === 'flex') el.contribUploadModal.style.display = 'none';
+        if (el.adminModal && el.adminModal.style.display === 'flex') el.adminModal.style.display = 'none';
+        if (el.geminiModal && el.geminiModal.style.display === 'flex') el.geminiModal.style.display = 'none';
       }
     });
   }
