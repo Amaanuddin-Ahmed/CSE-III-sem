@@ -162,6 +162,7 @@
 
     // Walkthrough Tour Elements
     tourOverlay: document.getElementById('tourOverlay'),
+    tourSpotlight: document.getElementById('tourSpotlight'),
     tourTooltip: document.getElementById('tourTooltip'),
     tourStepBadge: document.getElementById('tourStepBadge'),
     tourTitle: document.getElementById('tourTitle'),
@@ -1082,53 +1083,56 @@
     }
   }
 
+  const TOUR_STEPS = [
+    {
+      targetKey: 'topDriveBtn',
+      badge: 'Step 1 of 3',
+      title: 'Master Google Drive Folder',
+      desc: 'Click here to view the complete Google Drive repository with all 101 authentic past papers and unit-wise notes sorted by subject.',
+      isLast: false,
+      scrollAction: () => window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+    {
+      targetKey: 'subjectsSection',
+      badge: 'Step 2 of 3',
+      title: 'Core Subjects & Notes',
+      desc: 'You can find related PYQs and notes here! Select any subject to explore chapter-wise study materials, recurrence frequencies, and question banks.',
+      isLast: false,
+      scrollAction: () => {
+        if (el.subjectsSection) el.subjectsSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    },
+    {
+      targetKey: 'floatingGeminiBtn',
+      badge: 'Step 3 of 3',
+      title: 'Integrated Gemini AI Assistant',
+      desc: 'Ask questions to integrated Gemini AI and get your work done easier! Upload question paper photos, speak with your mic, or practice exam questions.',
+      isLast: true,
+      scrollAction: null // Never scroll for fixed floating button!
+    }
+  ];
+
   function startOnboardingTour() {
     state.currentTourStep = 0;
     if (el.tourOverlay) el.tourOverlay.style.display = 'block';
+    if (el.tourSpotlight) el.tourSpotlight.style.display = 'block';
     if (el.tourTooltip) el.tourTooltip.style.display = 'block';
+    window.addEventListener('scroll', handleTourScroll, { passive: true });
     renderTourStep(0);
   }
 
   function renderTourStep(stepIdx) {
-    document.querySelectorAll('.tour-highlighted').forEach(node => {
-      node.classList.remove('tour-highlighted');
-    });
-
-    const steps = [
-      {
-        target: el.topDriveBtn,
-        badge: 'Step 1 of 3',
-        title: 'Master Google Drive Folder',
-        desc: 'Click here to view the complete Google Drive repository with all 101 authentic past papers and unit-wise notes sorted by subject.',
-        isLast: false
-      },
-      {
-        target: el.subjectsSection,
-        badge: 'Step 2 of 3',
-        title: 'Core Subjects & Notes',
-        desc: 'You can find related PYQs and notes here! Select any subject to explore chapter-wise study materials, recurrence frequencies, and question banks.',
-        isLast: false
-      },
-      {
-        target: el.floatingGeminiBtn,
-        badge: 'Step 3 of 3',
-        title: 'Integrated Gemini AI Assistant',
-        desc: 'Ask questions to integrated Gemini AI and get your work done easier! Upload question paper photos, speak with your mic, or practice exam questions.',
-        isLast: true
-      }
-    ];
-
-    if (stepIdx < 0 || stepIdx >= steps.length) {
+    if (stepIdx < 0 || stepIdx >= TOUR_STEPS.length) {
       endTour();
       return;
     }
 
     state.currentTourStep = stepIdx;
-    const step = steps[stepIdx];
+    const step = TOUR_STEPS[stepIdx];
+    const targetEl = el[step.targetKey];
 
-    if (step.target) {
-      step.target.classList.add('tour-highlighted');
-      step.target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (step.scrollAction) {
+      step.scrollAction();
     }
 
     if (el.tourStepBadge) el.tourStepBadge.textContent = step.badge;
@@ -1147,40 +1151,68 @@
       }
     }
 
-    setTimeout(() => {
-      positionTourTooltip(step.target);
-    }, 120);
+    // Update spotlight & tooltip immediately and after smooth scroll settles
+    updateTourSpotlightAndTooltip(targetEl);
+    setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 120);
+    setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 380);
   }
 
-  function positionTourTooltip(targetEl) {
-    if (!targetEl || !el.tourTooltip) return;
+  function updateTourSpotlightAndTooltip(targetEl) {
+    if (!targetEl || !el.tourSpotlight || !el.tourTooltip) return;
+
     const rect = targetEl.getBoundingClientRect();
-    const tooltipWidth = 340;
-    const padding = 16;
+    const pad = (targetEl === el.subjectsSection) ? 10 : 6;
+    const r = (targetEl === el.floatingGeminiBtn) ? 26 : (targetEl === el.topDriveBtn ? 22 : 16);
+
+    // 1. Position Spotlight framing (Crystal-clear cutout, ZERO blur)
+    el.tourSpotlight.style.display = 'block';
+    el.tourSpotlight.style.top = `${Math.round(rect.top - pad)}px`;
+    el.tourSpotlight.style.left = `${Math.round(rect.left - pad)}px`;
+    el.tourSpotlight.style.width = `${Math.round(rect.width + pad * 2)}px`;
+    el.tourSpotlight.style.height = `${Math.round(rect.height + pad * 2)}px`;
+    el.tourSpotlight.style.borderRadius = `${r}px`;
+
+    // 2. Position Tooltip
+    const tooltipWidth = Math.min(340, window.innerWidth - 32);
+    const tooltipHeight = 200;
+    const margin = 16;
 
     let top, left;
 
     if (targetEl === el.floatingGeminiBtn) {
-      top = Math.max(padding, rect.top - 210);
-      left = Math.max(padding, rect.right - tooltipWidth - 10);
+      // Step 3: Place directly ABOVE the floating Gemini AI button with a safety gap
+      top = rect.top - tooltipHeight - margin;
+      left = rect.right - tooltipWidth;
     } else if (targetEl === el.topDriveBtn) {
-      top = rect.bottom + 12;
-      left = Math.max(padding, rect.left - 40);
+      // Step 1: Place directly BELOW top drive button
+      top = rect.bottom + margin;
+      left = rect.right - tooltipWidth;
     } else {
-      top = Math.max(80, rect.top + 24);
-      left = Math.max(padding, (window.innerWidth - tooltipWidth) / 2);
+      // Step 2: Subjects section — top center
+      top = Math.max(80, rect.top + 20);
+      left = (window.innerWidth - tooltipWidth) / 2;
     }
 
-    const maxLeft = window.innerWidth - tooltipWidth - padding;
+    // Viewport boundaries clamping
+    const maxLeft = window.innerWidth - tooltipWidth - 16;
     if (left > maxLeft) left = maxLeft;
-    if (left < padding) left = padding;
+    if (left < 16) left = 16;
 
-    const maxTop = window.innerHeight - 230;
+    const maxTop = window.innerHeight - tooltipHeight - 16;
     if (top > maxTop) top = maxTop;
-    if (top < padding) top = padding;
+    if (top < 16) top = 16;
 
     el.tourTooltip.style.top = `${Math.round(top)}px`;
     el.tourTooltip.style.left = `${Math.round(left)}px`;
+  }
+
+  function handleTourScroll() {
+    if (el.tourTooltip && el.tourTooltip.style.display !== 'none') {
+      const step = TOUR_STEPS[state.currentTourStep];
+      if (step && el[step.targetKey]) {
+        updateTourSpotlightAndTooltip(el[step.targetKey]);
+      }
+    }
   }
 
   function nextTourStep() {
@@ -1199,10 +1231,9 @@
 
   function endTour() {
     if (el.tourOverlay) el.tourOverlay.style.display = 'none';
+    if (el.tourSpotlight) el.tourSpotlight.style.display = 'none';
     if (el.tourTooltip) el.tourTooltip.style.display = 'none';
-    document.querySelectorAll('.tour-highlighted').forEach(node => {
-      node.classList.remove('tour-highlighted');
-    });
+    window.removeEventListener('scroll', handleTourScroll);
     localStorage.setItem('mgit_tour_seen', 'true');
   }
 
@@ -2263,13 +2294,10 @@ In MGIT autonomous end-semester examinations, **Part-A consists of 10 compulsory
       el.restartTourBtn.addEventListener('click', startOnboardingTour);
     }
 
-    // Reposition tour tooltip & update responsive labels on window resize
+    // Reposition tour spotlight, tooltip & update responsive labels on window resize
     window.addEventListener('resize', () => {
       updateTopDriveBtnLabel();
-      if (el.tourTooltip && el.tourTooltip.style.display !== 'none') {
-        const targets = [el.topDriveBtn, el.subjectsSection, el.floatingGeminiBtn];
-        positionTourTooltip(targets[state.currentTourStep]);
-      }
+      handleTourScroll();
     });
 
     // Global ESC key to close open modals & active tour
