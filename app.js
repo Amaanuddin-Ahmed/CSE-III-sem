@@ -134,6 +134,7 @@
     userGeminiKeyInput: document.getElementById('userGeminiKeyInput'),
     saveGeminiKeyBtn: document.getElementById('saveGeminiKeyBtn'),
     clearGeminiKeyBtn: document.getElementById('clearGeminiKeyBtn'),
+    clearGeminiChatBtn: document.getElementById('clearGeminiChatBtn'),
 
     // Toast
     toastContainer: document.getElementById('toastContainer')
@@ -790,7 +791,7 @@
   }
 
   async function handleGeminiQuery(queryText) {
-    const q = queryText.trim();
+    const q = (queryText || (el.geminiQueryInput ? el.geminiQueryInput.value : '')).trim();
     if (!q) return;
 
     // Append user message
@@ -799,13 +800,26 @@
     userMsg.textContent = q;
     el.geminiChatOutput.appendChild(userMsg);
 
-    el.geminiQueryInput.value = '';
+    if (el.geminiQueryInput) el.geminiQueryInput.value = '';
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // Thinking state
+    // Thinking state with Gemini badge
     const thinkingMsg = document.createElement('div');
     thinkingMsg.className = 'ai-msg';
-    thinkingMsg.innerHTML = '<em>Thinking with Google Gemini AI...</em>';
+    thinkingMsg.innerHTML = `
+      <div class="ai-msg-header">
+        <div class="ai-avatar-badge">
+          <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
+            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+          </svg>
+          <span class="ai-sender-name">Gemini Study Assistant</span>
+        </div>
+        <span class="ai-model-tag">Thinking...</span>
+      </div>
+      <div class="ai-msg-body" style="color: var(--text-muted); font-style: italic; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-circle-notch fa-spin"></i> Generating structured academic answer...
+      </div>
+    `;
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
@@ -814,7 +828,7 @@
     try {
       const liveAnswer = await fetchGeminiDirect(activeKey, q);
       if (liveAnswer) {
-        thinkingMsg.innerHTML = formatMarkdown(liveAnswer);
+        updateAiMessageContent(thinkingMsg, liveAnswer);
         el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
         return;
       }
@@ -832,7 +846,7 @@
       if (serverRes.ok) {
         const data = await serverRes.json();
         if (data.success && data.text) {
-          thinkingMsg.innerHTML = formatMarkdown(data.text);
+          updateAiMessageContent(thinkingMsg, data.text);
           el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
           return;
         }
@@ -844,9 +858,33 @@
     // 3. Offline technical guidance fallback (only if network fails completely)
     setTimeout(() => {
       const response = generateGeminiResponse(q);
-      thinkingMsg.innerHTML = response;
+      updateAiMessageContent(thinkingMsg, response);
       el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
     }, 250);
+  }
+
+  function updateAiMessageContent(element, rawMarkdown) {
+    const formattedHtml = formatGeminiResponse(rawMarkdown);
+    element.innerHTML = `
+      <div class="ai-msg-header">
+        <div class="ai-avatar-badge">
+          <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
+            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+          </svg>
+          <span class="ai-sender-name">Gemini Study Assistant</span>
+        </div>
+        <span class="ai-model-tag">Gemini 3.5</span>
+      </div>
+      <div class="ai-msg-body">
+        ${formattedHtml}
+      </div>
+      <div class="ai-msg-footer">
+        <button type="button" class="btn-copy-response" onclick="copyGeminiAiAnswer(this)">
+          <i class="fa-regular fa-copy"></i> <span>Copy Answer</span>
+        </button>
+        <span class="ai-verified-tag"><i class="fa-solid fa-graduation-cap"></i> MGIT Syllabus Aligned</span>
+      </div>
+    `;
   }
 
   async function fetchGeminiDirect(apiKey, query) {
@@ -858,7 +896,13 @@ Include:
 - Formal, standard textbook definition and concepts
 - Key equations, proofs, logic tables, or neat code snippets where appropriate
 - Clear bullet points or numbered steps
-- High-yield MGIT exam scoring advice and common pitfalls to avoid.`;
+- High-yield MGIT exam scoring advice and common pitfalls to avoid.
+
+Formatting guidelines:
+- Use clean standard GitHub-style Markdown.
+- Structure answers with clean headings (###, ####), bullet points, and tables.
+- For math formulas, equations, or exam marks calculations, write standard human-readable math (e.g., 5 × 10 = 50 marks, (5 + 5), 2ⁿ, O(log n)) or standard LaTeX math ($...$ or $$...$$). Never output raw unformatted LaTeX text tags like \\text{...} when simple text suffices.
+- Provide neat syntax-highlighted code blocks with language tags (e.g. \`\`\`java) where relevant.`;
 
     const models = ['gemini-3.5-flash-lite', 'gemini-3.5-flash'];
     for (const model of models) {
@@ -893,23 +937,252 @@ Include:
     throw new Error('All direct Gemini model endpoints failed');
   }
 
-  function formatMarkdown(text) {
-    if (!text) return '';
-    let html = escapeHtml(text);
-    // code blocks
-    html = html.replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
-    // inline code
-    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-    // bold
-    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    // italic
-    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-    // bullet points
-    html = html.replace(/^\s*[-*]\s+(.+)$/gm, '• $1<br>');
-    // line breaks
-    html = html.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
-    return html;
+  // -------------------------------------------------------------
+  // Markdown & KaTeX Math Parser (Gemini App Experience)
+  // -------------------------------------------------------------
+  function renderMathExpr(expr, isBlock) {
+    if (!expr) return '';
+
+    // 1. Try KaTeX if loaded
+    if (typeof window !== 'undefined' && window.katex && typeof window.katex.renderToString === 'function') {
+      try {
+        return window.katex.renderToString(expr, {
+          displayMode: isBlock,
+          throwOnError: false
+        });
+      } catch (err) {
+        console.warn('KaTeX render error, falling back to clean text math:', err);
+      }
+    }
+
+    // 2. High-Fidelity Academic Math Fallback (Converts LaTeX tags to clean human-readable math)
+    let clean = expr
+      .replace(/\\times/g, ' × ')
+      .replace(/\\cdot/g, ' · ')
+      .replace(/\\div/g, ' ÷ ')
+      .replace(/\\pm/g, ' ± ')
+      .replace(/\\mp/g, ' ∓ ')
+      .replace(/\\le(q)?\b/g, ' ≤ ')
+      .replace(/\\ge(q)?\b/g, ' ≥ ')
+      .replace(/\\ne(q)?\b/g, ' ≠ ')
+      .replace(/\\approx/g, ' ≈ ')
+      .replace(/\\equiv/g, ' ≡ ')
+      .replace(/\\in\b/g, ' ∈ ')
+      .replace(/\\notin\b/g, ' ∉ ')
+      .replace(/\\subset\b/g, ' ⊂ ')
+      .replace(/\\subseteq\b/g, ' ⊆ ')
+      .replace(/\\cup\b/g, ' ∪ ')
+      .replace(/\\cap\b/g, ' ∩ ')
+      .replace(/\\forall\b/g, ' ∀ ')
+      .replace(/\\exists\b/g, ' ∃ ')
+      .replace(/\\rightarrow|\\to\b/g, ' → ')
+      .replace(/\\Rightarrow|\\implies\b/g, ' ⇒ ')
+      .replace(/\\leftarrow\b/g, ' ← ')
+      .replace(/\\Leftrightarrow|\\iff\b/g, ' ⇔ ')
+      .replace(/\\infty\b/g, ' ∞ ')
+      .replace(/\\sum\b/g, ' ∑ ')
+      .replace(/\\prod\b/g, ' ∏ ')
+      .replace(/\\int\b/g, ' ∫ ')
+      .replace(/\\alpha\b/g, 'α')
+      .replace(/\\beta\b/g, 'β')
+      .replace(/\\gamma\b/g, 'γ')
+      .replace(/\\delta\b/g, 'δ')
+      .replace(/\\Delta\b/g, 'Δ')
+      .replace(/\\theta\b/g, 'θ')
+      .replace(/\\lambda\b/g, 'λ')
+      .replace(/\\mu\b/g, 'μ')
+      .replace(/\\pi\b/g, 'π')
+      .replace(/\\sigma\b/g, 'σ')
+      .replace(/\\omega\b/g, 'ω')
+      .replace(/\\Omega\b/g, 'Ω')
+      .replace(/\\text\{([^}]+)\}/g, ' $1 ')
+      .replace(/\\mathrm\{([^}]+)\}/g, ' $1 ')
+      .replace(/\\mathbf\{([^}]+)\}/g, '<strong>$1</strong>')
+      .replace(/\\mathit\{([^}]+)\}/g, '<em>$1</em>')
+      .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1 / $2)')
+      .replace(/\\sqrt\{([^}]+)\}/g, '√($1)')
+      .replace(/\^([0-9a-zA-Z])/g, '<sup>$1</sup>')
+      .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+      .replace(/_([0-9a-zA-Z])/g, '<sub>$1</sub>')
+      .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
+      .replace(/\\([a-zA-Z]+)/g, '$1') // remove remaining unescaped backslashes
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (isBlock) {
+      return `<div class="gemini-math-block">${clean}</div>`;
+    }
+    return `<span class="gemini-math">${clean}</span>`;
   }
+
+  function formatGeminiResponse(rawText) {
+    if (!rawText) return '';
+    let text = rawText.trim();
+
+    // 1. Math extraction & protection
+    const mathTokens = [];
+
+    // Block Math: $$ ... $$ or \[ ... \]
+    text = text.replace(/\$\$([\s\S]+?)\$\$/g, (match, expr) => {
+      const idx = mathTokens.length;
+      mathTokens.push({ type: 'block', expr: expr.trim() });
+      return `@@GEMINI_MATH_${idx}@@`;
+    });
+    text = text.replace(/\\\[([\s\S]+?)\\\]/g, (match, expr) => {
+      const idx = mathTokens.length;
+      mathTokens.push({ type: 'block', expr: expr.trim() });
+      return `@@GEMINI_MATH_${idx}@@`;
+    });
+
+    // Inline Math: $ ... $ or \( ... \)
+    text = text.replace(/(?<!\\)\$([^\$\n]+?)(?<!\\)\$/g, (match, expr) => {
+      const idx = mathTokens.length;
+      mathTokens.push({ type: 'inline', expr: expr.trim() });
+      return `@@GEMINI_MATH_${idx}@@`;
+    });
+    text = text.replace(/\\\((.+?)\\\)/g, (match, expr) => {
+      const idx = mathTokens.length;
+      mathTokens.push({ type: 'inline', expr: expr.trim() });
+      return `@@GEMINI_MATH_${idx}@@`;
+    });
+
+    // 2. Render Markdown
+    let html = '';
+    if (typeof window !== 'undefined' && window.marked && typeof window.marked.parse === 'function') {
+      try {
+        html = window.marked.parse(text, { gfm: true, breaks: true });
+      } catch (e) {
+        html = customMarkdownFallback(text);
+      }
+    } else {
+      html = customMarkdownFallback(text);
+    }
+
+    // 3. Restore & Render Math Tokens
+    html = html.replace(/@@GEMINI_MATH_(\d+)@@/g, (match, idxStr) => {
+      const token = mathTokens[parseInt(idxStr, 10)];
+      if (!token) return '';
+      return renderMathExpr(token.expr, token.type === 'block');
+    });
+
+    // 4. Enhance DOM (Wrap code blocks with language badge and copy button, style tables, etc.)
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    // Wrap <pre><code> blocks
+    tempDiv.querySelectorAll('pre').forEach(pre => {
+      if (pre.parentElement && pre.parentElement.classList.contains('gemini-code-block')) return;
+
+      const code = pre.querySelector('code');
+      const langClass = code ? Array.from(code.classList).find(c => c.startsWith('language-')) : null;
+      const lang = langClass ? langClass.replace('language-', '') : 'CODE';
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'gemini-code-block';
+      wrapper.innerHTML = `
+        <div class="gemini-code-header">
+          <span class="code-lang"><i class="fa-solid fa-code"></i> ${lang}</span>
+          <button type="button" class="gemini-copy-btn" onclick="copyGeminiCodeSnippet(this)">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      `;
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    });
+
+    // Wrap tables
+    tempDiv.querySelectorAll('table').forEach(tbl => {
+      if (!tbl.classList.contains('gemini-table')) {
+        tbl.classList.add('gemini-table');
+        const wrap = document.createElement('div');
+        wrap.className = 'gemini-table-wrapper';
+        tbl.parentNode.insertBefore(wrap, tbl);
+        wrap.appendChild(tbl);
+      }
+    });
+
+    // Add CSS classes for clean styling
+    tempDiv.querySelectorAll('h1').forEach(h => h.classList.add('gemini-h1'));
+    tempDiv.querySelectorAll('h2').forEach(h => h.classList.add('gemini-h1'));
+    tempDiv.querySelectorAll('h3').forEach(h => h.classList.add('gemini-h2'));
+    tempDiv.querySelectorAll('h4').forEach(h => h.classList.add('gemini-h3'));
+    tempDiv.querySelectorAll('h5, h6').forEach(h => h.classList.add('gemini-h4'));
+    tempDiv.querySelectorAll('hr').forEach(hr => hr.classList.add('gemini-divider'));
+    tempDiv.querySelectorAll('ul').forEach(ul => ul.classList.add('gemini-list'));
+    tempDiv.querySelectorAll('ol').forEach(ol => ol.classList.add('gemini-ordered-list'));
+    tempDiv.querySelectorAll('li').forEach(li => li.classList.add('gemini-li'));
+    tempDiv.querySelectorAll('blockquote').forEach(bq => bq.classList.add('gemini-blockquote'));
+    tempDiv.querySelectorAll('code:not(pre code)').forEach(c => c.classList.add('gemini-inline-code'));
+
+    return tempDiv.innerHTML;
+  }
+
+  function customMarkdownFallback(raw) {
+    let text = raw;
+
+    // Code blocks
+    text = text.replace(/```([a-z0-9_-]*)\n([\s\S]*?)```/g, (match, lang, code) => {
+      return `<div class="gemini-code-block"><div class="gemini-code-header"><span class="code-lang"><i class="fa-solid fa-code"></i> ${lang || 'CODE'}</span><button type="button" class="gemini-copy-btn" onclick="copyGeminiCodeSnippet(this)"><i class="fa-regular fa-copy"></i> Copy</button></div><pre><code>${escapeHtml(code)}</code></pre></div>`;
+    });
+
+    // Inline code
+    text = text.replace(/`([^`\n]+)`/g, '<code class="gemini-inline-code">$1</code>');
+
+    // Horizontal rule
+    text = text.replace(/^---(\s*)$/gm, '<hr class="gemini-divider">');
+    text = text.replace(/^\*\*\*(\s*)$/gm, '<hr class="gemini-divider">');
+
+    // Headings
+    text = text.replace(/^####\s+(.+)$/gm, '<h5 class="gemini-h4">$1</h5>');
+    text = text.replace(/^###\s+(.+)$/gm, '<h4 class="gemini-h3">$1</h4>');
+    text = text.replace(/^##\s+(.+)$/gm, '<h3 class="gemini-h2">$1</h3>');
+    text = text.replace(/^#\s+(.+)$/gm, '<h2 class="gemini-h1">$1</h2>');
+
+    // Bold & italic
+    text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    text = text.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+
+    // Lists
+    text = text.replace(/^\s*[-*]\s+(.+)$/gm, '<li class="gemini-li">$1</li>');
+    text = text.replace(/^\s*\d+\.\s+(.+)$/gm, '<li class="gemini-oli">$1</li>');
+
+    // Line breaks
+    text = text.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+
+    return text;
+  }
+
+  // Global helpers for copy buttons
+  window.copyGeminiCodeSnippet = function(btn) {
+    const codeBlock = btn.closest('.gemini-code-block');
+    if (!codeBlock) return;
+    const pre = codeBlock.querySelector('pre code') || codeBlock.querySelector('pre');
+    if (!pre) return;
+    const text = pre.innerText || pre.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }).catch(() => {
+      showToast('Code copied to clipboard');
+    });
+  };
+
+  window.copyGeminiAiAnswer = function(btn) {
+    const card = btn.closest('.ai-msg');
+    if (!card) return;
+    const body = card.querySelector('.ai-msg-body');
+    if (!body) return;
+    const text = body.innerText || body.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Copied!</span>';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }).catch(() => {
+      showToast('Answer copied to clipboard');
+    });
+  };
 
   function generateGeminiResponse(query) {
     const q = query.toLowerCase();
@@ -1323,6 +1596,27 @@ Include:
     if (el.closeGeminiModalBtn) {
       el.closeGeminiModalBtn.addEventListener('click', () => {
         el.geminiModal.style.display = 'none';
+      });
+    }
+    if (el.clearGeminiChatBtn) {
+      el.clearGeminiChatBtn.addEventListener('click', () => {
+        el.geminiChatOutput.innerHTML = `
+          <div class="ai-msg initial-msg">
+            <div class="ai-msg-header">
+              <div class="ai-avatar-badge">
+                <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
+                  <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+                </svg>
+                <span class="ai-sender-name">Gemini Study Assistant</span>
+              </div>
+              <span class="ai-model-tag">Academic Knowledge</span>
+            </div>
+            <div class="ai-msg-body">
+              <p><strong>Chat cleared!</strong> Ready for your next question on DM, COA, OOPJ, DBMS, SE, ES, or I&amp;E. Ask anything below!</p>
+            </div>
+          </div>
+        `;
+        showToast('Chat history cleared.');
       });
     }
     if (el.geminiQueryForm) {

@@ -20,6 +20,13 @@
   
   <link rel="stylesheet" href="style.css">
 
+  <!-- KaTeX for crisp mathematical formulas & LaTeX rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+
+  <!-- Marked.js for GitHub Flavored Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -527,18 +534,23 @@
   <!-- MODAL: Gemini AI Assistant Modal -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="geminiModal" style="display: none;" role="dialog" aria-modal="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog gemini-dialog">
       <div class="modal-header">
         <h4 class="modal-dialog-title">
-          <svg class="gemini-title-icon" viewBox="0 0 24 24" width="20" height="20" fill="#2563eb">
+          <svg class="gemini-title-icon" viewBox="0 0 24 24" width="22" height="22" fill="#2563eb">
             <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
           </svg>
           Gemini AI Study Assistant
         </h4>
-        <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
+        <div class="modal-header-actions">
+          <button type="button" class="btn-clear-chat" id="clearGeminiChatBtn" title="Clear chat history">
+            <i class="fa-solid fa-rotate-left"></i> <span>Clear</span>
+          </button>
+          <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
+        </div>
       </div>
 
-      <div class="modal-body">
+      <div class="modal-body gemini-modal-body">
         <div class="gemini-status-bar">
           <div class="gemini-status-pill">
             <span class="status-dot"></span>
@@ -579,7 +591,18 @@
         <!-- Chat Output Box -->
         <div class="gemini-chat-output" id="geminiChatOutput">
           <div class="ai-msg initial-msg">
-            <p><strong>Welcome to MGIT CSE Sem III Assistant!</strong> I can explain concepts, solve question paper problems, provide code snippets, and share university exam scoring strategies across all 7 semester subjects without signing in. Ask anything below!</p>
+            <div class="ai-msg-header">
+              <div class="ai-avatar-badge">
+                <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
+                  <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+                </svg>
+                <span class="ai-sender-name">Gemini Study Assistant</span>
+              </div>
+              <span class="ai-model-tag">Academic Knowledge</span>
+            </div>
+            <div class="ai-msg-body">
+              <p><strong>Welcome to MGIT CSE Sem III Study Assistant!</strong> I can explain concepts, solve question paper problems, provide code snippets, and share university exam scoring strategies across all 7 semester subjects without signing in. Ask anything below!</p>
+            </div>
           </div>
         </div>
 
