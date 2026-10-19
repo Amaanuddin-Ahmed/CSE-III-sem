@@ -1982,7 +1982,188 @@ body {
   font-size: 14px;
   line-height: 1.75;
   color: #1e293b;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  min-width: 0;
 }
+
+/* Bold and Larger Headlines in AI Response */
+.ai-msg-body h1, .gemini-h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 18px 0 10px 0;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+.ai-msg-body h2, .gemini-h2 {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #1e293b;
+  margin: 16px 0 8px 0;
+  line-height: 1.38;
+}
+
+.ai-msg-body h3, .gemini-h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 14px 0 6px 0;
+  line-height: 1.4;
+}
+
+.ai-msg-body h4, .gemini-h4 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #334155;
+  margin: 12px 0 4px 0;
+}
+
+.ai-msg-body strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ai-msg-body p {
+  margin: 8px 0;
+}
+
+.ai-msg-body hr, .gemini-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 16px 0;
+}
+
+.ai-msg-body ul, .gemini-list {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.ai-msg-body ol, .gemini-ordered-list {
+  padding-left: 22px;
+  margin: 8px 0;
+}
+
+.ai-msg-body li, .gemini-li {
+  margin-bottom: 5px;
+  line-height: 1.65;
+}
+
+/* Tables inside AI Response - Strictly contained with horizontal scroll */
+.gemini-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 14px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  display: block;
+}
+
+.gemini-table, .ai-msg-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.5;
+  min-width: 320px;
+}
+
+.ai-msg-body th, .gemini-table th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.ai-msg-body td, .gemini-table td {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.ai-msg-body tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+/* Code Blocks inside AI Response */
+.gemini-code-block {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 14px 0;
+  background: #0f172a;
+  border: 1px solid #334155;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gemini-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.gemini-copy-btn {
+  background: transparent;
+  border: 1px solid #475569;
+  border-radius: 5px;
+  color: #cbd5e1;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gemini-copy-btn:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+.gemini-code-block pre, .ai-msg-body pre {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #f8fafc;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+.gemini-inline-code, .ai-msg-body code:not(pre code) {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+  border: 1px solid #e2e8f0;
+  word-break: break-word;
+}
+
+/* Math blocks inside AI Response */
+.gemini-math-block {
+  overflow-x: auto;
+  padding: 6px 0;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 .ai-msg-footer {
   display: flex;
@@ -2171,6 +2352,239 @@ body {
   margin-top: 2px;
 }
 
+/* Animated Rotating Placeholder Wrap */
+.gemini-input-field-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.gemini-input-field-wrap .gemini-text-field {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.animated-placeholder-track {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.25s ease;
+}
+
+.animated-placeholder-text {
+  font-size: 13.5px;
+  color: #94a3b8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  will-change: transform, opacity;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Suggestions Collapsible Container & Small Rectangular Window */
+.gemini-suggestions-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 10px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-toggle-suggestions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-suggestions:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.suggestions-btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.toggle-chevron {
+  font-size: 11px;
+  transition: transform 0.25s ease;
+}
+
+.btn-toggle-suggestions.collapsed .toggle-chevron {
+  transform: rotate(-90deg);
+}
+
+.gemini-suggestions-scroll-box {
+  margin-top: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gemini-suggestions-scroll-box.collapsed {
+  display: none;
+}
+
+.compact-scroll-window {
+  max-height: 155px;
+  overflow-y: auto;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  scrollbar-width: thin;
+}
+
+.compact-scroll-window .gemini-prompt-card {
+  padding: 8px 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.compact-scroll-window .gemini-prompt-card:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  transform: translateY(-1px);
+}
+
+.compact-scroll-window .card-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  font-size: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compact-scroll-window .card-text strong {
+  font-size: 12.5px;
+  display: block;
+  line-height: 1.25;
+}
+
+.compact-scroll-window .card-text span {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+/* Sidebar Close Button */
+.btn-close-sidebar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-close-sidebar:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Sidebar Key Section at Bottom */
+.gemini-sidebar-key-section {
+  margin-bottom: 8px;
+}
+
+.btn-sidebar-key {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-sidebar-key:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.gemini-sidebar-footer .gemini-key-drawer {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+/* Prominent Clean Modal Close Button */
+.btn-gemini-close {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-gemini-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: scale(1.06);
+}
+
 /* Mobile Sidebar Drawer */
 @media (max-width: 820px) {
   .gemini-sidebar {
@@ -2186,7 +2600,12 @@ body {
   .gemini-sidebar.open {
     transform: translateX(0);
   }
+
+  .btn-close-sidebar {
+    display: flex;
+  }
 }
+
 
 /* ==============================================================
    Interactive Onboarding Spotlight Tour Styling
@@ -3526,99 +3945,179 @@ body {
     font-size: 12px;
   }
 
-  /* Gemini AI Modal Fullscreen on Phone */
-  .gemini-modal-overlay {
+  /* Gemini AI Assistant Modal Fullscreen / Sheet on Phone */
+  #geminiModal.modal-backdrop {
     padding: 0;
+    align-items: flex-end;
   }
 
-  .gemini-modal {
+  #geminiModal .gemini-app-layout {
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .gemini-chat-workspace {
     width: 100%;
     height: 100%;
-    max-height: 100vh;
-    border-radius: 0;
-    display: flex;
-    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
   }
 
-  .gemini-modal-header {
+  .gemini-workspace-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .gemini-workspace-title {
+    font-size: 14px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .gemini-stream-body {
     padding: 10px 12px;
+    overflow-x: hidden;
   }
 
-  .gemini-sidebar-drawer {
-    width: 85%;
-    max-width: 320px;
+  .gemini-welcome-screen {
+    padding: 14px 8px;
   }
 
-  .gemini-chat-area {
-    padding: 10px 12px;
+  .gemini-greet-title {
+    font-size: 1.45rem;
+    margin-bottom: 4px;
   }
 
-  .gemini-composer-container {
-    padding: 8px 10px;
+  .gemini-greet-sub {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .ai-msg {
+    padding: 12px 14px;
+    border-radius: 12px;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .ai-msg-body {
+    font-size: 13.5px;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .gemini-input-container {
+    padding: 8px 10px 12px;
+    background: #ffffff;
+  }
+
+  .gemini-modern-input-bar {
+    padding: 4px 6px 4px 10px;
+    gap: 6px;
+    border-radius: 28px;
+  }
+
+  .gemini-tool-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .gemini-submit-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
   }
 }
 
-/* Extra Compact Phones (iPhone SE, smaller Androids <= 480px) */
+/* Extra Compact Phones (iPhone SE, Androids <= 480px) */
 @media (max-width: 480px) {
   .site-header {
     padding: 8px 10px;
   }
 
-  .logo-title {
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .brand-group {
+    min-width: 0;
+    flex-shrink: 1;
+    gap: 7px;
+  }
+
+  .brand-seal {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 13px;
+  }
+
+  .brand-name {
     font-size: 13.5px;
+    white-space: nowrap;
   }
 
-  .logo-sub {
-    display: none;
+  .brand-sub {
+    display: none; /* Hide subtitle on tiny screens to guarantee single-line header */
   }
 
-  /* Keep header buttons compact and on one single line */
   .header-actions {
-    gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
   }
 
-  .btn-guide span,
-  .btn-admin-login span {
-    display: none; /* Icon-only on very narrow phones to prevent wrapping */
-  }
-
-  .btn-guide,
-  .btn-admin-login {
-    padding: 6px 9px;
-  }
-
-  .btn-top-drive {
-    padding: 6px 10px;
+  .top-drive-btn {
+    padding: 5px 8px;
     font-size: 11.5px;
+    height: 32px;
+    border-radius: 7px;
+    white-space: nowrap;
   }
 
-  .welcome-hero {
-    padding: 14px 10px;
+  .top-admin-btn {
+    padding: 5px 8px;
+    font-size: 11.5px;
+    height: 32px;
+    border-radius: 7px;
+    white-space: nowrap;
   }
 
-  .welcome-hero h1 {
-    font-size: 1.18rem;
+  .welcome-section {
+    padding: 16px 12px 14px;
   }
 
-  .welcome-hero p {
-    font-size: 0.82rem;
+  .welcome-heading {
+    font-size: 1.25rem;
+  }
+
+  .welcome-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
   }
 
   .subject-card {
-    padding: 12px 10px;
+    padding: 12px 12px;
   }
 
   .subject-title {
     font-size: 0.98rem;
   }
-
-  .question-item-card {
-    padding: 12px 10px;
-  }
-
-  .question-text-content {
-    font-size: 13px;
-  }
 }
+
 
 

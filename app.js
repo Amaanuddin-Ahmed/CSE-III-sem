@@ -136,15 +136,21 @@
     geminiModal: document.getElementById('geminiModal'),
     closeGeminiModalBtn: document.getElementById('closeGeminiModalBtn'),
     geminiSidebar: document.getElementById('geminiSidebar'),
+    closeGeminiSidebarBtn: document.getElementById('closeGeminiSidebarBtn'),
     toggleGeminiSidebarBtn: document.getElementById('toggleGeminiSidebarBtn'),
     newChatBtn: document.getElementById('newChatBtn'),
     clearAllHistoryBtn: document.getElementById('clearAllHistoryBtn'),
     geminiHistoryList: document.getElementById('geminiHistoryList'),
     geminiCurrentChatTitle: document.getElementById('geminiCurrentChatTitle'),
     geminiWelcomeScreen: document.getElementById('geminiWelcomeScreen'),
+    toggleSuggestionsBtn: document.getElementById('toggleSuggestionsBtn'),
+    geminiSuggestionsScrollBox: document.getElementById('geminiSuggestionsScrollBox'),
+    suggestionsChevron: document.getElementById('suggestionsChevron'),
     geminiChatOutput: document.getElementById('geminiChatOutput'),
     geminiQueryForm: document.getElementById('geminiQueryForm'),
     geminiQueryInput: document.getElementById('geminiQueryInput'),
+    animatedPlaceholderTrack: document.getElementById('animatedPlaceholderTrack'),
+    animatedPlaceholderText: document.getElementById('animatedPlaceholderText'),
     geminiSendBtn: document.getElementById('geminiSendBtn'),
     geminiCameraBtn: document.getElementById('geminiCameraBtn'),
     geminiCameraInput: document.getElementById('geminiCameraInput'),
@@ -192,6 +198,7 @@
     loadGeminiChats();
     setupImageAndCameraAttachment();
     setupSpeechRecognition();
+    initAnimatedPlaceholder();
     initOnboardingTourCheck();
   }
 
@@ -304,7 +311,7 @@
         el.topDriveBtnText.textContent = isMobile ? `${state.currentSubject.shortName} Drive` : `View ${state.currentSubject.shortName} Drive Folder`;
       }
     } else {
-      el.topDriveBtnText.textContent = isMobile ? 'Drive Folder' : 'View Entire PYQ Folder';
+      el.topDriveBtnText.textContent = isMobile ? 'Drive' : 'View Entire PYQ Folder';
     }
   }
 
@@ -954,6 +961,21 @@
     }
   }
 
+  function closeGeminiSidebar() {
+    if (el.geminiSidebar) {
+      el.geminiSidebar.classList.remove('open');
+    }
+  }
+
+  function toggleSuggestions() {
+    if (!el.geminiSuggestionsScrollBox) return;
+    const isCollapsed = el.geminiSuggestionsScrollBox.classList.toggle('collapsed');
+    if (el.toggleSuggestionsBtn) {
+      el.toggleSuggestionsBtn.classList.toggle('collapsed', isCollapsed);
+      el.toggleSuggestionsBtn.setAttribute('aria-expanded', !isCollapsed);
+    }
+  }
+
   // -------------------------------------------------------------
   // Camera & Image Attachment
   // -------------------------------------------------------------
@@ -1067,6 +1089,77 @@
         console.warn('Could not start speech recognition:', err);
       }
     }
+  }
+
+  // -------------------------------------------------------------
+  // Animated Rotating Search Input Placeholder
+  // -------------------------------------------------------------
+  const PLACEHOLDER_PHRASES = [
+    "Ask anything about Discrete Mathematics...",
+    "Solve 2-mark questions in DM Unit 1...",
+    "Explain Booth's Algorithm in COA...",
+    "Normalize R(A,B,C,D) to BCNF in DBMS...",
+    "Difference between Overloading & Overriding...",
+    "Software Testing: Black box vs White box...",
+    "Ecosystem & 10% energy law in ES...",
+    "Attach question paper photo with +..."
+  ];
+
+  let placeholderIndex = 0;
+  let placeholderTimer = null;
+
+  function initAnimatedPlaceholder() {
+    if (!el.animatedPlaceholderText || !el.geminiQueryInput) return;
+
+    el.animatedPlaceholderText.textContent = PLACEHOLDER_PHRASES[0];
+
+    // Hide placeholder track on input or focus
+    el.geminiQueryInput.addEventListener('focus', () => {
+      if (el.animatedPlaceholderTrack) el.animatedPlaceholderTrack.style.opacity = '0';
+    });
+
+    el.geminiQueryInput.addEventListener('input', () => {
+      if (el.animatedPlaceholderTrack) {
+        el.animatedPlaceholderTrack.style.opacity = el.geminiQueryInput.value ? '0' : '1';
+      }
+    });
+
+    el.geminiQueryInput.addEventListener('blur', () => {
+      if (!el.geminiQueryInput.value && el.animatedPlaceholderTrack) {
+        el.animatedPlaceholderTrack.style.opacity = '1';
+      }
+    });
+
+    if (placeholderTimer) clearInterval(placeholderTimer);
+
+    placeholderTimer = setInterval(() => {
+      // If user is currently typing or input has value, skip rotation
+      if (el.geminiQueryInput && (el.geminiQueryInput.value || document.activeElement === el.geminiQueryInput)) {
+        return;
+      }
+
+      placeholderIndex = (placeholderIndex + 1) % PLACEHOLDER_PHRASES.length;
+      const nextPhrase = PLACEHOLDER_PHRASES[placeholderIndex];
+
+      // 1. Text slides up and fades out
+      el.animatedPlaceholderText.style.transition = 'transform 0.35s ease, opacity 0.35s ease';
+      el.animatedPlaceholderText.style.transform = 'translateY(-14px)';
+      el.animatedPlaceholderText.style.opacity = '0';
+
+      setTimeout(() => {
+        // 2. Set new text below with zero transition
+        el.animatedPlaceholderText.textContent = nextPhrase;
+        el.animatedPlaceholderText.style.transition = 'none';
+        el.animatedPlaceholderText.style.transform = 'translateY(14px)';
+        el.animatedPlaceholderText.style.opacity = '0';
+
+        // 3. Force reflow, then smoothly animate up to center
+        void el.animatedPlaceholderText.offsetWidth;
+        el.animatedPlaceholderText.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease';
+        el.animatedPlaceholderText.style.transform = 'translateY(0)';
+        el.animatedPlaceholderText.style.opacity = '1';
+      }, 350);
+    }, 3200);
   }
 
   // -------------------------------------------------------------
@@ -1254,7 +1347,9 @@
     } else {
       renderActiveChat();
     }
-    if (el.geminiQueryInput) el.geminiQueryInput.focus();
+    if (el.geminiQueryInput && window.innerWidth > 768) {
+      el.geminiQueryInput.focus();
+    }
   }
 
   function initGeminiKey() {
@@ -2256,6 +2351,21 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     if (el.toggleGeminiSidebarBtn) {
       el.toggleGeminiSidebarBtn.addEventListener('click', toggleGeminiSidebar);
     }
+    if (el.closeGeminiSidebarBtn) {
+      el.closeGeminiSidebarBtn.addEventListener('click', closeGeminiSidebar);
+    }
+    if (el.toggleSuggestionsBtn) {
+      el.toggleSuggestionsBtn.addEventListener('click', toggleSuggestions);
+    }
+
+    // Dismiss sidebar when tapping outside on mobile
+    document.addEventListener('click', (e) => {
+      if (el.geminiSidebar && el.geminiSidebar.classList.contains('open')) {
+        if (!el.geminiSidebar.contains(e.target) && el.toggleGeminiSidebarBtn && !el.toggleGeminiSidebarBtn.contains(e.target)) {
+          closeGeminiSidebar();
+        }
+      }
+    });
 
     if (el.geminiQueryForm) {
       el.geminiQueryForm.addEventListener('submit', (e) => {
@@ -2309,6 +2419,10 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     // Global ESC key to close open modals & active tour
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
+        if (el.geminiSidebar && el.geminiSidebar.classList.contains('open')) {
+          closeGeminiSidebar();
+          return;
+        }
         if (el.tourTooltip && el.tourTooltip.style.display !== 'none') endTour();
         if (el.questionModal && el.questionModal.style.display === 'flex') closeQuestionModal();
         if (el.contribWarningModal && el.contribWarningModal.style.display === 'flex') el.contribWarningModal.style.display = 'none';

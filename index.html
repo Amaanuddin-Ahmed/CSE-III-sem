@@ -63,13 +63,13 @@
            class="top-drive-btn" 
            title="Open Google Drive Folder">
           <i class="fa-brands fa-google-drive"></i>
-          <span id="topDriveBtnText">View Entire PYQ Folder</span>
+          <span id="topDriveBtnText" class="top-drive-btn-text">View Entire PYQ Folder</span>
         </a>
 
         <!-- Admin Login Button -->
         <button id="adminLoginBtn" class="top-admin-btn" type="button" title="Admin Portal Login">
           <i class="fa-solid fa-lock"></i>
-          <span>Login as Admin</span>
+          <span class="top-admin-btn-text">Login as Admin</span>
         </button>
       </div>
     </div>
@@ -81,7 +81,7 @@
     <!-- Welcome Section (Gemini Style) -->
     <section class="welcome-section" id="welcomeSection">
       <div class="welcome-badge-pill">
-        <i class="fa-solid fa-sparkles"></i> <span>MGIT Autonomous &bull; CSE Department</span>
+        <i class="fa-solid fa-sparkles"></i> <span>MGIT &bull; CSE Department</span>
       </div>
       <h2 class="welcome-heading">Welcome to <span class="gemini-title-gradient">MGIT PYQ Hub</span></h2>
       <p class="welcome-desc">Your intelligent, student-curated platform for MGIT CSE Semester III Previous Year Questions, verified lecture notes, and Google Gemini study assistance.</p>
@@ -548,6 +548,9 @@
             <i class="fa-solid fa-plus"></i>
             <span>New Chat</span>
           </button>
+          <button type="button" class="btn-close-sidebar" id="closeGeminiSidebarBtn" title="Close Sidebar" aria-label="Close Sidebar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
 
         <div class="gemini-history-section">
@@ -563,6 +566,24 @@
         </div>
 
         <div class="gemini-sidebar-footer">
+          <!-- Custom Key Option Moved Inside Sidebar at Bottom -->
+          <div class="gemini-sidebar-key-section">
+            <button type="button" class="btn-sidebar-key" id="toggleApiKeyBtn" title="Google AI Studio API Key">
+              <i class="fa-solid fa-key"></i>
+              <span id="apiKeyBtnLabel">Custom Gemini Key</span>
+            </button>
+          </div>
+          <!-- Optional User API Key Drawer -->
+          <div class="gemini-key-drawer" id="geminiKeyDrawer" style="display: none;">
+            <p class="key-drawer-desc">
+              Enter your <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a> key:
+            </p>
+            <div class="key-input-flex">
+              <input type="password" id="userGeminiKeyInput" class="form-input" placeholder="AIzaSy...">
+              <button type="button" class="btn-action-primary small" id="saveGeminiKeyBtn">Save</button>
+              <button type="button" class="btn-secondary-flat small" id="clearGeminiKeyBtn">Reset</button>
+            </div>
+          </div>
           <div class="gemini-user-pill">
             <i class="fa-solid fa-graduation-cap"></i>
             <span>MGIT CSE Sem III</span>
@@ -579,7 +600,7 @@
               <i class="fa-solid fa-bars"></i>
             </button>
             <h4 class="modal-dialog-title gemini-workspace-title">
-              <svg class="gemini-title-icon" viewBox="0 0 24 24" width="22" height="22" fill="#2563eb">
+              <svg class="gemini-title-icon" viewBox="0 0 24 24" width="20" height="20" fill="#2563eb">
                 <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
               </svg>
               <span id="geminiCurrentChatTitle">Gemini Study Assistant</span>
@@ -587,22 +608,8 @@
             <span class="gemini-live-pill"><i class="fa-solid fa-circle"></i> Live 3.5</span>
           </div>
           <div class="modal-header-actions">
-            <button type="button" class="btn-api-key-toggle" id="toggleApiKeyBtn" title="Google AI Studio Key">
-              <i class="fa-solid fa-key"></i> <span id="apiKeyBtnLabel">API Key</span>
-            </button>
-            <button type="button" class="modal-close-btn" id="closeGeminiModalBtn" aria-label="Close">&times;</button>
-          </div>
-        </div>
-
-        <!-- Optional User API Key Drawer -->
-        <div class="gemini-key-drawer" id="geminiKeyDrawer" style="display: none;">
-          <p class="key-drawer-desc">
-            Want unlimited custom AI answers on any topic? Enter your personal Google Gemini API key from <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>:
-          </p>
-          <div class="key-input-flex">
-            <input type="password" id="userGeminiKeyInput" class="form-input" placeholder="Paste AI Studio Key (AIzaSy...)">
-            <button type="button" class="btn-action-primary small" id="saveGeminiKeyBtn">Save</button>
-            <button type="button" class="btn-secondary-flat small" id="clearGeminiKeyBtn">Reset</button>
+            <!-- Dedicated Clean Prominent Close Button -->
+            <button type="button" class="modal-close-btn btn-gemini-close" id="closeGeminiModalBtn" aria-label="Close Gemini Assistant" title="Close AI Assistant">&times;</button>
           </div>
         </div>
 
@@ -612,7 +619,7 @@
           <!-- Welcoming Landing Screen (Shown before first prompt in a chat) -->
           <div class="gemini-welcome-screen" id="geminiWelcomeScreen">
             <div class="gemini-welcome-sparkle">
-              <svg viewBox="0 0 24 24" width="48" height="48">
+              <svg viewBox="0 0 24 24" width="44" height="44">
                 <defs>
                   <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#2563eb" />
@@ -628,49 +635,59 @@
             </h2>
             <p class="gemini-greet-sub">What concept, PYQ problem, or exam strategy would you like to explore today?</p>
             
-            <div class="gemini-prompt-grid">
-              <button type="button" class="gemini-prompt-card" data-query="Explain Addressing Modes in Computer Organization (COA) with clear memory diagrams">
-                <div class="card-icon coa"><i class="fa-solid fa-microchip"></i></div>
-                <div class="card-text">
-                  <strong>COA Addressing Modes</strong>
-                  <span>Direct, Indirect, Indexed &amp; diagrams</span>
-                </div>
+            <!-- Suggestions Dropdown & Small Rectangular Scroll Window -->
+            <div class="gemini-suggestions-container" id="geminiSuggestionsContainer">
+              <button type="button" class="btn-toggle-suggestions" id="toggleSuggestionsBtn" aria-expanded="true" title="Toggle prompt suggestions">
+                <span class="suggestions-btn-text"><i class="fa-regular fa-lightbulb"></i> <span>View Suggestions</span></span>
+                <i class="fa-solid fa-chevron-down toggle-chevron" id="suggestionsChevron"></i>
               </button>
-              <button type="button" class="gemini-prompt-card" data-query="DBMS Schema Normalization: Explain 1NF, 2NF, 3NF, BCNF with table decomposition examples">
-                <div class="card-icon dbms"><i class="fa-solid fa-database"></i></div>
-                <div class="card-text">
-                  <strong>DBMS Normalization</strong>
-                  <span>1NF to BCNF closures &amp; anomalies</span>
+              
+              <div class="gemini-suggestions-scroll-box" id="geminiSuggestionsScrollBox">
+                <div class="gemini-prompt-grid compact-scroll-window">
+                  <button type="button" class="gemini-prompt-card" data-query="Explain Addressing Modes in Computer Organization (COA) with clear memory diagrams">
+                    <div class="card-icon coa"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="card-text">
+                      <strong>COA Addressing Modes</strong>
+                      <span>Direct, Indirect, Indexed &amp; diagrams</span>
+                    </div>
+                  </button>
+                  <button type="button" class="gemini-prompt-card" data-query="DBMS Schema Normalization: Explain 1NF, 2NF, 3NF, BCNF with table decomposition examples">
+                    <div class="card-icon dbms"><i class="fa-solid fa-database"></i></div>
+                    <div class="card-text">
+                      <strong>DBMS Normalization</strong>
+                      <span>1NF to BCNF closures &amp; anomalies</span>
+                    </div>
+                  </button>
+                  <button type="button" class="gemini-prompt-card" data-query="How to solve Homogeneous Recurrence Relations using Characteristic Equations in Discrete Mathematics (DM)">
+                    <div class="card-icon dm"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="card-text">
+                      <strong>DM Recurrence Relations</strong>
+                      <span>Roots, characteristic equations &amp; steps</span>
+                    </div>
+                  </button>
+                  <button type="button" class="gemini-prompt-card" data-query="Difference between Method Overloading and Method Overriding in Java OOP with code examples">
+                    <div class="card-icon oopj"><i class="fa-solid fa-code"></i></div>
+                    <div class="card-text">
+                      <strong>Java OOP Differences</strong>
+                      <span>Overloading vs Overriding rules</span>
+                    </div>
+                  </button>
+                  <button type="button" class="gemini-prompt-card" data-query="Booth's Signed Binary Multiplication Algorithm flowchart and step-by-step example in COA">
+                    <div class="card-icon coa"><i class="fa-solid fa-sitemap"></i></div>
+                    <div class="card-text">
+                      <strong>Booth's Algorithm</strong>
+                      <span>Signed binary multiplication tables</span>
+                    </div>
+                  </button>
+                  <button type="button" class="gemini-prompt-card" data-query="Software Engineering SDLC Models: Waterfall vs Agile comparison and phase deliverables">
+                    <div class="card-icon se"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="card-text">
+                      <strong>SE SDLC Models</strong>
+                      <span>Waterfall vs Agile trade-offs</span>
+                    </div>
+                  </button>
                 </div>
-              </button>
-              <button type="button" class="gemini-prompt-card" data-query="How to solve Homogeneous Recurrence Relations using Characteristic Equations in Discrete Mathematics (DM)">
-                <div class="card-icon dm"><i class="fa-solid fa-calculator"></i></div>
-                <div class="card-text">
-                  <strong>DM Recurrence Relations</strong>
-                  <span>Roots, characteristic equations &amp; steps</span>
-                </div>
-              </button>
-              <button type="button" class="gemini-prompt-card" data-query="Difference between Method Overloading and Method Overriding in Java OOP with code examples">
-                <div class="card-icon oopj"><i class="fa-solid fa-code"></i></div>
-                <div class="card-text">
-                  <strong>Java OOP Differences</strong>
-                  <span>Overloading vs Overriding rules</span>
-                </div>
-              </button>
-              <button type="button" class="gemini-prompt-card" data-query="Booth's Signed Binary Multiplication Algorithm flowchart and step-by-step example in COA">
-                <div class="card-icon coa"><i class="fa-solid fa-sitemap"></i></div>
-                <div class="card-text">
-                  <strong>Booth's Algorithm</strong>
-                  <span>Signed binary multiplication tables</span>
-                </div>
-              </button>
-              <button type="button" class="gemini-prompt-card" data-query="Software Engineering SDLC Models: Waterfall vs Agile comparison and phase deliverables">
-                <div class="card-icon se"><i class="fa-solid fa-diagram-project"></i></div>
-                <div class="card-text">
-                  <strong>SE SDLC Models</strong>
-                  <span>Waterfall vs Agile trade-offs</span>
-                </div>
-              </button>
+              </div>
             </div>
           </div>
 
@@ -679,7 +696,7 @@
             <!-- Messages appended here -->
           </div>
 
-          <!-- Input Row with Camera, Mic, Image Attachment Preview, and Input Box -->
+          <!-- Input Row with Plus, Mic, Image Attachment Preview, and Input Box -->
           <div class="gemini-input-container">
             <!-- Attached Image Preview Strip (if photo uploaded) -->
             <div class="gemini-image-preview-strip" id="geminiImagePreviewStrip" style="display: none;">
@@ -702,7 +719,13 @@
                 <i class="fa-solid fa-microphone"></i>
               </button>
 
-              <input type="text" id="geminiQueryInput" class="gemini-text-field" placeholder="Ask anything about DM, COA, OOPJ, DBMS, SE, ES..." required autocomplete="off">
+              <!-- Animated Rotating Input Field Wrap -->
+              <div class="gemini-input-field-wrap">
+                <input type="text" id="geminiQueryInput" class="gemini-text-field" required autocomplete="off" autocorrect="off">
+                <div class="animated-placeholder-track" id="animatedPlaceholderTrack">
+                  <span class="animated-placeholder-text" id="animatedPlaceholderText">Ask anything about DM...</span>
+                </div>
+              </div>
 
               <button type="submit" class="gemini-submit-btn" id="geminiSendBtn" title="Send Question">
                 <i class="fa-solid fa-arrow-up"></i>
