@@ -1174,15 +1174,21 @@
 
     // 2. Position Tooltip
     const tooltipWidth = Math.min(340, window.innerWidth - 32);
-    const tooltipHeight = 200;
+    const actualTooltipHeight = el.tourTooltip.offsetHeight || 260;
     const margin = 16;
 
     let top, left;
 
     if (targetEl === el.floatingGeminiBtn) {
-      // Step 3: Place directly ABOVE the floating Gemini AI button with a safety gap
-      top = rect.top - tooltipHeight - margin;
-      left = rect.right - tooltipWidth;
+      if (window.innerWidth > 640) {
+        // Desktop / Laptop: Place cleanly to the LEFT of the floating Gemini button
+        left = rect.left - tooltipWidth - 20;
+        top = Math.max(16, Math.min(window.innerHeight - actualTooltipHeight - 16, rect.bottom - actualTooltipHeight));
+      } else {
+        // Mobile / Small screen: Place safely ABOVE with generous 24px clearance
+        top = rect.top - actualTooltipHeight - 24;
+        left = Math.max(16, (window.innerWidth - tooltipWidth) / 2);
+      }
     } else if (targetEl === el.topDriveBtn) {
       // Step 1: Place directly BELOW top drive button
       top = rect.bottom + margin;
@@ -1198,7 +1204,7 @@
     if (left > maxLeft) left = maxLeft;
     if (left < 16) left = 16;
 
-    const maxTop = window.innerHeight - tooltipHeight - 16;
+    const maxTop = window.innerHeight - actualTooltipHeight - 16;
     if (top > maxTop) top = maxTop;
     if (top < 16) top = 16;
 
@@ -1444,10 +1450,10 @@ The 7 core semester subjects are:
 6. Environmental Studies (ES) [Ecosystems, Ecological Pyramids, Biodiversity Hotspots, Pollution, Waste Management, Global Treaties, Green Energy]
 7. Innovation and Entrepreneurship (I&E) [Design Thinking, Ideation, Business Model Canvas, IPR, Patents, Funding, Startup Lifecycle]
 
-Examination Blueprint:
-- Part A: 10 compulsory questions of 2 marks each (2 questions from each unit) = 20 Marks.
-- Part B: 5 choice questions of 10 marks (or 2 × 5 marks) = 50 Marks.
-- Total: 70 Marks.
+MGIT Autonomous Examination Structure & Regulation Blueprint:
+- Total Marks: 60 Marks (Part A: 10 Marks, Part B: 50 Marks).
+- Part A (10 Marks Total - Compulsory): Question 1 consists of exactly 5 sub-questions: 1(a), 1(b), 1(c), 1(d), and 1(e) (one question from each of Units 1 to 5), each carrying 2 marks (5 × 2 = 10 Marks). All 5 sub-questions are compulsory with no choice.
+- Part B (50 Marks Total - Essay): Consists of 5 compulsory numbered questions: Question 2, Question 3, Question 4, Question 5, and Question 6 (corresponding to Units 1, 2, 3, 4, and 5 respectively). There is no choice between question numbers (answering all numbers 2 through 6 is mandatory). Inside each numbered question, there is an internal choice between two fixed pairs: either [a, b] OR [c, d] (e.g., 2(a) [5M] & 2(b) [5M] OR 2(c) [5M] & 2(d) [5M]). Each sub-question carries 5 marks, making each numbered question worth 10 marks (5 questions × 10 Marks = 50 Marks). Students can ONLY choose [a, b] or [c, d] — no cross-pair mixing is permitted (e.g., combining 2(a) and 2(d) is invalid).
 
 Guidelines for Answers:
 - When asked for "2 marks questions" or "short questions": provide crisp, high-scoring answers with formal definitions, key formulas, equations, or examples worth full 2 marks.
@@ -1776,7 +1782,7 @@ Guidelines for Answers:
     if ((q.includes('2 mark') || q.includes('short') || q.includes('part a') || q.includes('prepare') || q.includes('all')) && (q.includes('dm') || q.includes('discrete') || q.includes('math'))) {
       return `### Discrete Mathematics (DM) — High-Yield 2-Marks PYQ Bank & Model Answers
 
-In MGIT autonomous end-semester examinations, **Part-A consists of 10 compulsory questions of 2 marks each (2 questions from each unit = 20 marks)**. Here is your comprehensive preparation guide for the most repeated 2-mark questions:
+In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and consists of Question 1 with 5 compulsory sub-questions: 1(a), 1(b), 1(c), 1(d), and 1(e) of 2 marks each (one from each of Units 1 to 5; Total = 10 Marks)**. Here is your unit-wise preparation guide for the most repeated 2-mark questions:
 
 #### Unit 1: Mathematical Logic & Predicates
 1. **Define Tautology, Contradiction, and Contingency:**
