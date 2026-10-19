@@ -311,7 +311,7 @@
         el.topDriveBtnText.textContent = isMobile ? `${state.currentSubject.shortName} Drive` : `View ${state.currentSubject.shortName} Drive Folder`;
       }
     } else {
-      el.topDriveBtnText.textContent = isMobile ? 'Drive' : 'View Entire PYQ Folder';
+      el.topDriveBtnText.textContent = 'View entire folder';
     }
   }
 
