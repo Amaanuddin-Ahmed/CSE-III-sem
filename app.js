@@ -205,10 +205,13 @@
     subjectKeys.forEach(key => {
       const sub = SUBJECTS_DATA[key];
       const card = document.createElement('div');
-      card.className = 'subject-card';
+      card.className = `subject-card subject-${sub.id.toLowerCase()}`;
       card.setAttribute('role', 'button');
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', `${sub.shortName} - ${sub.title}`);
+      card.setAttribute('data-subject', sub.id);
+      card.style.setProperty('--sub-accent', sub.accentColor);
+      card.style.setProperty('--sub-bg', sub.bgColor);
 
       // Count matching questions in database
       const qCount = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id).length;
@@ -251,12 +254,11 @@
     // Update Top Drive Button dynamically to this Subject's folder
     if (sub.driveUrl) {
       el.topDriveBtn.href = sub.driveUrl;
-      el.topDriveBtnText.textContent = `View ${sub.shortName} Drive Folder`;
       el.topDriveBtn.title = `Open ${sub.shortName} Google Drive Folder`;
     } else {
       el.topDriveBtn.href = DRIVE_ROOT_URL;
-      el.topDriveBtnText.textContent = `View Entire PYQ Folder`;
     }
+    updateTopDriveBtnLabel();
 
     // Update Header in Detail Section (Zero Course Codes!)
     el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title}`;
@@ -289,6 +291,22 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  function updateTopDriveBtnLabel() {
+    if (!el.topDriveBtnText) return;
+    const isMobile = window.innerWidth <= 640;
+    if (state.currentSubject) {
+      if (state.currentMode === 'notes') {
+        el.topDriveBtnText.textContent = isMobile ? `${state.currentSubject.shortName} Notes` : `View ${state.currentSubject.shortName} Notes Folder`;
+      } else if (state.currentMode === 'pyqs') {
+        el.topDriveBtnText.textContent = isMobile ? `${state.currentSubject.shortName} PYQs` : `View ${state.currentSubject.shortName} PYQs Folder`;
+      } else {
+        el.topDriveBtnText.textContent = isMobile ? `${state.currentSubject.shortName} Drive` : `View ${state.currentSubject.shortName} Drive Folder`;
+      }
+    } else {
+      el.topDriveBtnText.textContent = isMobile ? 'Drive Folder' : 'View Entire PYQ Folder';
+    }
+  }
+
   function showModeSelector() {
     state.currentMode = null;
     if (el.modeSelectorWrapper) el.modeSelectorWrapper.style.display = 'block';
@@ -298,8 +316,8 @@
 
     if (state.currentSubject && state.currentSubject.driveUrl) {
       el.topDriveBtn.href = state.currentSubject.driveUrl;
-      el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} Drive Folder`;
     }
+    updateTopDriveBtnLabel();
   }
 
   function showNotesView() {
@@ -314,8 +332,8 @@
     if (state.currentSubject) {
       if (state.currentSubject.notesUrl) {
         el.topDriveBtn.href = state.currentSubject.notesUrl;
-        el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} Notes Folder`;
       }
+      updateTopDriveBtnLabel();
       renderNotesDivision();
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -333,8 +351,8 @@
     if (state.currentSubject) {
       if (state.currentSubject.pyqsUrl) {
         el.topDriveBtn.href = state.currentSubject.pyqsUrl;
-        el.topDriveBtnText.textContent = `View ${state.currentSubject.shortName} PYQs Folder`;
       }
+      updateTopDriveBtnLabel();
       renderPyqsDivision();
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -346,8 +364,8 @@
 
     // Reset Top Drive Button to Entire Folder
     el.topDriveBtn.href = DRIVE_ROOT_URL;
-    el.topDriveBtnText.textContent = 'View Entire PYQ Folder';
     el.topDriveBtn.title = 'Open Entire SEM 3 Google Drive Folder';
+    updateTopDriveBtnLabel();
 
     el.subjectDetailSection.style.display = 'none';
     el.welcomeSection.style.display = 'block';
@@ -469,17 +487,17 @@
     questions.sort((a, b) => b.frequency - a.frequency);
 
     questions.forEach(q => {
-      const card = document.createElement('div');
-      card.className = 'question-item-card';
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-
       const isPartA = q.part === 'A';
       const partBadgeClass = isPartA ? 'part-a' : 'part-b';
       const partLabel = isPartA ? 'Part A &bull; 2 Marks' : `Part B &bull; ${q.marks} Marks`;
       const recurrenceBadge = q.frequency > 1
-        ? `<span class="q-badge recurrence">Repeated ${q.frequency}x</span>`
+        ? `<span class="q-badge recurrence"><i class="fa-solid fa-repeat"></i> Repeated ${q.frequency}x</span>`
         : '';
+
+      const card = document.createElement('div');
+      card.className = `question-item-card ${isPartA ? 'part-a-card' : 'part-b-card'} ${q.frequency > 1 ? 'repeated-card' : ''}`;
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
 
       const subForCard = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
       const directPdfUrl = q.driveFileId
@@ -2153,8 +2171,9 @@ Formatting guidelines:
       el.restartTourBtn.addEventListener('click', startOnboardingTour);
     }
 
-    // Reposition tour tooltip on window resize
+    // Reposition tour tooltip & update responsive labels on window resize
     window.addEventListener('resize', () => {
+      updateTopDriveBtnLabel();
       if (el.tourTooltip && el.tourTooltip.style.display !== 'none') {
         const targets = [el.topDriveBtn, el.subjectsSection, el.floatingGeminiBtn];
         positionTourTooltip(targets[state.currentTourStep]);
