@@ -302,7 +302,9 @@
 
       <!-- Division 2: Attribution -->
       <div class="footer-division attribution-division" id="attributionDivision">
-        <p class="attribution-text">Made by Amaan..</p>
+        <div class="attribution-box">
+          <span class="attribution-text">Made by Amaan..</span>
+        </div>
       </div>
     </footer>
 
@@ -695,11 +697,11 @@
             </div>
 
             <form id="geminiQueryForm" class="gemini-modern-input-bar">
-              <!-- Hidden File Input for Camera / Image -->
-              <input type="file" id="geminiCameraInput" accept="image/*" style="display: none;">
+              <!-- Hidden File Input for Local Files / Photo -->
+              <input type="file" id="geminiCameraInput" accept="image/*,.pdf,.doc,.docx,.txt" style="display: none;">
               
-              <button type="button" class="gemini-tool-btn" id="geminiCameraBtn" title="Upload question paper or diagram photo">
-                <i class="fa-solid fa-camera"></i>
+              <button type="button" class="gemini-tool-btn" id="geminiCameraBtn" title="Upload question paper, notes, or photo from files">
+                <i class="fa-solid fa-plus"></i>
               </button>
               
               <button type="button" class="gemini-tool-btn" id="geminiMicBtn" title="Live Voice Input (Speak your question)">

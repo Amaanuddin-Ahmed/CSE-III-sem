@@ -916,16 +916,42 @@ body {
   box-shadow: 0 6px 16px rgba(21, 128, 61, 0.28);
 }
 
+.attribution-division {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.attribution-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px; /* thickness of the purplish bluish pink outline */
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #9333ea 0%, #3b82f6 50%, #ec4899 100%);
+  box-shadow: 0 3px 12px rgba(147, 51, 234, 0.22), 0 2px 6px rgba(59, 130, 246, 0.16);
+  transition: all 0.22s ease-in-out;
+}
+
+.attribution-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.3), 0 3px 8px rgba(147, 51, 234, 0.25);
+}
+
 .attribution-text {
   font-family: var(--font-serif);
-  font-size: 13.5px;
-  color: var(--text-muted);
-  letter-spacing: 0.3px;
-  padding: 8px 14px;
-  border: 1px dashed #cbd5e1;
-  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.35px;
+  padding: 6px 18px;
+  border-radius: 9999px;
   background-color: #ffffff;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 /* ==========================================================================
@@ -1568,40 +1594,85 @@ body {
   gap: 8px;
 }
 
-.gemini-history-item span {
+.gemini-history-item,
+.history-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.gemini-history-item span,
+.history-item-btn .chat-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+  text-align: left;
 }
 
-.gemini-history-item:hover {
+.history-item-btn i.fa-message {
+  font-size: 13px;
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.gemini-history-item:hover,
+.history-item-btn:hover {
   background: #e2e8f0;
   color: #0f172a;
 }
 
-.gemini-history-item.active {
+.gemini-history-item.active,
+.history-item-btn.active {
   background: #dbeafe;
+  border-color: #bfdbfe;
   color: #1e3a8a;
   font-weight: 600;
 }
 
-.btn-del-history {
+.history-item-btn.active i.fa-message {
+  color: #2563eb;
+}
+
+.btn-del-history,
+.btn-del-chat {
   background: none;
   border: none;
+  outline: none;
   color: #94a3b8;
   font-size: 11px;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.15s;
+  opacity: 0.6;
+  transition: all 0.15s;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.gemini-history-item:hover .btn-del-history {
+.gemini-history-item:hover .btn-del-history,
+.history-item-btn:hover .btn-del-chat {
   opacity: 1;
 }
 
-.btn-del-history:hover {
+.btn-del-history:hover,
+.btn-del-chat:hover {
   color: #dc2626;
+  background-color: #fee2e2;
 }
 
 .gemini-sidebar-footer {

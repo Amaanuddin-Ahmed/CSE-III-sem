@@ -964,28 +964,32 @@
       el.geminiCameraInput.addEventListener('change', (e) => {
         const file = e.target.files && e.target.files[0];
         if (!file) return;
-        if (!file.type.startsWith('image/')) {
-          showToast('Please upload a valid question paper or notes photo (JPEG/PNG).');
-          return;
-        }
-        if (file.size > 8 * 1024 * 1024) {
-          showToast('Image size exceeds 8MB limit. Please upload a smaller image.');
-          return;
-        }
-        const reader = new FileReader();
-        reader.onload = (loadEvt) => {
-          const dataUrl = loadEvt.target.result;
-          const base64Data = dataUrl.split(',')[1];
-          state.pendingGeminiImage = {
-            dataUrl,
-            base64Data,
-            mimeType: file.type
+        if (file.type.startsWith('image/')) {
+          if (file.size > 10 * 1024 * 1024) {
+            showToast('Image size exceeds 10MB limit. Please upload a smaller image.');
+            return;
+          }
+          const reader = new FileReader();
+          reader.onload = (loadEvt) => {
+            const dataUrl = loadEvt.target.result;
+            const base64Data = dataUrl.split(',')[1];
+            state.pendingGeminiImage = {
+              dataUrl,
+              base64Data,
+              mimeType: file.type
+            };
+            if (el.geminiPreviewImg) el.geminiPreviewImg.src = dataUrl;
+            if (el.geminiImagePreviewStrip) el.geminiImagePreviewStrip.style.display = 'flex';
+            showToast('File attached. Ready to send to Gemini.');
           };
-          if (el.geminiPreviewImg) el.geminiPreviewImg.src = dataUrl;
-          if (el.geminiImagePreviewStrip) el.geminiImagePreviewStrip.style.display = 'flex';
-          showToast('Photo attached. Ready to send to Gemini.');
-        };
-        reader.readAsDataURL(file);
+          reader.readAsDataURL(file);
+        } else {
+          showToast(`Attached ${file.name}. Ask Gemini about this file.`);
+          if (el.geminiQueryInput && !el.geminiQueryInput.value) {
+            el.geminiQueryInput.value = `Questions on ${file.name.replace(/\.[^/.]+$/, '')}: `;
+            el.geminiQueryInput.focus();
+          }
+        }
       });
     }
     if (el.removeGeminiImgBtn) {
@@ -1320,10 +1324,10 @@
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // 1. Direct call to Google Gemini API
+    // 1. Direct call to Google Gemini API with FULL multi-turn conversation history
     const activeKey = localStorage.getItem('mgit_user_gemini_key') || DEFAULT_GEMINI_KEY;
     try {
-      const liveAnswer = await fetchGeminiDirect(activeKey, q, attachedImg);
+      const liveAnswer = await fetchGeminiDirect(activeKey, chat.messages, q, attachedImg);
       if (liveAnswer) {
         updateAiMessageContent(thinkingMsg, liveAnswer);
         chat.messages.push({ role: 'model', text: liveAnswer, timestamp: Date.now() });
@@ -1336,12 +1340,16 @@
       console.warn('Direct Gemini API call failed, trying serverless endpoint:', err);
     }
 
-    // 2. Try serverless /api/gemini endpoint
+    // 2. Try serverless /api/gemini endpoint with FULL multi-turn history
     try {
       const serverRes = await fetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: q, subject: state.currentSubject ? state.currentSubject.title : '' })
+        body: JSON.stringify({
+          query: q,
+          subject: state.currentSubject ? state.currentSubject.title : '',
+          history: chat.messages
+        })
       });
       if (serverRes.ok) {
         const data = await serverRes.json();
@@ -1393,33 +1401,64 @@
     `;
   }
 
-  async function fetchGeminiDirect(apiKey, query, attachedImage) {
+  async function fetchGeminiDirect(apiKey, chatMessages, query, attachedImage) {
     const subjectContext = state.currentSubject ? `${state.currentSubject.shortName} - ${state.currentSubject.title}` : 'MGIT CSE Semester III';
-    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III students.
-Subject Context: ${subjectContext}.
-Answer the student's question clearly, thoroughly, and academically.
-Include:
-- Formal, standard textbook definition and concepts
-- Key equations, proofs, logic tables, or neat code snippets where appropriate
-- Clear bullet points or numbered steps
-- High-yield MGIT exam scoring advice and common pitfalls to avoid.
+    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) Autonomous CSE Semester III students.
+The 7 core semester subjects are:
+1. Discrete Mathematics (DM) [Logic, Sets, Relations, POSETs, Lattices, Groups, Permutations, Combinations, Recurrence Relations, Graphs, Euler/Hamiltonian]
+2. Computer Organization & Architecture (COA) [Addressing Modes, ALU, Booth's Algorithm, Microprogrammed Control, Cache Mapping, Virtual Memory, Pipelining, Hazards, DMA]
+3. Object Oriented Programming through Java (OOPJ) [Classes, OOP, Overloading vs Overriding, Interfaces, Packages, Multithreading, Exceptions, Collections, AWT/Swing]
+4. Database Management Systems (DBMS) [ER Diagrams, Relational Algebra, SQL, Normalization 1NF-BCNF, Transactions, ACID, 2PL, Indexing, B+ Trees]
+5. Software Engineering (SE) [Process Models, Waterfall, Agile Scrum, SRS, Architecture, Coupling & Cohesion, Black-box & White-box Testing, Cyclomatic Complexity]
+6. Environmental Studies (ES) [Ecosystems, Ecological Pyramids, Biodiversity Hotspots, Pollution, Waste Management, Global Treaties, Green Energy]
+7. Innovation and Entrepreneurship (I&E) [Design Thinking, Ideation, Business Model Canvas, IPR, Patents, Funding, Startup Lifecycle]
 
-Formatting guidelines:
-- Use clean standard GitHub-style Markdown.
-- Structure answers with clean headings (###, ####), bullet points, and tables.
-- For math formulas, equations, or exam marks calculations, write standard human-readable math (e.g., 5 × 10 = 50 marks, (5 + 5), 2ⁿ, O(log n)) or standard LaTeX math ($...$ or $$...$$). Never output raw unformatted LaTeX text tags like \\text{...} when simple text suffices.
-- Provide neat syntax-highlighted code blocks with language tags (e.g. \`\`\`java) where relevant.`;
+Examination Blueprint:
+- Part A: 10 compulsory questions of 2 marks each (2 questions from each unit) = 20 Marks.
+- Part B: 5 choice questions of 10 marks (or 2 × 5 marks) = 50 Marks.
+- Total: 70 Marks.
 
-    const userText = query || 'Please analyze this attached question paper / notes photo in detail and explain the solution.';
-    const parts = [{ text: `${systemPrompt}\n\nStudent Question: ${userText}` }];
+Guidelines for Answers:
+- When asked for "2 marks questions" or "short questions": provide crisp, high-scoring answers with formal definitions, key formulas, equations, or examples worth full 2 marks.
+- When asked to "continue", "elaborate", or follow up: seamlessly continue from the previous turn in the conversation without restarting or skipping.
+- Math & Formulas: use standard human-readable math or standard LaTeX ($...$ or $$...$$).
+- Output directly as the academic tutor. Never output internal checklists, prompt evaluation steps, or meta-instructions.
+- Use clean GitHub-style Markdown with bolding, lists, and code blocks.`;
 
-    if (attachedImage && attachedImage.base64Data && attachedImage.mimeType) {
-      parts.push({
-        inlineData: {
-          mimeType: attachedImage.mimeType,
-          data: attachedImage.base64Data
+    let contents = [];
+    if (Array.isArray(chatMessages) && chatMessages.length > 0) {
+      contents = chatMessages.map((msg, idx) => {
+        const role = msg.role === 'model' || msg.role === 'assistant' ? 'model' : 'user';
+        let text = msg.text || '';
+        if (idx === 0 && role === 'user') {
+          text = `${systemPrompt}\n\nSubject Context: ${subjectContext}\n\nStudent: ${text}`;
         }
+        const parts = [{ text: text }];
+        if (msg.image && msg.image.startsWith('data:')) {
+          const match = msg.image.match(/^data:([^;]+);base64,(.+)$/);
+          if (match) {
+            parts.push({
+              inlineData: {
+                mimeType: match[1],
+                data: match[2]
+              }
+            });
+          }
+        }
+        return { role: role, parts: parts };
       });
+    } else {
+      const userText = query || 'Please analyze this attached question paper / notes photo in detail and explain the solution.';
+      const parts = [{ text: `${systemPrompt}\n\nSubject Context: ${subjectContext}\n\nStudent Question: ${userText}` }];
+      if (attachedImage && attachedImage.base64Data && attachedImage.mimeType) {
+        parts.push({
+          inlineData: {
+            mimeType: attachedImage.mimeType,
+            data: attachedImage.base64Data
+          }
+        });
+      }
+      contents = [{ role: 'user', parts: parts }];
     }
 
     const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
@@ -1430,15 +1469,10 @@ Formatting guidelines:
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            contents: [
-              {
-                role: 'user',
-                parts: parts
-              }
-            ],
+            contents: contents,
             generationConfig: {
-              temperature: 0.4,
-              maxOutputTokens: 1200
+              temperature: 0.35,
+              maxOutputTokens: 4096
             }
           })
         });
@@ -1704,6 +1738,64 @@ Formatting guidelines:
 
   function generateGeminiResponse(query) {
     const q = query.toLowerCase();
+
+    // -------------------------------------------------------------
+    // DM (Discrete Mathematics) — 2 Marks & High-Yield Questions
+    // -------------------------------------------------------------
+    if ((q.includes('2 mark') || q.includes('short') || q.includes('part a') || q.includes('prepare') || q.includes('all')) && (q.includes('dm') || q.includes('discrete') || q.includes('math'))) {
+      return `### Discrete Mathematics (DM) — High-Yield 2-Marks PYQ Bank & Model Answers
+
+In MGIT autonomous end-semester examinations, **Part-A consists of 10 compulsory questions of 2 marks each (2 questions from each unit = 20 marks)**. Here is your comprehensive preparation guide for the most repeated 2-mark questions:
+
+#### Unit 1: Mathematical Logic & Predicates
+1. **Define Tautology, Contradiction, and Contingency:**
+   - **Tautology:** A compound proposition that is True for all possible truth values of its proposition variables (e.g., $P \\vee \\neg P$).
+   - **Contradiction (Fallacy):** A compound proposition that is False for all possible truth values (e.g., $P \\wedge \\neg P$).
+   - **Contingency:** A proposition that is neither a tautology nor a contradiction.
+2. **What are Principal Normal Forms (PDNF and PCNF)?**
+   - **PDNF (Principal Disjunctive Normal Form):** An equivalent sum-of-products formula consisting of the disjunction of all *Minterms* corresponding to True rows in the truth table.
+   - **PCNF (Principal Conjunctive Normal Form):** An equivalent product-of-sums formula consisting of the conjunction of all *Maxterms* corresponding to False rows.
+3. **State De Morgan's Laws in Propositional Logic:**
+   - $\\neg(P \\wedge Q) \\equiv \\neg P \\vee \\neg Q$
+   - $\\neg(P \\vee Q) \\equiv \\neg P \\wedge \\neg Q$
+
+#### Unit 2: Set Theory, Relations, POSETs & Lattices
+4. **Define a Partially Ordered Set (POSET):**
+   - A set $S$ together with a binary relation $R$ is a POSET $(S, \\le)$ if $R$ satisfies three axioms:
+     1. **Reflexive:** $a R a$ for all $a \\in S$
+     2. **Antisymmetric:** If $a R b$ and $b R a$, then $a = b$
+     3. **Transitive:** If $a R b$ and $b R c$, then $a R c$
+5. **Define a Lattice:**
+   - A POSET $(L, \\le)$ is called a **Lattice** if every pair of elements $\\{a, b\\} \\subseteq L$ has both:
+     - A unique **Least Upper Bound (LUB / Join)**: $a \\vee b = \\sup\\{a, b\\}$
+     - A unique **Greatest Lower Bound (GLB / Meet)**: $a \\wedge b = \\inf\\{a, b\\}$
+6. **State the condition for a Relation to be an Equivalence Relation:**
+   - A relation $R$ is an equivalence relation if it is Reflexive, Symmetric ($a R b \\implies b R a$), and Transitive.
+
+#### Unit 3: Algebraic Structures & Groups
+7. **Differentiate Semigroup, Monoid, and Group:**
+   - **Semigroup $(S, *)$:** Closed ($a * b \\in S$) and Associative ($a*(b*c) = (a*b)*c$).
+   - **Monoid $(M, *)$:** A Semigroup that has an Identity element $e$ ($a * e = e * a = a$).
+   - **Group $(G, *)$:** A Monoid where every element $a$ has an Inverse $a^{-1}$ ($a * a^{-1} = e$).
+8. **State Lagrange's Theorem for Finite Groups:**
+   - The order of every subgroup $H$ of a finite group $G$ divides the order of the group: $|H| \\mid |G|$. Consequently, $\\frac{|G|}{|H|} = [G:H]$ (the index of $H$ in $G$).
+
+#### Unit 4: Combinatorics & Recurrence Relations
+9. **State the Pigeonhole Principle (PHP):**
+   - If $k+1$ or more pigeons are placed into $k$ pigeonholes, then at least one pigeonhole must contain two or more pigeons.
+   - *Generalized PHP:* If $N$ objects are placed into $k$ boxes, at least one box contains at least $\\lceil N/k \\rceil$ objects.
+10. **Write the General Form of a Linear Homogeneous Recurrence Relation:**
+    - $a_n + c_1 a_{n-1} + c_2 a_{n-2} + \\dots + c_k a_{n-k} = 0$, where $c_i$ are constants and $c_k \\neq 0$.
+
+#### Unit 5: Graph Theory
+11. **State the Handshaking Theorem (Degree Sum Formula):**
+    - In any undirected graph $G = (V, E)$, the sum of the degrees of all vertices equals twice the number of edges:
+      $$\\sum_{v \\in V} \\deg(v) = 2|E|$$
+    - *Corollary:* The number of vertices with odd degree in an undirected graph is always **even**.
+12. **Differentiate Eulerian Circuit vs Hamiltonian Cycle:**
+    - **Eulerian Circuit:** A closed trail that visits every **edge** of the graph exactly once. (Exists iff all vertices have even degrees).
+    - **Hamiltonian Cycle:** A closed loop that visits every **vertex** of the graph exactly once.`;
+    }
 
     // -------------------------------------------------------------
     // COA (Computer Organization & Architecture)

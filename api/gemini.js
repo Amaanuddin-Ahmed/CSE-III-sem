@@ -21,32 +21,67 @@ export default async function handler(req, res) {
     Buffer.from('QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=', 'base64').toString('utf8');
 
   try {
-    const { query, subject } = req.body || {};
-    if (!query || typeof query !== 'string') {
-      return res.status(400).json({ error: 'Missing query in request body' });
+    const { query, subject, history } = req.body || {};
+    if (!query && (!history || history.length === 0)) {
+      return res.status(400).json({ error: 'Missing query or history in request body' });
     }
 
-    const systemInstruction = `You are the MGIT PYQ Hub Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III students.
-The core subjects are:
-1. Discrete Mathematics (DM)
-2. Computer Organization & Architecture (COA)
-3. Object Oriented Programming through Java (OOPJ)
-4. Database Management Systems (DBMS)
-5. Software Engineering (SE)
-6. Environmental Studies (ES)
-7. Innovation and Entrepreneurship (I&E)
+    const systemInstruction = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) Autonomous CSE Semester III students.
+The 7 core semester subjects are:
+1. Discrete Mathematics (DM) [Logic, Sets, Relations, POSETs, Lattices, Groups, Permutations, Combinations, Recurrence Relations, Graphs, Euler/Hamiltonian]
+2. Computer Organization & Architecture (COA) [Addressing Modes, ALU, Booth's Algorithm, Microprogrammed Control, Cache Mapping, Virtual Memory, Pipelining, Hazards, DMA]
+3. Object Oriented Programming through Java (OOPJ) [Classes, OOP, Overloading vs Overriding, Interfaces, Packages, Multithreading, Exceptions, Collections, AWT/Swing]
+4. Database Management Systems (DBMS) [ER Diagrams, Relational Algebra, SQL, Normalization 1NF-BCNF, Transactions, ACID, 2PL, Indexing, B+ Trees]
+5. Software Engineering (SE) [Process Models, Waterfall, Agile Scrum, SRS, Architecture, Coupling & Cohesion, Black-box & White-box Testing, Cyclomatic Complexity]
+6. Environmental Studies (ES) [Ecosystems, Ecological Pyramids, Biodiversity Hotspots, Pollution, Waste Management, Global Treaties, Green Energy]
+7. Innovation and Entrepreneurship (I&E) [Design Thinking, Ideation, Business Model Canvas, IPR, Patents, Funding, Startup Lifecycle]
 
-Provide clear, accurate, high-scoring answers. Include:
-- Clear standard definitions and core mechanisms
-- Mathematical formulas, derivations, truth tables, or neat code snippets where relevant
-- High-yield exam tips based on MGIT past question paper patterns
-Keep the tone helpful, professional, and academically rigorous.
+Examination Structure:
+- Part A: Compulsory 10 short questions of 2 marks each (2 questions from each unit) = 20 Marks.
+- Part B: 5 choice questions of 10 marks (or 2 × 5 marks) = 50 Marks.
+- Total: 70 Marks.
 
-Formatting guidelines:
-- Use clean standard GitHub-style Markdown.
-- Structure answers with clean headings (###, ####), bullet points, and tables.
-- For math formulas, equations, or exam marks calculations, write standard human-readable math (e.g., 5 × 10 = 50 marks, (5 + 5), 2ⁿ, O(log n)) or standard LaTeX math ($...$ or $$...$$). Never output raw unformatted LaTeX text tags like \\text{...} when simple text suffices.
-- Provide neat syntax-highlighted code blocks with language tags (e.g. \`\`\`java) where relevant.`;
+Guidelines for Answers:
+- When asked about "2 marks questions" or "short questions": provide crisp, high-scoring answers with formal definitions, key formulas, equations, or examples worth full 2 marks.
+- When asked to "continue" or follow up: seamlessly continue from the previous turn in the conversation without restarting or skipping.
+- Math & Formulas: use standard human-readable math or standard LaTeX ($...$ or $$...$$).
+- Output directly as the academic tutor. Never output internal checklists, prompt evaluation steps, or meta-instructions.
+- Use clean GitHub-style Markdown with bolding, lists, and code blocks.`;
+
+    // Construct multi-turn contents
+    let contents = [];
+    if (Array.isArray(history) && history.length > 0) {
+      contents = history.map((turn, idx) => {
+        const role = turn.role === 'model' || turn.role === 'assistant' ? 'model' : 'user';
+        let text = turn.text || '';
+        // Prepend system instruction to the very first user message for guaranteed grounding
+        if (idx === 0 && role === 'user') {
+          text = `${systemInstruction}\n\nSubject Context: ${subject || 'General CSE Sem III'}\n\nStudent: ${text}`;
+        }
+        return {
+          role: role,
+          parts: [{ text: text }]
+        };
+      });
+
+      // If query is provided and not already the last message in history, append it
+      const lastMsg = history[history.length - 1];
+      if (query && (!lastMsg || lastMsg.text !== query)) {
+        contents.push({
+          role: 'user',
+          parts: [{ text: query }]
+        });
+      }
+    } else {
+      contents = [
+        {
+          role: 'user',
+          parts: [
+            { text: `${systemInstruction}\n\nSubject Context: ${subject || 'General CSE Sem III'}\n\nStudent Question: ${query}` }
+          ]
+        }
+      ];
+    }
 
     const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
     let lastError = null;
@@ -61,17 +96,10 @@ Formatting guidelines:
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            contents: [
-              {
-                role: 'user',
-                parts: [
-                  { text: `${systemInstruction}\n\nSubject Context: ${subject || 'General CSE Sem III'}\nStudent Question: ${query}` }
-                ]
-              }
-            ],
+            contents: contents,
             generationConfig: {
-              temperature: 0.4,
-              maxOutputTokens: 1200
+              temperature: 0.35,
+              maxOutputTokens: 4096
             }
           })
         });
