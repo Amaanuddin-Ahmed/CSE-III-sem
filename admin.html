@@ -19,6 +19,12 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body class="admin-page-body">
 
@@ -85,7 +91,7 @@
         <div class="pipeline-badge-group">
           <span class="status-pill green"><i class="fa-solid fa-circle"></i> Supabase Connected</span>
           <span class="status-pill blue"><i class="fa-solid fa-circle"></i> Google Drive Synced</span>
-          <span class="status-pill purple"><i class="fa-solid fa-circle"></i> Vercel Analytics Ready</span>
+          <span class="status-pill purple"><i class="fa-solid fa-circle"></i> Vercel Analytics &amp; Speed Insights Ready</span>
         </div>
       </div>
 
@@ -239,10 +245,11 @@
           <div class="pipeline-card">
             <div class="pipeline-header">
               <i class="fa-solid fa-chart-line" style="color: #7c3aed;"></i>
-              <h5>Vercel Web Analytics &amp; Deployment</h5>
+              <h5>Vercel Web Analytics &amp; Speed Insights</h5>
             </div>
             <p class="pipeline-desc">GitHub Repository: <code>Amaanuddin-Ahmed/CSE-III-sem</code></p>
-            <p class="pipeline-desc">Analytics: <code>Active (/_vercel/insights/script.js)</code></p>
+            <p class="pipeline-desc">Web Analytics: <code>Active (/_vercel/insights/script.js)</code></p>
+            <p class="pipeline-desc">Speed Insights: <code>Active (/_vercel/speed-insights/script.js)</code></p>
             <div class="pipeline-actions">
               <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Vercel Analytics Dashboard
