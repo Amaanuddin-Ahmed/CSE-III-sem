@@ -1,13 +1,15 @@
 /**
  * MGIT PYQ Hub - Question Bank & Subject Metadata
  * Strictly CSE Semester III Core Subjects:
- * 1. DM (Discrete Mathematics)
- * 2. COA (Computer Organization & Architecture)
- * 3. OOPJ (Object-Oriented Programming through Java)
- * 4. DBMS (Database Management Systems)
- * 5. SE (Software Engineering)
- * 6. ES (Environmental Studies / Science)
- * 7. I&E (Innovation and Entrepreneurship)
+ * 1. DM (Discrete Mathematics - CS303PC)
+ * 2. COA (Computer Organization & Architecture - CS302PC)
+ * 3. OOPJ (Object-Oriented Programming through Java - CS305PC)
+ * 4. DBMS (Database Management Systems - CS301PC)
+ * 5. SE (Software Engineering - CS304PC)
+ * 6. ES (Environmental Studies - MC301HS)
+ * 7. I&E (Innovation and Entrepreneurship - MC302IE)
+ * 
+ * Every question links DIRECTLY to its verified Drive paper PDF (not the folder)
  */
 
 const SUBJECTS_DATA = {
@@ -64,58 +66,58 @@ const SUBJECTS_DATA = {
     paperCount: 20,
     notesCount: 0,
     chapters: {
-      1: "OOP Concepts, Java Fundamentals, JVM Architecture, Classes & Objects",
-      2: "Inheritance, Polymorphism, Method Overriding, Interfaces & Packages",
+      1: "OOP Concepts, Java Virtual Machine (JVM), Bytecode & Primitive Types",
+      2: "Classes, Objects, Inheritance, Polymorphism & Interfaces",
       3: "Exception Handling, Custom Exceptions & Multithreading",
-      4: "Java Collections Framework (List, Set, Map) & Generics",
-      5: "Files, Streams, Serialization, GUI (Swing/AWT) & Event Handling"
+      4: "Java Collections Framework, Lists, Sets, Maps & Generics",
+      5: "File I/O Streams, Byte Streams, Character Streams & Serialization"
     }
   },
   "DBMS": {
     id: "DBMS",
     shortName: "DBMS",
     title: "Database Management Systems",
-    code: "CS304PC",
+    code: "CS301PC",
     icon: "fa-solid fa-database",
-    accentColor: "#0891b2",
-    bgColor: "#ecfeff",
+    accentColor: "#0284c7",
+    bgColor: "#f0f9ff",
     driveFolderId: "1Af4RdwkOHfK-lM8SuNoeao0aPYiIf6hc",
     driveUrl: "https://drive.google.com/drive/folders/1Af4RdwkOHfK-lM8SuNoeao0aPYiIf6hc",
     paperCount: 12,
     notesCount: 0,
     chapters: {
-      1: "Database System Concepts, Architecture & Entity-Relationship (ER) Modeling",
-      2: "Relational Data Model, Relational Algebra & Integrity Constraints",
-      3: "SQL Queries, Nested Subqueries, Triggers, Views & Schema Normalization",
-      4: "Transaction Processing, ACID Properties, Concurrency Control & Serializability",
-      5: "Storage, Indexing Techniques (B+ Trees) & Query Evaluation"
+      1: "Database System Concepts, 3-Schema Architecture & ER Modeling",
+      2: "Relational Data Model, Relational Algebra & SQL Operations",
+      3: "Schema Refinement, Functional Dependencies & Normalization (1NF to BCNF)",
+      4: "Transaction Management, ACID Properties & Concurrency Control (2PL)",
+      5: "Indexing, B+ Trees, Hashing Techniques & Crash Recovery"
     }
   },
   "SE": {
     id: "SE",
     shortName: "SE",
     title: "Software Engineering",
-    code: "CS306PC",
+    code: "CS304PC",
     icon: "fa-solid fa-laptop-code",
-    accentColor: "#4f46e5",
-    bgColor: "#eef2ff",
+    accentColor: "#7c3aed",
+    bgColor: "#f5f3ff",
     driveFolderId: "16MpaH50OsmOKyAse1V5oQB7vdDqKYQqX",
     driveUrl: "https://drive.google.com/drive/folders/16MpaH50OsmOKyAse1V5oQB7vdDqKYQqX",
     paperCount: 17,
     notesCount: 0,
     chapters: {
-      1: "Software Process Models, Agile Development, Scrum & Waterfall",
-      2: "Requirements Engineering, SRS Specification & Use-Case Modeling",
-      3: "System Architectural Design, Component Design & UI Design",
-      4: "Software Testing Techniques (Black-box, White-box, Integration)",
-      5: "Software Maintenance, Risk Management, Metrics & SCM"
+      1: "Software Process Models, Waterfall, Agile Scrum & Requirements Engineering",
+      2: "System Analysis, Use Case Modeling & SRS Documentation",
+      3: "Software Architectural Design, Modular Decomposition & Coupling/Cohesion",
+      4: "Software Testing, Black Box, White Box & Basis Path Testing",
+      5: "Software Quality Assurance, Metrics, COCOMO Model & Maintenance"
     }
   },
   "ES": {
     id: "ES",
     shortName: "ES",
     title: "Environmental Studies",
-    code: "MC301ES",
+    code: "MC301HS",
     icon: "fa-solid fa-leaf",
     accentColor: "#15803d",
     bgColor: "#f0fdf4",
@@ -180,23 +182,23 @@ const NOTES_DATA = [
     id: "NOTE-ES-01",
     subjectId: "ES",
     chapter: 1,
-    title: "ES Unit 1: Ecosystems, Food Chains & Biodiversity",
+    title: "ES Unit 1: Ecosystems & Biodiversity Comprehensive Guide",
     fileName: "Unit 1.pdf",
-    fileSize: "1.8 MB",
-    driveFileId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+    fileSize: "22.9 MB",
+    driveFileId: "1Fy6lmAAa5frGzeL30Fgg9gjcl009aV6K",
     folderUrl: "https://drive.google.com/drive/folders/1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
-    description: "Comprehensive notes covering biotic components, food webs, ecological pyramids, and biodiversity in India."
+    description: "Complete lecture guide covering structure and function of ecosystems, ecological pyramids, food chains, energy flow, and biodiversity hotspots."
   },
   {
     id: "NOTE-ES-02",
     subjectId: "ES",
     chapter: 2,
-    title: "ES Unit 2: Natural Resources & Environmental Conservation",
+    title: "ES Unit 2: Natural Resources & Conservation Handbook",
     fileName: "Unit 2.pdf",
-    fileSize: "2.2 MB",
-    driveFileId: "1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
+    fileSize: "9.4 MB",
+    driveFileId: "1LTntxlX3QbGQetwnaBPVA9KExbNMEqEV",
     folderUrl: "https://drive.google.com/drive/folders/1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
-    description: "Renewable vs non-renewable energy, mineral resources, water conservation and sustainable management."
+    description: "Comprehensive notes on renewable and non-renewable resources, deforestation, water management, mineral exploitation, and energy crisis."
   }
 ];
 
@@ -215,6 +217,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q1(a)",
     question: "Define Effective Address (EA). Differentiate between Direct and Indirect Addressing modes with a quick example.",
     paperName: "Jan 2024 reg.pdf",
+    driveFileId: "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     pageNumber: 1,
     tip: "Provide the memory lookup equation EA = A vs EA = [A] for full 2 marks."
   },
@@ -229,6 +232,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q2",
     question: "Explain the various Addressing Modes (Immediate, Direct, Indirect, Register, Indexed, Relative) with suitable examples and EA computation formulas.",
     paperName: "Aug 2024.pdf",
+    driveFileId: "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
     pageNumber: 1,
     tip: "Draw neat memory address pointer diagrams for each mode."
   },
@@ -243,6 +247,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q3",
     question: "Differentiate between Hardwired Control Unit and Microprogrammed Control Unit. Draw the block diagram of Microprogrammed Control Unit.",
     paperName: "Aug 2023 reg.pdf",
+    driveFileId: "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
     pageNumber: 2,
     tip: "Present differences in a clean comparison table (Speed, Flexibility, Control Store, CISC/RISC)."
   },
@@ -257,6 +262,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q5",
     question: "Explain Booth's Multiplication Algorithm for signed 2's complement numbers with a flowchart. Multiply (-9) by (+6) step-by-step.",
     paperName: "dec 2024.pdf",
+    driveFileId: "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
     pageNumber: 2,
     tip: "Tabulate values of A, Q, Q-1, and Count for each step. Highly repeated in university papers."
   },
@@ -271,6 +277,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q1(d)",
     question: "What is Cache Hit and Cache Miss? Define Hit Ratio with its mathematical formula.",
     paperName: "mr 22 reg,supple.pdf",
+    driveFileId: "13-497eaoWN6b7Z7ncqq3lUoZ83N2XUHj",
     pageNumber: 1,
     tip: "State Hit Ratio = Total Hits / (Total Hits + Total Misses)."
   },
@@ -285,6 +292,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q7",
     question: "Explain the three Cache Memory Mapping Techniques: Direct Mapping, Fully Associative Mapping, and Set-Associative Mapping with address format divisions.",
     paperName: "Aug 2024 supp.pdf",
+    driveFileId: "16uAkxDmx-0XWxidp81tM9pWUPKTh7uje",
     pageNumber: 2,
     tip: "Draw the memory address bit-split boxes (Tag, Index/Set, Word Offset) clearly."
   },
@@ -299,6 +307,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q9",
     question: "What is Direct Memory Access (DMA)? Describe DMA Controller registers, bus signals (HRQ, HLDA), and transfer modes (Burst vs Cycle Stealing).",
     paperName: "Jan 2024 reg.pdf",
+    driveFileId: "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     pageNumber: 2,
     tip: "Draw the interconnection bus diagram showing CPU, DMA Controller, and Main Memory."
   },
@@ -317,6 +326,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q1(a)",
     question: "Define Tautology and Contradiction. Verify whether (P -> Q) <-> (~P v Q) is a Tautology using a truth table.",
     paperName: "Aug 2023 regular.pdf",
+    driveFileId: "1jn3_1u5G2kK-k2G5j_2evvDa9JV8poqV",
     pageNumber: 1,
     tip: "Construct the 4-row truth table showing the final column containing all True values."
   },
@@ -331,6 +341,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q2",
     question: "Obtain the Principal Disjunctive Normal Form (PDNF) and Principal Conjunctive Normal Form (PCNF) for statement formula: (P -> (Q ^ R)) ^ (~P -> (~Q ^ ~R)).",
     paperName: "25 supple.pdf",
+    driveFileId: "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
     pageNumber: 1,
     tip: "Use the truth table row method: Minterms for True rows give PDNF, Maxterms for False rows give PCNF."
   },
@@ -345,6 +356,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q3",
     question: "Define Poset and Lattice. Draw the Hasse diagram for D30 = {1, 2, 3, 5, 6, 10, 15, 30} under divisibility relation and verify if it forms a Lattice.",
     paperName: "Aug 2023.pdf",
+    driveFileId: "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
     pageNumber: 1,
     tip: "Draw the 3D cube Hasse diagram with 1 at bottom and 30 at top. State GLB = gcd(a,b), LUB = lcm(a,b)."
   },
@@ -359,6 +371,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q5",
     question: "Define Subgroup. State and prove Lagrange's Theorem for finite groups. Provide a counterexample to show that the converse does not hold.",
     paperName: "Aug 2023 regular.pdf",
+    driveFileId: "1jn3_1u5G2kK-k2G5j_2evvDa9JV8poqV",
     pageNumber: 2,
     tip: "For the converse counterexample, cite the Alternating Group A4 (order 12 has no subgroup of order 6)."
   },
@@ -373,6 +386,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q7",
     question: "Solve the recurrence relation a_n - 7a_{n-1} + 10a_{n-2} = 0 for n >= 2 with initial conditions a_0 = 1, a_1 = 8.",
     paperName: "25 supple.pdf",
+    driveFileId: "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
     pageNumber: 2,
     tip: "Form characteristic equation r^2 - 7r + 10 = 0 to get roots r = 2, 5. Apply initial conditions to find C1, C2."
   },
@@ -387,6 +401,7 @@ const QUESTIONS_DATABASE = [
     questionNumber: "Q9",
     question: "Define Euler Path, Euler Circuit, Hamiltonian Path, and Hamiltonian Circuit. State Euler's theorem on degree of vertices and test if the Petersen graph is Hamiltonian.",
     paperName: "Aug 2023 regular.pdf",
+    driveFileId: "1jn3_1u5G2kK-k2G5j_2evvDa9JV8poqV",
     pageNumber: 2,
     tip: "A connected graph has an Euler circuit iff every vertex has an even degree."
   },
@@ -404,7 +419,8 @@ const QUESTIONS_DATABASE = [
     frequency: 2,
     questionNumber: "Q1(a)",
     question: "What is Data Independence? Differentiate between Physical and Logical Data Independence.",
-    paperName: "DBMS Paper 1.pdf",
+    paperName: "Aug 2024.pdf",
+    driveFileId: "1ZKBYoXTgrXACQ6Z_Y5dr6GeWmIC1j-I-",
     pageNumber: 1,
     tip: "Explain with respect to the Three-Schema ANSI/SPARC Architecture."
   },
@@ -418,7 +434,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q2",
     question: "Construct an Entity-Relationship (ER) diagram for a Hospital Management System. Explain primary keys, foreign keys, weak entities, and cardinality ratios.",
-    paperName: "DBMS Paper 2.pdf",
+    paperName: "Dec 2024.pdf",
+    driveFileId: "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     pageNumber: 1,
     tip: "Clearly label double rectangles for weak entities and diamond shapes for relationships."
   },
@@ -432,7 +449,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q3",
     question: "Explain the fundamental operations of Relational Algebra: Selection, Projection, Union, Set Difference, and Cartesian Product with query examples.",
-    paperName: "DBMS Paper 3.pdf",
+    paperName: "Aug 2023.pdf",
+    driveFileId: "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     pageNumber: 1,
     tip: "Use formal notation sigma (selection) and pi (projection) alongside concrete relation tables."
   },
@@ -446,7 +464,8 @@ const QUESTIONS_DATABASE = [
     frequency: 4,
     questionNumber: "Q5",
     question: "What is Normalization? Explain 1NF, 2NF, 3NF, and BCNF with functional dependency examples and decomposition rules.",
-    paperName: "DBMS Paper 4.pdf",
+    paperName: "25 supple.pdf",
+    driveFileId: "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
     pageNumber: 2,
     tip: "For 3NF: Every non-prime attribute is non-transitively dependent on candidate key."
   },
@@ -460,7 +479,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q7",
     question: "Explain ACID properties of a transaction. What is Conflict Serializability? How is Precedence Graph used to test serializability?",
-    paperName: "DBMS Paper 5.pdf",
+    paperName: "Jan 2025.pdf",
+    driveFileId: "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     pageNumber: 2,
     tip: "Draw a precedence graph; a schedule is conflict serializable iff its precedence graph has no cycles."
   },
@@ -474,7 +494,8 @@ const QUESTIONS_DATABASE = [
     frequency: 2,
     questionNumber: "Q9",
     question: "Explain B+ Tree index structure. How does insertion and search work in a B+ Tree? Compare B+ Tree with B-Tree.",
-    paperName: "DBMS Paper 6.pdf",
+    paperName: "Jan 2024 supp.pdf",
+    driveFileId: "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
     pageNumber: 2,
     tip: "Highlight that all data records/pointers reside exclusively in leaf nodes in a B+ Tree."
   },
@@ -492,7 +513,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q1(a)",
     question: "Why is Java platform independent? What is the role of JVM, JRE, and Bytecode?",
-    paperName: "Java 2024.pdf",
+    paperName: "jan 2024 reg.pdf",
+    driveFileId: "1zMsitZoT9PKOByTED00nVa42ADe5yZd5",
     pageNumber: 1,
     tip: "Mention WORA (Write Once, Run Anywhere) and intermediate .class bytecode execution."
   },
@@ -506,7 +528,8 @@ const QUESTIONS_DATABASE = [
     frequency: 5,
     questionNumber: "Q3",
     question: "What is an Interface in Java? How does Java achieve multiple inheritance through interfaces? Write a Java code demonstrating the Diamond Problem solution.",
-    paperName: "Java 2023 reg.pdf",
+    paperName: "Aug 2024 reg.pdf",
+    driveFileId: "1p8R4f69PbKWXnhiy7XJmJG4EaxkJseqE",
     pageNumber: 1,
     tip: "Show class Document implementing Printable and Showable interfaces."
   },
@@ -520,7 +543,8 @@ const QUESTIONS_DATABASE = [
     frequency: 5,
     questionNumber: "Q5",
     question: "Explain Java Exception Handling mechanism with try, catch, finally, throw, and throws. Write a program to create and handle a user-defined custom exception.",
-    paperName: "Java 2024 supple.pdf",
+    paperName: "feb 2024 supple.pdf",
+    driveFileId: "1QJv9ASBqH_YvOC-Lx4YDCBCJaIQpw89O",
     pageNumber: 2,
     tip: "Write a complete compilable class extending Exception with super(message)."
   },
@@ -534,7 +558,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q6",
     question: "Explain the Thread Life Cycle in Java with a state transition diagram. What is synchronized keyword and why is it used?",
-    paperName: "Java 2023.pdf",
+    paperName: "Aug 2023.pdf",
+    driveFileId: "1knszvrx0f7-CLjid3oP4A-qfYiq1peHz",
     pageNumber: 2,
     tip: "Illustrate New, Runnable, Blocked/Waiting, and Terminated states with method transitions."
   },
@@ -548,7 +573,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q7",
     question: "Describe Java Collections Framework hierarchy. Compare ArrayList vs LinkedList and HashMap vs TreeMap with time complexity.",
-    paperName: "Java 2022 reg.pdf",
+    paperName: "25 supple java paper.pdf",
+    driveFileId: "17dyHw7vugEdM69ZfDdRXd3MJOWt708Pc",
     pageNumber: 2,
     tip: "Highlight random access O(1) in ArrayList vs O(1) insert/delete at known pointer in LinkedList."
   },
@@ -566,7 +592,8 @@ const QUESTIONS_DATABASE = [
     frequency: 2,
     questionNumber: "Q1(a)",
     question: "Define Software Engineering. What are the key attributes of good software?",
-    paperName: "SE 2024 reg.pdf",
+    paperName: "Jan 2024 reg.pdf",
+    driveFileId: "1Z2RSU8t1IBt7djgITCnDM7ZESzY4ybaB",
     pageNumber: 1,
     tip: "Mention Maintainability, Dependability/Security, Efficiency, and Acceptability."
   },
@@ -580,7 +607,8 @@ const QUESTIONS_DATABASE = [
     frequency: 4,
     questionNumber: "Q2",
     question: "Compare Waterfall Model, Spiral Model, and Agile Scrum methodology. When should each process model be selected?",
-    paperName: "SE 2023.pdf",
+    paperName: "Aug 2023.pdf",
+    driveFileId: "1zVaScPFgh6pZVACqsqFJhF-l_ts78MdE",
     pageNumber: 1,
     tip: "Use Spiral model for high-risk projects; Agile for rapidly changing client requirements."
   },
@@ -594,7 +622,8 @@ const QUESTIONS_DATABASE = [
     frequency: 3,
     questionNumber: "Q3",
     question: "What is Requirements Engineering? Differentiate between Functional and Non-Functional Requirements with examples. What makes a good SRS document?",
-    paperName: "SE 2024.pdf",
+    paperName: "Aug 2024.pdf",
+    driveFileId: "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     pageNumber: 1,
     tip: "IEEE 830 standard properties: Correct, Unambiguous, Complete, Consistent, Verifiable, Modifiable, Traceable."
   },
@@ -608,13 +637,14 @@ const QUESTIONS_DATABASE = [
     frequency: 4,
     questionNumber: "Q7",
     question: "Explain Black-box and White-box testing techniques. Describe Basis Path Testing, Cyclomatic Complexity calculation, and Equivalence Partitioning.",
-    paperName: "SE 2022 reg.pdf",
+    paperName: "Dec 2024.pdf",
+    driveFileId: "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     pageNumber: 2,
     tip: "Cyclomatic Complexity V(G) = E - N + 2P where E is edges, N is nodes, P is connected components."
   },
 
   // -------------------------------------------------------------
-  // ES (Environmental Studies / Science)
+  // ES (Environmental Studies)
   // -------------------------------------------------------------
   {
     id: "ES-Q1",
@@ -626,7 +656,8 @@ const QUESTIONS_DATABASE = [
     frequency: 2,
     questionNumber: "Q1(a)",
     question: "Define Ecosystem. Differentiate between Food Chain and Food Web with an example.",
-    paperName: "ES Mid Paper 1.pdf",
+    paperName: "MR-22 IE-1-ES-PART-A - Objective Q.P -ES with answer key.pdf",
+    driveFileId: "1qt6Jn9mQR0GVyH8ClZO2Q0Lbz5n-e3Ev",
     pageNumber: 1,
     tip: "A food chain is a linear feeding pathway; a food web is an interconnected network of multiple food chains."
   },
@@ -639,10 +670,11 @@ const QUESTIONS_DATABASE = [
     years: [2024, 2023, 2021],
     frequency: 3,
     questionNumber: "Q2",
-    question: "Describe the structure and function of an Ecosystem. Explain Ecological Pyramids of Number, Biomass, and Energy with diagrams.",
-    paperName: "ES Sem 2023.pdf",
+    question: "Explain the structure and functional attributes of an Ecosystem. Discuss Energy Flow through different trophic levels and draw ecological pyramids.",
+    paperName: "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    driveFileId: "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
     pageNumber: 1,
-    tip: "Emphasize that the Pyramid of Energy is always upright because energy is lost at each trophic level (10% law)."
+    tip: "Draw neat pyramids of number, biomass, and energy. Note that the pyramid of energy is always upright."
   },
   {
     id: "ES-Q3",
@@ -650,13 +682,14 @@ const QUESTIONS_DATABASE = [
     chapter: 2,
     part: "B",
     marks: 5,
-    years: [2023, 2022],
-    frequency: 2,
+    years: [2024, 2023, 2022],
+    frequency: 3,
     questionNumber: "Q4",
-    question: "Discuss the environmental impacts of modern agriculture and deforestation. Explain methods for soil and water conservation.",
-    paperName: "ES Sem 2022.pdf",
+    question: "Discuss the over-exploitation of water resources. Explain the causes and effects of modern floods, droughts, and conflicts over water sharing.",
+    paperName: "ES-model question paper-MID-1.pdf",
+    driveFileId: "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
     pageNumber: 1,
-    tip: "Mention watershed management, rainwater harvesting, and contour farming."
+    tip: "Mention surface vs groundwater depletion and inter-state river basin disputes."
   },
   {
     id: "ES-Q4",
@@ -664,17 +697,18 @@ const QUESTIONS_DATABASE = [
     chapter: 3,
     part: "B",
     marks: 5,
-    years: [2024, 2023, 2022],
-    frequency: 3,
+    years: [2024, 2023, 2022, 2020],
+    frequency: 4,
     questionNumber: "Q6",
-    question: "Discuss the causes, effects, and control measures for Air Pollution and Municipal Solid Waste Management.",
-    paperName: "ES Sem 2023.pdf",
+    question: "Explain the sources, primary air pollutants, and adverse health effects of Air Pollution. Describe methods and equipment used for air pollution control.",
+    paperName: "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    driveFileId: "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
     pageNumber: 2,
-    tip: "Explain the 3R principle (Reduce, Reuse, Recycle) and sanitary landfills."
+    tip: "Explain particulate matter control using Cyclone Separators and Electrostatic Precipitators (ESP)."
   },
 
   // -------------------------------------------------------------
-  // I&E (Innovation & Entrepreneurship)
+  // I&E (Innovation and Entrepreneurship)
   // -------------------------------------------------------------
   {
     id: "IE-Q1",
@@ -682,30 +716,35 @@ const QUESTIONS_DATABASE = [
     chapter: 1,
     part: "A",
     marks: 2,
-    years: [2024],
-    frequency: 1,
-    questionNumber: "Q1(a)",
-    question: "Define Innovation. Differentiate between Incremental Innovation and Disruptive Innovation.",
-    paperName: "IE Sample Paper.pdf",
+    years: [2024, 2023],
+    frequency: 2,
+    questionNumber: "Q1",
+    question: "What is Design Thinking? List the five key stages of the Design Thinking process.",
+    paperName: "I&E Model Reference.pdf",
+    driveFileId: null,
     pageNumber: 1,
-    tip: "Incremental improves existing products; disruptive creates a new market and value network."
+    tip: "The 5 stages: Empathize, Define, Ideate, Prototype, and Test."
   },
   {
     id: "IE-Q2",
     subjectId: "IE",
-    chapter: 2,
+    chapter: 3,
     part: "B",
     marks: 5,
-    years: [2024],
-    frequency: 1,
-    questionNumber: "Q2",
-    question: "What is Design Thinking? Explain the 5 stages of the Design Thinking process: Empathize, Define, Ideate, Prototype, and Test.",
-    paperName: "IE Sample Paper.pdf",
+    years: [2024, 2023],
+    frequency: 2,
+    questionNumber: "Q3",
+    question: "Describe the components of the Business Model Canvas (BMC). How does Lean Canvas differ from standard Business Model Canvas?",
+    paperName: "I&E Model Reference.pdf",
+    driveFileId: null,
     pageNumber: 1,
-    tip: "Draw the iterative cyclical diagram showing feedback from Test stage back to Ideate/Define."
+    tip: "Detail the 9 building blocks: Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, Cost Structure."
   }
 ];
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { SUBJECTS_DATA, NOTES_DATA, QUESTIONS_DATABASE };
+// Attach unconditionally to global scope
+if (typeof window !== 'undefined') {
+  window.SUBJECTS_DATA = SUBJECTS_DATA;
+  window.NOTES_DATA = NOTES_DATA;
+  window.QUESTIONS_DATABASE = QUESTIONS_DATABASE;
 }

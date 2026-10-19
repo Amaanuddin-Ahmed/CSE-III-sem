@@ -1,6 +1,6 @@
 # 🏛️ MGIT PYQ Hub — CSE Semester III
 
-[![Curriculum](https://img.shields.io/badge/Curriculum-MGIT%20Autonomous%20%7C%20CSE%20Semester%20III-1e3a8a.svg)](https://mgit.ac.in)
+[![Curriculum](https://img.shields.io/badge/Curriculum-MGIT%20%7C%20CSE%20Semester%20III-1e3a8a.svg)](https://mgit.ac.in)
 [![Source Drive](https://img.shields.io/badge/Google%20Drive-101%20Verified%20Files-2563eb.svg)](https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-slate.svg)](LICENSE)
 

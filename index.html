@@ -32,7 +32,7 @@
         </div>
         <div class="brand-info">
           <h1 class="brand-name">MGIT PYQ Hub</h1>
-          <p class="brand-sub">Autonomous &bull; CSE Semester III</p>
+          <p class="brand-sub">CSE Semester III</p>
         </div>
       </div>
 
@@ -133,10 +133,6 @@
               <i class="fa-solid fa-book-bookmark"></i>
               <h4>Previous Year Questions</h4>
             </div>
-            <button class="btn-contribute" data-contrib-type="PYQ" type="button">
-              <i class="fa-solid fa-plus"></i>
-              <span>Contribute</span>
-            </button>
           </div>
 
           <!-- PYQ Filter Controls: Year Checkboxes -->
@@ -184,6 +180,14 @@
           <!-- Questions List -->
           <div class="pyq-questions-list" id="questionsListContainer">
             <!-- Questions rendered dynamically -->
+          </div>
+
+          <!-- Subtle bottom contribute button below all questions -->
+          <div class="pyq-bottom-contribute">
+            <button class="btn-contribute-subtle" data-contrib-type="PYQ" type="button" title="Contribute a PYQ">
+              <i class="fa-solid fa-plus"></i>
+              <span>Contribute Question Paper</span>
+            </button>
           </div>
         </div>
 
@@ -279,19 +283,21 @@
   <div class="modal-backdrop" id="contribWarningModal" style="display: none;" role="dialog" aria-modal="true">
     <div class="modal-dialog small-dialog">
       <div class="modal-header">
-        <h4 class="modal-dialog-title"><i class="fa-solid fa-circle-exclamation"></i> Contribution Guidelines</h4>
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-file-circle-check"></i> Study Resource Guidelines</h4>
         <button type="button" class="modal-close-btn" id="closeWarningModalBtn" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="guideline-lead">
-          Please do not upload random or irrelevant PDFs at random places.
-        </p>
-        <p class="guideline-sub">
-          To keep MGIT PYQ Hub reliable and high-quality for everyone, please upload only authentic MGIT CSE Semester III question papers, verified lecture notes, or syllabus resources with correct subject and unit tags.
-        </p>
-        <p class="guideline-sub">
-          All uploads are held in a private moderation queue and verified before publication.
-        </p>
+        <div class="guideline-soft-banner">
+          <p class="guideline-soft-lead">
+            Thank you for helping keep MGIT PYQ Hub accurate and useful for our CSE batch.
+          </p>
+          <p class="guideline-soft-sub">
+            Please ensure you are uploading authentic MGIT Semester III question papers, faculty-verified lecture notes, or mid-exam resources with the correct subject and unit.
+          </p>
+          <p class="guideline-soft-note">
+            <i class="fa-solid fa-shield-halved"></i> All submissions are held in a moderation queue and verified before being published.
+          </p>
+        </div>
       </div>
       <div class="modal-footer-buttons">
         <button type="button" class="btn-secondary-flat" id="cancelContribBtn">Cancel</button>
@@ -397,14 +403,14 @@
 
       <!-- Admin Login Form (Shown when logged out) -->
       <div id="adminLoginFormContainer" class="modal-body">
-        <p class="admin-login-notice">Enter administrator password to access the full statistics and moderation portal.</p>
+        <p class="admin-login-notice">Enter administrator password to access system statistics and moderation portal.</p>
         <form id="adminLoginForm" class="admin-form">
           <div class="form-group">
-            <label for="adminPassword" class="form-label">Admin Password</label>
-            <input type="password" id="adminPassword" class="form-input" required autocomplete="current-password" placeholder="Enter password (e.g. Amaan90*)">
+            <label for="adminPassword" class="form-label">Password</label>
+            <input type="password" id="adminPassword" class="form-input" required autocomplete="current-password" placeholder="Enter Password">
           </div>
           <div class="admin-form-actions">
-            <button type="submit" class="btn-action-primary">Sign In to Dashboard</button>
+            <button type="submit" class="btn-action-primary">Unlock Dashboard</button>
           </div>
         </form>
       </div>
@@ -456,8 +462,30 @@
       </div>
 
       <div class="modal-body">
+        <div class="gemini-status-bar">
+          <div class="gemini-status-pill">
+            <span class="status-dot"></span>
+            <span id="geminiModeIndicator">Instant Knowledge Mode (No Sign-in Required)</span>
+          </div>
+          <button type="button" class="btn-api-key-toggle" id="toggleApiKeyBtn">
+            <i class="fa-solid fa-key"></i> <span id="apiKeyBtnLabel">Connect Gemini API Key</span>
+          </button>
+        </div>
+
+        <!-- Optional User API Key Drawer -->
+        <div class="gemini-key-drawer" id="geminiKeyDrawer" style="display: none;">
+          <p class="key-drawer-desc">
+            Want unlimited custom AI answers on any topic? Enter your personal Google Gemini API key from <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a> (saved only in your browser):
+          </p>
+          <div class="key-input-flex">
+            <input type="password" id="userGeminiKeyInput" class="form-input" placeholder="Paste AI Studio Key (AIzaSy...)">
+            <button type="button" class="btn-action-primary small" id="saveGeminiKeyBtn">Save</button>
+            <button type="button" class="btn-secondary-flat small" id="clearGeminiKeyBtn">Reset</button>
+          </div>
+        </div>
+
         <p class="gemini-intro-text">
-          Ask questions regarding MGIT CSE Semester III subjects, syllabus definitions, or exam question strategies.
+          Ask questions across MGIT CSE Sem III subjects (DM, COA, OOPJ, DBMS, SE, ES, I&amp;E), definitions, or exam strategies:
         </p>
 
         <!-- Prompt suggestions -->
@@ -466,18 +494,21 @@
           <button type="button" class="prompt-chip" data-query="Key topics in DBMS Normalization (1NF, 2NF, 3NF, BCNF)">DBMS Normalization</button>
           <button type="button" class="prompt-chip" data-query="How to solve Recurrence Relations using Characteristic Equation in DM">DM Recurrence Relations</button>
           <button type="button" class="prompt-chip" data-query="Difference between Overloading and Overriding in Java OOP">Java OOP Differences</button>
+          <button type="button" class="prompt-chip" data-query="Booth's Multiplication Algorithm flowchart and working in COA">COA Booth's Algorithm</button>
+          <button type="button" class="prompt-chip" data-query="Software Engineering SDLC Models: Waterfall vs Agile">SE Waterfall vs Agile</button>
+          <button type="button" class="prompt-chip" data-query="Explain ACID properties with real database transaction examples">DBMS ACID Properties</button>
         </div>
 
         <!-- Chat Output Box -->
         <div class="gemini-chat-output" id="geminiChatOutput">
           <div class="ai-msg initial-msg">
-            <p>Hello! I am your MGIT CSE Sem III study assistant. Select a topic above or enter your question below to get concise, syllabus-aligned help.</p>
+            <p><strong>Welcome to MGIT CSE Sem III Assistant!</strong> I can explain concepts, solve question paper problems, provide code snippets, and share university exam scoring strategies across all 7 semester subjects without signing in. Ask anything below!</p>
           </div>
         </div>
 
         <!-- Input Row -->
         <form id="geminiQueryForm" class="gemini-input-row">
-          <input type="text" id="geminiQueryInput" class="form-input" placeholder="Ask a subject question or concept..." required>
+          <input type="text" id="geminiQueryInput" class="form-input" placeholder="Ask any question, concept, or code..." required>
           <button type="submit" class="btn-action-primary" id="geminiSendBtn">
             <span>Ask</span>
             <i class="fa-solid fa-paper-plane"></i>
@@ -494,19 +525,5 @@
   <script src="pyq-data.js"></script>
   <script src="supabase-client.js"></script>
   <script src="app.js"></script>
-
-
-
-
-<script>
-  window.va = window.va || function () {
-    (window.vaq = window.vaq || []).push(arguments);
-  };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-
-
-
-
 </body>
 </html>

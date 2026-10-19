@@ -1019,17 +1019,18 @@ body {
 .guideline-lead {
   font-size: 14.5px;
   font-weight: 600;
-  color: #991b1b;
-  background-color: #fef2f2;
-  border: 1px solid #fecaca;
-  padding: 10px 12px;
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 12px 14px;
   border-radius: var(--radius-md);
   margin-bottom: 12px;
 }
 
 .guideline-sub {
   font-size: 13.5px;
-  color: var(--text-muted);
+  color: #475569;
+  line-height: 1.6;
   margin-bottom: 8px;
 }
 
@@ -1737,4 +1738,190 @@ body {
 .btn-pipeline-link:hover {
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   Refined Soft Typography & Bottom PYQ Contribute Styling
+   ========================================================================== */
+
+/* Bottom Subtle Contribute in PYQs */
+.pyq-bottom-contribute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.btn-contribute-subtle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.btn-contribute-subtle:hover {
+  background-color: var(--brand-surface);
+  color: var(--brand-navy);
+  border-color: var(--brand-blue);
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.12);
+}
+
+.btn-contribute-subtle i {
+  font-size: 11px;
+  color: var(--brand-blue);
+}
+
+/* Direct PDF Badge on Question Cards */
+.direct-pdf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f1f5f9;
+  color: var(--brand-navy);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.15s ease;
+}
+
+.direct-pdf-badge:hover {
+  background-color: var(--brand-navy);
+  color: #ffffff;
+  border-color: var(--brand-navy);
+}
+
+/* Soft Human Typography for Contribution Modals */
+.guideline-soft-banner {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.guideline-soft-lead {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.guideline-soft-sub {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.guideline-soft-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: #2563eb;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+/* Gemini Status Bar & Optional Key Drawer */
+.gemini-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.gemini-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #16a34a;
+  display: inline-block;
+  box-shadow: 0 0 0 2px #dcfce7;
+}
+
+.btn-api-key-toggle {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-blue);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.btn-api-key-toggle:hover {
+  background-color: #eff6ff;
+  text-decoration: underline;
+}
+
+.gemini-key-drawer {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.key-drawer-desc {
+  font-size: 12px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.key-drawer-desc a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.key-input-flex {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-action-primary.small, .btn-secondary-flat.small {
+  padding: 6px 12px;
+  font-size: 12px;
+  min-height: 34px;
+}
+
 

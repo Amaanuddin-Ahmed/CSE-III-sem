@@ -10,7 +10,7 @@
  * - Admin Portal with Moderation Queue
  * - Floating Gemini AI Assistant
  */
-import { Analytics } from "@vercel/analytics/next";
+
 (function () {
   'use strict';
 
@@ -95,7 +95,6 @@ import { Analytics } from "@vercel/analytics/next";
     adminLoginFormContainer: document.getElementById('adminLoginFormContainer'),
     adminDashboardContainer: document.getElementById('adminDashboardContainer'),
     adminLoginForm: document.getElementById('adminLoginForm'),
-    adminUsername: document.getElementById('adminUsername'),
     adminPassword: document.getElementById('adminPassword'),
     adminPendingCount: document.getElementById('adminPendingCount'),
     adminVerifiedCount: document.getElementById('adminVerifiedCount'),
@@ -109,6 +108,13 @@ import { Analytics } from "@vercel/analytics/next";
     geminiChatOutput: document.getElementById('geminiChatOutput'),
     geminiQueryForm: document.getElementById('geminiQueryForm'),
     geminiQueryInput: document.getElementById('geminiQueryInput'),
+    toggleApiKeyBtn: document.getElementById('toggleApiKeyBtn'),
+    apiKeyBtnLabel: document.getElementById('apiKeyBtnLabel'),
+    geminiModeIndicator: document.getElementById('geminiModeIndicator'),
+    geminiKeyDrawer: document.getElementById('geminiKeyDrawer'),
+    userGeminiKeyInput: document.getElementById('userGeminiKeyInput'),
+    saveGeminiKeyBtn: document.getElementById('saveGeminiKeyBtn'),
+    clearGeminiKeyBtn: document.getElementById('clearGeminiKeyBtn'),
 
     // Toast
     toastContainer: document.getElementById('toastContainer')
@@ -127,6 +133,7 @@ import { Analytics } from "@vercel/analytics/next";
     renderSubjectsGrid();
     setupEventListeners();
     setupAdminStats();
+    initGeminiKey();
   }
 
   // -------------------------------------------------------------
@@ -344,6 +351,11 @@ import { Analytics } from "@vercel/analytics/next";
         ? `<span class="q-badge recurrence">Repeated ${q.frequency}x</span>`
         : '';
 
+      const subForCard = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+      const directPdfUrl = q.driveFileId
+        ? `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`
+        : (subForCard && subForCard.driveUrl ? subForCard.driveUrl : DRIVE_ROOT_URL);
+
       card.innerHTML = `
         <div class="question-card-top">
           <div class="question-badges">
@@ -357,8 +369,10 @@ import { Analytics } from "@vercel/analytics/next";
         </div>
         <div class="question-text-preview">${escapeHtml(q.question)}</div>
         <div class="question-card-footer">
-          <span class="click-cue"><i class="fa-solid fa-circle-info"></i> View Analysis &amp; Drive Reference</span>
-          <span class="source-paper-hint"><i class="fa-regular fa-file"></i> ${escapeHtml(q.paperName)}</span>
+          <span class="click-cue"><i class="fa-solid fa-circle-info"></i> View Analysis &amp; Tips</span>
+          <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="direct-pdf-badge" onclick="event.stopPropagation();" title="Directly open original ${escapeHtml(q.paperName)} PDF in Google Drive">
+            <i class="fa-regular fa-file-pdf"></i> <span>${escapeHtml(q.paperName)}</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px; margin-left:3px;"></i>
+          </a>
         </div>
       `;
 
@@ -395,9 +409,17 @@ import { Analytics } from "@vercel/analytics/next";
     // Tip: concise exam tip
     el.modalTipText.textContent = q.tip ? `Tip: ${q.tip}` : 'Tip: Support theoretical answers with neat labelled block diagrams.';
 
-    // Drive Paper button
-    const folderUrl = sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL;
-    el.modalOpenDrivePaperBtn.href = folderUrl;
+    // Direct PDF Drive Paper button (Never general folder)
+    if (q.driveFileId) {
+      el.modalOpenDrivePaperBtn.href = `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`;
+      el.modalOpenDrivePaperBtn.querySelector('span').textContent = `Open "${q.paperName}" PDF in Google Drive`;
+      el.modalOpenDrivePaperBtn.title = `Direct link to original ${q.paperName} file in Google Drive`;
+    } else {
+      const folderUrl = sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL;
+      el.modalOpenDrivePaperBtn.href = folderUrl;
+      el.modalOpenDrivePaperBtn.querySelector('span').textContent = 'Open Drive Paper';
+      el.modalOpenDrivePaperBtn.title = 'Open Google Drive Folder';
+    }
 
     el.questionModal.style.display = 'flex';
   }
@@ -634,10 +656,49 @@ import { Analytics } from "@vercel/analytics/next";
   // -------------------------------------------------------------
   function openGeminiModal() {
     el.geminiModal.style.display = 'flex';
-    el.geminiQueryInput.focus();
+    initGeminiKey();
+    if (el.geminiQueryInput) el.geminiQueryInput.focus();
   }
 
-  function handleGeminiQuery(queryText) {
+  function initGeminiKey() {
+    const savedKey = localStorage.getItem('mgit_user_gemini_key');
+    if (savedKey) {
+      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Custom Gemini AI Active (Key Connected)';
+      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'API Key Active';
+      if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = savedKey;
+    } else {
+      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Instant Knowledge Mode (No Sign-in Required)';
+      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Connect Gemini API Key';
+    }
+  }
+
+  function toggleApiKeyDrawer() {
+    if (!el.geminiKeyDrawer) return;
+    const isHidden = el.geminiKeyDrawer.style.display === 'none';
+    el.geminiKeyDrawer.style.display = isHidden ? 'block' : 'none';
+  }
+
+  function saveUserGeminiKey() {
+    const key = el.userGeminiKeyInput ? el.userGeminiKeyInput.value.trim() : '';
+    if (!key) {
+      showToast('Please enter a valid Gemini API key.');
+      return;
+    }
+    localStorage.setItem('mgit_user_gemini_key', key);
+    initGeminiKey();
+    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
+    showToast('Gemini API Key saved! Live AI queries enabled.');
+  }
+
+  function clearUserGeminiKey() {
+    localStorage.removeItem('mgit_user_gemini_key');
+    if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = '';
+    initGeminiKey();
+    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
+    showToast('API Key cleared. Switched back to instant knowledge mode.');
+  }
+
+  async function handleGeminiQuery(queryText) {
     const q = queryText.trim();
     if (!q) return;
 
@@ -653,63 +714,345 @@ import { Analytics } from "@vercel/analytics/next";
     // Thinking state
     const thinkingMsg = document.createElement('div');
     thinkingMsg.className = 'ai-msg';
-    thinkingMsg.innerHTML = '<em>Consulting MGIT CSE Semester III syllabus and verified PYQs...</em>';
+    thinkingMsg.innerHTML = '<em>Consulting MGIT CSE Semester III syllabus and knowledge base...</em>';
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // Simulate high-yield syllabus response
+    // 1. Try personal user key if provided
+    const userKey = localStorage.getItem('mgit_user_gemini_key');
+    if (userKey) {
+      try {
+        const liveAnswer = await fetchGeminiDirect(userKey, q);
+        if (liveAnswer) {
+          thinkingMsg.innerHTML = formatMarkdown(liveAnswer);
+          el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+          return;
+        }
+      } catch (err) {
+        console.warn('Personal Gemini API key call failed, falling back to local engine:', err);
+      }
+    }
+
+    // 2. Try serverless /api/gemini endpoint
+    try {
+      const serverRes = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: q, subject: state.currentSubject ? state.currentSubject.title : '' })
+      });
+      if (serverRes.ok) {
+        const data = await serverRes.json();
+        if (data.success && data.text) {
+          thinkingMsg.innerHTML = formatMarkdown(data.text);
+          el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+          return;
+        }
+      }
+    } catch (e) {
+      // Serverless not available or static host; proceed to local engine
+    }
+
+    // 3. Supercharged instant knowledge base (covers all 7 subjects, 100% offline & free)
     setTimeout(() => {
       const response = generateGeminiResponse(q);
       thinkingMsg.innerHTML = response;
       el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-    }, 700);
+    }, 350);
+  }
+
+  async function fetchGeminiDirect(apiKey, query) {
+    const subjectContext = state.currentSubject ? state.currentSubject.title : 'MGIT CSE Semester III';
+    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) CSE Semester III.
+Subject Context: ${subjectContext}.
+Answer the student's question with academic depth, complete clarity, correct terminology, standard equations, concise code snippets (where relevant), and practical exam scoring tips.`;
+
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: `${systemPrompt}\n\nQuestion: ${query}` }]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.4,
+          maxOutputTokens: 1024
+        }
+      })
+    });
+    if (!res.ok) throw new Error(`Gemini API returned status ${res.status}`);
+    const data = await res.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text;
+  }
+
+  function formatMarkdown(text) {
+    if (!text) return '';
+    let html = escapeHtml(text);
+    // code blocks
+    html = html.replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
+    // inline code
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    // bold
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    // italic
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    // bullet points
+    html = html.replace(/^\s*[-*]\s+(.+)$/gm, '• $1<br>');
+    // line breaks
+    html = html.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+    return html;
   }
 
   function generateGeminiResponse(query) {
-    const lower = query.toLowerCase();
+    const q = query.toLowerCase();
 
-    if (lower.includes('addressing mode') || lower.includes('coa')) {
-      return `<strong>COA Unit 1 — Addressing Modes Core Summary:</strong><br>
-      • <strong>Immediate Mode:</strong> Operand is part of instruction (e.g. <code>MOV R1, #25</code>). EA = Not applicable.<br>
-      • <strong>Direct Mode:</strong> Instruction contains memory address directly. <code>EA = A</code>.<br>
-      • <strong>Indirect Mode:</strong> Instruction contains pointer to address. <code>EA = [A]</code>.<br>
-      • <strong>Register &amp; Register Indirect:</strong> Operand resides in register or pointed by register (<code>EA = [R]</code>).<br>
-      • <strong>Indexed / Relative:</strong> Useful for arrays and branching. <code>EA = A + [R]</code> or <code>EA = PC + Offset</code>.<br>
-      <em>Tip: Draw a 1-line pointer box diagram for each mode to secure full marks.</em>`;
+    // -------------------------------------------------------------
+    // COA (Computer Organization & Architecture)
+    // -------------------------------------------------------------
+    if (q.includes('addressing mode')) {
+      return `<strong>COA Unit 1 — Addressing Modes Comprehensive Guide:</strong><br><br>
+      • <strong>Immediate Mode:</strong> Operand is specified explicitly in the instruction (e.g., <code>MOV R1, #25</code>). Effective Address (EA) does not exist.<br>
+      • <strong>Direct (Absolute) Mode:</strong> Instruction contains the direct memory address of the operand. <code>EA = A</code>. Requires one memory reference.<br>
+      • <strong>Indirect Mode:</strong> Address field refers to a memory location containing the actual operand address. <code>EA = [A]</code>. Useful for pointers.<br>
+      • <strong>Register Mode:</strong> Operand resides inside a CPU register (e.g., <code>ADD R1, R2</code>). Fastest execution.<br>
+      • <strong>Register Indirect Mode:</strong> Register holds the memory address of the operand. <code>EA = [R]</code>.<br>
+      • <strong>Indexed Mode:</strong> <code>EA = A + [R_index]</code>. Critical for traversing 1D/2D arrays.<br>
+      • <strong>Relative (PC-Relative) Mode:</strong> <code>EA = PC + Offset</code>. Crucial for position-independent jump/branch instructions.<br><br>
+      <em>MGIT Exam Tip: Always draw the 1-box pointer diagram for Direct vs Indirect mode for full 5/10 marks.</em>`;
     }
 
-    if (lower.includes('normalization') || lower.includes('dbms')) {
-      return `<strong>DBMS Unit 3 — Normalization Key Concepts:</strong><br>
-      • <strong>1NF:</strong> Atomic attributes only; no multivalued or composite attributes.<br>
-      • <strong>2NF:</strong> In 1NF and no Partial Dependency (every non-prime attribute is fully functionally dependent on Candidate Key).<br>
-      • <strong>3NF:</strong> In 2NF and no Transitive Dependency (X → Y where Y is non-prime and X is not superkey).<br>
-      • <strong>BCNF:</strong> Strict 3NF where for every functional dependency X → Y, X must be a Super Key.<br>
-      <em>Tip: In MGIT exam questions, always solve the given relation R(A,B,C,D,E) with closure calculations.</em>`;
+    if (q.includes('booth') || (q.includes('multiplication') && (q.includes('coa') || q.includes('computer')))) {
+      return `<strong>COA Unit 3 — Booth's Multiplication Algorithm:</strong><br><br>
+      Booth's algorithm multiplies signed binary numbers in 2's complement notation by treating consecutive strings of 1s as a single subtraction and addition.<br><br>
+      <strong>Hardware Registers:</strong><br>
+      • <strong>A:</strong> Accumulator (initialized to 0, size n)<br>
+      • <strong>M:</strong> Multiplicand (size n)<br>
+      • <strong>Q:</strong> Multiplier (size n)<br>
+      • <strong>Q<sub>-1</sub>:</strong> 1-bit flip-flop initialized to 0<br>
+      • <strong>Count:</strong> Initialized to n (number of bits)<br><br>
+      <strong>Bit Inspection Rules (Q₀, Q₋₁):</strong><br>
+      • <code>1 0</code> &rarr; <code>A = A - M</code>, then Arithmetic Right Shift (ASHRA) (A, Q, Q₋₁)<br>
+      • <code>0 1</code> &rarr; <code>A = A + M</code>, then Arithmetic Right Shift (ASHRA)<br>
+      • <code>0 0</code> or <code>1 1</code> &rarr; Only Arithmetic Right Shift (ASHRA)<br><br>
+      <em>MGIT Exam Tip: Remember in ASHRA, the sign bit of A (most significant bit) is copied into itself to preserve signed magnitude!</em>`;
     }
 
-    if (lower.includes('recurrence') || lower.includes('dm')) {
-      return `<strong>DM Unit 4 — Recurrence Relations Method:</strong><br>
-      1. Write the homogeneous characteristic equation: for <code>a_n - 7a_{n-1} + 10a_{n-2} = 0</code>, equation is <code>r² - 7r + 10 = 0</code>.<br>
-      2. Factorize roots: <code>(r - 5)(r - 2) = 0</code>, so roots are <code>r₁ = 5, r₂ = 2</code>.<br>
-      3. General solution: <code>a_n = C₁(5)ⁿ + C₂(2)ⁿ</code>.<br>
-      4. Substitute initial conditions (e.g. <code>a₀, a₁</code>) to compute constants <code>C₁, C₂</code>.<br>
-      <em>Tip: If roots are repeated (r₁ = r₂ = r), formula becomes (C₁ + C₂·n)rⁿ.</em>`;
+    if (q.includes('cache') || q.includes('mapping')) {
+      return `<strong>COA Unit 4 — Cache Memory Mapping Techniques:</strong><br><br>
+      • <strong>1. Direct Mapping:</strong> Each main memory block maps to exactly one specific cache line: <code>Line Number = (Block Address) mod (Total Cache Lines)</code>. Simplest hardware, but prone to conflict misses.<br>
+      • <strong>2. Fully Associative Mapping:</strong> A block can reside in any cache line. Memory address is divided into Tag and Word offset. Eliminates conflict misses, but requires expensive parallel comparator circuits.<br>
+      • <strong>3. Set-Associative Mapping (k-way):</strong> Cache is partitioned into sets, each with k lines: <code>Set Number = (Block Address) mod (Number of Sets)</code>. Optimal balance between cost and hit ratio used in modern CPUs.<br><br>
+      <em>Formula:</em> Hit Ratio <code>H = (Hits) / (Hits + Misses)</code>. Average Access Time <code>T_avg = H × T_c + (1 - H) × T_m</code>.`;
     }
 
-    if (lower.includes('java') || lower.includes('overload') || lower.includes('override') || lower.includes('oop')) {
-      return `<strong>OOPJ Unit 2 — Overloading vs Overriding:</strong><br>
-      • <strong>Method Overloading:</strong> Same method name, different parameter lists within same class. Resolved at compile-time (Static Polymorphism). Return type alone cannot distinguish overloaded methods.<br>
-      • <strong>Method Overriding:</strong> Subclass provides specific implementation of method already defined in parent with exact same signature and return type. Resolved at runtime (Dynamic Method Dispatch).<br>
-      <em>Tip: Always include a 5-line code snippet showing both concepts side-by-side.</em>`;
+    if (q.includes('pipeline') || q.includes('hazard')) {
+      return `<strong>COA Unit 5 — Pipelining & Pipeline Hazards:</strong><br><br>
+      Pipelining overlaps the execution of multiple instructions across stages: <strong>IF (Fetch), ID (Decode), EX (Execute), MEM (Memory), WB (Write Back)</strong>.<br><br>
+      <strong>The 3 Major Hazards:</strong><br>
+      • <strong>1. Structural Hazard:</strong> Hardware resource conflict when two instructions need the same hardware unit simultaneously (e.g. single-port memory for instruction and data). Resolved by separate Harvard I/D caches.<br>
+      • <strong>2. Data Hazard:</strong> Instruction depends on the result of a previous incomplete instruction. Types: RAW (Read After Write), WAR, WAW. Resolved using Operand Forwarding (Bypassing) or NOP stalls.<br>
+      • <strong>3. Control (Branch) Hazard:</strong> Caused by conditional branches altering the PC. Resolved by Branch Prediction, Delayed Branching, or Prefetching branch targets.`;
     }
 
-    return `<strong>Study Guidance for "${escapeHtml(query)}":</strong><br>
-    Based on MGIT CSE Semester III past question papers, focus on:<br>
-    1. Clear standard definitions and fundamental laws.<br>
-    2. Step-by-step algorithms / mathematical derivations.<br>
-    3. Block diagrams and comparative tables.<br>
-    Browse the relevant subject's <strong>PYQs</strong> tab and filter by the latest years (2024–2022) to practice highest-yield questions.`;
+    if (q.includes('dma') || q.includes('interrupt')) {
+      return `<strong>COA Unit 5 — DMA (Direct Memory Access) vs Interrupt-driven I/O:</strong><br><br>
+      • <strong>Interrupt-Driven I/O:</strong> CPU issues read/write command, proceeds with other tasks, and receives an interrupt when device is ready. CPU still mediates every byte transfer through registers.<br>
+      • <strong>DMA (Direct Memory Access):</strong> A specialized DMA Controller takes control of the system bus to transfer entire blocks of data directly between I/O device and RAM without CPU intervention.<br><br>
+      <strong>DMA Transfer Modes:</strong><br>
+      • <strong>Burst Transfer:</strong> DMA takes control of bus and transfers the whole block continuously. Fastest, but holds CPU idle.<br>
+      • <strong>Cycle Stealing:</strong> DMA steals one bus cycle per word transfer between CPU cycles. Minimum CPU stoppage.<br>
+      <em>Signals involved: HOLD (Bus Request) and HLDA (Hold Acknowledge).</em>`;
+    }
+
+    // -------------------------------------------------------------
+    // DBMS (Database Management Systems)
+    // -------------------------------------------------------------
+    if (q.includes('normalization') || q.includes('1nf') || q.includes('2nf') || q.includes('3nf') || q.includes('bcnf')) {
+      return `<strong>DBMS Unit 3 — Schema Refinement & Normalization:</strong><br><br>
+      Normalization decomposes relations to minimize data redundancy and prevent insertion, deletion, and update anomalies.<br><br>
+      • <strong>1NF (First Normal Form):</strong> All attribute values must be atomic (no multi-valued or composite attributes allowed).<br>
+      • <strong>2NF:</strong> Must be in 1NF, and <em>no Partial Dependency</em> exists (every non-prime attribute must be fully functionally dependent on candidate key, not a proper subset).<br>
+      • <strong>3NF:</strong> Must be in 2NF, and <em>no Transitive Dependency</em> exists. For every functional dependency <code>X &rarr; Y</code>, either X is a Super Key or Y is a Prime Attribute.<br>
+      • <strong>BCNF (Boyce-Codd Normal Form):</strong> Stricter version of 3NF. For every non-trivial functional dependency <code>X &rarr; Y</code>, <strong>X must be a Super Key</strong>.<br><br>
+      <em>MGIT Exam Tip: When given a relation R(A,B,C,D,E), compute the attribute closures (X⁺) first to find candidate keys before classifying normal forms.</em>`;
+    }
+
+    if (q.includes('acid') || q.includes('transaction')) {
+      return `<strong>DBMS Unit 4 — Transaction Management & ACID Properties:</strong><br><br>
+      A transaction is a logical unit of work that accesses and updates database items.<br><br>
+      <strong>ACID Properties:</strong><br>
+      • <strong>A — Atomicity:</strong> "All or Nothing". Either all operations in the transaction succeed and commit, or the entire transaction is rolled back. Maintained by Recovery Manager (WAL - Write-Ahead Logging).<br>
+      • <strong>C — Consistency:</strong> Preserves database integrity constraints before and after execution (e.g., total account balances remain invariant).<br>
+      • <strong>I — Isolation:</strong> Concurrent execution of transactions produces the same state as if they were executed serially. Maintained by Concurrency Control (Locking/Timestamping).<br>
+      • <strong>D — Durability:</strong> Once committed, updates persist permanently in secondary storage even during catastrophic system crash.<br><br>
+      <strong>Transaction States:</strong> Active &rarr; Partially Committed &rarr; Committed (or Failed &rarr; Aborted).`;
+    }
+
+    if (q.includes('2pl') || q.includes('concurrency') || q.includes('serializ')) {
+      return `<strong>DBMS Unit 4 — Concurrency Control & Two-Phase Locking (2PL):</strong><br><br>
+      • <strong>Conflict Serializability:</strong> A schedule is conflict serializable if it can be transformed into a serial schedule by swapping non-conflicting operations (Read-Write, Write-Read, Write-Write on the same data item are conflicts). Verified using a <strong>Precedence Graph</strong> (cycle-free means serializable).<br><br>
+      <strong>Two-Phase Locking (2PL) Protocol:</strong><br>
+      1. <strong>Growing Phase:</strong> Transaction may obtain locks (Shared 'S' or Exclusive 'X'), but cannot release any lock.<br>
+      2. <strong>Shrinking Phase:</strong> Transaction may release locks, but cannot acquire any new lock.<br>
+      • <strong>Strict 2PL:</strong> Holds all Exclusive locks until commit/abort (prevents cascading rollbacks).<br>
+      • <strong>Rigorous 2PL:</strong> Holds ALL (Shared and Exclusive) locks until commit/abort.`;
+    }
+
+    if (q.includes('b+ tree') || q.includes('btree') || q.includes('indexing')) {
+      return `<strong>DBMS Unit 5 — B-Trees vs B+ Trees Indexing:</strong><br><br>
+      • <strong>B-Tree:</strong> Keys and actual record pointers are stored in both internal nodes and leaf nodes. Search can terminate early at internal nodes, but range queries are slower.<br>
+      • <strong>B+ Tree:</strong> Internal nodes store <em>only guide keys</em> for routing; <strong>all actual data records/pointers reside in leaf nodes</strong>. Leaf nodes are linked as a doubly linked list.<br><br>
+      <strong>Why B+ Trees are preferred in Database Engines:</strong><br>
+      1. Higher fan-out (internal nodes store more keys per block since no record pointers).<br>
+      2. Extremely efficient range scans: once the starting leaf is found, simply traverse the linked list.<br>
+      3. Guaranteed uniform search time: all leaves are at the exact same depth (balanced tree).`;
+    }
+
+    // -------------------------------------------------------------
+    // DM (Discrete Mathematics)
+    // -------------------------------------------------------------
+    if (q.includes('recurrence') || (q.includes('relation') && q.includes('dm'))) {
+      return `<strong>DM Unit 4 — Solving Homogeneous Recurrence Relations:</strong><br><br>
+      For a linear homogeneous recurrence relation: <code>a_n + c₁ a_{n-1} + c₂ a_{n-2} = 0</code><br><br>
+      <strong>Step-by-Step Procedure:</strong><br>
+      1. Write the <strong>Characteristic Equation</strong>: <code>r² + c₁ r + c₂ = 0</code>.<br>
+      2. Solve for roots <code>r₁, r₂</code>:<br>
+      • <em>Case 1: Distinct Real Roots (r₁ ≠ r₂):</em><br>
+      <code>a_n = C₁(r₁)ⁿ + C₂(r₂)ⁿ</code><br>
+      • <em>Case 2: Repeated Real Roots (r₁ = r₂ = r):</em><br>
+      <code>a_n = (C₁ + C₂·n) rⁿ</code><br>
+      • <em>Case 3: Complex Conjugate Roots:</em> Convert to polar/trigonometric form.<br>
+      3. Use given initial conditions (e.g. <code>a₀ = 1, a₁ = 2</code>) to solve system of linear equations for constants <code>C₁</code> and <code>C₂</code>.`;
+    }
+
+    if (q.includes('hasse') || q.includes('poset') || q.includes('lattice')) {
+      return `<strong>DM Unit 2 — POSETs, Hasse Diagrams & Lattices:</strong><br><br>
+      • <strong>POSET (Partially Ordered Set):</strong> A set S with relation R that is <strong>Reflexive, Antisymmetric, and Transitive</strong>. Denoted <code>(S, ≤)</code>.<br>
+      • <strong>Hasse Diagram:</strong> A simplified visual representation of a finite POSET where loops (reflexivity) and transitive edges are omitted, and elements are arranged vertically from lower to higher.<br>
+      • <strong>Lattice:</strong> A POSET in which <em>every pair of elements {a, b} has a unique Least Upper Bound (LUB / Join ∨) and Greatest Lower Bound (GLB / Meet ∧)</em>.<br><br>
+      <em>Important Properties:</em> Distributive lattice satisfies <code>a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)</code>. Complemented lattice has 0 and 1 elements where every element has a complement.`;
+    }
+
+    if (q.includes('euler') || q.includes('hamilton') || (q.includes('graph') && q.includes('circuit'))) {
+      return `<strong>DM Unit 5 — Euler vs Hamiltonian Graphs:</strong><br><br>
+      • <strong>Eulerian Trail / Circuit:</strong> A closed trail that visits <em>every edge of the graph exactly once</em>.<br>
+      &rarr; <em>Euler's Theorem:</em> A connected undirected graph has an Eulerian circuit <strong>if and only if every vertex has an even degree</strong>.<br>
+      &rarr; Has an Eulerian path if exactly 2 vertices have odd degrees.<br><br>
+      • <strong>Hamiltonian Cycle:</strong> A closed path that visits <em>every vertex of the graph exactly once</em> (except start/end).<br>
+      &rarr; <em>Dirac's Theorem:</em> If a simple graph has n ≥ 3 vertices and <code>deg(v) ≥ n/2</code> for all v, then G is Hamiltonian.<br>
+      &rarr; <em>Ore's Theorem:</em> If <code>deg(u) + deg(v) ≥ n</code> for every non-adjacent pair (u, v), G is Hamiltonian.`;
+    }
+
+    // -------------------------------------------------------------
+    // OOPJ (Object Oriented Programming through Java)
+    // -------------------------------------------------------------
+    if (q.includes('overload') || q.includes('override') || (q.includes('polymorph') && q.includes('java'))) {
+      return `<strong>OOPJ Unit 2 — Method Overloading vs Method Overriding:</strong><br><br>
+      <table style="width:100%; border-collapse:collapse; margin-bottom:10px; font-size:13px;">
+        <tr style="background:#f1f5f9;"><th style="padding:6px; border:1px solid #cbd5e1;">Feature</th><th style="padding:6px; border:1px solid #cbd5e1;">Overloading</th><th style="padding:6px; border:1px solid #cbd5e1;">Overriding</th></tr>
+        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Scope</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Within the same class</td><td style="padding:6px; border:1px solid #cbd5e1;">Between superclass & subclass</td></tr>
+        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Parameters</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Must be different (count/type)</td><td style="padding:6px; border:1px solid #cbd5e1;">Must be exact same signature</td></tr>
+        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Binding Time</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Compile time (Static)</td><td style="padding:6px; border:1px solid #cbd5e1;">Runtime (Dynamic Dispatch)</td></tr>
+        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Return Type</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Can be different</td><td style="padding:6px; border:1px solid #cbd5e1;">Must be same or covariant</td></tr>
+      </table>
+      <em>Code Example:</em><br>
+      <code>class MathUtil { int add(int a, int b) { return a+b; } double add(double a, double b) { return a+b; } } // Overloading</code><br>
+      <code>class Animal { void sound() { System.out.println("Bark"); } } class Dog extends Animal { @Override void sound() { System.out.println("Woof"); } } // Overriding</code>`;
+    }
+
+    if (q.includes('thread') || q.includes('multithread') || q.includes('synchroniz')) {
+      return `<strong>OOPJ Unit 3 — Multithreading & Synchronization in Java:</strong><br><br>
+      • <strong>Thread Creation:</strong><br>
+      1. Extending <code>Thread</code> class: <code>class MyThread extends Thread { public void run() { ... } }</code><br>
+      2. Implementing <code>Runnable</code> interface (preferred): <code>class MyTask implements Runnable { public void run() { ... } }</code><br><br>
+      • <strong>Thread Life Cycle States:</strong> New &rarr; Runnable &rarr; Running &rarr; Blocked/Waiting &rarr; Terminated.<br>
+      • <strong>Thread Synchronization:</strong> Prevents thread interference and consistency problems (race conditions) using the <code>synchronized</code> keyword on methods or critical blocks.<br>
+      • <strong>Inter-thread Communication:</strong> Done using <code>wait()</code>, <code>notify()</code>, and <code>notifyAll()</code> defined in <code>java.lang.Object</code> within synchronized contexts.`;
+    }
+
+    if (q.includes('exception') || q.includes('try') || q.includes('catch')) {
+      return `<strong>OOPJ Unit 3 — Exception Handling Hierarchy:</strong><br><br>
+      Java exceptions inherit from <code>Throwable</code> &rarr; <code>Exception</code> and <code>Error</code>.<br><br>
+      • <strong>Checked Exceptions:</strong> Verified at compile-time (e.g., <code>IOException</code>, <code>SQLException</code>). Must be handled via <code>try-catch</code> or declared with <code>throws</code>.<br>
+      • <strong>Unchecked Exceptions:</strong> Subclasses of <code>RuntimeException</code> (e.g., <code>NullPointerException</code>, <code>ArithmeticException</code>, <code>ArrayIndexOutOfBoundsException</code>). Occur at runtime.<br><br>
+      <strong>The 5 Keywords:</strong><br>
+      • <code>try</code>: Encloses risky code.<br>
+      • <code>catch</code>: Catches and handles specific exception.<br>
+      • <code>finally</code>: Block that always executes (used for resource cleanup), regardless of exception occurrence.<br>
+      • <code>throw</code>: Explicitly throws an exception instance (<code>throw new MyCustomException("Msg");</code>).<br>
+      • <code>throws</code>: Method signature declaration specifying exceptions propagated to caller.`;
+    }
+
+    // -------------------------------------------------------------
+    // SE (Software Engineering)
+    // -------------------------------------------------------------
+    if (q.includes('waterfall') || q.includes('agile') || q.includes('sdlc') || q.includes('spiral')) {
+      return `<strong>SE Unit 1 — Software Process Models Comparison:</strong><br><br>
+      • <strong>Waterfall Model:</strong> Sequential linear flow: Requirements &rarr; Design &rarr; Implementation &rarr; Testing &rarr; Deployment &rarr; Maintenance. Best when requirements are well-understood and stable. Disadvantage: high risk, working software delivered late.<br>
+      • <strong>Prototyping Model:</strong> Builds a throw-away or evolutionary prototype to clarify customer requirements. Excellent for unknown or volatile user needs.<br>
+      • <strong>Spiral Model (Boehm):</strong> Risk-driven model structured in 4 quadrants (Determine objectives, Risk analysis, Develop & Test, Plan next phase). Best for large, high-risk, expensive projects.<br>
+      • <strong>Agile (Scrum):</strong> Iterative and incremental development in short sprints (2–4 weeks). Embraces changing requirements, daily standups, sprint backlog, and continuous customer feedback.`;
+    }
+
+    if (q.includes('cohesion') || q.includes('coupling')) {
+      return `<strong>SE Unit 3 — Cohesion vs Coupling (Architectural Design):</strong><br><br>
+      The core engineering objective is: <strong>High Cohesion, Low Coupling</strong>.<br><br>
+      • <strong>Cohesion:</strong> Measures the internal strength and single-purposeness of elements within a module.<br>
+      &rarr; <em>Order (Best to Worst):</em> Functional (Best) &gt; Sequential &gt; Communicational &gt; Procedural &gt; Temporal &gt; Logical &gt; Coincidental (Worst).<br><br>
+      • <strong>Coupling:</strong> Measures the degree of interdependence between different modules.<br>
+      &rarr; <em>Order (Best/Lowest to Worst/Highest):</em> No Direct Coupling &gt; Data Coupling (Best) &gt; Stamp Coupling &gt; Control Coupling &gt; Common Coupling &gt; Content Coupling (Worst, direct memory access).`;
+    }
+
+    if (q.includes('testing') || q.includes('white box') || q.includes('black box')) {
+      return `<strong>SE Unit 5 — Software Testing Methodologies:</strong><br><br>
+      • <strong>Black-Box Testing (Functional):</strong> Tests functionality without knowing internal source code structure.<br>
+      &rarr; <em>Techniques:</em> Equivalence Class Partitioning, Boundary Value Analysis (BVA), Cause-Effect Graphing.<br><br>
+      • <strong>White-Box Testing (Structural):</strong> Tests internal code logic, paths, conditions, and loops.<br>
+      &rarr; <em>Techniques:</em> Statement Coverage, Branch Coverage, Basis Path Testing using McCabe's Cyclomatic Complexity: <code>V(G) = E - N + 2P</code> (where E = edges, N = nodes, P = connected components).<br><br>
+      <strong>Levels of Testing:</strong> Unit Testing &rarr; Integration Testing &rarr; System Testing &rarr; Acceptance Testing (Alpha/Beta).`;
+    }
+
+    // -------------------------------------------------------------
+    // ES (Environmental Studies)
+    // -------------------------------------------------------------
+    if (q.includes('ecosystem') || q.includes('biodiversity') || q.includes('environmental') || q.includes('pollution')) {
+      return `<strong>ES (Environmental Studies) — Core Examination Essentials:</strong><br><br>
+      • <strong>Ecosystem:</strong> Dynamic complex of plant, animal, and microorganism communities interacting with non-living environment. Energy flow is unidirectional (10% Law of Lindeman).<br>
+      • <strong>Ecological Pyramids:</strong> Pyramid of Numbers, Biomass, and Energy (Pyramid of Energy is <em>always upright</em>).<br>
+      • <strong>Biodiversity Hotspots:</strong> Regions with high species richness and high endemism under severe threat. India hosts 4 hotspots: Western Ghats, Eastern Himalayas, Indo-Burma, Sundaland.<br>
+      • <strong>Conservation:</strong> In-situ (National parks, Sanctuaries, Biosphere reserves) vs Ex-situ (Botanical gardens, Gene banks, Zoos).<br>
+      • <strong>Pollution Control:</strong> Air (Particulate matter, scrubbers, electrostatic precipitators), Water (BOD/COD testing, Sewage Treatment Plants), Solid Waste (3Rs: Reduce, Reuse, Recycle).`;
+    }
+
+    // -------------------------------------------------------------
+    // I&E (Innovation & Entrepreneurship)
+    // -------------------------------------------------------------
+    if (q.includes('entrepreneur') || q.includes('canvas') || q.includes('patent') || q.includes('ipr') || q.includes('design thinking')) {
+      return `<strong>I&E (Innovation & Entrepreneurship) — Core Examination Essentials:</strong><br><br>
+      • <strong>Design Thinking Process:</strong> 5 iterative stages: <em>Empathize</em> (understand user needs) &rarr; <em>Define</em> (problem statement) &rarr; <em>Ideate</em> (generate solutions) &rarr; <em>Prototype</em> (quick experimental models) &rarr; <em>Test</em> (user validation).<br>
+      • <strong>Business Model Canvas (Alexander Osterwalder):</strong> 9 building blocks: Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, Cost Structure.<br>
+      • <strong>Intellectual Property Rights (IPR):</strong><br>
+      &rarr; <em>Patent:</em> Protects novel inventions (valid 20 years; must satisfy Novelty, Inventive Step, Industrial Applicability).<br>
+      &rarr; <em>Copyright:</em> Protects literary, musical, and artistic works.<br>
+      &rarr; <em>Trademark:</em> Protects brand names, logos, symbols.<br>
+      • <strong>Funding Stages:</strong> Bootstrapping &rarr; Seed Funding (Friends & Family, Grants) &rarr; Angel Investors &rarr; Venture Capital (Series A, B, C) &rarr; IPO (Initial Public Offering).`;
+    }
+
+    // -------------------------------------------------------------
+    // Smart General Technical Fallback
+    // -------------------------------------------------------------
+    return `<strong>Academic Guidance on "${escapeHtml(query)}":</strong><br><br>
+    In MGIT CSE Semester III examinations, answer this topic following the structured blueprint:<br>
+    • <strong>1. Standard Technical Definition:</strong> State the formal definition and domain classification.<br>
+    • <strong>2. Core Working Principles:</strong> Explain the mechanism step-by-step with clear numbered points.<br>
+    • <strong>3. Block Diagrams / Code / Equations:</strong> Always support explanations with labeled schematics or algorithms.<br>
+    • <strong>4. University Scoring Advice:</strong> In 5/10 marks questions, write comparative tables or step-by-step proofs rather than unformatted paragraphs.<br><br>
+    <em>Tip: Switch to the relevant subject card to view all authentic past year questions on this topic with direct Google Drive PDF links.</em>`;
   }
+
 
   // -------------------------------------------------------------
   // Event Listeners Setup
@@ -768,8 +1111,8 @@ import { Analytics } from "@vercel/analytics/next";
       });
     }
 
-    // Contribute Buttons (in both Notes and PYQ divisions)
-    document.querySelectorAll('.btn-contribute').forEach(btn => {
+    // Contribute Buttons (in both Notes and subtle PYQ divisions)
+    document.querySelectorAll('.btn-contribute, .btn-contribute-subtle').forEach(btn => {
       btn.addEventListener('click', () => {
         const type = btn.getAttribute('data-contrib-type') || 'Notes';
         promptContribute(type);
@@ -850,6 +1193,17 @@ import { Analytics } from "@vercel/analytics/next";
         e.preventDefault();
         handleGeminiQuery(el.geminiQueryInput.value);
       });
+    }
+
+    // Gemini API Key Drawer & Actions
+    if (el.toggleApiKeyBtn) {
+      el.toggleApiKeyBtn.addEventListener('click', toggleApiKeyDrawer);
+    }
+    if (el.saveGeminiKeyBtn) {
+      el.saveGeminiKeyBtn.addEventListener('click', saveUserGeminiKey);
+    }
+    if (el.clearGeminiKeyBtn) {
+      el.clearGeminiKeyBtn.addEventListener('click', clearUserGeminiKey);
     }
 
     // Gemini Prompt Chips
