@@ -8,7 +8,7 @@
   <meta name="keywords" content="MGIT, PYQ Hub, CSE Semester 3, Previous Year Questions, DM, COA, OOPJ, DBMS, SE, ES, IE">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
   
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -213,60 +213,67 @@
         </div>
       </div>
 
-      <!-- Division Box 2: PYQs -->
+      <!-- Division Box 2: PYQs (5 Chapter Accordions) -->
       <div class="division-box pyqs-division" id="pyqsDivisionBox" style="display: none;">
         <div class="division-box-header">
           <div class="division-header-title">
             <i class="fa-solid fa-book-bookmark"></i>
-            <h4>Previous Year Questions</h4>
+            <h4>Previous Year Questions (PYQs)</h4>
+          </div>
+          <div class="division-header-actions">
+            <button type="button" class="btn-toggle-all-accordions" id="toggleAllChaptersBtn" title="Expand or Collapse All Chapters">
+              <i class="fa-solid fa-up-down-left-right"></i>
+              <span id="toggleAllChaptersText">Expand All</span>
+            </button>
+            <a id="viewSubjectDrivePapersBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-subject-drive-papers" title="View all raw question paper PDFs in Google Drive">
+              <i class="fa-brands fa-google-drive"></i>
+              <span>View Papers in Drive</span>
+            </a>
           </div>
         </div>
 
-        <!-- PYQ Filter Controls: Year Checkboxes -->
+        <!-- PYQ Search & Filter Controls -->
         <div class="pyq-filters-container">
-          <div class="filter-group-header">
-            <span class="filter-heading">Filter by Academic Year:</span>
-          </div>
-          <div class="year-checkboxes-row" id="yearCheckboxesRow">
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2024" checked> 2024
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2023" checked> 2023
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2022" checked> 2022
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2021" checked> 2021
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2020" checked> 2020
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" class="year-filter-cb" value="2019"> 2019
-            </label>
+          <!-- Instant Search Box -->
+          <div class="pyq-search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="pyqSearchInput" class="pyq-search-input" placeholder="Search questions across all chapters (e.g. Normalization, Booth, Tautology, AVL)..." autocomplete="off">
+            <button type="button" id="clearPyqSearchBtn" class="pyq-search-clear" style="display: none;" title="Clear search">&times;</button>
           </div>
 
-          <!-- Dynamic Question Count Summary -->
-          <div class="pyq-count-banner" id="pyqCountBanner">
-            Showing 0 authentic questions from selected years
+          <!-- Academic Year Filter Pills -->
+          <div class="filter-row">
+            <span class="filter-heading"><i class="fa-regular fa-calendar-days"></i> Academic Year:</span>
+            <div class="year-pills-row" id="yearPillsRow">
+              <button type="button" class="year-pill-btn active" data-year="all">All Years</button>
+              <button type="button" class="year-pill-btn" data-year="2025">2025</button>
+              <button type="button" class="year-pill-btn" data-year="2024">2024</button>
+              <button type="button" class="year-pill-btn" data-year="2023">2023</button>
+              <button type="button" class="year-pill-btn" data-year="2022">2022</button>
+              <button type="button" class="year-pill-btn" data-year="2021">2021</button>
+            </div>
           </div>
 
-          <!-- Part A vs Part B Toggle -->
-          <div class="part-toggle-wrapper">
-            <span class="filter-heading">Exam Part:</span>
+          <!-- Part & Repetition Filter Pills -->
+          <div class="filter-row">
+            <span class="filter-heading"><i class="fa-solid fa-filter"></i> Exam Part / Marks:</span>
             <div class="part-buttons" id="partToggleButtons">
               <button type="button" class="part-btn active" data-part="all">All Questions</button>
               <button type="button" class="part-btn" data-part="A">Part A (2 Marks)</button>
               <button type="button" class="part-btn" data-part="B">Part B (5/10 Marks)</button>
+              <button type="button" class="part-btn repeated-filter-btn" data-part="repeated"><i class="fa-solid fa-fire"></i> Repeated (2+ Times)</button>
             </div>
+          </div>
+
+          <!-- Dynamic Question Count Summary -->
+          <div class="pyq-count-banner" id="pyqCountBanner">
+            Showing authentic questions across all 5 chapters
           </div>
         </div>
 
-        <!-- Questions List -->
-        <div class="pyq-questions-list" id="questionsListContainer">
-          <!-- Questions rendered dynamically -->
+        <!-- 5 Chapter Accordions Container (CH 1 to CH 5) -->
+        <div class="chapter-accordions-container" id="chapterAccordionsContainer">
+          <!-- Dynamically populated 5 Chapter Accordion Rows: CH 1 to CH 5 -->
         </div>
 
         <!-- Subtle bottom contribute button below all questions -->
@@ -276,6 +283,7 @@
             <span>Contribute Question Paper</span>
           </button>
         </div>
+      </div>
       </div>
 
     </section>
@@ -604,7 +612,7 @@
               </svg>
               <span id="geminiCurrentChatTitle">Gemini Study Assistant</span>
             </h4>
-            <span class="gemini-live-pill"><i class="fa-solid fa-circle"></i> Live 3.5</span>
+            <span class="gemini-live-pill"><i class="fa-solid fa-circle"></i> Gemini 2.5 Flash</span>
           </div>
           <div class="modal-header-actions">
             <!-- Dedicated Clean Prominent Close Button -->

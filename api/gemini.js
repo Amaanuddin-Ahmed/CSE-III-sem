@@ -83,7 +83,7 @@ Guidelines for Answers:
       ];
     }
 
-    const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
+    const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
     let lastError = null;
 
     for (const model of models) {

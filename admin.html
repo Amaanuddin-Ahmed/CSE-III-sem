@@ -272,7 +272,16 @@
     (function () {
       'use strict';
 
-      const ADMIN_PASS = 'Amaan90*';
+      const ADMIN_HASHES = [
+        '0c8eb177af8b76c29b3d34cabad3c33c9554435944b53d57501bdf4b5c7390bc',
+        '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'
+      ];
+
+      async function sha256Hex(str) {
+        if (!crypto || !crypto.subtle) return null;
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+      }
 
       const el = {
         authGateContainer: document.getElementById('authGateContainer'),
@@ -303,10 +312,11 @@
         }
       }
 
-      function handleAuthSubmit(e) {
+      async function handleAuthSubmit(e) {
         e.preventDefault();
         const entered = el.gatePassword.value.trim();
-        if (entered === ADMIN_PASS || entered === 'admin') {
+        const enteredHash = await sha256Hex(entered);
+        if (enteredHash && ADMIN_HASHES.includes(enteredHash)) {
           sessionStorage.setItem('mgit_admin_auth', 'authenticated');
           showToast('Portal unlocked successfully.');
           checkAuth();

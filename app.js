@@ -22,7 +22,10 @@
     currentMode: null, // 'notes' or 'pyqs'
     notesChapterFilter: 'all',
     selectedYears: [2024, 2023, 2022, 2021, 2020],
-    selectedPart: 'all', // 'all', 'A', 'B'
+    selectedYear: 'all',
+    selectedPart: 'all', // 'all', 'A', 'B', 'repeated'
+    pyqSearchQuery: '',
+    expandedChapters: { 1: true, 2: false, 3: false, 4: false, 5: false },
     isAdminLoggedIn: false,
     selectedFiles: [],
     pendingContributions: JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]'),
@@ -80,10 +83,15 @@
     notesChapterSelect: document.getElementById('notesChapterSelect'),
     notesListContainer: document.getElementById('notesListContainer'),
 
-    yearCheckboxesRow: document.getElementById('yearCheckboxesRow'),
+    toggleAllChaptersBtn: document.getElementById('toggleAllChaptersBtn'),
+    toggleAllChaptersText: document.getElementById('toggleAllChaptersText'),
+    viewSubjectDrivePapersBtn: document.getElementById('viewSubjectDrivePapersBtn'),
+    pyqSearchInput: document.getElementById('pyqSearchInput'),
+    clearPyqSearchBtn: document.getElementById('clearPyqSearchBtn'),
+    yearPillsRow: document.getElementById('yearPillsRow'),
     pyqCountBanner: document.getElementById('pyqCountBanner'),
     partToggleButtons: document.getElementById('partToggleButtons'),
-    questionsListContainer: document.getElementById('questionsListContainer'),
+    chapterAccordionsContainer: document.getElementById('chapterAccordionsContainer'),
 
     // Question Modal
     questionModal: document.getElementById('questionModal'),
@@ -452,96 +460,310 @@
   }
 
   // -------------------------------------------------------------
-  // Division 2: PYQs Rendering & Checkbox Filtering
+  // Division 2: PYQs 5 Chapter Accordions Rendering & Filtering (CH 1 to CH 5)
   // -------------------------------------------------------------
   function renderPyqsDivision() {
-    if (!el.questionsListContainer || !state.currentSubject) return;
-    el.questionsListContainer.innerHTML = '';
+    if (!el.chapterAccordionsContainer || !state.currentSubject) return;
+    el.chapterAccordionsContainer.innerHTML = '';
 
-    const subId = state.currentSubject.id;
+    const sub = state.currentSubject;
+    const subId = sub.id;
 
-    // Filter by Subject
-    let questions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId);
+    // Update Drive link button
+    if (el.viewSubjectDrivePapersBtn) {
+      el.viewSubjectDrivePapersBtn.href = sub.pyqsUrl || sub.driveUrl || DRIVE_ROOT_URL;
+      el.viewSubjectDrivePapersBtn.title = 'Open all raw ' + sub.shortName + ' question paper PDFs in Google Drive';
+    }
 
-    // Filter by Selected Years (checkboxes)
-    if (state.selectedYears.length > 0) {
-      questions = questions.filter(q => {
-        return q.years && q.years.some(yr => state.selectedYears.includes(yr));
+    // Filter questions for current subject
+    let allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId);
+
+    // Apply Year filter
+    let filteredQuestions = allSubQuestions;
+    if (state.selectedYear && state.selectedYear !== 'all') {
+      const targetYr = parseInt(state.selectedYear, 10);
+      filteredQuestions = filteredQuestions.filter(q => q.years && q.years.includes(targetYr));
+    }
+
+    // Apply Part filter
+    if (state.selectedPart === 'A') {
+      filteredQuestions = filteredQuestions.filter(q => q.part === 'A');
+    } else if (state.selectedPart === 'B') {
+      filteredQuestions = filteredQuestions.filter(q => q.part === 'B');
+    } else if (state.selectedPart === 'repeated') {
+      filteredQuestions = filteredQuestions.filter(q => q.frequency > 1);
+    }
+
+    // Apply Search keyword filter
+    const query = (state.pyqSearchQuery || '').trim().toLowerCase();
+    if (query) {
+      filteredQuestions = filteredQuestions.filter(q => {
+        const textMatch = (q.question || '').toLowerCase().includes(query);
+        const topicMatch = (q.topicTag || '').toLowerCase().includes(query);
+        const numMatch = (q.questionNumber || '').toLowerCase().includes(query);
+        const paperMatch = (q.paperName || '').toLowerCase().includes(query);
+        return textMatch || topicMatch || numMatch || paperMatch;
       });
-    } else {
-      questions = []; // No years selected
     }
 
-    // Filter by Part (All, Part A, Part B)
-    if (state.selectedPart !== 'all') {
-      questions = questions.filter(q => q.part === state.selectedPart);
+    // Update Banner
+    if (el.pyqCountBanner) {
+      const yearLabel = (state.selectedYear === 'all') ? 'All Years' : state.selectedYear;
+      const partLabel = (state.selectedPart === 'all') ? 'All Parts' : (state.selectedPart === 'repeated' ? 'Repeated (2+ Times)' : 'Part ' + state.selectedPart);
+      el.pyqCountBanner.textContent = 'Showing ' + filteredQuestions.length + ' authentic question' + (filteredQuestions.length === 1 ? '' : 's') + ' across 5 chapters (' + yearLabel + ', ' + partLabel + (query ? ', search: "' + query + '"' : '') + ')';
     }
 
-    // Update Dynamic Count Banner
-    el.pyqCountBanner.textContent = `Showing ${questions.length} authentic question${questions.length === 1 ? '' : 's'} from selected years (${state.selectedYears.join(', ') || 'None'})`;
+    // Check if all chapters are expanded
+    updateToggleAllButtonState();
 
-    if (questions.length === 0) {
-      el.questionsListContainer.innerHTML = `
-        <div class="empty-state-box">
-          <div class="empty-state-icon"><i class="fa-solid fa-list-check"></i></div>
-          <div class="empty-state-title">No questions found matching criteria</div>
-          <div class="empty-state-sub">Select one or more academic years or change the exam part filter above.</div>
-        </div>
-      `;
-      return;
-    }
+    // Render 5 Chapter Accordions (CH 1 to CH 5)
+    for (let ch = 1; ch <= 5; ch++) {
+      const chQuestions = filteredQuestions.filter(q => q.chapter === ch);
+      const chTotalAll = allSubQuestions.filter(q => q.chapter === ch).length;
+      const chShortCount = chQuestions.filter(q => q.part === 'A').length;
+      const chLongCount = chQuestions.filter(q => q.part === 'B').length;
+      const chRepCount = chQuestions.filter(q => q.frequency > 1).length;
 
-    // Sort by recurrence frequency descending
-    questions.sort((a, b) => b.frequency - a.frequency);
+      // Auto-expand if active search matches questions in this chapter
+      let isExpanded = Boolean(state.expandedChapters[ch]);
+      if (query && chQuestions.length > 0) {
+        isExpanded = true;
+      }
 
-    questions.forEach(q => {
-      const isPartA = q.part === 'A';
-      const partBadgeClass = isPartA ? 'part-a' : 'part-b';
-      const partLabel = isPartA ? 'Part A &bull; 2 Marks' : `Part B &bull; ${q.marks} Marks`;
-      const recurrenceBadge = q.frequency > 1
-        ? `<span class="q-badge recurrence"><i class="fa-solid fa-repeat"></i> Repeated ${q.frequency}x</span>`
-        : '';
+      const chapterTitle = (sub.chapters && sub.chapters[ch]) ? sub.chapters[ch] : 'Unit ' + ch + ' Syllabus Content';
 
       const card = document.createElement('div');
-      card.className = `question-item-card ${isPartA ? 'part-a-card' : 'part-b-card'} ${q.frequency > 1 ? 'repeated-card' : ''}`;
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-
-      const subForCard = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
-      const directPdfUrl = q.driveFileId
-        ? `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`
-        : (subForCard && subForCard.driveUrl ? subForCard.driveUrl : DRIVE_ROOT_URL);
+      card.className = 'chapter-accordion-card' + (isExpanded ? ' open' : '');
+      card.id = 'chapterAccordion-' + ch;
 
       card.innerHTML = `
-        <div class="question-card-top">
-          <div class="question-badges">
-            <span class="q-badge unit">Unit ${q.chapter}</span>
-            <span class="q-badge ${partBadgeClass}">${partLabel}</span>
-            ${recurrenceBadge}
+        <div class="chapter-accordion-header" role="button" tabindex="0" data-chapter="${ch}" aria-expanded="${isExpanded}">
+          <div class="ch-header-left">
+            <span class="ch-badge">CH ${ch}</span>
+            <div class="ch-titles">
+              <h5 class="ch-unit-title">Unit ${ch}: ${escapeHtml(chapterTitle)}</h5>
+            </div>
           </div>
-          <div class="question-years-tag">
-            Asked in: <strong>${q.years.join(', ')}</strong>
+          <div class="ch-header-right">
+            <span class="ch-count-badge">${chQuestions.length} Question${chQuestions.length === 1 ? '' : 's'}</span>
+            <div class="ch-breakdown-tags">
+              <span class="ch-sub-tag short">${chShortCount} Short (2M)</span>
+              <span class="ch-sub-tag long">${chLongCount} Long (5/10M)</span>
+              ${chRepCount > 0 ? `<span class="ch-sub-tag rep"><i class="fa-solid fa-fire"></i> ${chRepCount} Repeated</span>` : ''}
+            </div>
+            <i class="fa-solid fa-chevron-down ch-chevron"></i>
           </div>
         </div>
-        <div class="question-text-preview">${escapeHtml(q.question)}</div>
-        <div class="question-card-footer">
-          <span class="click-cue"><i class="fa-solid fa-circle-info"></i> View Analysis &amp; Tips</span>
-          <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="direct-pdf-badge" onclick="event.stopPropagation();" title="Directly open original ${escapeHtml(q.paperName)} PDF in Google Drive">
-            <i class="fa-regular fa-file-pdf"></i> <span>${escapeHtml(q.paperName)}</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px; margin-left:3px;"></i>
-          </a>
+        <div class="chapter-accordion-body" style="display: ${isExpanded ? 'block' : 'none'};">
+          <div class="chapter-questions-container" id="chapterQuestionsList-${ch}"></div>
         </div>
       `;
 
-      card.addEventListener('click', () => openQuestionModal(q));
-      card.addEventListener('keydown', (e) => {
+      // Accordion click toggle
+      const headerEl = card.querySelector('.chapter-accordion-header');
+      headerEl.addEventListener('click', () => toggleChapterAccordion(ch));
+      headerEl.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          openQuestionModal(q);
+          toggleChapterAccordion(ch);
         }
       });
 
-      el.questionsListContainer.appendChild(card);
+      // Populate questions inside this chapter body
+      const listEl = card.querySelector('#chapterQuestionsList-' + ch);
+      if (chQuestions.length === 0) {
+        listEl.innerHTML = `
+          <div class="empty-state-box" style="padding: 18px; margin: 6px 0;">
+            <div class="empty-state-title" style="font-size: 13.5px;">No questions matching current filters in Unit ${ch}</div>
+            <div class="empty-state-sub" style="font-size: 12px;">Total ${chTotalAll} authentic questions available in this chapter. Try selecting "All Years" or "All Questions".</div>
+          </div>
+        `;
+      } else {
+        // Sort by frequency descending, then by year
+        chQuestions.sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
+
+        const partAQuestions = chQuestions.filter(q => q.part === 'A');
+        const partBQuestions = chQuestions.filter(q => q.part === 'B');
+
+        if (partAQuestions.length > 0) {
+          const secTitleA = document.createElement('div');
+          secTitleA.className = 'chapter-part-section-title';
+          secTitleA.innerHTML = '<i class="fa-solid fa-pen-fancy"></i> Part A — Short Answer Questions (2 Marks Compulsory)';
+          listEl.appendChild(secTitleA);
+
+          partAQuestions.forEach(q => {
+            listEl.appendChild(createQuestionCardElement(q));
+          });
+        }
+
+        if (partBQuestions.length > 0) {
+          const secTitleB = document.createElement('div');
+          secTitleB.className = 'chapter-part-section-title';
+          secTitleB.innerHTML = '<i class="fa-solid fa-book-open"></i> Part B — Long Answer / Essay Questions (5 / 10 Marks)';
+          listEl.appendChild(secTitleB);
+
+          partBQuestions.forEach(q => {
+            listEl.appendChild(createQuestionCardElement(q));
+          });
+        }
+      }
+
+      el.chapterAccordionsContainer.appendChild(card);
+    }
+  }
+
+  function toggleChapterAccordion(ch) {
+    state.expandedChapters[ch] = !state.expandedChapters[ch];
+    const card = document.getElementById('chapterAccordion-' + ch);
+    if (!card) return;
+    const body = card.querySelector('.chapter-accordion-body');
+    const header = card.querySelector('.chapter-accordion-header');
+    const isNowOpen = state.expandedChapters[ch];
+
+    if (isNowOpen) {
+      card.classList.add('open');
+      if (body) body.style.display = 'block';
+      if (header) header.setAttribute('aria-expanded', 'true');
+    } else {
+      card.classList.remove('open');
+      if (body) body.style.display = 'none';
+      if (header) header.setAttribute('aria-expanded', 'false');
+    }
+
+    updateToggleAllButtonState();
+  }
+
+  function toggleAllChapters() {
+    const allOpen = [1, 2, 3, 4, 5].every(ch => state.expandedChapters[ch]);
+    const newState = !allOpen;
+    for (let ch = 1; ch <= 5; ch++) {
+      state.expandedChapters[ch] = newState;
+      const card = document.getElementById('chapterAccordion-' + ch);
+      if (card) {
+        const body = card.querySelector('.chapter-accordion-body');
+        const header = card.querySelector('.chapter-accordion-header');
+        if (newState) {
+          card.classList.add('open');
+          if (body) body.style.display = 'block';
+          if (header) header.setAttribute('aria-expanded', 'true');
+        } else {
+          card.classList.remove('open');
+          if (body) body.style.display = 'none';
+          if (header) header.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+    updateToggleAllButtonState();
+  }
+
+  function updateToggleAllButtonState() {
+    if (!el.toggleAllChaptersText) return;
+    const allOpen = [1, 2, 3, 4, 5].every(ch => state.expandedChapters[ch]);
+    el.toggleAllChaptersText.textContent = allOpen ? 'Collapse All' : 'Expand All';
+  }
+
+  function createQuestionCardElement(q) {
+    const isPartA = q.part === 'A';
+    const partBadgeClass = isPartA ? 'part-a' : 'part-b';
+    const partLabel = isPartA ? 'Part A • 2 Marks' : ('Part B • ' + q.marks + ' Marks');
+    const recurrenceBadge = q.frequency > 1
+      ? '<span class="q-badge recurrence"><i class="fa-solid fa-fire"></i> Repeated ' + q.frequency + 'x (' + (q.years ? q.years.join(', ') : '') + ')</span>'
+      : '';
+
+    const card = document.createElement('div');
+    card.className = 'question-item-card ' + (isPartA ? 'part-a-card' : 'part-b-card') + (q.frequency > 1 ? ' repeated-card' : '');
+
+    const subForCard = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+    const directPdfUrl = q.driveFileId
+      ? ('https://drive.google.com/file/d/' + q.driveFileId + '/view?usp=sharing')
+      : (subForCard && subForCard.driveUrl ? subForCard.driveUrl : DRIVE_ROOT_URL);
+
+    // Format math in question preview
+    const formattedQuestionText = formatQuestionMath(q.question);
+
+    card.innerHTML = `
+      <div class="question-card-top">
+        <div class="question-badges">
+          <span class="q-badge q-num">${escapeHtml(q.questionNumber || 'Q')}</span>
+          <span class="q-badge ${partBadgeClass}">${partLabel}</span>
+          <span class="q-badge topic">${escapeHtml(q.topicTag || 'Core Syllabus')}</span>
+          ${recurrenceBadge}
+        </div>
+        <div class="question-years-tag">
+          Asked in: <strong>${q.years ? q.years.join(', ') : ''}</strong>
+        </div>
+      </div>
+      <div class="question-text-preview">${formattedQuestionText}</div>
+      <div class="question-card-footer">
+        <div class="footer-left-proof">
+          <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="direct-pdf-badge" onclick="event.stopPropagation();" title="Directly open original ${escapeHtml(q.paperName)} PDF in Google Drive">
+            <i class="fa-regular fa-file-pdf"></i>
+            <span>${escapeHtml(q.paperName)}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px; margin-left:3px;"></i>
+          </a>
+        </div>
+        <div class="footer-right-actions">
+          <button type="button" class="btn-card-action btn-card-tips" title="View model exam tips and detailed analysis">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Exam Tips</span>
+          </button>
+          <button type="button" class="btn-card-action btn-card-ai" title="Generate instant MGIT model answer with Gemini AI">
+            <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+            </svg>
+            <span>Solve with AI</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+    // Event listeners
+    const tipsBtn = card.querySelector('.btn-card-tips');
+    if (tipsBtn) {
+      tipsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openQuestionModal(q);
+      });
+    }
+
+    const aiBtn = card.querySelector('.btn-card-ai');
+    if (aiBtn) {
+      aiBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        solveQuestionWithGemini(q);
+      });
+    }
+
+    // Clicking anywhere on card also opens details
+    card.addEventListener('click', () => openQuestionModal(q));
+
+    return card;
+  }
+
+  function formatQuestionMath(text) {
+    if (!text) return '';
+    // Replace $...$ math with rendered KaTeX or clean symbols
+    let formatted = escapeHtml(text);
+    formatted = formatted.replace(/\$([^\$\n]+?)\$/g, (match, expr) => {
+      return renderMathExpr(expr, false);
     });
+    return formatted;
+  }
+
+  function solveQuestionWithGemini(q) {
+    const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+    const subName = sub ? (sub.shortName + ' — ' + sub.title) : q.subjectId;
+    const partDesc = q.part === 'A' ? 'Part A (2 Marks - Short Answer)' : ('Part B (' + q.marks + ' Marks - Long Answer/Essay)');
+
+    const promptText = 'Explain and solve this authentic MGIT examination question from ' + subName + ':\n\n' +
+      'Unit: Unit ' + q.chapter + '\n' +
+      'Exam Part: ' + partDesc + '\n' +
+      'Paper: ' + q.paperName + ' (' + (q.years ? q.years.join(', ') : '') + ')\n\n' +
+      'Question: ' + q.question + '\n\n' +
+      'Please structure the answer according to the official MGIT marking scheme with clear definitions, formulas/circuit diagrams/flowcharts, and key points required for full marks.';
+
+    openGeminiModal();
+    handleGeminiQuery(promptText);
   }
 
   // -------------------------------------------------------------
@@ -701,7 +923,18 @@
     el.adminModal.style.display = 'flex';
   }
 
-  function handleAdminLogin(e) {
+  const ADMIN_HASHES = [
+    '0c8eb177af8b76c29b3d34cabad3c33c9554435944b53d57501bdf4b5c7390bc',
+    '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'
+  ];
+
+  async function sha256Hex(str) {
+    if (!crypto || !crypto.subtle) return null;
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  async function handleAdminLogin(e) {
     e.preventDefault();
     const pass = el.adminPassword.value.trim();
 
@@ -710,7 +943,8 @@
       return;
     }
 
-    if (pass === 'Amaan90*' || pass === 'admin') {
+    const enteredHash = await sha256Hex(pass);
+    if (enteredHash && ADMIN_HASHES.includes(enteredHash)) {
       sessionStorage.setItem('mgit_admin_auth', 'authenticated');
       showToast('Password verified! Redirecting to Admin Portal...');
       el.adminLoginForm.reset();
@@ -1519,7 +1753,7 @@
           </svg>
           <span class="ai-sender-name">Gemini Study Assistant</span>
         </div>
-        <span class="ai-model-tag">Gemini 3.5</span>
+        <span class="ai-model-tag">Gemini 2.5 Flash</span>
       </div>
       <div class="ai-msg-body">
         ${formattedHtml}
@@ -1593,7 +1827,7 @@ Guidelines for Answers:
       contents = [{ role: 'user', parts: parts }];
     }
 
-    const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
+    const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
     for (const model of models) {
       try {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
@@ -2202,6 +2436,79 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
+    // 5 Chapter Accordions Controls & Filters
+    if (el.toggleAllChaptersBtn) {
+      el.toggleAllChaptersBtn.addEventListener('click', toggleAllChapters);
+    }
+
+    // Search input with debounce
+    if (el.pyqSearchInput) {
+      let searchTimeout = null;
+      el.pyqSearchInput.addEventListener('input', () => {
+        const val = el.pyqSearchInput.value.trim();
+        state.pyqSearchQuery = val;
+        if (el.clearPyqSearchBtn) {
+          el.clearPyqSearchBtn.style.display = val ? 'block' : 'none';
+        }
+        if (searchTimeout) clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          renderPyqsDivision();
+        }, 180);
+      });
+    }
+
+    if (el.clearPyqSearchBtn) {
+      el.clearPyqSearchBtn.addEventListener('click', () => {
+        if (el.pyqSearchInput) {
+          el.pyqSearchInput.value = '';
+          state.pyqSearchQuery = '';
+          el.clearPyqSearchBtn.style.display = 'none';
+          renderPyqsDivision();
+        }
+      });
+    }
+
+    // Year Pills
+    if (el.yearPillsRow) {
+      el.yearPillsRow.querySelectorAll('.year-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          el.yearPillsRow.querySelectorAll('.year-pill-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          state.selectedYear = btn.getAttribute('data-year');
+          renderPyqsDivision();
+        });
+      });
+    }
+
+    // Part Pills
+    if (el.partToggleButtons) {
+      el.partToggleButtons.querySelectorAll('.part-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          el.partToggleButtons.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          state.selectedPart = btn.getAttribute('data-part');
+          renderPyqsDivision();
+        });
+      });
+    }
+
+    // URL State Popstate listener for Browser Back button
+    window.addEventListener('popstate', (e) => {
+      if (e.state && e.state.subjectId) {
+        const targetSub = SUBJECTS_DATA[e.state.subjectId];
+        if (targetSub) {
+          selectSubject(targetSub, false);
+          if (e.state.mode === 'pyqs') {
+            showPyqsView(false);
+          } else if (e.state.mode === 'notes') {
+            showNotesView(false);
+          }
+        }
+      } else {
+        returnToSubjectsList(false);
+      }
+    });
+
     if (el.choosePyqsCard) {
       el.choosePyqsCard.addEventListener('click', showPyqsView);
       el.choosePyqsCard.addEventListener('keydown', (e) => {
@@ -2231,27 +2538,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
-    // Year Filter Checkboxes
-    if (el.yearCheckboxesRow) {
-      el.yearCheckboxesRow.addEventListener('change', () => {
-        const checked = Array.from(el.yearCheckboxesRow.querySelectorAll('.year-filter-cb:checked'))
-          .map(cb => parseInt(cb.value, 10));
-        state.selectedYears = checked;
-        renderPyqsDivision();
-      });
-    }
 
-    // Part A / Part B Toggle Buttons
-    if (el.partToggleButtons) {
-      el.partToggleButtons.querySelectorAll('.part-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          el.partToggleButtons.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          state.selectedPart = btn.getAttribute('data-part');
-          renderPyqsDivision();
-        });
-      });
-    }
 
     // Question Modal Close
     if (el.closeQuestionModalBtn) {
