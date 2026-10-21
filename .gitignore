@@ -71,3 +71,8 @@ logs/
 .vercel
 
 .vercel
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
