@@ -26,7 +26,7 @@
     selectedPart: 'all', // 'all', 'A', 'B'
     repeatedOnly: false,
     pyqSearchQuery: '',
-    expandedChapters: { 1: true, 2: false, 3: false, 4: false, 5: false },
+    expandedChapters: { 1: false, 2: false, 3: false, 4: false, 5: false },
     isAdminLoggedIn: sessionStorage.getItem('mgit_admin_auth') === 'authenticated',
     selectedFiles: [],
 
@@ -212,6 +212,7 @@
     setupSpeechRecognition();
     initAnimatedPlaceholder();
     initOnboardingTourCheck();
+    initRatingPopup();
   }
 
   // -------------------------------------------------------------
@@ -277,6 +278,7 @@
     state.selectedPart = 'all';
     state.repeatedOnly = false;
     state.pyqSearchQuery = '';
+    state.expandedChapters = { 1: false, 2: false, 3: false, 4: false, 5: false };
     state._yearOptionsSignature = null;
     state._semesterOptionsSignature = null;
     if (el.pyqSearchInput) el.pyqSearchInput.value = '';
@@ -377,6 +379,7 @@
 
   function showPyqsView() {
     state.currentMode = 'pyqs';
+    state.expandedChapters = { 1: false, 2: false, 3: false, 4: false, 5: false };
     if (el.modeSelectorWrapper) el.modeSelectorWrapper.style.display = 'none';
     if (el.modeSwitcherBar) el.modeSwitcherBar.style.display = 'flex';
     if (el.tabSwitchToNotes) el.tabSwitchToNotes.classList.remove('active');
@@ -397,6 +400,7 @@
   function returnToSubjectsList() {
     state.currentSubject = null;
     state.currentMode = null;
+    state.expandedChapters = { 1: false, 2: false, 3: false, 4: false, 5: false };
 
     // Reset Top Drive Button to Entire Folder
     el.topDriveBtn.href = DRIVE_ROOT_URL;
@@ -1965,15 +1969,40 @@
       const reason = data.message || (serverRes.status === 429
         ? 'The AI assistant has reached its request limit for now. Please try again later.'
         : 'The AI assistant could not answer right now. Please try again.');
-      updateAiMessageContent(thinkingMsg, `**Unable to generate an answer**\n\n${reason}\n\nYou can still use the original paper link on the question card, or ask again in a moment.`, true);
+      updateAiMessageContent(thinkingMsg, `**Unable to generate an answer**\n\n${reason}\n\nYou can still use the original paper link on the question card, or ask again in a moment.`, true, q);
     } catch (e) {
       console.warn('AI request failed:', e);
-      updateAiMessageContent(thinkingMsg, '**Unable to reach the AI assistant**\n\nPlease check your connection and try again. The question bank and Drive links still work normally.', true);
+      updateAiMessageContent(thinkingMsg, '**Unable to reach the AI assistant**\n\nPlease check your connection and try again. The question bank and Drive links still work normally.', true, q);
     }
   }
 
-  function updateAiMessageContent(element, rawMarkdown, isError) {
+  function updateAiMessageContent(element, rawMarkdown, isError, userQuery) {
     const formattedHtml = formatGeminiResponse(rawMarkdown);
+    let fallbackHtml = '';
+    if (isError) {
+      const escapedQuestionAttr = userQuery ? escapeHtml(userQuery).replace(/"/g, '&quot;') : '';
+      fallbackHtml = `
+        <div class="ai-error-fallback">
+          <p class="ai-fallback-msg">We couldn't generate a response this time. How would you like to continue?</p>
+          ${userQuery ? `<button type="button" class="ai-fallback-copy-btn" data-query="${escapedQuestionAttr}" onclick="copyOriginalUserQuestion(this)" title="Copy your question to clipboard">
+            <i class="fa-regular fa-copy"></i> Copy my question
+          </button>` : ''}
+          <div class="ai-fallback-btns">
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ai-fallback-btn chatgpt-btn">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>Continue with ChatGPT</span>
+            </a>
+            <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="ai-fallback-btn gemini-btn">
+              <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+              </svg>
+              <span>Continue with Gemini</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
     element.innerHTML = `
       <div class="ai-msg-header">
         <div class="ai-avatar-badge">
@@ -1986,6 +2015,7 @@
       </div>
       <div class="ai-msg-body">
         ${formattedHtml}
+        ${fallbackHtml}
       </div>
       <div class="ai-msg-footer">
         <button type="button" class="btn-copy-response" onclick="copyGeminiAiAnswer(this)">
@@ -2225,6 +2255,18 @@
       setTimeout(() => { btn.innerHTML = orig; }, 2000);
     }).catch(() => {
       showToast('Code copied to clipboard');
+    });
+  };
+
+  window.copyOriginalUserQuestion = function(btn) {
+    const query = btn.getAttribute('data-query');
+    if (!query) return;
+    navigator.clipboard.writeText(query).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Question copied!';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }).catch(() => {
+      showToast('Question copied to clipboard');
     });
   };
 
@@ -2892,6 +2934,120 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+
+  // -------------------------------------------------------------
+  // Website Rating Popup (45 Seconds of Active Activity)
+  // -------------------------------------------------------------
+  function initRatingPopup() {
+    const RATING_THRESHOLD_MS = 45000;
+    const DISMISS_KEY = 'mgit_rating_dismissed';
+
+    if (sessionStorage.getItem(DISMISS_KEY)) return;
+
+    let activeTimeMs = 0;
+    let lastActiveTime = null;
+    let timerInterval = null;
+    let hasStarted = false;
+    let isShowing = false;
+
+    function dismissPopup() {
+      sessionStorage.setItem(DISMISS_KEY, 'true');
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      const popup = document.getElementById('ratingPopup');
+      if (popup) {
+        popup.style.opacity = '0';
+        popup.style.transform = 'translateY(12px) scale(0.95)';
+        setTimeout(() => popup.remove(), 350);
+      }
+    }
+
+    function showPopup() {
+      if (isShowing || sessionStorage.getItem(DISMISS_KEY)) return;
+      isShowing = true;
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+
+      if (document.getElementById('ratingPopup')) return;
+
+      const popup = document.createElement('div');
+      popup.id = 'ratingPopup';
+      popup.setAttribute('role', 'dialog');
+      popup.setAttribute('aria-label', "Let's make it better together");
+      popup.innerHTML = `
+        <div class="rating-popup-card">
+          <div class="rating-popup-icon"><i class="fa-regular fa-star"></i></div>
+          <p class="rating-popup-msg">Let's make it better together</p>
+          <div class="rating-popup-actions">
+            <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="rating-btn-primary" id="rateNowBtn">Rate now</a>
+            <button type="button" class="rating-btn-secondary" id="rateLaterBtn">Later</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(popup);
+
+      requestAnimationFrame(() => {
+        popup.style.opacity = '1';
+        popup.style.transform = 'translateY(0) scale(1)';
+      });
+
+      const rateNowBtn = popup.querySelector('#rateNowBtn');
+      const rateLaterBtn = popup.querySelector('#rateLaterBtn');
+
+      if (rateNowBtn) {
+        rateNowBtn.addEventListener('click', () => {
+          dismissPopup();
+        });
+      }
+
+      if (rateLaterBtn) {
+        rateLaterBtn.addEventListener('click', () => {
+          dismissPopup();
+        });
+      }
+    }
+
+    function updateActiveTime() {
+      if (document.hidden || !lastActiveTime) return;
+      const now = Date.now();
+      const delta = now - lastActiveTime;
+      lastActiveTime = now;
+      if (delta > 0 && delta <= 2000) {
+        activeTimeMs += delta;
+      }
+      if (activeTimeMs >= RATING_THRESHOLD_MS) {
+        showPopup();
+      }
+    }
+
+    function startTimer() {
+      if (hasStarted || sessionStorage.getItem(DISMISS_KEY)) return;
+      hasStarted = true;
+      lastActiveTime = Date.now();
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          lastActiveTime = null;
+        } else {
+          lastActiveTime = Date.now();
+        }
+      });
+
+      timerInterval = setInterval(updateActiveTime, 1000);
+    }
+
+    // Start on first user interaction
+    const interactionEvents = ['click', 'scroll', 'keydown', 'touchstart'];
+    const handleFirstInteraction = () => {
+      startTimer();
+      interactionEvents.forEach(evt => window.removeEventListener(evt, handleFirstInteraction));
+    };
+    interactionEvents.forEach(evt => window.addEventListener(evt, handleFirstInteraction, { passive: true, once: true }));
   }
 
   // Run on DOM ready
