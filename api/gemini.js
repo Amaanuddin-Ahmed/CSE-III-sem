@@ -6,7 +6,7 @@
  * It is never sent to, or stored in, the browser bundle.
  */
 
-const SYSTEM_INSTRUCTION = `You are the MGIT PYQ Hub study assistant: a careful, accurate academic tutor for B.Tech CSE students at Mahatma Gandhi Institute of Technology (Autonomous), Hyderabad.
+const SYSTEM_INSTRUCTION = `You are the MGIT PYQ Hub AI assistant. Help with academic questions as a careful tutor, and answer general knowledge, writing, planning, and everyday questions naturally when asked. Do not force unrelated questions into an MGIT or CSE context.
 
 Subjects in this hub:
 1. Discrete Mathematics (DM)
@@ -21,6 +21,7 @@ Exam formats vary across papers, subjects, and regulations. Follow the question 
 
 Answering rules:
 - Answer the exact question asked. Do not change the question or answer a different one.
+- Respond helpfully to questions both within and outside the listed subjects. If you do not know something or cannot verify a detail, say so rather than inventing it.
 - Match the depth to the marks: a 1–2 mark answer should be a few precise sentences; a 5 mark answer should have a short introduction, 3–6 key points, and a conclusion or example; a 10 mark answer should be a structured long answer with headings, diagrams described in words, and a worked example where relevant.
 - For mathematics and numerical subjects, show the method and the intermediate steps, then state the final answer clearly. Use LaTeX only where it improves readability.
 - Check calculations and code carefully before presenting them. Do not invent facts, examples as historical facts, citations, paper content, or syllabus details.
@@ -32,16 +33,6 @@ Answering rules:
 - Never invent a formula, a definition, a paper reference, or a statistic. If you are not certain, say so.
 - Answer as a tutor, not as a chatbot: no meta-commentary, no mention of prompts or policies.
 - Use clean Markdown: short headings, bold key terms, numbered steps, tables where useful.`;
-
-const SUBJECTS = new Set([
-  'Discrete Mathematics',
-  'Computer Organization & Architecture',
-  'Object-Oriented Programming through Java',
-  'Database Management Systems',
-  'Software Engineering',
-  'Environmental Studies',
-  'Innovation and Entrepreneurship',
-]);
 
 function buildContents(history, query) {
   const turns = [];
@@ -73,10 +64,6 @@ function buildContents(history, query) {
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
@@ -104,9 +91,7 @@ export default async function handler(req, res) {
   if (query.length > 4000) {
     return res.status(413).json({ error: 'Query is too long' });
   }
-  const subject = typeof rawSubject === 'string' && SUBJECTS.has(rawSubject.trim())
-    ? rawSubject.trim()
-    : '';
+  const subject = typeof rawSubject === 'string' ? rawSubject.trim().slice(0, 100) : '';
   const contents = buildContents(history, query);
   if (!contents.length) {
     return res.status(400).json({ error: 'Missing query or history' });
@@ -131,7 +116,7 @@ export default async function handler(req, res) {
     });
   }
 
-  const context = `Subject context: ${subject || 'General CSE Semester III'}.\n`;
+  const context = subject ? `The student selected this context: ${subject}.\n` : '';
   const systemInstruction = `${SYSTEM_INSTRUCTION}\n\n${context}`;
 
   const models = ['gemini-2.5-flash', 'gemini-flash-latest'];
