@@ -175,13 +175,7 @@
     geminiImagePreviewStrip: document.getElementById('geminiImagePreviewStrip'),
     geminiPreviewImg: document.getElementById('geminiPreviewImg'),
     removeGeminiImgBtn: document.getElementById('removeGeminiImgBtn'),
-    toggleApiKeyBtn: document.getElementById('toggleApiKeyBtn'),
-    apiKeyBtnLabel: document.getElementById('apiKeyBtnLabel'),
     geminiModeIndicator: document.getElementById('geminiModeIndicator'),
-    geminiKeyDrawer: document.getElementById('geminiKeyDrawer'),
-    userGeminiKeyInput: document.getElementById('userGeminiKeyInput'),
-    saveGeminiKeyBtn: document.getElementById('saveGeminiKeyBtn'),
-    clearGeminiKeyBtn: document.getElementById('clearGeminiKeyBtn'),
 
     // Walkthrough Tour Elements
     tourOverlay: document.getElementById('tourOverlay'),
@@ -209,10 +203,10 @@
   // Initialization
   // -------------------------------------------------------------
   function init() {
+    localStorage.removeItem('mgit_user_gemini_key');
     renderSubjectsGrid();
     setupEventListeners();
     setupAdminStats();
-    initGeminiKey();
     loadGeminiChats();
     setupImageAndCameraAttachment();
     setupSpeechRecognition();
@@ -1867,7 +1861,6 @@
   // -------------------------------------------------------------
   function openGeminiModal() {
     el.geminiModal.style.display = 'flex';
-    initGeminiKey();
     if (!state.activeChatId || !state.geminiChats.find(c => c.id === state.activeChatId)) {
       loadGeminiChats();
     } else {
@@ -1876,39 +1869,6 @@
     if (el.geminiQueryInput && window.innerWidth > 768) {
       el.geminiQueryInput.focus();
     }
-  }
-
-  function initGeminiKey() {
-    if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'AI study assistant ready';
-    if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'AI settings';
-    if (el.toggleApiKeyBtn) el.toggleApiKeyBtn.style.display = 'none';
-    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
-  }
-
-  function toggleApiKeyDrawer() {
-    if (!el.geminiKeyDrawer) return;
-    const isHidden = el.geminiKeyDrawer.style.display === 'none';
-    el.geminiKeyDrawer.style.display = isHidden ? 'block' : 'none';
-  }
-
-  function saveUserGeminiKey() {
-    const key = el.userGeminiKeyInput ? el.userGeminiKeyInput.value.trim() : '';
-    if (!key) {
-      showToast('Please enter a valid Gemini API key.');
-      return;
-    }
-    localStorage.setItem('mgit_user_gemini_key', key);
-    initGeminiKey();
-    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
-    showToast('Personal Gemini API Key saved! Live AI queries enabled.');
-  }
-
-  function clearUserGeminiKey() {
-    localStorage.removeItem('mgit_user_gemini_key');
-    if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = '';
-    initGeminiKey();
-    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
-    showToast('Switched back to shared default student key.');
   }
 
   async function handleGeminiQuery(queryText) {
@@ -2034,94 +1994,6 @@
         <span class="ai-verified-tag"><i class="fa-solid fa-graduation-cap"></i> Verify against your notes</span>
       </div>
     `;
-  }
-
-  async function fetchGeminiDirect(apiKey, chatMessages, query, attachedImage) {
-    const subjectContext = state.currentSubject ? `${state.currentSubject.shortName} - ${state.currentSubject.title}` : 'MGIT CSE Semester III';
-    const systemPrompt = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) Autonomous CSE Semester III students.
-The 7 core semester subjects are:
-1. Discrete Mathematics (DM) [Logic, Sets, Relations, POSETs, Lattices, Groups, Permutations, Combinations, Recurrence Relations, Graphs, Euler/Hamiltonian]
-2. Computer Organization & Architecture (COA) [Addressing Modes, ALU, Booth's Algorithm, Microprogrammed Control, Cache Mapping, Virtual Memory, Pipelining, Hazards, DMA]
-3. Object Oriented Programming through Java (OOPJ) [Classes, OOP, Overloading vs Overriding, Interfaces, Packages, Multithreading, Exceptions, Collections, AWT/Swing]
-4. Database Management Systems (DBMS) [ER Diagrams, Relational Algebra, SQL, Normalization 1NF-BCNF, Transactions, ACID, 2PL, Indexing, B+ Trees]
-5. Software Engineering (SE) [Process Models, Waterfall, Agile Scrum, SRS, Architecture, Coupling & Cohesion, Black-box & White-box Testing, Cyclomatic Complexity]
-6. Environmental Studies (ES) [Ecosystems, Ecological Pyramids, Biodiversity Hotspots, Pollution, Waste Management, Global Treaties, Green Energy]
-7. Innovation and Entrepreneurship (I&E) [Design Thinking, Ideation, Business Model Canvas, IPR, Patents, Funding, Startup Lifecycle]
-
-MGIT Autonomous Examination Structure & Regulation Blueprint:
-- Total Marks: 60 Marks (Part A: 10 Marks, Part B: 50 Marks).
-- Part A (10 Marks Total - Compulsory): Question 1 consists of exactly 5 sub-questions: 1(a), 1(b), 1(c), 1(d), and 1(e) (one question from each of Units 1 to 5), each carrying 2 marks (5 × 2 = 10 Marks). All 5 sub-questions are compulsory with no choice.
-- Part B (50 Marks Total - Essay): Consists of 5 compulsory numbered questions: Question 2, Question 3, Question 4, Question 5, and Question 6 (corresponding to Units 1, 2, 3, 4, and 5 respectively). There is no choice between question numbers (answering all numbers 2 through 6 is mandatory). Inside each numbered question, there is an internal choice between two fixed pairs: either [a, b] OR [c, d] (e.g., 2(a) [5M] & 2(b) [5M] OR 2(c) [5M] & 2(d) [5M]). Each sub-question carries 5 marks, making each numbered question worth 10 marks (5 questions × 10 Marks = 50 Marks). Students can ONLY choose [a, b] or [c, d] — no cross-pair mixing is permitted (e.g., combining 2(a) and 2(d) is invalid).
-
-Guidelines for Answers:
-- When asked for "2 marks questions" or "short questions": provide crisp, high-scoring answers with formal definitions, key formulas, equations, or examples worth full 2 marks.
-- When asked to "continue", "elaborate", or follow up: seamlessly continue from the previous turn in the conversation without restarting or skipping.
-- Math & Formulas: use standard human-readable math or standard LaTeX ($...$ or $$...$$).
-- Output directly as the academic tutor. Never output internal checklists, prompt evaluation steps, or meta-instructions.
-- Use clean GitHub-style Markdown with bolding, lists, and code blocks.`;
-
-    let contents = [];
-    if (Array.isArray(chatMessages) && chatMessages.length > 0) {
-      contents = chatMessages.map((msg, idx) => {
-        const role = msg.role === 'model' || msg.role === 'assistant' ? 'model' : 'user';
-        let text = msg.text || '';
-        if (idx === 0 && role === 'user') {
-          text = `${systemPrompt}\n\nSubject Context: ${subjectContext}\n\nStudent: ${text}`;
-        }
-        const parts = [{ text: text }];
-        if (msg.image && msg.image.startsWith('data:')) {
-          const match = msg.image.match(/^data:([^;]+);base64,(.+)$/);
-          if (match) {
-            parts.push({
-              inlineData: {
-                mimeType: match[1],
-                data: match[2]
-              }
-            });
-          }
-        }
-        return { role: role, parts: parts };
-      });
-    } else {
-      const userText = query || 'Please analyze this attached question paper / notes photo in detail and explain the solution.';
-      const parts = [{ text: `${systemPrompt}\n\nSubject Context: ${subjectContext}\n\nStudent Question: ${userText}` }];
-      if (attachedImage && attachedImage.base64Data && attachedImage.mimeType) {
-        parts.push({
-          inlineData: {
-            mimeType: attachedImage.mimeType,
-            data: attachedImage.base64Data
-          }
-        });
-      }
-      contents = [{ role: 'user', parts: parts }];
-    }
-
-    const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
-    for (const model of models) {
-      try {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-        const res = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: contents,
-            generationConfig: {
-              temperature: 0.35,
-              maxOutputTokens: 4096
-            }
-          })
-        });
-
-        if (res.ok) {
-          const data = await res.json();
-          const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (candidate) return candidate;
-        }
-      } catch (err) {
-        console.warn(`Error querying ${model}:`, err);
-      }
-    }
-    throw new Error('All direct Gemini model endpoints failed');
   }
 
   // -------------------------------------------------------------
@@ -2944,17 +2816,6 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
         e.preventDefault();
         handleGeminiQuery(el.geminiQueryInput.value);
       });
-    }
-
-    // Gemini API Key Drawer & Actions
-    if (el.toggleApiKeyBtn) {
-      el.toggleApiKeyBtn.addEventListener('click', toggleApiKeyDrawer);
-    }
-    if (el.saveGeminiKeyBtn) {
-      el.saveGeminiKeyBtn.addEventListener('click', saveUserGeminiKey);
-    }
-    if (el.clearGeminiKeyBtn) {
-      el.clearGeminiKeyBtn.addEventListener('click', clearUserGeminiKey);
     }
 
     // Gemini Prompt Cards (Landing screen quick queries)

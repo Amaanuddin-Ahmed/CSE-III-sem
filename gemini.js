@@ -17,8 +17,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY || 
-    Buffer.from('QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=', 'base64').toString('utf8');
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return res.status(503).json({
+      error: 'AI_NOT_CONFIGURED',
+      message: 'The AI assistant is not configured on this deployment.'
+    });
+  }
 
   try {
     const { query, subject, history } = req.body || {};
@@ -84,7 +89,6 @@ Guidelines for Answers:
     }
 
     const models = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
-    let lastError = null;
 
     for (const model of models) {
       try {
@@ -110,24 +114,21 @@ Guidelines for Answers:
           if (candidate) {
             return res.status(200).json({ success: true, text: candidate });
           }
-        } else {
-          lastError = await response.text();
         }
       } catch (err) {
-        lastError = err.message;
+        console.error('Gemini model request failed', err?.name || 'Unknown error');
       }
     }
 
-    return res.status(200).json({
-      fallback: true,
-      error: 'API_ERROR',
-      details: lastError
+    return res.status(502).json({
+      error: 'AI_UPSTREAM_ERROR',
+      message: 'The AI assistant could not generate an answer right now. Please try again.'
     });
   } catch (err) {
-    return res.status(200).json({
-      fallback: true,
-      error: 'SERVER_EXCEPTION',
-      message: err.message
+    console.error('Gemini handler failed', err?.name || 'Unknown error');
+    return res.status(500).json({
+      error: 'AI_INTERNAL_ERROR',
+      message: 'The AI assistant could not complete this request.'
     });
   }
 }

@@ -62,11 +62,6 @@ def get_key() -> str:
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if key:
         return key
-    # Fall back to the key already embedded in the project (never printed).
-    app = (ROOT / "app.js").read_text(encoding="utf-8", errors="ignore")
-    m = re.search(r"atob\('([^']+)'\)", app)
-    if m:
-        return base64.b64decode(m.group(1)).decode("utf-8")
     raise RuntimeError("GEMINI_API_KEY is not set")
 
 

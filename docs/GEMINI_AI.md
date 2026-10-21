@@ -9,7 +9,8 @@
 ## 2. Model & Version Specifications
 - **Model:** `gemini-1.5-flash` (or `gemini-1.5-pro` for complex multi-page document OCR).
 - **SDK:** Official `@google/genai` (Node.js/TypeScript).
-- **API Key Management:** Keys are created at [Google AI Studio](https://aistudio.google.com/app/apikey) and stored exclusively in private server environment variables (`GEMINI_API_KEY`).
+- **API Key Management:** Keys are created at [Google AI Studio](https://aistudio.google.com/app/apikey) and stored exclusively in private server environment variables (`GEMINI_API_KEY`). The browser must not accept, persist, or send Gemini API keys.
+- **Credential Exposure:** If a key is committed or otherwise exposed, revoke it immediately and replace the Vercel environment variable. Removing a key from the current source does not remove it from Git history.
 
 ---
 

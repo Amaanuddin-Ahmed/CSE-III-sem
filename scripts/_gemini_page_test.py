@@ -3,9 +3,9 @@ from pathlib import Path
 import pymupdf
 from PIL import Image
 
-key = os.environ.get("GEMINI_API_KEY")
+key = os.environ.get("GEMINI_API_KEY", "").strip()
 if not key:
-    key = base64.b64decode("QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=").decode()
+    raise SystemExit("Set GEMINI_API_KEY in the environment before running this test.")
 
 manifest = json.loads(Path('.cache/drive_manifest.json').read_text(encoding='utf-8'))
 item = next(i for i in manifest if i.get('fileName') == 'Aug 2023.pdf' and i.get('subject') == 'OOPJ')
