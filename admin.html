@@ -554,14 +554,14 @@
           const res = await fetch('/api/gemini', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: 'Reply with the single word OK.' })
+            body: JSON.stringify({ query: 'Reply with the single word OK.' })
           });
           const data = await res.json().catch(() => ({}));
           if (res.ok && !data.error) {
             el.aiStatusText.textContent = 'Status: answering normally.';
-          } else if (data.code === 'AI_NOT_CONFIGURED') {
+          } else if (data.error === 'AI_NOT_CONFIGURED') {
             el.aiStatusText.textContent = 'Status: no GEMINI_API_KEY set on the server yet.';
-          } else if (data.code === 'AI_QUOTA_EXCEEDED' || res.status === 429) {
+          } else if (data.error === 'AI_QUOTA_EXCEEDED' || res.status === 429) {
             el.aiStatusText.textContent = 'Status: key works, but the free quota is used up right now.';
           } else {
             el.aiStatusText.textContent = `Status: unavailable (HTTP ${res.status}).`;

@@ -7,16 +7,17 @@
 ---
 
 ## 2. Model & Version Specifications
-- **Model:** `gemini-1.5-flash` (or `gemini-1.5-pro` for complex multi-page document OCR).
-- **SDK:** Official `@google/genai` (Node.js/TypeScript).
+- **Model:** `gemini-2.5-flash` with `gemini-flash-latest` as a fallback.
+- **SDK:** Server-side Gemini REST API through the Vercel function in `api/gemini.js`.
 - **API Key Management:** Keys are created at [Google AI Studio](https://aistudio.google.com/app/apikey) and stored exclusively in private server environment variables (`GEMINI_API_KEY`). The browser must not accept, persist, or send Gemini API keys.
 - **Credential Exposure:** If a key is committed or otherwise exposed, revoke it immediately and replace the Vercel environment variable. Removing a key from the current source does not remove it from Git history.
 
 ---
 
 ## 3. Strict Security & Guardrails
-- **Zero Client-Side Calls:** Client code must never import `@google/genai` with a browser API key. All AI requests pass through `/api/gemini/explain` or background ingestion scripts.
+- **Zero Client-Side Calls:** Client code must never call Gemini directly or contain a browser API key. All student AI requests pass through `/api/gemini`; OCR scripts use `GEMINI_API_KEY` from the environment.
 - **RAG & Grounding:** Prompts to Gemini must include verified syllabus excerpts, course outcome definitions, and reference steps to minimize hallucinations.
 - **Quota & Cost Protection:**
   - Ingestion processes pages in batches to respect rate limits.
   - Explanation responses are cached in Supabase (`solution_guide` column) so subsequent students receive immediate answers without incurring additional API calls.
+  - Keep the API key in the private server environment. A publicly accessible proxy lets students use the account's quota; configure request limits and quota alerts in the deployment and Google AI Studio.

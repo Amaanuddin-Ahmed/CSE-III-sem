@@ -44,7 +44,7 @@ The platform strictly covers all **7 syllabus subjects**, each organized with de
 - Every question card links directly to its verified Google Drive question paper PDF (`driveFileId`), eliminating the need to browse through dozens of unorganized files.
 
 ### 3. Integrated Google Gemini AI Study Assistant
-- Connected directly to Google Gemini API (`gemini-3.5-flash-lite` & `gemini-3.5-flash`) with standard access for all students.
+- Uses a server-side Gemini proxy (`/api/gemini`) so students can use the study assistant without exposing the API key in browser code. Configure `GEMINI_API_KEY` privately in Vercel.
 - Delivers academic concept explanations, code implementations, formula derivations, and university examination scoring blueprints.
 
 ### 4. Modern, Human-Centric Typography
