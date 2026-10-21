@@ -122,14 +122,7 @@
           </div>
         </div>
 
-        <div class="kpi-card">
-          <div class="kpi-icon green"><i class="fa-solid fa-glasses"></i></div>
-          <div class="kpi-info">
-            <span class="kpi-number" id="kpiOtherSemPapers">0</span>
-            <span class="kpi-label">Non-III-Sem Papers</span>
-            <span class="kpi-hint">Kept, and labelled with their printed semester</span>
-          </div>
-        </div>
+        
       </section>
 
       <section class="admin-section-box">
@@ -179,8 +172,7 @@
               <tr>
                 <th>Subject</th>
                 <th>Paper</th>
-                <th>Printed Sem</th>
-                <th>Questions Parsed</th>
+                                <th>Questions Parsed</th>
                 <th>Status</th>
                 <th>Source</th>
               </tr>
@@ -485,7 +477,7 @@
         }
 
         if (visible.length === 0) {
-          el.paperAuditBody.innerHTML = '<tr><td colspan="6" class="empty-queue-msg">No papers match that search.</td></tr>';
+          el.paperAuditBody.innerHTML = '<tr><td colspan="5" class="empty-queue-msg">No papers match that search.</td></tr>';
           return;
         }
 
@@ -499,8 +491,7 @@
             <tr class="${short ? 'audit-row-flag' : ''}">
               <td><span class="q-badge unit">${escapeHtml(p.subjectId)}</span></td>
               <td>${escapeHtml(p.paperName)}</td>
-              <td><span class="q-badge ${isThird ? 'unit' : 'part-b'}">Sem ${escapeHtml(String(p.semester))}</span></td>
-              <td><strong>${p.count}</strong></td>
+                            <td><strong>${p.count}</strong></td>
               <td>${short ? '<span class="audit-flag"><i class="fa-solid fa-triangle-exclamation"></i> Recheck scan</span>' : '<span class="audit-ok"><i class="fa-solid fa-check"></i> Looks complete</span>'}</td>
               <td>${source}</td>
             </tr>

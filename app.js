@@ -670,7 +670,7 @@
 
     // Build the year filter checkboxes from the years actually present in this subject
     renderYearFilterOptions(allSubQuestions);
-    renderSemesterFilterOptions(allSubQuestions);
+    // renderSemesterFilterOptions(allSubQuestions);
 
     let filteredQuestions = allSubQuestions;
 
@@ -680,11 +680,7 @@
       filteredQuestions = filteredQuestions.filter(q => q.years && q.years.some(y => yearSet.has(y)));
     }
 
-    // Apply printed-semester filter (no selected semesters = all semesters)
-    if (Array.isArray(state.selectedSemesters) && state.selectedSemesters.length > 0) {
-      const semSet = new Set(state.selectedSemesters);
-      filteredQuestions = filteredQuestions.filter(q => printedSemesters(q).some(s => semSet.has(s)));
-    }
+    // Semester filter removed
 
     // Apply Part filter
     if (state.selectedPart === 'A') {
@@ -719,9 +715,7 @@
       if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
         activeLabels.push(state.selectedYears.slice().sort((a, b) => b - a).join(', '));
       }
-      if (Array.isArray(state.selectedSemesters) && state.selectedSemesters.length > 0) {
-        activeLabels.push('Sem ' + state.selectedSemesters.join('/'));
-      }
+      
       if (state.selectedPart !== 'all') activeLabels.push('Part ' + state.selectedPart);
       if (state.repeatedOnly) activeLabels.push('Repeated only');
       if (query) activeLabels.push('search: "' + query + '"');
@@ -889,16 +883,7 @@
   // IV-sem Java/DBMS/SE papers from MR-21/22). Label them honestly instead of
   // pretending every paper is a III-semester paper.
   function semesterBadgeHtml(q) {
-    const sems = printedSemesters(q);
-    const other = sems.filter(s => s !== 'III');
-    if (!other.length) return '';
-    const mixed = other.length !== sems.length;
-    const label = mixed ? ('Also in Sem ' + other.join('/')) : ('Sem ' + other.join('/') + ' paper');
-    const title = mixed
-      ? 'This question also appeared in a paper printed for Semester ' + other.join('/') + '.'
-      : 'The original Drive paper is printed for Semester ' + other.join('/') + '. It is kept here because the file is filed under this subject.';
-    return '<span class="q-badge semester-off" title="' + escapeHtml(title) + '">' +
-      '<i class="fa-solid fa-circle-info"></i> ' + escapeHtml(label) + '</span>';
+    return '';
   }
 
   function createQuestionCardElement(q) {
@@ -1017,20 +1002,8 @@
     el.modalUnitBadge.textContent = `Unit ${q.chapter}`;
 
     if (el.modalSemesterBadge) {
-      const sems = printedSemesters(q);
-      const off = sems.filter(s => s !== 'III');
-      if (off.length) {
-        el.modalSemesterBadge.style.display = '';
-        el.modalSemesterBadge.textContent = off.length !== sems.length
-          ? `Sem ${sems.join(' + ')} papers`
-          : `Printed: Sem ${off.join('/')} paper`;
-        el.modalSemesterBadge.title = off.length !== sems.length
-          ? `This question appeared in papers printed for Semester ${sems.join(' and ')}.`
-          : `The original Drive paper is printed for Semester ${off.join('/')}, not Semester III. It is kept here because the file is filed under this subject.`;
-      } else {
-        el.modalSemesterBadge.style.display = 'none';
-        el.modalSemesterBadge.textContent = '';
-      }
+      el.modalSemesterBadge.style.display = 'none';
+      el.modalSemesterBadge.textContent = '';
     }
 
     el.modalQuestionTitle.textContent = q.question;
@@ -2937,13 +2910,27 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
   }
 
   // -------------------------------------------------------------
-  // Website Rating Popup (45 Seconds of Active Activity)
+  // Website Rating Popup (20 Seconds of Active Activity & 5 Stars)
   // -------------------------------------------------------------
   function initRatingPopup() {
-    const RATING_THRESHOLD_MS = 45000;
+    const RATING_THRESHOLD_MS = 20000; // 20 seconds of active usage
     const DISMISS_KEY = 'mgit_rating_dismissed';
+    const RATED_KEY = 'mgit_site_rated';
 
-    if (sessionStorage.getItem(DISMISS_KEY)) return;
+    // Hook up the footer "Rate now" button permanently
+    const footerRateBtn = document.getElementById('footerRateBtn');
+    if (footerRateBtn) {
+      footerRateBtn.addEventListener('click', () => {
+        localStorage.setItem(RATED_KEY, '1');
+        sessionStorage.setItem(DISMISS_KEY, '1');
+        dismissPopup();
+      });
+    }
+
+    // If user already rated or dismissed during session, do not show popup
+    if (localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') {
+      return;
+    }
 
     let activeTimeMs = 0;
     let lastActiveTime = null;
@@ -2952,7 +2939,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     let isShowing = false;
 
     function dismissPopup() {
-      sessionStorage.setItem(DISMISS_KEY, 'true');
+      sessionStorage.setItem(DISMISS_KEY, '1');
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
@@ -2965,8 +2952,14 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       }
     }
 
+    function recordRated() {
+      localStorage.setItem(RATED_KEY, '1');
+      sessionStorage.setItem(DISMISS_KEY, '1');
+      dismissPopup();
+    }
+
     function showPopup() {
-      if (isShowing || sessionStorage.getItem(DISMISS_KEY)) return;
+      if (isShowing || localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') return;
       isShowing = true;
       if (timerInterval) {
         clearInterval(timerInterval);
@@ -2978,13 +2971,22 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       const popup = document.createElement('div');
       popup.id = 'ratingPopup';
       popup.setAttribute('role', 'dialog');
-      popup.setAttribute('aria-label', "Let's make it better together");
+      popup.setAttribute('aria-label', "Rate MGIT PYQ Hub");
       popup.innerHTML = `
         <div class="rating-popup-card">
-          <div class="rating-popup-icon"><i class="fa-regular fa-star"></i></div>
-          <p class="rating-popup-msg">Let's make it better together</p>
+          <div class="rating-popup-stars" aria-label="5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="rating-popup-headline">Help Amaan make this 10x better! ⭐</h4>
+          <p class="rating-popup-msg">Taking just <strong>10 seconds</strong> to drop a quick rating would genuinely help me a lot in updating papers and improving this for everyone.</p>
           <div class="rating-popup-actions">
-            <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="rating-btn-primary" id="rateNowBtn">Rate now</a>
+            <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="rating-btn-primary" id="rateNowBtn">
+              <i class="fa-solid fa-star" style="font-size:11px; margin-right:4px;"></i> Rate now
+            </a>
             <button type="button" class="rating-btn-secondary" id="rateLaterBtn">Later</button>
           </div>
         </div>
@@ -3001,7 +3003,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
 
       if (rateNowBtn) {
         rateNowBtn.addEventListener('click', () => {
-          dismissPopup();
+          recordRated();
         });
       }
 
@@ -3026,7 +3028,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     }
 
     function startTimer() {
-      if (hasStarted || sessionStorage.getItem(DISMISS_KEY)) return;
+      if (hasStarted || localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') return;
       hasStarted = true;
       lastActiveTime = Date.now();
 
