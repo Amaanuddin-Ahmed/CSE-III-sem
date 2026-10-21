@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B425CS5S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2025 / January 2026\nSoftware Engineering\n(Common to CSE, CSB and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nWhat are software engineering layers?\n1\n1\n1\n1\n1. b)\nWhat is process assessment?\n1\n1\n1\n1\n1. c)\nWhat is interface specification?\n1\n1\n2\n2\n1. d)\nDefine requirements validation.\n1\n2\n2\n2\n1. e)\nWhat is class diagram?\n1\n1\n3\n3\n1. f)\nWhat is software architecture? Define.\n1\n1\n3\n3\n1. g)\nWhat is software testing?\n1\n1\n4\n4\n1. h)\nWhat is meant by debugging?\n1\n1\n4\n4\n1. i) What is software review?\n1\n1\n5\n4\n1. j)\nDefine Risk Refinement.\n1\n2\n5\n4\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nIllustrate in brief about that waterfall model.\n5\n2\n1\n2. b) Explain about evaluation of software engineering methodologies.\nOR\n5\n2\n1\n1\n2. c) Explain about software development process models.\n5\n2\n1\n1\n2. d) Demonstrate the various software myths.\n5\n2\n1\n3. a) Explain how a software requirements document is structure?\n3. b) What are feasibility studies? Explain its types.\n5\n3\n2\n2\n5\n2\n2\n2\nOR\n3. c) What are the desirable characteristics of a good software requirement\nspecification document? Discuss.\n5\n3\n2\n2\n5\n2\n2\n2\n3. d) Explain about requirements management phases of requirement\nengineering process.\n4. a) Briefly explain about the design model.\n4. b) Model the class diagram and explain various relationships that exist\nbetween classes.\nOR\n4. c) Construct software architecture. Explain why it may be necessary to\ndesign the system architecture before the specifications.\n4. d)\nDistinguish between sequence and collaboration diagrams.\n5. a) Explain in detail about black box testing techniques.\n5. b) Explain clearly about metrics for software quality.\n5. c) Write short note on system testing.\nOR\n5. d) Discuss about metrics for testing in detail.\n6. a)\nExplain significance formal technical review.\n6. b) Examine the methods for Risk Projection.\n5\n3\n3\n3\n5\n3\n3\n3\n5\n3\n3\n3\n5\n4\n3\n3\n5\n4\n4\n4\n5\n3\n4\n4\n5\n2\n4\n4\n5\n3\n4\n4\n5\n2\n5\n4\n5\n4\n5\n4\nP.T.O.\n",
+   "chars": 2180,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n5\n2\n5\n4\n4\n6. c) What types of risk occur during software development? Discuss.\n6. d) Summarize the role of formal technique reviews in achieving good5 2 5\nquality software.\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 254,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

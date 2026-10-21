@@ -1,0 +1,99 @@
+5, a)
+
+po, OD)
+
+| So)
+
+Oo
+
+6. a}
+
+&. b)
+
+6. ¢)
+
+6, d)
+
+Detine an aleebrate system. Give {wo examip sles of alucbraic systems |S ? j
+
+ene with a single binary operation and another with two binary !
+
+operations, | :
+summarize about Boolean Algebra and its properties. 1S | 3
+
+There are 30 females and.35 males in the junior class while there are 25 | § 3 4
+females aud 20 males in the sentor class. In how many ways can a}
+
+committee of 10 be chosen so thal there are exactly S females and 3 |
+
+paterson the committee?
+
+(in (2x-4 y hoa) trod the coetticient of xy" xy" xa | _ 2 4
+(it) In (xpbxebxgi xy] x5) tind the coefficient of xy ae xq Xa
+
+OR
+
+How many hntepral solutions are there to xy b Xo ch Xa Xg Ns = BOE S 3 4
+where Xe 3, Xe nO, xyes AL xyes, and xg>== 2? |
+
+In a survey of stadents at orice State University the following | 5 7” ‘|
+information was obtained, 260 were taking a statistics course, 208 were |
+
+taking a inathematics ‘course, 160 were taking a computer |
+
+progranunuy course, 76 were taking statistics and miatheratics, 48 !
+
+were taking statistics and computer programming, 62 were taking |
+
+tnathematics courses and computer programming, 30 were taking all 3 |
+
+kinds of courses, and 150 were taking none of the 3 courses |
+
+Let c
+
+Soo (studonte faking sfaticttog) |
+
+M-- {students taking mathematics},
+
+C- {students taking computer programming}.
+
+(1) How 1 many students were surveyed?
+
+(11) [low many students were taking a statistics and a mathematics |
+
+course but not a computer programming course?
+
+Cy 1) Haw Tidy Were le Uc uae a Stabistics guid a cotupute r course bub net a
+
+niathermatics course’?
+
+Civ) flow sany were taking a mathematics course bai not taking a |
+
+Statistics course of a computer prorat piminyg course?
+
+(vy) Elow many were taking a computer programmine corse: but not
+
+faking a course in mathematics or in statistics,
+
+Voruy whether the given praphs are Isomorphic or not? . 3 5
+
+NS a \
+~ - | NS Nf \
+yee | , f ae
+Explain how Taller eraphs are different from Hamiltonian Crapts, | > 2 5
+OR
+Mind the minimum. spanning tree for the «iver graph using Prims’s i 4 3 Q
+aleortthiun,
+|
+
+Define Chromatic Number. Explain the steps involved in graph | 5 3 5
+
+coloring problem. with suitable example.
+
+M: Marks; L.: Bloom’s Taxonomy Level: CO: Course Outcome; PO: Programme Outcome
+
+3
+
+2
+
+®

@@ -1,0 +1,32 @@
+€)
+
+_d)
+
+G. a)
+6. b)
+G.c)
+6. d)
+
+OR
+
+Uxplair the role of UlashSet, LinkedtashSet, and ‘PreeSet with | 5 ? A
+examples. |
+
+Develop a Java program that counts unique words froma file using a | 5 A A
+HlashSet,
+
+Discuss the arcniiceture of Swine and ws advantages over AWE, 5 2 5
+Develop a Java Swing program to display a calculator GUI. ) 4 5
+
+OR
+
+Explain different layout managers used in Gill deston. boo ? 4
+Develop a Java program to demonstrate mouse and keyboard event 5 A 5
+
+handling using adapter classes.
+
+M: Marks; L: Bloom’s Paxonomy Level; CO: Course Outcome; PO:
+
+19509
+
+Programme Outcome

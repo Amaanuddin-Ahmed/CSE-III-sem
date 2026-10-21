@@ -1,0 +1,18 @@
+4.d) Describe the differences and interrelations between the UML sequence | 5 4 3 3
+diagram and activity diagram. Use real-world examples to illustrate
+your answer.
+5.a) | Apprise and analyze the purpose of system testing with a high level | 5 4 4 4
+Explanation on all its types
+5.b) | Write a brief on equivalence partitioning & boundary value analysis of | 5 3 4 3
+black box testing
+OR
+5.c) | Analyze elaborately on unit testing. How do you develop test suites. 5 3 A 4
+5.d) Analyze about alpha and beta testing. 5 3 4 a
+6.a) Discuss in detail about the Attributes of Effective Software Metrics. 5 2 5 5
+6.b) Examine the activities associated with project process planning. ) 4 x 3,11
+OR
+6.c) Discuss the importance of "Metrics for Source Code" in software | 5 2 5 fe]
+quality.
+6.d) What are the different ways in which quality can be reviewed? Explain | 5 ps 5 5
+them.
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

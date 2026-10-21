@@ -1,0 +1,61 @@
+Tall Vicket Number: 7
+| P| | | | | | | | MR-22 | Code: B424CS84
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, July/August-2024
+Database Management Systems
+(Common to CSE, IT, CSB, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Q. No. | Stem of the Question M | L | CO | PO
+l.a) Illustrate different types of Attributes. 1 2 I 1,2
+1.b) — List different types of data models. 1 1 I 1,2
+l.c) Describe the properties of relation model. 1 2 2 1,2
+1.d) Explain relation algebra operators. 1 2 2 1,2
+1.e) — Discuss lossless join decomposition. I 2 3 1,2,3,12
+Lf Demonstrate EXCEPT keyword in SQL. | 3 3 1.2.3,12
+1. g) Define Transaction State. l | 4 1,2,3,12
+1. h) What is time stamp ordering protocol? | | 4 [2.3
+1.1) Define Global depth and Local depth tn hashing. 1 2 5 1,2
+1.j) Explain Tree based Indexing. 1 4 5 1,2
+Part-B (5 x 10 = 50 Marks)
+| Q. No. | Stem of the Question M|LI[CcO| PO
+2.a) Explain the structure of a DBMS in detail. 5 2 l 1,2
+2.b) Summarize the major disadvantages of file-proccssing system. 5 2 l 1,2
+OR
+2.c) Describe different types of Integrity Constraints. 5 2 l 1,2
+2.d) Design an ER diagram for a bank management system that | 5 5 l 1,2
+
+includes entitics such as bank, employees, branch, customer, loan
+and account. Specify the relationships between these entities and
+their attributes.
+
+3.a) Discuss Referential Integrity with example. 5 2 2 1,2,3,12
+
+3. b) Explain Domain Relational Calculus with example. 5 2 2 1,2,3,12
+OR
+
+3.c) | Write the given queries in SQL. 5 4 2 1,2,3,12
+
+products(Product-Name, Product-Id, Price)
+i. Sort the products from highest to lowest price.
+ii. Sort the products alphabetically by Product-Name.
+iii. Select all Product-Name, Product-Id with Price greater than
+80.
+3.d) i. Develop Salesman Table (salesperson ID, name, city and} 5 4 2 1,2,3,12
+commission).
+ii. Create a view to locate the salespeople in the city "New York’.
+4. a) Write the given queries in SQL 5 4 3 [,2,3,12
+Sailors(sid: integer, sname: string, rating: integer, age: real):
+Roats(hid: intecer bname: string. calor string):
+
+Reserves(sid: integer, bid: integer, day: date).
+
+i. Mind all information of sailors who have reserved boat
+number 101.
+iL. Find the names of sailors who have reserved a red boat,
+and green boat
+Hi. Find the names of sailors who have reserved at least one
+bycveri.
+
+Pot.

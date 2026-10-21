@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B425IT5\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Regular/Supplementary Examinations, July 2025\nJava Programming\n(Information Technology)\nTime: 3 Hours\nQ. No.\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nStem of the Question\nMax. Marks: 60\nM\nL\nCO\nPO\n1. a)\nList the uses of this Keyword.\n1\n1\n1\n1\n1. b)\nIllustrate about Inheritance.\n1\n2\n1\n1\n1. c)\nContrast try and catch.\n2\n1\n1\n1. d)\nDefine File class.\n1\n1\n2\n1\n1. e)\nShow the hierarchy of Collection framework.\n1\n2\n2\n1\n1. f)\nWhat is Iterator?\n1\n1\n2\n1\n1. g)\nWhat are the different types of Drivers in JDBC?\n3\n1\n1. h)\nDefine Multi-Processing.\n1\n3\n1\n1.i)\nList the various Swing Components.\n1\n1\n4\n1\n1. j)\nWhat is Delegation Event Model?\n1\n1\n4\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain the different types of Data types with syntax.\n5\n2\n1\n1\n2. b) List the conditional and Looping statements with syntax in java.\nExplain any suitable programs.\n5\n3\n1\n1,2\nOR\n2. c) What is a constructor? How do we invoke a constructor? What are its\nspecial properties?\n5\n1\n1\n1,2\n2. d) Explain the steps involved in creating and executing a java program.\n3. a) Explain about checked and unchecked exceptions.\n3. b) Explain in details about the Exception Handling clauses throw and\ncatch with example.\n5\n2\n1\n1\n5\n2\n2\n1,2\n5\n2\n2\n1\nOR\n3. c) Explain the input stream using Reading console Input-methods\ndefined by input stream.\n5\n2\n2\n1,2\n5\n6\n2\n3\n3. d) Create Java Program that reads a file and throws an exception if the\nfile is empty.\n4. a) Write a program for implementing access specifier in Packages.\n4. b) Explain following i) on string tokenizer ii) array list in detail.\nOR\n4. c) Explain the methods declared by Iterator.\n4. d) Design a Java Map Hierarchy? Explain the class and methods in\ndetails.\n5. a) Compare Process and Thread in details.\n5. b) Explain the Type-1 and Type-II drivers in JDBC.\nOR\n5. c) Identify the steps for Developing JDBC Application in details.\n5. d) Contrast between Thread Based Multi-tasking and Process based\nMulti-Tasking.\n5\n3\n3\n2,3\n5\n2\n3\n1\n5\n2\n3\n1,2\n5\n6\n3\n1,2\n5\n4\n3\n1,2\n5\n2\n3\n1,2\n5\n3\n3\n1,2,3\n5\n4\n3\n1,2\nP.T.O.\n",
+   "chars": 2166,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "6. a) Explain the limitations of AWT.\n6. b) Develop a program for Mouse Handling Events.\nOR\n6. c) What is MVC? Explain MVC Architecture.\n6. d) Explain about the Card Layout and Grid Bag Layout.\n5\n2\n4\n2\n5\n3\n4\n1,2,3\n5\n3\n4\n1,2\n5\n2\n4\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 310,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

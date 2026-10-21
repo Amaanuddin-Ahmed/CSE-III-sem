@@ -1,0 +1,95 @@
+_d)
+
+a)
+.b)
+
+.C)
+.d)
+
+a)
+
+._b)
+
+. i)
+
+_d)
+
+. a)
+
+b)
+
+. d)
+
+Data members:
+(a) salary
+(b) designation
+Method:
+(a) display() to show the salary and designation along with the
+other employee details
+Create another class PartTimeEmployee that inherits the Employee
+class:
+Data members:
+(a) workingHours
+(b) ratePerHour
+Methods: ,
+(a) calculatePay() to calculate the amount payable
+(b) display() to show the amount payable along with other
+employee details
+Create objects of these classes and call their methods. User
+appropriate constructors.
+Write short notes on Garbage Collector.
+
+Define an Abstract class and an Interface. Give the reasons of the
+situation when to use each of them.
+Discuss the types of Inheritance that exist in OOP languages
+
+OR
+Why Java doesn’t support Multiple Inheritance. How can we achieve
+it with an example?
+Define a package in Java. How to create a user defined package in
+java.
+
+Create a try block that is likely to generate three types of exception
+and then incorporate necessary catch blocks to catch and handle them
+appropriately.
+Write a program showing the actions from 3 threads. Use Runnable
+interface to create the threads. Make sure that the main thread always
+executes last.
+
+OR
+Consider a Student examination system that prints the mark sheet of
+students. Input the following from the command line: student’s name
+and marks in six subjects. These marks should be between 0 and 50.
+If the marks are not in the specified range, raise a Range Exception,
+else find the total marks and print the percentage of the students.
+Describe the complete life cycle of a thread?
+
+Write a java program for creating menu where it allows to choose
+food in 3 categories Rice, Curry, Starter.
+When Rice item is selected it will display all types of rice available in
+the hotel and user can order by selecting type of the rice. Similarly
+user can select Curry and starter. And display the selected food.
+Explain different types of layout manger.
+
+OR
+Write a Java program which has 2 panels. Left panel lists the
+different programme of the college (CSE, ECE....) in a specific
+location and the right panel will display the list of faculty details
+when the user selects one of the programme names.
+Explain the different mouse and keyboard handling events.
+
+| Le
+2 LZ
+2 1,2
+2 1,2
+a 12
+3 1,2
+a 12
+3 La
+3 1,2
+4 1,2,3
+4 L2
+4  § 1,2,3
+a 12
+
+Page 2 of 3

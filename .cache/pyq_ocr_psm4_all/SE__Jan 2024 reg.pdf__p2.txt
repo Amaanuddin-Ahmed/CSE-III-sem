@@ -1,0 +1,12 @@
+5.c) | What is white box testing? How white box testing is carried out? | 5 1 4 S
+| Demonstrate with example.
+5.d) Discuss about the metrics used for software Quality model. 5 4 4 |
+6.a) Discuss the role of formal technical reviews in achieving good quality | 5 4 5 10
+software.
+6.b) What is risk identification? Discuss various methods used for risk | 5 1 5 1
+identification.
+OR
+6.c) What is Statistical Software Quality Assurance? Discuss its objectives. | 5 l 5 |
+6.d) Explain ISO 9000 Quality standards. ") 3 5 |
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

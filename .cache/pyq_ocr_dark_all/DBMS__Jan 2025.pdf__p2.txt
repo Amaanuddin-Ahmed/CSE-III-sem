@@ -1,0 +1,54 @@
+| 4
+
+.C)
+
+.a)
+
+.C)
+_d)
+. a)
+-b)
+
+.C)
+
+Given R (A, B, C, D, E, F) and the set of FDs: {A — BC,E — CF, |
+B— E, CD — EF}. Compute the CLOSURE {A, B}' under the given set | 10 3
+of FD’s. Show that an FD: AB -—> BCE_ hold for R.
+
+Why do we need Concurrency Control? How can you control the
+concurrent access of database using Locking? Explain the Two-Phase | 10 2
+Locking Protocol.
+
+OR
+Discuss the various States of a Transaction with the help of a neat
+
+diagram. ° ;
+Discuss about Conflict Serializability with an example. 5 2
+What is Multi-Level Indexing? How does Multi-Level Indexing 5 5
+improve the efficiency of searching an index file?
+
+Distinguish between Primary Index and Secondary Index. Illustrate 5 4
+with an example.
+
+OR
+List and discuss about various File Organization Techniques with an 10 2
+
+cxample.
+
+1,2,3
+
+1,2
+
+1.2
+
+~
+
+1,2
+
+1,2
+
+1,2
+
+[2,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

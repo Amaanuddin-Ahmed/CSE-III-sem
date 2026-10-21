@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\n02/01/2026(FN\nCode: B325CS5\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Regular/Supplementary Examinations, December 2025/January 2026\nComputer Organization and Architecture\n(Common to CSE, CSB, CSM and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nQ. No.\nStem of the Question\n1. a)\nWhat is the role of AR and DR registers?\n1. b) In which addressing mode, the actual operand is given in the\ninstruction?\n1. c)\nWhat is control memory?\n1. d)\nDescribe ASHL and SHRA operations.\n1. e)\nConvert the following numbers.\nMax. Marks: 60\nM\nL\nCO\nPO\n1\n1\n1\n1\n2\n1\n1\n2\n2\n2\n1\n2\n2\n2\n1\n3\n5\n2\ni. (9FD)16-(8\nii. (234)10-(16\n1. f)\nDraw the hardware configuration for signed 2's complement addition\nand subtraction.\n1\n1\n5\n1\n1. g)\nWhat are different modes of data transfer?\n1\n1\n3\n1\n1. h) How EEPROM differs from PROМ?\n1\n1\n3\n1\n1. i) List the characteristics of RISC architecture.\n1\n1\n3\n2\n1. j)\nWrite the formula to calculate speedup of a pipelined processor over\nan equivalent non-pipeline processor.\n1\n1\n4\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain the functionality of 4-bit combinational circuit shifter with a\nneat block diagram.\n5\n1\n3\n2\n2. b)\nWhat is an interrupt? Draw the flowchart of interrupt cycle?\n5\n1\n2\n2\nOR\n2. c) Design a 4-bit Arthmetic circuit using full adders.\n5\n2\n3\n2\n2. d)\nDescribe the following memory reference instructions with examples.\n5\n2\n2\n2\ni. AND\nii. ADD\niii. Load\n3. a) Explain microprogram sequencer for a control memory with a neat\nblock diagram.\n3. b) Write the assembly language program to evaluate A= (B*C)/(D-E)\nusing three address instruction format.\nOR\n3. c) Explain the block diagram for micro programmed control unit.\n3. d) Explain the following addressing modes with examples\ni. Immediate mode\nii. Direct addressing mode\niii. Indexed addressing mode.\n4. a) Perform the following arithmetic operations.\ni. (+54)+(-21)\nii. (-34)+(-54)\n4. b) Draw the flow chart for Booth multiplication algorithm and multiply\n13 with -7 using Booth multiplication algorithm.\n5\n1\n2\n2\n5\n2\n3\n2\n5\n1\n2\n2\n5\n2\n3\n2\n5\n3\n3\n2\n5\n1\n3\n2\nP.T.O.\n",
+   "chars": 2139,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n4. c) Explain the flowchart of floating point addition/subtraction operation.\n4. d) Divide 13 with 7 using binary division.\n5. a) Compare Isolated I/O and Memory mapped I/O.\n5. b)\nWrite short notes on\n5\n2\n3\n2\n5\n2\n3\n2\n5\n1\n2\n3\n5\n1\n3\n3\ni.\nROM\nii. RAМ\niii. DМА\niv. Cache memory.\nOR\n5. c)\nExplain source-initiated\nasynchronous\ndata\ntransfer\nusing\n5\n1\n3\nhandshaking method.\n5. d) Describe the structure of the magnetic disk with neat diagram.\n6. a) Explain RISC instruction pipeline in detail?\n6. b) Discuss about the following Interconnection structures\n5\n2\n2\n3\n5\n2\n2\n4\n5\n2\n2\n4\ni. Multiport memory\nii. Hypercube system.\nOR\n6. c)\nExplain about instruction pipeline in detail.\n6. d) With a neat diagram, explain parallel arbitration circuit.\n5\n2\n2\n4\n5\n1\n2\n4\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 832,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

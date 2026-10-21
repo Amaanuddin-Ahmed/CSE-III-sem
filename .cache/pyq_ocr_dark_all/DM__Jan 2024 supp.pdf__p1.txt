@@ -1,0 +1,64 @@
+ISlorlo4 Px
+
+fall Ticket Number:
+
+MAHATMA GANDY INSTITUTE OF TECHNOLOGY (Antonomons)
+B.Tech. Hl Semester Supplementary Examinations, Jan/leb-2024
+Discrete Mathematics
+(Common to CSE, CSM & CSD)
+
+Time: 3 Hours Answer ALE Questions Max. Marks: 70
+ne Part-A (10 x2 = 20 Marks) _ ne —
+| Q.N lio. | Stem of the Question - M | L [co | PO
+l.a) What are the contrapositive, the converse, and the inverse of the 2 I | I
+conditional statement “The home team wins whenever it is raining”.
+l.b) Give a direct proof of the theorem “If nis an odd integer, then n° is | 2 5 l J
+odd.”
+1.c) Determine whether the function f) = x + / from the set of real | 2 5 2 |
+numbers to itself is one-to-one.
+1.d) State and define any four properties of relation. 2 I 2 |
+1.c) Write a short note on well-order ing property. 2 | 3 l
+1.f) | What is the expansion of (x + yy"? 2 l 3 l
+|.g) Find the probability that a hand of five cards in poker contains four | 2 | 4 J
+cards of one kind.
+1.h) List out applications of recurrence relations. 2 | 4 |
+1.i) | What is complete graph and give any two examples. 2 I 5 |
+
+cl. }) Claborate the properties of trees. ee ee
+
+Part-B (5x 10= 50 Marks)
+
+Q. No. Stem of the Question | L | co | PO
+2.a) Show that these conditional statements is a tautology by using ‘truth tables: 2 1 1
+i, [p> gAgen]- on
+if. [-pA(p vq] — 4g.
+2.b) ‘Test that whether the given set of formulas are inconsistent 5 3 | |
+E—>S,S-~H,A- 7“H,EAA.
+OR
+2.c) Prove that if 7 is an integer and 3742 is even, then 7 is even usinga proof] 5 2 J ]
+
+~ by contradiction. -
+
+2.d) Show that VxP (x) V VxQ(x) and Yx(P (x) V Q(x)) are not logically} 5 2 | l
+equivalent.
+
+3.a) Find the inverse function of f(y) = xt. 5 |
+
+3.b) Draw the Hasse diagram representing the partial ordering {(a/b) | a| 5 2 2 |
+divides b} on {1,2,3,4,6,8,12}.
+OR
+3.) Let A = {a, b, c, d, e} and B = {a, b, ¢, d,e, f, g, bh}. Find 5 2 2 |
+i)AUB. WAN B. ij)A-B. wyB-A
+3.d) — Given that A ={1,2,3,4} and R ={(1,2),(2,3), (3,4 1) be a relation on A.| 5) 3 2 ]
+
+Find R®.
+4, a) Give a recursion definition of the sequence {a,}, n= 1,2,3,.... If 5 3 3 |
+a ay=6n  b. ay=2nt | C. a, = 10"
+
+4.b) How many positive integers less than LQ00
+a. are divisible by 7?
+b. are divisible by 7 but not by 11?
+c, are divisible by both 7 and 11?
+d. are divisible by either 7 or 11?
+
+PBT.O.

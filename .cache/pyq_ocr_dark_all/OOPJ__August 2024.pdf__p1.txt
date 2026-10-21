@@ -1,0 +1,61 @@
+Hall Ticket Number:
+| | | | | | | | | | | | MR-21 | Code: B414CB482
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B. Pech. lV Semester Supplementary L:xaminations, July/Aug-2024
+Object Oriented Programming Using Java
+
+(Common to CSB, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | oo - | —_ Stem of the Question | M LL | CoO | PO |
+l.a) List the data types available in Java. 2 | | 1,2 |
+1.b) Can a method be declared as both abstract and final? Justify your | 2. | | 1,2
+
+answer.
+1.c) — Write about the variables in the interface. 2 | 2 1,2
+1.d) How are exceptions handled in Java? 2 | ?, 1,2
+1.C) Define Multithreading. 2 | 4 1,2
+1. f) Differentiate between Byte streams and character streams. Give any | 2] 3 1,2
+two examples for each stream.
+!.g) — In which situation ArrayList is preferred over LinkedList? 2 | 3 1.2
+1.h) — List the legacy classes available in Java. 2 41 3 1,2
+1.1) | Mention the event object created when the scroll bar is manipulated? 2 2 5 1,2
+1.j) Is it mandatory to use the Layout Managers to place the controls onthe | 2 2 5 1,2
+
+window? Explain your answer.
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+2.a) Define class. Explain constructor overloading using suitable example. 4 2 I 1,2,3
+2.b) The abstract class Vegetable has three subclasses named Potato, | 6 3 1 1,23
+
+Brinjal and Tomato. Write a java program that demonstrates how to
+establish this class hierarchy. Declare one instance variable of type
+String that indicates the color of a vegetable. Create and display
+instances of these objects. Override the toString() method of Object to
+return a string with the name of vegetable and its color.
+
+OR
+2.c) Differentiate between Compile time and Runtime Polymorphism. 4 2 l 1,2
+2. d) Deline Time class with hour and minute as data members. Also define | © J L 1.2.3
+
+display method to display the time and addition method to add two
+time objects. Write the main () method to test the above class methods.
+
+3.a) What is a package? Mention the different access protection using | 6 2 2 1,2
+packages.
+3.b) What is Exception? Demonstrate how you can handle different types of | 4 2 2 1,2
+exception separately.
+OR
+3.¢) Explain the difference between an abstract class and an interface using | 4 ? 2 123
+| appropriate examples.
+OU) Wii a Java prograiit lo LLUSiTaLe UsEr-Ue lined MXCepuon. O Z ZL 1,2,3
+4.a) Write a program to copy the contents of one file into another file. 5 3 3 12.3
+
+4.b) What is Multithreading’? What are the different ways to create | 5 2 Ao 4.2.3
+Threads? Write a program to demonstrate multithreading.
+OR

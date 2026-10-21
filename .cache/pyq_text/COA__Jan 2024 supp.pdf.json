@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\n(EN\n17/02/24 A\nCode: B314CB6S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Supplementary Examinations, Jan/Feb-2024\nComputer Organization and Architecture\n(Common to CSB, CSM & CSD)\nAnswer ALL Questions\nTime: 3 Hours\nQ. No.\n1. a)\nMax. Marks: 70\nPart-A (10 x 2 = 20 Marks)\nStem of the Question\nM\nL\nCO\nPO\nDefine computer organization and computer architecture?\n1. b) What is one address, two address and three address instruction\nformats?\n2\n3\n1\n1\n2\n2\n1\n1\n1. c) What are the functions of control memory?\n2\n2\n2\n2\n1. d)\nWhat is Register Indirect Addressing mode? Give an example?\n2\n2\n2\n2\n1. e)\nSolve (1001101 - 10101001) using 2's complement.\n2\n3\n3\n2\n1. f)\nAdd given signed decimal number +86 and -17. Perform (using 8-\nbit representation) using 2's complement Addition.\n2\n3\n3\n2\n1. g)\nWhat is interrupt? Give the steps for handling interrupt?\n2\n2\n4\n1\n1. h)\nWhat is Auxiliary memory?\n2\n2\n4\n3\n1. i)\nCompare RISC and CISC?\n2\n2\n5\n2\n1. j) Explain the cache incoherence.\n2\n2\n5\n3\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain the components of the Computer system.\n5\n2\n1\n1\n2. b) List and explain the steps involved in the execution of a complete\ninstruction.\n5\n2\n1\n3\nOR\n2. c) What is Micro operation? Briefly explain the arithmetic micro\noperations?\nWith neat sketch explain the process of transferring the data\n2. d)\nbetween various registers of computer using bus structures.\n3. a) Explain the three basic types of data manipulation instructions.\n3. b) Mention the advantages and disadvantages of microprogrammed\ncontrol hardwired control.\n3. c)\n3. d)\nOR\nWhat do you mean by addressing mode? Explain the following\naddressing modes with examples. i) Index addressing mode ii)\nRelative addressing mode.\nExplain the block diagram of Microprogrammed control unit?\n4. a) Discuss about fixed point and floating-point representations.\n4. b) Perform and explain arithmetic addition, subtraction, and overflow\ndetection using fixed point representation.\nOR\n4. c) Perform floating point addition using the numbers 0.256X104 and\n0.4375X103 use the floating point addition algorithm.\n4. d) Explain the multiplication of positive numbers using a booth\nmultiplier with a neat sketch.\n5\n2\n1\n1\n5\n2\n1\n3\n5\n2\n2\n5\n2\n2\n2\n5\n2\n2\n2\n5\n2\n2\n2\n5\n2\n3\n2\n5\n3\n3\n2\n5\n3\n3\n2\n5\n2\n3\n2\nP.T.O.\n",
+   "chars": 2331,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. a) Explain the READ and WRITE operations in Associative Memory.\n5.b) Dřaw the block diagram of a DMA controller and explain its\nfunctioning?\nOR\n5. c) Explain in detail parallel priority interrupt hardware?\n5\n2\n4\n3\n5\n2\n4\n3\n5\n2\n4\n1\n5. d) Explain direct mapping technique in \nin cache memory?\n5\n2\n4\n2\n6. a) Explain the instruction pipeline processing in RISC architecture.\n5\n2\n5\n3\n6. b)Elucidate array processor in detail\n5\n2\n5\n2\nORx)A\n6.c)\nWhat are the various forms available for establishing\nan\n5\n2\n5\n11\ninterconnection network in a multi-processor system?\nпolttлa2301\n6. d) Does pipelining get, affected by data dependencies among the\ninstruction? Justify your answer with lucid examples.\nS\n2\n5\n3\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\nYsiqлaхe us ovio Tabon gnizzarbbA 1\n",
+   "chars": 815,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

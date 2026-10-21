@@ -1,0 +1,18 @@
+instruction? Justify your answer with lucid examples.
+
+— M: Marks; |
+
+5. a) Ixplain the READ and WRITE operations in Associative Memory. 5 2 4
+S.b) Draw the block diagram of a DMA controller and explain its | 5 2 |
+functioning? |
+OR
+5.¢) Explain in detail parallel priority interrupt hardware? 5 2 4
+5.d) Explain direct mapping technique in cache memory? 5 2 4
+6.a}) Explain the instruction pipeline processing in RISC architecture. — 2 5
+| ©6.b) — Ehucidate array processor ti detail, | : bos 3 5
+OR
+6. C) What are the various forms available | for establishing an 5 2 5
+interconnection network. in a multi-processor system? | .
+6.d) Does pipelining get affected by data dependencies among the} 5 2 5
+
+ Bloom’s ‘Taxonomy Level; CO: Course Outcome; PO: Programe Outcome

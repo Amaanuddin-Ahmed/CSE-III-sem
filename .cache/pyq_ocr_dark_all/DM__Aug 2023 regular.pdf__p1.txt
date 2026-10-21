@@ -1,0 +1,60 @@
+Ilall Ticket Number:
+| | | | | | | | | | | MR-21 | Code: B4131IT5
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, Aug/Sep-2023
+Discrete Mathematics
+(Information Technology)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+| Q.No. | Stem of the Question M | L | CO | PO
+l.a) | Write the converse and contra positive of the statement” If X is odd | 2 l l l
+then X’ is odd.”
+1.b) Explain about Quantifiers. 2 | l l
+l.c) Explain the properties of relations. 2 I 2 I
+1.d) | Define Equivalence relation. 2 l 2 l
+l.e) Develop a recursive algorithm to find factorial of a number. 2 3 3 |
+Lf) Find the number of 5-letter words which contain three different | 2 3 3 1.2
+consonants and two different vowels of the English alphabet.
+1.g) Solve the following recurrence relation by substitution method. 2 3 4 1,2
+An=An-j tn where ag=2.
+1.h) Write about expected value and variance. 2 | 4 l
+1.i) Define subgraphs with suitable examples. 2 l 5 l
+1.j) | Explain spanning trees. 2 l 5 l
+ee Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M L | CO | PO
+2.a) Show that (Vx) {P(x) v Q(x)} => (Vx) P(x) v (Sx) Q(x). 5 2 1 1,2
+2.b) Explain in detail about logical connectives with examples. 5 2 | l
+
+OR
+2.c) Show that R-S can be derived from the premises P—(Q—S), IRVP | 5 2 | 1,2
+and Q.
+2.d) Construct the truth table for the following statement : 5 l l l
+(P>Q)VC TPR)
+3.a) Given the relation matrix Mr of a relation R, 5 l 2 ]
+Mre=/[1l 0 1
+1 1 0
+1 1 1
+
+Find the matricés of R°=RoR,R°=RoOROR.
+3.b) Let A= {1, 2, 3, 4, 6, 8, 12, 24}.Show that the relation ’divides’ is | 5 2 2 1,2
+partial ordering on A. Draw Hasse diagram.
+OR
+3.c) LetX={1,2,3,4,5,6}and 5 2 2 41,2
+R={(1,4),(1,3),(1,2),(2,5),(2,4),(2,3),(3,4),(3,6),(5,6)}. Define a
+compatibility relation. Draw the graph and find the maximal
+compatibility blocks for the relation R.
+3.d) What is composition of functions? Let f, g, h be functions from R to R | 5 2 2 1,2
+defined by f(x) =x’and g(x) =x +5 and h(x) =3x, for all xCR, Find gof,
+fog, fof, gog, hof, goh?
+
+4.a) Using the principle of mathematical induction, prove that | 5 3 3. «1,2
+1:34+3:-54+5-7+....+ (Qn- 1)2n + 1) = (1/3) {n(4n? + 6n - 1).
+4.b) Find the coefficient of x°y’z? in (2x-3y+5z)*. 5 1 3 12
+OR
+4.¢c) State and prove Binomial theorem. 5 l 3 l
+
+P.T.O.
+

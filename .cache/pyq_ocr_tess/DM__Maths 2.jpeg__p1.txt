@@ -1,0 +1,53 @@
+4a) In a lattice (1
+commutative,
+
+4.b) Let G= {0,1,
+modulo 6.
+
+ociation and absorption,
+4.5), verify whether G forms a group under addition
+
+OR
+4.c) Define semigroup, monoid, group, abelian group with example.
+4.d) Let G={1,-1,i,-i}, Judge whether G forms an abelian group under
+
+usual multiplication.
+
+5.a) Find the total number of positive integers formed from the digits
+1 4 and 5 if no number is repeated in any integer,
+
+5.b) How many ways to get an odd sum when two distinguishable dies are
+rolled?
+OR
+5.¢) In how many ways can 4 mathematics books, 3 history books, 3
+chemistry books and 2 sociology books be arranged on the shelf so
+that all books of the same subject are together?
+5.d) Find the number of integers between 1 and 250 that are divisible by
+
+any of the integers 2, 3 and 6.
+
+6.a) Inspect whether the following graphs are isomorphic or not, Justify
+your answer.
+
+6.b) Find the dual of the following graph.
+
+OR
+Define spanning tree. Apply Prim’s algorithm to find minimum
+spanning tree on the following weighted graph.
+
+6.¢)
+
+15 ¢
+
+=a. i [I ——————
+A, VY) state and prove the laws indempotent, | 3-5
+
+lanar graph is 5 colourable.
+
+6.d) Prove that a simple
+M: Marks; L: Bloom’
+
+Taxonomy Level; CO: Course
+
+Outcome; PO: Programme SMS
+

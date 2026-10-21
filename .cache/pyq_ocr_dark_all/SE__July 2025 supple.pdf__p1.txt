@@ -1,0 +1,60 @@
+| | | | | | | | | | | | MR-21 Code: BSISCS3S
+
+MAHATMA GANDALINSTITUTE OF TECHNOLOGY (Antonomons)
+B.Tech. V Semester Supplementary Examinations, June/July 2025
+Sotthware lnoineering
+(Common to CSE and IT)
+
+lime: 3 Hours Answer ALL Questions Max. Marks: 70
+l.a) List the characteristics of Software contrasting the characteristics of | 2 l l 1,8
+hardware.
+1.b) = Mention the Advantage and Disadvantages of Waterfall model. 2 2 | 1,8
+l.c) Define feasibility study. And list the types. ? | 2, ?
+t. d) Differentiate between lunctional and Non-functional Requirements. 2 2 2 2
+a) Wriic the importance of pencralization rclattouship. ? 5 2
+i. i) Lisi the componcnis of use case diagram, JL 2 3
+i.g) differentiate verification and validation. Which iype of testing address | 202 “4 2
+verification? Which type of testing address validation?
+1.h) What are the approaches of debugging? 2 l 4 I
+1.1) Wetine Quality. flow can quality be quantitied. 2 2 5 i
+1.4) Define the terms i) Measures it) Metrics and ti) Indicators. {2 2 5 |
+
+Part-B (5 x 10 = 50 Marks) _
+
+Q. No. | Stem of the Question mM | iL |CO| PO
+2.a) Explain in detail about the Phases in Unified Process Model with neat | 5 2 | 2,3
+diagram.
+2.b)  Lxplain about the Umbrella Activities which support the software | 5 5 | 2,3
+developtnent process and discuss about their recessity in maintaining.
+OR
+2c) Assume that you are the technical manager of a software development 5 5 | 2.3
+
+organization. A Client approached you for a software solution the
+problems stated by the client have uncertainties which lead to loss if it
+not planned and solved which software development modcl you will
+suggest for this project —justify. Explain that model with its pros and
+cons and neat sketch
+2d) VNseuss Manager's myths about software development and their effect | 5 Y | 5
+on the practitioner’s performance as well as on the overall outcome.
+
+3. a) Describe Extreme Programming Values and Framework Activities in | 5 2 2 2,3
+detail.
+3.b) Demonstrate on Requirement Validation Techniques. 5 3 2 2
+ke
+Soe) Give an in-depth overview of the dynamic systems development | 5 A ? A
+
+method and feature driven devclopinent method.
+3.d) Compare ihe scenarios that are inierrclaicd wiih Agility aud the Cosi | 3 | 2 2
+of Chance
+
+4 \ aN | ’ wet ' 4 ti i . i ae 4 ad ¢ Fa i) y
+‘P. ety) BK PACER CE CIEE A. a | os KUOTER REDE aol Lsvyhcl PELE L Dede oe, Cue otal clita advo tide, .? VW , lt
+charnctertsites of eood user titerfaee desien,
+A fy Discuss the basie desren principles of class-based cotmpoucnis. 5 } } a)
+Hops
+
+Aye Poway cay ybycurti Opera: arebybeckaee cderedgayiy  varthba csprvpabacrccees caves bere Gia | ' ) + D4
+
+to \ : { 7 te : .
+Bryan. ¢ aede rastiggteito creer carr eid ride iene Payee
+Pee Owe ey RARER AER RS py ee tr TES Re ERA R AREAS yo

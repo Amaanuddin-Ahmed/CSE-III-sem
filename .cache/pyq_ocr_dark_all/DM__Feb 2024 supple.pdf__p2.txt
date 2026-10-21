@@ -1,0 +1,77 @@
+A.)
+
+3.0)
+
+rw |
+
+G. a)
+
+6.)
+
+6. d)
+
+OR
+
+Out of S consonants and 3 vowels, how many words of 3 consonants and | 5 |
+2 vowels can be formed?
+
+Mind the number of permutations that can be made out of the letter in| 5S 9 2
+
+A «101
+
+word ASSASSINATION.
+
+two friends Harish and Kalyan appeared for an exam. Let A be the event | 5 4
+
+that flats is sclected and i3 is the event that Kalyan is selected. ‘Phe
+probability of A is 2/5 and that of B is 3/7. Find the probability that both of
+them are selected.
+
+lund the solution foray Jan) day, Obora> 2 andlag- ape. a,
+OR
+Solve the recurrence relation ay Say.—1 Gay. for n>2 ay 16, ay 80? . 5 3
+
+A car manutacturiny factory has two plants, X and Y. Plant X manufactures | 5?
+70% of cars and plant Y manufactures 30%. 80% of the cars at plant X and
+90% of the cars at plant Y are rated of standard quality. A car is chosen at
+random and is found to be of standard quality. What is the probability that
+it has come from plant X?
+Show that the coniplete bi-partite graph K 33 is uot planar eraph. D2
+What is a Hamiltonian Cycle? Draw bipartite graph K34 and prove that this] 9 3
+praph docs uot have a Tfamiltouian cycle.
+
+OR
+Define spanning tree. Apply Prim’s alporithim to find minimum spanning | 9 3
+tree on the following weighted graph.
+
+Graph GV, &)
+
+show that the following graph is verified by Muler’s formula or not? 5D
+P Q R
+a
+at
+ied
+Ww
+i ' 1
+Vv J I
+
+M: Marks; L.: Bloomn’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+
+d.
+
+4
+
+iz
+
+i)
+
+iz
+y
+
+1,2
+
+1,2
+
+3
+
+[,/

@@ -1,0 +1,15 @@
+.a) — Explain about AWT class Hierarchy? | 5 3 4 2
+.b) Explain the procedure to handle mouse events in Java with an| 5 2 4 2
+Example program.
+OR
+.c) Write a java program to design a scientific calculator using AWT. 5 4 4 4
+.d) What are the various layout managers used in Java? 5 2 4 2
+.a) | What is the role of event listeners in event handling? List the Java | 5 2 5 2
+event listeners.
+.b) | Write an applet to display the mouse cursor position in that applet | 5 3 5 2
+window.
+OR
+.c) Explain the life cycle of an applet. 5 2 5 2
+.d) | Why swing components are preferred over AWT components? 5 2 5 3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

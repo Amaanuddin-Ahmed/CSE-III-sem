@@ -1,0 +1,8 @@
+Explain about B+ tree indexing with an example?
+Explain about cluster, primary and secondary indexes with example?
+OR
+
+Explain about hash based indexing with an example?
+Explain in detail and ISAM?
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+

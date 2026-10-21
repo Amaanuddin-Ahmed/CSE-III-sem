@@ -1,0 +1,35 @@
+5.a) In aneighbourhood, 90% children were falling sick due flu and 10% 5 3 4
+due to measles and no other disease. The probability of observing
+rashes for measles is 0.95 and for flu is 0.08. If a child develops rashes,
+find the child’s probability of having flu.
+
+5.b) Solve recurrence relations by Generating Functions 1 5 3 4
+g
+an - 9an-1+ 20an2= 0 for n > 2 and av= -3, a= -10
+OR
+
+5.¢) Solve the recurrence relations using the characteristic roots | 6 3 4
+an-4an-1-12an-2 = 0 for n>2 and ao =4, ai = 16/3
+
+5.d) | What is the probability that when two dice are rolled, the sum of the 4 2 4
+numbers on the two dice is 7? |
+6.a) Find the spanning tree using BFS algorithm | 6 2 5
+fy gee mens meet 4 x \
+7 — a os
+1 wf. ee 3
+\ At} ON
+on aa we Pa wo
+6.b) Define the following with an example: | 4 I 5
+i) Chromatic Number 11) Euler Path iii) Complete graph Kn
+iv) Bipartite Graph
+OR
+6.c) Show that the following graphs are Hamiltonian graphs. 5 3 5
+,
+“
+gga . ey. a
+3 3 Z é
+6.d) State and prove the first theorem of graph theory. 5 2 5
+
+1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

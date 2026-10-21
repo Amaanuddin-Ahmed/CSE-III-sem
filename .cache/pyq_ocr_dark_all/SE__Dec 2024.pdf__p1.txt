@@ -1,0 +1,63 @@
+Ilall ‘Licket Number:
+
+| |
+
+PLET TET LM |
+
+Code: B424CSSS
+
+MAHATMA GANDHEINSTIPULPE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, December 2024/January 2025
+
+Software Engineering
+(Common to CSE, CSB and CSD)
+
+Time: 3 Hours Answer ALL Questions
+
+Max. Marks: 60
+
+Q. No. | Stem of the Question M| L | co | PO
+l.a) Explain about Software Myths? | 2 l l
+l.b) Define CMMI? l I | 2
+l.c) | What are the User Requirements? l I 2 l
+1.d) | Summarize requirement clicitation and analysis? l 2 2 2
+|e) [lustrate the Software architecture? | ? 3 |
+1. f) Construct a Collaboration diagram with your own example? | 3 3 2
+1.2) Justify the concept of White box testing? | 5 4 |
+1.h) — List few metrics for software quality? I 4 4 2
+|. 1) Determine few Software risks? | 5 5 I
+1.j) Explain risk projection and how it is used in risk management? tft 4 5 2
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M[L [co] Po |
+2.a) Explain about Changing nature of software and its impact in software | I
+engineering.
+2.b) Define Process framework and explain in detail its activities. 5 | | 2
+OR
+2.c) | Why Agile is used and also tell the Agile methodology. 5 l I l
+Z.d) Explain the Spiral modei aud Watertait Model. 5 2 2
+3.a) Explain how a software requirement document ts structured? 5 2 2 |
+3.b) Distinguish between functional and non-functional requirements? 5 4 2 2
+OR
+3.c) List the activities of Requirements clicitation and analysis? Explain in | 5 4 2 1
+detail.
+3,d) Explain the Software Requirement Specification (SRS). ) ) 2, }
+4.a) Determine the basic elements of class based model with suitable | 5 5 3 l
+diagram.
+4.b) Distinguish between Coupling and Cohesion? How do they affect | 5 4 3 2
+software design?
+OR
+Lc) Explain various strategies of design .Which design strategy is most} 5 2 3 |
+popular and practical?
+Ad) Evaluate the various challenges faced during the design process and | 5 5 ; )
+strategies for overcoming then?
+Soa) Explain the art of debueeine with sketch? 5 ) A
+Sb) Justify the difference between Black box testing, and White box | 5 5 A )
+
+tosting,?
+
+AWN
+AY AW
+
+wo ye Te)
+Hos tho °

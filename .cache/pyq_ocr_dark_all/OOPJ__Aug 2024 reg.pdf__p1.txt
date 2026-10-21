@@ -1,0 +1,61 @@
+[Tall Ticket Number: _
+| | | P| ft | | | MR-22 Code: B424CM5
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, July/August-2024
+Object Oriented Programming through Java
+(Computer Science and Engineering (AI&MI))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+. Part-A (10x 1 =10 Marks) _
+| Q.No. | Stem of the Question mM |L{CcOo | PO
+l.a) List the features of OOPS concepts? | l l l
+1.b) Define a constructor and list the types of constructors. | l l |
+l.c) | What are the uses of super keyword in Inheritance? Give examples. l I 2 l
+l.d) Differentiate between Interface and Abstract class with example? l I 2 2
+1. e) What is interthread communication? | 2 3 ?
+1. f) — List the different string handling functions? I 2 3 2
+1. ¢) — List the types of event listeners. | | 4 2
+1.h) Discuss the event delegation model used 1n Java's AW. | 2 4 3
+1.1) State the difference between applets and applications? I 3 5 2
+1.j) | Give the subclasses of JButton class. ; 2S 2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. ‘| oo Stem of the Question Z : M | L | CO | PO
+2.a) Explain various types of operators with example. 5 | I |
+2.b) With suitable code segments illustrate various uses of ‘final’ | 5 3 | 2
+
+keyword.
+OR
+
+2.c) What do you understand by type casting & automatic promotion? | 5 2 1 2
+Explain with suitable examples.
+
+2.d)  Demtonsiraie Nesied class concept with att exauiple. 5 3 I 2
+3.a) Give brief description about the various access control mechanisms | 5 3 2 2
+used in java.
+3.b) — Illustrate on how packages can be created, defined and accessed. 5 2 2 2
+OR
+3.c) Develop a Java Program to create an abstract class named Shape that | 5 4 2 4
+
+contains two integers and an empty method named _ printArea().
+Provide three classes named Rectangle, Triangle and Circle such that
+each one of the classes extends the class Shape. Each one of the
+classes contains only the method printArea () that prints the area of
+the given shape.
+
+3.d) | What is interface in java? Explain the need of interface mechanism in | 5 2 2 2
+java?
+
+4.a)  Witha program illustrate user defined exception handling. 5 2 3 2
+
+4.b) — Llow to handle multiple catch blocks for a nested try block? Explain | 5 3 3 2
+viii cut CaAduLipie. |
+
+OR
+
+4.) Demonstrate Auto boxing and Auto unboxing with an example | 5 3 3 3
+program.
+
+4d) How to achieve synchronization amony, threads? Write suitable code. 5 3 3 A

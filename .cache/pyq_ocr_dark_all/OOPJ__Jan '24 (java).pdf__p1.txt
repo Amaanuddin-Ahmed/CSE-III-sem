@@ -1,0 +1,73 @@
+Hall ‘Ticket Number:
+
+PILL
+
+tt LL _MR2I
+
+pole Potty
+
+Code: B414CS4S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [IV Semester Supplementary Examinations, Jan/l*eb-2024
+
+Java Programming
+(Common to CSE & IT)
+
+Time: 3 Hours Answer ALL Questions
+
+Part-A (10 x 2 = 20 Marks)
+
+Max. Marks: 70
+
+Q. No. | Stem of the Question M | L | CO | PO
+l.a) Explain the usage of ‘this’ keyword. 2 I 1,2
+1.b) Discuss about binary, unary, and ternary operators. 2 l 1,2
+1.c) Explain about the importance of extends and implement keywords. 2 2 1,2
+1.d) | How to create and use a package in Java program? I 2 1,2
+l.c) Explain Enumerations in Java. 2 3 1,2
+1. f) Define inter-thread communication? I 4 1,2
+l.g) Explain about Scanner with an example. 2 3 1,2
+l.h) = Define ArrayList with syntax. | 3 1,2
+1.i) | Give a note on layouts in AWT. l 5 1,2
+1. j) Explain in brief about Flow Layout. 2 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M[L [co] PO
+2.a) What is Polymorphism. Explain runtime polymorphism in detail. 5 2 | 1,2
+2.b) — Explain about constructor overloading. 5 2 | 1,2
+
+OR
+2.c) Give a brief note on operators in java. 5 I | 1,2
+2.d) Explain various Access specifiers supported by Java with an example. 5 3 1 = 1,2,3
+3.a) What is the importance of Exception Handling in Java? Define and | 5 4 2 1,2
+distinguish between checked and unchecked exceptions.
+3.b) Explain Packages and Interfaces with a suitable program. 5 2 2  1,2,3
+OR
+3.c) Write a java program which illustrates try, catch, throw, throws and) 5 3 2  =1,2,3
+finally keywords.
+3.d) Write a Java program to find the area and perimeter of square and circle | 5 3 2  1,2,3
+using interface.
+4.a) Differentiate between thread and process? How is a thread created? | 5 4 4 1,2
+Discuss.
+4.b) What is a stream? What is the difference between byte streams and} 5 4 3 1,2
+character streams? How are they used to capture input from the user?
+OR
+4.c) How to set priorities for threads? Build an example. 4 3 4 1,2,3
+4.d) Explain in detail about different stream classes. 6 2 3 1,2
+5.a) What is difference between ArrayList and LinkedList in collection | 5 4 3 1,2
+framework? Explain.
+5.b) | What are common algorithms implemented in Collections Framework? 5 1 3 1,2
+OR
+5.c) | What is the difference between Iterator and Listlterator? 4 4 3 1,2
+5.d) | Explain how HashMap works in Java with an example. 6 2 3. 1,2,3
+6.a) Explain the concept of Applet-to-Applet communication with suitable | 5 3 5 1,2,3
+program.
+6.b) What is the significance of Layout managers? Discuss briefly various | 5 2 5 1,2
+layout managers.
+OR
+6.c) Write about different event classes. 5 2 5 1,2
+6.d) What are the limitations of AWT? 5 2 5 1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

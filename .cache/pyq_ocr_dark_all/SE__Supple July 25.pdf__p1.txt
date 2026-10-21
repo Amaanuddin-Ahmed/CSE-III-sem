@@ -1,0 +1,47 @@
+MAHATMA GANDHIINSTIPUPTE OF FECHNOLOG Y (Autonomous)
+B. Pech. [LV Semester Supplementary Examinations, July 2025
+Software ingmeering
+(Computer Science and Business Svstem)
+
+time: 3 [lours Answer ALL Questions Max. Marks: /0
+_ — Part-A 10x 2° 20 Marks) _
+| Q. No. Stem of the Question | M | L | CO — PO.
+1.a) | What is software engineering? What are its applications? 2 2 l 2
+|. b) — Differentiate between software process and project. 2 3 1 2
+1.c) How do non-functional requirements differ from functional | 2 3 2 2
+requirements?
+1 al) Define context modcls in system modeling. 2 | ? |
+Ll.) Llow would you apply UML, class diagrains in software desigiv? p23 J 5
+1.1) What ts the purpose oi architecturat siyices i sofiware desipir? pO 3 >
+1. @) What is the difference between biack box iesting and whitie-bus | 7 ? 4 2
+iesting?
+1.h) — What is the role of debugging in the software testing process? 2 | 4 2
+1.1) Justify the use ot the ISO 9000 quality standards as a benchmark jor | 2 5 5 7
+global software quality assurance practices.
+1.j) List the key components of the RMMM plan. _ 2 I 52
+Part-B (5 x 10 = 50 Marks)
+| Q. No. | Stem of the Question M|L |CO| PO
+2.a) What is waterfall process model and discuss about its reasons for | 5 2 l 2
+failure?
+2 b) List and explain various characteristics of software. 5 2 l 2
+OR
+2.¢) Describe in detail about personal and team process models. 5 2 l 2
+2.d) ‘Explain unified process and claborate on the unified process work | 5 2 L 2
+products.
+3.a) Write the difficulty process for Eliciting and understanding | 45 2 2 2
+requirements from system stakeholders.
+3. b) Explain bow behavioral inodels help in understanding system | 5 3 ? ?
+functionality.
+OR
+3.c) Discuss the significance of object models in system modeling. | 5 2 2 2
+Provide an example.
+3.d) Why is it important to validate software requirements, and what are | 5 2 2 2
+common techniques used for validation?
+4. a) Hlow would you use UMI, diagrams to model both the static and | 5 3 3 3
+dynainic aspects of a software system? Provide cxamples.
+A ty Explain how sequence diaerams and collaboration diaprains can be | 5 . 5 4
+uscd iogether to model object tateractions ina system.
+wis
+Aa) iMusiraie deste process iG cnsiirc desipi quality ba software | 4 ? 3 |
+development.
+Aly Llow can component draprams be appled to represent the physical | ) 7

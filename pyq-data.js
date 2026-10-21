@@ -1,6 +1,6 @@
 /**
  * MGIT PYQ Hub - question bank generated from the original Drive papers.
- * 87 unique papers, 2308 canonical questions.
+ * 87 unique papers, 2288 canonical questions.
  * Each question keeps its exact paper, page and question number.
  */
 
@@ -82699,9 +82699,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B1-2266",
+    "id": "ES-B2-2266",
     "subjectId": "ES",
-    "chapter": 1,
+    "chapter": 2,
     "part": "B",
     "marks": 3,
     "years": [
@@ -82709,7 +82709,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.b",
-    "topicTag": "Unit 1",
+    "topicTag": "Unit 2",
     "question": "Summarize the socioeconomic impacts of floods and droughts.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -82769,9 +82769,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B1-2268",
+    "id": "ES-B2-2268",
     "subjectId": "ES",
-    "chapter": 1,
+    "chapter": 2,
     "part": "B",
     "marks": 3,
     "years": [
@@ -82779,7 +82779,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q2.b",
-    "topicTag": "Unit 1",
+    "topicTag": "Unit 2",
     "question": "List renewable energy sources and explain their advantages.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -82804,9 +82804,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B2-2269",
+    "id": "ES-B1-2269",
     "subjectId": "ES",
-    "chapter": 2,
+    "chapter": 1,
     "part": "B",
     "marks": 2,
     "years": [
@@ -82814,7 +82814,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q3.a",
-    "topicTag": "Unit 2",
+    "topicTag": "Unit 1",
     "question": "Define food chain and food web, giving suitable examples.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -82909,9 +82909,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B2-2272",
+    "id": "ES-B1-2272",
     "subjectId": "ES",
-    "chapter": 2,
+    "chapter": 1,
     "part": "B",
     "marks": 3,
     "years": [
@@ -82919,7 +82919,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 2",
+    "topicTag": "Unit 1",
     "question": "Explain ecosystem values and services.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -82944,9 +82944,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2273",
+    "id": "ES-B1-2273",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 2,
     "years": [
@@ -82954,7 +82954,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q5.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Define genetic, species, and ecosystem biodiversity with examples.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -82979,9 +82979,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2274",
+    "id": "ES-B1-2274",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 3,
     "years": [
@@ -82989,7 +82989,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q5.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What are ecological pyramids? Discuss the pyramid of energy.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83014,9 +83014,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2275",
+    "id": "ES-B1-2275",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83024,7 +83024,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q6.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83049,9 +83049,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2276",
+    "id": "ES-B2-2276",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 2,
     "part": "B",
     "marks": 3,
     "years": [
@@ -83059,7 +83059,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q6.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 2",
     "question": "Summarize the benefits of forests and the harmful effects of deforestation.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83119,9 +83119,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B1-2278",
+    "id": "ES-B2-2278",
     "subjectId": "ES",
-    "chapter": 1,
+    "chapter": 2,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83129,7 +83129,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.b",
-    "topicTag": "Unit 1",
+    "topicTag": "Unit 2",
     "question": "List the benefits and problems associated with big dams.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83189,9 +83189,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B1-2280",
+    "id": "ES-B2-2280",
     "subjectId": "ES",
-    "chapter": 1,
+    "chapter": 2,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83199,7 +83199,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q2.b",
-    "topicTag": "Unit 1",
+    "topicTag": "Unit 2",
     "question": "Analyze the reasons for deforestation and its consequences on the environment.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83224,9 +83224,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B2-2281",
+    "id": "ES-B1-2281",
     "subjectId": "ES",
-    "chapter": 2,
+    "chapter": 1,
     "part": "B",
     "marks": 3,
     "years": [
@@ -83234,7 +83234,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q3.a",
-    "topicTag": "Unit 2",
+    "topicTag": "Unit 1",
     "question": "Explain food chains and food webs with suitable examples. Give their significance.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83329,9 +83329,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B2-2284",
+    "id": "ES-B1-2284",
     "subjectId": "ES",
-    "chapter": 2,
+    "chapter": 1,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83339,7 +83339,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 2",
+    "topicTag": "Unit 1",
     "question": "Illustrate the universal energy-flow model of an ecosystem.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83364,9 +83364,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2285",
+    "id": "ES-B1-2285",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 3,
     "years": [
@@ -83374,7 +83374,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q5.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Explain genetic, species, and ecosystem biodiversity with examples.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83399,9 +83399,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2286",
+    "id": "ES-B2-2286",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 2,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83409,7 +83409,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q5.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 2",
     "question": "Evaluate the environmental effects of mineral-resource extraction.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83434,9 +83434,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2287",
+    "id": "ES-B1-2287",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 3,
     "years": [
@@ -83444,7 +83444,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q6.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Discuss the consumptive and social values of biodiversity, giving examples of each.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83469,9 +83469,9 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "ES-B3-2288",
+    "id": "ES-B2-2288",
     "subjectId": "ES",
-    "chapter": 3,
+    "chapter": 2,
     "part": "B",
     "marks": 2,
     "years": [
@@ -83479,7 +83479,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q6.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 2",
     "question": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.",
     "paperName": "ES-model question paper-MID-1.pdf",
     "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
@@ -83500,706 +83500,6 @@ const QUESTIONS_DATABASE = [
         "qno": "6.b",
         "marks": 2,
         "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "ES-A1-2289",
-    "subjectId": "ES",
-    "chapter": 1,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1",
-    "topicTag": "Unit 1",
-    "question": "Organisms that feed on dead matter and convert it into nutrients are called: (a) Producers (b) Detritivores (c) Carnivores (d) Decomposers.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "1",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A1-2290",
-    "subjectId": "ES",
-    "chapter": 1,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q2",
-    "topicTag": "Unit 1",
-    "question": "The accumulation of non-biodegradable matter or chemicals in living organisms is known as: (a) Ecological balance (b) Bioaccumulation (c) Carrying capacity (d) Biomagnification.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "2",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A1-2291",
-    "subjectId": "ES",
-    "chapter": 1,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3",
-    "topicTag": "Unit 1",
-    "question": "The amount of radiant energy stored at the producer level by photosynthesis is called: (a) Primary production (b) Homeostasis (c) Carrying capacity (d) All of the above.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "3",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A1-2292",
-    "subjectId": "ES",
-    "chapter": 1,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4",
-    "topicTag": "Unit 1",
-    "question": "The total number of living organisms at the various trophic levels of a food chain is depicted by: (a) Pyramid of numbers (b) Pyramid of energy (c) Pyramid of mass (d) All of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "4",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A2-2293",
-    "subjectId": "ES",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q5",
-    "topicTag": "Unit 2",
-    "question": "Which of the following is unidirectional in an ecosystem? (a) Flow of energy (b) Flow of nutrients (c) Flow of matter (d) All of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "5",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A2-2294",
-    "subjectId": "ES",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q6",
-    "topicTag": "Unit 2",
-    "question": "Which of the following are non-renewable energy sources? (a) Coal (b) Petroleum (c) Natural gas (d) All of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "6",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A2-2295",
-    "subjectId": "ES",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q7",
-    "topicTag": "Unit 2",
-    "question": "Solar energy can be harnessed using the principle of: (a) Photoelectric effect (b) Photo-oxidation (c) Photo-reduction (d) None of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "7",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A2-2296",
-    "subjectId": "ES",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q8",
-    "topicTag": "Unit 2",
-    "question": "Identify the environmental damage caused by mining: (a) Devegetation (b) Ground subsidence (c) Air and water pollution (d) All of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "8",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A3-2297",
-    "subjectId": "ES",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q9",
-    "topicTag": "Unit 3",
-    "question": "Variation among individuals of the same species is which type of biodiversity? (a) Genetic (b) Species (c) Ecosystem (d) Both (b) and (c).",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "9",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A3-2298",
-    "subjectId": "ES",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q10",
-    "topicTag": "Unit 3",
-    "question": "The direct-use values of biodiversity include: (a) Food (b) Fuels (c) Medicines (d) All of these.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "10",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A3-2299",
-    "subjectId": "ES",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q11",
-    "topicTag": "Unit 3",
-    "question": "The organisms that feed directly on producers are called ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "11",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A3-2300",
-    "subjectId": "ES",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q12",
-    "topicTag": "Unit 3",
-    "question": "The process of eating and being eaten in an ecosystem is called ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "12",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A4-2301",
-    "subjectId": "ES",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q13",
-    "topicTag": "Unit 4",
-    "question": "Wind energy can be harnessed using ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "13",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A4-2302",
-    "subjectId": "ES",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q14",
-    "topicTag": "Unit 4",
-    "question": "True or false: Nitrogen-fixing bacteria are present in the root nodules of leguminous plants.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "14",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A4-2303",
-    "subjectId": "ES",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q15",
-    "topicTag": "Unit 4",
-    "question": "True or false: Gross Primary Productivity (GPP) = Net Primary Productivity (NPP) + Respiration (R).",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "15",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A4-2304",
-    "subjectId": "ES",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q16",
-    "topicTag": "Unit 4",
-    "question": "A scarcity of water leads to a situation called ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "16",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A5-2305",
-    "subjectId": "ES",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q17",
-    "topicTag": "Unit 5",
-    "question": "The process of extracting ores from mines is called ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "17",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A5-2306",
-    "subjectId": "ES",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q18",
-    "topicTag": "Unit 5",
-    "question": "Give examples of non-renewable energy resources.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "18",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A5-2307",
-    "subjectId": "ES",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q19",
-    "topicTag": "Unit 5",
-    "question": "Quinine is obtained from the bark of the ____ tree.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "19",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "ES-A5-2308",
-    "subjectId": "ES",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q20",
-    "topicTag": "Unit 5",
-    "question": "The variety and variability among all living organisms is called ____.",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "semester": "I",
-    "examType": "Mid",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 11,
-        "session": "November 2023 Midterm I - Objective",
-        "examType": "Mid",
-        "semester": "I",
-        "label": "November 2023 Midterm I - Objective",
-        "paperName": "ES-model question paper-MID-1.pdf",
-        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-        "page": 5,
-        "qno": "20",
-        "marks": 1,
-        "part": "A"
       }
     ]
   }

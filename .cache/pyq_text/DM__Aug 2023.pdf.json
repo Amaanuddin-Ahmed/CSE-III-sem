@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B313CS5S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Supplementary Examinations, Aug/Sep-2023\nDiscrete Mathematics\n(Common to CSE, CSM & CSD)\nAnswer ALL Questions\nTime: 3 Hours\nPart-A (10 x 2 = 20 Marks)\nQ. No.\nStem of the Question\n1. a)\nConstruct the truth table for -(PV(QAR)).\n1. b) Test the validity of the following argument (pAr)→}\\b), (-b(r\n..(pAr)→r\n1. c)\nWhat is partial ordering?\n1. d)\nDefine cardinality of sets with an example.\n1. e) Write the statement of pigeonhole principle.\n1. f) Find out how many 5-digit numbers greater than 30,000 can be formed\nfrom the digits 1,2,3,4 and 5.\n1. g) What is generating function?\n1. h) Define axioms of probability.\n1. i) Define graph coloring with an example.\n1. j)\nWhat is spanning tree?\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\n2. a) Show that (P→Q)→R and P→(Q→R) are logically equivalent\n2. b) Show the following equivalence without constructing the truth table.\n((ΡΛQΛΑ)→C)^(A→(PvQvC)) →(Α^(PQ))→C\nOR\n2. c) State and explain the rules that can generate a well formed formula.\n2. d) Obtain the principal disjunctive and conjunctive normal form of the\nfollowing formula.\n(P (QR))^(P (Q^ R))\n3. a) Write the properties of binary relations.\n3. b) Find the transitive closure of the relationR = {(1, 2), (2, 3), (3, 4),\n(4, 1)}. Show that R' for all values i for that give new elements of the\ntransitive closure.\nOR\n3. c) What is n-ary relations? And explain its applications.\n3. d) Let A= {1, 2, 3, 4, 6, 8, 12, 24}, show that the relation \"divides is a\npartial ordering on A and draw the Hasse diagram.\n4. a) How many four letter words can be formed using the letters a,a,\na,b,b,c,c,c,c,d,d?\n4. b) Expand (2x - y)7 using the Binomial Theorem.\nOR\n4. c) Use mathematical induction to show that\n1+2+22+.............+ 2\"=2\"+1_1 for all positive integers n.\n4. d) Write the 3-combinations and 3-permutations of {3.a, 2.b, 1.c, 3.d}.\n5. a) Solve the recurrence relation an - 7an-1+ 10an-2 = 4\", a0=0, а1=1.\n5. b) Find the coefficient of x2005 in the generating function 1/(1+5x)2\nMax. Marks: 70\nM\nL\nCO\nPO\n2\n2\n2\n3\n1\n1,2\n1,2\n2\n2\n1\n2\n2\n1\n2\n3\n3\n1\n2\n2\n3\n1\n2\n1\n4\n1\n2\n1\n4\n1\n2\n5\n1\n2\n5\n1\nM\nL\nCO\nPO\n5\n3\n1,2\n5\n3\n1\n1,2\n5\n2\n1\n1\n5\n3\n1\n1,2\n5\n3\n2\n1\n5\n2\n2\n1,2\n5\n1\n2\n1\n5\n3\n2\n1,2\n5\n2\n3\n1\n5\n3\n3\n1\n5\n3\n3\n1\n5\n3\n3\n5\n3\n4\n1,2\n5\n2\n4\n1\nP.T.O.\n",
+   "chars": 2337,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n5. c) Solve the recurrence relation an =2an-1 +3an-2 for n ≥ 2 where\nd0 =2 and a, = 2.\n5\n3\n4\n1,2\n5. d) State and Prove Baye's Theorem.\n5\n2\n4\n1,2\n6. a) What are the chromatic numbers of the graph G and H?\n5\n1\n5\n1\n6. b) Write down the applications of trees.\nH\nOR\n6. c) State and Prove fundamental theorem of graph theory.\n6. d) Find the minimal spanning tree using Kruskal's algorithm.\n6\na\n3\n10\nb\n4\nL\nol\n10\n5\n2\n5\n1\n5\n2\n5\n1,2\n5\n2\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 512,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

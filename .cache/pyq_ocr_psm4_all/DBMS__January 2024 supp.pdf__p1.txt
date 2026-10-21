@@ -1,0 +1,67 @@
+-Oj0aA)QY AN
+«Hall Ticket Number:
+
+MR-21 Code: B414CB3S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, Jan/Feb-2024
+
+Introduction to Database Management Systems
+(Common to CSB, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 =20 Marks)
+
+Q. No. | Stem of the Question M | L |CO|PO
+l.a) | What is a weak entity set in ER —Diagram? Quote suitable example. 2 2 1 1,2
+1.b) Explain the roles of a data base administrator. 2 Z 1 1,2
+1.c) | Define views and create a view from two tables. Z 2 2 41,2
+1. d) Write a query in relation algebra Account (acc_no,acc_name,bal). Z 3 2 Ie
+
+Find all the accounts where balance is greater than 50,000.
+l.e) What is trivial functional dependency? 2 2 3 «1,2
+1.f) Define attribute closure with an example. 2 2 30 «1,2
+1.g) | What is transaction? What are the properties of transactions? y) ys 4 1,2
+1.h) Draw the transaction state diagram. z 3 4 1,2
+1.1) | What is indexing and what are the different types of indices. 2 2 5 1,2
+1.j) Differentiate between open indexing and closed indexing. 2 2 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M | L |CO|PO
+2.a) | What is storage manager and query processor? Explain it with a neat | 5 3 1 1,2
+diagram.
+2.b) Construct the Aggregation diagram and prove how it is better than] 5 3 1 1,2
+ternary relationship. |
+
+OR
+2.c) Draw an E-R diagram for a university database, contains information | 5 3 2 ig
+about professors (identified by social security number, or SSN) and
+courses (identified by courseid). Professors teach courses; For each
+situation, draw an ER diagram that describes it
+1. Professors can teach the same course in several semesters, and each
+offering must be recorded.
+2. Professors can teach the same course in several semesters,
+3. Every professor must teach some course.
+4. Every professor teaches exactly one course (no more, no less).
+
+2.d) | What are the extended ER features and explain. 5 2 L i2Z
+3.a) Consider the given schema and Write the following Relational algebra | 5 3 2 1,2
+queries
+
+Customer(Customer_name, Customer city)
+Borrower(Customer_name, Loan number)
+Depositor(Customer_name, account_number)
+
+i) To find all customers of the bank who have an account but not
+a loan
+
+ii) To find all customers of the bank who have both an account
+and a loan
+
+ill) To find all customers of the bank who have either an account
+or a loan.
+
+3.b) Explain different types of joins with an example 5 2 2 41,2
+OR
+
+P.T.O.

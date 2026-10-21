@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B325CM2\nTime: 3 Hours\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Regular/Supplementary Examinations, December 2025/January 2026\nSoftware Engineering\n(Computer Science and Engineering (AI and ML))\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nList the types of other software process models.\n1\n1\n1\n2\n1. b)\nList the types of software myths.\n1\n1\n1\n2\n1. c)\nExplain functional requirements.\n1\n2\n2\n1. d)\nExplain user requirements in detail.\n1\n1\n2\n2\n1. e) List kinds of behavioural and object models.\n1\n3\n3\n1. f) Explain requirement review.\n1\n1\n3\n2\n1. g) Describe white box testing.\n1\n1\n4\n1\n1. h) Distinguish between testing and debugging.\n1\n4\n4\n2\n1. i)\nWhat is FTR?\n1\n1\n5\n4\n1. j) Define risk components.\n1\n1\n5\n4\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\n2. b)\nExplain \"Evolutionary Process Flow\" with a neat sketch.\nExplain in detail about Scrum.\n5\n2\n1\n3\n5\n4\n5\nOR\n2. c) Explain framework activities with a neat diagram.\n2. d) Explain briefly the Generic Process Model.\n3. a) How requirements are classified? List them with an example for\neach.\n5\n2\n2\n5\n2\n3\n5\n6\n2\n2\n3. b)\nClassify the following as functional\n/non-functional\n5\n3\n2\n5\nrequirements for a banking system.\ni. Verifying bank balance\nii. Withdrawing money from a bank\niii. Completion of transactions in less than one second.\niv. Extending the system by providing more tellers for the\ncustomers\nOR\n3. c) Analyze the requirement engineering process and how\nthe requirements are managed.\n3. d) What is requirement elicitation? Briefly describe the various\nactivities performed in requirements elicitation with an example of\na watch system that facilitates setting time and alarm and\nassessment.\n4. a)\nAnalyze briefly the structural system analysis in detail.\n4. b) What is the purpose of data flow diagrams? What are the notations\nused for the same?\nOR\n4. c) Develop an online railway reservation system, which allows the\nuser to select book/cancel tickets using net banking/credit/debit\ncards.\n4. d) Draw and explain the use case diagram for an ATM system\nin requirement elicitation.\n5 4\n2\n2\n5\n2\n2\n2\n5\n4\n3\n3\n5\n4\n3\n3\n5\n6\n3\n5\n5\n3\n3\n5\nP.T.O.\n",
+   "chars": 2240,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. a) Generalize your view about different varieties of testing.\n5. b) Discuss black box testing in a detailed view.\n5\n4\n4\n3\n5\n3\n4\n3\nOR\n5. c) Explain about metrics for maintenance.\n5\n2\n4\n1\n5. d)\nDiscuss the process of debugging.\n5\n2\n4\n1\n6. a)\nDiscuss about reactive Vs Pro-active risk strategies.\n5\n3\n5\n1\n6. b) Create a risk table for the project that if you the project manager for\na major software company. You have been asked to lead a team\nthat's developing \"next generation\" \"word processing software\"\n5\n6\n5\n4\nOR\n6. c) Define the Risk Projection Process.\n6. d) Discuss about Software Reviews.\n5\n3\n5\n4\n5\n4\n5\n4\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 692,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

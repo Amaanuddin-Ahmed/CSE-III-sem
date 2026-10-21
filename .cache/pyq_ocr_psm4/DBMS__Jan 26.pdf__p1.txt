@@ -1,0 +1,66 @@
+Hall Ticket Number:
+
+MR-21 Code: B415CB3S2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2025/January 2026
+Introduction to Database Management Systems
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10x 2= 20 Marks
+
+Write about data models?
+
+List the applications of Database systems?
+Discuss the use of Rename operation?
+Write about the basic form of SQL query?
+
+List out the properties of decomposition?
+
+What is redundancy and write about the problems with it?
+Write about serializability?
+
+Explain about transaction states?
+
+Write a short note on file organizations?
+
+Discuss about data on external storage?
+
+Part-B (5 x 10 = 50 Marks)
+2.a) | What is E-R diagram and explain its Symbols? 5 5
+2.b) Explain the Architecture of the database?
+OR
+2.c) Discuss about different types of integrity constraints?
+Write about the levels of abstraction in DBMS?
+
+Write about operations in relational algebra with an example?
+3.b) Discuss about Tuple relational calculus in detail?
+OR
+3.c) Explain about NULL values and Views?
+3.d) Define trigger and explain all the three parts of it with an example?
+
+4.a) Discuss about trival and non trival functional dependencies?
+4.b) _ Illustrate the closure of attributes?
+OR
+4.c) | What is decomposition and explain its properties?
+Explain about First and Second normal forms
+
+List and explain ACID properties in detail?
+5.b) Explain the process of achieving implementation of atomicity and
+durability?
+OR
+5.c) Discuss about Two-Phase locking protocol in detail?
+5.d) What is recovery and explain about log-based recovery with
+example?
+
+6.a) Explain about B+ tree indexing with an example?
+
+6.b) Explain the concept of cluster indexes with example
+OR
+
+Explain about tree based indexing with an example?
+
+Explain in detail about ISAM?
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,60 @@
+Hall Ticket Number:
+
+MR-22 Code: B424CMS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+
+Object Oriented Programming through Java
+(Computer Science and Engineering (AI and ML))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q. No. | Stem of the Question M|L| CO | PO
+l.a) | What is the significance of the 'this' keyword in Java? 1 2 1 3
+1.b) | What are Java buzzwords? List any two. 1 1 l |
+1.c) | Explain the term polymorphism. 1 1 ps l
+1.d) | What is the purpose of the 'super' keyword in Java? 1 2 2 2
+l.e) Define the term "multithreading". 1 1 3 2
+1.f) | What is the use of the 'try' keyword in exception handling? 1 2 32 3
+1.g) | State the purpose of checkbox group AWT component. 1 1 4 3
+1.h) What is the difference between a button and a canvas in AWT? 1 2 4 3
+1.i) — List differences between applets and applications. 1 1 5 1
+1.j) | Define MVC architecture in the context of Swing. 1 2 es 3
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L|CO| PO
+2.a) Explain the concept of constructors in Java with examples. 5 2 1 2
+2.b) Describe the life cycle of a Java object and the role of garbage;}5 1 1 3
+
+collection.
+OR
+2.c) Develop a Java program to demonstrate the use of nested and inner|5 1 1 3
+classes.
+2.d) Explain the various types of operators in Java with examples. 5 1 1 l
+3.a) Explain hierarchical abstractions with an example. 5 2 2 Z
+3.b) Develop a Java program to implement polymorphism using method|5 4 2 4
+overriding.
+OR
+3.c) | Explain how Java handles multiple inheritance using interfaces. 5 4 2 3
+3.d) Develop a Java program to read from and write to a file using javaio|}5 2 2 a
+package.
+4.a) Develop a Java program to create and run multiple threads. 5 4 3 4
+4.b) Explain how to use annotations in Java with a program example. 5 3 3 3
+OR
+4.c) Discuss the concept of synchronized threads with a program example. 5 2 3 l
+4.d) Write a Java program to create custom exception subclasses. 5 3 3 2
+5.a) Develop a Java program to handle a keyboard event using a|5 4 4 4
+KeyListener.
+5.b) Explain the AWT class hierarchy with an example. 5 2 4 Z
+OR
+
+5.c) Develop a Java Swing application that includes a tabbed pane, combo | 5 4 4 a
+boxes and radio buttons to create a complex user interface.
+
+5.d) Develop a Java program to create a menu bar with menus and menu|5 3 4 A
+items.
+
+P.T.O.

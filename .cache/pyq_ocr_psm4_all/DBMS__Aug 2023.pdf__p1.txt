@@ -1,0 +1,60 @@
+Hall Ticket Number:
+
+MR-21 Code: B413CS3
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Regular Examinations, Aug/Sep-2023
+Database Management Systems
+
+(Common to CSE & IT)
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 =20 Marks)
+
+Q. No. | Stem of the Question M |L/CO | PO
+l.a) | What is the Difference between the Candidate Key and Super Key? 2 4 1 1,2,3
+1.b) | What is Weak Entity? How it is different from Strong Entity? 2 4 1 1,2
+l.c) Define Referential Integrity. Give an example. 2 2 2 1,2
+1.d) What is View? State its purpose. 2 2 2 1,2
+l.e) | What is Functional Dependency? Give an example. 2 1 3 12
+1.f) | What is Redundancy and why do we want to avoid it when creating a 2 4 3 1,2
+
+database?
+l.g) | Explain Exclusive Lock. Why we use it? 2 3 4 1,2
+1.h) | What are Check Points? What is the use of it? 2 2 4 2
+1.1) | What do you mean by Indexing? 2 2& 5 1,2
+1. j) What is hash File Organization? 2 1 5 1,2
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M | L | CO | PO
+2.a) Draw the Architecture of DBMS and explain about its various} 10 2 Il L2
+components.
+OR
+2.c) | Explain about the functionalities of DBA. 5 2 1 1,2
+
+2.d) Differentiate between Total Participation and Partial Participation. | 5 4 | 1,2
+Illustrate with an example E-R diagram.
+3.a) Write short notes on below operations in Relational Algebra. Illustrate} 10 2 2 12
+with an example query in relational algebra.
+i) Selection
+ii) Projection
+iii) Union
+iv) Cartesian product
+OR
+3.c) Consider the following relations: 10 3 2 1,2,3
+Employee (emp_id, emp name, gender, salary)
+Work For(emp_id, project_id)
+Project (project_id, project_name, duration_in_ months)
+Write the following queries in SQL.
+i) Get the details of Employees having salary >10000.
+il) Get the names of Employees working for pid = 20.
+iil) Get the strength of Male and Female Employees.
+iv) List project_ids in the descending order of their duration.
+4.a) | What is Normalization? Why do we need to Normalize our database? | 10 2 3 1,2
+Explain INF, 2NF, 3NF, BCNF Normal Forms by taking proper
+examples.
+
+OR
+4.c) Given the Relation R(A,B,C,D) and the set of Functional} 10 3 3 1,2,3
+Dependencies: {A — BC, B > C, A > B, AB — C, AC — D}. Find out
+the irreducible set for the given set of Functional Dependencies.
+
+P.T.O.

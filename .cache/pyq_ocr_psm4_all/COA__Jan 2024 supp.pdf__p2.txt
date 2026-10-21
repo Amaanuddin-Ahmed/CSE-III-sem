@@ -1,0 +1,39 @@
+Explain the READ and WRITE operations in Associative Memory. -
+‘Draw. the block diagram of as » DNEAS controller and | _ Sagan its. 5
+
+functioning?
+Explain i in. detail paraillel priority interrupt hardware? 5
+Explain direct 1 mapping technique i in 1 cache memory? a)
+Explain the instruction pipeline progessiiy in RISC: architecture. 2
+Elucidate array processor in defails:. fy VU gure sg, 5
+SOR. Ot} bane
+
+-jWhat : are she various fotins yaa oifors: ee, an aS
+“ interconnection network in a:multi-processor. system? ; es ths
+‘Does : ‘pipelining, get, affected ,,by.. data, dependencies. among: ane Fe Bu
+us truewOny J ustify your answer with Hue aoe
+
+ti be ga ae
+43% a $8
+
+c
+
+ih ae eam or
+
+sits BDO wal: eanbb.,
+
+4 Py
+
+: , gd 5=
+
+‘ Lids retevet) iiezigs! a, Sok
+
+prey Gs?
+
+rs me 2 Une & Be ih {3
+
+evi bras
+
+5?
+
+JE AE,

@@ -10,17 +10,17 @@
     "pageNumber": 3,
     "questions": [
       {"number": "1.a", "chapter": 1, "text": "Enumerate the classification of ecosystems.", "marks": 2},
-      {"number": "1.b", "chapter": 1, "text": "Summarize the socioeconomic impacts of floods and droughts.", "marks": 3},
+      {"number": "1.b", "chapter": 2, "text": "Summarize the socioeconomic impacts of floods and droughts.", "marks": 3},
       {"number": "2.a", "chapter": 1, "text": "Define the biogeochemical cycle. Explain the carbon cycle in detail.", "marks": 2},
-      {"number": "2.b", "chapter": 1, "text": "List renewable energy sources and explain their advantages.", "marks": 3},
-      {"number": "3.a", "chapter": 2, "text": "Define food chain and food web, giving suitable examples.", "marks": 2},
+      {"number": "2.b", "chapter": 2, "text": "List renewable energy sources and explain their advantages.", "marks": 3},
+      {"number": "3.a", "chapter": 1, "text": "Define food chain and food web, giving suitable examples.", "marks": 2},
       {"number": "3.b", "chapter": 2, "text": "Discuss the consequences of overexploitation of mineral resources.", "marks": 3},
       {"number": "4.a", "chapter": 2, "text": "Describe the benefits and problems associated with the construction of big dams.", "marks": 2},
-      {"number": "4.b", "chapter": 2, "text": "Explain ecosystem values and services.", "marks": 3},
-      {"number": "5.a", "chapter": 3, "text": "Define genetic, species, and ecosystem biodiversity with examples.", "marks": 2},
-      {"number": "5.b", "chapter": 3, "text": "What are ecological pyramids? Discuss the pyramid of energy.", "marks": 3},
-      {"number": "6.a", "chapter": 3, "text": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.", "marks": 2},
-      {"number": "6.b", "chapter": 3, "text": "Summarize the benefits of forests and the harmful effects of deforestation.", "marks": 3}
+      {"number": "4.b", "chapter": 1, "text": "Explain ecosystem values and services.", "marks": 3},
+      {"number": "5.a", "chapter": 1, "text": "Define genetic, species, and ecosystem biodiversity with examples.", "marks": 2},
+      {"number": "5.b", "chapter": 1, "text": "What are ecological pyramids? Discuss the pyramid of energy.", "marks": 3},
+      {"number": "6.a", "chapter": 1, "text": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.", "marks": 2},
+      {"number": "6.b", "chapter": 2, "text": "Summarize the benefits of forests and the harmful effects of deforestation.", "marks": 3}
     ]
   },
   {
@@ -34,49 +34,17 @@
     "pageNumber": 4,
     "questions": [
       {"number": "1.a", "chapter": 1, "text": "Describe the structure of an ecosystem.", "marks": 3},
-      {"number": "1.b", "chapter": 1, "text": "List the benefits and problems associated with big dams.", "marks": 2},
+      {"number": "1.b", "chapter": 2, "text": "List the benefits and problems associated with big dams.", "marks": 2},
       {"number": "2.a", "chapter": 1, "text": "Define the biogeochemical cycle. Explain the processes of the nitrogen cycle with a diagram.", "marks": 3},
-      {"number": "2.b", "chapter": 1, "text": "Analyze the reasons for deforestation and its consequences on the environment.", "marks": 2},
-      {"number": "3.a", "chapter": 2, "text": "Explain food chains and food webs with suitable examples. Give their significance.", "marks": 3},
+      {"number": "2.b", "chapter": 2, "text": "Analyze the reasons for deforestation and its consequences on the environment.", "marks": 2},
+      {"number": "3.a", "chapter": 1, "text": "Explain food chains and food webs with suitable examples. Give their significance.", "marks": 3},
       {"number": "3.b", "chapter": 2, "text": "What is a flood? Analyze the socioeconomic implications of flood conditions.", "marks": 2},
       {"number": "4.a", "chapter": 2, "text": "Enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability.", "marks": 3},
-      {"number": "4.b", "chapter": 2, "text": "Illustrate the universal energy-flow model of an ecosystem.", "marks": 2},
-      {"number": "5.a", "chapter": 3, "text": "Explain genetic, species, and ecosystem biodiversity with examples.", "marks": 3},
-      {"number": "5.b", "chapter": 3, "text": "Evaluate the environmental effects of mineral-resource extraction.", "marks": 2},
-      {"number": "6.a", "chapter": 3, "text": "Discuss the consumptive and social values of biodiversity, giving examples of each.", "marks": 3},
-      {"number": "6.b", "chapter": 3, "text": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.", "marks": 2}
-    ]
-  },
-  {
-    "label": "November 2023 Midterm I - Objective",
-    "year": 2023,
-    "month": 11,
-    "examType": "Mid",
-    "part": "A",
-    "paperName": "ES-model question paper-MID-1.pdf",
-    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
-    "pageNumber": 5,
-    "questions": [
-      {"number": "1", "chapter": 1, "text": "Organisms that feed on dead matter and convert it into nutrients are called: (a) Producers (b) Detritivores (c) Carnivores (d) Decomposers.", "marks": 1},
-      {"number": "2", "chapter": 1, "text": "The accumulation of non-biodegradable matter or chemicals in living organisms is known as: (a) Ecological balance (b) Bioaccumulation (c) Carrying capacity (d) Biomagnification.", "marks": 1},
-      {"number": "3", "chapter": 1, "text": "The amount of radiant energy stored at the producer level by photosynthesis is called: (a) Primary production (b) Homeostasis (c) Carrying capacity (d) All of the above.", "marks": 1},
-      {"number": "4", "chapter": 1, "text": "The total number of living organisms at the various trophic levels of a food chain is depicted by: (a) Pyramid of numbers (b) Pyramid of energy (c) Pyramid of mass (d) All of these.", "marks": 1},
-      {"number": "5", "chapter": 2, "text": "Which of the following is unidirectional in an ecosystem? (a) Flow of energy (b) Flow of nutrients (c) Flow of matter (d) All of these.", "marks": 1},
-      {"number": "6", "chapter": 2, "text": "Which of the following are non-renewable energy sources? (a) Coal (b) Petroleum (c) Natural gas (d) All of these.", "marks": 1},
-      {"number": "7", "chapter": 2, "text": "Solar energy can be harnessed using the principle of: (a) Photoelectric effect (b) Photo-oxidation (c) Photo-reduction (d) None of these.", "marks": 1},
-      {"number": "8", "chapter": 2, "text": "Identify the environmental damage caused by mining: (a) Devegetation (b) Ground subsidence (c) Air and water pollution (d) All of these.", "marks": 1},
-      {"number": "9", "chapter": 3, "text": "Variation among individuals of the same species is which type of biodiversity? (a) Genetic (b) Species (c) Ecosystem (d) Both (b) and (c).", "marks": 1},
-      {"number": "10", "chapter": 3, "text": "The direct-use values of biodiversity include: (a) Food (b) Fuels (c) Medicines (d) All of these.", "marks": 1},
-      {"number": "11", "chapter": 3, "text": "The organisms that feed directly on producers are called ____.", "marks": 1},
-      {"number": "12", "chapter": 3, "text": "The process of eating and being eaten in an ecosystem is called ____.", "marks": 1},
-      {"number": "13", "chapter": 4, "text": "Wind energy can be harnessed using ____.", "marks": 1},
-      {"number": "14", "chapter": 4, "text": "True or false: Nitrogen-fixing bacteria are present in the root nodules of leguminous plants.", "marks": 1},
-      {"number": "15", "chapter": 4, "text": "True or false: Gross Primary Productivity (GPP) = Net Primary Productivity (NPP) + Respiration (R).", "marks": 1},
-      {"number": "16", "chapter": 4, "text": "A scarcity of water leads to a situation called ____.", "marks": 1},
-      {"number": "17", "chapter": 5, "text": "The process of extracting ores from mines is called ____.", "marks": 1},
-      {"number": "18", "chapter": 5, "text": "Give examples of non-renewable energy resources.", "marks": 1},
-      {"number": "19", "chapter": 5, "text": "Quinine is obtained from the bark of the ____ tree.", "marks": 1},
-      {"number": "20", "chapter": 5, "text": "The variety and variability among all living organisms is called ____.", "marks": 1}
+      {"number": "4.b", "chapter": 1, "text": "Illustrate the universal energy-flow model of an ecosystem.", "marks": 2},
+      {"number": "5.a", "chapter": 1, "text": "Explain genetic, species, and ecosystem biodiversity with examples.", "marks": 3},
+      {"number": "5.b", "chapter": 2, "text": "Evaluate the environmental effects of mineral-resource extraction.", "marks": 2},
+      {"number": "6.a", "chapter": 1, "text": "Discuss the consumptive and social values of biodiversity, giving examples of each.", "marks": 3},
+      {"number": "6.b", "chapter": 2, "text": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.", "marks": 2}
     ]
   }
 ]

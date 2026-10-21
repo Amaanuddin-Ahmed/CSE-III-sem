@@ -1,0 +1,29 @@
+6.
+o
+
+6.
+
+_d)
+
+a)
+b)
+
+c)
+
+ae
+say
+
+Write a Java program to sort a list of names using a Comparator. 5 3 A
+Write a Java program that uses Scanner to read data and store ti tnio a | 5 5 4
+Lainkecdh ist,
+
+Demonsirate the delegation event model in Java with an example. 5 4 5
+
+Write a Swing, applet to draw a rectangle and a circle on the sercen, . 3 5
+ON
+
+flow can parameicers be passed to an applet using the <param> tap’? | 5 3 5
+
+Uxplain the workine of Mewlayout, BorderLavoui, and Gridbavoul | 5 ? 5
+
+M: Marks: 1: Bloom's Taxonomy Lovel; CO: Course Outcome; PO: Programme Outcome

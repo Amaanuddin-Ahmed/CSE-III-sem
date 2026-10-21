@@ -1,0 +1,14 @@
+6. a) Discuss the architecture and components of Swing with examples. 5 4 5
+
+6. b) Write a Java program to create a user interface with JLabels,| 5 3 5
+JTextFields, and JButtons.
+
+OR
+
+6. Cc) Write a Java program to create a tabbed pane and add tabs with} 5 4 5
+different components in each tab.
+
+6. d) Explain the life cycle of an applet with an example program that| 5 2 5
+demonstrates each phase.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

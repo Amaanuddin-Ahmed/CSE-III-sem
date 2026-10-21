@@ -1,0 +1,34 @@
+OR
+4.c) | Build an algorithm in flowchart form for adding and subtracting two | 5 5 5
+fixed point binary numbers when negative numbers are in signed 1's
+complement representation.
+4.d) Construct a Decimal Arithmetic Unit to perform BCD addition and | 5 3 5
+BCD Subtraction.
+
+5.a) | With the help of block diagram of interface between processor and | 5 3 3
+peripheral devices explain its operations.
+
+5.b) Describe the DMA operation with neat diagram. 5 3 3
+
+OR
+
+5.c) List out different types of memory. Explain the functionality of RAM | 5 l 3
+and ROM chips with the help of function table.
+
+5.d) Distinguish between Direct mapping, Set-Associative mapping and | 5 4 3
+Associate mapping of cache memory.
+
+6.a) Illustrate between Array processor and Vector Processor. State the | 5 2 4
+advantages, disadvantages and applications of vector processors.
+
+6.b) Compare and contrast between parallel processing and pipeline | 5 2 4
+processing with suitable examples.
+
+OR
+
+6.c) | What is pipelining? Demonstrate the pipeline organization with an | 5 2 4
+example.
+
+6.d) Analyze the concurrent access to memory and cache coherency. 5 4 4
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

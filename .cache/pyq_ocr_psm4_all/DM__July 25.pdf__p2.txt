@@ -1,0 +1,24 @@
+5.c) | Use Multinomial theorem to Expand (X ; +X 2+X 3 +X 4 i‘ ; 5 3 4
+5.d) How many integers between | and 300(inclusive) are divisible by at| 5 3 4
+least one of 5, 6, 8.
+
+6.a) Let G be a 4-regular connected planar graph having 16 edges. Find the} 5 2 5
+number of regions of G.
+
+6. b) Show that the two graphs are not isomorphic. $s 3 5
+ae eb ave eh’
+' —e/f y —_ if
+he— | h'e—eg
+g
+(as ec G ec
+OR
+
+6.c) Let D be the digraph whose vertex set is V={vl,v2,v3,v4,v5} andthe} 5 2 5
+directed edge set is E={(v1,v4),(v2,v3),(v3,v5),(v4,v2),(v4,v4),(v4,v5),
+(v5,vl1)}Draw a diagram of D and indicate the out-degree and
+in-degree of all vertices.
+
+6.d) | What is a Hamiltonian Cycle? Draw bipartiate graph K3 4 and prove | 5 i 5
+that this graph does not have a Hamiltonian Cycle.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

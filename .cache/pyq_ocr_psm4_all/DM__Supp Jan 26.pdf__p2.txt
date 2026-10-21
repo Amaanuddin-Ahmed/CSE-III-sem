@@ -1,0 +1,77 @@
+4. a)
+4.b)
+4.c)
+
+4. d)
+
+5. a)
+
+5. b)
+
+5. C)
+
+5. d)
+
+6. a)
+6. b)
+
+6. Cc)
+
+6. d)
+
+In how many ways can 10 people be seated in a row so that certain} 5 4 3
+pair of them are not next to each other?
+
+State and prove pigeon-hole principle. 5 Z 2
+OR
+
+State and prove Binomial theorem. Expand (5a+7b)® using binomial | 5 2 2
+
+theorem.
+
+In how many ways can a committee of 5 ladies and 4 gents be chosen | 5 a 3
+
+from 9 ladies and 15 gents, if gent A refuses to take part if lady B is
+on the committee?
+
+Find a general expression for a solution to the recurrence relation, 5 3 A
+An-Da p-1+6a p-2= n(n-1) for n>=2
+Solve ap-6ap-)+12ap-2-8a,.3 = O for n>=3 by the method of| 5 3 4
+characteristic roots.
+
+OR
+Find a general expression for a solution to the recurrence relation 5 3 4
+An-8ap-1 + 12ap-2 — 0 for n>=2.
+Solve ap-7ap-1+10a,-2 = 0, for n>=2, given ag=10, aj=41 using | 5 3 4
+generating functions method.
+
+Define Planar graph. Is K3 3 a planar graph? Justify your answer. 5 2 5
+Explain the steps involved in deriving a spanning tree using Breadth | 5 2 2
+first search algorithm with a suitable example.
+
+OR
+
+Define chromatic number of a graph. Is the following graph} 5 2 5
+2-chromatic? Justify.
+b c
+
+f e
+Prove that if G is a connected planar graph, then |V| - |E| + [R| =2 | 5 4 5
+where |R| denote number of regions, |E| denote number of edges and
+|V| the number of vertices.
+
+La
+
+Lz
+
+1,2
+
+1,2
+
+L2
+
+1,2
+
+La
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

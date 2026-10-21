@@ -1,0 +1,50 @@
+Hall Ticket Number:
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. V Semester Supplementary Examinations, June/July 2025
+Software Engineering
+(Common to CSE and IT)
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+(Q.No. | Stemofthe Question | M [LLCO [PO]
+1.a) — List the characteristics of Software contrasting the characteristics of | 2 1 1 1,8
+hardware.
+1.b) | Mention the Advantage and Disadvantages of Waterfall model. 2 2 1 1,8
+l.c) Define feasibility study. And list the types. 2 | p 2
+1.d) Differentiate between Functional and Non-functional Requirements. Z2 2 2 2
+1.e) | Write the importance of generalization relationship. 2 1 3 2
+1.f) List the components of use case diagram. 2 2 3 1
+1.g) Differentiate verification and validation. Which type of testing address | 2 2 4 2
+verification? Which type of testing address validation?
+1.h) | What are the approaches of debugging? 2 1 4 1
+1.i) Define Quality. How can quality be quantified. 2 2 5 1
+1.j) Define the terms i) Measures ii) Metrics and iii) Indicators. 2 2 5 1
+Part-B (5 x 10 = 50 Marks)
+[Q.No.[ sStemofthe Question =| M | L | CO] PO
+2.a) Explain in detail about the Phases in Unified Process Model with neat | 5 2 1 2,3
+diagram.
+2.b) Explain about the Umbrella Activities which support the software | 5 3 1 23
+development process and discuss about their necessity in maintaining.
+OR
+2.c) | Assume that you are the technical manager of a software development 5 5 1 2,3
+organization. A Client approached you for a software solution the
+problems stated by the client have uncertainties which lead to loss if it
+not planned and solved which software development model you will
+suggest for this project —justify. Explain that model with its pros and
+cons and neat sketch
+2.d) Discuss Manager’s myths about software development and their effect | 5 Z 1 2,3
+on the practitioner’s performance as well as on the overall outcome.
+3.a) Describe Extreme Programming Values and Framework Activities in | 5 2 2 2,3
+detail.
+3.b) Demonstrate on Requirement Validation Techniques. 5 3 2 2
+OR
+3.c) Give an in-depth overview of the dynamic systems development | 5 4. 2 2,3
+method and feature-driven development method.
+3.d) | Compare the scenarios that are interrelated with Agility and the Cost | 5 4 2 2
+of Change.
+4.a) Generalize on the concept of User Interface design and list the | 5 6 > 3
+characteristics of good user interface design.
+4.b) Discuss the basic design principles of class-based components. 5 pi - 23
+OR
+4.c) Explain about software architecture design, with emphasize as fan in, | 5 2 3 2,3
+___ fan-out, coupling, cohesion and factoring,
+P.T.O.

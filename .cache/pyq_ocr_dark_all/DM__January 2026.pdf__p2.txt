@@ -1,0 +1,57 @@
+4.)
+
+A
+
+F,
+
+6.
+
+O,
+
+6.
+
+f
+OD.
+
+.a)
+
+~®y
+
+sy
+
+.€)
+
+C)
+(\
+
+(ij
+
+Using induction principles prove that 1 '21 ts divisible by 3. » 4 3
+A class consists of 6 girls and 10 boys. [fa conunittee of 3 is chosen at 5 3 3
+
+random from the class, find the probability thai
+(1) 3 boys are selected (1) exactly 2 girls are selected.
+
+Determine the solution of the recurrence relation ay > 6a, 4° Fay 9 with 5 A A
+initial conditions ay ~ | and a, °° 6?
+A‘. Show that Rois an equivalence relation.
+
+OK
+Lot R and S be the following relations Aw fa,b,c.d} defined R= I 4 3 A
+(aa) (ac) .(C,B) .(c.d)(d.b) } and S { (b.a), (e.e ). (e.d) ,
+(d,a)} Find 1) RoS Hh) SOR ut) RoR.
+
+Solve the recurrenec relation of the Fibonacci scrics of numbers, 5 5 ‘A
+Show that a eraph Kp has a Hamittonian cyele whenever 7 > 3. 1 ?, 5
+A stuiple praph coniains 35 edees, four verticcs of degree 5, live 5 iv .
+vertices of depree 4 and four vertices of degree 3. Pind the aitiiber
+
+af vertices with depree 2.
+
+Show that Ks ts an Euler's circuit and also Hamiltonian cvele, ’ ? »
+Dotine the tollowmp, with Diagram. (i) Chromatic Number Gi) tuber 5 5
+Path (it) Huler circuit (iv) Hamiltonian cycle (v) coloring of a graph.
+
+M: Marks: L: Bloom’s Taxonomy Level: CO: Course Outcome; PO: Programme Outcome
+
+[.?

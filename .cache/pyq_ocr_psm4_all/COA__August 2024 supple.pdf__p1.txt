@@ -1,0 +1,75 @@
+a | ; f
+
+Hall Ticket Number:
+
+MR-21 Code: B314CB6S2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, July/August-2024
+
+Computer Organization and Architecture
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+Q. No. | Stem of the Question M|L|CO | PO
+
+1.a) | Draw the instruction word format and indicate the number of bitsin | 2 = 1 l l
+each part.
+
+1.b) Give examples for conditional and unconditional transfer | 2 1 l |
+instructions.
+
+1.c) | What do you mean by microprogram? What are the different typesof | 2 2 1 Il
+microprograms?
+
+1.d) Differentiate between a direct and an indirect address instruction? Zz 2 2 l
+
+l.e) Perform 2’s complement of (i) 10010010 Gi) 01101100. 2 1 5 l
+
+1.f) Define normalization in floating point representation. 2 2 5 1
+
+1.g) Why are read and write control lines in a DMA controller | 2 1 3 a
+bidirectional?
+
+1.h) An address space is specified by 24bits and the corresponding | 2 2 3 2
+memory space by 16 bits. How many words are there in the address
+space?
+
+1.1) | Howdo branch instructions cause problems in a pipelined processor? | 2 1 iA 2
+
+1.j) List out replacement algorithms. 2 1 A 1
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L|CO| PO
+2.a) Explain about various functional units of a basic computer with the | 5 2 2 1
+help of block diagram.
+2.b) Design the 4-bit register transfer to common bus using multiplexers. 5 l Z |
+OR
+2.c) Explain about various conditional branch instructions in a general- | 5 2 2 2
+
+purpose computer.
+2.d) What is an interrupt? Explain briefly about different program | 5 l 2 2
+interrupts and what are the sequence of events involved in handling
+
+an IRQ?
+3.a) Explain various instruction formats with examples. 5 2 1 1
+3.b) Explain with the help of diagram the register organization of | 5 Z 1 1
+computer with memory bank.
+OR
+3.c) What do you mean by addressing mode? Analyse the following | 5 4 l 1
+
+addressing modes. i) Index addressing mode ii) Relative addressing
+mode iii) Immediate addressing mode iv) Implied addressing mode.
+
+3.d) Compare hardwired control with micro programmed control. Is it | 5 : l l
+possible to have a hardwired control associated with control
+memory?
+
+4.a) | What is floating point representation? Explain the IEEE standard for | 5 l 5 3
+floating point representation with examples.
+
+4.b) — Explain about Booth’s Multiplier with flowchart. 5 3 5 3
+
+P.T.O.

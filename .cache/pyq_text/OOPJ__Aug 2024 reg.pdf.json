@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B424CM5\nTime: 3 Hours\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Regular Examinations, July/August-2024\nObject Oriented Programming through Java\n(Computer Science and Engineering (AI&ML))\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nList the features of OOPS concepts?\n1\n1\n1\n1\n1. b)\nDefine a constructor and list the types of constructors.\n1\n1\n1\n1\n1. c)\nWhat are the uses of super keyword in Inheritance? Give examples.\n1\n1\n2\n1\n1. d)\nDifferentiate between Interface and Abstract class with example?\n1\n1\n2\n2\n1. e)\nWhat is interthread communication?\n1\n2\n3\n2\n1. f) List the different string handling functions?\n1\n2\n3\n2\n1. g) List the types of event listeners.\n1\n1\n4\n2\n1. h) Discuss the event delegation model used in Java's AWT.\n1\n2\n4\n3\n1. i)\nState the difference between applets and applications?\n1\n3\n5\n2\n1. j)\nGive the subclasses of JButton class.\n1\n2\n5\n2\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain various types of operators with example.\n5\n1\n1\n1\n2. b) With suitable code segments illustrate various uses of 'final'\nkeyword.\n5\n3\n1\n2\nOR\n2. c) What do you understand by type casting & automatic promotion?\nExplain with suitable examples.\n5\n2\n1\n2\n2. d) Demonstrate Nested class concept with an example.\n5\n3\n1\n2\n3. a) Give brief description about the various access control mechanisms\nused in java.\n5\n3\n2\n2\n3. b)\nIllustrate on how packages can be created, defined and accessed.\n5\n2\n2\n2\n3. c)\n5\n4\n2\n4\nOR\nDevelop a Java Program to create an abstract class named Shape that\ncontains two integers and an empty method named printArea().\nProvide three classes named Rectangle, Triangle and Circle such that\neach one of the classes extends the class Shape. Each one of the\nclasses contains only the method printArea () that prints the area of\nthe given shape.\n3. d) What is interface in java? Explain the need of interface mechanism in\njava?\n4. a) With a program illustrate user defined exception handling.\n4. b) How to handle multiple catch blocks for a nested try block? Explain\nwith an example.\n5\n2\n2\n2\n5\n2\n3\n2\n5\n3\n3\n2\nOR\n4. c) Demonstrate Auto boxing and Auto unboxing with an example\nprogram.\n5\n3\n3\n3\n4. d) How to achieve synchronization among threads? Write suitable code.\n5\n3\n3\n4\nP.T.O.\n",
+   "chars": 2341,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. a) Explain about AWT class Hierarchy?\n5. b) Explain the procedure to handle mouse events in Java with\nExample program.\nOR\n5. c) Write a java program to design a scientific calculator using AWT.\n5. d) What are the various layout managers used in Java?\n5\n3\n4\n2\nan\n5\n2\n4\n2\n5\n4\n4\n4\n5\n2\n4\n2\n6. a) What is the role of event listeners in event handling? List the Java\nevent listeners.\n5\n2\n5\n2\n5\n3\n5\n2\n6. b) Write an applet to display the mouse cursor position in that applet\nwindow.\nOR\n6. c) Explain the life cycle of an applet.\n6. d) Why swing components are preferred over AWT components?\n5\n2\n5\n2\n5\n2\n5\n3\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 681,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

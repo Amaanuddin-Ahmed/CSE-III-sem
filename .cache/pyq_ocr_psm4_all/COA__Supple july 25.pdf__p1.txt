@@ -1,0 +1,61 @@
+Hall Ticket Number:
+
+MR-21 Code: B415CSS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, July 2025
+
+Computer Organization and Architecture
+(Computer Science and Engineering)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M|L |CcOo | PO
+l.a) | What are the basic functional units of a computer? 2 | l 1
+1.b) Explain arithmetic, logical and shift operations with examples. 2 3 1 1
+l.c) Write the differences between Hardwired Control and micro | 2 | 2 2
+
+programmed control.
+1.d) List out the types of addressing modes. a 3 2 2
+l.e) Elaborate on floating point-addition and subtraction. Z 3 3 2
+1.f) Do the subtraction using complements 100-11100. 2 a: 3 2
+1.g) Explain the types of modes of transfer with an example. 2 l a 3
+1.h) List out the types of memory techniques. PY) 3 4 3
+1.i) | Compare RISC & CISC characteristics. 2 ks: 5 2
+1.j) Discuss the difference between tightly coupled multiprocessor and | 2 2 5 2
+
+loosely coupled multiprocessor.
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L |CO| PO
+2.a) With the help of block diagram, explain common bus system. 5 l l 1
+2.b) In the basic computer each instruction cycle consists of four phases. | 5 4 1 l
+
+List and explain them.
+OR
+2.c) Design a 4 bit Arithmetic Circuit. 5 4 1 1
+2.d) Explain role of different computer registers with respect to} 5 1 1
+
+instruction Fetch cycle and execution. Give example
+
+3.a) | What is control memory? Write about address sequencing. 5 3 a p
+3.b) Explain direct addressing mode and indirect addressing mode with | 5 l we 2
+an example.
+OR
+3.c) With the diagram explain the basic organization of micro} 5 1 2 2
+programmed control unit.
+3.d) Give the instruction format of different instruction of computing | 5 e 2 2
+system.
+4.a) Briefly discuss the hardware implementation of Booth algorithm. 5 p 3 3
+4.b) — Explain fixed point addition and subtraction in computer arithmetics | 5 4 3 3
+with an example.
+OR
+4.c) Perform the following using Booth algorithm 13 x -5. 5 A 3 3
+4.d) Write a short note on floating point addition of numbers with an} 5 2 3 3
+example.
+5.a) | Explain the memory hierarchy with a neat diagram. 5 1 4 2
+5.b) | With the neat diagram explain the concepts of direct memory access. | 5 2 4 2
+
+P.T.O.

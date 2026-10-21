@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B415CS5S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, July 2025\nComputer Organization and Architecture\n(Computer Science and Engineering)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 2 = 20 Marks)\nMax. Marks: 70\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nWhat are the basic functional units of a computer?\n2\n1\n1\n1\n1. b)\n1. c)\nExplain arithmetic, logical and shift operations with examples.\nWrite the differences between Hardwired Control and micro\n2\n3\n1\n2\n1\n2\n2\nprogrammed control.\n1. d)\nList out the types of addressing modes.\n2\n3\n2\n2\n1. e)\nElaborate on floating point-addition and subtraction.\n2\n3\n3\n2\n1. f)\nDo the subtraction using complements 100-11100.\n2\n4\n3\n2\n1. g) Explain the types of modes of transfer with an example.\n2\n1\n4\n3\n1. h)\nList out the types of memory techniques.\n2\n3\n4\n3\n1. i)\nCompare RISC & CISC characteristics.\n2\n3\n5\n2\n1. j) Discuss the difference between tightly coupled multiprocessor and\nloosely coupled multiprocessor.\n2\n2\n5\n2\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\nM\nL\nCO\nPO\n2. a)\n2. b)\nWith the help of block diagram, explain common bus system.\nIn the basic computer each instruction cycle consists of four phases.\nList and explain them.\n5\n1\n1\n1\n5\n4\n1\n1\nOR\n2. c)\nDesign a 4 bit Arithmetic Circuit.\n5\n4\n1\n1\n2. d) Explain role of different computer registers with respect\ninstruction Fetch cycle and execution. Give example\nto\n5\n1\n1\n1\n3. a) What is control memory? Write about address sequencing.\n3. b) Explain direct addressing mode and indirect addressing mode with\nan example.\nOR\n3. c) With the diagram explain the basic organization of micro\nprogrammed control unit.\n3. d) Give the instruction format of different instruction of computing\nsystem.\n4. a)\nBriefly discuss the hardware implementation of Booth algorithm.\n4. b) Explain fixed point addition and subtraction in computer arithmetics\nwith an example.\nOR\n4. c) Perform the following using Booth algorithm 13 x -5.\n4. d) Write a short note on floating point addition of numbers with an\nexample.\n5. a) Explain the memory hierarchy with a neat diagram.\n5. b) With the neat diagram explain the concepts of direct memory access.\n5\n3\n2\n2\n5\n1\n2\n2\n5\n1\n2\n2\n5\n2\n2\n2\n5\n2\n3\n3\n5\n4\n3\n3\n5\n4\n3\n3\n5\n2\n3\n3\n5\n1\n4\n2\n5\n2\n4\n2\nP.T.O.\n",
+   "chars": 2305,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n5. c) List and explain different types of cache memory mapping\ntechniques.\n5\n3\n4\n3\n5. d) Differentiate between RAM and ROM.\n5\n2\n4\n3\n6. a) With the diagram explain the crossbar switch interconnection\nstructure for 8 CPUs and its memory module.\n5\n2\n5\n2\n6. b) With the neat diagram explain the concepts of pipelining with an\nexample.\n5\n1\n5\n2\nOR\n6. c) Illustrate multistage switching network with an example.\n5\n1\n5\n2\n6. d) Explain the concept of cache coherence problem and its solution.\n5\n2\n5\n2\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 573,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

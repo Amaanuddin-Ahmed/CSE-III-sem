@@ -1,0 +1,56 @@
+Hall Ticket Number:
+
+MR-21 Code: B413CB5
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Regular Examinations, Aug/Sep-2023
+Software Engineering
+(Computer Science and Business System)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M | L | CO |PO
+l.a) Differentiate the characteristics of Software and Hardware. pd 4 1 1
+1.b) What is a prototype? 2 1 i 2
+1.c) | What are non-functional requirements for a given software? 2 1 2 2
+1.d) | What is a model for a given software? 2 1 2 1
+1.e) Distinguish between cohesion and coupling. ps) 3 3 2
+1.f) | Define a component in a software. 2 l 3 Z
+1.g) How testing is different from debugging? 2 A l
+1.h) Define quality for a given software. 2 1 4 2
+1.1) | How software is measured? 2 1 5 1
+1.3) | What is risk refinement? 2 2 5 1
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+2.a) Define software myth. Explain different types of software myths. ‘A | 1 l
+2.b) Explain the activities performed in unified process model. 6 4 1 1
+
+OR
+2.c) Elaborate on software process framework. ‘| 2 l ps
+2.d) Explain spiral process model with a neat sketch. 6 1 1 Z
+3.a) Elaborate on Requirements elicitation and analysis. 6 2 2 2
+3.b) What is the importance of data modelling of a system? Explain. A 4. 2 1
+OR
+3.c) Explain the structure of a Software Requirements Document. 4 3 2 1
+3.d) Explain how the behaviour of a system can be modelled with an| 6 5 2 l
+example.
+4.a) List out different architectural styles for a given system. 5 2 3 |
+4.b) Explain different diagrams in the conceptual model of UML. 5 4 3 1
+OR
+4.c) | Explain how system models can be translated to design models. 4 4 2 1
+4.d) Develop aclass diagram for online course registration system. 6 6 3 1
+5.a) Explain the process of debugging. 5 1 ‘A l
+5.b) Analyze the metrics for design model and source code? 5 4 (4 1
+OR
+5.c) | What is black box testing? Explain the methods. 6 2 4 1
+5.d) Explain different metrics for testing and maintenance. 4 1 4 1
+6.a) | What is RMMM plan? Explain. D 2 > |
+6.b) Explain statistical quality assurance. . 1 3 Zz
+OR
+6.c) Explain the metrics for software measurement and quality. 4 l 5 2
+6.d) Explain how a formal technical review meeting is conducted. 6 2 5 1
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

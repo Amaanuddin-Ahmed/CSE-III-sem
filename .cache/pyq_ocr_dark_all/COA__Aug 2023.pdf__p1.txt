@@ -1,0 +1,64 @@
+foe {| loa lo aAw
+
+Hall Ticket Number:
+| | | | | | | | | | | MR-21 | Code: B313CB6S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. HI Semester Supplementary Examinations, Aug/Sep-2023
+Computer Organization and Architecture
+(Common to CSB, CSM & CSD)
+
+‘Time: 3 Hours Answer ALL Questions Max. Marks: /0
+ee _ Part-A (10 x 2 = 20 Marks) — ; i 7
+
+Q. No. Stem of the Question _M | L co | PO |
+1.a) Give an overview of the Instruction formats. 2 3 l 2
+1.b) Explain fetch phase of instruction cycle. 2 2 l I
+l.c) — List logical Microoperations. 2 l 2 l
+I.d) Justify why indexed addressing is used for array processing. 2 5 2 4
+l.e) Write about Floating point representation with an example. 2 I 5 2
+1.f) Explain signed magnitude representation of fixed point numbers. 2 2 5 |
+l.g) | What is polling’? 2 3 3 |
+1.h) Distinguish between the asynchronous and synchronous data transfer. 2 I 3 2
+1. i) Distinguish between loosely coupled and tightly coupled |, 4 4 ;
+
+multiprocessors. ~
+1.j) | What is cache coherence? 2 | 4 l
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M [| L [co] Po
+2.a) Draw and explain the functional blocks of a Digital computer. 5 l l l
+2.b) Write a short note on ALU design. 5 2 l 2
+
+OR
+2.c) Define Register Transfer Language. List and explain Arithmetic | 5 2 l l
+Microoperations.
+
+2.d) Illustrate about tri-state buffer. Justify why tristate buffers are used | 5 5 | I
+widely in Bus system.
+
+3.a) Define the following (a) Microoperation b) Micro instruction | 5 l 2 2
+(c) Microprogram (d) subroutine.
+3.b) With the help of a neat sketch explain general register organization. 5 | 2 l
+OR
+3.c) Explain different instruction formats with examples. 5 | 2 |
+3.d) Differentiate between the direct and indirect addressing with examples. | 5 4 2 |
+4.a) Illustrate the various representations of the signed numbers. 5 Il 5 l
+4.b) Give the flowchart for doing decimal division and also explain the | 5 2 5 1
+sequence of operations of it.
+OR
+4.c) Give and explain the hardware implementation of the signed | 5 ] 5 3
+magnitude addition and subtraction.
+4.d) With the help of a block diagram explain Decimal Arithmetic Unit. 5 3 5 I
+5.a) Explain about the various cache memory techniques. 5 2 3 I
+5.b) Explain daisy chaining with a neat sketch. 5 l 3 l
+OR
+5.c) | Draw and explain DMA with a neat sketch. 5 4 3 l
+5.d) Explain in detail about the memory hierarchy in the processor. 5 | 3 |
+6.a) Distinguish between RISC and CISC processor. 5 4 4 2
+6.b) — Explain about the arithmetic pipeline. 5 l 4 1
+OR
+6.c) Explain vector processing. 5 2 4 2
+6.d) Write ashort note on I/O processor. 5 | 4 |
+
+M: Marks; L: Bloom’s ‘Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

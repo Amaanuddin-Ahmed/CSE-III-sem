@@ -1,0 +1,79 @@
+{
+ "exam": {
+  "subject": "Computer Organization and Architecture",
+  "regulation": "unknown",
+  "session": "Aug 2024",
+  "year": 2024,
+  "examType": "Supplementary",
+  "partA": null,
+  "partB": null
+ },
+ "questions": [
+  {
+   "part": "B",
+   "qno": "4.c",
+   "text": "Build an algorithm in flowchart form for adding and subtracting two fixed point binary numbers when negative numbers are in signed 1's complement representation.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "4.d",
+   "text": "Construct a Decimal Arithmetic Unit to perform BCD addition and BCD Subtraction.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "5.a",
+   "text": "With the help of block diagram of interface between processor and peripheral devices explain its operations.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "5.b",
+   "text": "Describe the DMA operation with neat diagram.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "5.c",
+   "text": "List out different types of memory. Explain the functionality of RAM and ROM chips with the help of function table.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "5.d",
+   "text": "Distinguish between Direct mapping, Set-Associative mapping and Associate mapping of cache memory.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.a",
+   "text": "Illustrate between Array processor and Vector Processor. State the advantages, disadvantages and applications of vector processors.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.b",
+   "text": "Compare and contrast between parallel processing and pipeline processing with suitable examples.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.c",
+   "text": "What is pipelining? Demonstrate the pipeline organization with an example.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.d",
+   "text": "Analyze the concurrent access to memory and cache coherency.",
+   "marks": 5
+  }
+ ],
+ "_meta": {
+  "subject": "COA",
+  "paperName": "August 2024 supple.pdf",
+  "fileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+  "page": 2
+ }
+}

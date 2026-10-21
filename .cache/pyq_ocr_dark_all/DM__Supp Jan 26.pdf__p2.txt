@@ -1,0 +1,86 @@
+A,
+
+6
+
+NJ
+
+6.
+
+4a)
+
++. b)
+
+\
+
+he UL)
+
+La)
+
+_b)
+
+ake Ff
+
+JUN
+. a)
+
+a)
+
+6.)
+
+In how many ways cai 10 people be seated tn a row so itat certain | 5
+
+pair of (hem are not next to cach other?
+
+State and prove pigcon-hole principle. 5
+OR
+
+State and prove Binomial theorem. Uxpand (Sat7b)* using binomial | 5
+
+theorem.
+
+ii how ahainy ways can a Commuitice of 5 fadies and 4 gcnis be chosen |)
+
+from 9 ladies and 1S gents, if gent A refuses fo take part if lady B is
+
+on the committee?
+
+Find a general expression for a solution to the recurrence relation. ho
+Ay 5a yp POA yo (AL) for n>?
+SOlve ay Gay! Papo Bay 9° OO fer ae by the method of | 45
+characteristic roots.
+
+OR
+ay Gay. | bPadyoe O Lorie: 2.
+DOVE ty /ayep Oey GO, for ave 2, piven ay 10, a, 4i usime | 5
+eonoraling, functions method.
+Doline Planar graph. Ts yj a planar graph? Justify your answer, 5
+expla the steps trvolyed in deriving, a spanning tree using, Breadth | 5
+
+first search alporithin with a suitable example.
+Define chromatic number of a graph. Is the following graph | 5
+2-chromatic? Justify.
+
+9) c
+oO °
+
+Prove that i Ge ts a connected planar praph, then Rio 2] 4
+
+View FE ob
+
+R] denote number of regions. [Ey] denote ouimber of edocs and
+
+where
+|V| the number of vertices,
+
+Vie Marks: : Bloom's Paxonomy beyeb COb Corrse Outcome: POF Proorainin
+
+A
+rad
+
+a
+
+> OC One
+
+A
+
+a

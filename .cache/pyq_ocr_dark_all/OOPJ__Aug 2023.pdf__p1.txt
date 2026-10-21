@@ -1,0 +1,59 @@
+Hall Ticket Number: oe
+
+PPL LE ed MR2U Code: BANC
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B. Pech. LV Semester Regular examinations, Aug/Sep-2023
+Java Programming
+(Common to CSIt & [1)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+oo . Part-A (10x 2= 20 Marks) So
+Q. No. | . Stem of the Question ee | M | I, | CO | PO
+
+l.a) Compare Procedural oriented languages and OOP? 2 2 | 2
+L.b) = What is an Object? How to allocate memory for objects? 2 | 1,2
+|.c) | What happens when there is no suitable try block to handle exception? 2 | 2 1,2
+[. d) Define interface? 2 2 1,2
+l.c) Whats light weight process? Discuss. 2 4 1,2
+lL. f) Draw the thread life cycle. 2 | 4 | ,2
+lg [explain Scanner class with an example. 2 2 3 1,2
+I. h) Define Java collection Framework. 2 3 1,2
+1. 1) What ts an Event? When will it occur? 2 | 5 1,2
+1.) I:xplain about limitations of AWT? ; | 2 2 SL
+Part-B (Sx 10=S50 Marks) Z So
+—Q. Now | Stem of the Question | M | L, | CO | PO”
+2.a) Explain the advantages and disadvantages of Object-Oriented | 5 2 | [,2
+Programming.
+2.b) Differentiate between method overloading and method overriding with | 5 4 | 12,3
+cxamples
+OR
+2.¢) List and explain java buzzwords. ) ? | [2
+2.d) What is inheritance? Explain making use of inheritance tn java with | 5 3 | 1,2,3
+examples.
+3.a) Write a java program for user defined exception. 4 3 2 1,2,3
+3.b)  Whatis package? Create a Java package and explain It. 6 | 2 1,23
+OR
+3.¢) What is interface? How to create ttand apply it? Explain with example. 5 3 2 1.2.3
+3.d) What are the various types of exceptions available in Java? Also discuss | 5 | 2 1,2
+on how they are handled?
+4.a) — Explain with example, suspending and resuming threads in Java. 5 2 4 1,2,3
+4.b) Differentiate between FileReader and BufferedReader. 5 4 3 1.2
+OR
+4.¢) explain the synchronization of multiple threads in Java with an example. “ 3 4 1,23
+4.d) — Illustrate java.to package in detail. 6 2 3 1,2
+S.a) What is Java Collections Framework? List out some benefits of | 5 3 1,2
+Collections framework and explain.
+5.b) What is an Iterator? Demonstrate how to access an Iterator using an] 5 3 3. 1,2,3
+example.
+OR
+S.c) Compare and Contrast between ArrayList and Vector? 5 4 3 1.2
+5.d)  Whatare the basic interfaces of Java Collections Framework? 5 | 3 1,2
+6.a)  Whatis applet? Discuss about applet structure. 5 | 5 | ,2
+6.b) Explain about components in swings. 5 2 5 [2
+OR
+6.¢)  Whatis AWT? Distinguish between AWT and swings 5 4 5 1,2
+6.d) Analyze the role of event listeners in event handling? List the Java event | 5 4 5 1,2
+listeners
+
+M: Marks; LL: Bloom’s ‘Vaxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,24 @@
+5. ¢)
+
+5. d)
+
+6. a)
+6. b)
+
+Explain Software Testing? Discuss role of software testing during
+software lifecycle?
+
+What is black box testing? Explain the technique specifying rules and
+its usage with the help of an example?
+
+Distinguish between Reactive vs proactive risk strategies?
+
+What is Risk Refinement? How does it contribute to effective risk
+management in software projects?
+OR
+
+Classify the elements of SQA? Explain in detail?
+Determine the types of software risks? How they affect software
+quality?
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

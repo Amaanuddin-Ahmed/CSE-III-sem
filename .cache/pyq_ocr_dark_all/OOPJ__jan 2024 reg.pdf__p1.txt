@@ -1,0 +1,76 @@
+a + aa | | : : | MR-22 | Code: B324CS4
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [I] Semester Regular Examinations, Jan/Feb-2024
+Object Oriented Programming through Java
+(Common to CSE, CSB & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+Q. No. | Stem of the Question
+1.a) | What is the importance of ‘this’ keyword?
+
+1.b) List Java Buzz words.
+l.c) Define a Package? And CLASSPATH?
+
+1.d) Illustrate about Polymorphism? And its types.
+
+1.c) | What are benefits of exception handling?
+
+1. f) Distinguish between’ throw’ and ‘throws’.
+
+1.g) | Explain the purpose of TextField Class.
+
+1.h) List event classes?
+
+What is the difference between JButton and JToggleButton?
+Explain types of applets?
+
+Part-B (5 x 10 = 50 Marks)
+
+Stem of the Question M| L
+1 1,2
+
+2.a) | What is the need for OOP paradigm? Explain. 5 1
+
+2.b) Describe the various methods of parameter passing with examples. 5 2 1 1,2
+OR
+
+2.c) | What are the various control statements in Java? Describe in detail. 5 1 1 = 1,2,3
+
+2.d) Describe the terms messages, methods and classes in detail. 5 2 1 1,2
+
+3.a) Construct Java program for Hierarchical inheritance 5 3 2 1,2
+
+3.b) | What are the differences between classes and interfaces 5 2 2 1,2
+OR
+
+3.c) Construct java code for implementing polymorphism? 5 3 2 1,2,3
+
+3.d) Explain in detail about java.io 5 2 2 1,2
+
+4.a) | What is synchronization? Why thread synchronization is important for| 5 2 3 1,2
+multi-threaded programs? Discuss with an example.
+4.b) Explain how to handle user defined exception with an example 5° 2 3. 1,2,3
+OR
+4.c) Write about thread? Differences between thread-based multitasking | 5 2 3 1,2
+and process-based multitasking.
+4.d) What is an exception? Describe exception handling with Java} 5 3 3 1,2,3
+
+Program.
+5.a) Explain about different types of layout manager. 5 2 4 1,2
+5.b) Write a Java Program that handles Mouse events 5 3 A 1,2
+
+a) With Adapter Class
+b) With EventListener
+
+OR
+5.c) | Construct Java code for different List panels. 5 3 4  1,2,3
+5.d) Enlist and explain different events and listeners. 5 2 4 1,2
+6.a) | What are the differences between Applets and Applications? 5 2 5 1,2,3
+6.b) Explain about the components and containers of Swing GUI. 5 2 5 1,2
+OR
+6.c) | Write a program to construct a calculator using an applet. 5 2 5 1,2,3
+6.d) What is Swings? Explain MVC Architecture with a neat diagram. 5 1 5 1,2,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

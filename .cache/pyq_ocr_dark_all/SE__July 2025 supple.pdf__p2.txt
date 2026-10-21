@@ -1,0 +1,38 @@
+6.
+
+.d)
+
+. a)
+
+_b)
+
+.C)
+. d)
+
+a)
+.b)
+
+.C)
+
+d)
+
+Describe the differences and interrelations between the UMI. sequence | 5 4 3
+diagram and activity diagram. Use real-world examples to illustrate
+your answer.
+
+Apprise and analyze the purpose of system testing with a high level | 5 4 4
+Explanation on all its types
+Write a brief on equivalence partitioning & boundary value analysis of | 5 3 4
+black box testing
+OR
+Analyze elaborately on unit testing. How do you develop test suites. 5 3 4
+Analyze about alpha and beta testing. 5 3 4
+Discuss in detail about the Attributes of Effective Software Metrics. 5 2 5
+Examine the activities associated with project process planning. 5 4 5
+OR
+Discuss the importance of "Metrics for Source Code" in software | 5 2 5
+quality.
+What are the different ways in which quality can be reviewed? Explain | 5 2 5
+them.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

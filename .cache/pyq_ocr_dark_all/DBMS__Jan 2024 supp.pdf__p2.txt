@@ -1,0 +1,61 @@
+(iit) lor cach publisher, print the names of employees
+who have borrowed more than five books of that
+
+publisher.
+OR
+3.c) What ts Primary Key, Super Key and Candidate Key explain with an} 4 2 2 1,2
+example.
+3. d) Consider the following Relational Database and write SOL, querics: 6 3 ? 123
+
+ciuployce (person mamic, sireei, ciiy)
+works (person name, company name, salary)
+company (company name, city)
+
+c. Find the names of all employees who live in “Miami” and whose salary ts
+ereater than $500.000,
+
+4a) Define Normalization and write the importance of Normalization. . 5 2 3 1?
+4. b) suppose that data base schema R = (A. B,C, D, E, F) of explain and Apply | 5 2. 3 12,3
+SNE
+AB +C€
+NAN >D |
+Bee bP
+OR
+A.c) lexplain different types of joins with examples. 5 3 3 1?
+A.) Write rules to find closure set of functional dependencies. Given relation 5 3 3 193
+schema t (A, B,C, G, HL, 1) and the set of functional dependencies:
+AB
+Are
+Car ol]
+CGI]
+B->1]
+Compute at icast one super for the above schema (Hint: use attribute |
+closure),
+
+5 a) Compare Conflict Sertaltzability and View Sertalivabtlity with anmexample. 1 5 ? A |?
+5b) Describe He anomaties i concurrent execution Of Transactions. j 4 2 a |?
+OR
+5.) Explain Multiple Granularity protocol. 5 2 4 |?
+5. d) Explain Conflict Serializable schedule. Consider the precedence eraph of | 5 5 (| 1?
+igure verify the corresponding, schedule Confliceh Serializable or not.
+\ é S
+. >
+‘
+NO?
+6. a) Write short notes on fndexing Pechniques. 5 2 . |,
+6. b) Construct. a Bt tree with fan-out (no of pomders per node) is 3 for the 5 3 5 13
+following, scarch key values 80, 50, 30, 70, 50, 100, 90. Assume thai the irece
+is titially empty, and the values are added in the order piven.
+a) Show the tree after insertion of 10, afler insertion of 30, and after
+insertion of 90.
+b) Show the tree after deletion of 30, 10.
+OR
+6.0) Explain File Organization and Indexing. 5 2 5 1,2
+6.d) Show the Extendable Hash structure for the file which contains records with | 5 3 5 12,3
+the following search
+key values: 2 3. 5 7 12 17 19) 23 29 3]
+
+Where Hash Function is h(x)~x mod 8 and bucket size ts 3.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+

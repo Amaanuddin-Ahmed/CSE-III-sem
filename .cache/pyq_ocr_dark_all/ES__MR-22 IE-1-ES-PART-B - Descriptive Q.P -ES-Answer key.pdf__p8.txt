@@ -1,0 +1,12 @@
+e Hydropower
+
+e Tidal energy
+
+e Ocean thermal energy
+e Geothermal
+
+e Biomass
+
+e Hydrogen fuel
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome

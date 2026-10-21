@@ -1,0 +1,64 @@
+Hall Ticket Number
+Pld did bil
+
+MAHATMA GANDHEINSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. 1V Semester Regular/Supplementary Examinations, July 2025
+Ohiect Oriented Programming thrangh Java
+(Computer Science and Engineering (Aland ML))
+
+| | MR-22 Code: B425CM5
+
+time: $ Hours Answer ALL Questions Max. Marks: 60
+Part-A (0x 1 = 10 Marks)
+
+Q. No. I. Stem of the Question - M LL | co ‘| PO
+1.a) | What is the purpose of a constructor in Java? l ] | l
+1.b) Describe the use of this keyword in Java. l 2 | 2
+l.c) Explain the concept of substitutability in inheritance. l 2 2 |
+L.d) — How does polymorphism help in object-oriented design? | 2 2 2
+1. c) What is autoboxing in Java? | | 3 |
+|. f) Define dacmon thread with an example. | | ? 3 |
+i.g) | Why are adapier classes usciui in event handime’ | i 3 ( Z
+i.h) (describe how a scroitbar ts different from a scrolipanc. | J 4 7
+L.i) = Why is Swing preferred over AWT? | 2 5 |
+1.4) What method adds a tab in a JTabbedPane? | l 3 5 l
+
+Part-B (5 x 10 = 50 Marks)
+
+Q.No[ss«~i«~ist~S™*=«SStem of the Question = | M | CL | CO] PO
+2.a) Define Object-Oriented Programming. What are the key principles of | 5 | l |
+OOP”?
+2.b) Explain the concept of garbage collection in Java. Why is it important? | 5 2 I 2
+OR
+2.c) Discuss the difference between method overriding and method | 5 2? l 2
+overloading with examples.
+2d) Tlustrate the concept of parameter passing between objects in OOP. 5 2 ?
+3.a) What is the difference between a base class and a subclass’? Give an | 5 | 2 |
+example.
+3.b) Define a Java interface Shape with a method area(). Implement it in| 5 3 2 3
+two classes Circle and Rectangle and display their areas.
+OR
+3.6) Explain the coucept of CLASSPATIL and its significaice ii using | 5 2 2 |
+packages.
+3.d) Write a Java program that defines an interface Printable and | 5 3 2 3
+
+implements it in a class Document to print a message.
+
+4.a) Describe the difference between termination and resumptive exception | 5 2 3 l
+handling models,
+
+Ab) Write a Java program that creates two threads: one prints even | 5 5 5 4
+nuimibers, the other prints odd aumbers up to 10.
+
+OR
+
+Ac) Explain the life evele ofa thread tn Java with a neat diagram. i 3
+
+4d) Write a Java program to demonstrate the use of try, catch, and finally | 5 2 ) |
+DlOCKS.
+
+Soa) Explain the delegation event model with a suitable diagram. 5 ? A )
+
+yb} Wriie a fava AW! propraim thai respouds fo a builow click usta, } 5 5 a 5
+
+PRALETA AYA FE pt th HEN

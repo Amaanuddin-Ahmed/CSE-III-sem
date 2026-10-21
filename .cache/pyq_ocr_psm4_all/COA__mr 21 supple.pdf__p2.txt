@@ -1,0 +1,22 @@
+5.a) Discuss the Memory Hierarchy in computer system with regard to | 5 3 4
+Speed, Size and Cost?
+
+_ 5.b) Explain the mechanism involved in Magnetic Disks and Magnetic | 5 5 “h
+Tapes.
+OR
+5.c) Explain about DMA controller and its mode of data transfer. 3 Zz a
+5.d) Contrast Daisy-Chaining priority and Parallel priority Interrupt with its | 5 a 4A
+hardware diagram.
+
+6.a) Explain four segment CPU pipeline and Timing of instruction pipeline. | 5 2 3
+
+. 6.b) | Write about pipelining and its importance in high speed applications. 5 2 5
+OR
+6.c) Explain inter processor communication and synchronization in a shared | 5 5 5
+
+multiprocessor environment.
+
+6.d) Illustrate serial and parallel arbitration produces in a shared| 5 3 5
+multiprocessor environment.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

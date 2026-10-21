@@ -1,0 +1,30 @@
+4.a) Show that if n is a positive integer, then 5 1 3 133
+n(n +1)
+ltoes bie ————,
+4.b) Express the linear search algorithm as a recursive procedure. 5 pi 3 1,2
+OR
+4.c) What is the coefficient of x'’y'? in the expansion of (2x — 3y)”>? =] 6) 3 1,2
+4.d) | How many solutions does the equation x; + x 2 + x3 = 11 have,| 5 4 3 1,2
+where x), X 2 and x3 are non-negative integers?
+5.a) | A-sequence of 10 bits is randomly generated. What is the probability | 5 4 4 12
+that at least one of these bits is 0?
+5.b) | What is the variance of the random variable X, where X is the] 5 2 4 12
+number that comes up when a fair die is rolled?
+OR
+5.) Solve the recurrence relation @, - 7@y-) + 10 dy.2 = 0 n> 2. 5 3 4 1,2
+5.d) | What is the solution of the recurrence relation 5 3 4 1,2
+An = ap-1 + 2ap-2 with ap = 2 and a; = 7?
+6.a) State and Prove Euler’s Formula. 5 Z 5 1
+6.b) Draw the minimum spanning tree for the following graph by using | 5 3 5 1,2,3
+kruskal’s algorithm. 7
+9 Io 8
+oO
+OR
+6.c) Find a minimum spanning tree for the given weighted graph using | 5 3 5 12,3
+Prim’s algorithm. a 1 »b
+é I d
+6.d) Find the minimum number of colors that are required to assign | 5 2 5 1,2,3
+vertices of the following graph.
+\\ / ‘|
+\ Kut
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

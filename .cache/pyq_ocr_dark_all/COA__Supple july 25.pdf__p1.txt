@@ -1,0 +1,47 @@
+Hall Ticket Number:
+
+MAHATMA GANDEHEINS PITUTE OF TECHNOLOGY (Autonomous)
+B.Vech. [LV Semester Supplementary Hxaminations, July 2025
+(‘omputer Organization and Architecture
+(Computer Science and lngineering)
+Time: 3 Llours Answer ALL Questions Max. Marks: 70
+Q. No. | Stem of the Question | M | L, | CO | PO
+l.a) | What are the basic functional units of a computer? 2 I l l
+|.b) Explain arithmetic, logical and shift operations with examples. 2 3 | l
+l.c) Write the differences between Hardwired Control and micro | 2 | 2 2
+programmed control.
+i ) List out the ivpes of addressiny, modes. > 3 2 2
+l.c) Islaborate on floating point-addition and subtraction. a, 5 } )
+I. t) Do the subtraction using complements 100-11 LOU, Z ( 3 7
+l.g) Explain the types of inodes of transfer with an cxampic. 2 | i} 3
+|.h) — Last out the types of memory techniques. 2 3 4 3
+1.i) Compare RISC & CISC characteristics. 2 3 5 2
+1.}) Discuss the difference between tightly coupled multiprocessor and | 2 2 5 2
+loosely coupled multiprocessor. _ ; oo
+Part-B (5 x 10 = 50 Marks) — . _
+Q. No. _ - Stem of the Question M | L | CO | PO
+2.a) With the help of block diagram, explain common bus system. 5 l l |
+2.b) In the basic computer each instruction cycle consists of four phases. | 5 4 1 I
+List and explain them.
+OR
+2.) Desien a4 bit Arithmetic Cireuit, 5 4 | |
+2.d) Explain role of different computer registers with respect to} 5 | | l
+instruction Fetch cycle and execution. Give example
+3.a) What is control memory? Write about address sequencing. 5 3 2 2
+3.b) Explain direct addressing mode and indirect addressing mode with | 5 | 2 2
+an cxample.
+OR
+3.c) With the diagram explain the basic organizaiion of tucro | 5 l 2 2
+programmed control unit.
+3.d) Give the instruction format of different instruction of computing | 5 2 2 2
+system.
+A. i} Brictly discuss the hardware implementation of Booth alporithar, 4 2 4 4
+Ab) Uxplate fixed point addition and subtraction ta couiputer arithimetios | 5 ‘\ 4 4
+with an example.
+OR
+toes Poor ihe Fotloswiig digi: Booth aloceithar ti x % 5 A 3 3
+4d) Write a shori noie on Poaiine pot addition of iiiabers with an} 5 2 3 3
+exile.
+5 A) Explain the memory hierarchy wth a neat diaerain., 5 A ?
+
+Sob) With the neat diaerai ox plata the concepis of direct memory access. | 5 / (f /,

@@ -1,0 +1,31 @@
+5.a) Define binomial theorem. What is the coefficient of xy” in the | 5 3 “4 1
+
+expansion of (2x — 3y)"""?
+5.b) In how many ways 4 boys and 4 girls can be seated in a row so that | 5 3 4 1
+boys and girls are alternate?
+; OR
+5.c) There are 7 men and 3 women. Find the number of ways in which a} 5 3 4 i
+
+committee of 6 persons can be formed if the committee is to have
+(i) exactly 4 men, and (ii) at least 2 women.
+
+5.d) Find the number of integers solutions of x, + x, +x, +x, +x, =30.| 5 2 4 l
+Where x; > 2, x2 > 3, x3 > 4, X4 = 2, x5 > O.
+
+6.a) Prove that a complete graph K, is planar if and only ifn < 4. 5 3 5 ]
+
+6.b) Explain kruskal’s algorithm and using the same obtain the minimal | 5 2 5 i
+spanning tree for the following weighted graph.
+
+4
+OR
+6.c) Show that the given pair of graphs are isomorphic. 5 2 5 1
+b b
+a c a‘. | Pe
+G: H:
+e  ¢ e d’
+
+6.d) Differentiate between Eulerian graph and Hamiltonian graph with an} 5 y 5 1
+example each.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

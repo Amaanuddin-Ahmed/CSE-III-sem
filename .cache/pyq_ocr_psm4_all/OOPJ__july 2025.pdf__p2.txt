@@ -1,0 +1,10 @@
+6.a) Explain about JTree with the help of suitable example. 5 3 5 1,2,3
+
+6.b) Explain how parameter is passed to Applet. 5 z 5 Lee
+OR
+
+6.c) Explain in detail about classification of swing components. 5 Z 5 1,2,3
+
+6.d) Differentiate between AWT and swings. 5 2 5 1,2,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

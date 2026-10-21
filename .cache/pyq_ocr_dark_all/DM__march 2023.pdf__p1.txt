@@ -1,0 +1,60 @@
+Hall Ticket Number:
+
+ae
+
+Pi i it i dd L MR-21 | Code: B313C85
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech, III Semester Regular Examinations, March-2023
+Discrete Mathematics
+(Common to CSE, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M |L [co] Po.
+1.a) Define a proposition and give an example? 2 l l 1 |
+1.b) Construct the truth table for ~PA(~PV~Q). 2 2 I 1,2
+l.c) A={a, b,c}, B={1, 2} then find AxB and BxA. 2 2 2 I
+1.d) | What is a digraph? Give an example. 2 ] 2 I
+l.e) Find the middle term of (x+(1/x))*” 2 2 3 1
+1. f) How many ways are there to distribute 12 different books among 15.
+
+people if no person receive more than | book? 2 2 ;
+1.g) Solve an-6an-1+9an-2=0. 2 3 4 1,2
+l.h) Find the generating function of 1, 2, 3, 4..... 2 2 4 1
+1.1) Define a planar graph? 2 | 5 l
+1.j) List the applications of Trees? | 2 l 5 |
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M |_L | CO | PO
+2.a) Obtain the PDNF of (PAQ)V(~PAR)V(QAR) without using truth | 5 3 1 1,2
+table.
+2.b) Show that (PAQ) > (PVQ) is a tautology. 5 3 1 1,2
+OR
+2.c) Show that (~PA(~QAR))V(QAR)V(PAR) @R. 5 3 1 1,2
+2.d) Determine the validity of the following argument: » 4 1 1,2
+If two sides of a triangle are equal, then two opposite angles are equal.
+Two sides of a triangle are not equal.
+Therefore, the opposite angles are not equal.
+3.a) Prove that a relation R from A to B and S be a relation from B to C, 5 3 2 |
+then (RoS)'!=S"'oR!
+3.b) What is a Poset? Draw Hasse Diagram representing the positive | 5 2 2 1
+divisors of 36.
+OR
+3.c) A function f(x) = 4x+2 on set of real numbers is bijective or not. Also | 5 2 2 1
+find inverse of it.
+3.d) — Show that the relation R is defined NxN by (a, b)R(c, d) if and only if 5 3 2 I
+a+d = bte is an equivalence relation.
+4.a) How many numbers of 4 digits can be formed from 0, 1, 2, 3,5, 6ifno | 5 2 3 i
+digit is to occur more than once in each number? How many of these
+are divisible by 2?
+4.b) Prove that 127+ 27+ 37+... + n?=n (n+ 1) (n+ 1)/ 6 using 5 4 3 1
+mathematical induction where n is a positive integer.
+OR
+4.c) Find the coefficient of x!° in (1+x+x?+....) 5 2 3 |
+4.d) How many possible telephone numbers are there when there are seven 5 2 3 ]
+
+digits, the first two of which are between 2 and 9 inclusive, the third
+digit between 1 and 9 inclusive, and each of the remaining may be
+between 0 and 9 inclusive? ee - of ee
+

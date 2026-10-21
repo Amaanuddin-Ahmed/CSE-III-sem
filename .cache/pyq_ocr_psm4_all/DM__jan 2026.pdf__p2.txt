@@ -1,0 +1,28 @@
+4.c) Explain the concept of complement in a Boolean algebra and | 5 Z 4
+illustrate with an example.
+
+4.d) Apply Boolean simplification to minimize the expression| 5 3 (h
+F=AB+A'C+BC
+
+5.a) Find the number of ways in which the letters of the word] 5 3 3
+‘MATHEMATICS’ can be arranged.
+
+5.b) Explain the practical importance of combinatorial analysis in| 5 2 3
+algorithm design.
+OR
+5.c) | State and explain the Binomial Theorem with meaning of each term. 5 2 3
+
+5.d) | Compute the number of ways to distribute 10 identical balls into 4 | 5 4 3
+boxes such that no box is empty.
+
+6.a) Explain the concept of graph isomorphism with an example. 5 2 5
+6.b) Find the chromatic number of a graph with 4 vertices and 4 edges | 5 2 5
+forming a cycle.
+
+OR
+6.c) Explain the practical significance of the Four-Color Problem. 5 2 5
+6.d) Determine if a directed graph can have both Euler and Hamiltonian | 5 5 3
+
+circuits.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,58 @@
+Tall Ticket Number:
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. If Semester Supplementary Examinations, July/August-2024
+Object Oriented Programming through Java
+(Common to CSE, CSB and CSD)
+
+Time: 3 flours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q. No. | Stem of the Question M |L[|CO | PO
+l.a) Write four major differences between C and Java. I 2 l 1,2
+l.b) — List the java buzzwords. l | I 1,2
+1.c) | How do we tell java that we want to use a particular package in a file? l 2 2 1,2
+|.d) Define the need for static keyword. | 2 2 1,2
+l.e) — List the Common java Exceptions. | 3 1,2
+L. f) Ilow do we start a thread’? | | 3 L,2
+1.2) What is event handling mechanism? Give different event handling | 1 2 4 1.2
+
+classes.
+1.h) Define layout manager and list different layout managers. 1 2 4 1,2
+1.i) | How many arguments can be passed to an applet using <PARAM> | 1 3 5 1,2
+tags?
+1.j) List the components of MVC architecture. | l 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+
+2.a) Create a Java program called ShoppintCart.java. The program should | 6 = 3 I 1,2
+
+display a list of items (with item ID and item description, sorted by
+item ID) and their prices. Ask the user to enter an item ID for purchase
+(or 999 to quit) and also ask for the quantity of that item to be
+purchases. This process should repeat until all the desired items have
+been selected. The final output should list the ttem [Ds, descriptions,
+quantities, and subtotals, with the grand total for the order. User
+currency formatting for all currency values.
+
+2.b) Explain the features and benefits of object oriented programming. 4 2 I 1,2
+OR
+2.c) Write a java program to simulate the operations of numerical calculator | 6 = 3 I 1,2
+
+to perform the functions Addition (+), subtraction (-), Multiplication
+(*), Division (/).
+
+2.d) Briefly discuss about the control statements used in java. 4 2 l 1,2
+3.a) Identify the differences between method overloading and overriding | 5 = 3 2 1,2
+with examples.
+3.b) What is the use of package? Write a java program to explain the | 5 2 2 1,2
+concept of package.
+OR
+3.c) Describe the various forms of implementing interfaces. Give examples | 5 3 > 12?
+of java code for cach case.
+3.d) ~~ Write short notes on Abstract classes and methods. 5 ? ? 1,2
+4.a) — Lxplain the concept of user defined exception with suitable cxample. 5S 3 3 1,2
+4.b) What is synchronization? [explain with an example. 5 2 3 1,2
+OR

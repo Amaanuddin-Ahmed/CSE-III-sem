@@ -1,0 +1,13 @@
+5.a) What is transaction? Give an example. Explain ACID properties in| 10 2 4 1,2
+DBMS with the help of examples.
+OR
+5.c) Discuss about Log Based Recovery Techniques. Illustrate with an] 10 2 4 1,2
+example.
+6.a) Discuss about organization of records in Sequential File Organization | 5 3 5 La
+by illustrating with an example after insertion and deletion operations.
+6.b) Distinguish between Sparse and Dense Index illustrating with an | 5 4 5 2
+example.
+OR
+6.c) Demonstrate insertion, deletion and searching a given element in B+} 10 3 5 [2
+Trees? Explain with example.
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

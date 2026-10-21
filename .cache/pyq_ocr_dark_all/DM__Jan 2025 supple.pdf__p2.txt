@@ -1,0 +1,36 @@
+3.d) | Give an cxample of relation which is symmetric but neither reflexive | 5 2 2
+nor anti symmetric nor transitive.
+
+4.a) Prove that G={0,1,2,3,4,5,6} is an abelian group of order 7 with | 5 3 3
+respect to addition modulo 7.
+4.b) Prove that in a group its identity element, inverse element are unique. | 5 3 3
+OR
+4.c) | Draw the Hasse diagram representing the partial ordering {(A,B):A | 10 1 3
+subset of B} on the power set P(S) where S={a,b,c!. Find the
+maximal, minimal, greatest and least elements of the poset.
+
+5S.a) A bag of coins contains 10 nickels, 8 dimes, and 7 quarters. | 5 4 4
+Assuming that the coins of any one denomination are
+indistinguishable, in how many ways can 6 coins be selected from the
+bag?
+
+5.b) In how many ways can 23 different books be given to 5 students so | 5 4 4
+that 2 of the students will have 4 books each and the other 3 will have
+5 books each?
+
+OR
+5.¢) What is the coefficient of xy! in (x + yy” and in (2x - Qy)!” 5 3 4
+5.d) Determine the coefficient of 5 5 4
+x?yl2z°w? in (x — Ty + Bz — w)”.
+6.a) Show that the following graphs are isomorphic. 5 1 5
+( b'(2)
+Ag ee ee .
+po. id
+be - 1. a'(3)" em), c'(3)
+6.b) Explain Prim’s spanning tree algorithm. 5 2 5
+OR
+6.c) | Find an Euler path or an Euler Circuit if it exists, in each of the three 5 | 5
+graphs given below.
+6. d) 5 3 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\n08/07/2025 (Fe\nCode: B425CS4\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Regular/Supplementary Examinations, July 2025\nDatabase Management Systems\n(Common to CSE, IT, CSB, CSM and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nQ. No.\nStem of the Question\n1. a) Define a Database and Database Management System.\n1. b)\nList three levels of abstraction.\n1. c)\nDefine a constraint and list types of constraints.\n1. d)\nList any two DDL commands.\n1. e)\nWhat is trigger in DBMS?\n1. f)\nDefine Normalization.\n1. g)\nWhat is atomicity?\n1. h)\nList various transaction states.\n1. i) List any two types of database indices.\n1. j)\nWhat is hashing?\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nMax. Marks: 60\nM\nL\nCO\nPO\n1\n1\n1\n1\n1\n1\n1\n1\n2\n2\n1\n1\n1\n2\n1\n1\n2\n3\n1\n1\n2\n3\n1\n1\n1\n4\n1\n1\n1\n4\n1\n1\n1\n5\n1\n1\n1\n5\n1\n2. a) Explain the significance of conceptual design using ER Model?\n2. b) Compare and contrast file system and DBMS with respect to data\naccess and security.\nOR\n2. c) Illustrate mapping cardinalities and participation of entities in\nrelationship with suitable example.\nM\nL\nCO\nPO\n5\n2\n1\n1\n5\n2\n1\n2\na\n5\n2\n1\n1\n2. d) Explain structure of DBMS in detail.\n5\n2\n1\n1\n3. a) Illustrate table creation and enforcing integrity constraints with a\nsuitable example.\n5\n2\n2\n1\n3. b) Explain Relational Algebra.\n5\n2\n2\n1\nOR\n3. c) What is referential integrity? Explain the purpose of referential\nintegrity in detail with appropriate example?\n5\n2\n2\n2\n3. d) Differentiate Tuple relational calculus and domain relational calculus.\n5\n2\n2\n1\n5\n3\n3\n2\n4. a)\nConsider a relation R with following attributes {SSN,ENAME,\nPNAME,PLOC,HOURS} where SSN is Social Security number and it\nis primary key, Ename is employee name, PNUMBER is project\nnumber, PNAME is project name, PLOC is project location and\nHOURS is number of working hours per day.\nBelow mentioned are the decomposed relations.\nApply loss less join decomposition algorithm and check whether the\ndecomposition is lossy or loss less.\nR1= {SSN, ENAME}\nR2= {PNUMBER, PNAME, PLOC}\nR3= {SSN, PNUMBER, HOURS}.\n4. b) What is attribute closure? Explain how to find attribute closure with an\nexample?\n5\n3\n3\n1\nP.T.O.\n",
+   "chars": 2198,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n4. c) List and explain aggregate operations in SQL.\n4. d) Explain various types of Join operations in SQL.\n5. a) Illustrate implementation of Atomicity and Durability properties.\n5. b) Let's say two transactions T1 and T2 want to update the same bank\naccount balance at a time.\nT1: Reads balance, adds 100, writes it back.\n• T2: Reads balance, deducts ₹50, writes it back.\nAnalyse and critique what would happen with and without mutual\nexclusion.\nOR\n5. c) Mutual exclusion is a mechanism to achieve serializability. Justify?\n5. d) Explain lock based protocols?\n6. a) Discuss file organization and importance of indexing.\n6. b)\nIllustrate B+ trees.\nOR\n6. c) Demonstrate Index Sequential Access Method (ISAM).\n6. d)\nExplain cluster index in detail.\n5\n2\n3\n1\n5\n2\n3\n1\n5\n3\n4\n1\n5\n4\n4\n2\n5\n5\n4\n2\n5\n3\n4\n1\n5\n2\n5\n1\n5\n3\n5\n1\n5\n3\n5\n1\n5\n2\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 908,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

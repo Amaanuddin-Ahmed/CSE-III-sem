@@ -1,0 +1,76 @@
+4.
+qh,
+
+6.
+
+6.
+
+4
+
+Mss
+
+.b)
+
+c)
+dl)
+
+». a)
+
+me)
+
+no
+
+a)
+b)
+
+Perform the subtraction with the following unsizned binary numbers. 5 3
+
+L. LL OL0- 1000
+
+il, LLOTO-T 101
+
+tit. foroel 104
+
+iV. 1111-0101
+Draw the flow chart for decimal division and explain division of 23 | 5 3
+with 4. |
+
+idle
+
+Draw the flow chart of floating point addition operation? 5 3
+Draw the flow chart for booth multiplication and explain multiplication | 5 3
+
+of 12 with 13.
+
+explain the working of DMA controller. 5 2
+A cache consists of memory size of 256X16 and 8 blocks. ‘the main | 5 3
+memory contains memory size of 4096X16 .find out how many bits are
+
+there i Jndex, Tag, block, aud Word fields in the case of direct
+mappine.
+
+OR
+Discuss daisy-chain priority interrupt using neat diagram. 5 |
+Draw the classification diagran of semiconductor memory and explain | 5 2
+
+briefly about ROM, PROM, EEPROM and Flash memory,
+
+Explain in detail about RISC instruction pipeline with data conflicts | 5 2
+problem?
+Discuss about the following Interconnection structures 5 2
+i. Time-shared common bus
+i Crossbar switch
+
+Explain about vector processiup,? 5 2
+What ts cache coherence problem? § Sugeest the solution for it. 5 2
+
+ara aae
+
+Marks: 1: Bloom’s ‘Taxonomy | ic vel: CO: ( ‘ourse Outcon re; PO): Propramme Outcome
+
+”
+
+)
+La
+
+2.

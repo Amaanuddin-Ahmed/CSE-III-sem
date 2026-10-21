@@ -1,0 +1,28 @@
+5.a) How would you evaluate different test strategies for conventional | 5 | ‘A
+software? Provide examples of when to apply each strategy.
+
+5.b) | Analyze the role of metrics in the design model for ensuring design | 5 4 4
+quality in a software project.
+
+OR
+
+5.c) | How would you assess the importance of product metrics in software | 5 4 A
+maintenance, and which metrics are most critical for this phase?
+
+5.d) Explain how validation testing differs from system testing, and| 5 2 ‘|
+analyze their roles in ensuring software quality.
+
+6.a) | What is the role of software reviews and formal technical reviews in| 5 2 5
+the software development process? Explain.
+
+6.b) Describe the process of risk identification and how it helps in| 5 2 5
+creating a proactive risk management strategy.
+
+OR
+6.c) | Compare and contrast reactive and proactive risk strategies in risk | 5 4 5
+management.
+6.d) How would you determine the success of software reliability | 5 3 5
+
+measures in meeting customer expectations for a software product?
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

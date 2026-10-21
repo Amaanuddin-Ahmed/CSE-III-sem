@@ -1,0 +1,55 @@
+Hall’ Picket Nutn ber: |
+
+Phi Tt LEE | R22 Code: BA2SCSS
+MAHATMA GANDHEINSTIPUTE OF TECHNOLOGY (Autonomous)
+13. Pech. [{V Semester Regular/Supplementary Examinations, July 2025
+Sufiware Huagineering
+(Common to CSI, CSB and CSD)
+Time: 3 Tours Answer ALL Questions Max. Marks: 60
+
+Q. No. | - Stem of the Question — — | M | 1. | CO | PO]
+l.a) Define Software Engineering. l | | l
+1. b) What is spiral Model. | 2 | {
+l.c) | What is meant by requirement management? l l 2 2
+1. d) Define procedural interfaces, | | 2 2
+ioe) list the coals of the desion process | od ? 3 3
+
+1.) What is UMI-? Write the principles of modelling. | | 3 3
+L. 9) What is inleeralion testing? | | 4 44
+i.h) = Define black box tesiing strategy. || | 4
+1.1) Letine sottware reliability. l | 5 4
+ee Part-B (Sx 10=50 Marks)
+
+Q. No. | oo Stem of the Question _ M {| L | CO | PO -
+2.a) Construct the CMMI model with a neat sketch 5 3 | |
+2.b) Discuss on various types of software myths aud the true aspects of | 5 4 | |
+
+these myths.
+OR
+2.c) Compare and contrast different software process models. 5 4 | |
+2.4) Explain process frame work activitics. 5 2 | l
+S.a) Explatu ihe difference between functional requircinents and non | 5 a 2
+functional requirements
+3.b) Demonstrate in detail about system requirements. 5 2 2 2
+OR
+3.c) State and explain various aspects in requirements validation process. 5 2 2 2
+3.d) — Explain in detail about requirements elicitation and analysis process. 5 2 2 2
+Ajay Identify the major clements in pattern based software design in detail. 5 3 4 3
+4b) Explain collaboration diagrains and use case diagrams. 5 2 3 3
+OR
+4.c) Draw and explain Use case diagrams and its development process with | 5 3 3 3
+suitable illustrations
+4.d) Discuss about architectural design in brief, 5 ? 3 3
+Soa) Explain in detaibabout white box testing, tochaiques. } J ‘ A
+Sb) Discuss about meirtes for desiern model and source code. i. 5 “f “h
+OR
+Sc) Describe siraiegic approach to sofiware testy. 5 ) ‘ “4
+od) EXplam about metetes for desig rodet. boo ‘, i ob
+Goa) Write an detatled noice on 150 9000 ciatiy Sind y } d ‘t
+6b) What ts sfatisieal solhware quality Assurauee’7 (tscuss Hs obpectives: j y rf
+pe
+Gc) Explain about risk projection and risk uanaecuient. . 3 " 4
+| of dd) hshand coglatin the varions sotiware ciiakiby faerors ho) ’ ) d
+
+Yo [koad . ' tan. 1 ees : | rere Oe ee i Se a ee ee ee
+bog dda ‘ . hey ee t 1 a : hoy ’ : : :

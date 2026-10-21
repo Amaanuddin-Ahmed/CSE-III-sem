@@ -1,0 +1,61 @@
+eo | ra | Aad f NK!
+
+Hall Ticket Number: |
+PF] ti til ti | | MR-22 | Code: B324CM2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. I Semester Regular Examinations, Jan/I'cb-2024
+Software Engineering
+
+(Computer Science and Engineering (Al & ML))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q.No. | Stem of the Question M |L [co | PO
+1.a) Define software engineering and explain. I 1 1 1
+1.b) List the types of software Myths? 1 4 | l
+l.c) What is feasibility study? 1 2 l
+1.d) What is Requirement Validation? I l 2 10
+l.c) Define Software Architecture? l l 3 3
+1.f) | What are called Static diagrams? | | 3 3
+1.g) | What is validation testing? 1 J 4 9
+1.h) Why do we need to test software? | l 4 9
+1.i) Write about quality concepts? 1 2 5 1
+1.j) Distinguish between reactive and proactive risk strategies? 1 4 5 1
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L [CO| PO
+2.a) With a neat sketch, explain Capability Maturity Model Integration | 5 3 l i
+(CMMI).
+2.b) Compare and contrast different software process models. 5 2 1 l
+OR
+2.c) Explain the evolving role of software? 5 2 | |
+2.d) What are the generic process framework activities? Explain. 5 Il 1 1
+
+3.a) | What is the goal of requirements analysis phase? Why the requirements | 5 3 2 2
+analysis phase is a difficult one? Justify your answer
+
+3.b) | What are the desirable characteristics of a good software requirement | 5 4 2 2
+specification document?
+
+OR
+3.c) Explain the differences between functional requirements and non- | 5 3 2 2
+functional requirements by giving suitable examples.
+3.d) Discuss how feasibility studies are important in requirement | 5 4 2 2
+engineering process?
+4.a) Draw the class diagram and explain various relationships that exist | 5 2 3 3
+between classes.
+4.b) Distinguish between sequence and collaboration diagrams. 5 2 3 3
+OR
+4.c) What are the design principles of a good software design? 5 1 3 3
+4.d) Draw and explain Use case diagrams and its development process with | 5 2 3 3
+suitable illustrations.
+5.a) | What is software quality? What are the metrics used for source code | 5 l 4 l
+analysis?
+5.b) What are the various testing strategies used for testing conventional | 5 l 4 9
+software?
+OR
+
+P.T.O.

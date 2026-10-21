@@ -1,0 +1,105 @@
+.C)
+
+-d)
+
+. a)
+
+-b)
+
+.C)
+
+.d)
+. a)
+
+. a)
+
+-b)
+
+.C)
+
+_d)
+
+Write SQL Queries for the given Employee schema 5 3
+
+e List employee numbers, name sal, DA(15% OF SAL), and PF
+
+(10% of sal)
+e List the numbers of people and average salary in deptno 30
+e List manager names and their joining dates completely spelled
+in alphabetical ordcr of name
+Employee(eno , ename, job,mgr,hirdate,sal,comm,deptno).
+What are the basic relational algebra operations with suitable | 5 2
+examples.
+Lots(Property_id#, County_name, Lot# ,Area ,Price, Tax_rate) 5 3
+Apply second normal form and third normal torm
+FD1: Property_id# — County name Lot# Area Price Tax_rate
+FD2 : County_name, Lot# — Property_id#, Price, Tax_rate
+FD3 : County_name — Tax_rate
+FD4: Area — Price.
+Explain 4NF and 5NF with suitable examples. 5 3
+OR
+
+Suppose that we decompose the schema R = (A, B, C, D, E) into (A, B, | 5 3
+C) (A, D, E). Show that this decomposition is a lossless-join
+decomposition if the following set F of functional dependencies holds:
+A—BC
+CD— E
+B—D
+E-A
+Explain loss less join and loss less decomposition with examples. 5 2
+Explain timestamp-based protocol for the concurrency control. 5 1
+Explain conflict serializable schedule. Consider the precedence graph | 5 2
+of Figure verify the corresponding schedule conflict serializable or not.
+
+O—D
+or
+
+@
+OR
+
+Explain two-phase locking protocol. 5 2
+Consider a file system such as the one on your favourite operating 5 3
+system.
+a. What are the steps involved in creation and deletion of files, and in
+writing data to a file?
+b. Explain how the issues of atomicity and durability are relevant to
+the creation and deletion of files and to writing data to files.
+Suppose we are using extendable hashing on a file that contains 5 3
+records with the following search key values
+2 6 9 12 16
+15 19 23 14 29
+Show the extendable hash structure for this file if the hash function is
+h(x)=x mod_ 8 and buckets can hold three records.
+Explain B+ tree insertion and deletion with an example. 5 2
+OR
+Construct a B+ tree for the following set of key values. 5 3
+(2,3,5,7,11,17,19,23,2,31).Assume that the tree is initially empty and
+values are added in ascending order.
+Explain open hashing with suitable example. 5 2
+
+1,2
+
+1,2
+
+Le
+
+L2
+
+1,2
+
+Lee
+Li
+Le
+
+La
+1,2
+
+1,2
+
+Lee
+
+1,2
+
+1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

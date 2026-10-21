@@ -1,0 +1,28 @@
+.C)
+.d)
+
+a)
+.b)
+
+.C)
+.d)
+
+Describe metrics for source code and for testing. 5 3 4
+
+Demonstrate metrics for analysis model. 5 4 4
+
+Elaborate the concepts of Risk management Reactive vs Proactive | 5 l 5
+
+Risk strategies.
+
+Explain about Quality concepts. 5 l 5
+OR
+
+Describe developing a risk table. 5 4 5
+
+Create a risk table for the project that if you are the project manager | 5 6 5
+
+for a major software company. you have been asked to lead a team
+that’s developing “next generation “word- processing software.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

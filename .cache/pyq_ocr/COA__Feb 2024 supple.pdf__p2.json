@@ -1,0 +1,55 @@
+{
+ "exam": {
+  "subject": "COA",
+  "regulation": "unknown",
+  "session": "Feb 2024",
+  "year": 2024,
+  "examType": "Supplementary",
+  "partA": null,
+  "partB": null
+ },
+ "questions": [
+  {
+   "part": "B",
+   "qno": "5.c",
+   "text": "Sketch the block diagram of DMA in a computer system and discuss the working principle of DMA?",
+   "marks": 7
+  },
+  {
+   "part": "B",
+   "qno": "5.d",
+   "text": "Explain Hand Shaking method of data transfer?",
+   "marks": 3
+  },
+  {
+   "part": "B",
+   "qno": "6.a",
+   "text": "Explain the Need of pipeline technique? Implement an arithmetic Pipeline for floating point addition and subtraction.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.b",
+   "text": "Compare and contrast between RISC and CISC computer architectures.",
+   "marks": 5
+  },
+  {
+   "part": "B",
+   "qno": "6.c",
+   "text": "Define cache coherence and why is it important in shared memory Multiprocessor systems? Give any solution to overcome the coherence problem?",
+   "marks": 7
+  },
+  {
+   "part": "B",
+   "qno": "6.d",
+   "text": "Explain vector instructions and how it will be helpful for performance point of view?",
+   "marks": 3
+  }
+ ],
+ "_meta": {
+  "subject": "COA",
+  "paperName": "Feb 2024 supple.pdf",
+  "fileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+  "page": 2
+ }
+}

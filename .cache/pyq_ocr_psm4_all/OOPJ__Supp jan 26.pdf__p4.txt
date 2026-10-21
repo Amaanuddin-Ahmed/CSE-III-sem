@@ -1,0 +1,17 @@
+OR
+5.c) Explain the role of HashSet, LinkedHashSet, and TreeSet with | 5 pi a l
+
+examples.
+5.d) Develop a Java program that counts unique words from a file using a| 5 4 A 1,2,3
+HashSet.
+6.a) Discuss the architecture of Swing and its advantages over AWT. re 2 5 |
+6.b) Develop a Java Swing program to display a calculator GUI. 5 4 5 1,2
+OR
+6.c) Explain different layout managers used in GUI design. s 2 5 |
+6.d) Develop a Java program to demonstrate mouse and keyboard event | 5 4 5 1,2,3
+
+handling using adapter classes.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+
+Page 2 of 2

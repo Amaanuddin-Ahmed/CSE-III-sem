@@ -1,0 +1,71 @@
+Hall Ticket Number:
+
+{| [| | | | | | | | - MR-21 | Code: B4iSITSS
+
+MAHATMA GANDHEINSTITUTE OF TECHNOLOGY (Autonomous)
+B.vech. LV Semester Supplementary examinations, July 2025
+Discrete Mathematics
+
+Taformation Technology)
+
+dime: 3 Hours Answer ALL Ciesiiois Max. Marks: 70
+CPt t-A (10 8 2 20 Marks)
+
+QNo | Stem of the Quesiion | M [il co [Pepe
+l.a) Construct the truth tables for the logical connectives. 2 | | 1.2
+l.b) Explain about Normal forms. 2 1 l |
+l.c Define Binary Relation and write its properties. 2 | 2 1,2
+1.d) — Write about compatibility relation with example. 2 I 2 1,2
+l.e) Write a recursive algorithm to find Fibonacci sequence for a number. 2 2 3 |
+Pon How many different 4 diet numbers can be formed with 3 four’s ? ? 4 12
+
+4 two's and 2 three’s.
+i.)  tixplain Bayes’ theorem. ) | A |
+I.h) Solve recurrence relation ayg-4ay., |! 4ay-7 0, where ag 0, ay 1. 2 3 | 1,2
+1.i) | Detine isomorphism and state the rules for isomorphic graphs. 2 | 5 |
+1.4) 'xplain tree traversals. oe 2 | 5 OL
+; Part-B (5 x 10 = 50 Marks) ee
+Q.No[ Stem of the Question M | L [CO] PO
+2.a) Show that the following statements are logically equivalent without | 5 2 | |,2
+using truth table.
+(PR) A (QR) © (PVQ)-R
+2.b) State and explain the rules that can generate a well formed formula. 5 ! l l
+OR
+2.¢c) Prove the following argument, using symbolic logic. 5 ?, I
+
+All men are fallible.
+All kings are men.
+Therefore, all kings are fallible.
+2.d) Using the truth table, show that the proposition PVI(PAQ) is a} 5 2 |
+
+tautology.
+3.a) Suppose that R is the relation on the set of strings that consist of | 4 3 2 12
+
+Isnglish letters such that a Rb ifand only if l(a) l(b), where I(x) is the
+length of the string x. Is R an equivalence relation?
+
+3.b) Let f& g be functions from R to R defined by f(x) =ax+b and} 5 3 2 1,2
+Q(X) = I-x+x*. If (gof) (x)=9x" -9x+3, determine a,b.
+
+OR
+3.c) Draw the Hasse diagram representing the positive divisors of 36. 5 2 2 I
+3. dd) Given & F123, 4), RB foc yV xo yt, Draw the eraph of R and give s 4 ) |
+
+its matrix. Also staic the properlics satishied by tf,
+
+4 a) By using mathematical induction prove that the given cquation is truc | 5 ? 3 12
+for all BOGTEVE Hepors
+POPP a C/G) faa | PCat EY for alba N.
+Ab) Slate binomial theorem. bexpand (4a PSD) UStOe, DINOMMAL LICOLCHL. . . 4 ie
+rer
+Ac) Discuss Procon hole principle with a suttable cxamiple, 5 | 3 |
+AAS Ta how many ways cana commiflee of 5 ladies and 4 pents be chosen | > }
+
+i af fad ,
+1
+
+co rr or | 1, rn en Cre Ce res vr DD Gan ovina
+PPQOUEE (4 LRG d ls CEM pe SRE Tt Seba FR RSE ta re ppcth ena Rey ce ae Leak
+
+4 ' wy
+! re

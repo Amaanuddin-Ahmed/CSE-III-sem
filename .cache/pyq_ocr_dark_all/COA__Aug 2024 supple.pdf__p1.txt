@@ -1,0 +1,63 @@
+Hall ‘Ticket Number:
+| | | | | | | | | MR21 | Code: B414CS582
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, July/Aug-2024
+Computer Organization and Architecture
+(Computer Science and kngineering)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+— Part-A (10 x 2 =20 Marks)
+
+_Q.No. |. : Stem of the Question eM | i, | PO
+l.a) | Draw the block diagram of digital computer. 2 2 2 l
+1.b) What is the difference between Computer Organization and Computer | 2 4 2 2
+
+Architecture?
+l.c) List the different addressing modes. 2 | 5 |
+l.d) Discuss about any two types of instruction formats. 2 2 4 2
+l.e) Give the example to represent floating point numbers. 2? 5 |
+|. f) | What is circular shift? Explain with example. 2 3 5 2
+l.g) Define the Read Only Memory. What is its usc? | 3 |
+l.h) How does SRAM differ from ordinary DRAM? 2 3 3 2
+1.1) low a vector processor operation 1s different from conventional scalar | 2 9 4 l 5
+
+processor?
+
+| 1.j) Differentiate tightly coupled and loosely coupled systems. 2 4 l 5
+
+ee Part-B (5 x 10 = 50 Marks)
+
+Q. No. Stem of the Question | M/L | CO | PO)!
+2.a) Explain different phases of instruction cycle with a neat diagram. 5 2 4 l
+2.b) Draw and discuss about the block diagram of register transfer. 5S 2 4 2
+
+OR
+2.c) Design a 4-bit combinational decrementer using 4 full adder circuits. 5 3 2 2
+2.d) With neat diagram, explain the operation of input-output configuration | 5 2 2 3
+in digital computer.
+3.a) Demonstrate the addressing modes in digital computer with examples. 5S 3 3 2
+3.b) Explain the various instruction formats with an example. 5S 2 3 l
+OR
+3.c) Explain about address sequencing capabilities in control memory. 5 2 3 4
+3.d) Discuss the elements of micro-programmed control organization. 5S 2 3 |
+4.a) Compare signed and unsigned binary numbers with table. 5S 4 5 2
+4.b) Perform the arithmetic operation (+41)+(-13) and (-41)-(-13) tn binary | 5 5 5 3
+using signed 2°s complement representation for negative numbers.
+OR
+4.c) Explain decimal arithmetic operations with examples. 5 2 5 l
+4.d) Solve a step-by-step multiplication of (+15) X (-13) using Booth’s| 5 = 3 5 11
+algorithm.
+S.a)  Diseuss the Memory hterarchy with a neat diagram. 5 2 3 l
+5. b) ixplain about Secondary or Auxiliary Memory. 5 2 3 |
+OR
+5.c) | Draw the block diagram ofa typical DMA controller and explain, 5 3 3
+Oo.) apladi about isolated and memory manned UO. ee, 3
+6.a) — L:xplain about ar ‘thmetic pipeline with yan example. 5 3 4 5
+6.b) What is the Inter processor Synchronization? Explain the; 5S 9 2? | 5
+Synchronization techniques.
+6.c)  Explatn various interconnection structures of a multiprocessor system | 5? | 6
+witht ical diagraiiis.
+Gay Disciiss the working and the amportance of RESC architecture, yD |
+
+Mi: Marks: L: Bloons Taxououry Level, CO: Course Outcoine, PO: Programme Outcome

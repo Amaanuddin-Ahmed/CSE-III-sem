@@ -1,0 +1,18 @@
+4.b) Differentiate Assertions and Triggers with suitable example. 5 3 3 1,2,3,12
+OR
+4.c) Illustrate First and Second Normal form with example. 5 3 3 1,2,3,12
+4.d) Discuss the problems caused by redundancy in Schema | 5 2 3 1,2,3,12
+refinement.
+S.a) Outline ACID properties of transaction. 5 2 4 i,2,3
+5.b) — Explain serializability concept with example. 5 2 4 1,2,3,12
+OR
+5. ¢) Demonstrate Validation-Based protocols. 5 3 4 1,2,3
+5.d) Interpret the procedures used to recover data from a DBMS. 5 2 4 1,2,3
+6.a) Explain Primary and Secondary indexes with example. 5 2 5 1,2,3
+6.b) Illustrate the factors that support to evaluate Hashing and | 5 2 5 1,2,3
+Indexing.
+OR
+6. c) Discuss about B* tree in detail with example. 5 2 5 1,2,3
+6. d) Illustrate Indexed Sequential Access Methods. 5 2 5 1,2,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

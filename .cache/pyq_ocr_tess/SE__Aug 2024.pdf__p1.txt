@@ -1,0 +1,115 @@
+Hall Ticket Number:
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, July/August-2024
+
+Software Engineering
+(Common to CSE, CSB & CSD)
+
+Time: 3 Hours Answer ALL Questions
+
+Part-A (10 x 1 = 10 Marks)
+
+Stem of the Question
+
+Q.No. |
+1. a)
+1. b)
+
+1.)
+1. d)
+1. @)
+1. f)
+
+1. g)
+1. h)
+
+1. i)
+1.j)
+
+Q. No.
+
+2. a)
+2. b)
+
+2.C)
+2. d)
+
+3. a)
+3. b)
+3.¢)
+3. d)
+
+4. a)
+
+4.c)
+4.d)
+
+Explain is legacy software.
+
+List the types of software myths.
+
+Explain the kinds of system requirements.
+
+Discuss data flow model.
+
+Justify the importance of refactoring.
+
+Define software architecture with its importance.
+Compare verification and validation.
+
+Describe smoke testing.
+
+List out the generic subcategories of predictable risks?
+Define risk components?
+
+Code: B424CS5
+
+Max. Marks: 60
+
+Part-B (5 x 10 = 50 Marks)
+
+Stem of the Question
+Explain the evolving role of software?
+Describe “Software myth”? Discuss on various types of software
+myths and the true aspects of these myths?
+
+OR
+
+Explain about the evolutionary process models.
+Compare and contrast perspective process models and iterative
+process models.
+
+Write short notes on user requirements. What are requirements?
+
+Compare functional requirements with non-functional requirements.
+OR
+
+Explain state machine model with a suitable example.
+
+Demonstrate class hierarchy for library by using interface
+
+specification.
+
+Explain a two level process? Why should system design be finished
+before the detailed design, rather starting the detailed design after the
+requirements specification? Explain with the help of a suitable
+example
+Explain briefly the following: i) Coupling between the modules, ii)
+The internal Cohesion of a module.
+
+OR
+Describe the way of conducting a component level design.
+Explain the guide lines of component level design.
+
+Explain about the importance of test strategies for conventional
+software.
+Compare black box testing with white box testing.
+
+OR
+
+— NO
+
+—
+
+P.T.O.

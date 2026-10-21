@@ -1,0 +1,75 @@
+Hall Ticket Number: 09(02/ ay AW
+| MR-21 Code: B414CS3S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, Jan/Feb-2024
+
+Database Management Systems
+
+(Common to CSE & IT)
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+Q.No. | Stem of the Question M |L |CO | PO
+bn) EmployeeDetails 2 2 1
+EmpName Branch Address | Salary
+Raja Kolkata Kolkata 10000
+
+Priyanka Mumbai Hyderabad | 12000
+Raja Bangalore | Kolkata 10000
+Rumki Hyderabad | Hyderabad | 20000
+Sumit Hyderabad | Bangalore | 10000
+
+Sandip Mumbai Mumbai 15000
+Identify Candidate Key from the above relation.
+1.b) | Write Database system Applications. A 2 l 2
+1. ©} What is Referential Integrity? 2 2 2 1,2
+1. d) Construct SQL queries that are equivalent to each of the following 2 3 2 1,2
+i) IT,(R) ii)RxS
+
+Where relational schemas are
+R=(A,B,C) S=(D,E,F)
+
+l.e) Define and explain First Normal Form with an example. 2 2 3 Pe
+
+1. f) List the problems caused by Redundancy. 2 1 S 1,2
+
+1. g) What are the benefits of a Two-Phase Locking Protocol? Z 2 4 Laz
+
+1. h) Write Transaction properties? 2 2 4 1,2
+
+1. i) Construct the B+ tree for the following set of key values with order 3. Zz 3 5 LZ
+5 15 2 3d 45
+
+1. j) What is Dense Index? Give an Example. 2 | 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L |CO| PO
+2.a) Explain the Three-Schema Architecture with diagram. 5 ps 1 Lee
+2.b) Design an E-R Diagram for Airline Reservation System. 5 3 1 = 1,2,3
+
+OR
+
+2.c) Design an E-R diagram for keeping track of the exploits of your favourite | 6 3 1 = 1,2,3
+sports team. You should store the matches played, the scores in each match,
+the players in each match and individual player statistics for each match.
+Summary statistics should be modelled as derived attributes.
+
+2.d) Explain the Advantages of Database Management system over Traditional 4 2 Il 1,2
+File Processing System. .
+
+3.a) | What are the Fundamental Relational Algebra Operations? Give an example | 4 2 a Le
+for each operation.
+
+3.b) Write SQL Queries for the given Schemas 6 3 2 123
+Employee: (Emp_id, Ename, office, Age)
+Books: (isbn, title, author, publisher)
+Loan : (Emp_id, isbn, date)
+
+(i) Print the names of employees who have borrowed
+any book published by Pearson publisher.
+(ii) Print the names of employees who have borrowed all
+
+books published by Pearson publisher.
+
+P.T.O

@@ -1,0 +1,41 @@
+.C)
+.d)
+
+.a)
+
+.d)
+
+.a)
+
+._b)
+
+.C)
+
+Perform booth multiplication on the following numbers -| 5 | 3
+13(multiplicand), +11 (multiplier).
+Design the flowchart of floating point addition and subtraction in| 5 2 3
+computer arithmetics with an example.
+With a neat diagram explain the memory hierarchy in a process. 5 3 4
+What is cache memory? What is locality of reference? With neat | 5 2 4
+Diagrams explain the cache memory mapping functions.
+
+OR
+With the neat diagram explain the concepts of Direct Memory Access | 5 l 4
+(DMA).
+
+With the neat diagram explain the block diagram of Input-Output | 5 2 4
+interface.
+
+Explain 8x8 omega switching network for multistage switching | 5 l 5
+networks to control processor-memory communication in a tightly
+
+coupled multiprocessor system.
+
+Draw the block diagram of Parallel Processing. 5 2 5
+OR
+
+Explain in brief the serial arbitration (daily-chain) procedure. 5 3 5
+
+Explain the functionality of arithmetic pipeline with an example. 5 3 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome: PO: Programme Outcome

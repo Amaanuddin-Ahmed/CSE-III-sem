@@ -1,0 +1,72 @@
+TY [AAYLONS
+
+Hall Ticket Number:
+
+MR-21 Code: B414CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, Jan/Feb-2024
+Computer Organization and Architecture
+(Computer Science and Engineering)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+Q. No. | Stem of the Question M | L | Co | PO
+l.a) List out the difference between computer organization and | 2 | 2 |
+architecture.
+1.b) Specify various types of instructions based on address? 2 @ l 2
+1.c) Need of addressing mode in an instruction execution? 2 2 | I
+1.d) Define micro word, micro instruction and micro program? 2 | | |
+1.e) Give the flow chart of restoring algorithm. 2 2 5 |
+1.f) Apply 2’s complement of the following 2 32 5 3
+i) 10010 ii) 111000 iii) 0101010 iv) 111111. ,
+1.g) Classify the cache mapping techniques. 2 2 B |
+1.h) Explain I/O Bus Vs Memory Bus. 2 2 3 a
+1.i) Explain switch logic behind the implementation of crossbar switch? 2 2 2 5
+
+1.j) | Explain array processors?
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+
+2.a) Demonstrate the functional units and components that are used for| 5 2 2 l
+Understanding of computer Organization?
+
+2.b) Design a 4 bit arithmetic combinational arithmetic circuit which| 5 4 2 y
+implements addition, subtraction, increment, and decrement |
+operations?
+
+OR
+
+2.c) Brief discussion about BUS Organization and construction of bus and} 5 = 2 2. 3
+its operations with neat sketch?
+
+2.d) How to represent an instruction? Explain instruction parts based on bits | 5S 1 | l
+
+available in instruction code?
+
+“| 3.a) Write notes on three addresses, two addresses, and one address zero| 10 4 1 6
+address instructions. And write an assembly language program for
+x=(a+b) * (c+d) by using two , three and one address instructions?
+
+OR
+3.c) Explain the general register organization in computer. 5 3 2 I
+3.d) Analyze the functions BUN and BSA instructions. 5 4 I I
+4.a) What are the steps involved in addition / subtraction of two floating- | 6 2 5 9
+Point Numbers? Explain the operation through a flow chart. With an
+example.
+4.b) Draw an H/W circuit for fixed point Number ADD/SUB? 4 | 5 1]
+OR
+4.c) Construct a flowchart for 2’s Complement multiplication algorithm and | 10 2 5 4
+Perform multiplication between 10111 * 10011.
+3 |
+
+5.a) Analyze the hierarchical memory systems are employed to achieve} 6 4
+
+optimal performance by a computer system.
+5.b) In a computer, the number of cache hits are 7 and cache miss are 3,| 4 5 3 11
+
+then determine the hit ratio of cache memory.
+
+P.T.O.

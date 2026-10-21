@@ -1,0 +1,54 @@
+Hall Ticket Number:
+PEELE TIE LIE R21 | Code: BAISCB3S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. TV Semester Supplementary Examinations, July 2025
+Introduction to Database Management Systems
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+l.a) Define schema and instance? 2 1 l l
+1.b) List Various Types of Attributes? 2 2 l l
+1.c) Discuss the use of Rename operation? 2 2 2 |
+1.d) Write about project operation relational algebra? 2 2 2 Il
+l.e) | Write about functional dependency? 2 2 3 1,2
+1.f) | Define redundancy and list the problems with it? 2 l 3 1,2
+l.g) | Demonstrate conflict serializability? 2 3 4 1,2
+1.h) Explain about transaction stages? 2 2 4 1,2
+1.1) Discuss about data on external storage? 2 2 5 1,2
+1.}) Define tree indexing? 2 l 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. Stem of the Question
+2.a) Explain the Architecture of the database?
+2.b) Compare different data modes?
+OR
+2.c) Discuss about different types of integrity constraints?
+2.d) Explain about the E-R diagram concept?
+
+3.a) Illustrate different set operations in relational algebra with an
+example?
+3.b) Discuss about domain relational calculus in detail?
+OR
+3.c) Explain all the aggregate functions with example?
+3.d) Define trigger and explain all the three parts of it with an example?
+
+4.a) Illustrate dependency? And explain the problems caused by it?
+4.b) Define normalization and explain 1“ and 2" normal forms with an
+example?
+OR
+4.c) Define and Compare BCNF with 3" Normal forms?
+4.d) Illustrate multivalued dependency and 4" normal form with an
+example?
+
+5.a) List and explain ACID properties in detail?
+5.b) Explain about timestamp-based protocol?
+OR
+5.c) | Discuss about Two-Phase locking protocol in detail?
+5.d) What is recovery and explain about log-based recovery with
+example?
+
+P.T.O.

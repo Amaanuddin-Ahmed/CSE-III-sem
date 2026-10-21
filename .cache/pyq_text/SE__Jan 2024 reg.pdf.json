@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\n08/2/2024 FN\nCode: B324CM2\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Regular Examinations, Jan/Feb-2024\nSoftware Engineering\n(Computer Science and Engineering (AI & ML))\nAnswer ALL Questions\nTime: 3 Hours\nMax. Marks: 60\nPart-A (10 x 1 = 10 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nDefine software engineering and explain.\n1\n1\n1\n1\n1. b)\nList the types of software Myths?\n1\n4\n1\n1\n1. c)\nWhat is feasibility study?\n1\n1\n2\n1\n1. d)\nWhat is Requirement Validation?\n1\n1\n2\n10\n1. e)\nDefine Software Architecture?\n1\n1\n3\n3\n1. f)\nWhat are called Static diagrams?\n1\n1\n3\n3\n1. g)\nWhat is validation testing?\n1\n1\n4\n9\n1. h)\nWhy do we need to test software?\n1\n1\n4\n9\n1. i)\nWrite about quality concepts?\n1\n2\n5\n1\n1. j)\nDistinguish between reactive and proactive risk strategies?\n1\n4\n5\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a) With a neat sketch, explain Capability Maturity Model Integration\n(CMMI).\n2. b) Compare and contrast different software process models.\n2. c) Explain the evolving role of software?\n2. d) What are the generic process framework activities? Explain.\n3. a) What is the goal of requirements analysis phase? Why the requirements\nanalysis phase is a difficult one? Justify your answer\n5\n3\n1\n1\n5\n2\n1\nOR\n5\n2\n1\n1\n5\n1\n1\n1\n5\n3\n2\n2\n3. b) What are the desirable characteristics of a good software requirement\nspecification document?\n5\n4\n2\n2\nOR\n3. c) Explain the differences between functional requirements and non-\nfunctional requirements by giving suitable examples.\n3. d) Discuss how feasibility studies are important in requirement\nengineering process?\n4. a) Draw the class diagram and explain various relationships that exist\nbetween classes.\n4. b) Distinguish between sequence and collaboration diagrams.\nOR\n4. c) What are the design principles of a good software design?\n4. d) Draw and explain Use case diagrams and its development process with\nsuitable illustrations.\n5. a) What is software quality? What are the metrics used for source code\nanalysis?\n5. b) What are the various testing strategies used for testing conventional\nsoftware?\nOR\n5\n3\n2\n2\n5\n4\n2\n2\n5\n2\n3\n3\n5\n2\n3\n3\n5\n1\n3\n3\n5\n2\n3\n3\n5\n1\n4\n1\n5\n1\n4\n9\nP.T.O.\n",
+   "chars": 2206,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. c) What is white box testing? How white box testing is carried out?\nDemonstrate with example.\n5. d) Discuss about the metrics used for software Quality model.\n5\n1\n4\n9\n5\n4\n4\n1\n6. a) Discuss the role of formal technical reviews in achieving good quality\nsoftware.\n5\n4\n5\n10\n6. b) What is risk identification? Discuss various methods used for risk\nidentification.\n5\n1\n5\n1\nOR\n6. c) What is Statistical Software Quality Assurance? Discuss its objectives.\n6. d) Explain ISO 9000 Quality standards.\n5\n1\n5\n1\n5\n3\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 588,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

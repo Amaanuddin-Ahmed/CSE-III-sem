@@ -1,0 +1,68 @@
+Hall Ticket Number:
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonoiiois)
+B. lech. I Semester Regular/Supplementary Examinations, December 2024/January 2025
+Discrete Mathematics
+(Common to CSB and CSD)
+
+‘Time: 3 Hours Answer ALL, Questions Max. Marks: 60
+oe Part-A U0 x I~ 10 Marks) ee
+Q. No. | Stem of the Question M|L{CcoO | PO
+l.a) What is a Well formed formula? | 1 l I
+1. b) Translate the sentence “Not all carshave carburetors.” 1 2 | 2
+
+into symbols, first using no existential quantifier, and second using
+no universal quantifier.
+
+1c) Let the Relation R be R= £(1,2) .2.3)..3)} on the set Av {1,2,31. l 2? 2 2
+What is the ‘lransitive Closure of RK’?
+1.d) Define lquivalence relation i i 2 |
+l.c) | Define cyclic group with an example. | | 3 |
+Lf) Define Monoid. l l 3 |
+1.g) How many 4-digit numbers can be formed using the digits2,3,5,6,8, | 1 2 4 2
+and 9 if repetitions are allowed?
+|.h) A farmer buys 3 cows, 8 pigs, and 12chickensfrom a man who has 9 | | 2 4 2
+cows,25 pigs, and 100chickens.How many choices does the farmer
+have?
+l,i) Define Hamiltonian path | I 5 |
+1.}) Find the chromatic number of bipartite graph K3 3? | I 5 |
+
+Part-B (5 x 10 = 50 Marks)
+
+{ o™ ~ | V4 ya . ee aren q
+G. No. | Sieur of the Question | ME |
+
+stalement 5 3 | 2
+
+2. a) Obtain the PDNE and PCNI of — the
+PV(-P-(QV(-1Q->R)))
+2.b) Prove that the following argument is valid: 5 5 l 4
+“All dogs are catutvorous. *
+‘Some animals are dogs.”
+Therefore” some animals are carnivorous”.
+OR
+2.c) Verify that the following argument is valid by using the rules of 5 4 1 A
+inference:
+If Clifton does not live in France, then he does not speak French.
+Clifton does not drive a Datsun.
+If Clifton lives in France, then he rides a bicycle.
+Either Clifton speaks French, or he drives a Datsun.
+Hence, Clifton rides a bicycle.
+2.d) Show that ¢ WQVv(P > QO) P. 5 3 | ?,
+
+4
+
+yay TP AWf19 34) and RS are relations on A defined by | 5 | 2 2
+R19) 1 2) 4) (44) SHWE D2) 130.0.4.0.3).0.4)) find
+RoOoS,SoR, R’ , S’ Jwrite down there matrices,
+
+3b) What is Compatibility relation and Write the procedure to find | 5 a 2 |
+maximal compatibility blocks.
+
+OR
+
+3. €) WX F254} and Reo fOxny) /xsy} Draw the graph of RO and also 5 5 2, >
+
+PIVE TES TUaLLLX,
+
+toon Wy

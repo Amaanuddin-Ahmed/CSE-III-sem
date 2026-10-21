@@ -1,0 +1,76 @@
+Hall Ticket Number:
+
+MR-22 Code: B424CS2S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [IV Semester Supplementary Examinations, December 2024/January 2025
+
+Discrete Mathematics
+(Common to CSE, IT and CSM)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x I = 10 Marks)
+
+Q. No. | Stem of the Question M |L{|CO | PO
+l.a) Define well-formed formula. | | 1 l
+1.b) What is Tautology? l 1 1 l
+1.c) Discuss inclusion and Equality of sets. 1 3 2 1
+1.d) Explain about storage structures. 1 2 2 1
+l.e) Define Lattice with an example. 1 l 3 l
+
+1.f) | Find LUB and GLB for the subset {{a,b},{a},{b}} of power set of | 1 3 3 |
+A. where A={a,b,c}.
+
+1.g) | Use the multinomial theorem to expand (x +X9+x3+x4) 1 3 4 1
+
+1.h) Explain permutation and combination with an example. Ll 2 4 1
+
+1.1) Is there a simple graph with degree sequence (1,1,3,3,3,4,6,7)? 1 3 5 1
+
+1.j) | Define spanning tree with example. 1 1 5 l
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L |CO| PO
+2.a) Show that SVR is tautologically implied by (PVQ)A(P—R)A(Q—S). | 5 e 1 La
+2.b) Obtain PDNF of the formula (IPV 1Q)—(P< 1Q). 5 4 1 1,3
+
+OR
+2.c) Construct the truth table of the formula (P-Q)((PAQ)VCIPAIR)). | 5 3 1 1
+2.d) | What is predicate, free and bound variables and quantifiers? 5 l 1 |
+
+3.a) Let f: R-R and g: RR, where R is the set of real numbers. Find | 5 Z 2 1,2
+fog and gof where tix -2 and g(x)=x+4.State whether these
+functions are bijective.
+
+3.b) Let X={ball, bed, dog, let, egg}, and R is a relation defined on X as | 5 3 2 l
+R={(x,y)| xRy if x and y contain some common letter},Show that R
+is compatibility relation and also find maximum compatibility blocks
+for R.
+
+OR
+
+3.c) Let X={1,2,3,4} and R={(1,1),(1,4),(4,1),(4,4),(2,2),(2,3),(3,2),(3,3)} | 5 4 Z Le
+check whether the relation is an equivalence relation, Write the
+matrix of R and sketch its graph.
+
+3.d) Let A ={a,b,c} be a finite set and p(A) its power set. Let © be the | 5 a 2 I
+inclusion relation on the elements of p(A).Draw Hasse diagram of
+
+(p(A), S).
+
+4.a) — Explain about the following. 5 2 3 1
+i) Semi group ii) Sub monoid iii) Homomorphism.
+
+4.b) | Let S=NxN Let * be the operation on S defined by (a, b) * (c,d) =| 5 3 3 l
+(ac, bd).show that S is a semigroup under *.
+
+OR
+
+4.c) The set A={2,4,5,6,8,9} on which the operation * is defined by | 5 2 3 1
+a*b=Minimum of b. Find whether the given set forms a semi group
+or monoid.
+
+4.d) In a lattice (L,<A,V)state and prove the laws idempotent,| 5 Z 3 |
+commutative, associative and absorption.
+
+P.T.O.
