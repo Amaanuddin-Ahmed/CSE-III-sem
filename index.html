@@ -424,7 +424,7 @@
   <!-- MODAL: File Upload & Metadata Modal -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="contribUploadModal" style="display: none;" role="dialog" aria-modal="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog small-dialog">
       <div class="modal-header">
         <h4 class="modal-dialog-title"><i class="fa-solid fa-cloud-arrow-up"></i> Share Study Resources</h4>
         <button type="button" class="modal-close-btn" id="closeUploadModalBtn" aria-label="Close">&times;</button>
@@ -447,12 +447,10 @@
 
           <div class="form-row-2">
             <div class="form-group">
-              <label for="uploadResourceType" class="form-label">Resource Type *</label>
+              <label for="uploadResourceType" class="form-label">Category *</label>
               <select id="uploadResourceType" class="form-select" required>
-                <option value="PYQ">Previous Year Question Paper (PYQ)</option>
-                <option value="Notes">Lecture Notes / Study Material</option>
-                <option value="Model Paper">Model / Sample Question Paper</option>
-                <option value="Assignment">Assignment / Mid Exam Solution</option>
+                <option value="Notes">Notes</option>
+                <option value="PYQ">PYQ</option>
               </select>
             </div>
 
@@ -464,35 +462,12 @@
                 <option value="3">Unit 3</option>
                 <option value="4">Unit 4</option>
                 <option value="5">Unit 5</option>
-                <option value="Mixed">Mixed (Multiple Units / Entire Syllabus)</option>
+                <option value="All">All Units</option>
               </select>
             </div>
           </div>
 
-          <div class="form-row-2">
-            <div class="form-group">
-              <label for="uploadExamYear" class="form-label">Exam Year / Session (Optional)</label>
-              <input type="text" id="uploadExamYear" class="form-input" placeholder="e.g. 2024 Regular / Supplementary">
-            </div>
-
-            <div class="form-group">
-              <label for="uploadContributorName" class="form-label">Your Name (Optional)</label>
-              <input type="text" id="uploadContributorName" class="form-input" placeholder="e.g. Amaan or leave blank">
-            </div>
-          </div>
-
-          <div class="form-group file-dropzone-group">
-            <label class="form-label">Files You Want to Share</label>
-            <div class="file-picker-box" id="filePickerBox">
-              <i class="fa-solid fa-file-arrow-up picker-icon"></i>
-              <p class="picker-main">Click here to pick the files from your device</p>
-              <p class="picker-sub">The names are added to your WhatsApp message. You attach the actual files in WhatsApp.</p>
-              <input type="file" id="contribFilesInput" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg" style="display: none;">
-            </div>
-            <div class="selected-files-list" id="selectedFilesList"></div>
-          </div>
-
-          <div class="modal-footer-buttons">
+          <div class="modal-footer-buttons" style="margin-top: 18px;">
             <button type="button" class="btn-secondary-flat" id="cancelUploadBtn">Cancel</button>
             <button type="submit" class="btn-action-primary" id="submitUploadBtn">
               <i class="fa-brands fa-whatsapp"></i>
@@ -502,22 +477,17 @@
 
         </form>
 
-        <div id="contribHandoffPanel" class="contrib-handoff" hidden>
-          <div class="handoff-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <h5 class="handoff-title">WhatsApp should now be open</h5>
-          <p class="handoff-text">
-            Your details are written in the message. Attach the selected file(s) to that chat and press send, and Amaan will add them after checking them.
-          </p>
-          <p class="handoff-note" id="contribHandoffNote"></p>
-          <div class="handoff-actions">
-            <button type="button" class="btn-secondary-flat" id="copyContribMessageBtn">
-              <i class="fa-regular fa-copy"></i> Copy message
-            </button>
-            <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" class="btn-action-primary" id="reopenWhatsAppBtn">
-              <i class="fa-brands fa-whatsapp"></i> Open WhatsApp again
-            </a>
+        <div id="contribHandoffPanel" class="contrib-handoff" hidden style="text-align: center; padding: 24px 12px;">
+          <div class="handoff-icon" style="color: #22c55e; font-size: 42px; margin-bottom: 12px;">
+            <i class="fa-solid fa-circle-check"></i>
           </div>
-          <button type="button" class="btn-secondary-flat handoff-done" id="contribDoneBtn">Done</button>
+          <h5 class="handoff-title" style="font-size: 18px; font-weight: 700; color: var(--brand-navy); margin-bottom: 8px;">Thanks for your contribution!</h5>
+          <p class="handoff-text" style="font-size: 15px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.4;">
+            It means a lot! ❤️
+          </p>
+          <div class="modal-footer-buttons" style="justify-content: center;">
+            <button type="button" class="btn-action-primary" id="contribDoneBtn" style="min-width: 120px;">Done</button>
+          </div>
         </div>
       </div>
     </div>
@@ -535,7 +505,7 @@
 
       <!-- Admin Login Form (Shown when locked) -->
       <div id="adminLoginFormContainer" class="modal-body">
-        <p class="admin-login-notice">Editor view for checking extracted papers and data quality. Every question is public already, so this only keeps the audit tools out of the way.</p>
+        <p class="admin-login-notice">This section contains administrative controls and backend management processes, strictly restricted to the admin.</p>
         <form id="adminLoginForm" class="admin-form">
           <div class="form-group">
             <label for="adminPassword" class="form-label">Password</label>

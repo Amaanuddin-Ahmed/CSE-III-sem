@@ -1051,12 +1051,9 @@
     el.contribWarningModal.style.display = 'none';
 
     // Populate default selects
-    el.uploadSubjectSelect.value = pendingContribContext.subjectId;
-    el.uploadResourceType.value = pendingContribContext.resourceType;
-    el.uploadChapterSelect.value = '1';
-
-    state.selectedFiles = [];
-    renderSelectedFiles();
+    if (el.uploadSubjectSelect) el.uploadSubjectSelect.value = pendingContribContext.subjectId || 'DM';
+    if (el.uploadResourceType) el.uploadResourceType.value = pendingContribContext.resourceType === 'PYQ' ? 'PYQ' : 'Notes';
+    if (el.uploadChapterSelect) el.uploadChapterSelect.value = '1';
 
     // Always start from the form, not the WhatsApp hand-off panel
     const form = el.contribUploadForm;
@@ -1067,101 +1064,50 @@
   }
 
   function handleFilesChosen(filesList) {
-    for (let i = 0; i < filesList.length; i++) {
-      const file = filesList[i];
-      // Avoid duplicate names in same batch
-      if (!state.selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
-        state.selectedFiles.push(file);
-      }
-    }
-    renderSelectedFiles();
+    // Direct WhatsApp send flow - files attached directly in WhatsApp
   }
 
   function renderSelectedFiles() {
-    el.selectedFilesList.innerHTML = '';
-    if (state.selectedFiles.length === 0) {
-      el.selectedFilesList.innerHTML = '<span style="font-size: 12px; color: var(--text-light); font-style: italic;">No files selected yet.</span>';
-      return;
-    }
-
-    state.selectedFiles.forEach((file, index) => {
-      const row = document.createElement('div');
-      row.className = 'selected-file-row';
-      const sizeKb = (file.size / 1024).toFixed(1);
-      row.innerHTML = `
-        <span><i class="fa-regular fa-file-pdf"></i> ${escapeHtml(file.name)} (${sizeKb} KB)</span>
-        <button type="button" class="file-del-btn" title="Remove file" data-index="${index}">&times;</button>
-      `;
-      row.querySelector('.file-del-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
-        state.selectedFiles.splice(index, 1);
-        renderSelectedFiles();
-      });
-      el.selectedFilesList.appendChild(row);
-    });
+    if (el.selectedFilesList) el.selectedFilesList.innerHTML = '';
   }
 
   function submitContribution(e) {
     e.preventDefault();
 
-    if (state.selectedFiles.length === 0) {
-      showToast('Please pick at least one file so we know what to expect.');
-      return;
-    }
-
-    const subCode = el.uploadSubjectSelect.value;
-    const resType = el.uploadResourceType.value;
-    const chapterVal = el.uploadChapterSelect.value;
-    const examYear = el.uploadExamYear.value.trim() || 'Not specified';
-    const contributor = el.uploadContributorName.value.trim() || 'A student';
+    const subCode = el.uploadSubjectSelect ? el.uploadSubjectSelect.value : '';
+    const resType = el.uploadResourceType ? el.uploadResourceType.value : 'Notes';
+    const chapterVal = el.uploadChapterSelect ? el.uploadChapterSelect.value : '1';
 
     const subMeta = SUBJECTS_DATA[subCode];
     const subLabel = subMeta ? `${subMeta.shortName} - ${subMeta.title}` : subCode;
-    const unitLabel = chapterVal === 'Mixed' ? 'Mixed units / full syllabus' : `Unit ${chapterVal}`;
-    const fileLines = state.selectedFiles
-      .map(f => `- ${f.name} (${Math.max(1, Math.round(f.size / 1024))} KB)`)
-      .join('\n');
+    const unitLabel = chapterVal === 'All' ? 'All Units' : `Unit ${chapterVal}`;
 
     const message = [
       'Hi Amaan, I want to contribute study material to MGIT PYQ Hub.',
       '',
       `Subject: ${subLabel}`,
-      `Type: ${resType}`,
-      `Unit: ${unitLabel}`,
-      `Exam session: ${examYear}`,
-      `From: ${contributor}`,
-      '',
-      'Files I am attaching to this chat:',
-      fileLines,
-      '',
-      'Please check them and add them if they are correct.'
+      `Category: ${resType}`,
+      `Chapter: ${unitLabel}`
     ].join('\n');
 
     lastContributionMessage = message;
     const waUrl = 'https://wa.me/916303191696?text=' + encodeURIComponent(message);
     window.open(waUrl, '_blank', 'noopener');
 
-    // Swap the form for honest next-step instructions
+    // Swap the form for the honest thank-you message
     if (el.contribUploadForm) el.contribUploadForm.hidden = true;
-    if (el.contribHandoffNote) {
-      el.contribHandoffNote.textContent = state.selectedFiles.length === 1
-        ? `Attach: ${state.selectedFiles[0].name}`
-        : `Attach ${state.selectedFiles.length} files: ${state.selectedFiles.map(f => f.name).join(', ')}`;
-    }
     if (el.contribHandoffPanel) el.contribHandoffPanel.hidden = false;
 
-    state.selectedFiles = [];
-    el.contribUploadForm.reset();
-    renderSelectedFiles();
+    if (el.contribUploadForm) el.contribUploadForm.reset();
   }
 
   async function copyContributionMessage() {
     if (!lastContributionMessage) return;
     try {
       await navigator.clipboard.writeText(lastContributionMessage);
-      showToast('Message copied. Paste it into the WhatsApp chat if it was empty.');
+      showToast('Message copied to clipboard.');
     } catch (err) {
-      showToast('Could not copy automatically. Your WhatsApp message already has the details.');
+      showToast('Could not copy automatically.');
     }
   }
 
