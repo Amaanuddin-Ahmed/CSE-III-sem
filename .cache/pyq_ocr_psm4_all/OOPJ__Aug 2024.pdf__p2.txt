@@ -1,0 +1,38 @@
+4.c) What is a finally block? When and how is it used? Give a suitable] 5 2 3 iz
+example.
+
+4.d) Write a program to create threads where one thread prints 1 to 100 and| 5 3 3 La
+another thread prints 1 to 200.
+
+5.a) Discuss about the AWT component classes with suitable example | 5 2 4 1,2,3
+program.
+5.b) Explain the steps involved in creation and handling of menus. s 2 4 Lae
+OR
+5.c) Write a program for creating GUI for reserving bus ticket, store the| 5 4 4 1,2,3
+passenger information in file. Give concession for senior citizen, child
+and army people. Keep seat reserved for privileged people till one hour
+before the departure time.
+Use exception for the invalid date, name. Amount. Ticket id must be
+generated automatically. Only once name of the bus should be stored
+in memory.
+5.d) Explain the concept of event delegation model. A. 2 4 L2
+
+6.a) Write a program to create a simple login page with two labels, two text | 5 4 5 1,2,3
+fields and one button with swings.
+6.b) Describe the different stages in the life cycle of an applet. Distinguish | 5 2 5 12
+between init () and start( ) methods.
+OR
+6.c) Write a simple JAVA Program to create the following window and| 5 4 > L123
+
+|___Proficientin | _ Experience | __—Relocate__—ij
+
+___ Java 3 | —
+fase [yJ2 [seater bets eh
+CPP
+VB
+Oracle
+Java
+
+6.d) Discuss the steps involved in developing and running a local applet. 5 2 5 1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

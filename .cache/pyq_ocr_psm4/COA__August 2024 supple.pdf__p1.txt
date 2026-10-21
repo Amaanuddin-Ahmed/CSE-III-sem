@@ -1,0 +1,66 @@
+a | ; f
+
+MR-21 Code: B314CB6S2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, July/August-2024
+Computer Organization and Architecture
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (1 03 x 2 = 20 Marks)
+-Q.No. |“ __Stemof the Question __}M|4|co | P0
+Draw the instruction word format and indicate the number of bits in
+each part.
+Give examples for conditional and unconditional transfer
+instructions.
+What do you mean by microprogram? What are the different types of
+microprograms?
+Differentiate between a direct and an indirect address instruction?
+Perform 2’s complement of (i) 10010010 (ii) 01101100.
+Define normalization in floating point representation.
+Why are read and write control lines in a DMA controller
+bidirectional?
+An address space is specified by 24bits and the corresponding
+memory space by 16 bits. How many words are there in the address
+space?
+How do branch instructions cause problems in a pipelined processor?
+List out replacement algorithms.
+
+Hall Ticket Number:
+
+Part-B (5 x 10 = 50 Marks
+
+Explain about various functional units of a basic computer with the
+
+help of block diagram.
+
+Design the 4-bit register transfer to common bus using multiplexers.
+OR
+
+Explain about various conditional branch instructions in a general-
+
+purpose computer.
+
+What is an interrupt? Explain briefly about different program
+
+interrupts and what are the sequence of events involved in handling
+
+an IRQ?
+
+Explain various instruction formats with examples.
+Explain with the help of diagram the register organization of
+computer with memory bank.
+
+OR
+What do you mean by addressing mode? Analyse the following
+addressing modes. i) Index addressing mode ii) Relative addressing
+mode iii) Immediate addressing mode iv) Implied addressing mode.
+Compare hardwired control with micro programmed control. Is it
+possible to have a hardwired control associated with control
+memory?
+
+What is floating point representation? Explain the IEEE standard for
+floating point representation with examples.
+Explain about Booth’s Multiplier with flowchart.
+

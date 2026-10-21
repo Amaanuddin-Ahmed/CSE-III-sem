@@ -1,0 +1,16 @@
+5.c) | Explain the Daisy Chaining priority with neat diagram. 5 2 4 1,2
+5.d) Explain DMA Controller in detail with neat diagram? 5 a 4 2,3
+
+6.a) What is meant by instruction pipeline? Explain four segment | 5 pi 5 3
+Instruction Pipeline. Give its timing diagram.
+
+6.b) What are the different major conflicts arising in pipelined execution. 5 5 5 3
+OR
+
+6.c) Explain the characteristics of multiprocessors. 5 2 5 5
+
+6.d) In detail describe multiport memory, cross bar switch and multistage | 5 4 5 3
+
+switching networks used for interconnecting multiprocessors.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

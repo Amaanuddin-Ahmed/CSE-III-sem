@@ -1,0 +1,28 @@
+4.a) Explain in detail about INF, 2NF and 3NF with suitable examples. 5 2 3 1,2
+4.b) Find the highest normal form in R(A, B, C, D, E) under following | 5 3 3 1,2,3
+functional dependencies. ABC -> D CD -> AE.
+OR
+4.c) | What are the properties of Decomposition. Explain. P 3 3 1,2
+4.d) Suppose that we decompose the schema R = (A, B, C, D, E) into R1 | 5 3 3 12,3
+(A, B, C) and R2 (A, D, E). Determine that this decomposition is a
+lossless-join decomposition or dependency preserving if the following
+set F of functional dependencies holds: A — BC, CD — E,B > D,
+
+E.— A,
+5.a) Explain Lock based protocols. 5 l 4 1,2
+5.b) | How do you implement atomicity property of transactions? 5 2 4 Lo
+OR
+5.c) | Explain the concept of Serializability. 5 1 a 1,2
+5.d) | How do you test for the Serializbility property of transactions? 5 2 A 1,2
+
+6.a) | How does Extendable hashing use a directory of buckets? How does it | 5 1 5 L2
+handle the insert and delete operations?
+
+6.b) | Compare and contrast Hash based indexing and tree based indexing. 5 2 5 1,2
+OR
+6.c) Describe the Insertion and Deletion Operations in B+ trees with an 5 3 5 1,2
+example.
+6.d) Make a comparison between the primary index and a secondary | 5 2 5 LZ
+index.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

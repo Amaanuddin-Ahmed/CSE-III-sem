@@ -1,0 +1,80 @@
+Hall Ticket Number:
+
+ILE PE LITLE Code: B414CB483
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+Object Oriented Programming using Java
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question |M |L|Cco | Po |
+l.a) List the core OOP’s concepts. 2 | 1 1
+1.b) | What is Constructor overloading? 2 2 1 1
+1.c) | What is Exception handling? 2 1 2 1
+1.d) Define Package. How to create Package? 2 2 2 1
+1.e) | Compare thread based and process based multi-tasking. 2 2 3 2
+1.f) | Define Enumerations with example. 2 2 3 1
+1.g) | What is Collection? 2 1 4 1
+1.h) Describe StringTokenizer. 2 2 4 1
+1.i) Define an Applet. 2 1 5 1
+1.j) | What is Layout Manager? List Layout Managers. > 2 ) 1
+
+Part-B (5 x 10 = 50 Marks)
+
+, Stem of the Question
+
+Describe in detail about the control flow statements in Java with
+
+suitable examples.
+
+Describe the following in detail 5 2 1 1
+
+(i)Data Abstraction and encapsulation.
+
+(ii)Polymorphism and dynamic binding
+
+OR
+Discuss the following: 5 2 1 i
+(i) using super keyword.
+
+(11) Data types in Java
+
+Analyse and Develop a simple Java program to sort the given} 5 3 1 E
+
+numbers in increasing order.
+
+ws
+
+| L [co] PO
+2 1 1
+
+Illustrate what is meant by package? How it is created and} 5 Zz 2 2
+implemented in Java.
+
+3.b) | What is an interface? Explain how to define and implement by taking | 5 Z 2 Z
+suitable Example.
+
+OR
+
+3.c) | Summarize what is finally class. How to catch exception? 5 2 2 2
+Write an example.
+
+3.d) Discuss in detail about exception handling constructs and write a| 5 Z 2 3
+
+program to illustrate Divide by zero exception.
+
+4.a) Describe the lifecycle of thread in Java with an example. 5 2 3 1
+4.b) Explain the concept of readers writers’ problem and implement the | 5 3 3
+concept using the suitable class and methods available in Java.
+OR
+4.c) — Explain the following | 3 3 2
+(i)thread priorities.
+(ii)Explain how threads are created in Java.
+4.d) (illustrate the concept of synchronization in thread. 5 3 3 Il
+
+(ii) The Stream Classes-Byte streams and Character streams.
+
+P.T.O.

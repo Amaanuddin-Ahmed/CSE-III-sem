@@ -1,0 +1,14 @@
+OR ;
+5.c) Sketch the block diagram of DMA in a computer system and discuss | 7 2 2 1
+the working principle of DMA?
+5.d) Explain Hand Shaking method of data transfer? 3-2 2 |
+6.a) Explain the Need of pipeline technique? Implement an arithmetic] 5 2 4 11
+Pipeline for floating point addition and subtraction.
+6.b) | Compare and contrast between RISC and CISC computer architectures. | 5 2 4 7
+, OR
+6.c) Define cache coherence and why is it important in shared memory! 7 4 3 2
+Multiprocessor systems? Give any solution to. overcome the coherence
+problem? .
+6.d) Explain vector instructions and how it will be helpful for performance | 3. 3 ot 3
+point of view? ; vey i fis sales
+M: Marks; I: Bloom’s Taxonomy Level; CO:.Course Outcome; PO: Programme Outcome

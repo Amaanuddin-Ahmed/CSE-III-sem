@@ -1,0 +1,54 @@
+Hall Ticket Number:
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, July 2025
+Computer Organization and Architecture
+(Common to CSE, CSB, CSM and CSD)
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1= 10 Marks)
+
+|Q.No | Stemofthe Question | M [LJ CO [PO
+l.a) Define interrupt? 1 1 1 1
+1.b) — What is the use of load and store memory reference instruction? 1 1 1 6
+1.c) Discuss about the term control word? 1 1 2 1,3
+1.d) Differentiate hardwired control and micro-programmed control. 1 1 2 1
+1.e) | Draw the flow chart for the add and subtract operations. 1 6 3 5,2
+1.f) | Write about various decimal arithmetic micro operation symbols. 1 1 3 1
+1.g) Define burst transfer. 1 i 4 5
+1.h) Define Hit ratio and Miss ratio. 1 1 4 1
+1.1) | What is Microprocessor? 1 1 5 1
+1.j) Explain the advantages of pipelining. 1 2 5 5
+
+Part-B (5 x 10 = 50 Marks)
+
+[Q.No.| Ss Stemofthe Question | M [| LE [CO] POT
+2.a) Analyse the Basic Operational concepts of Computers. 5 4 I 1
+2.b) List and explain the steps involved in the execution of a complete | 5 4 1 3,4
+
+instruction cycle. List the basic symbols used in register transfer
+Language.
+OR
+2.c) Contrast memory reference instructions with respect to register | 5 ‘ 1 2
+reference instructions.
+2.d) Define bus structures. Explain about the bus structures of computers. 5 2 1 2
+3.a) Explain Address sequencing in micro programmed control unit? 5 Z Dz 23
+3.b) Illustrate the micro-programmed control unit (MCU) with a neat} 5 2 2 1
+diagram and how instructions will be processed in MCU?
+OR
+3.c) Explain different types of addressing modes. 5 2 Z 1
+3.d) Define an instruction format? Explain different types of instruction | 5 2 2 41,4
+formats in detail.
+4.a) With a neat Flowchart analyse Floating-Point Addition and| 5 4 3. 455
+Subtraction.
+4.b) Explain the hardware implementation for signed magnitude for | 5 2 3. 5,2
+addition and subtraction.
+OR
+4.c) Elaborate steps used in Booth algorithm for multiplying following | 5 6 3. 4,5
+binary numbers (+15) * (-13).
+4.d) Demonstrate division algorithm for fixed point numbers with the help | 5 2 3. 5,2
+of a flow chart.
+5.a) What is auxiliary memory? Explain the various memory components | 5 4 4 1
+used as auxiliary memory in computer systems.
+5.b) Explain the following with respect to asynchronous data transfer. | 5 2 4 1
+i) Strobe control ii) Handshaking iii) Asynchronous serial transfer.
+OR
+P.T.O.

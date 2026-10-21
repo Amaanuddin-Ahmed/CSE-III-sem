@@ -1,0 +1,36 @@
+6. a)
+
+6. b)
+
+6.¢)
+
+6. d)
+
+How many integers between 1 and 300(inclusive) are divisible by at | 5 3 4
+least one of 5, 6, 8.
+
+Let G be a 4-regular connected planar graph having 16 edges. Find the | 5 2 5
+number of regions of G.
+Show that the two graphs are not isomorphic. 5 3 5
+GO nn ud @ ~~ e:
+~e | aN J |
+NS : t NX cA 5
+Ne @ i on @
+NZ ae
+OR
+lect D be the digraph whose vertex set is V-{vl,v2,v3.v4,v5} and the | 5 2 5
+
+directed edge set is L={(v1,v4),(v2.v3).(v3,v5),(v4.v2).(v4,v4),(v4ov5),
+
+(v5,vl)}Draw a diagram of D and indicate the oul-degree and
+
+in-degree of all vertices.
+
+What ts a [lamiltontan Cycle? Draw bipartiate graph 3.4 and prove | 5 | 5
+
+that this graph does not have a Hamiltonian Cycle.
+M: Marks; 1.: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+
+Use Multinomial theorem to Expand (X ;~+XotX3+X 4 " , 5 3 4
+
+rs |

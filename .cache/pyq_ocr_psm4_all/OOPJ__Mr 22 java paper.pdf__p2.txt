@@ -1,0 +1,52 @@
+5. a)
+
+5. b)
+
+5.C)
+
+5. d)
+
+6. a)
+
+6. b)
+
+6. c)
+
+6. d)
+
+Analyze the Java thread life cycle and discuss how understanding it | 5 A 3
+helps in writing efficient multithreaded programs.
+Design a JDBC application that demonstrates the basic steps involved | 5 3 2
+in connecting to a database, creating a new database, and creating a
+table.
+
+OR
+Develop a multithreaded Java program that demonstrates the use of | 5 3 3
+synchronized methods or blocks to ensure thread safety.
+Compare and contrast the different types of JDBC drivers. Discuss | 5 ‘A 3
+their advantages, disadvantages, and suitable use cases.
+
+Design a Swing application following the MVC architecture. Discuss | 5 3 4
+the role of each component (Model, View, Controller).
+Compare and contrast the Delegation event model with other event | 5 A A
+handling models in Java. Discuss the advantages and disadvantages
+of each model.
+
+OR
+Explore factors such as flexibility, ease of use, and responsiveness in | 5 4 4
+choosing the appropriate layout manager for different UI
+requirements.
+Design a Java application that demonstrates event handling for both | 5 3 ‘|
+mouse and keyboard events.
+
+2,3
+
+Lyd
+
+1,2
+
+2,3
+
+1,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

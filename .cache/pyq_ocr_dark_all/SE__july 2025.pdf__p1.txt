@@ -1,0 +1,53 @@
+Hall Ticket Number:
+| | | | | ! | | | | | | MR-22 Code: B325CM2S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. If Semester Supplementary Examinations, July 2025
+Software Engineering
+(Computer Science and Engineering (AI and ML))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x I= 10 Marks)
+
+Q. No. | Stem of the Question M | L | Co | PO |
+l.a) | Write about characteristics of software? l 2 l l
+l.b) — List the Different types of software myths? 1 1 I l
+l.c) | Simplify interface and write about interface specification? 1 4 | l
+1.d) Discuss the importance of feasibility study? l 2 l 3
+l.ec) List out the design concepts? | 4 2 l
+1.f) | Discuss about class diagrams? l 6 2 l
+l.g) Write about unit testing? l 2 3 3
+1.h) Simplify the factors that affect quality? 1 4 2 l
+1. i) Write about the two characteristics of software 7risks? l 2 3 2
+1.j) | Discuss about software reviews? l 2 2 2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | co | PO
+2.a) Explain the changing nature of software? 5 2 l l
+2.b) Discuss about CMMI in detail? 5 3 l l
+
+OR
+2.c) Explain about Software process framework? 5 2 l l
+2.d) | Compare waterfall model with spiral model? 5 4 l l
+3.a) Explain both functional and non-functional requirements? 5 2 2 1
+3.b) Discuss the process of preparing software requirements document? 5 3 2 2
+3.c) Discuss about requirements management? 5 2 2 2
+3.d) Write about requirements elicitation and analysis in detail? 5 l 2 3
+4.a) List and explain different architectural styles? 5 2 2 2
+4.b) Explain the design concepts? 5 3 2 3
+OR
+4.c) | What is UML write about the applications of UML? 5 3 2 3
+4.d) Develop and explain examples for Usecase and sequence diagrams? 5 4 l 3
+5.a) Discuss different types of Black box testing techniques? 5 2 3 5
+5.b) Explain in detail about integration testing? 5 3 3 5
+OR
+5.c) Explain about function oriented metrics? 5 2 2 3
+5.d) Explain about the art of debugging? 5 2 3 4
+6.a) Explain the process of preparing the risk table? 5 2 3 2
+6.b) Write About RMMM with a suitable example? 5 3 3 l
+OR
+6.c) Explain about Formal Technical Reviews? 5 2 3 l
+6.d) Discuss about SQA in detail? 5 2 2 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

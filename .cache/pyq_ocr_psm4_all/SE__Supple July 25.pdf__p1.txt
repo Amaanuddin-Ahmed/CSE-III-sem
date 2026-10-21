@@ -1,0 +1,65 @@
+Hall Ticket Number:
+
+MR-21 Code: B415CB5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, July 2025
+Software Engineering
+(Computer Science and Business System)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M | L | CO | PO
+1.a) | What is software engineering? What are its applications? 2 2 1 2
+1.b) Differentiate between software process and project. 2 3 1 zo
+1.c) How do non-functional requirements differ from functional} 2 3 2 Z
+
+requirements?
+1.d) Define context models in system modeling. 2 I 2 l
+1.e) | How would you apply UML class diagrams in software design? 2 3 3 3
+1.f) | What is the purpose of architectural styles in software design? 2 2 3 2
+1.g) | What is the difference between black-box testing and white-box | 2 2 + 2
+testing?
+1.h) What is the role of debugging in the software testing process? 2 1 4 2
+1.i) Justify the use of the ISO 9000 quality standards as a benchmark for | 2 = 5 5 7
+global software quality assurance practices.
+1.3) List the key components of the RMMM plan. ie | 5 2
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M | L |CO| PO
+2.a) | What is waterfall process model and discuss about its reasons for | 5 2 1 2
+failure?
+2.b) List and explain various characteristics of software. 5 2 1 2
+OR
+2.c) Describe in detail about personal and team process models. 5 2 1 2
+2.d) Explain unified process and elaborate on the unified process work | 5 2 1 2
+products.
+
+3.a) Write the difficulty process for Eliciting and understanding | 5 2 Z y)
+requirements from system stakeholders.
+
+3.b) Explain how behavioral models help in understanding system | 5 3 2 2
+functionality.
+OR
+3.c) Discuss the significance of object models in system modeling. | 5 2 2 2
+Provide an example.
+3.d) | Why is it important to validate software requirements, and what are | 5 Z 2 2
+
+common techniques used for validation?
+
+4.a) How would you use UML diagrams to model both the static and | 5 3 3 3
+dynamic aspects of a software system? Provide examples.
+
+4.b) | Explain how sequence diagrams and collaboration diagrams can be | 5 3 3 3
+used together to model object interactions in a system.
+
+OR
+
+4.c) Illustrate design process to ensure design quality in software | 5 2 3 3
+development.
+
+4.d) How can component diagrams be applied to represent the physical | 5 3 3 3
+
+structure of a system? Provide a relevant example.
+
+P.T.O.

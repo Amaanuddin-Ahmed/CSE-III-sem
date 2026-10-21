@@ -1,0 +1,76 @@
+Hall Ticket Number:
+
+Pt | iy td dd -MR-21 Code: B4L4CB582
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B. Pech. [LV Semester Supplementary Hxaminations, July/Aug-2024
+Software Engineering
+(Computer Science and Business System)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: /0
+
+Part-A 10x 4 = 20 Marks)
+
+Q. No. | Stem of the Question _|M | L CO | PO
+1.a) | What is Software and Software Engineering? 2 I [ 2
+1.b) = What are the merits of Incremental model? 2 l l l
+l.c) | What is meant by system requirements? 2 2 2 2
+1.d) | What are the characteristics of good SRS document? ? | 2 |
+l.c) Define design process. 2 | 3 |
+1. f) Define software architecture. 2 | 3 |
+l.g) Define Testing. 2 | 4 |
+1.h) = Demonstrate black box testing. 2 3 4 |
+1.i) — Identify the different categories of risks. | 2 3 5 2
+1.j) Write Metrics for maintenance. | 2 I 5 |
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. Stem of the Question | M | L |co| Po |
+2.a) | What are the five generic process framework activities? Explain. 5 l | l
+2.b) What are the merits of Waterfall model? 5 | 1 2
+
+OR
+
+2.c) Discuss about the changing nature of software. 5 I I I
+
+2.d) — Explain the following: Spiral Model. 5 4 | 2
+
+3.a) Describe the structure of Software Requirements document. 5 2 2 2
+
+3.b) Explain about structured methods. 5 4 2 2
+
+OR
+
+3.c) Discuss in detail about system requirements. 5 l 2 l
+
+3.d) Explain about various system models. 5 4 2 I
+
+4.a) Write a short note on data design. 5 I 3 l
+
+4.b) Explain about Class diagram, 5 ? 3 >
+
+OR
+
+4.c) | Describe architectural architecture styles and patterns. 5 l 3 l
+
+4.d) Draw and explain sequence diagrams with an example. 5 3 3 l
+
+S.a) Explain software quality and metrics for analysis model. 5 4 4 I
+
+5.b) What is black box testing Explain. 5 l 4 2
+
+«wis
+
+S.c) Describe Strategic approach to software testing. 5 l A |
+
+S.d) Explain software quality and metrics for analysis model, 5 2 4 |
+
+0. a) Write a detatled note on ISO 9000 quality standards. 5 | 5
+
+6.b) Describe about formal technical reviews. 5 ? 5 I
+
+OR
+6.c¢) Explain the use of Software Reviews. 5 44 5 |
+6.d) RMMM Write short notes. 5 | 5 [
+
+M: Marks; 1: Bloons Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

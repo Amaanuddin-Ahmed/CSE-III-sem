@@ -1,0 +1,72 @@
+tee [2-494 (4N )
+
+"Wall Ticket Number: ne
+, | | | i | | | il | | MR-2 7 | Code: B414CB5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. 1V Semester Supplementary [’xaminations, Jan/Feb-2024
+Software Engineering
+(Computer Science and Business System)
+
+Answer ALL Questions Max. Marks: 70
+; 7 7 —_ Part-A (10 x 2 = 20 Marks) a a
+Q. No. | _ «Stem of the Question | M |
+1.a) Define Software myth. List out the customer myths.
+1.b) Enumerate different layers in Software Enginecring.
+1.c) Differentiate user and system requirements.
+1.d) What is a feasibility study?
+1.e) Determine how design produces quality for a given software.
+1.f) | What is modularity? How it affects a given software? 2
+1.g) What is a unit testing?
+1.h) | What is a metric for a given software?
+1.i) | What is software reliability?
+| 1.j) List out different types of risks.
+
+Time: 3 Hours
+
+-L [| Co |P0_
+1 2
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M | L |co|Po
+2.a) Demonstrate why software enginccring is a layered technology. 3 3 1 2
+2.b) Elaborate different incremental process models. 7 2 ] |
+OR
+2.c) Explain Capability Maturity Model Integration
+2.d) Draw and Explain prototyping model with a neat sketch.
+
+3 1 J J
+7 3 I 2
+
+3.a) Differentiate functional and non-functional requirements.
+3.b) Illustrate how context modelling helps to model a system.
+
+OR
+3.c) Examine the structure of Software Requirements document. 4 4 2 2
+3.d) What is object modelling ofa system? Explain with an example. 6 6 2 l
+
+4.a) List out any 4 design concepts and bricfly explain them.
+4.b) Explain about different types of relationships a UML model can 6 5 3 \
+
+contain?
+OR
+4.c) | What are different levels of design a design model presents? Explain. 4 ] 3 Il
+4.d) Develop use case diagram for online course registration system. 6 6 3 2
+5.a) Distinguish different methods involved in white box testing. 6 4 4 2
+5.b) Explain the metrics for analysis and design model. 4 ] 4 1
+OR
+
+5.c) Explain validation and system testing in detail.
+5.d) Analyze the different source code and testing metrics.
+
+6.a) Differentiate reactive vs proactive risk management.
+6.b) What are different activities performed in software quality assurance?
+
+OR
+6.c) | Explain how to identify and project a risk. 4 1 5 !
+6.d) What are software reviews? Explain how a formal technical review 1S re 5 5 ,
+
+conducted.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+

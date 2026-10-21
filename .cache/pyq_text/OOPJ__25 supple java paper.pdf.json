@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B415CS4S2\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2025/January 2026\nJava Programming\n(Common to CSE and IT)\nTime: 3 Hours\nAnswer ALL Questions\nMax. Marks: 70\nPart-A (10 x 2 = 20 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nExplain the purpose of the \"this\" keyword in Java.\n2\n2\n1\n1\n1. b) Write a simple Java class with a constructor and a method that\ndisplays student details.\n2\n3\n1\n1,2\n1. c)\nExplain the difference between abstract class and interface.\n2\n2\n2\n1\n1. d)\nWhat is an exception? How does it differ from an error?\n2\n2\n2\n1\n1. e)\nWhat is process-based multitasking?\n2\n1\n3\n1\n1. f\nExplain various string handling classes available in Java.\n2\n1\n3\n1\n1. g) List any four main interfaces of the Collections Framework.\n2\n1\n4\n1\n1. h)\nWrite a Java snippet to iterate through an ArrayList using an Iterator.\n2\n3\n4\n1,2\n1. i)\nExplain the purpose of the paint() method in applets.\n2\n2\n5\n1\n1. j)\nList any two components of the java.awt package.\n2\n1\n5\n1\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\n2. a) What are Java buzzwords? Explain any five with suitable examples.\n2. b) Discuss the role of constructors and method overloading in Java with\nexamples.\nOR\n2. c) Discuss various control statements in Java with suitable examples.\n2. d) Differentiate between compile-time and runtime polymorphism in\nJava.\n3. a) Explain the process of defining, creating, and accessing packages in\nJava.\n3. b) Write a Java program to handle multiple exceptions using multiple\ncatch clauses.\nOR\nM\nL\nCO\nPO\n5\n1\n1\n1\n5\n2\n1\n1\n5\n2\n1\n5\n4\n1,2\n5\n1\n2\n1\n5\n3\n2\n1,2\n3. c) Discuss the importance of access protection and package visibility\nwith examples.\n5\n2\n2\n1\n3. d) Compare and contrast throw and throws keywords in Java with\nexamples.\n5\n4\n2\n1,2\n4. a)\n4. b)\nExplain thread priorities and their role in Java thread scheduling.\nDescribe different methods of the String class with examples.\nOR\n5\n2\n3\n1\n5\n1\n3\n1\n4. c) Develop a Java program demonstrating inter-thread communication\nusing wait(), notify(), and notifyAlI().\n4. d) Explain the use and methods of the File class in Java.\n5\n3\n3\n1,2,3\n5\n2\n3\n1\n5. a) Discuss the importance of the Map interface and explain HashMap\nand TreeMaр.\n5\n2\n4\n1\n5. b) Describe how the StringTokenizer class is used for string parsing.\nOR\n5\n2\n4\n1\nP.T.O.\n",
+   "chars": 2362,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. c) Write a Java program to sort a list of names using a Comparator.\n5. d) Write a Java program that uses Scanner to read data and store it into a\nLinkedList.\n6. a) Demonstrate the delegation event model in Java with an example.\n6. b) Write a Swing applet to draw a rectangle and a circle on the screen.\n5\n3\n4\n1,2\n5\n3\n4\n1,2\n5\n3\n5\n1,2\n5\n3\n5\n1\nOR\n6. c) How can parameters be passed to an applet using the <param> tag?\nGive a code example.\n5\n3\n5\n1,2\n6. d) Explain the working of FlowLayout, BorderLayout, and GridLayout\nwith examples.\n5\n2\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 620,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

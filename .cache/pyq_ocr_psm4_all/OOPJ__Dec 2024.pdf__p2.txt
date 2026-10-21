@@ -1,0 +1,17 @@
+5.c) Discuss about for each alternative with examples. 5 Z 4
+
+5.d) | Explain how to access a Collection via an interface using suitable | 5 3 4
+java program.
+
+6.a) Explain about MVC architecture in detail. 5 1 5
+
+6.b) Discuss about different layout managers in java. 5 2 5
+
+OR
+
+6.c) Write a java program that illustrates passing parameters through | 5 3 5
+applets.
+
+6.d) Explain Adapter classes in java with suitable examples. 5 3 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,23 @@
+OR
+4.c) Explain the flowchart of floating point addition/subtraction operation. | 5 P é
+
+4.d) Divide 13 with 7 using binary division. 5 2 3
+5.a) | Compare Isolated I/O and Memory mapped I/O. 5 1 2
+5.b) | Write short notes on S ] 3
+i. ROM
+li. RAM
+iii. DMA
+iv. Cache memory.
+OR
+5.c) Explain source-initiated asynchronous data transfer using | 5 1 l
+handshaking method.
+5.d) Describe the structure of the magnetic disk with neat diagram. 5 2 p
+6.a) | Explain RISC instruction pipeline in detail? 5 2 2
+6.b) Discuss about the following Interconnection structures 5 2 2
+i. Multiport memory
+ii. | Hypercube system.
+OR
+6.c) | Explain about instruction pipeline in detail. 3 pi Zz
+6.d) With a neat diagram, explain parallel arbitration circuit. 5 i 2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

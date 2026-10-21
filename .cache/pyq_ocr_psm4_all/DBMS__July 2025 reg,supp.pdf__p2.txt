@@ -1,0 +1,23 @@
+OR
+
+4.c) List and explain aggregate operations in SQL. 5 2 3
+4.d) Explain various types of Join operations in SQL. 5 2 3
+5.a) Illustrate implementation of Atomicity and Durability properties. 5 3 “
+5.b)  Let’s say two transactions Tl and T2 want to update the sume bank | 5 a 4
+
+account balance at a time.
+e Tl: Reads balance, adds %100, writes it back.
+e T2: Reads balance, deducts 50, writes it back.
+Analyse and critique what would happen with and without mutual
+
+exclusion.
+OR
+5.c) | Mutual exclusion is a mechanism to achieve serializability. Justify’? 5 5 4
+5.d) Explain lock based protocols? 5 3 A
+6.a) Discuss file organization and importance of indexing. 5 2 5
+6.b) _ Illustrate B+ trees. 5 3 5
+OR
+6.c) | Demonstrate Index Sequential Access Method (ISAM). 5 2 5
+6.d) Explain cluster index in detail. 5 z 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

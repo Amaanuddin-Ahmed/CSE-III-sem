@@ -1,0 +1,56 @@
+Hall Ticket Number:
+
+MR-22 Code: B424CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+
+Software Engineering
+(Common to CSE, CSB and CSD)
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q. No. | Stem of the Question M|L |CO | PO
+1.a) Explain about Software Myths? 1 2 1 l
+1.b) Define CMMI? 1 1 1 2
+1.c) | What are the User Requirements? 1 1 2 |
+1.d) Summarize requirement elicitation and analysis? 1 2 2 2
+l.e) Illustrate the Software architecture? 1 2 3 1
+1.f) | Construct a Collaboration diagram with your own example? 1 3 b, 2
+l.g) Justify the concept of White box testing? 1 5 A |
+1.h) List few metrics for software quality? 1 4 4 zZ
+1.i) | Determine few Software risks? l 5 5 i
+1.j) | Explain risk projection and how it is used in risk management? 1 4 5 2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M/|L |CO| PO
+2.a) Explain about Changing nature of software and its impact in software | 5 ‘| l 1
+engineering.
+2.b) Define Process framework and explain in detail its activities. 5 1 1 2
+OR
+2.c) | Why Agile is used and also tell the Agile methodology. 5 l 1 1
+2.d) Explain the Spiral model and Waterfall Model. 5 2 1 Z
+3.a) Explain how a software requirement document is structured? 5 Z Z 1
+3.b) Distinguish between functional and non-functional requirements? 5 4 2 ]
+OR
+3.c) List the activities of Requirements elicitation and analysis? Explain in | 5 4 2 1
+detail.
+3.d) Explain the Software Requirement Specification (SRS). 5 2 2 2
+4.a) Determine the basic elements of class based model with suitable | 5 5 3 1
+diagram.
+
+4.b) Distinguish between Coupling and Cohesion? How do they affect | 5 4 8 2
+software design?
+
+OR
+4.c) | Explain various strategies of design .Which design strategy is most | 5 2 3 1
+popular and practical?
+4.d) Evaluate the various challenges faced during the design process and | 5 5 3 2
+strategies for overcoming them?
+5.a) | Explain the art of debugging with sketch? 5 2 A 1
+5.b) Justify the difference between Black box testing and White box | 5 5 4 2
+testing?
+OR
+
+P.T.O.

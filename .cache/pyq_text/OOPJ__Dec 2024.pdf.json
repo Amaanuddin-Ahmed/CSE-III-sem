@@ -1,0 +1,29 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B414CS4S3\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2024/January 2025\nJava Programming\n(Common to CSE and IT)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 2 = 20 Marks)\nMax. Marks: 70\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nDefine object. Write the syntax for creating an object.\n2\n1\n1\n1\n1. b)\nDifferentiate method overloading and method overriding.\n2\n2\n1\n2\n1. c)\nMention any four inbuilt packages in java.\n2\n1\n2\n1\n1. d)\nGive the syntax of try and catch blocks in exception handling.\n2\n1\n2\n1\n1. e) Differentiate thread based multitasking and process based multi-\ntasking.\n2\n2\n3\n2\n1. f)\nExplain the usage of Console class in java with an example.\n2\n2\n3\n1\n1. g)\nList any four inbuilt methods of Stack class.\n2\n1\n4\n1\n1. h)\nExplain the usage of Scanner class with an example.\n2\n2\n4\n1\n1. i)\nCompare and contrast applets and applications.\n2\n2\n5\n2\n1. j) State any two limitations of AWT.\n2\n1\n5\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain about java buzzwords.\n5\n1\n1\n1\n2. b)\nWrite a java program that illustrates constructor overloading.\n5\n3\n1\n1\nOR\n2. c) Discuss about the usage of final keyword with inheritance.\n2. d) Differentiate class and an abstract class using suitable examples.\n3. a) Define package. Explain how packages can be created and imported\nwith suitable examples.\n5\n2\n1\n5\n3\n1\n2\n5\n2\n2\n1\n3. b) Explain how multiple inheritance is achieved through interfaces in\njava using suitable examples.\n5\n4\n2\n2\nOR\n3. c) Discuss about the usage of finally keyword in exception handling\nwith examples.\n5\n2\n2\n3. d) Write a java program that illustrates the creation of own exception\nsubclasses.\n5\n3\n2\n2\n4. a) Explain the creation of thread by extending Thread class using\nsuitable examples.\n4. b) Discuss about inter thread communication in java.\nOR\n4. c) Describe the usage of generics in java.\n4. d) Write a java program that copies the content of one file to another\nfile.\n5. a) Explain the usage of ArrayList class using suitable java program.\n5. b) Write a java program that illustrates the usage of StringTokenizer\nclass.\nOR\n5\n2\n3\n1\n5\n3\n3\n2\n5\n3\n5\n3\n3\n2\n5\n2\n4\n1\n5\n3\n4\nP.T.O.\n",
+   "chars": 2215,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. c) Discuss about for each alternative with examples.\n5. d) Explain how to access a Collection via an interface using suitable\njava program.\n5\n2\n4\n2\n5\n3\n4\n1\n6. a) Explain about MVC architecture in detail.\n5\n1\n5\n6. b) Discuss about different layout managers in java.\n5\n2\n5\n2\nOR\n6. c) Write a java program that illustrates passing parameters through\napplets.\n5\n3\n5\n1\n6. d) Explain Adapter classes in java with suitable examples.\n5\n3\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 515,
+   "images": 1
+  },
+  {
+   "page": 3,
+   "text": "",
+   "chars": 0,
+   "images": 1
+  },
+  {
+   "page": 4,
+   "text": "",
+   "chars": 0,
+   "images": 1
+  }
+ ],
+ "pageCount": 4
+}

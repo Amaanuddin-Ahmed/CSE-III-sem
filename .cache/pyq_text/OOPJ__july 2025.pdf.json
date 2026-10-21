@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B325CS4S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Supplementary Examinations, July 2025\nObject Oriented Programming through Java\n(Common to CSE, CSB and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nMax. Marks: 60\nPart-A (10 x 1= 10 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\n\"JVM\" is platform dependant. Justify.\n1\n1\n1\n1. b)\nExplain the role of java garbage collection in memory management.\n1\n2\n1\n1,2\n1. c)\nWhy is inheritance important?\n1\n2\n2\n1,2\n1. d) Explain private and protected keywords.\n1\n2\n2\n1\n1. e) List the methods in Thread class.\n1\n3\n1\n1. f)\nWhat is the difference between error and exception?\n1\n1\n3\n1,2\n1. g)\nWhat is an adapter class?\n1\n4\n1,2\n1. h)\nName three sub classes of component class.\n1\n3\n4\n1\n1. i)\nDefine applet.\n1\n2\n5\n1\n1. j) What is an event in java AWT?\n1\n2\n5\n1,2\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\nM\nL\nCO\nPO\n2. a)\nExplain the features of Java in detail.\n5\n2\n1\n1,2,3\n2. b) How can you find the maximum and minimum values in an array in\nJava?\n5\n1\n1\n1,2,3\nOR\n2. c) What are the drawbacks of procedural languages? Explain the need of\nobject oriented programming with suitable program.\n5\n3\n1\n1,2,3\n2. d) Define overloading. How to overload constructor? Explain in detail.\n3. a) Is multiple inheritance allowed in Java? Justify your answer with\nsuitable example.\n3. b) Write in detail about creating and accessing packages.\nOR\n3. c) Differentiate between abstract class and interfaces.\n3. d) Explain Runtime polymorphism with the help of suitable example.\n4. a) Explain the following clauses\ni)try\nii)throw\niii)catch.\n4. b) Explain thread life cycle with a neat labelled diagram.\nOR\n4. c) Explain thread synchronization with the help of suitable program.\n4. d) Write a Java program to implement Runnable class to create a thread.\n5. a) Explain Delegation Event model with the help of an example.\n5\n2\n3\n1,2,3\n5\n2\n3\n1,2,3\n5\n6\n3\n1,2,3\n5\n3\n4\n1,2,3\n5\n3\n4\n1,2,3\n5\n2\n4\n1,2,3\n5. d) Explain BorderLayout Manager with the help of suitable program.\n5\n3\n4\n1,2,3\nP.T.O.\n5. b) Write a program to demonstrate Mouse Events.\nOR\n5. c) Explain the following AWT components\ni)TextField ii)TextArea iii)Label\n5\n2\n1\n1,2,3\n5\n3\n2\n1,2,3\n5\n2\n2\n1,2,3\n5\n3\n2\n1,2,3\n5\n3\n2\n1,2,3\n5\n2\n3\n1,2,3\n",
+   "chars": 2264,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "6. a) Explain about JTree with the help of suitable example.\n6. b) Explain how parameter is passed to Applet.\nOR\n6. c) Explain in detail about classification of swing components.\n6. d) Differentiate between AWT and swings.\n5\n3\n5\n1,2,3\n5\n2\n5\n1,2,3\n5\n2\n5\n1,2,3\n5\n2\n5\n1,2,3\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 349,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

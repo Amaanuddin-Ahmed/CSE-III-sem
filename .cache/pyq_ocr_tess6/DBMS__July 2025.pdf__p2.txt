@@ -1,0 +1,26 @@
+3.c) Illustrate the features of tuple relational calculus and Domain | 5 2 Z 1
+relational calculus.
+3.d) Analyse the utilization of union, intersect, and except operations. 5 4 2 1,2
+4.a) Define Armstrong’s Axioms. Elucidate the closure of a set of | 5 2 3 1
+dependencies.
+4.b) — Assess the functionality of first, second and third normal forms. 5 3 3 1,2
+OR
+4.c) Discuss the concept of Trivial and Non-Trivial functional | 5 Z 3 1,2
+dependencies
+4.d)  Infer the strategy followed in BCNF and fourth normal form. 5 4 3 1,2
+5.a) Diagnose the important properties of transactions to maintain data in| 5 5 4 12
+the face of concurrent access and system failures.
+5.b) | Demonstrate the role of strict two-phase locking protocol. 5 2 4 1,2
+OR
+5.c) Elaborate the impact of various anomalies due to interleaved | 5 2 4 12
+execution.
+5.d) Outline the implementation of timestamp-based protocols and| 5 2 4 1,2
+validation- based protocols.
+6.a) Show the process of Hash-Based indexing with a suitable example. 5 2 5 1,2
+6.b) Label the ISAM index structure and interpret the operations | 5 3 5 1,2
+performed on ISAM.
+OR
+6.c) | With an appropriate example, discuss the procedure used in Tree- | 5 Z 5 1,2
+Based indexing.
+6.d) | How does a B+ tree index handle search, insert, and delete? Explain. 5 5 5 1,2
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

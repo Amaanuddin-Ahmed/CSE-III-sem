@@ -1,0 +1,51 @@
+Hall Ticket Number:
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, July/August-2024
+Software Engineering
+(Common to CSE, CSB & CSD)
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+(Q.No | Stemofthe Question | M [LL CO | PO |
+l.a) Explain is legacy software. 1 1 1 1
+1.b) — List the types of software myths. 1 i 1 2
+1.c) Explain the kinds of system requirements. 1 2 2 1
+1.d) Discuss data flow model. 1 1 2 2
+l.e) — Justify the importance of refactoring. 1 1 3 1
+1.f) | Define software architecture with its importance. 1 2 3 2
+1.g) | Compare verification and validation. 1 3 4 1
+1.h) Describe smoke testing. 1 1 4 2
+1.i) List out the generic subcategories of predictable risks? 1 2 B) 1
+1.j) | Define risk components? 1 2 5 2
+
+Part-B (5 x 10 = 50 Marks
+
+/Q.No.[ Stemofthe Question | M | LE [CO] PO |
+2.a) Explain the evolving role of software? 5 1 1 1
+2.b) Describe “Software myth’? Discuss on various types of software | 5 1 1 z
+
+myths and the true aspects of these myths?
+OR
+2.c) | Explain about the evolutionary process models. 5 o 1 j
+2.d) Compare and contrast perspective process models and iterative | 5 2 1 2
+process models.
+3.a) Write short notes on user requirements. What are requirements? 5 Z 2 1
+3.b) | Compare functional requirements with non-functional requirements. 5 2 2 2
+OR
+3.c) Explain state machine model with a suitable example. 5 2 2 1
+3.d) Demonstrate class hierarchy for library by using interface | 5 2 2 2
+specification.
+4.a) Explain a two level process? Why should system design be finished | 5 5 3 1
+before the detailed design, rather starting the detailed design after the
+requirements specification? Explain with the help of a suitable
+example
+4.b) Explain briefly the following: i) Coupling between the modules, ii) | 5 3 3 2
+The internal Cohesion of a module.
+OR
+4.c) Describe the way of conducting a component level design. 5 3 3 1
+4.d) Explain the guide lines of component level design. 5 6 3 Z
+5.a) Explain about the importance of test strategies for conventional | 5 2 4 1
+software.
+5.b) | Compare black box testing with white box testing. 5 2 4 2
+OR
+P.T.O.

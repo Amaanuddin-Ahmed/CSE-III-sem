@@ -1,0 +1,9 @@
+Explain various file organization methods.
+Compare static hashing and Extendible hashing.
+OR
+
+Construct a B+ tree to insert the following key elements (order of the
+tree is 3) 6, 11, 12, 19, 21, 25, 32, 36, 38, 42, 51, 55, 67, 70.
+
+Explain cluster Index.
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

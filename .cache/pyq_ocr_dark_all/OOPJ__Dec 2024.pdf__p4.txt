@@ -1,0 +1,26 @@
+. a)
+.b)
+
+Explain in detail about collection interfaces and Class hierarchy. 5 3 4
+
+Implement a Java program which shows the HashSet and Iterator. 5 3 4
+OR
+
+Explain about Dictionary properties and Hash table. 5 2 4
+
+Explain More Utility classes 1) Random ii) Scanner. 5 4 4
+
+Write a Java Program for Handling Mouse events. 5 4 5
+
+Explain about Different Swing Components. 5 3 5
+OR
+
+Explain on AWT Event Hierarchy. 5 2 5
+
+Examine the following in detail 5 3 5
+
+(1)Handling a TextField.
+
+(11)Using a TexArea.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

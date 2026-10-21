@@ -1,0 +1,56 @@
+S.
+
+6.
+
+6
+
+_b)
+.C)
+
+dd)
+
+Find a general expression for a solution to the recurrence relation. 5 3
+Ay- DA y-1 +6 y-2=n(n-1) for n>=2.
+
+Solve the recurrence relation ay;+ ay.) - 8 ayo - 12 a,3 =0 forn> 3,4} 5 3
+given ap=1l, a)~5, ao— 1 by generating functions.
+
+OR
+
+Solve the recurrence relation using substitution method. 5 3
+Aan= Ap.) + L/ a(t) where ap=1.
+
+How many I[l-permutations can be formed from the word | 5 2
+
+“TALLAHASSEE’. How many of these permutations begin with 'T and
+end with FE.
+
+Show that the complete graph Ks and complete bipartite graph K3 3 are | 5 2
+not planar.
+
+Explain Euler’s theorem with an example. 5 |
+OR
+
+Differentiate between depth first and breadth first graph traversals with | 5 2
+
+an example each.
+
+Prove that a graph G with at least one edge is 2-chromatic if and only if | 5 3
+
+G has no cycle of odd length.
+
+—
+
+1.2
+
+raed
+
+1.2
+
+so
+
+12
+
+s—
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Prograinme Outcome

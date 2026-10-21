@@ -1,0 +1,65 @@
+Hall Ticket Number:
+| | | | | | | | | | MR-21— Code: B313CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, Aug/Sep-2023
+Discrete Mathematics
+(Common to CSE, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. Stem of the Question M | L | CO | PO
+l.a) Construct the truth table for «(PV(QA R)). 2 2 l 1,2
+1.b) Test the validity of the following argument (p Ar) > (Hq), (—q) > r 2 3 l 1,2
+
+(pAr)—->Fr
+1.c) | What is partial ordering? 2 1 2 |
+1.d) Define cardinality of sets with an example. 2 | 2 l
+l.e) | Write the statement of pigeonhole principle. 2 3 3 l
+
+1. f) | Find out how many 5-digit numbers greater than 30,000 can be formed 2 2 3 l
+from the digits 1,2,3,4 and 5.
+
+1.g) What is generating function? 2 I 4 I
+
+1.h) Define axioms of probability. 2 l 4 l
+
+1.1) Define graph coloring with an example. 2 l 5 l
+
+1.j}) | What is spanning tree? 2 l 5 l
+- ee ee Part-B (5 x 10 = 50 Marks) ; ; ; -
+| Q. No. | Stem of the Question M | L [CO| PO
+
+2.a) Show that (P> Q)—>R and P> (Q> R) are logically equivalent 5 3 l 1,2
+
+2.b) Show the following equivalence without constructing the truth table. 5 3 1 1,2
+
+((PAQAA) OC)A(A>(PVQVC)) @ (AA(PQ)) >C
+OR
+2.c) State and explain the rules that can generate a well formed formula. 5 2 | |
+2.d) Obtain the principal disjunctive and conjunctive normal form of the 5 3 l 1,2
+
+following formula.
+3.a) Write the properties of binary relations. 5 3 2 |
+3.b) Find the transitive closure of the relationRk = {(1, 2), (2, 3), (3, 4), 5 2 2 1,2
+(4, 1). Show that R' for all values i for that give new elements of the
+transitive closure.
+OR
+
+What is n-ary relations? And explain its applications.
+3.d) Let A= {1, 2, 3, 4, 6, 8, 12, 24}, show that the relation “divides is a 5 3 2 1,2
+partial ordering on A and draw the Hasse diagram.
+
+4.a) How many four letter words can be formed using the letters a, a, 5 2 3 l
+a,b,b,c,c,c,c,d,d ?
+
+4.b) Expand (2x-— y)’ using the Binomial Theorem. 5 3 3 l
+OR
+4.c) Use mathematical induction to show that 5 3 3 |
+PH2Z +2 + occcecceeeee +2"=2""'_ 1 for all positive integers n.
+4.d) — Write the 3-combinations and 3-permutations of {3.a, 2.b, L.c, 3.d}. 5 3 3 l
+5.a) Solve the recurrence relation a, — 7an-1 + 10a. = 4", ag=0, ay=1. 5 3 4 1,2
+; 5.6) Find the coefficient o px’ in the generating function i/(i + 5x)’ 5 2 4 i
+
+P.T.O.

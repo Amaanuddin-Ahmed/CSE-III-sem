@@ -1,0 +1,62 @@
+[fall Vieket Number: _
+
+MAHATMA GANDHEINSTPROU PE OF TECHNOLOGY (Autonomous)
+B. Pech. 1V Semesier Regular/Supplementary Examinations, July 2.025
+vava Programming
+(Information Llechnology)
+
+Code: B4AISTUS
+
+Time: 3 [lours Answer ALL, Questions Max. Marks: 00
+1. a) List the uses of this Keyword. | | | l
+IL. b) Illustrate about Inheritance. | 2 | |
+l.c) Contrast try and catch. l 2 | |
+1. d) Define File class. | I 2 |
+1 e) Show the hierarchy of Collection framework. | | 2 2 |
+L. 1) What is Iterator? | J |
+; 1g) What are the different types of Drivers ur JiaisC? ii 5
+[.h)  ) Deline Multi-lrocessing. 5
+L. i) List the various swing Components. | | “4 |
+1.j) What is Delegation Event Model? re oe 4 l
+
+Q.No. | Stem of the Question [mM {| 4L [CO; PO
+2.a) — Lxplain the different types of Data types with syntax. 5 2 | |
+2.b) List the conditional and Looping statements with syntax in Java. | 5 3 | 1,2
+
+Explain any suitable programs.
+OR
+2.C) What is a constructor? [low do we invoke a constructor? What are its | 5 1 1 1,2
+special properties’?
+2d) Explain the steps involved ta creating and exccuting a java program. 5 2 | |
+3.a) Explain about checked and unchecked exceptions. 2) 2 2 1,2
+3.b) [Explain in details about the [xception Handling clauses throw and | 5 2 2 |
+catch with example.
+OR
+3.c) Explain the input stream using Reading console Input-methods | 5 2 2 1,2
+
+defined by tipui sire.
+3.d) Create Java Program thai reads a file aid throws an exception if the | 5 6 J 3
+file is empty.
+
+4.a) Write a program for implementing access specifier in Packages. 5 3 3 2,3
+
+4.b) — Explain following 1) on string tokenizer 11) array list tn detail. 5 2 3 |
+Or
+
+doc) Explain the methods declared by erator, 5 } 4 |?
+
+4.4) Desien a Java Map tlterarchy? Explain the class and uicilods ti) 5 G 5 1?
+
+details.
+
+yo) Contpare Process and Uhroad ta details, 15 A 3 |?
+
+5 ob) dxplam the bype tard typed) drivers ta sips, ) 7 i
+ik |
+
+soc) ddeniity the steps for Developine JBC Applicaiton ta deiaids ) 5 a 4S
+
+Sd) Coatrast between Thread Vased Matitdaskine and Process based |! 9 ‘ [4
+
+no i an
+| Ets LSB Liss,

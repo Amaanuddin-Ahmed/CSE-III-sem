@@ -1,6 +1,6 @@
 /**
  * MGIT PYQ Hub - question bank generated from the original Drive papers.
- * 82 unique papers, 2234 canonical questions.
+ * 87 unique papers, 2308 canonical questions.
  * Each question keeps its exact paper, page and question number.
  */
 
@@ -19,7 +19,7 @@ const SUBJECTS_DATA = {
     "driveUrl": "https://drive.google.com/drive/folders/1x4QjKc-CXLoCSDTqi6H2NUCtExuBkAMU",
     "notesUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "pyqsUrl": "https://drive.google.com/drive/folders/1R2m69P_aU-IM6wEwIsbwGjKisdk5_xwY",
-    "paperCount": 19,
+    "paperCount": 18,
     "notesCount": 0,
     "chapters": {
       "1": "Mathematical Logic, Truth Tables, Normal Forms (PCNF, PDNF) & Predicates",
@@ -91,7 +91,7 @@ const SUBJECTS_DATA = {
     "driveUrl": "https://drive.google.com/drive/folders/1Af4RdwkOHfK-lM8SuNoeao0aPYiIf6hc",
     "notesUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "pyqsUrl": "https://drive.google.com/drive/folders/1z13uEkpnbrP3vcKzdHp1VXzekcYx1oCk",
-    "paperCount": 13,
+    "paperCount": 14,
     "notesCount": 1,
     "chapters": {
       "1": "Database System Concepts, 3-Schema Architecture & ER Modeling",
@@ -115,7 +115,7 @@ const SUBJECTS_DATA = {
     "driveUrl": "https://drive.google.com/drive/folders/16MpaH50OsmOKyAse1V5oQB7vdDqKYQqX",
     "notesUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
     "pyqsUrl": "https://drive.google.com/drive/folders/1Z10FnEOqw_lIvkt3XtAyhurcP0aWerKv",
-    "paperCount": 13,
+    "paperCount": 15,
     "notesCount": 0,
     "chapters": {
       "1": "Software Process Models, Waterfall, Agile Scrum & Requirements Engineering",
@@ -139,7 +139,7 @@ const SUBJECTS_DATA = {
     "driveUrl": "https://drive.google.com/drive/folders/1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
     "notesUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
     "pyqsUrl": "https://drive.google.com/drive/folders/1FCUxrLxzXfxVwUAoVCZyERUemeR46S15",
-    "paperCount": 0,
+    "paperCount": 3,
     "notesCount": 4,
     "chapters": {
       "1": "Ecosystems, Ecological Pyramids, Food Chains & Biodiversity",
@@ -752,7 +752,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "Draw the instruction word format and indicate the number of bitsin each part.",
+    "question": "Draw the instruction word format and indicate the number of bits in each part.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -892,7 +892,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "List out the difference between computer organization and architecture.",
+    "question": "List out the difference between computer organization and] 2. architecture.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -901,11 +901,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -936,11 +936,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -1616,11 +1616,11 @@ const QUESTIONS_DATABASE = [
       },
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -2321,7 +2321,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Explain about various functional units of a basic computer with the help of block diagram.",
+    "question": "[xplain about various functional units of a basic computer with the help of block diagram.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -2601,7 +2601,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Design a 4 bit arithmetic combinational arithmetic circuit which implements addition, subtraction, increment, and decrement operations?",
+    "question": "Design a 4 bit arithmetic combinational arithmetic circuit which} implements addition, subtraction, increment, and decrement operations?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -2610,11 +2610,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -2636,7 +2636,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Brief discussion about its operations with neat sketch? instruction? Explain instruction parts based on bits",
+    "question": "Brief discussion about BUS Organization and construction of bus and] its operations with neat sketch?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -2645,11 +2645,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -2671,7 +2671,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "How to represent an instruction? Explain instruction parts based on bits available in instruction code? address instructions. And write an assembly language program for x=(a+b) * (c+d) by using two, three and one address instructions?",
+    "question": "How to represent an instruction? Explain instruction parts based on bits available in instruction code?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -2680,11 +2680,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -3441,7 +3441,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Contrast memory reference instructions with respect to register reference instructions.",
+    "question": "Contrast memory reference instructions with respect to register}; reference instructions.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
     "pageNumber": 1,
@@ -4295,7 +4295,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "What do you mean by microprogram? What are the different typesof microprograms?",
+    "question": "What do you mean by microprogram? What are the different types of microprograms?",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -4444,11 +4444,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -4479,11 +4479,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -4820,7 +4820,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "Discuss about the term control word?",
+    "question": "Draw the flow chart for the add and subtract operations.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
     "pageNumber": 1,
@@ -5823,7 +5823,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "Explain with the help of diagram the register organization of computer with memory bank.",
+    "question": "Explain with the help of diagram the register organization of computer with memory bank. 3. ) What do you mean by addressing mode? Atiatysc the following addressing modes. 1) Index addressing mode 11) Relative addressing mode 111) Immediate addressing mode tv) Implied addressing mode.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -6061,14 +6061,14 @@ const QUESTIONS_DATABASE = [
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2024
     ],
     "frequency": 1,
-    "questionNumber": "Q3.c",
+    "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
-    "question": "Explain the functions BUN and BSA instructions.",
+    "question": "Write notes on three addresses, two addresses, and one address zero address instructions. And write an assembly language program for x=(a+b) * (ct+d) by using two, three and one address instructions?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -6077,16 +6077,16 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
-        "qno": "3.c",
-        "marks": 5,
+        "qno": "3.a",
+        "marks": 10,
         "part": "B"
       }
     ]
@@ -6101,9 +6101,9 @@ const QUESTIONS_DATABASE = [
       2024
     ],
     "frequency": 1,
-    "questionNumber": "Q3.d",
+    "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Analyze the involved in addition / subtraction of two floating",
+    "question": "Explain the general register organization in computer.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -6112,11 +6112,46 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0161",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Analyze the functions BUN and BSA instructions.",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -6127,7 +6162,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0161",
+    "id": "COA-B2-0162",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6162,7 +6197,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0162",
+    "id": "COA-B2-0163",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6197,7 +6232,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0163",
+    "id": "COA-B2-0164",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6232,7 +6267,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0164",
+    "id": "COA-B2-0165",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6267,7 +6302,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0165",
+    "id": "COA-B2-0166",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6302,7 +6337,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0166",
+    "id": "COA-B2-0167",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6337,7 +6372,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0167",
+    "id": "COA-B2-0168",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6372,7 +6407,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0168",
+    "id": "COA-B2-0169",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6407,7 +6442,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0169",
+    "id": "COA-B2-0170",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6442,7 +6477,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0170",
+    "id": "COA-B2-0171",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6477,7 +6512,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0171",
+    "id": "COA-B2-0172",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6512,7 +6547,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0172",
+    "id": "COA-B2-0173",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6547,7 +6582,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0173",
+    "id": "COA-B2-0174",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6582,7 +6617,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0174",
+    "id": "COA-B2-0175",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6617,7 +6652,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0175",
+    "id": "COA-B2-0176",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6652,7 +6687,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0176",
+    "id": "COA-B2-0177",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6687,7 +6722,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0177",
+    "id": "COA-B2-0178",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6722,7 +6757,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0178",
+    "id": "COA-B2-0179",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6757,7 +6792,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0179",
+    "id": "COA-B2-0180",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6792,7 +6827,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0180",
+    "id": "COA-B2-0181",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6827,7 +6862,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0181",
+    "id": "COA-B2-0182",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6862,7 +6897,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0182",
+    "id": "COA-B2-0183",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6897,7 +6932,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0183",
+    "id": "COA-B2-0184",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6932,7 +6967,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0184",
+    "id": "COA-B2-0185",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -6967,7 +7002,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0185",
+    "id": "COA-B2-0186",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7002,7 +7037,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0186",
+    "id": "COA-B2-0187",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7037,7 +7072,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0187",
+    "id": "COA-B2-0188",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7072,7 +7107,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0188",
+    "id": "COA-B2-0189",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7107,7 +7142,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0189",
+    "id": "COA-B2-0190",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7142,7 +7177,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B2-0190",
+    "id": "COA-B2-0191",
     "subjectId": "COA",
     "chapter": 2,
     "part": "B",
@@ -7177,19 +7212,19 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0191",
+    "id": "COA-A3-0192",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
     "marks": 2,
     "years": [
       2025,
-      2023
+      2024
     ],
     "frequency": 2,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "What is meant by normalization in floating point representation? Why do we need it?",
+    "question": "What is meant by normalization in floating point representation?",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
     "pageNumber": 1,
@@ -7211,14 +7246,14 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
-        "year": 2023,
-        "month": 9,
-        "session": "Sep 2023 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Sep 2023 Regular",
-        "paperName": "Aug 2023 reg.pdf",
-        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
         "page": 1,
         "qno": "1.f",
         "marks": 2,
@@ -7227,7 +7262,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0192",
+    "id": "COA-A3-0193",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7276,7 +7311,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0193",
+    "id": "COA-A3-0194",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7311,7 +7346,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0194",
+    "id": "COA-A3-0195",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7346,7 +7381,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0195",
+    "id": "COA-A3-0196",
+    "subjectId": "COA",
+    "chapter": 3,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.f",
+    "topicTag": "Unit 3",
+    "question": "What is meant by normalization in floating point representation? Why do we need it?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A3-0197",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7381,7 +7451,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0196",
+    "id": "COA-A3-0198",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7416,7 +7486,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0197",
+    "id": "COA-A3-0199",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7451,7 +7521,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0198",
+    "id": "COA-A3-0200",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7486,7 +7556,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0199",
+    "id": "COA-A3-0201",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7521,7 +7591,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0200",
+    "id": "COA-A3-0202",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7556,7 +7626,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0201",
+    "id": "COA-A3-0203",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7591,42 +7661,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0202",
-    "subjectId": "COA",
-    "chapter": 3,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
-    "question": "Define normalization in floating point representation.",
-    "paperName": "August 2024 supple.pdf",
-    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Supplementary",
-        "examType": "Supplementary",
-        "semester": "III",
-        "label": "Aug 2024 Supplementary",
-        "paperName": "August 2024 supple.pdf",
-        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
-        "page": 1,
-        "qno": "1.f",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "COA-A3-0203",
+    "id": "COA-A3-0204",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7661,7 +7696,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0204",
+    "id": "COA-A3-0205",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7696,7 +7731,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0205",
+    "id": "COA-A3-0206",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7716,11 +7751,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -7731,7 +7766,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0206",
+    "id": "COA-A3-0207",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7751,11 +7786,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -7766,7 +7801,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0207",
+    "id": "COA-A3-0208",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7777,7 +7812,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
-    "question": "Convert the following into binary numbers.",
+    "question": "Convert the following into binary numbers: i.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 1,
@@ -7801,7 +7836,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0208",
+    "id": "COA-A3-0209",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7836,7 +7871,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0209",
+    "id": "COA-A3-0210",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7871,7 +7906,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0210",
+    "id": "COA-A3-0211",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7906,7 +7941,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0211",
+    "id": "COA-A3-0212",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7941,7 +7976,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0212",
+    "id": "COA-A3-0213",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -7976,7 +8011,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0213",
+    "id": "COA-A3-0214",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8011,7 +8046,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0214",
+    "id": "COA-A3-0215",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8046,7 +8081,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0215",
+    "id": "COA-A3-0216",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8081,7 +8116,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0216",
+    "id": "COA-A3-0217",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8116,7 +8151,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0217",
+    "id": "COA-A3-0218",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8151,7 +8186,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0218",
+    "id": "COA-A3-0219",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8186,7 +8221,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0219",
+    "id": "COA-A3-0220",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8221,7 +8256,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0220",
+    "id": "COA-A3-0221",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8256,7 +8291,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0221",
+    "id": "COA-A3-0222",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8291,7 +8326,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-A3-0222",
+    "id": "COA-A3-0223",
     "subjectId": "COA",
     "chapter": 3,
     "part": "A",
@@ -8326,7 +8361,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0223",
+    "id": "COA-B3-0224",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8376,7 +8411,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0224",
+    "id": "COA-B3-0225",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8425,7 +8460,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0225",
+    "id": "COA-B3-0226",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8474,7 +8509,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0226",
+    "id": "COA-B3-0227",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8509,7 +8544,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0227",
+    "id": "COA-B3-0228",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8544,7 +8579,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0228",
+    "id": "COA-B3-0229",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8555,7 +8590,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Perform 10111 * 10111 using 2's complement Multiplication} algorithm.",
+    "question": "Perform 10111 * 10111 using 2's complement algorithm.",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
     "pageNumber": 2,
@@ -8579,7 +8614,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0229",
+    "id": "COA-B3-0230",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8614,7 +8649,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0230",
+    "id": "COA-B3-0231",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8649,7 +8684,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0231",
+    "id": "COA-B3-0232",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8684,7 +8719,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0232",
+    "id": "COA-B3-0233",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8719,7 +8754,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0233",
+    "id": "COA-B3-0234",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8754,7 +8789,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0234",
+    "id": "COA-B3-0235",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8789,7 +8824,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0235",
+    "id": "COA-B3-0236",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8824,7 +8859,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0236",
+    "id": "COA-B3-0237",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8859,7 +8894,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0237",
+    "id": "COA-B3-0238",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8894,7 +8929,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0238",
+    "id": "COA-B3-0239",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8929,7 +8964,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0239",
+    "id": "COA-B3-0240",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
@@ -8964,18 +8999,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "COA-B3-0240",
+    "id": "COA-B3-0241",
     "subjectId": "COA",
     "chapter": 3,
     "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2024
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "What is floating point representation? Explain the IEEE standard for floating point representation with examples.",
+    "question": "What is floating point representation? Explain the IEEE standard for floating point representation with examples. 4A.b) Explain about Booth's Multiplier with flowchart.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -8993,42 +9028,7 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
         "page": 1,
         "qno": "4.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "COA-B3-0241",
-    "subjectId": "COA",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
-    "question": "Explain about Booth's Multiplier with flowchart.",
-    "paperName": "August 2024 supple.pdf",
-    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Supplementary",
-        "examType": "Supplementary",
-        "semester": "III",
-        "label": "Aug 2024 Supplementary",
-        "paperName": "August 2024 supple.pdf",
-        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
-        "page": 1,
-        "qno": "4.b",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
@@ -9255,7 +9255,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "What are steps Point Numbers? Explain the operation through a flow chart. With example. H/W circuit for fixed point Number ADD/SUB?",
+    "question": "What are the steps involved in addition / subtraction of two floating-Point Numbers? Explain the operation through a flow chart. With an example.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -9264,11 +9264,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -9299,11 +9299,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -9325,7 +9325,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Construct a Perform multiplication between 10111 * 10011. the hierarchical systems employed to achieve",
+    "question": "Construct a flowchart for 2's Complement multiplication algorithm and Perform multiplication between 10111 * 10011.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -9334,11 +9334,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -9360,7 +9360,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Perform the subtraction with the following unsigned binary numbers.",
+    "question": "Perform the subtraction with the following unsigned binary numbers: i.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -9395,7 +9395,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Draw the flow chart for decimal division and explain division of 23 5 3 5 with 4.",
+    "question": "Draw the flow chart for decimal division and explain division of 23 with 4.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -9465,7 +9465,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "Draw the flow chart for booth multiplication and explain multiplication 5 3 5 of 12 with 13. egal",
+    "question": "Draw the flow chart for Booth multiplication and explain multiplication of 12 with 13.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -11014,11 +11014,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -11049,11 +11049,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -11706,7 +11706,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 2,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Analyze the hierarchical memory systems are employed to achieve} optimal performance by a computer system.",
+    "question": "Analyze the hierarchical memory systems are employed to achieve optimal performance by a computer system.",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
     "pageNumber": 2,
@@ -11729,11 +11729,11 @@ const QUESTIONS_DATABASE = [
       },
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -11924,7 +11924,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "What is a cache mapping function and explain various types of mapping techniques in cache memory organization.",
+    "question": "What is a cache mapping function and explain various mapping techniques in cache memory organization.",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
     "pageNumber": 2,
@@ -12764,7 +12764,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "In a computer, are then determine the hit ratio of cache memory.",
+    "question": "In a computer, the number of cache hits are 7 and cache miss are 3, then determine the hit ratio of cache memory.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 1,
@@ -12773,11 +12773,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -12799,7 +12799,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Sketch the block diagram of DMA in a computer system and discuss} the working principle of DMA?",
+    "question": "Sketch the block diagram of DMA in a computer system and discuss the working principle of DMA?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 2,
@@ -12808,11 +12808,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -12843,11 +12843,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -12869,7 +12869,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "Explain the working of DMA controller.",
+    "question": "explain the working of DMA controller.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -12904,7 +12904,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "cache memory. - A consists of size of 256X16,and 8 blocks. The main 5 3 3. memory contains memory size of 4096X16.find out how many bits are. there in Index, Tag, block, and Word fields in the case of direct mapping.",
+    "question": "A cache memory consists of size of 256X16 and 8 blocks. The main memory contains memory size of 4096X16. Find out how many bits are there in Index, Tag, Block and Word fields in the case of direct mapping.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -12974,7 +12974,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Draw the classification diagram of semiconductor memory and 5.",
+    "question": "Draw the classification diagram of semiconductor memory and explain briefly about ROM, PROM, EEPROM and Flash memory.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -13534,7 +13534,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "What is auxiliary memory? Explain the various memory components used as auxiliary memory in computer systems.",
+    "question": "What is auxiliary memory? Explain the various memory components used as auxiliary memory 1n computer systems.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
     "pageNumber": 1,
@@ -13569,7 +13569,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "Explain the following with respect to asynchronous data transfer. i) Strobe control ii) Handshaking 111) Asynchronous serial transfer.",
+    "question": "Explain the following with respect to asynchronous data transfer. i) Strobe control 11) Handshaking iii) Asynchronous serial transfer.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
     "pageNumber": 1,
@@ -14174,7 +14174,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Compare RISC & CISC design philosophy?",
+    "question": "cache policy? 1.1) Compare RISC & CISC design philosophy?",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
     "pageNumber": 1,
@@ -14454,7 +14454,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "space? 1.1) Howdo branch instructions cause problems in a pipelined processor?",
+    "question": "space? 1.1) Howdo branch instructions cause problems ina pipelined processor? 1.4) List out replacement algorithms.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -14603,11 +14603,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -14638,11 +14638,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 1,
@@ -16164,7 +16164,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
-    "question": "Explain the Need of pipeline technique? Implement an arithmetic] Pipeline for floating point addition and subtraction.",
+    "question": "Explain the Need of pipeline technique? Implement an Pipeline for floating point addition and subtraction.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 2,
@@ -16173,11 +16173,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -16208,11 +16208,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -16243,11 +16243,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -16269,7 +16269,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
-    "question": "Explain vector instructions and how it will be helpful for performance 2.",
+    "question": "Explain vector instructions and how it will be helpful for performance point of view?",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
     "pageNumber": 2,
@@ -16278,11 +16278,11 @@ const QUESTIONS_DATABASE = [
     "appearances": [
       {
         "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Feb 2024 Supplementary",
+        "label": "Jan 2024 Supplementary",
         "paperName": "Feb 2024 supple.pdf",
         "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
         "page": 2,
@@ -16339,7 +16339,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
-    "question": "Discuss about the following Interconnection structures = a 4 i. Time-shared common bus;, Os Crossbar switch",
+    "question": "Discuss about the following interconnection structures: i. Time-shared common bus ii. Crossbar switch.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -16374,7 +16374,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "Explain about vector. processing?",
+    "question": "Explain about vector processiup,?",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
     "pageNumber": 2,
@@ -16514,7 +16514,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
-    "question": "Does pipelining get, affected by data dependencies among the S instruction?",
+    "question": "Does pipelining get affected by data dependencies among the}",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
     "pageNumber": 2,
@@ -16969,7 +16969,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
-    "question": "In detail describe multiport memory, cross bar switch and multistage switching networks used for interconnecting multiprocessors.",
+    "question": "In detail describe multiport memory, cross bar switch and switching networks used for interconnecting multiprocessors.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
     "pageNumber": 2,
@@ -17417,6 +17417,104 @@ const QUESTIONS_DATABASE = [
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Write about data models?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A1-0479",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "List the applications of Database systems?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A1-0480",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "A",
     "marks": 1,
     "years": [
       2026
@@ -17448,7 +17546,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A1-0479",
+    "id": "DBMS-A1-0481",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "A",
@@ -17478,76 +17576,6 @@ const QUESTIONS_DATABASE = [
         "page": 1,
         "qno": "1.b",
         "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A1-0480",
-    "subjectId": "DBMS",
-    "chapter": 1,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.a",
-    "topicTag": "Unit 1",
-    "question": "Write about data models?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.a",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A1-0481",
-    "subjectId": "DBMS",
-    "chapter": 1,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.b",
-    "topicTag": "Unit 1",
-    "question": "List the applications of Database systems?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.b",
-        "marks": 2,
         "part": "A"
       }
     ]
@@ -17809,7 +17837,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
-    "question": "What are the most common errors you can potentially face in data] modeling?",
+    "question": "What are the most common errors you can potentially face in data} modeling?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     "pageNumber": 1,
@@ -17844,7 +17872,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "bn) EmployeeDetails EmpName Branch Address Salary Raja Kolkata Kolkata 10000 Priyanka Mumbai Hyderabad Raja Bangalore Kolkata 10000 Rumki Hyderabad Hyderabad Sumit Hyderabad Bangalore Sandip Mumbai Mumbai 15000 Identify Candidate Key from the above relation.",
+    "question": "EmployeeDetails Raja Kolkata rolkata Identify Candidate Key from the above relation.",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
     "pageNumber": 1,
@@ -18268,7 +18296,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -18276,7 +18304,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -18303,7 +18331,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -18311,7 +18339,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -18333,7 +18361,7 @@ const QUESTIONS_DATABASE = [
       2025,
       2024
     ],
-    "frequency": 3,
+    "frequency": 4,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Discuss about different types of integrity constraints?",
@@ -18358,11 +18386,25 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -18389,6 +18431,70 @@ const QUESTIONS_DATABASE = [
   },
   {
     "id": "DBMS-B1-0505",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026,
+      2025
+    ],
+    "frequency": 3,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Explain the Architecture of the database?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": null,
+        "label": "Jul 2025 Supplementary (Set 2)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 3,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B1-0506",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18438,19 +18544,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0506",
+    "id": "DBMS-B1-0507",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026,
-      2025
+      2026
     ],
     "frequency": 2,
-    "questionNumber": "Q2.b",
+    "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Explain the Architecture of the database?",
+    "question": "What is E-R diagram and explain its Symbols?",
     "paperName": "25 supple.pdf",
     "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
     "pageNumber": 1,
@@ -18467,20 +18572,20 @@ const QUESTIONS_DATABASE = [
         "paperName": "25 supple.pdf",
         "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
         "page": 1,
-        "qno": "2.b",
+        "qno": "2.a",
         "marks": 5,
         "part": "B"
       },
       {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 2)",
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 2)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 3,
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
         "qno": "2.a",
         "marks": 5,
         "part": "B"
@@ -18488,7 +18593,56 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0507",
+    "id": "DBMS-B1-0508",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Write about the levels of abstraction in DBMS?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B1-0509",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18538,7 +18692,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0508",
+    "id": "DBMS-B1-0510",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18573,7 +18727,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0509",
+    "id": "DBMS-B1-0511",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18608,7 +18762,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0510",
+    "id": "DBMS-B1-0512",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18643,88 +18797,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0511",
-    "subjectId": "DBMS",
-    "chapter": 1,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q2.a",
-    "topicTag": "Unit 1",
-    "question": "What is E-R diagram and explain its Symbols?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "2.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B1-0512",
-    "subjectId": "DBMS",
-    "chapter": 1,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q2.d",
-    "topicTag": "Unit 1",
-    "question": "Write about the levels of abstraction in DBMS?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "2.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
     "id": "DBMS-B1-0513",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
-    "marks": 10,
+    "marks": 5,
     "years": [
       2023
     ],
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Draw the Architecture of DBMS and explain about its various} 10 2 Il L2 components.",
+    "question": "Draw the Architecture of DBMS and explain about its various! components.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -18742,7 +18826,7 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
         "page": 1,
         "qno": "2.a",
-        "marks": 10,
+        "marks": 5,
         "part": "B"
       }
     ]
@@ -18759,7 +18843,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Differentiate between Total Participation and Partial Participation. Illustrate with an example E-R diagram.",
+    "question": "Illustrate with an example E-R diagram.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -18827,6 +18911,41 @@ const QUESTIONS_DATABASE = [
       2023
     ],
     "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Differentiate between Total Participation and Partial Participation.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular (Set 1)",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular (Set 1)",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B1-0517",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "What is DBMS? Explain its advantages over file system.",
@@ -18853,7 +18972,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0517",
+    "id": "DBMS-B1-0518",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18888,7 +19007,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0518",
+    "id": "DBMS-B1-0519",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18923,7 +19042,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0519",
+    "id": "DBMS-B1-0520",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18958,7 +19077,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0520",
+    "id": "DBMS-B1-0521",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -18993,7 +19112,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0521",
+    "id": "DBMS-B1-0522",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19028,7 +19147,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0522",
+    "id": "DBMS-B1-0523",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19063,7 +19182,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0523",
+    "id": "DBMS-B1-0524",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19098,7 +19217,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0524",
+    "id": "DBMS-B1-0525",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19133,7 +19252,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0525",
+    "id": "DBMS-B1-0526",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19144,7 +19263,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Design an ER diagram for a Hospital management system that includes entities such as patients, employees, doctors, nurses, room, receptionist, test report, and billing. Specify the relationships between these entities and their attributes.",
+    "question": "Id) Desion an ER diagram for a Hosptlal management system that) S includes entitics such as patients, employecs, doctors, nurses, room, receptionist, test report, and billing. Specify - the relationships between these entities and their attributes.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     "pageNumber": 1,
@@ -19168,7 +19287,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0526",
+    "id": "DBMS-B1-0527",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19203,7 +19322,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0527",
+    "id": "DBMS-B1-0528",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19238,7 +19357,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0528",
+    "id": "DBMS-B1-0529",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19273,7 +19392,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0529",
+    "id": "DBMS-B1-0530",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19308,7 +19427,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0530",
+    "id": "DBMS-B1-0531",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19343,11 +19462,11 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0531",
+    "id": "DBMS-B1-0532",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
-    "marks": 10,
+    "marks": 5,
     "years": [
       2025
     ],
@@ -19372,13 +19491,13 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
         "page": 1,
         "qno": "2.b",
-        "marks": 10,
+        "marks": 5,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DBMS-B1-0532",
+    "id": "DBMS-B1-0533",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19389,7 +19508,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Explain the Advantages of Database management system over File System.",
+    "question": "Explain the Advantages of Database management system over File} System.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -19413,7 +19532,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0533",
+    "id": "DBMS-B1-0534",
+    "subjectId": "DBMS",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Draw and Explain the ER diagram for Library Management System.",
+    "paperName": "Jan 2025.pdf",
+    "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary (Set 1)",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary (Set 1)",
+        "paperName": "Jan 2025.pdf",
+        "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B1-0535",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19448,7 +19602,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0534",
+    "id": "DBMS-B1-0536",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19483,7 +19637,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0535",
+    "id": "DBMS-B1-0537",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19494,7 +19648,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Draw an ER diagram for a banking enterprise and convert it into a set of relations.",
+    "question": "Draw an ER diagram for a banking enterprise and convert it into a set of relations",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -19518,7 +19672,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0536",
+    "id": "DBMS-B1-0538",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19553,7 +19707,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0537",
+    "id": "DBMS-B1-0539",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19588,7 +19742,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0538",
+    "id": "DBMS-B1-0540",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19599,7 +19753,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Draw an E-R diagram for a university database, contains information about professors (identified by social security number, or SSN) and courses (identified by courseid). Professors teach courses; For each situation, draw an ER diagram that describes it 1. Professors can teach the same course in several semesters, and each offering must be recorded. 2. Professors can teach the same course in several semesters, 3. Every professor must teach some course. 4. Every professor teaches exactly one course (no more, no less).",
+    "question": "Draw an E-R diagram for a university database, contains information about professors (identified by social security number, or SSN) and courses (identified by courseid). Professors teach courses; For each situation, draw an ER diagram that describes it offering must be recorded.",
     "paperName": "January 2024 supp.pdf",
     "driveFileId": "1SFlL6EEuRBPpaQBJnGqJP4HrAD_zwnpR",
     "pageNumber": 1,
@@ -19623,7 +19777,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0539",
+    "id": "DBMS-B1-0541",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19658,7 +19812,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0540",
+    "id": "DBMS-B1-0542",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19693,7 +19847,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0541",
+    "id": "DBMS-B1-0543",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19728,7 +19882,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0542",
+    "id": "DBMS-B1-0544",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19763,7 +19917,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0543",
+    "id": "DBMS-B1-0545",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19798,7 +19952,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0544",
+    "id": "DBMS-B1-0546",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19809,7 +19963,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Examine the integrity constraints, that a DBA or user can specify in the relational model.",
+    "question": "Examine the integrity constraints, that a DBA or user can specify in} the relational model.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 1,
@@ -19833,7 +19987,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0545",
+    "id": "DBMS-B1-0547",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19844,7 +19998,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Answer each of the following questions. The questions are based on the following relational schema: Emp (eid: integer, ename: string, age: integer, salary: real) Works (eid: integer, did: integer, peLtime: integer) Dept (did: integer, dname: string, budget: real, managerid: integer) 1. Give an example of a foreign key constraint that involves the Dept relation. What are the options for enforcing this constraint when a user attempts to delete a Dept tuple? 2. Write the SQL statements required to create the preceding relations, including appropriate versions of all primary and foreign key integrity constraints. 3. Define the Dept relation in SQL so that every department is guaranteed to have a manager. 4. Write an SQL statement to add John Doe as an employee with eid 101, age 32 and salary 15,000.",
+    "question": "Answer each of the following questions. The questions are based on the following relational schema",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 1,
@@ -19868,7 +20022,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0546",
+    "id": "DBMS-B1-0548",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19903,7 +20057,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0547",
+    "id": "DBMS-B1-0549",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19918,7 +20072,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -19926,7 +20080,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -19938,7 +20092,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B1-0548",
+    "id": "DBMS-B1-0550",
     "subjectId": "DBMS",
     "chapter": 1,
     "part": "B",
@@ -19953,7 +20107,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -19961,7 +20115,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -19973,7 +20127,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0549",
+    "id": "DBMS-A2-0551",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -19982,7 +20136,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "Discuss the use of Rename operation?",
@@ -20007,11 +20161,25 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -20023,7 +20191,56 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0550",
+    "id": "DBMS-A2-0552",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Write about the basic form of SQL query?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A2-0553",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20058,7 +20275,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0551",
+    "id": "DBMS-A2-0554",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20093,42 +20310,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0552",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.d",
-    "topicTag": "Unit 2",
-    "question": "Write about the basic form of SQL query?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.d",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A2-0553",
+    "id": "DBMS-A2-0555",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20139,7 +20321,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "Define Referential Integrity. Give an example.",
+    "question": "What is Functional Dependency? Give an example.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -20163,7 +20345,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0554",
+    "id": "DBMS-A2-0556",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20198,7 +20380,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0555",
+    "id": "DBMS-A2-0557",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20209,7 +20391,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "What are the SQL statements used to retrieve and modify the Z database?",
+    "question": "What are the SQL statements used to retrieve and modify the database?",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 3,
@@ -20233,7 +20415,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0556",
+    "id": "DBMS-A2-0558",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20268,7 +20450,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0557",
+    "id": "DBMS-A2-0559",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20303,7 +20485,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0558",
+    "id": "DBMS-A2-0560",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20338,7 +20520,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0559",
+    "id": "DBMS-A2-0561",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20373,7 +20555,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0560",
+    "id": "DBMS-A2-0562",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20408,7 +20590,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0561",
+    "id": "DBMS-A2-0563",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20443,7 +20625,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0562",
+    "id": "DBMS-A2-0564",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20478,7 +20660,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0563",
+    "id": "DBMS-A2-0565",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20513,7 +20695,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0564",
+    "id": "DBMS-A2-0566",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20548,7 +20730,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0565",
+    "id": "DBMS-A2-0567",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20583,7 +20765,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0566",
+    "id": "DBMS-A2-0568",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20618,7 +20800,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0567",
+    "id": "DBMS-A2-0569",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20653,7 +20835,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0568",
+    "id": "DBMS-A2-0570",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20688,7 +20870,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0569",
+    "id": "DBMS-A2-0571",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20723,7 +20905,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0570",
+    "id": "DBMS-A2-0572",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20758,7 +20940,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0571",
+    "id": "DBMS-A2-0573",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20793,7 +20975,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0572",
+    "id": "DBMS-A2-0574",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20828,7 +21010,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A2-0573",
+    "id": "DBMS-A2-0575",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "A",
@@ -20843,7 +21025,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -20851,7 +21033,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -20863,7 +21045,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0574",
+    "id": "DBMS-B2-0576",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -20872,7 +21054,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Define trigger and explain all the three parts of it with an example?",
@@ -20897,11 +21079,25 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -20913,7 +21109,154 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0575",
+    "id": "DBMS-B2-0577",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Write about operations in relational algebra with an example?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0578",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Discuss about Tuple relational calculus in detail?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0579",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain about NULL values and Views?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0580",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -20962,7 +21305,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0576",
+    "id": "DBMS-B2-0581",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -20997,7 +21340,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0577",
+    "id": "DBMS-B2-0582",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21032,7 +21375,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0578",
+    "id": "DBMS-B2-0583",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21067,186 +21410,81 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0579",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.a",
-    "topicTag": "Unit 2",
-    "question": "Write about operations in relational algebra with an example?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "3.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B2-0580",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.b",
-    "topicTag": "Unit 2",
-    "question": "Discuss about Tuple relational calculus in detail?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B2-0581",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.c",
-    "topicTag": "Unit 2",
-    "question": "Explain about NULL values and Views?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "3.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B2-0582",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 10,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.a",
-    "topicTag": "Unit 2",
-    "question": "Write short notes on below operations in Relational Algebra. Illustrate with an example query in relational algebra. i) Selection ii) Projection iii) Union iv) Cartesian product",
-    "paperName": "Aug 2023.pdf",
-    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 9,
-        "session": "Sep 2023 Regular (Set 1)",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Sep 2023 Regular (Set 1)",
-        "paperName": "Aug 2023.pdf",
-        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-        "page": 1,
-        "qno": "3.a",
-        "marks": 10,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B2-0583",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.b",
-    "topicTag": "Unit 2",
-    "question": "Employee (emp_id, emp name, gender, salary) Work For(emp_id, project_id) Project (project_id, project_name, duration_in_ months) Write the following queries in SQL.",
-    "paperName": "Aug 2023.pdf",
-    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 9,
-        "session": "Sep 2023 Regular (Set 1)",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Sep 2023 Regular (Set 1)",
-        "paperName": "Aug 2023.pdf",
-        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
     "id": "DBMS-B2-0584",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
     "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Write short notes on below operations in Relational Algebra. IHlustrate with an example query in relational algebra.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular (Set 1)",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular (Set 1)",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0585",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Employee (emp_id, emp name, gender, salary) Work For(emp_id, project_id) Project (project_id, project name, duration _in_ months) Write the following queries in SQL.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular (Set 1)",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular (Set 1)",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0586",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 10,
     "years": [
       2023
     ],
@@ -21271,13 +21509,13 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
         "page": 1,
         "qno": "3.c",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DBMS-B2-0585",
+    "id": "DBMS-B2-0587",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21312,7 +21550,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0586",
+    "id": "DBMS-B2-0588",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21323,7 +21561,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "What is a view? Can you create view on multiple tables? Illustrate With examples.",
+    "question": "What is a view? Can you create view on multiple tables? Illustrate With examples. 3. ) Consider the following schema",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 3,
@@ -21347,7 +21585,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0587",
+    "id": "DBMS-B2-0589",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21382,7 +21620,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0588",
+    "id": "DBMS-B2-0590",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21393,7 +21631,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
-    "question": "What is trigger? Explain how to implement triggers in SQL?",
+    "question": "What is trigger? [*xplain how to implement triggers in SQL?",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 3,
@@ -21417,7 +21655,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0589",
+    "id": "DBMS-B2-0591",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21452,7 +21690,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0590",
+    "id": "DBMS-B2-0592",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21487,7 +21725,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0591",
+    "id": "DBMS-B2-0593",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21522,7 +21760,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0592",
+    "id": "DBMS-B2-0594",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21557,7 +21795,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0593",
+    "id": "DBMS-B2-0595",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21592,7 +21830,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0594",
+    "id": "DBMS-B2-0596",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21627,7 +21865,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0595",
+    "id": "DBMS-B2-0597",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21662,7 +21900,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0596",
+    "id": "DBMS-B2-0598",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21697,7 +21935,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0597",
+    "id": "DBMS-B2-0599",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21732,7 +21970,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0598",
+    "id": "DBMS-B2-0600",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21767,7 +22005,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0599",
+    "id": "DBMS-B2-0601",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21802,7 +22040,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0600",
+    "id": "DBMS-B2-0602",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21837,7 +22075,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0601",
+    "id": "DBMS-B2-0603",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21848,7 +22086,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
-    "question": "Explain the Difference between Nested Queries and Correlated 5 ) > 123 Queries. Explain with the help of an example.",
+    "question": "Lxplain the Dilference between Nested Queries and Correlated Queries. Explain with the help of an example.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -21872,7 +22110,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0602",
+    "id": "DBMS-B2-0604",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21907,7 +22145,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0603",
+    "id": "DBMS-B2-0605",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21918,7 +22156,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
-    "question": "Write about SQL data types and different types of constraints that can be applied on data.",
+    "question": "Write about SQL. data types and different types of constraints that can be applied on data.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -21942,7 +22180,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0604",
+    "id": "DBMS-B2-0606",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21953,7 +22191,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "Explain the following Operators in SQL with examples: 5 l = Ig i) SOME 1i) IN iti) EXCEPT iv) UNION v) ALTER",
+    "question": "Explain the following Operators in SQL with examples: 5 i) SOME, ti) IN: tii) EXCEPT iv) UNION\" v) ALTER",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -21977,7 +22215,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0605",
+    "id": "DBMS-B2-0607",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -21988,7 +22226,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Explain DDL and DML commands with examples.",
+    "question": "Explain DDL and DMI, commands with examples.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -22012,7 +22250,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0606",
+    "id": "DBMS-B2-0608",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22023,7 +22261,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
-    "question": "Write the aggregate operators in SQL.",
+    "question": "Write the aggregate opcrators in SQL.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -22047,7 +22285,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0607",
+    "id": "DBMS-B2-0609",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22082,7 +22320,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0608",
+    "id": "DBMS-B2-0610",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22117,7 +22355,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0609",
+    "id": "DBMS-B2-0611",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22152,7 +22390,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0610",
+    "id": "DBMS-B2-0612",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22187,7 +22425,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0611",
+    "id": "DBMS-B2-0613",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22222,7 +22460,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0612",
+    "id": "DBMS-B2-0614",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22257,7 +22495,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0613",
+    "id": "DBMS-B2-0615",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22292,7 +22530,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0614",
+    "id": "DBMS-B2-0616",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22327,7 +22565,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0615",
+    "id": "DBMS-B2-0617",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22362,7 +22600,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0616",
+    "id": "DBMS-B2-0618",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22397,7 +22635,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0617",
+    "id": "DBMS-B2-0619",
+    "subjectId": "DBMS",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "efine the Dept relation in SQL so that every department is guaranteed to have a manager. 4. Write an SQL statement to add John Doe as an employee with eid 101, age = 32 and salary = 15,000.",
+    "paperName": "July 2025.pdf",
+    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 1)",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary (Set 1)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B2-0620",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22432,42 +22705,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0618",
-    "subjectId": "DBMS",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.d",
-    "topicTag": "Unit 2",
-    "question": "Analyse the utilization of union, intersect, and except operations.",
-    "paperName": "July 2025.pdf",
-    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 1)",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 1)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 2,
-        "qno": "3.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B2-0619",
+    "id": "DBMS-B2-0621",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22482,7 +22720,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -22490,7 +22728,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -22502,7 +22740,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0620",
+    "id": "DBMS-B2-0622",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22517,7 +22755,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -22525,7 +22763,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -22537,7 +22775,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B2-0621",
+    "id": "DBMS-B2-0623",
     "subjectId": "DBMS",
     "chapter": 2,
     "part": "B",
@@ -22552,7 +22790,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -22560,7 +22798,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -22572,7 +22810,105 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0622",
+    "id": "DBMS-A3-0624",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.e",
+    "topicTag": "Unit 3",
+    "question": "List out the properties of decomposition?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A3-0625",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.f",
+    "topicTag": "Unit 3",
+    "question": "What is redundancy and write about the problems with it?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A3-0626",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22584,7 +22920,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 2,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
-    "question": "What is Trivial Functional Dependency?",
+    "question": "What is trivial l'unctional Dependency?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -22622,7 +22958,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0623",
+    "id": "DBMS-A3-0627",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22657,7 +22993,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0624",
+    "id": "DBMS-A3-0628",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22692,77 +23028,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0625",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
-    "question": "List out the properties of decomposition?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.e",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A3-0626",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
-    "question": "What is redundancy and write about the problems with it?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.f",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A3-0627",
+    "id": "DBMS-A3-0629",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22797,7 +23063,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0628",
+    "id": "DBMS-A3-0630",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22832,7 +23098,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0629",
+    "id": "DBMS-A3-0631",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22867,7 +23133,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0630",
+    "id": "DBMS-A3-0632",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22902,7 +23168,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0631",
+    "id": "DBMS-A3-0633",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22937,7 +23203,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0632",
+    "id": "DBMS-A3-0634",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -22972,7 +23238,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0633",
+    "id": "DBMS-A3-0635",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23007,7 +23273,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0634",
+    "id": "DBMS-A3-0636",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23018,7 +23284,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Illustrate UNION and INTERSECT in SQL.",
+    "question": "ind the ids and names of sailors who have reserved two different boats on the same day, Pow,",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     "pageNumber": 1,
@@ -23042,7 +23308,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0635",
+    "id": "DBMS-A3-0637",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23077,7 +23343,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0636",
+    "id": "DBMS-A3-0638",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23112,7 +23378,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0637",
+    "id": "DBMS-A3-0639",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23123,7 +23389,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Why Decomposition is important? Also Explain the types of Decomposition.",
+    "question": "Decomposition is important? Also Explain the types of Decomposition.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -23147,7 +23413,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0638",
+    "id": "DBMS-A3-0640",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23158,7 +23424,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
-    "question": "Define Functional dependency and Multivalued dependency.",
+    "question": "lc) Detine Functional dependency and Multivalued dependency.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -23182,7 +23448,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0639",
+    "id": "DBMS-A3-0641",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23217,7 +23483,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0640",
+    "id": "DBMS-A3-0642",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23252,7 +23518,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0641",
+    "id": "DBMS-A3-0643",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23287,7 +23553,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0642",
+    "id": "DBMS-A3-0644",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23322,7 +23588,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0643",
+    "id": "DBMS-A3-0645",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23357,7 +23623,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0644",
+    "id": "DBMS-A3-0646",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23392,7 +23658,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0645",
+    "id": "DBMS-A3-0647",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23407,7 +23673,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -23415,7 +23681,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -23427,7 +23693,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A3-0646",
+    "id": "DBMS-A3-0648",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "A",
@@ -23442,7 +23708,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -23450,7 +23716,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -23462,7 +23728,203 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0647",
+    "id": "DBMS-B3-0649",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 3",
+    "question": "Discuss about trival and non trival functional dependencies?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0650",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 3",
+    "question": "Illustrate the closure of attributes?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0651",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.c",
+    "topicTag": "Unit 3",
+    "question": "What is decomposition and explain its properties?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0652",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.d",
+    "topicTag": "Unit 3",
+    "question": "Explain about First and Second normal forms",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0653",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23497,7 +23959,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0648",
+    "id": "DBMS-B3-0654",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23532,7 +23994,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0649",
+    "id": "DBMS-B3-0655",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23567,7 +24029,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0650",
+    "id": "DBMS-B3-0656",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23602,33 +24064,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0651",
+    "id": "DBMS-B3-0657",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2023
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Discuss about trival and non trival functional dependencies?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "question": "What is Normalization? Why do we need to Normalize our database?",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
     "semester": "IV",
-    "examType": "Supplementary",
+    "examType": "Regular",
     "appearances": [
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular (Set 1)",
+        "examType": "Regular",
         "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "label": "Sep 2023 Regular (Set 1)",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
         "page": 1,
         "qno": "4.a",
         "marks": 5,
@@ -23637,33 +24099,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0652",
+    "id": "DBMS-B3-0658",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2023
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Illustrate the closure of attributes?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "question": "Explain 1NF, 2NF, 3NF, BCNF Normal Forms by taking proper examples.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
     "semester": "IV",
-    "examType": "Supplementary",
+    "examType": "Regular",
     "appearances": [
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular (Set 1)",
+        "examType": "Regular",
         "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "label": "Sep 2023 Regular (Set 1)",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
         "page": 1,
         "qno": "4.b",
         "marks": 5,
@@ -23672,123 +24134,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0653",
+    "id": "DBMS-B3-0659",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "What is decomposition and explain its properties?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "4.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0654",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
-    "question": "Explain about First and Second normal forms",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "4.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0655",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2023
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "What is Normalization? Why do we need to Normalize our database? Explain 1NF, 2NF, 3NF, BCNF Normal Forms by taking proper examples.",
-    "paperName": "Aug 2023.pdf",
-    "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2023,
-        "month": 9,
-        "session": "Sep 2023 Regular (Set 1)",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Sep 2023 Regular (Set 1)",
-        "paperName": "Aug 2023.pdf",
-        "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
-        "page": 1,
-        "qno": "4.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0656",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2023
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Given the Relation R(A,B,C,D) and the set of Functional} Dependencies: {A - BC, B > C, A > B, AB - C, AC - D}. Find out the irreducible set for the given set of Functional Dependencies.",
+    "question": "Given the Relation R(A,B.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -23806,13 +24163,13 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
         "page": 1,
         "qno": "4.c",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DBMS-B3-0657",
+    "id": "DBMS-B3-0660",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23847,7 +24204,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0658",
+    "id": "DBMS-B3-0661",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23858,7 +24215,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Find the highest normal form in R(A, B, C, D, E) under following functional dependencies.",
+    "question": "Find the highest normal form in R(A, B, C, D, E) under functional dependencies.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 4,
@@ -23882,7 +24239,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0659",
+    "id": "DBMS-B3-0662",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23917,7 +24274,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0660",
+    "id": "DBMS-B3-0663",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23952,7 +24309,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0661",
+    "id": "DBMS-B3-0664",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -23987,7 +24344,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0662",
+    "id": "DBMS-B3-0665",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24022,7 +24379,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0663",
+    "id": "DBMS-B3-0666",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24057,7 +24414,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0664",
+    "id": "DBMS-B3-0667",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24092,7 +24449,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0665",
+    "id": "DBMS-B3-0668",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24127,7 +24484,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0666",
+    "id": "DBMS-B3-0669",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24162,7 +24519,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0667",
+    "id": "DBMS-B3-0670",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24197,7 +24554,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0668",
+    "id": "DBMS-B3-0671",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24208,7 +24565,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "Discuss the problems caused by decomposition in Schema refinement.",
+    "question": "Discuss the problems caused by decomposition in Schema] refinement.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     "pageNumber": 2,
@@ -24232,7 +24589,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0669",
+    "id": "DBMS-B3-0672",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24267,7 +24624,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0670",
+    "id": "DBMS-B3-0673",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24278,7 +24635,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Suppose that data base schema R (A, B, C, D, E, F) of explain and Apply 3NF B- EF",
+    "question": "Explain different types of joins with examples.",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
     "pageNumber": 2,
@@ -24302,46 +24659,11 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0671",
+    "id": "DBMS-B3-0674",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "Explain different types of joins with examples.",
-    "paperName": "Jan 2024 supp.pdf",
-    "driveFileId": "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Feb 2024 Supplementary",
-        "paperName": "Jan 2024 supp.pdf",
-        "driveFileId": "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
-        "page": 2,
-        "qno": "4.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0672",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2024
     ],
@@ -24366,13 +24688,13 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1oXcXaGDsDJZGyHK98b5dNwADK6GbAyc9",
         "page": 2,
         "qno": "4.d",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DBMS-B3-0673",
+    "id": "DBMS-B3-0675",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24407,7 +24729,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0674",
+    "id": "DBMS-B3-0676",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24418,7 +24740,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "What do you mean by redundancy? Discuss about insertion, updation and deletion anomalies.",
+    "question": "Ab) What do you mean by redundancy? Discuss about insertion, updation and deletion anomalies.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -24442,7 +24764,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0675",
+    "id": "DBMS-B3-0677",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24453,7 +24775,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Given R (A, B, C, D, E, F) and the set of FDs: {A - BC,E B- E, CD - EF}. Compute the CLOSURE {A, B}\" under the of FD's. Show that an FD: AB - BCE hold for R.",
+    "question": "Given R (A, B, C, D, E, F) and the set of FDs: {A - BC,E - CF, B- E, CD - EF}. Compute the CLOSURE {A, B}' under the given set of FD's. Show that an FD: AB --> BCE_ hold for R.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 2,
@@ -24477,7 +24799,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0676",
+    "id": "DBMS-B3-0678",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24512,7 +24834,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0677",
+    "id": "DBMS-B3-0679",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24523,7 +24845,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Explain 3NF and BCNF with examples. What is the difference between them?",
+    "question": "Explain 3NPF and BCNP with examples. What is the difference between them?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -24547,7 +24869,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0678",
+    "id": "DBMS-B3-0680",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24582,7 +24904,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0679",
+    "id": "DBMS-B3-0681",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24617,7 +24939,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0680",
+    "id": "DBMS-B3-0682",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24652,7 +24974,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0681",
+    "id": "DBMS-B3-0683",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24687,7 +25009,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0682",
+    "id": "DBMS-B3-0684",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24722,7 +25044,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0683",
+    "id": "DBMS-B3-0685",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24757,7 +25079,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0684",
+    "id": "DBMS-B3-0686",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24792,7 +25114,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0685",
+    "id": "DBMS-B3-0687",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24827,7 +25149,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0686",
+    "id": "DBMS-B3-0688",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24862,7 +25184,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0687",
+    "id": "DBMS-B3-0689",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24897,7 +25219,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0688",
+    "id": "DBMS-B3-0690",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24908,7 +25230,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Define Armstrong's Axioms. Elucidate the closure of a set of dependencies.",
+    "question": "Define Armstrong's Axioms. Llucidate the closure of a set of dependencics.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -24932,7 +25254,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0689",
+    "id": "DBMS-B3-0691",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24967,7 +25289,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0690",
+    "id": "DBMS-B3-0692",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -24978,7 +25300,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Discuss the concept of Trivial and Non-Trivial functional dependencies",
+    "question": "Discuss the concept of 'Trivial and Non-Trivial functional dependencies",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -25002,7 +25324,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0691",
+    "id": "DBMS-B3-0693",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -25037,7 +25359,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B3-0692",
+    "id": "DBMS-B3-0694",
     "subjectId": "DBMS",
     "chapter": 3,
     "part": "B",
@@ -25052,7 +25374,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -25060,82 +25382,12 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
         "page": 3,
         "qno": "4.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0693",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
-    "question": "Define normalization and explain 1st and 2st normal forms with an example?",
-    "paperName": "July 2025.pdf",
-    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-    "pageNumber": 3,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 2)",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 2)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 3,
-        "qno": "4.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B3-0694",
-    "subjectId": "DBMS",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "Define and Compare BCNF with 3\" Normal forms?",
-    "paperName": "July 2025.pdf",
-    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-    "pageNumber": 3,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 2)",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 2)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 3,
-        "qno": "4.c",
         "marks": 5,
         "part": "B"
       }
@@ -25151,13 +25403,13 @@ const QUESTIONS_DATABASE = [
       2025
     ],
     "frequency": 1,
-    "questionNumber": "Q4.d",
+    "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Illustrate multivalued dependency and 4st normal form with an example?",
+    "question": "Define normalization and explain 1st and 2st normal forms with an example?",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -25165,7 +25417,77 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
+        "label": "Jul 2025 Supplementary (Set 2)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 3,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0696",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.c",
+    "topicTag": "Unit 3",
+    "question": "Define and Compare BCNF with 3\" Normal forms?",
+    "paperName": "July 2025.pdf",
+    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+    "pageNumber": 3,
+    "semester": null,
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": null,
+        "label": "Jul 2025 Supplementary (Set 2)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 3,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B3-0697",
+    "subjectId": "DBMS",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.d",
+    "topicTag": "Unit 3",
+    "question": "Illustrate multivalued dependency and 4st normal form with an example?",
+    "paperName": "July 2025.pdf",
+    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+    "pageNumber": 3,
+    "semester": null,
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -25177,7 +25499,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0696",
+    "id": "DBMS-A4-0698",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25186,7 +25508,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Explain about transaction states?",
@@ -25211,11 +25533,25 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.h",
+        "marks": 2,
+        "part": "A"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -25227,7 +25563,56 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0697",
+    "id": "DBMS-A4-0699",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.g",
+    "topicTag": "Unit 4",
+    "question": "Write about serializability?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A4-0700",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25262,7 +25647,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0698",
+    "id": "DBMS-A4-0701",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25297,42 +25682,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0699",
-    "subjectId": "DBMS",
-    "chapter": 4,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.g",
-    "topicTag": "Unit 4",
-    "question": "Write about serializability?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.g",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A4-0700",
+    "id": "DBMS-A4-0702",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25343,7 +25693,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
-    "question": "Explain Exclusive Lock. Why we use it?",
+    "question": "et the details of Employees having salary >10000. il) Get the names of Employees working for pid = 20. itl) Get the strength of Male and Female Employees. iv) List project_ids in the descending order of their duration.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -25367,7 +25717,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0701",
+    "id": "DBMS-A4-0703",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25402,7 +25752,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0702",
+    "id": "DBMS-A4-0704",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25437,7 +25787,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0703",
+    "id": "DBMS-A4-0705",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25472,7 +25822,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0704",
+    "id": "DBMS-A4-0706",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25507,7 +25857,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0705",
+    "id": "DBMS-A4-0707",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25542,7 +25892,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0706",
+    "id": "DBMS-A4-0708",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25577,7 +25927,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0707",
+    "id": "DBMS-A4-0709",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25612,7 +25962,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0708",
+    "id": "DBMS-A4-0710",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25647,7 +25997,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0709",
+    "id": "DBMS-A4-0711",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25682,7 +26032,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0710",
+    "id": "DBMS-A4-0712",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25717,7 +26067,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0711",
+    "id": "DBMS-A4-0713",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25728,7 +26078,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "What is Transaction? Explain with example.",
+    "question": "l.h) = What is 'Transaction? ['xplain with example. 2?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 1,
@@ -25752,7 +26102,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0712",
+    "id": "DBMS-A4-0714",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25787,7 +26137,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0713",
+    "id": "DBMS-A4-0715",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25822,7 +26172,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0714",
+    "id": "DBMS-A4-0716",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25857,7 +26207,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0715",
+    "id": "DBMS-A4-0717",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25892,7 +26242,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0716",
+    "id": "DBMS-A4-0718",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25927,7 +26277,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0717",
+    "id": "DBMS-A4-0719",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25962,7 +26312,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0718",
+    "id": "DBMS-A4-0720",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -25973,7 +26323,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
-    "question": "Why does a DBMS interleave transactions?",
+    "question": "ive an example of a foreign key constraint that involves the Dept relation. What are the options for enforcing this constraint when a user attempts to delete a Dept tuple? 2. Write the SQL statements required to create the preceding relations, including appropriate versions of all primary and foreign key integrity constraints.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 1,
@@ -25997,7 +26347,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0719",
+    "id": "DBMS-A4-0721",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -26008,7 +26358,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "Show the technique used in log-based recovery.",
+    "question": "Show the technique used 1n log-based recovery.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 1,
@@ -26032,7 +26382,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A4-0720",
+    "id": "DBMS-A4-0722",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "A",
@@ -26047,7 +26397,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -26055,7 +26405,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -26067,7 +26417,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0721",
+    "id": "DBMS-B4-0723",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26076,7 +26426,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "List and explain ACID properties in detail?",
@@ -26101,11 +26451,25 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "5.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -26117,7 +26481,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0722",
+    "id": "DBMS-B4-0724",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26126,7 +26490,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Discuss about Two-Phase locking protocol in detail?",
@@ -26151,11 +26515,25 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "5.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -26167,7 +26545,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0723",
+    "id": "DBMS-B4-0725",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26176,10 +26554,10 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "What is recovery and explain about log-based recovery with} 5 2 4 LZ example?",
+    "question": "What is recovery and explain about log-based recovery with example?",
     "paperName": "25 supple.pdf",
     "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
     "pageNumber": 1,
@@ -26201,11 +26579,25 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -26217,7 +26609,56 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0724",
+    "id": "DBMS-B4-0726",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 4",
+    "question": "Explain the process of achieving implementation of atomicity and durability?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B4-0727",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26229,7 +26670,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 2,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Explain Lock based protocols.",
+    "question": "[Explain Lock based protocols.",
     "paperName": "July 2025 reg,supp.pdf",
     "driveFileId": "1u6KzS0wqT7r4OyJGjEcmo2uI2yQ6y-DL",
     "pageNumber": 2,
@@ -26267,7 +26708,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0725",
+    "id": "DBMS-B4-0728",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26316,7 +26757,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0726",
+    "id": "DBMS-B4-0729",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26351,7 +26792,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0727",
+    "id": "DBMS-B4-0730",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26386,7 +26827,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0728",
+    "id": "DBMS-B4-0731",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26421,7 +26862,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0729",
+    "id": "DBMS-B4-0732",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26456,42 +26897,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0730",
-    "subjectId": "DBMS",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q5.b",
-    "topicTag": "Unit 4",
-    "question": "Explain the process of achieving implementation of atomicity and durability?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "5.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B4-0731",
+    "id": "DBMS-B4-0733",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26502,7 +26908,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "What is transaction? Give an example. Explain ACID properties in DBMS with the help of examples.",
+    "question": "What is transaction? Give an example. Explain ACID propertics in} DBMS with the help of examples.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 2,
@@ -26526,7 +26932,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0732",
+    "id": "DBMS-B4-0734",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26537,7 +26943,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Discuss about Log Based Recovery Techniques. Illustrate with an example.",
+    "question": "Discuss about Log Based Recovery Techniques. Illustrate with an} example.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 2,
@@ -26561,7 +26967,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0733",
+    "id": "DBMS-B4-0735",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26596,7 +27002,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0734",
+    "id": "DBMS-B4-0736",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26607,7 +27013,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Explain the concept of Serializability.",
+    "question": "[:xplain the concept of Sertalizability.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 4,
@@ -26631,7 +27037,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0735",
+    "id": "DBMS-B4-0737",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26666,7 +27072,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0736",
+    "id": "DBMS-B4-0738",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26701,7 +27107,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0737",
+    "id": "DBMS-B4-0739",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26736,7 +27142,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0738",
+    "id": "DBMS-B4-0740",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26771,7 +27177,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0739",
+    "id": "DBMS-B4-0741",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26806,7 +27212,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0740",
+    "id": "DBMS-B4-0742",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26841,11 +27247,11 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0741",
+    "id": "DBMS-B4-0743",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
-    "marks": 10,
+    "marks": 5,
     "years": [
       2025
     ],
@@ -26870,13 +27276,48 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
         "page": 2,
         "qno": "5.b",
-        "marks": 10,
+        "marks": 5,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DBMS-B4-0742",
+    "id": "DBMS-B4-0744",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.c",
+    "topicTag": "Unit 4",
+    "question": "What is the Distinction between a Deferred and an Immediate} Update?",
+    "paperName": "Dec 2024.pdf",
+    "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Dec 2024.pdf",
+        "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
+        "page": 2,
+        "qno": "5.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B4-0745",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26887,7 +27328,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Describe recovery algorithm using log records from transaction! failure.",
+    "question": "Describe recovery algorithm using log records from transaction failure.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "10HK9VO_ZXz4a-Nwwn-JcRe5iNArirlcp",
     "pageNumber": 2,
@@ -26911,7 +27352,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0743",
+    "id": "DBMS-B4-0746",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26946,7 +27387,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0744",
+    "id": "DBMS-B4-0747",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -26981,7 +27422,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0745",
+    "id": "DBMS-B4-0748",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27016,7 +27457,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0746",
+    "id": "DBMS-B4-0749",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27051,7 +27492,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0747",
+    "id": "DBMS-B4-0750",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27086,7 +27527,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0748",
+    "id": "DBMS-B4-0751",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27121,7 +27562,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0749",
+    "id": "DBMS-B4-0752",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27156,7 +27597,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0750",
+    "id": "DBMS-B4-0753",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27191,7 +27632,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0751",
+    "id": "DBMS-B4-0754",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27202,7 +27643,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Explain Transaction concept.",
+    "question": "ye) Explain Vransaction concept.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -27226,7 +27667,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0752",
+    "id": "DBMS-B4-0755",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27237,7 +27678,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "What is ARIES algorithm? Explain. %",
+    "question": "What is ARIES algorithm? Explain.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 3,
@@ -27261,7 +27702,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0753",
+    "id": "DBMS-B4-0756",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27296,7 +27737,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0754",
+    "id": "DBMS-B4-0757",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27331,7 +27772,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0755",
+    "id": "DBMS-B4-0758",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27366,7 +27807,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0756",
+    "id": "DBMS-B4-0759",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27401,7 +27842,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0757",
+    "id": "DBMS-B4-0760",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27436,7 +27877,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0758",
+    "id": "DBMS-B4-0761",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27471,7 +27912,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0759",
+    "id": "DBMS-B4-0762",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27482,7 +27923,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "Diagnose the important properties of transactions to maintain data in the face of concurrent access and system failures.",
+    "question": "Diagnose the important propertics of transactions to maintain data in the face of concurrent access and system failures.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -27506,7 +27947,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0760",
+    "id": "DBMS-B4-0763",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27541,7 +27982,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0761",
+    "id": "DBMS-B4-0764",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27552,7 +27993,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Elaborate the impact of various anomalies due to interleaved execution.",
+    "question": "Llaborate the impact of various anomalies due to interleaved >xecution.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -27576,7 +28017,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0762",
+    "id": "DBMS-B4-0765",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27587,7 +28028,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Outline the implementation of timestamp-based protocols and validation- based protocols.",
+    "question": "Outline the implementation of timestamp-based protocols and validation. based protocols.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -27611,7 +28052,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B4-0763",
+    "id": "DBMS-B4-0766",
     "subjectId": "DBMS",
     "chapter": 4,
     "part": "B",
@@ -27626,7 +28067,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -27634,7 +28075,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -27646,14 +28087,13 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0764",
+    "id": "DBMS-A5-0767",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
     "marks": 2,
     "years": [
-      2026,
-      2025
+      2026
     ],
     "frequency": 3,
     "questionNumber": "Q1.i",
@@ -27694,15 +28134,64 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 2)",
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 2)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 3,
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A5-0768",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "Write a short note on file organizations?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 2,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
         "qno": "1.i",
         "marks": 2,
         "part": "A"
@@ -27710,7 +28199,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0765",
+    "id": "DBMS-A5-0769",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27745,42 +28234,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0766",
-    "subjectId": "DBMS",
-    "chapter": 5,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.i",
-    "topicTag": "Unit 5",
-    "question": "Write a short note on file organizations?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "1.i",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-A5-0767",
+    "id": "DBMS-A5-0770",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27815,7 +28269,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0768",
+    "id": "DBMS-A5-0771",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27826,7 +28280,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
-    "question": "What is hash File Organization?",
+    "question": "What 1s hash File Organization?",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 1,
@@ -27850,7 +28304,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0769",
+    "id": "DBMS-A5-0772",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27885,7 +28339,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0770",
+    "id": "DBMS-A5-0773",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27920,7 +28374,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0771",
+    "id": "DBMS-A5-0774",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27955,7 +28409,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0772",
+    "id": "DBMS-A5-0775",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -27990,7 +28444,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0773",
+    "id": "DBMS-A5-0776",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28025,7 +28479,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0774",
+    "id": "DBMS-A5-0777",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28060,7 +28514,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0775",
+    "id": "DBMS-A5-0778",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28095,7 +28549,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0776",
+    "id": "DBMS-A5-0779",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28130,7 +28584,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0777",
+    "id": "DBMS-A5-0780",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28165,7 +28619,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0778",
+    "id": "DBMS-A5-0781",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28200,7 +28654,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0779",
+    "id": "DBMS-A5-0782",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28235,7 +28689,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0780",
+    "id": "DBMS-A5-0783",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28270,7 +28724,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0781",
+    "id": "DBMS-A5-0784",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28305,7 +28759,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0782",
+    "id": "DBMS-A5-0785",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28340,7 +28794,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0783",
+    "id": "DBMS-A5-0786",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28375,7 +28829,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0784",
+    "id": "DBMS-A5-0787",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28410,7 +28864,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-A5-0785",
+    "id": "DBMS-A5-0788",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28419,9 +28873,9 @@ const QUESTIONS_DATABASE = [
       2025
     ],
     "frequency": 1,
-    "questionNumber": "Q1.j",
+    "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Label the main alternatives for what to store as a data entry inan index.",
+    "question": "Summarize the characteristics of a B+ tree. 1.3) Label the main alternatives for what to store as a data entry inan index.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 1,
@@ -28438,14 +28892,49 @@ const QUESTIONS_DATABASE = [
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
         "page": 1,
-        "qno": "1.j",
+        "qno": "1.i",
         "marks": 2,
         "part": "A"
       }
     ]
   },
   {
-    "id": "DBMS-A5-0786",
+    "id": "DBMS-A5-0789",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "Discuss about data on external storage? 1.}) Define tree indexing?",
+    "paperName": "July 2025.pdf",
+    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+    "pageNumber": 3,
+    "semester": null,
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": null,
+        "label": "Jul 2025 Supplementary (Set 2)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 3,
+        "qno": "1.i",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-A5-0790",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "A",
@@ -28456,11 +28945,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
-    "question": "Define tree indexing?",
+    "question": "}) Define tree indexing?",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 3,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -28468,7 +28957,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -28480,14 +28969,13 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0787",
+    "id": "DBMS-B5-0791",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
     "marks": 5,
     "years": [
-      2026,
-      2025
+      2026
     ],
     "frequency": 2,
     "questionNumber": "Q6.a",
@@ -28514,15 +29002,15 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary (Set 2)",
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Jul 2025 Supplementary (Set 2)",
-        "paperName": "July 2025.pdf",
-        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
-        "page": 4,
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
         "qno": "6.a",
         "marks": 5,
         "part": "B"
@@ -28530,7 +29018,154 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0788",
+    "id": "DBMS-B5-0792",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 5",
+    "question": "Explain the concept of cluster indexes with example",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B5-0793",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q6.c",
+    "topicTag": "Unit 5",
+    "question": "Explain about tree based indexing with an example?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B5-0794",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q6.d",
+    "topicTag": "Unit 5",
+    "question": "Explain in detail about ISAM?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
+        "page": 1,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 26.pdf",
+        "driveFileId": "1YNM_EXXy0pd_nxOigORUbkKHPSMhOpgV",
+        "page": 1,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B5-0795",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28565,7 +29200,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0789",
+    "id": "DBMS-B5-0796",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28600,7 +29235,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0790",
+    "id": "DBMS-B5-0797",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28635,7 +29270,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0791",
+    "id": "DBMS-B5-0798",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28670,112 +29305,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0792",
-    "subjectId": "DBMS",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q6.b",
-    "topicTag": "Unit 5",
-    "question": "Explain the concept of cluster indexes with example",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "6.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B5-0793",
-    "subjectId": "DBMS",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q6.c",
-    "topicTag": "Unit 5",
-    "question": "Explain about tree based indexing with an example?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "6.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B5-0794",
-    "subjectId": "DBMS",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q6.d",
-    "topicTag": "Unit 5",
-    "question": "Explain in detail about ISAM?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1DB24tvmpPD_EzS8XVRGt2659gvH1DHZm",
-        "page": 1,
-        "qno": "6.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DBMS-B5-0795",
+    "id": "DBMS-B5-0799",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28810,7 +29340,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0796",
+    "id": "DBMS-B5-0800",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28821,7 +29351,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
-    "question": "Distinguish between Sparse and Dense Index illustrating with an} example.",
+    "question": "Distinguish hetween Sparse and Dense Index illustrating with an example.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 2,
@@ -28845,7 +29375,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0797",
+    "id": "DBMS-B5-0801",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28856,7 +29386,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "What is transaction? Give an example. Explain ACID properties in DBMS with the help of examples.",
+    "question": "What is transaction? Give an example. Explain ACID propertics in} DBMS with the help of examples.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 2,
@@ -28880,7 +29410,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0798",
+    "id": "DBMS-B5-0802",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28891,7 +29421,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
-    "question": "How does Extendable hashing use a directory of buckets? How does it handle the insert and delete operations?",
+    "question": "How does Extendable hashing use a directory of buckets? How does tt handle the insert and delete operations?",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1dNxi88ENzGvvyrscc7OmuSDkDvz9MFLd",
     "pageNumber": 4,
@@ -28915,7 +29445,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0799",
+    "id": "DBMS-B5-0803",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28950,7 +29480,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0800",
+    "id": "DBMS-B5-0804",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -28985,7 +29515,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0801",
+    "id": "DBMS-B5-0805",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29020,7 +29550,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0802",
+    "id": "DBMS-B5-0806",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29055,7 +29585,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0803",
+    "id": "DBMS-B5-0807",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29090,7 +29620,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0804",
+    "id": "DBMS-B5-0808",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29125,7 +29655,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0805",
+    "id": "DBMS-B5-0809",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29160,7 +29690,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0806",
+    "id": "DBMS-B5-0810",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29195,7 +29725,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0807",
+    "id": "DBMS-B5-0811",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29230,7 +29760,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0808",
+    "id": "DBMS-B5-0812",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29265,7 +29795,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0809",
+    "id": "DBMS-B5-0813",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29300,7 +29830,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0810",
+    "id": "DBMS-B5-0814",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29335,7 +29865,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0811",
+    "id": "DBMS-B5-0815",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29370,7 +29900,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0812",
+    "id": "DBMS-B5-0816",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29405,7 +29935,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0813",
+    "id": "DBMS-B5-0817",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29440,7 +29970,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0814",
+    "id": "DBMS-B5-0818",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29475,7 +30005,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0815",
+    "id": "DBMS-B5-0819",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29510,7 +30040,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0816",
+    "id": "DBMS-B5-0820",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29521,7 +30051,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "List and discuss about various File Organization Techniques with an example.",
+    "question": "List and discuss about various File Organization Techniques with an cxample.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "10nEhmH9e8t7t1deQ5aFxAbsRUr7NM4W_",
     "pageNumber": 2,
@@ -29545,7 +30075,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0817",
+    "id": "DBMS-B5-0821",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29580,7 +30110,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0818",
+    "id": "DBMS-B5-0822",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29615,7 +30145,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0819",
+    "id": "DBMS-B5-0823",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29650,7 +30180,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0820",
+    "id": "DBMS-B5-0824",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29685,7 +30215,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0821",
+    "id": "DBMS-B5-0825",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29720,7 +30250,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0822",
+    "id": "DBMS-B5-0826",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29755,7 +30285,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0823",
+    "id": "DBMS-B5-0827",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29790,7 +30320,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0824",
+    "id": "DBMS-B5-0828",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29825,7 +30355,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0825",
+    "id": "DBMS-B5-0829",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29860,7 +30390,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0826",
+    "id": "DBMS-B5-0830",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29895,7 +30425,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0827",
+    "id": "DBMS-B5-0831",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29930,7 +30460,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0828",
+    "id": "DBMS-B5-0832",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -29965,7 +30495,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0829",
+    "id": "DBMS-B5-0833",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30000,7 +30530,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0830",
+    "id": "DBMS-B5-0834",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30011,7 +30541,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
-    "question": "Label the ISAM index structure and interpret the operations performed on ISAM.",
+    "question": "Label the [ISAM index structure and interpret the operations performed on ISAM.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -30035,7 +30565,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0831",
+    "id": "DBMS-B5-0835",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30046,7 +30576,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "With an appropriate example, discuss the procedure used in Tree- Based indexing.",
+    "question": "With an appropriate cxample, discuss the procedure used in Tree- Based indexing.",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 2,
@@ -30070,7 +30600,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0832",
+    "id": "DBMS-B5-0836",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30105,7 +30635,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0833",
+    "id": "DBMS-B5-0837",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 5",
+    "question": "I'xplain about B+ tree indexing with an example?",
+    "paperName": "July 2025.pdf",
+    "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+    "pageNumber": 4,
+    "semester": null,
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": null,
+        "label": "Jul 2025 Supplementary (Set 2)",
+        "paperName": "July 2025.pdf",
+        "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
+        "page": 4,
+        "qno": "6.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DBMS-B5-0838",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30116,11 +30681,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
-    "question": "Explain about cluster, primary and secondary indexes with example?",
+    "question": "L'xplain about cluster, primary and secondary indexes with example?",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 4,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -30128,7 +30693,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -30140,7 +30705,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0834",
+    "id": "DBMS-B5-0839",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30151,11 +30716,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "Explain about hash based indexing with an example?",
+    "question": "Lixplain about hash based indexing with an example?",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 4,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -30163,7 +30728,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -30175,7 +30740,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DBMS-B5-0835",
+    "id": "DBMS-B5-0840",
     "subjectId": "DBMS",
     "chapter": 5,
     "part": "B",
@@ -30186,11 +30751,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
-    "question": "Explain in detail and ISAM?",
+    "question": "Ixplain in detail and ISAM?",
     "paperName": "July 2025.pdf",
     "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
     "pageNumber": 4,
-    "semester": "IV",
+    "semester": null,
     "examType": "Supplementary",
     "appearances": [
       {
@@ -30198,7 +30763,7 @@ const QUESTIONS_DATABASE = [
         "month": 7,
         "session": "Jul 2025 Supplementary (Set 2)",
         "examType": "Supplementary",
-        "semester": "IV",
+        "semester": null,
         "label": "Jul 2025 Supplementary (Set 2)",
         "paperName": "July 2025.pdf",
         "driveFileId": "1MSy97j_lH-VVK2wMbKTDh7Pq72Z6mIhc",
@@ -30210,71 +30775,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0836",
-    "subjectId": "DM",
-    "chapter": 1,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026,
-      2025
-    ],
-    "frequency": 3,
-    "questionNumber": "Q1.a",
-    "topicTag": "Unit 1",
-    "question": "What are well formed formulas?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.a",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.a",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2025,
-        "month": 1,
-        "session": "Jan 2025 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2025 Supplementary",
-        "paperName": "Dec 2024.pdf",
-        "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
-        "page": 1,
-        "qno": "1.a",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A1-0837",
+    "id": "DM-A1-0841",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30338,7 +30839,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0838",
+    "id": "DM-A1-0842",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30402,18 +30903,19 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0839",
+    "id": "DM-A1-0843",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2026,
+      2025
     ],
     "frequency": 2,
-    "questionNumber": "Q1.b",
+    "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "Define CNF.",
+    "question": "What are well formed formulas?",
     "paperName": "25 supple.pdf",
     "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
     "pageNumber": 1,
@@ -30430,28 +30932,28 @@ const QUESTIONS_DATABASE = [
         "paperName": "25 supple.pdf",
         "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
         "page": 1,
-        "qno": "1.b",
+        "qno": "1.a",
         "marks": 1,
         "part": "A"
       },
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Supplementary",
+        "session": "Jan 2025 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Dec 2024.pdf",
+        "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
         "page": 1,
-        "qno": "1.b",
+        "qno": "1.a",
         "marks": 1,
         "part": "A"
       }
     ]
   },
   {
-    "id": "DM-A1-0840",
+    "id": "DM-A1-0844",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30500,7 +31002,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0841",
+    "id": "DM-A1-0845",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30535,7 +31037,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0842",
+    "id": "DM-A1-0846",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30570,7 +31072,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0843",
+    "id": "DM-A1-0847",
+    "subjectId": "DM",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Define CNF.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A1-0848",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30605,7 +31142,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0844",
+    "id": "DM-A1-0849",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30640,7 +31177,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0845",
+    "id": "DM-A1-0850",
+    "subjectId": "DM",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Test the validity of the following argument: (p ∧ r) → (¬q), (¬q) → r, ∴ (p ∧ r) → r.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A1-0851",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30675,7 +31247,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0846",
+    "id": "DM-A1-0852",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30710,7 +31282,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0847",
+    "id": "DM-A1-0853",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30745,7 +31317,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0848",
+    "id": "DM-A1-0854",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30780,7 +31352,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0849",
+    "id": "DM-A1-0855",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30815,7 +31387,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0850",
+    "id": "DM-A1-0856",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30850,7 +31422,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0851",
+    "id": "DM-A1-0857",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30861,7 +31433,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "Show that -(p V (~p A q)) and =p A ~q are logically equivalent.",
+    "question": "Show that -(p V (~p A q)) and ~p Aq are logically equivalent.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -30885,7 +31457,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0852",
+    "id": "DM-A1-0858",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30896,7 +31468,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
-    "question": "Let P (x) be the statement \"x can speak Russian\" and let Q(x) be the statement \"x knows the computer language C++.\" Express each of these sentences in terms of P (x), Q(x), quantifiers, and logical connectives. The domain for quantifiers consists of all students at your school. (i) There is a student at your school who can speak Russian and who knows C++ (ii) Every student at your school either can speak Russian or knows C++.",
+    "question": "Let P (x) be the statement \"x can speak Russian\" and let Q(x) be the statement \"x knows the computer language C++.\"",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -30920,7 +31492,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0853",
+    "id": "DM-A1-0859",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30955,7 +31527,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0854",
+    "id": "DM-A1-0860",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -30990,7 +31562,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0855",
+    "id": "DM-A1-0861",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31025,7 +31597,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0856",
+    "id": "DM-A1-0862",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31060,7 +31632,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0857",
+    "id": "DM-A1-0863",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31095,7 +31667,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0858",
+    "id": "DM-A1-0864",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31130,7 +31702,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0859",
+    "id": "DM-A1-0865",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31165,7 +31737,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0860",
+    "id": "DM-A1-0866",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31200,7 +31772,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0861",
+    "id": "DM-A1-0867",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31235,7 +31807,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0862",
+    "id": "DM-A1-0868",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31270,7 +31842,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0863",
+    "id": "DM-A1-0869",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31305,7 +31877,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A1-0864",
+    "id": "DM-A1-0870",
     "subjectId": "DM",
     "chapter": 1,
     "part": "A",
@@ -31340,71 +31912,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0865",
-    "subjectId": "DM",
-    "chapter": 1,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026,
-      2025
-    ],
-    "frequency": 3,
-    "questionNumber": "Q2.c",
-    "topicTag": "Unit 1",
-    "question": "Obtain PDNF for (-P - R) A(Q@P).",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "2.c",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "2.c",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "IV",
-        "label": "Jul 2025 Regular/Supplementary",
-        "paperName": "July 2025 reg,supple.pdf",
-        "driveFileId": "1qtQPjZZOVU_hHHuzSpKR-oDPs-O-Ugq2",
-        "page": 1,
-        "qno": "2.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B1-0866",
+    "id": "DM-B1-0871",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31417,7 +31925,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 3,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Show that (p - q) - r and p - (q - rn) are not logically equivalent.",
+    "question": "Show that (p -- q) - r and p - (q - 1) are not logically equivalent.",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -31469,7 +31977,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0867",
+    "id": "DM-B1-0872",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31533,7 +32041,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0868",
+    "id": "DM-B1-0873",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31583,18 +32091,19 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0869",
+    "id": "DM-B1-0874",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2026,
+      2025
     ],
     "frequency": 2,
-    "questionNumber": "Q2.b",
+    "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Prove that 4x M(x) follows logically from the premises (x) (H(x) - M(x)) and 4x H(x).",
+    "question": "Obtain PDNF for (-P→ R) A (QP).",
     "paperName": "25 supple.pdf",
     "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
     "pageNumber": 1,
@@ -31611,77 +32120,28 @@ const QUESTIONS_DATABASE = [
         "paperName": "25 supple.pdf",
         "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
         "page": 1,
-        "qno": "2.b",
+        "qno": "2.c",
         "marks": 5,
         "part": "B"
       },
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
         "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
+        "label": "Jul 2025 Regular/Supplementary",
+        "paperName": "July 2025 reg,supple.pdf",
+        "driveFileId": "1qtQPjZZOVU_hHHuzSpKR-oDPs-O-Ugq2",
         "page": 1,
-        "qno": "2.b",
+        "qno": "2.c",
         "marks": 5,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DM-B1-0870",
-    "subjectId": "DM",
-    "chapter": 1,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q2.d",
-    "topicTag": "Unit 1",
-    "question": "Define Predicate. Discuss about Free and Bound variables with examples.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "2.d",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "2.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B1-0871",
+    "id": "DM-B1-0875",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31731,7 +32191,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0872",
+    "id": "DM-B1-0876",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31781,7 +32241,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0873",
+    "id": "DM-B1-0877",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31831,7 +32291,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0874",
+    "id": "DM-B1-0878",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31881,7 +32341,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0875",
+    "id": "DM-B1-0879",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31931,7 +32391,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0876",
+    "id": "DM-B1-0880",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -31981,7 +32441,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0877",
+    "id": "DM-B1-0881",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32031,7 +32491,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0878",
+    "id": "DM-B1-0882",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32066,7 +32526,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0879",
+    "id": "DM-B1-0883",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32101,7 +32561,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0880",
+    "id": "DM-B1-0884",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32136,7 +32596,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0881",
+    "id": "DM-B1-0885",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32171,7 +32631,77 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0882",
+    "id": "DM-B1-0886",
+    "subjectId": "DM",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Prove that 4x M(x) follows logically from the premises (x) (H(x) - M(x)) and 4x H(x).",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B1-0887",
+    "subjectId": "DM",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Define Predicate. Discuss about Free and Bound variables with examples.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B1-0888",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32206,7 +32736,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0883",
+    "id": "DM-B1-0889",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32241,7 +32771,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0884",
+    "id": "DM-B1-0890",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32276,7 +32806,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0885",
+    "id": "DM-B1-0891",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32311,7 +32841,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0886",
+    "id": "DM-B1-0892",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32346,7 +32876,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0887",
+    "id": "DM-B1-0893",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32381,7 +32911,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0888",
+    "id": "DM-B1-0894",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32392,7 +32922,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Obtain PDNF of the formula (IPV 1Q)-(P< 1Q).",
+    "question": "Obtain PDNF of the formula (IPV 1Q)-(P<",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -32416,7 +32946,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0889",
+    "id": "DM-B1-0895",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32427,7 +32957,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Construct the truth table of the formula (P-Q)((PAQ)VCIPAIR)).",
+    "question": "Construct the truth table of the formula (PCQ)--((PAQ)V(IPATR)).",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -32451,7 +32981,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0890",
+    "id": "DM-B1-0896",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32486,7 +33016,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0891",
+    "id": "DM-B1-0897",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32497,7 +33027,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Obtain principal conjunctive normal form (PCNF) for the formula 5 3 (~p > p).",
+    "question": "Obtain principal conjunctive normal form (PCNF) for the formula (¬p → r) ∧ (q ↔ p).",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -32521,7 +33051,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0892",
+    "id": "DM-B1-0898",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32556,7 +33086,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0893",
+    "id": "DM-B1-0899",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32567,7 +33097,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Using indirect proof, derive P→~S from P→ Qv R, Q→ ~P, S→~R P.",
+    "question": "Using indirect proof, derive P → ¬S from P → Q ∨ R, Q → ¬P, S → ¬R, P.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -32591,7 +33121,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0894",
+    "id": "DM-B1-0900",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32602,7 +33132,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Show that (Q^ (P→Q)) →¬P is a tautology.",
+    "question": "Show that ((¬Q ∧ (P → Q)) → ¬P is a tautology.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -32626,7 +33156,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0895",
+    "id": "DM-B1-0901",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32661,7 +33191,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0896",
+    "id": "DM-B1-0902",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32696,7 +33226,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0897",
+    "id": "DM-B1-0903",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32707,7 +33237,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Test that whether the given set of formulas are inconsistent + E-~S,S-H,A- 7H, EAA.",
+    "question": "Test that whether the given set of formulas are inconsistent E->S,S-~H,A- 7\"H,EAA.",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1Zg2qr9vFuW3e9bhSvs0Beh8VyX_RcbkM",
     "pageNumber": 1,
@@ -32731,7 +33261,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0898",
+    "id": "DM-B1-0904",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32766,7 +33296,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0899",
+    "id": "DM-B1-0905",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32801,7 +33331,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0900",
+    "id": "DM-B1-0906",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32812,7 +33342,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Construct a truth table for each of these compound proposition (Pog OCpe yn.",
+    "question": "Construct a truth table for each of these compound proposition (peo qgyOC ps?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -32836,7 +33366,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0901",
+    "id": "DM-B1-0907",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32871,7 +33401,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0902",
+    "id": "DM-B1-0908",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32882,7 +33412,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Show that the premises (P A Q) V R and R - S imply the} conclusion (P V S).",
+    "question": "Show that the premises (P A Q) V R and R - S imply the conclusion (P V S).",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -32906,7 +33436,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0903",
+    "id": "DM-B1-0909",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32941,7 +33471,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0904",
+    "id": "DM-B1-0910",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -32976,7 +33506,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0905",
+    "id": "DM-B1-0911",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33011,7 +33541,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0906",
+    "id": "DM-B1-0912",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33046,7 +33576,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0907",
+    "id": "DM-B1-0913",
+    "subjectId": "DM",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Prove that (∀x)(P(x) ∨ Q(x)) ⇒ (∀x)P(x) ∨ (∃x)Q(x).",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1j7aIm-H0xsOdPrGDQdWyvGQzqMygu8QJ",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1j7aIm-H0xsOdPrGDQdWyvGQzqMygu8QJ",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B1-0914",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33081,7 +33646,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0908",
+    "id": "DM-B1-0915",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33116,42 +33681,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0909",
-    "subjectId": "DM",
-    "chapter": 1,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q2.a",
-    "topicTag": "Unit 1",
-    "question": "Show that (P V Q) A= (-P A (~ QV -=R))) V (FP A -Q) V CP A- SS R) is a tautology.",
-    "paperName": "January sup 26.pdf",
-    "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "2.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B1-0910",
+    "id": "DM-B1-0916",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33186,7 +33716,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0911",
+    "id": "DM-B1-0917",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33197,7 +33727,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Obtain PDNF of (QP) A (IP A Q).",
+    "question": "Obtain PDNF of (Q-P) A CIP A Q).",
     "paperName": "July 25.pdf",
     "driveFileId": "1dLQsJROeEGXyyuEIZBbbY5MHqyW72j8f",
     "pageNumber": 1,
@@ -33221,7 +33751,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0912",
+    "id": "DM-B1-0918",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33256,7 +33786,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0913",
+    "id": "DM-B1-0919",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33291,7 +33821,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0914",
+    "id": "DM-B1-0920",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33326,7 +33856,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0915",
+    "id": "DM-B1-0921",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33361,7 +33891,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0916",
+    "id": "DM-B1-0922",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33396,7 +33926,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0917",
+    "id": "DM-B1-0923",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33431,7 +33961,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0918",
+    "id": "DM-B1-0924",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33466,7 +33996,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0919",
+    "id": "DM-B1-0925",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33501,7 +34031,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0920",
+    "id": "DM-B1-0926",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33536,7 +34066,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0921",
+    "id": "DM-B1-0927",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33571,7 +34101,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0922",
+    "id": "DM-B1-0928",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33606,7 +34136,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B1-0923",
+    "id": "DM-B1-0929",
     "subjectId": "DM",
     "chapter": 1,
     "part": "B",
@@ -33617,7 +34147,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Using the truth table, show that the proposition PVI(PAQ) is a] 5 ps tautology.",
+    "question": "Using the truth table, show that the proposition PVI(PAQ) is a} tautology.",
     "paperName": "Supple July 2025.pdf",
     "driveFileId": "18k9VUVZGVITQMSwFLAsEJF_T3Wa9RmeH",
     "pageNumber": 1,
@@ -33641,7 +34171,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0924",
+    "id": "DM-A2-0930",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33650,7 +34180,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2025
     ],
-    "frequency": 3,
+    "frequency": 2,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Give an example of a Bijective function.",
@@ -33675,20 +34205,6 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.d",
-        "marks": 1,
-        "part": "A"
-      },
-      {
         "year": 2025,
         "month": 7,
         "session": "Jul 2025 Regular/Supplementary",
@@ -33705,56 +34221,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0925",
-    "subjectId": "DM",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.c",
-    "topicTag": "Unit 2",
-    "question": "What is the difference between a subset and a proper subset?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.c",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.c",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A2-0926",
+    "id": "DM-A2-0931",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33804,7 +34271,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0927",
+    "id": "DM-A2-0932",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33839,7 +34306,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0928",
+    "id": "DM-A2-0933",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33874,7 +34341,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0929",
+    "id": "DM-A2-0934",
+    "subjectId": "DM",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "What is the difference between a subset and a proper subset?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A2-0935",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33909,7 +34411,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0930",
+    "id": "DM-A2-0936",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33944,7 +34446,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0931",
+    "id": "DM-A2-0937",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -33979,7 +34481,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0932",
+    "id": "DM-A2-0938",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34014,7 +34516,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0933",
+    "id": "DM-A2-0939",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34049,7 +34551,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0934",
+    "id": "DM-A2-0940",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34084,7 +34586,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0935",
+    "id": "DM-A2-0941",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34119,7 +34621,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0936",
+    "id": "DM-A2-0942",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34154,7 +34656,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0937",
+    "id": "DM-A2-0943",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34189,7 +34691,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0938",
+    "id": "DM-A2-0944",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34200,7 +34702,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
-    "question": "Let X ={1,2,3,4,5,6} and R be a relation defined (x,y) xRy c ifand 2 3 as only if x -y is divisible by 3. Find the elements of relation of R.",
+    "question": "Let X = {1,2,3,4,5,6} and R be a relation defined as (x, y) ∈ R if and only if x − y is divisible by 3. Find the elements of relation R.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -34224,7 +34726,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0939",
+    "id": "DM-A2-0945",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34259,7 +34761,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0940",
+    "id": "DM-A2-0946",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34294,7 +34796,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0941",
+    "id": "DM-A2-0947",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34329,7 +34831,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0942",
+    "id": "DM-A2-0948",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34364,7 +34866,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0943",
+    "id": "DM-A2-0949",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34399,7 +34901,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0944",
+    "id": "DM-A2-0950",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34410,7 +34912,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
-    "question": "Show that the matrix A is equal (A' )\"",
+    "question": "Show that the matrix A is cqual (Al yb 2?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -34434,7 +34936,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0945",
+    "id": "DM-A2-0951",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34469,7 +34971,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0946",
+    "id": "DM-A2-0952",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34504,7 +35006,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0947",
+    "id": "DM-A2-0953",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34539,7 +35041,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0948",
+    "id": "DM-A2-0954",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34574,7 +35076,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0949",
+    "id": "DM-A2-0955",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34609,7 +35111,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0950",
+    "id": "DM-A2-0956",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34644,7 +35146,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0951",
+    "id": "DM-A2-0957",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34679,7 +35181,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0952",
+    "id": "DM-A2-0958",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34714,7 +35216,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0953",
+    "id": "DM-A2-0959",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34749,7 +35251,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0954",
+    "id": "DM-A2-0960",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34784,7 +35286,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0955",
+    "id": "DM-A2-0961",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34819,7 +35321,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0956",
+    "id": "DM-A2-0962",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34854,7 +35356,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A2-0957",
+    "id": "DM-A2-0963",
     "subjectId": "DM",
     "chapter": 2,
     "part": "A",
@@ -34889,7 +35391,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0958",
+    "id": "DM-B2-0964",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -34953,7 +35455,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0959",
+    "id": "DM-B2-0965",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35003,154 +35505,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0960",
-    "subjectId": "DM",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q3.a",
-    "topicTag": "Unit 2",
-    "question": "Let A= {1,2,3,4}, B= {3,4,5,6}, C= {1,3,5} 5 2 Zz 2 Find: a) AUB, b) ANB, c)(AUB)NC, d)(AUBUC), e) (ANBNMC).",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "3.a",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "3.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B2-0961",
-    "subjectId": "DM",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q3.b",
-    "topicTag": "Unit 2",
-    "question": "Define Binary operation. Discuss some general properties of Binary operations.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B2-0962",
-    "subjectId": "DM",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q3.c",
-    "topicTag": "Unit 2",
-    "question": "Draw Hasse diagram for [112, ].",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "3.c",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "3.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B2-0963",
+    "id": "DM-B2-0966",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35199,7 +35554,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0964",
+    "id": "DM-B2-0967",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35249,7 +35604,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0965",
+    "id": "DM-B2-0968",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35299,7 +35654,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0966",
+    "id": "DM-B2-0969",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35334,7 +35689,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0967",
+    "id": "DM-B2-0970",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35369,7 +35724,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0968",
+    "id": "DM-B2-0971",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35404,7 +35759,112 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0969",
+    "id": "DM-B2-0972",
+    "subjectId": "DM",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Let A= {1,2,3,4}, B= {3,4,5,6}, C= {1,3,5} Find: a) AUB, b) ANB, c)(AUB)NC, d)(AUBUC), e) (ANBNC).",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B2-0973",
+    "subjectId": "DM",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Define Binary operation. Discuss some general properties of Binary operations.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B2-0974",
+    "subjectId": "DM",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Draw Hasse diagram for [112, ].",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B2-0975",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35439,7 +35899,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0970",
+    "id": "DM-B2-0976",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35474,7 +35934,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0971",
+    "id": "DM-B2-0977",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35509,7 +35969,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0972",
+    "id": "DM-B2-0978",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35544,7 +36004,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0973",
+    "id": "DM-B2-0979",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35579,7 +36039,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0974",
+    "id": "DM-B2-0980",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35614,7 +36074,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0975",
+    "id": "DM-B2-0981",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35649,7 +36109,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0976",
+    "id": "DM-B2-0982",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35684,7 +36144,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0977",
+    "id": "DM-B2-0983",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35719,7 +36179,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0978",
+    "id": "DM-B2-0984",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35754,7 +36214,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0979",
+    "id": "DM-B2-0985",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35789,7 +36249,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0980",
+    "id": "DM-B2-0986",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35800,7 +36260,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
-    "question": "Let f: R-R and g: RR, where R is the set of real numbers. Find fog and gof where tix -2 and g(x)=x+4.State whether these functions are bijective.",
+    "question": "Let f: R-R and g: R-R, where R is the set of real numbers. Find fog and gof where f(x)=x?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -35824,7 +36284,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0981",
+    "id": "DM-B2-0987",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35859,7 +36319,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0982",
+    "id": "DM-B2-0988",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35870,7 +36330,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Let X={1,2,3,4} and R={(1,1),(1,4),(4,1),(4,4),(2,2),(2,3),(3,2),(3,3)} check whether the relation is an equivalence relation, Write the matrix of R and sketch its graph.",
+    "question": "Let X={1,2,3,4} and R={(1,1),1,4),(4,1),(4,4),(2,2),(2,3),(3,2),(3,3)} check whether the relation is an equivalence relation, Write the matrix of R and sketch its graph.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -35894,7 +36354,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0983",
+    "id": "DM-B2-0989",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35929,7 +36389,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0984",
+    "id": "DM-B2-0990",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35964,7 +36424,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0985",
+    "id": "DM-B2-0991",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -35999,7 +36459,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0986",
+    "id": "DM-B2-0992",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36010,7 +36470,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "f:R→ R is defined by f(x) = ax+ b, for a, b ER and a 0. Show that ƒ is invertible and find the inverse of f.",
+    "question": "f: R → R is defined by f(x) = ax + b, for a, b ∈ R and a ≠ 0. Show that f is invertible and find the inverse of f.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -36034,7 +36494,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0987",
+    "id": "DM-B2-0993",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36045,7 +36505,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
-    "question": "Draw the Hasse diagram for the partial ordering {(A,B):A<B} on the power set e(S) where S={a,b,c} and ≤ is subset relation.",
+    "question": "Draw the Hasse diagram for the partial ordering {(A,B): A ⊆ B} on the power set P(S) where S = {a,b,c} and ⊆ is the subset relation.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 1,
@@ -36069,7 +36529,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0988",
+    "id": "DM-B2-0994",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36104,7 +36564,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0989",
+    "id": "DM-B2-0995",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36139,7 +36599,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0990",
+    "id": "DM-B2-0996",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36150,7 +36610,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Let A={1, 2, 3, 4, 6}, and let R be the relation on A defined by \"x divides y'\", written x y. (Note: xly iff there exists an integer z such that XZ =y) i) Write R as a set of ordered pairs. ii) Draw the digraph of R. iii)Draw the Hasse diagram of the relation",
+    "question": "Let A={1, 2, 3, 4, 6}, and let R be the relation on A defined by \"x divides y\", written xly. (Note: xly iff there exists an integer z such that XZ = y) i) Write R as a set of ordered pairs. ii) Draw the digraph of R. iii) Draw the Hasse diagram of the relation",
     "paperName": "jan 2024 reg.pdf",
     "driveFileId": "1gwQN-U6r7sXl3j5Umxz1y9BUnTF36m9s",
     "pageNumber": 1,
@@ -36174,7 +36634,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0991",
+    "id": "DM-B2-0997",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36209,7 +36669,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0992",
+    "id": "DM-B2-0998",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36244,7 +36704,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0993",
+    "id": "DM-B2-0999",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36279,7 +36739,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0994",
+    "id": "DM-B2-1000",
+    "subjectId": "DM",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Find the Boolean product of A and B, where Sob) Define and produce the Cartesian product A BY © where A= f0, 1k, B= {1,2}, and C= (0, 1, 22 3.) Show that the \"divides\" relation ts the set of positive integers In not an equivalence relation, 3.) Draw the Hlasse diagram representing, the partial ordering, (Ca, byfa divides Db} on fi, %,5,4,0, 6, 174",
+    "paperName": "Jan 2025.pdf",
+    "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025.pdf",
+        "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B2-1001",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36290,7 +36785,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "Define and produce the Cartesian product A x B x C, where} A= {0, 1}, B= {1, 2}, and C = {0, 1, 2}?",
+    "question": "Define and produce the Cartesian product A x B x C, where A= {0, 1}, B= {1, 2}, and C {0, 1, 2}?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -36314,7 +36809,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0995",
+    "id": "DM-B2-1002",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36349,7 +36844,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0996",
+    "id": "DM-B2-1003",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36384,7 +36879,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0997",
+    "id": "DM-B2-1004",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36419,7 +36914,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0998",
+    "id": "DM-B2-1005",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36454,7 +36949,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-0999",
+    "id": "DM-B2-1006",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36489,7 +36984,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1000",
+    "id": "DM-B2-1007",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36524,7 +37019,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1001",
+    "id": "DM-B2-1008",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36559,7 +37054,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1002",
+    "id": "DM-B2-1009",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36594,7 +37089,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1003",
+    "id": "DM-B2-1010",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36629,42 +37124,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1004",
-    "subjectId": "DM",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.d",
-    "topicTag": "Unit 2",
-    "question": "State and explain about any four frequently used Primitive Recursive Functions. 4,.a) Discuss about Homomorphism of Semigroups and Monoids.",
-    "paperName": "January sup 26.pdf",
-    "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "3.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B2-1005",
+    "id": "DM-B2-1011",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36699,7 +37159,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1006",
+    "id": "DM-B2-1012",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36734,7 +37194,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1007",
+    "id": "DM-B2-1013",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36769,7 +37229,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1008",
+    "id": "DM-B2-1014",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36804,7 +37264,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1009",
+    "id": "DM-B2-1015",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36839,7 +37299,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1010",
+    "id": "DM-B2-1016",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36874,7 +37334,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1011",
+    "id": "DM-B2-1017",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36909,7 +37369,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1012",
+    "id": "DM-B2-1018",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36944,7 +37404,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1013",
+    "id": "DM-B2-1019",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -36979,7 +37439,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1014",
+    "id": "DM-B2-1020",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37014,7 +37474,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1015",
+    "id": "DM-B2-1021",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37049,7 +37509,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1016",
+    "id": "DM-B2-1022",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37084,7 +37544,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1017",
+    "id": "DM-B2-1023",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37119,7 +37579,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1018",
+    "id": "DM-B2-1024",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37154,7 +37614,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1019",
+    "id": "DM-B2-1025",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37189,7 +37649,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1020",
+    "id": "DM-B2-1026",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37224,7 +37684,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B2-1021",
+    "id": "DM-B2-1027",
     "subjectId": "DM",
     "chapter": 2,
     "part": "B",
@@ -37259,105 +37719,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1022",
+    "id": "DM-B2-1028",
     "subjectId": "DM",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
     "years": [
-      2026
+      2025
     ],
-    "frequency": 2,
-    "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
-    "question": "Define Algebraic system.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Given & F123, 4), RB foc yV xo yt, Draw the eraph of R and give s 4 ) its matrix. Also staic the properlics satishied by tf, 4 a) By using mathematical induction prove that the given cquation is truc 5? for all BOGTEVE Hepors POPP a C/G) faa PCat EY for alba N.",
+    "paperName": "Supple July 2025.pdf",
+    "driveFileId": "18k9VUVZGVITQMSwFLAsEJF_T3Wa9RmeH",
     "pageNumber": 1,
     "semester": "IV",
     "examType": "Supplementary",
     "appearances": [
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
         "examType": "Supplementary",
         "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple July 2025.pdf",
+        "driveFileId": "18k9VUVZGVITQMSwFLAsEJF_T3Wa9RmeH",
         "page": 1,
-        "qno": "1.e",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.e",
-        "marks": 1,
-        "part": "A"
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
       }
     ]
   },
   {
-    "id": "DM-A3-1023",
-    "subjectId": "DM",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
-    "question": "How do we denote Boolean algebra?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.f",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.f",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A3-1024",
+    "id": "DM-A3-1029",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37407,7 +37804,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1025",
+    "id": "DM-A3-1030",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37457,7 +37854,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1026",
+    "id": "DM-A3-1031",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37507,7 +37904,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1027",
+    "id": "DM-A3-1032",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37542,7 +37939,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1028",
+    "id": "DM-A3-1033",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37577,7 +37974,77 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1029",
+    "id": "DM-A3-1034",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.e",
+    "topicTag": "Unit 3",
+    "question": "Define Algebraic system.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A3-1035",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.f",
+    "topicTag": "Unit 3",
+    "question": "How do we denote Boolean algebra?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A3-1036",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37612,7 +38079,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1030",
+    "id": "DM-A3-1037",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37647,7 +38114,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1031",
+    "id": "DM-A3-1038",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37682,7 +38149,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1032",
+    "id": "DM-A3-1039",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37717,7 +38184,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1033",
+    "id": "DM-A3-1040",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37752,7 +38219,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1034",
+    "id": "DM-A3-1041",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37787,7 +38254,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1035",
+    "id": "DM-A3-1042",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37798,7 +38265,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Find LUB and GLB for the subset {{a,b},{a},{b}} of power set of A.",
+    "question": "Find LUB and GLB for the subset {a,b}, {a},{b}} of power set of A.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -37822,7 +38289,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1036",
+    "id": "DM-A3-1043",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37857,7 +38324,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1037",
+    "id": "DM-A3-1044",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37892,7 +38359,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1038",
+    "id": "DM-A3-1045",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37927,7 +38394,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1039",
+    "id": "DM-A3-1046",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37962,7 +38429,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1040",
+    "id": "DM-A3-1047",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -37997,7 +38464,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1041",
+    "id": "DM-A3-1048",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38008,7 +38475,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "How many ways are there to select five players from a10-member tennis team to make a trip to a match at another school?",
+    "question": "How many ways are there to select five players from a 10-member",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -38032,7 +38499,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1042",
+    "id": "DM-A3-1049",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38067,7 +38534,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1043",
+    "id": "DM-A3-1050",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38102,7 +38569,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1044",
+    "id": "DM-A3-1051",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38137,7 +38604,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1045",
+    "id": "DM-A3-1052",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38172,7 +38639,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1046",
+    "id": "DM-A3-1053",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38207,7 +38674,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1047",
+    "id": "DM-A3-1054",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.e",
+    "topicTag": "Unit 3",
+    "question": "What is the co-efficient of xy in (x+y)^5?",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1PFdxJYI9JSpTd5DVmogy-RqXHnBfzc6o",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1PFdxJYI9JSpTd5DVmogy-RqXHnBfzc6o",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A3-1055",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38242,7 +38744,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1048",
+    "id": "DM-A3-1056",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38277,7 +38779,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1049",
+    "id": "DM-A3-1057",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38312,7 +38814,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1050",
+    "id": "DM-A3-1058",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38347,7 +38849,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1051",
+    "id": "DM-A3-1059",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38382,7 +38884,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1052",
+    "id": "DM-A3-1060",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38417,7 +38919,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A3-1053",
+    "id": "DM-A3-1061",
     "subjectId": "DM",
     "chapter": 3,
     "part": "A",
@@ -38452,7 +38954,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1054",
+    "id": "DM-B3-1062",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38502,105 +39004,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1055",
-    "subjectId": "DM",
-    "chapter": 3,
-    "part": "B",
-    "marks": 10,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "Give an example of an algebraic system that is associative but not} commutative. Prove both properties using examples.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "4.c",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "4.c",
-        "marks": 10,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B3-1056",
-    "subjectId": "DM",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
-    "question": "Describe the concepts Subalgebra and Direct Product.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "4.d",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "4.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B3-1057",
+    "id": "DM-B3-1063",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38650,7 +39054,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1058",
+    "id": "DM-B3-1064",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38700,7 +39104,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1059",
+    "id": "DM-B3-1065",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38750,7 +39154,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1060",
+    "id": "DM-B3-1066",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38800,7 +39204,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1061",
+    "id": "DM-B3-1067",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38835,7 +39239,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1062",
+    "id": "DM-B3-1068",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38870,7 +39274,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1063",
+    "id": "DM-B3-1069",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38905,7 +39309,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1064",
+    "id": "DM-B3-1070",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38940,7 +39344,77 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1065",
+    "id": "DM-B3-1071",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.c",
+    "topicTag": "Unit 3",
+    "question": "Give an example of an algebraic system that is associative but not commutative. Prove both properties using examples.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B3-1072",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.d",
+    "topicTag": "Unit 3",
+    "question": "Describe the concepts Subalgebra and Direct Product.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B3-1073",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -38951,7 +39425,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Find the coefficient of x*y z' in (2x-3y+5z)®.",
+    "question": "Find the coefficient of x y'z?",
     "paperName": "Aug 2023 regular.pdf",
     "driveFileId": "1jn3_1u5G2kK-k2G5j_2evvDa9JV8poqV",
     "pageNumber": 1,
@@ -38975,7 +39449,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1066",
+    "id": "DM-B3-1074",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39010,7 +39484,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1067",
+    "id": "DM-B3-1075",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39045,7 +39519,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1068",
+    "id": "DM-B3-1076",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39080,7 +39554,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1069",
+    "id": "DM-B3-1077",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39115,7 +39589,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1070",
+    "id": "DM-B3-1078",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39150,7 +39624,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1071",
+    "id": "DM-B3-1079",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39185,7 +39659,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1072",
+    "id": "DM-B3-1080",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39220,7 +39694,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1073",
+    "id": "DM-B3-1081",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39255,7 +39729,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1074",
+    "id": "DM-B3-1082",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39290,7 +39764,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1075",
+    "id": "DM-B3-1083",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39301,7 +39775,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Explain about the following. i) Semi group ii) Sub monoid iii) Homomorphism.",
+    "question": "Explain about the following. i) Semi group ii) Sub monoid tii) Homomorphism.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -39325,7 +39799,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1076",
+    "id": "DM-B3-1084",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39336,7 +39810,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Let S=NxN Let * be the operation on S defined by (a, b) * (c,d) =] (ac, bd).show that S is a semigroup under *.",
+    "question": "Let S=NxN Let * be the operation on S defined by (a, b) * (ac, bd).show that S is a semigroup under *.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -39360,7 +39834,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1077",
+    "id": "DM-B3-1085",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39395,7 +39869,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1078",
+    "id": "DM-B3-1086",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39406,7 +39880,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "In a lattice (L,<A,V)state and prove the laws idempotent, commutative, associative and absorption.",
+    "question": "In a lattice (L,<,A,V)state and prove the laws idempotent, commutative, associative and absorption.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 1,
@@ -39430,7 +39904,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1079",
+    "id": "DM-B3-1087",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39465,7 +39939,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1080",
+    "id": "DM-B3-1088",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39500,7 +39974,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1081",
+    "id": "DM-B3-1089",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39535,7 +40009,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1082",
+    "id": "DM-B3-1090",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39570,7 +40044,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1083",
+    "id": "DM-B3-1091",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39605,7 +40079,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1084",
+    "id": "DM-B3-1092",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39640,7 +40114,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1085",
+    "id": "DM-B3-1093",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39675,42 +40149,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1086",
-    "subjectId": "DM",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "Give a recursion definition of the sequence {an}, n = 1,2,3,.",
-    "paperName": "Jan 2024 supp.pdf",
-    "driveFileId": "1Zg2qr9vFuW3e9bhSvs0Beh8VyX_RcbkM",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Supplementary",
-        "examType": "Supplementary",
-        "semester": "III",
-        "label": "Feb 2024 Supplementary",
-        "paperName": "Jan 2024 supp.pdf",
-        "driveFileId": "1Zg2qr9vFuW3e9bhSvs0Beh8VyX_RcbkM",
-        "page": 1,
-        "qno": "4.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B3-1087",
+    "id": "DM-B3-1094",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39745,7 +40184,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1088",
+    "id": "DM-B3-1095",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39780,7 +40219,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1089",
+    "id": "DM-B3-1096",
+    "subjectId": "DM",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 3",
+    "question": "Show that if n is a positive integer, then",
+    "paperName": "Jan 2025.pdf",
+    "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025.pdf",
+        "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
+        "page": 2,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B3-1097",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39815,7 +40289,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1090",
+    "id": "DM-B3-1098",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39850,7 +40324,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1091",
+    "id": "DM-B3-1099",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39861,7 +40335,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "How many solutions does the equation x; + x 2 + x3 = 11 have, where x), X 2 and x3 are non-negative integers?",
+    "question": "How many solutions does the equation x} + x + x3 = Il have, where X, X 2 and x; are non-negative integers?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 2,
@@ -39885,7 +40359,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1092",
+    "id": "DM-B3-1100",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39920,7 +40394,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1093",
+    "id": "DM-B3-1101",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39955,7 +40429,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1094",
+    "id": "DM-B3-1102",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -39990,7 +40464,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1095",
+    "id": "DM-B3-1103",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40025,7 +40499,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1096",
+    "id": "DM-B3-1104",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40060,7 +40534,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1097",
+    "id": "DM-B3-1105",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40095,7 +40569,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1098",
+    "id": "DM-B3-1106",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40130,7 +40604,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1099",
+    "id": "DM-B3-1107",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40165,7 +40639,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1100",
+    "id": "DM-B3-1108",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40200,7 +40674,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1101",
+    "id": "DM-B3-1109",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40235,7 +40709,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1102",
+    "id": "DM-B3-1110",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40270,7 +40744,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1103",
+    "id": "DM-B3-1111",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40305,7 +40779,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1104",
+    "id": "DM-B3-1112",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40340,7 +40814,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1105",
+    "id": "DM-B3-1113",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40375,7 +40849,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1106",
+    "id": "DM-B3-1114",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40410,7 +40884,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1107",
+    "id": "DM-B3-1115",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40445,7 +40919,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1108",
+    "id": "DM-B3-1116",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40480,7 +40954,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1109",
+    "id": "DM-B3-1117",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40515,7 +40989,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1110",
+    "id": "DM-B3-1118",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40550,7 +41024,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1111",
+    "id": "DM-B3-1119",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40585,7 +41059,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1112",
+    "id": "DM-B3-1120",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40620,7 +41094,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1113",
+    "id": "DM-B3-1121",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40655,7 +41129,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1114",
+    "id": "DM-B3-1122",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40690,7 +41164,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1115",
+    "id": "DM-B3-1123",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40725,7 +41199,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1116",
+    "id": "DM-B3-1124",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40760,7 +41234,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B3-1117",
+    "id": "DM-B3-1125",
     "subjectId": "DM",
     "chapter": 3,
     "part": "B",
@@ -40795,105 +41269,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1118",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.g",
-    "topicTag": "Unit 4",
-    "question": "Define permutation.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.g",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.g",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A4-1119",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.h",
-    "topicTag": "Unit 4",
-    "question": "How many 10 digit numbers are there with exactly six 1's?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.h",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.h",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A4-1120",
+    "id": "DM-A4-1126",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -40943,7 +41319,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1121",
+    "id": "DM-A4-1127",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -40993,7 +41369,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1122",
+    "id": "DM-A4-1128",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41043,7 +41419,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1123",
+    "id": "DM-A4-1129",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41093,7 +41469,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1124",
+    "id": "DM-A4-1130",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41128,7 +41504,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1125",
+    "id": "DM-A4-1131",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41163,7 +41539,77 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1126",
+    "id": "DM-A4-1132",
+    "subjectId": "DM",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.g",
+    "topicTag": "Unit 4",
+    "question": "Define permutation.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A4-1133",
+    "subjectId": "DM",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.h",
+    "topicTag": "Unit 4",
+    "question": "How many 10 digit numbers are there with exactly six 1's?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.h",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A4-1134",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41198,7 +41644,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1127",
+    "id": "DM-A4-1135",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41233,7 +41679,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1128",
+    "id": "DM-A4-1136",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41268,7 +41714,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1129",
+    "id": "DM-A4-1137",
+    "subjectId": "DM",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.g",
+    "topicTag": "Unit 4",
+    "question": "Use the multinomial theorem to expand (x +xatx3tx4)\".",
+    "paperName": "Dec 2024.pdf",
+    "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Dec 2024.pdf",
+        "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A4-1138",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41303,7 +41784,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1130",
+    "id": "DM-A4-1139",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41338,7 +41819,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1131",
+    "id": "DM-A4-1140",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41373,7 +41854,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1132",
+    "id": "DM-A4-1141",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41408,7 +41889,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1133",
+    "id": "DM-A4-1142",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41443,7 +41924,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1134",
+    "id": "DM-A4-1143",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41478,7 +41959,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1135",
+    "id": "DM-A4-1144",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41489,7 +41970,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "What is the generating function for the sequence 1, 1, 1, 1, 1, 1?",
+    "question": "What is the generating function for the sequence I, 1, 1, 1, 1, 1?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -41513,7 +41994,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1136",
+    "id": "DM-A4-1145",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41548,7 +42029,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1137",
+    "id": "DM-A4-1146",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41583,7 +42064,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1138",
+    "id": "DM-A4-1147",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41618,7 +42099,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1139",
+    "id": "DM-A4-1148",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41653,7 +42134,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1140",
+    "id": "DM-A4-1149",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41688,7 +42169,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1141",
+    "id": "DM-A4-1150",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41723,7 +42204,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1142",
+    "id": "DM-A4-1151",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41758,7 +42239,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1143",
+    "id": "DM-A4-1152",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41793,7 +42274,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1144",
+    "id": "DM-A4-1153",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41828,7 +42309,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1145",
+    "id": "DM-A4-1154",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41863,7 +42344,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1146",
+    "id": "DM-A4-1155",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41898,7 +42379,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A4-1147",
+    "id": "DM-A4-1156",
     "subjectId": "DM",
     "chapter": 4,
     "part": "A",
@@ -41933,7 +42414,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1148",
+    "id": "DM-B4-1157",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -41982,18 +42463,19 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1149",
+    "id": "DM-B4-1158",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2026,
+      2024
     ],
     "frequency": 2,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "What is the coefficient of x y' in (x + y)' and in (2x - 9y)'\"?",
+    "question": "What is the coefficient of x³y⁷ in (x + y)^10 and in (2x − 9y)^10?",
     "paperName": "25 supple.pdf",
     "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
     "pageNumber": 2,
@@ -42015,72 +42497,23 @@ const QUESTIONS_DATABASE = [
         "part": "B"
       },
       {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "jan 2024 reg.pdf",
+        "driveFileId": "1gwQN-U6r7sXl3j5Umxz1y9BUnTF36m9s",
         "page": 2,
-        "qno": "5.b",
+        "qno": "5.c",
         "marks": 5,
         "part": "B"
       }
     ]
   },
   {
-    "id": "DM-B4-1150",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q5.d",
-    "topicTag": "Unit 4",
-    "question": "In a survey of 800 voters, the following information was found: 300 were college educated, 260 were from high-income families, 325 were registered Democrats, 184 were college educated and from high- income families, 155 were college educated and registered Democrats, 165 were from high-income families and were registered Democrats, 94 were college educated, from high-income families, and were registered Democrats.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 2,
-        "qno": "5.d",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "5.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B4-1151",
+    "id": "DM-B4-1159",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42130,7 +42563,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1152",
+    "id": "DM-B4-1160",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42180,7 +42613,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1153",
+    "id": "DM-B4-1161",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42230,7 +42663,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1154",
+    "id": "DM-B4-1162",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42280,7 +42713,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1155",
+    "id": "DM-B4-1163",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42330,7 +42763,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1156",
+    "id": "DM-B4-1164",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42379,7 +42812,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1157",
+    "id": "DM-B4-1165",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42414,7 +42847,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1158",
+    "id": "DM-B4-1166",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42449,7 +42882,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1159",
+    "id": "DM-B4-1167",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42484,7 +42917,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1160",
+    "id": "DM-B4-1168",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42519,7 +42952,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1161",
+    "id": "DM-B4-1169",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42554,7 +42987,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1162",
+    "id": "DM-B4-1170",
+    "subjectId": "DM",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.d",
+    "topicTag": "Unit 4",
+    "question": "In a survey of 800 voters, the following information was found: 300 were college educated, 260 were from high-income families, 325 were registered Democrats, 184 were college educated and from high- income families, 155 were college educated and registered Democrats, 165 were from high-income families and were registered Democrats, 94 were college educated, from high-income families, and were registered Democrats.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 2,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B4-1171",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42589,7 +43057,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1163",
+    "id": "DM-B4-1172",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42624,7 +43092,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1164",
+    "id": "DM-B4-1173",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42659,7 +43127,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1165",
+    "id": "DM-B4-1174",
+    "subjectId": "DM",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 4",
+    "question": "Find the coefficient of x^2005 in the generating function 1/(1 + 5x)^2.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
+        "page": 1,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B4-1175",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42694,7 +43197,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1166",
+    "id": "DM-B4-1176",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42729,7 +43232,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1167",
+    "id": "DM-B4-1177",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42764,7 +43267,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1168",
+    "id": "DM-B4-1178",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42799,7 +43302,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1169",
+    "id": "DM-B4-1179",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42810,7 +43313,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "In how many ways can 14 people be partitioned into 6 teams when 5 3 the first and second teams have 3 members each and the third, fourth, fifth, and sixth teams have 2 members each?",
+    "question": "In how many ways can 14 people be partitioned into 6 teams when the first and second teams have 3 members each and the third, fourth, fifth, and sixth teams have 2 members each?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1y2gjlWNfQOry7RPELbseHAciEHkqRYZO",
     "pageNumber": 2,
@@ -42834,7 +43337,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1170",
+    "id": "DM-B4-1180",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42869,7 +43372,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1171",
+    "id": "DM-B4-1181",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42904,7 +43407,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1172",
+    "id": "DM-B4-1182",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42939,7 +43442,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1173",
+    "id": "DM-B4-1183",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -42974,7 +43477,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1174",
+    "id": "DM-B4-1184",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43009,7 +43512,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1175",
+    "id": "DM-B4-1185",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43044,7 +43547,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1176",
+    "id": "DM-B4-1186",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43079,42 +43582,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1177",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q5.c",
-    "topicTag": "Unit 4",
-    "question": "There are 7 men and 3 women. Find the number of ways in which a committee of 6 persons can be formed if the committee is to have (i) exactly 4 men, and (ii) at least 2 women.",
-    "paperName": "jan 2024 reg.pdf",
-    "driveFileId": "1gwQN-U6r7sXl3j5Umxz1y9BUnTF36m9s",
-    "pageNumber": 2,
-    "semester": "III",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Regular",
-        "examType": "Regular",
-        "semester": "III",
-        "label": "Feb 2024 Regular",
-        "paperName": "jan 2024 reg.pdf",
-        "driveFileId": "1gwQN-U6r7sXl3j5Umxz1y9BUnTF36m9s",
-        "page": 2,
-        "qno": "5.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B4-1178",
+    "id": "DM-B4-1187",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43125,7 +43593,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Find the number of integers solutions of x₁ + x, + X₃ + X4 +X5 = 30.",
+    "question": "Determine the coefficient of x⁵y¹⁰z⁵w⁵ in (x − 7y + 3z − w)^25.",
     "paperName": "jan 2024 reg.pdf",
     "driveFileId": "1gwQN-U6r7sXl3j5Umxz1y9BUnTF36m9s",
     "pageNumber": 2,
@@ -43149,7 +43617,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1179",
+    "id": "DM-B4-1188",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43184,7 +43652,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1180",
+    "id": "DM-B4-1189",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43219,7 +43687,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1181",
+    "id": "DM-B4-1190",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43254,7 +43722,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1182",
+    "id": "DM-B4-1191",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43265,7 +43733,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "A -sequence of 10 bits is randomly generated. What is the probability that at least one of these bits is 0?",
+    "question": "A sequence of 10 bits is randomly generated. What is the probability that at least one of these bits is 0?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 2,
@@ -43289,7 +43757,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1183",
+    "id": "DM-B4-1192",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43324,7 +43792,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1184",
+    "id": "DM-B4-1193",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43335,7 +43803,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "What is the solution of the recurrence relation @n = Ap-1 + 2an-2 With ap = 2 and a; = 7?",
+    "question": "What is the solution of the recurrence relation An ant + 2ap-2 With ap = 2 and a; = 7?",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 2,
@@ -43359,7 +43827,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1185",
+    "id": "DM-B4-1194",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43394,7 +43862,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1186",
+    "id": "DM-B4-1195",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43429,7 +43897,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1187",
+    "id": "DM-B4-1196",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43464,7 +43932,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1188",
+    "id": "DM-B4-1197",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43499,7 +43967,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1189",
+    "id": "DM-B4-1198",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43534,7 +44002,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1190",
+    "id": "DM-B4-1199",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43569,7 +44037,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1191",
+    "id": "DM-B4-1200",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43604,77 +44072,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1192",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q5.a",
-    "topicTag": "Unit 4",
-    "question": "Consider the word TRIANNUAL. (i) How many arrangements are there of these 9letters? (i1) How many 9-letter words are there with the letters T, I, and U Separated by exactly 2 of the other letters?",
-    "paperName": "January sup 26.pdf",
-    "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "5.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B4-1193",
-    "subjectId": "DM",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q5.c",
-    "topicTag": "Unit 4",
-    "question": "Evaluate the sum (i) 1+2+3+.+n.",
-    "paperName": "January sup 26.pdf",
-    "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "5.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B4-1194",
+    "id": "DM-B4-1201",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43709,7 +44107,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1195",
+    "id": "DM-B4-1202",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43744,7 +44142,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1196",
+    "id": "DM-B4-1203",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43779,7 +44177,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1197",
+    "id": "DM-B4-1204",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43814,7 +44212,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1198",
+    "id": "DM-B4-1205",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43849,7 +44247,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1199",
+    "id": "DM-B4-1206",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43884,7 +44282,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1200",
+    "id": "DM-B4-1207",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43919,7 +44317,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1201",
+    "id": "DM-B4-1208",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43954,7 +44352,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1202",
+    "id": "DM-B4-1209",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -43989,7 +44387,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1203",
+    "id": "DM-B4-1210",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44024,7 +44422,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1204",
+    "id": "DM-B4-1211",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44059,7 +44457,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1205",
+    "id": "DM-B4-1212",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44094,7 +44492,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1206",
+    "id": "DM-B4-1213",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44129,7 +44527,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1207",
+    "id": "DM-B4-1214",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44164,7 +44562,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1208",
+    "id": "DM-B4-1215",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44199,7 +44597,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1209",
+    "id": "DM-B4-1216",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44234,7 +44632,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B4-1210",
+    "id": "DM-B4-1217",
     "subjectId": "DM",
     "chapter": 4,
     "part": "B",
@@ -44269,7 +44667,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1211",
+    "id": "DM-A5-1218",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44334,7 +44732,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1212",
+    "id": "DM-A5-1219",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44383,105 +44781,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1213",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.i",
-    "topicTag": "Unit 5",
-    "question": "Define order and size of a Graph.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.i",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.i",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A5-1214",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.j",
-    "topicTag": "Unit 5",
-    "question": "What is the chromatic number of a graph?",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 1,
-        "qno": "1.j",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 1,
-        "qno": "1.j",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "DM-A5-1215",
+    "id": "DM-A5-1220",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44530,7 +44830,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1216",
+    "id": "DM-A5-1221",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44580,7 +44880,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1217",
+    "id": "DM-A5-1222",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44615,7 +44915,77 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1218",
+    "id": "DM-A5-1223",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "Define order and size of a Graph.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A5-1224",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.j",
+    "topicTag": "Unit 5",
+    "question": "What is the chromatic number of a graph?",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "DM-A5-1225",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44650,7 +45020,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1219",
+    "id": "DM-A5-1226",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44685,7 +45055,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1220",
+    "id": "DM-A5-1227",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44720,7 +45090,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1221",
+    "id": "DM-A5-1228",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44755,7 +45125,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1222",
+    "id": "DM-A5-1229",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44790,7 +45160,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1223",
+    "id": "DM-A5-1230",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44825,7 +45195,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1224",
+    "id": "DM-A5-1231",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44860,7 +45230,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1225",
+    "id": "DM-A5-1232",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44895,7 +45265,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1226",
+    "id": "DM-A5-1233",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44930,7 +45300,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1227",
+    "id": "DM-A5-1234",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44941,7 +45311,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Name and Draw the following Graphs.",
+    "question": "Name and Draw the following Graphs. Ks, Cs, Ws, K3.3,",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -44965,7 +45335,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1228",
+    "id": "DM-A5-1235",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -44976,7 +45346,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
-    "question": "What are the Tree Traversal Algorithms?",
+    "question": "What are the Tree Traversal Algorithms'",
     "paperName": "Jan 2025.pdf",
     "driveFileId": "19KNHeAVbUOdglXSbOldz_MD7zTTID0ee",
     "pageNumber": 1,
@@ -45000,7 +45370,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1229",
+    "id": "DM-A5-1236",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45035,7 +45405,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1230",
+    "id": "DM-A5-1237",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45070,7 +45440,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1231",
+    "id": "DM-A5-1238",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45105,7 +45475,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1232",
+    "id": "DM-A5-1239",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45140,7 +45510,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1233",
+    "id": "DM-A5-1240",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45175,7 +45545,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1234",
+    "id": "DM-A5-1241",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45210,7 +45580,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1235",
+    "id": "DM-A5-1242",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45245,7 +45615,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1236",
+    "id": "DM-A5-1243",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45280,7 +45650,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1237",
+    "id": "DM-A5-1244",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45315,7 +45685,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1238",
+    "id": "DM-A5-1245",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45350,7 +45720,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1239",
+    "id": "DM-A5-1246",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45385,7 +45755,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1240",
+    "id": "DM-A5-1247",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45420,7 +45790,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-A5-1241",
+    "id": "DM-A5-1248",
     "subjectId": "DM",
     "chapter": 5,
     "part": "A",
@@ -45455,7 +45825,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1242",
+    "id": "DM-B5-1249",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45519,7 +45889,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1243",
+    "id": "DM-B5-1250",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45568,203 +45938,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1244",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q6.a",
-    "topicTag": "Unit 5",
-    "question": "Identify whether the following graphs G and G' are isomorphic or not. Justify.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 2,
-        "qno": "6.a",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "6.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B5-1245",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q6.b",
-    "topicTag": "Unit 5",
-    "question": "Differentiate between Euler graphs and Hamiltonian Graphs.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 2,
-        "qno": "6.b",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "6.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B5-1246",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q6.c",
-    "topicTag": "Unit 5",
-    "question": "What is a Planar Graph? Find the number of regions in Graph G, given vertices are 20 and degree of each vertex is 3.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 2,
-        "qno": "6.c",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "6.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B5-1247",
-    "subjectId": "DM",
-    "chapter": 5,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026
-    ],
-    "frequency": 2,
-    "questionNumber": "Q6.d",
-    "topicTag": "Unit 5",
-    "question": "Construct the minimum spanning tree (MST) for the given graph using Kruskal's Algorithm.",
-    "paperName": "25 supple.pdf",
-    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-    "pageNumber": 2,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "25 supple.pdf",
-        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
-        "page": 2,
-        "qno": "6.d",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2026 Supplementary",
-        "paperName": "January sup 26.pdf",
-        "driveFileId": "1UIKunR1GTyw3PUbwK5wZSGNo1BudFLx9",
-        "page": 2,
-        "qno": "6.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "DM-B5-1248",
+    "id": "DM-B5-1251",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45814,7 +45988,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1249",
+    "id": "DM-B5-1252",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45864,7 +46038,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1250",
+    "id": "DM-B5-1253",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45914,7 +46088,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1251",
+    "id": "DM-B5-1254",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -45964,7 +46138,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1252",
+    "id": "DM-B5-1255",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46013,7 +46187,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1253",
+    "id": "DM-B5-1256",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46048,7 +46222,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1254",
+    "id": "DM-B5-1257",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46083,7 +46257,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1255",
+    "id": "DM-B5-1258",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46118,7 +46292,147 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1256",
+    "id": "DM-B5-1259",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 5",
+    "question": "Identify whether the following graphs G and G' are isomorphic or not. Justify.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 2,
+        "qno": "6.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B5-1260",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 5",
+    "question": "Differentiate between Euler graphs and Hamiltonian Graphs.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 2,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B5-1261",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.c",
+    "topicTag": "Unit 5",
+    "question": "What is a Planar Graph? Find the number of regions in Graph G, given vertices are 20 and degree of each vertex is 3.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 2,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B5-1262",
+    "subjectId": "DM",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.d",
+    "topicTag": "Unit 5",
+    "question": "Construct the minimum spanning tree (MST) for the given graph using Kruskal's Algorithm.",
+    "paperName": "25 supple.pdf",
+    "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+    "pageNumber": 2,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "25 supple.pdf",
+        "driveFileId": "1ROR5RAO8xfXaLhvjVP1aMdlWE1YZ99M8",
+        "page": 2,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "DM-B5-1263",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46153,7 +46467,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1257",
+    "id": "DM-B5-1264",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46188,7 +46502,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1258",
+    "id": "DM-B5-1265",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46223,7 +46537,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1259",
+    "id": "DM-B5-1266",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46258,7 +46572,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1260",
+    "id": "DM-B5-1267",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46293,7 +46607,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1261",
+    "id": "DM-B5-1268",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46328,7 +46642,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1262",
+    "id": "DM-B5-1269",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46363,7 +46677,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1263",
+    "id": "DM-B5-1270",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46398,7 +46712,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1264",
+    "id": "DM-B5-1271",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46433,7 +46747,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1265",
+    "id": "DM-B5-1272",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46468,7 +46782,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1266",
+    "id": "DM-B5-1273",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46503,7 +46817,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1267",
+    "id": "DM-B5-1274",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46538,7 +46852,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1268",
+    "id": "DM-B5-1275",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46573,7 +46887,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1269",
+    "id": "DM-B5-1276",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46608,7 +46922,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1270",
+    "id": "DM-B5-1277",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46643,7 +46957,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1271",
+    "id": "DM-B5-1278",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46678,7 +46992,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1272",
+    "id": "DM-B5-1279",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46713,7 +47027,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1273",
+    "id": "DM-B5-1280",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46748,7 +47062,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1274",
+    "id": "DM-B5-1281",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46783,7 +47097,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1275",
+    "id": "DM-B5-1282",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46818,7 +47132,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1276",
+    "id": "DM-B5-1283",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46853,7 +47167,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1277",
+    "id": "DM-B5-1284",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46888,7 +47202,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1278",
+    "id": "DM-B5-1285",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46923,7 +47237,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1279",
+    "id": "DM-B5-1286",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46958,7 +47272,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1280",
+    "id": "DM-B5-1287",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -46993,7 +47307,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1281",
+    "id": "DM-B5-1288",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47028,7 +47342,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1282",
+    "id": "DM-B5-1289",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47063,7 +47377,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1283",
+    "id": "DM-B5-1290",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47098,7 +47412,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1284",
+    "id": "DM-B5-1291",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47133,7 +47447,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1285",
+    "id": "DM-B5-1292",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47168,7 +47482,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1286",
+    "id": "DM-B5-1293",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47203,7 +47517,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1287",
+    "id": "DM-B5-1294",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47238,7 +47552,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1288",
+    "id": "DM-B5-1295",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47273,7 +47587,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1289",
+    "id": "DM-B5-1296",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47308,7 +47622,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1290",
+    "id": "DM-B5-1297",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47343,7 +47657,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1291",
+    "id": "DM-B5-1298",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47378,7 +47692,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1292",
+    "id": "DM-B5-1299",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47413,7 +47727,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1293",
+    "id": "DM-B5-1300",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47448,7 +47762,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1294",
+    "id": "DM-B5-1301",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47483,7 +47797,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1295",
+    "id": "DM-B5-1302",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47518,7 +47832,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1296",
+    "id": "DM-B5-1303",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47553,7 +47867,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1297",
+    "id": "DM-B5-1304",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47588,7 +47902,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1298",
+    "id": "DM-B5-1305",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47623,7 +47937,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1299",
+    "id": "DM-B5-1306",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47658,7 +47972,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1300",
+    "id": "DM-B5-1307",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47693,7 +48007,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1301",
+    "id": "DM-B5-1308",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47728,7 +48042,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1302",
+    "id": "DM-B5-1309",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47763,7 +48077,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1303",
+    "id": "DM-B5-1310",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47798,7 +48112,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "DM-B5-1304",
+    "id": "DM-B5-1311",
     "subjectId": "DM",
     "chapter": 5,
     "part": "B",
@@ -47833,7 +48147,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1305",
+    "id": "OOPJ-A1-1312",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -47883,7 +48197,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1306",
+    "id": "OOPJ-A1-1313",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -47932,7 +48246,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1307",
+    "id": "OOPJ-A1-1314",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -47967,7 +48281,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1308",
+    "id": "OOPJ-A1-1315",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48002,7 +48316,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1309",
+    "id": "OOPJ-A1-1316",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48037,7 +48351,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1310",
+    "id": "OOPJ-A1-1317",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48072,7 +48386,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1311",
+    "id": "OOPJ-A1-1318",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48107,7 +48421,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1312",
+    "id": "OOPJ-A1-1319",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48142,7 +48456,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1313",
+    "id": "OOPJ-A1-1320",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48177,7 +48491,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1314",
+    "id": "OOPJ-A1-1321",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48212,7 +48526,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1315",
+    "id": "OOPJ-A1-1322",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48247,7 +48561,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1316",
+    "id": "OOPJ-A1-1323",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48282,7 +48596,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1317",
+    "id": "OOPJ-A1-1324",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48317,7 +48631,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1318",
+    "id": "OOPJ-A1-1325",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48352,7 +48666,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1319",
+    "id": "OOPJ-A1-1326",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48387,7 +48701,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1320",
+    "id": "OOPJ-A1-1327",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48422,7 +48736,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1321",
+    "id": "OOPJ-A1-1328",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48457,7 +48771,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1322",
+    "id": "OOPJ-A1-1329",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48492,7 +48806,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1323",
+    "id": "OOPJ-A1-1330",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48527,42 +48841,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1324",
-    "subjectId": "OOPJ",
-    "chapter": 1,
-    "part": "A",
-    "marks": 2,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.a",
-    "topicTag": "Unit 1",
-    "question": "List the core OOP's concepts.",
-    "paperName": "Dec 2024.pdf",
-    "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
-    "pageNumber": 3,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 1,
-        "session": "Jan 2025 Supplementary (Set 2)",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2025 Supplementary (Set 2)",
-        "paperName": "Dec 2024.pdf",
-        "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
-        "page": 3,
-        "qno": "1.a",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "OOPJ-A1-1325",
+    "id": "OOPJ-A1-1331",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48597,7 +48876,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1326",
+    "id": "OOPJ-A1-1332",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48632,7 +48911,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1327",
+    "id": "OOPJ-A1-1333",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48667,7 +48946,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1328",
+    "id": "OOPJ-A1-1334",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48702,7 +48981,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1329",
+    "id": "OOPJ-A1-1335",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48737,7 +49016,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1330",
+    "id": "OOPJ-A1-1336",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48772,7 +49051,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1331",
+    "id": "OOPJ-A1-1337",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48807,7 +49086,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1332",
+    "id": "OOPJ-A1-1338",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48842,7 +49121,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1333",
+    "id": "OOPJ-A1-1339",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48877,7 +49156,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1334",
+    "id": "OOPJ-A1-1340",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48912,7 +49191,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1335",
+    "id": "OOPJ-A1-1341",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48947,7 +49226,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1336",
+    "id": "OOPJ-A1-1342",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -48982,7 +49261,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1337",
+    "id": "OOPJ-A1-1343",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49017,7 +49296,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1338",
+    "id": "OOPJ-A1-1344",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49052,7 +49331,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1339",
+    "id": "OOPJ-A1-1345",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49087,7 +49366,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1340",
+    "id": "OOPJ-A1-1346",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49122,7 +49401,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1341",
+    "id": "OOPJ-A1-1347",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49157,7 +49436,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A1-1342",
+    "id": "OOPJ-A1-1348",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "A",
@@ -49192,7 +49471,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1343",
+    "id": "OOPJ-B1-1349",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49242,7 +49521,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1344",
+    "id": "OOPJ-B1-1350",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49292,7 +49571,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1345",
+    "id": "OOPJ-B1-1351",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49327,7 +49606,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1346",
+    "id": "OOPJ-B1-1352",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49362,7 +49641,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1347",
+    "id": "OOPJ-B1-1353",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49397,7 +49676,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1348",
+    "id": "OOPJ-B1-1354",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49432,7 +49711,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1349",
+    "id": "OOPJ-B1-1355",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49467,7 +49746,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1350",
+    "id": "OOPJ-B1-1356",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49502,7 +49781,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1351",
+    "id": "OOPJ-B1-1357",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49537,7 +49816,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1352",
+    "id": "OOPJ-B1-1358",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49572,7 +49851,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1353",
+    "id": "OOPJ-B1-1359",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49607,7 +49886,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1354",
+    "id": "OOPJ-B1-1360",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49642,7 +49921,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1355",
+    "id": "OOPJ-B1-1361",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49677,7 +49956,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1356",
+    "id": "OOPJ-B1-1362",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49688,7 +49967,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Define Object-Oriented Programming. What are the key principles of OOP?",
+    "question": "Define Object-Oriented Programming. What are the key principles of OOP\"?",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -49712,7 +49991,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1357",
+    "id": "OOPJ-B1-1363",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49747,7 +50026,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1358",
+    "id": "OOPJ-B1-1364",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49758,7 +50037,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Discuss the difference between method overriding and method} overloading with examples.",
+    "question": "Discuss the difference between method overriding and method 5 2? overloading with examples.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -49782,7 +50061,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1359",
+    "id": "OOPJ-B1-1365",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49793,7 +50072,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Illustrate the concept of parameter passing between objects in OOP.",
+    "question": "2d) Illustrate the concept of parameter passing between objects in OOP.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -49817,7 +50096,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1360",
+    "id": "OOPJ-B1-1366",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49852,7 +50131,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1361",
+    "id": "OOPJ-B1-1367",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49863,7 +50142,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Differentiate between method overloading and method overriding with examples.",
+    "question": "Differentiate between method overloading and method overriding with cxamples 2. ) List and explain Java buzzwords.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1knszvrx0f7-CLjid3oP4A-qfYiq1peHz",
     "pageNumber": 1,
@@ -49887,7 +50166,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1362",
+    "id": "OOPJ-B1-1368",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49922,7 +50201,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1363",
+    "id": "OOPJ-B1-1369",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49957,7 +50236,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1364",
+    "id": "OOPJ-B1-1370",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -49992,7 +50271,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1365",
+    "id": "OOPJ-B1-1371",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50027,7 +50306,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1366",
+    "id": "OOPJ-B1-1372",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50062,7 +50341,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1367",
+    "id": "OOPJ-B1-1373",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50097,7 +50376,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1368",
+    "id": "OOPJ-B1-1374",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50132,7 +50411,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1369",
+    "id": "OOPJ-B1-1375",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50167,7 +50446,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1370",
+    "id": "OOPJ-B1-1376",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50202,7 +50481,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1371",
+    "id": "OOPJ-B1-1377",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50237,7 +50516,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1372",
+    "id": "OOPJ-B1-1378",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50272,7 +50551,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1373",
+    "id": "OOPJ-B1-1379",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50307,7 +50586,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1374",
+    "id": "OOPJ-B1-1380",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50342,7 +50621,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1375",
+    "id": "OOPJ-B1-1381",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50377,7 +50656,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1376",
+    "id": "OOPJ-B1-1382",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50412,7 +50691,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1377",
+    "id": "OOPJ-B1-1383",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50447,7 +50726,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1378",
+    "id": "OOPJ-B1-1384",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50482,7 +50761,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1379",
+    "id": "OOPJ-B1-1385",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50517,7 +50796,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1380",
+    "id": "OOPJ-B1-1386",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50552,7 +50831,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1381",
+    "id": "OOPJ-B1-1387",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50563,7 +50842,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Describe in detail about the control flow statements in Java with} suitable examples.",
+    "question": "Describe in detail about the control flow statements in Java with suitable examples.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -50587,7 +50866,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1382",
+    "id": "OOPJ-B1-1388",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50598,7 +50877,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Describe the following in detail (i)Data Abstraction and encapsulation. (ii)Polymorphism and dynamic binding",
+    "question": "Describe the following in detail (i)Data Abstraction and encapsulation.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -50622,7 +50901,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1383",
+    "id": "OOPJ-B1-1389",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50657,7 +50936,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1384",
+    "id": "OOPJ-B1-1390",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50692,7 +50971,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1385",
+    "id": "OOPJ-B1-1391",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50727,7 +51006,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1386",
+    "id": "OOPJ-B1-1392",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50762,7 +51041,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1387",
+    "id": "OOPJ-B1-1393",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50797,7 +51076,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1388",
+    "id": "OOPJ-B1-1394",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50832,7 +51111,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1389",
+    "id": "OOPJ-B1-1395",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50867,7 +51146,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1390",
+    "id": "OOPJ-B1-1396",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50902,7 +51181,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1391",
+    "id": "OOPJ-B1-1397",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50937,7 +51216,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1392",
+    "id": "OOPJ-B1-1398",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -50972,7 +51251,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1393",
+    "id": "OOPJ-B1-1399",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51007,7 +51286,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1394",
+    "id": "OOPJ-B1-1400",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51042,7 +51321,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1395",
+    "id": "OOPJ-B1-1401",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51077,7 +51356,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1396",
+    "id": "OOPJ-B1-1402",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51112,7 +51391,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1397",
+    "id": "OOPJ-B1-1403",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51147,7 +51426,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1398",
+    "id": "OOPJ-B1-1404",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51182,7 +51461,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1399",
+    "id": "OOPJ-B1-1405",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51217,7 +51496,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1400",
+    "id": "OOPJ-B1-1406",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51252,7 +51531,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1401",
+    "id": "OOPJ-B1-1407",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51287,7 +51566,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1402",
+    "id": "OOPJ-B1-1408",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51322,7 +51601,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1403",
+    "id": "OOPJ-B1-1409",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51357,7 +51636,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1404",
+    "id": "OOPJ-B1-1410",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51392,7 +51671,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1405",
+    "id": "OOPJ-B1-1411",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51427,7 +51706,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1406",
+    "id": "OOPJ-B1-1412",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51462,7 +51741,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1407",
+    "id": "OOPJ-B1-1413",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51497,7 +51776,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1408",
+    "id": "OOPJ-B1-1414",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51532,7 +51811,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1409",
+    "id": "OOPJ-B1-1415",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51567,7 +51846,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1410",
+    "id": "OOPJ-B1-1416",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51602,7 +51881,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1411",
+    "id": "OOPJ-B1-1417",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51637,7 +51916,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1412",
+    "id": "OOPJ-B1-1418",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51672,7 +51951,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1413",
+    "id": "OOPJ-B1-1419",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51707,7 +51986,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1414",
+    "id": "OOPJ-B1-1420",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51742,7 +52021,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1415",
+    "id": "OOPJ-B1-1421",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51777,7 +52056,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1416",
+    "id": "OOPJ-B1-1422",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51812,7 +52091,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1417",
+    "id": "OOPJ-B1-1423",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51847,7 +52126,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1418",
+    "id": "OOPJ-B1-1424",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51882,7 +52161,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1419",
+    "id": "OOPJ-B1-1425",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51917,7 +52196,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B1-1420",
+    "id": "OOPJ-B1-1426",
     "subjectId": "OOPJ",
     "chapter": 1,
     "part": "B",
@@ -51952,7 +52231,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1421",
+    "id": "OOPJ-A2-1427",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -51987,7 +52266,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1422",
+    "id": "OOPJ-A2-1428",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52022,7 +52301,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1423",
+    "id": "OOPJ-A2-1429",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52057,7 +52336,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1424",
+    "id": "OOPJ-A2-1430",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52092,7 +52371,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1425",
+    "id": "OOPJ-A2-1431",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52127,7 +52406,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1426",
+    "id": "OOPJ-A2-1432",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52162,7 +52441,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1427",
+    "id": "OOPJ-A2-1433",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52173,7 +52452,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "Explain the concept of substitutability in inheritance.",
+    "question": "What is autoboxing in Java?",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -52197,7 +52476,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1428",
+    "id": "OOPJ-A2-1434",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52208,7 +52487,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
-    "question": "How does polymorphism help in object-oriented design?",
+    "question": "L.d) - How does polymorphism help in object-oriented design?",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -52232,7 +52511,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1429",
+    "id": "OOPJ-A2-1435",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52267,7 +52546,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1430",
+    "id": "OOPJ-A2-1436",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52302,7 +52581,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1431",
+    "id": "OOPJ-A2-1437",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52337,7 +52616,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1432",
+    "id": "OOPJ-A2-1438",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52372,7 +52651,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1433",
+    "id": "OOPJ-A2-1439",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52407,7 +52686,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1434",
+    "id": "OOPJ-A2-1440",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52442,7 +52721,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1435",
+    "id": "OOPJ-A2-1441",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52477,7 +52756,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1436",
+    "id": "OOPJ-A2-1442",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52512,7 +52791,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1437",
+    "id": "OOPJ-A2-1443",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52547,7 +52826,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1438",
+    "id": "OOPJ-A2-1444",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52582,7 +52861,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1439",
+    "id": "OOPJ-A2-1445",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52617,7 +52896,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1440",
+    "id": "OOPJ-A2-1446",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52652,7 +52931,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1441",
+    "id": "OOPJ-A2-1447",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52663,7 +52942,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "What is Exception handling?",
+    "question": "Compare thread based and process based multi-tasking.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -52687,7 +52966,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1442",
+    "id": "OOPJ-A2-1448",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52722,7 +53001,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1443",
+    "id": "OOPJ-A2-1449",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52757,7 +53036,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1444",
+    "id": "OOPJ-A2-1450",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52792,7 +53071,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1445",
+    "id": "OOPJ-A2-1451",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52827,7 +53106,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1446",
+    "id": "OOPJ-A2-1452",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52862,7 +53141,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1447",
+    "id": "OOPJ-A2-1453",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52897,7 +53176,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1448",
+    "id": "OOPJ-A2-1454",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52932,7 +53211,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1449",
+    "id": "OOPJ-A2-1455",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -52967,7 +53246,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1450",
+    "id": "OOPJ-A2-1456",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53002,7 +53281,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1451",
+    "id": "OOPJ-A2-1457",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53037,7 +53316,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1452",
+    "id": "OOPJ-A2-1458",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53072,7 +53351,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1453",
+    "id": "OOPJ-A2-1459",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53107,7 +53386,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1454",
+    "id": "OOPJ-A2-1460",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53142,7 +53421,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1455",
+    "id": "OOPJ-A2-1461",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53177,7 +53456,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1456",
+    "id": "OOPJ-A2-1462",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53212,7 +53491,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1457",
+    "id": "OOPJ-A2-1463",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53247,7 +53526,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1458",
+    "id": "OOPJ-A2-1464",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53282,7 +53561,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1459",
+    "id": "OOPJ-A2-1465",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53317,7 +53596,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A2-1460",
+    "id": "OOPJ-A2-1466",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "A",
@@ -53352,7 +53631,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1461",
+    "id": "OOPJ-B2-1467",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53402,7 +53681,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1462",
+    "id": "OOPJ-B2-1468",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53437,7 +53716,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1463",
+    "id": "OOPJ-B2-1469",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53472,7 +53751,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1464",
+    "id": "OOPJ-B2-1470",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53507,7 +53786,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1465",
+    "id": "OOPJ-B2-1471",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53542,7 +53821,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1466",
+    "id": "OOPJ-B2-1472",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53577,7 +53856,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1467",
+    "id": "OOPJ-B2-1473",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53612,7 +53891,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1468",
+    "id": "OOPJ-B2-1474",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53647,7 +53926,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1469",
+    "id": "OOPJ-B2-1475",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53682,7 +53961,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1470",
+    "id": "OOPJ-B2-1476",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53717,7 +53996,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1471",
+    "id": "OOPJ-B2-1477",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53752,7 +54031,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1472",
+    "id": "OOPJ-B2-1478",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53787,7 +54066,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1473",
+    "id": "OOPJ-B2-1479",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53822,7 +54101,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1474",
+    "id": "OOPJ-B2-1480",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53857,7 +54136,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1475",
+    "id": "OOPJ-B2-1481",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53868,7 +54147,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "Define a Java interface Shape with a method area(). Implement it in two classes Circle and Rectangle and display their areas.",
+    "question": "Define a Java interface Shape with a method area(). Implement it in two classes Circle and Rectangle and display their areas. packages.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -53892,7 +54171,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1476",
+    "id": "OOPJ-B2-1482",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53903,7 +54182,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Explain the concept of CLASSPATH and its significance in using} packages.",
+    "question": "Explain the concept of CLASSPATH and its significance packages.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -53927,7 +54206,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1477",
+    "id": "OOPJ-B2-1483",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53962,7 +54241,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1478",
+    "id": "OOPJ-B2-1484",
+    "subjectId": "OOPJ",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Whatis package? Create a Java package and explain It.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1knszvrx0f7-CLjid3oP4A-qfYiq1peHz",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1knszvrx0f7-CLjid3oP4A-qfYiq1peHz",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "OOPJ-B2-1485",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -53997,7 +54311,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1479",
+    "id": "OOPJ-B2-1486",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54032,7 +54346,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1480",
+    "id": "OOPJ-B2-1487",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54067,7 +54381,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1481",
+    "id": "OOPJ-B2-1488",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54102,7 +54416,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1482",
+    "id": "OOPJ-B2-1489",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54137,7 +54451,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1483",
+    "id": "OOPJ-B2-1490",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54172,7 +54486,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1484",
+    "id": "OOPJ-B2-1491",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54207,7 +54521,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1485",
+    "id": "OOPJ-B2-1492",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54242,7 +54556,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1486",
+    "id": "OOPJ-B2-1493",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54277,7 +54591,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1487",
+    "id": "OOPJ-B2-1494",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54312,7 +54626,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1488",
+    "id": "OOPJ-B2-1495",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54347,7 +54661,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1489",
+    "id": "OOPJ-B2-1496",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54382,7 +54696,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1490",
+    "id": "OOPJ-B2-1497",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54417,7 +54731,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1491",
+    "id": "OOPJ-B2-1498",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54452,7 +54766,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1492",
+    "id": "OOPJ-B2-1499",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54487,7 +54801,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1493",
+    "id": "OOPJ-B2-1500",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54522,7 +54836,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1494",
+    "id": "OOPJ-B2-1501",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54557,7 +54871,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1495",
+    "id": "OOPJ-B2-1502",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54592,7 +54906,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1496",
+    "id": "OOPJ-B2-1503",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54627,7 +54941,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1497",
+    "id": "OOPJ-B2-1504",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54662,7 +54976,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1498",
+    "id": "OOPJ-B2-1505",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54697,7 +55011,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1499",
+    "id": "OOPJ-B2-1506",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54732,7 +55046,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1500",
+    "id": "OOPJ-B2-1507",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54767,7 +55081,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1501",
+    "id": "OOPJ-B2-1508",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54778,7 +55092,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "What is an interface? Explain how to define and implement by taking suitable Example.",
+    "question": "What is an interface? Explain how to define and implement by taking suitable L'xample.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -54802,7 +55116,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1502",
+    "id": "OOPJ-B2-1509",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54813,7 +55127,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Summarize what is finally class. How to catch exception? Write an example.",
+    "question": "Summarize what is finally class. How to catch exception?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -54837,7 +55151,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1503",
+    "id": "OOPJ-B2-1510",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54872,7 +55186,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1504",
+    "id": "OOPJ-B2-1511",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54907,7 +55221,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1505",
+    "id": "OOPJ-B2-1512",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54942,7 +55256,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1506",
+    "id": "OOPJ-B2-1513",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -54977,7 +55291,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1507",
+    "id": "OOPJ-B2-1514",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55012,7 +55326,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1508",
+    "id": "OOPJ-B2-1515",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55023,7 +55337,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
-    "question": "What is the importance of Exception Handling in Java? Define and] distinguish between checked and unchecked exceptions.",
+    "question": "What is the importance of Exception Handling in Java? Define and distinguish between checked and unchecked exceptions.",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -55047,7 +55361,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1509",
+    "id": "OOPJ-B2-1516",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55082,7 +55396,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1510",
+    "id": "OOPJ-B2-1517",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55093,7 +55407,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "Write a Java program which illustrates try, catch, throw, throws and finally keywords.",
+    "question": "Write a Java program which illustrates try, catch, throw, throws and) finally keywords.",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -55117,7 +55431,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1511",
+    "id": "OOPJ-B2-1518",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55152,7 +55466,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1512",
+    "id": "OOPJ-B2-1519",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55187,7 +55501,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1513",
+    "id": "OOPJ-B2-1520",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55222,7 +55536,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1514",
+    "id": "OOPJ-B2-1521",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55257,7 +55571,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1515",
+    "id": "OOPJ-B2-1522",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55292,7 +55606,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1516",
+    "id": "OOPJ-B2-1523",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55327,7 +55641,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1517",
+    "id": "OOPJ-B2-1524",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55362,7 +55676,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1518",
+    "id": "OOPJ-B2-1525",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55397,7 +55711,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1519",
+    "id": "OOPJ-B2-1526",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55432,7 +55746,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1520",
+    "id": "OOPJ-B2-1527",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55467,7 +55781,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1521",
+    "id": "OOPJ-B2-1528",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55502,7 +55816,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1522",
+    "id": "OOPJ-B2-1529",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55537,7 +55851,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1523",
+    "id": "OOPJ-B2-1530",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55572,7 +55886,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1524",
+    "id": "OOPJ-B2-1531",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55607,7 +55921,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1525",
+    "id": "OOPJ-B2-1532",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55642,7 +55956,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1526",
+    "id": "OOPJ-B2-1533",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55677,7 +55991,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1527",
+    "id": "OOPJ-B2-1534",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55712,7 +56026,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1528",
+    "id": "OOPJ-B2-1535",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55747,7 +56061,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1529",
+    "id": "OOPJ-B2-1536",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55782,7 +56096,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1530",
+    "id": "OOPJ-B2-1537",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55817,7 +56131,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1531",
+    "id": "OOPJ-B2-1538",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55852,7 +56166,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1532",
+    "id": "OOPJ-B2-1539",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55887,7 +56201,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1533",
+    "id": "OOPJ-B2-1540",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55922,7 +56236,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1534",
+    "id": "OOPJ-B2-1541",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55957,7 +56271,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B2-1535",
+    "id": "OOPJ-B2-1542",
     "subjectId": "OOPJ",
     "chapter": 2,
     "part": "B",
@@ -55992,7 +56306,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1536",
+    "id": "OOPJ-A3-1543",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56042,7 +56356,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1537",
+    "id": "OOPJ-A3-1544",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56091,7 +56405,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1538",
+    "id": "OOPJ-A3-1545",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56126,7 +56440,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1539",
+    "id": "OOPJ-A3-1546",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56161,7 +56475,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1540",
+    "id": "OOPJ-A3-1547",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56196,7 +56510,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1541",
+    "id": "OOPJ-A3-1548",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56231,7 +56545,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1542",
+    "id": "OOPJ-A3-1549",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56266,7 +56580,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1543",
+    "id": "OOPJ-A3-1550",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56277,7 +56591,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Define daemon thread with an example.",
+    "question": "Define dacmon thread with an example?",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -56301,7 +56615,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1544",
+    "id": "OOPJ-A3-1551",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56336,7 +56650,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1545",
+    "id": "OOPJ-A3-1552",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56371,7 +56685,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1546",
+    "id": "OOPJ-A3-1553",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56406,7 +56720,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1547",
+    "id": "OOPJ-A3-1554",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56441,7 +56755,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1548",
+    "id": "OOPJ-A3-1555",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56476,7 +56790,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1549",
+    "id": "OOPJ-A3-1556",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56511,7 +56825,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1550",
+    "id": "OOPJ-A3-1557",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56546,7 +56860,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1551",
+    "id": "OOPJ-A3-1558",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56581,7 +56895,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1552",
+    "id": "OOPJ-A3-1559",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56616,7 +56930,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1553",
+    "id": "OOPJ-A3-1560",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56651,7 +56965,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1554",
+    "id": "OOPJ-A3-1561",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56686,7 +57000,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1555",
+    "id": "OOPJ-A3-1562",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56721,7 +57035,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1556",
+    "id": "OOPJ-A3-1563",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56732,7 +57046,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Define Enumerations with example.",
+    "question": "Define Enumerations with cxample.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -56756,7 +57070,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1557",
+    "id": "OOPJ-A3-1564",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56791,7 +57105,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1558",
+    "id": "OOPJ-A3-1565",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56826,7 +57140,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1559",
+    "id": "OOPJ-A3-1566",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56861,7 +57175,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1560",
+    "id": "OOPJ-A3-1567",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56896,7 +57210,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1561",
+    "id": "OOPJ-A3-1568",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56931,7 +57245,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1562",
+    "id": "OOPJ-A3-1569",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -56966,7 +57280,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1563",
+    "id": "OOPJ-A3-1570",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57001,7 +57315,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1564",
+    "id": "OOPJ-A3-1571",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57036,7 +57350,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1565",
+    "id": "OOPJ-A3-1572",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57071,7 +57385,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1566",
+    "id": "OOPJ-A3-1573",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57106,7 +57420,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1567",
+    "id": "OOPJ-A3-1574",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57141,7 +57455,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1568",
+    "id": "OOPJ-A3-1575",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57176,7 +57490,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1569",
+    "id": "OOPJ-A3-1576",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57211,7 +57525,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1570",
+    "id": "OOPJ-A3-1577",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57246,7 +57560,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1571",
+    "id": "OOPJ-A3-1578",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57281,7 +57595,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1572",
+    "id": "OOPJ-A3-1579",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57316,7 +57630,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A3-1573",
+    "id": "OOPJ-A3-1580",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "A",
@@ -57351,7 +57665,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1574",
+    "id": "OOPJ-B3-1581",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57401,7 +57715,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1575",
+    "id": "OOPJ-B3-1582",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57436,7 +57750,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1576",
+    "id": "OOPJ-B3-1583",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57471,7 +57785,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1577",
+    "id": "OOPJ-B3-1584",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57506,7 +57820,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1578",
+    "id": "OOPJ-B3-1585",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57541,7 +57855,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1579",
+    "id": "OOPJ-B3-1586",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57576,7 +57890,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1580",
+    "id": "OOPJ-B3-1587",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57611,7 +57925,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1581",
+    "id": "OOPJ-B3-1588",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57646,7 +57960,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1582",
+    "id": "OOPJ-B3-1589",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57681,7 +57995,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1583",
+    "id": "OOPJ-B3-1590",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57716,7 +58030,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1584",
+    "id": "OOPJ-B3-1591",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57751,7 +58065,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1585",
+    "id": "OOPJ-B3-1592",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57786,7 +58100,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1586",
+    "id": "OOPJ-B3-1593",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57821,7 +58135,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1587",
+    "id": "OOPJ-B3-1594",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57832,7 +58146,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Describe the difference between termination and resumptive exception handling models.",
+    "question": "Describe the difference between termination and resumptive exception handling models, Ab) Write a Java program that creates two threads: one prints even Ac) Explain the life evele ofa thread in Java with a neat diagram.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -57856,7 +58170,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1588",
+    "id": "OOPJ-B3-1595",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57867,7 +58181,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Write a Java program that creates two threads: one prints numbers, the other prints odd numbers up to 10.",
+    "question": "Soa) Explain the delegation event model with a suitable diagram. 5? A ) yb} Wriie a fava AW! propraim thai respouds fo a builow click usta, PRALETA AYA FE pt th HEN",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -57891,7 +58205,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1589",
+    "id": "OOPJ-B3-1596",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57926,7 +58240,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1590",
+    "id": "OOPJ-B3-1597",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57937,7 +58251,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "Write a Java program to demonstrate the use of try, catch, and finally blocks.",
+    "question": "4d) Write a Java program to demonstrate the use of try, catch, and finally DlOCKS.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -57961,7 +58275,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1591",
+    "id": "OOPJ-B3-1598",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -57996,7 +58310,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1592",
+    "id": "OOPJ-B3-1599",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58031,7 +58345,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1593",
+    "id": "OOPJ-B3-1600",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58066,7 +58380,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1594",
+    "id": "OOPJ-B3-1601",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58101,7 +58415,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1595",
+    "id": "OOPJ-B3-1602",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58136,7 +58450,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1596",
+    "id": "OOPJ-B3-1603",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58171,7 +58485,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1597",
+    "id": "OOPJ-B3-1604",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58206,7 +58520,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1598",
+    "id": "OOPJ-B3-1605",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58241,7 +58555,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1599",
+    "id": "OOPJ-B3-1606",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58276,7 +58590,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1600",
+    "id": "OOPJ-B3-1607",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58311,7 +58625,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1601",
+    "id": "OOPJ-B3-1608",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58346,7 +58660,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1602",
+    "id": "OOPJ-B3-1609",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58381,7 +58695,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1603",
+    "id": "OOPJ-B3-1610",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58416,7 +58730,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1604",
+    "id": "OOPJ-B3-1611",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58451,7 +58765,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1605",
+    "id": "OOPJ-B3-1612",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58486,7 +58800,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1606",
+    "id": "OOPJ-B3-1613",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58521,7 +58835,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1607",
+    "id": "OOPJ-B3-1614",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58556,7 +58870,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1608",
+    "id": "OOPJ-B3-1615",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58591,7 +58905,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1609",
+    "id": "OOPJ-B3-1616",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58626,7 +58940,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1610",
+    "id": "OOPJ-B3-1617",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58661,7 +58975,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1611",
+    "id": "OOPJ-B3-1618",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58696,7 +59010,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1612",
+    "id": "OOPJ-B3-1619",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58731,7 +59045,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1613",
+    "id": "OOPJ-B3-1620",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58766,7 +59080,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1614",
+    "id": "OOPJ-B3-1621",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58801,7 +59115,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1615",
+    "id": "OOPJ-B3-1622",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58812,7 +59126,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Explain the concept of readers writers' problem and implement the concept using the suitable class and methods available in Java.",
+    "question": "What is an interface? Explain how to define and implement by taking suitable L'xample.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -58836,7 +59150,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1616",
+    "id": "OOPJ-B3-1623",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58871,7 +59185,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1617",
+    "id": "OOPJ-B3-1624",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58882,7 +59196,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "(illustrate the concept of synchronization in thread. (ii) The Stream Classes-Byte streams and Character streams.",
+    "question": "the concept of synchronization in thread. (ii) The Stream Classes-Byte streams and Character streams.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -58906,7 +59220,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1618",
+    "id": "OOPJ-B3-1625",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58941,7 +59255,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1619",
+    "id": "OOPJ-B3-1626",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -58976,7 +59290,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1620",
+    "id": "OOPJ-B3-1627",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59011,7 +59325,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1621",
+    "id": "OOPJ-B3-1628",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59046,7 +59360,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1622",
+    "id": "OOPJ-B3-1629",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59081,7 +59395,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1623",
+    "id": "OOPJ-B3-1630",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59092,7 +59406,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "What is a stream? What is the difference between byte streams and character streams? How are they used to capture input from the user?",
+    "question": "What is a stream? What is the difference between byte streams and} character streams? How are they used to capture input from the user?",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -59116,7 +59430,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1624",
+    "id": "OOPJ-B3-1631",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59151,7 +59465,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1625",
+    "id": "OOPJ-B3-1632",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59186,7 +59500,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1626",
+    "id": "OOPJ-B3-1633",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59221,7 +59535,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1627",
+    "id": "OOPJ-B3-1634",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59256,7 +59570,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1628",
+    "id": "OOPJ-B3-1635",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59291,7 +59605,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1629",
+    "id": "OOPJ-B3-1636",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59326,7 +59640,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1630",
+    "id": "OOPJ-B3-1637",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59361,7 +59675,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1631",
+    "id": "OOPJ-B3-1638",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59396,7 +59710,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1632",
+    "id": "OOPJ-B3-1639",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59431,7 +59745,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1633",
+    "id": "OOPJ-B3-1640",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59466,7 +59780,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1634",
+    "id": "OOPJ-B3-1641",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59501,7 +59815,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1635",
+    "id": "OOPJ-B3-1642",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59536,7 +59850,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1636",
+    "id": "OOPJ-B3-1643",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59571,7 +59885,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1637",
+    "id": "OOPJ-B3-1644",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59606,7 +59920,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1638",
+    "id": "OOPJ-B3-1645",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59641,7 +59955,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1639",
+    "id": "OOPJ-B3-1646",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59676,7 +59990,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1640",
+    "id": "OOPJ-B3-1647",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59711,7 +60025,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1641",
+    "id": "OOPJ-B3-1648",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59746,7 +60060,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1642",
+    "id": "OOPJ-B3-1649",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59781,7 +60095,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1643",
+    "id": "OOPJ-B3-1650",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59816,7 +60130,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1644",
+    "id": "OOPJ-B3-1651",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59851,7 +60165,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1645",
+    "id": "OOPJ-B3-1652",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59886,7 +60200,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1646",
+    "id": "OOPJ-B3-1653",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59921,7 +60235,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1647",
+    "id": "OOPJ-B3-1654",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59956,7 +60270,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1648",
+    "id": "OOPJ-B3-1655",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -59991,7 +60305,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1649",
+    "id": "OOPJ-B3-1656",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -60026,7 +60340,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1650",
+    "id": "OOPJ-B3-1657",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -60061,7 +60375,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1651",
+    "id": "OOPJ-B3-1658",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -60096,7 +60410,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B3-1652",
+    "id": "OOPJ-B3-1659",
     "subjectId": "OOPJ",
     "chapter": 3,
     "part": "B",
@@ -60131,7 +60445,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1653",
+    "id": "OOPJ-A4-1660",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60166,7 +60480,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1654",
+    "id": "OOPJ-A4-1661",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60201,7 +60515,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1655",
+    "id": "OOPJ-A4-1662",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60236,7 +60550,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1656",
+    "id": "OOPJ-A4-1663",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60271,7 +60585,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1657",
+    "id": "OOPJ-A4-1664",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60306,7 +60620,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1658",
+    "id": "OOPJ-A4-1665",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60341,7 +60655,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1659",
+    "id": "OOPJ-A4-1666",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60352,7 +60666,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
-    "question": "Why are adapter classes useful in event handling?",
+    "question": "Why are adapier classes usciui in event handime'",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -60376,7 +60690,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1660",
+    "id": "OOPJ-A4-1667",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60387,7 +60701,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "Describe how a scrollbar is different from a scrollpane.",
+    "question": "i.h) (describe how a scroitbar ts different from a scrolipanc.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -60411,7 +60725,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1661",
+    "id": "OOPJ-A4-1668",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60446,7 +60760,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1662",
+    "id": "OOPJ-A4-1669",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60481,7 +60795,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1663",
+    "id": "OOPJ-A4-1670",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60516,7 +60830,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1664",
+    "id": "OOPJ-A4-1671",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60551,7 +60865,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1665",
+    "id": "OOPJ-A4-1672",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60586,7 +60900,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1666",
+    "id": "OOPJ-A4-1673",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60621,7 +60935,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1667",
+    "id": "OOPJ-A4-1674",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60656,7 +60970,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1668",
+    "id": "OOPJ-A4-1675",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60691,7 +61005,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1669",
+    "id": "OOPJ-A4-1676",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60726,7 +61040,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1670",
+    "id": "OOPJ-A4-1677",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60761,7 +61075,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1671",
+    "id": "OOPJ-A4-1678",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60796,7 +61110,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1672",
+    "id": "OOPJ-A4-1679",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60831,7 +61145,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1673",
+    "id": "OOPJ-A4-1680",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60842,7 +61156,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
-    "question": "What is Collection?",
+    "question": "= What is Collection?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -60866,7 +61180,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1674",
+    "id": "OOPJ-A4-1681",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60877,7 +61191,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "Describe StringTokenizer.",
+    "question": "Describe StringTokenizcr?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -60901,7 +61215,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1675",
+    "id": "OOPJ-A4-1682",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60936,7 +61250,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1676",
+    "id": "OOPJ-A4-1683",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -60971,7 +61285,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1677",
+    "id": "OOPJ-A4-1684",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61006,7 +61320,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1678",
+    "id": "OOPJ-A4-1685",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61017,7 +61331,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "Define ArrayList with syntax.",
+    "question": "l.h) = Define ArrayList with syntax.",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -61041,7 +61355,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1679",
+    "id": "OOPJ-A4-1686",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61076,7 +61390,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1680",
+    "id": "OOPJ-A4-1687",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61111,7 +61425,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1681",
+    "id": "OOPJ-A4-1688",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61146,7 +61460,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1682",
+    "id": "OOPJ-A4-1689",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61181,7 +61495,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1683",
+    "id": "OOPJ-A4-1690",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61216,7 +61530,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1684",
+    "id": "OOPJ-A4-1691",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61251,7 +61565,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1685",
+    "id": "OOPJ-A4-1692",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61286,7 +61600,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1686",
+    "id": "OOPJ-A4-1693",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61321,7 +61635,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1687",
+    "id": "OOPJ-A4-1694",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61356,7 +61670,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1688",
+    "id": "OOPJ-A4-1695",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61391,7 +61705,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1689",
+    "id": "OOPJ-A4-1696",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61426,7 +61740,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1690",
+    "id": "OOPJ-A4-1697",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61461,7 +61775,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1691",
+    "id": "OOPJ-A4-1698",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61496,7 +61810,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A4-1692",
+    "id": "OOPJ-A4-1699",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "A",
@@ -61531,7 +61845,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1693",
+    "id": "OOPJ-B4-1700",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61566,7 +61880,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1694",
+    "id": "OOPJ-B4-1701",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61601,7 +61915,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1695",
+    "id": "OOPJ-B4-1702",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61636,7 +61950,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1696",
+    "id": "OOPJ-B4-1703",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61671,7 +61985,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1697",
+    "id": "OOPJ-B4-1704",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61706,7 +62020,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1698",
+    "id": "OOPJ-B4-1705",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61741,7 +62055,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1699",
+    "id": "OOPJ-B4-1706",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61776,7 +62090,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1700",
+    "id": "OOPJ-B4-1707",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61811,7 +62125,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1701",
+    "id": "OOPJ-B4-1708",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61846,7 +62160,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1702",
+    "id": "OOPJ-B4-1709",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61881,7 +62195,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1703",
+    "id": "OOPJ-B4-1710",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61916,7 +62230,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1704",
+    "id": "OOPJ-B4-1711",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61951,7 +62265,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1705",
+    "id": "OOPJ-B4-1712",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61962,7 +62276,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "Explain the delegation event model with a suitable diagram.",
+    "question": "Soa) Explain the delegation event model with a suitable diagram.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -61986,7 +62300,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1706",
+    "id": "OOPJ-B4-1713",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -61997,7 +62311,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "Write a Java AWT program that responds to a button click using. ActionListener.",
+    "question": "Write a Java AWT program that responds to a button click ActionListener.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -62021,7 +62335,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1707",
+    "id": "OOPJ-B4-1714",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62056,7 +62370,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1708",
+    "id": "OOPJ-B4-1715",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62067,7 +62381,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Compare and contrast Flow, Grid layout managers in terms of flexibility and usage.",
+    "question": "Compare and contrast Flow, Grid layout managers in terms of! flexibility and usage.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 2,
@@ -62091,7 +62405,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1709",
+    "id": "OOPJ-B4-1716",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62126,7 +62440,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1710",
+    "id": "OOPJ-B4-1717",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62161,7 +62475,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1711",
+    "id": "OOPJ-B4-1718",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62196,7 +62510,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1712",
+    "id": "OOPJ-B4-1719",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62231,7 +62545,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1713",
+    "id": "OOPJ-B4-1720",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62266,7 +62580,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1714",
+    "id": "OOPJ-B4-1721",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62301,7 +62615,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1715",
+    "id": "OOPJ-B4-1722",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62336,7 +62650,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1716",
+    "id": "OOPJ-B4-1723",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62371,7 +62685,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1717",
+    "id": "OOPJ-B4-1724",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62406,7 +62720,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1718",
+    "id": "OOPJ-B4-1725",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62441,7 +62755,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1719",
+    "id": "OOPJ-B4-1726",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62476,7 +62790,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1720",
+    "id": "OOPJ-B4-1727",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62511,7 +62825,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1721",
+    "id": "OOPJ-B4-1728",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62546,7 +62860,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1722",
+    "id": "OOPJ-B4-1729",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62581,7 +62895,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1723",
+    "id": "OOPJ-B4-1730",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62616,7 +62930,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1724",
+    "id": "OOPJ-B4-1731",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62651,7 +62965,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1725",
+    "id": "OOPJ-B4-1732",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62662,7 +62976,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "Develop a Java program to handle a keyboard event using a KeyListener.",
+    "question": "Develop a Java program to handle a keyboard event KeyListener.",
     "paperName": "dec 2024 supp.pdf",
     "driveFileId": "1gJXGaAMPqA4D4hWjzoqPeVly-fxCISAY",
     "pageNumber": 1,
@@ -62686,7 +63000,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1726",
+    "id": "OOPJ-B4-1733",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62721,7 +63035,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1727",
+    "id": "OOPJ-B4-1734",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62756,7 +63070,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1728",
+    "id": "OOPJ-B4-1735",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62791,7 +63105,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1729",
+    "id": "OOPJ-B4-1736",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62826,7 +63140,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1730",
+    "id": "OOPJ-B4-1737",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62861,7 +63175,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1731",
+    "id": "OOPJ-B4-1738",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62896,7 +63210,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1732",
+    "id": "OOPJ-B4-1739",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62931,7 +63245,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1733",
+    "id": "OOPJ-B4-1740",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -62966,7 +63280,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1734",
+    "id": "OOPJ-B4-1741",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63001,7 +63315,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1735",
+    "id": "OOPJ-B4-1742",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63036,7 +63350,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1736",
+    "id": "OOPJ-B4-1743",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63071,7 +63385,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1737",
+    "id": "OOPJ-B4-1744",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63106,7 +63420,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1738",
+    "id": "OOPJ-B4-1745",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63141,7 +63455,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1739",
+    "id": "OOPJ-B4-1746",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63176,7 +63490,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1740",
+    "id": "OOPJ-B4-1747",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63211,7 +63525,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1741",
+    "id": "OOPJ-B4-1748",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63222,7 +63536,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "What is difference between ArrayList and LinkedList in collection} framework? Explain.",
+    "question": "What is difference between ArrayList and LinkedList in collection framework? Explain.",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -63246,7 +63560,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1742",
+    "id": "OOPJ-B4-1749",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63281,7 +63595,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1743",
+    "id": "OOPJ-B4-1750",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63316,7 +63630,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1744",
+    "id": "OOPJ-B4-1751",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63327,7 +63641,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
-    "question": "Explain how HashMap works in Java with an example.",
+    "question": "Explain how HashMap works in Java with an example. program.",
     "paperName": "Jan '24 (java).pdf",
     "driveFileId": "1fRuZICiNDE4WUucYM57lENIroX8jBklV",
     "pageNumber": 1,
@@ -63351,7 +63665,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1745",
+    "id": "OOPJ-B4-1752",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63386,7 +63700,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1746",
+    "id": "OOPJ-B4-1753",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63421,7 +63735,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1747",
+    "id": "OOPJ-B4-1754",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63456,7 +63770,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1748",
+    "id": "OOPJ-B4-1755",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63491,7 +63805,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1749",
+    "id": "OOPJ-B4-1756",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63526,7 +63840,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1750",
+    "id": "OOPJ-B4-1757",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63561,7 +63875,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1751",
+    "id": "OOPJ-B4-1758",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63596,7 +63910,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1752",
+    "id": "OOPJ-B4-1759",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63631,7 +63945,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1753",
+    "id": "OOPJ-B4-1760",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63666,7 +63980,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1754",
+    "id": "OOPJ-B4-1761",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63701,7 +64015,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1755",
+    "id": "OOPJ-B4-1762",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63736,7 +64050,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1756",
+    "id": "OOPJ-B4-1763",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63771,7 +64085,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1757",
+    "id": "OOPJ-B4-1764",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63806,7 +64120,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1758",
+    "id": "OOPJ-B4-1765",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63841,7 +64155,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1759",
+    "id": "OOPJ-B4-1766",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63876,7 +64190,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1760",
+    "id": "OOPJ-B4-1767",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63911,7 +64225,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1761",
+    "id": "OOPJ-B4-1768",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63946,7 +64260,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1762",
+    "id": "OOPJ-B4-1769",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -63981,7 +64295,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1763",
+    "id": "OOPJ-B4-1770",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64016,7 +64330,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1764",
+    "id": "OOPJ-B4-1771",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64051,7 +64365,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1765",
+    "id": "OOPJ-B4-1772",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64086,7 +64400,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1766",
+    "id": "OOPJ-B4-1773",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64121,7 +64435,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1767",
+    "id": "OOPJ-B4-1774",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64156,7 +64470,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1768",
+    "id": "OOPJ-B4-1775",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64191,7 +64505,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1769",
+    "id": "OOPJ-B4-1776",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64226,7 +64540,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1770",
+    "id": "OOPJ-B4-1777",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64261,7 +64575,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1771",
+    "id": "OOPJ-B4-1778",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64296,7 +64610,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B4-1772",
+    "id": "OOPJ-B4-1779",
     "subjectId": "OOPJ",
     "chapter": 4,
     "part": "B",
@@ -64331,7 +64645,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1773",
+    "id": "OOPJ-A5-1780",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64381,7 +64695,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1774",
+    "id": "OOPJ-A5-1781",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64431,56 +64745,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1775",
-    "subjectId": "OOPJ",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2025
-    ],
-    "frequency": 2,
-    "questionNumber": "Q1.i",
-    "topicTag": "Unit 5",
-    "question": "Define an Applet.",
-    "paperName": "july 2025.pdf",
-    "driveFileId": "17eHYXGNsao381-_6tXtemC8d_dyglQMw",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Supplementary",
-        "examType": "Supplementary",
-        "semester": "III",
-        "label": "Jul 2025 Supplementary",
-        "paperName": "july 2025.pdf",
-        "driveFileId": "17eHYXGNsao381-_6tXtemC8d_dyglQMw",
-        "page": 1,
-        "qno": "1.i",
-        "marks": 1,
-        "part": "A"
-      },
-      {
-        "year": 2025,
-        "month": 1,
-        "session": "Jan 2025 Supplementary (Set 2)",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2025 Supplementary (Set 2)",
-        "paperName": "Dec 2024.pdf",
-        "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
-        "page": 3,
-        "qno": "1.i",
-        "marks": 2,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "OOPJ-A5-1776",
+    "id": "OOPJ-A5-1782",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64529,7 +64794,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1777",
+    "id": "OOPJ-A5-1783",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64564,7 +64829,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1778",
+    "id": "OOPJ-A5-1784",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64599,7 +64864,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1779",
+    "id": "OOPJ-A5-1785",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64634,7 +64899,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1780",
+    "id": "OOPJ-A5-1786",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64669,7 +64934,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1781",
+    "id": "OOPJ-A5-1787",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64704,7 +64969,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1782",
+    "id": "OOPJ-A5-1788",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64715,7 +64980,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Why is Swing preferred over AWT?",
+    "question": "L.i) = Why is Swing preferred over AWT?",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 1,
@@ -64739,42 +65004,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1783",
-    "subjectId": "OOPJ",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.j",
-    "topicTag": "Unit 5",
-    "question": "What method adds a tab in a JTabbedPane?",
-    "paperName": "2025 July.pdf",
-    "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular/Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 7,
-        "session": "Jul 2025 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "IV",
-        "label": "Jul 2025 Regular/Supplementary",
-        "paperName": "2025 July.pdf",
-        "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
-        "page": 1,
-        "qno": "1.j",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "OOPJ-A5-1784",
+    "id": "OOPJ-A5-1789",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64809,7 +65039,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1785",
+    "id": "OOPJ-A5-1790",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64844,7 +65074,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1786",
+    "id": "OOPJ-A5-1791",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64879,7 +65109,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1787",
+    "id": "OOPJ-A5-1792",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64914,7 +65144,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1788",
+    "id": "OOPJ-A5-1793",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64949,7 +65179,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1789",
+    "id": "OOPJ-A5-1794",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -64984,7 +65214,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1790",
+    "id": "OOPJ-A5-1795",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65019,7 +65249,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1791",
+    "id": "OOPJ-A5-1796",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65054,7 +65284,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1792",
+    "id": "OOPJ-A5-1797",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65089,7 +65319,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1793",
+    "id": "OOPJ-A5-1798",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65124,7 +65354,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1794",
+    "id": "OOPJ-A5-1799",
+    "subjectId": "OOPJ",
+    "chapter": 5,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "Describe StringTokenizcr? 1.1) Define an Applet.",
+    "paperName": "Dec 2024.pdf",
+    "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
+    "pageNumber": 3,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary (Set 2)",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary (Set 2)",
+        "paperName": "Dec 2024.pdf",
+        "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
+        "page": 3,
+        "qno": "1.i",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "OOPJ-A5-1800",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65135,7 +65400,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
-    "question": "What is Layout Manager? List Layout Managers. >",
+    "question": "L. 4) What is Layout Manager? List Layout Managers.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "19TfifVnkJ9BrSQf7a7wlMbfCzQCD0FHn",
     "pageNumber": 3,
@@ -65159,7 +65424,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1795",
+    "id": "OOPJ-A5-1801",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65194,7 +65459,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1796",
+    "id": "OOPJ-A5-1802",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65229,7 +65494,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1797",
+    "id": "OOPJ-A5-1803",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65264,7 +65529,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1798",
+    "id": "OOPJ-A5-1804",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65299,7 +65564,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1799",
+    "id": "OOPJ-A5-1805",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65334,7 +65599,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1800",
+    "id": "OOPJ-A5-1806",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65369,7 +65634,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1801",
+    "id": "OOPJ-A5-1807",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65404,7 +65669,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1802",
+    "id": "OOPJ-A5-1808",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65439,7 +65704,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1803",
+    "id": "OOPJ-A5-1809",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65474,7 +65739,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1804",
+    "id": "OOPJ-A5-1810",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65509,7 +65774,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1805",
+    "id": "OOPJ-A5-1811",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65544,7 +65809,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1806",
+    "id": "OOPJ-A5-1812",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65579,7 +65844,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1807",
+    "id": "OOPJ-A5-1813",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65614,7 +65879,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-A5-1808",
+    "id": "OOPJ-A5-1814",
+    "subjectId": "OOPJ",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "Define applet.",
+    "paperName": "july 2025.pdf",
+    "driveFileId": "17eHYXGNsao381-_6tXtemC8d_dyglQMw",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "july 2025.pdf",
+        "driveFileId": "17eHYXGNsao381-_6tXtemC8d_dyglQMw",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "OOPJ-A5-1815",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "A",
@@ -65649,7 +65949,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1809",
+    "id": "OOPJ-B5-1816",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65699,7 +65999,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1810",
+    "id": "OOPJ-B5-1817",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65749,7 +66049,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1811",
+    "id": "OOPJ-B5-1818",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65799,7 +66099,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1812",
+    "id": "OOPJ-B5-1819",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65848,7 +66148,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1813",
+    "id": "OOPJ-B5-1820",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65898,7 +66198,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1814",
+    "id": "OOPJ-B5-1821",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65933,7 +66233,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1815",
+    "id": "OOPJ-B5-1822",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -65968,7 +66268,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1816",
+    "id": "OOPJ-B5-1823",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66003,7 +66303,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1817",
+    "id": "OOPJ-B5-1824",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66038,7 +66338,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1818",
+    "id": "OOPJ-B5-1825",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66073,7 +66373,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1819",
+    "id": "OOPJ-B5-1826",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66108,7 +66408,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1820",
+    "id": "OOPJ-B5-1827",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66143,7 +66443,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1821",
+    "id": "OOPJ-B5-1828",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66178,7 +66478,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1822",
+    "id": "OOPJ-B5-1829",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66213,7 +66513,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1823",
+    "id": "OOPJ-B5-1830",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66248,7 +66548,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1824",
+    "id": "OOPJ-B5-1831",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66283,7 +66583,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1825",
+    "id": "OOPJ-B5-1832",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66318,7 +66618,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1826",
+    "id": "OOPJ-B5-1833",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66353,7 +66653,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1827",
+    "id": "OOPJ-B5-1834",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66364,7 +66664,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "Design a simple calculator using Swing components like JTextField, JButton, and appropriate event handling.",
+    "question": "Design a simple calculator using Swing components like JVextField,! JButton, and appropriate event handling.",
     "paperName": "2025 July.pdf",
     "driveFileId": "1DkcWq0ipGN8EmTF4Gb8ya7jnT50a4Xw9",
     "pageNumber": 2,
@@ -66388,7 +66688,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1828",
+    "id": "OOPJ-B5-1835",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66423,7 +66723,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1829",
+    "id": "OOPJ-B5-1836",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66458,7 +66758,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1830",
+    "id": "OOPJ-B5-1837",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66493,7 +66793,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1831",
+    "id": "OOPJ-B5-1838",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66528,7 +66828,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1832",
+    "id": "OOPJ-B5-1839",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66563,7 +66863,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1833",
+    "id": "OOPJ-B5-1840",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66598,7 +66898,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1834",
+    "id": "OOPJ-B5-1841",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66633,7 +66933,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1835",
+    "id": "OOPJ-B5-1842",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66668,7 +66968,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1836",
+    "id": "OOPJ-B5-1843",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66703,7 +67003,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1837",
+    "id": "OOPJ-B5-1844",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66738,7 +67038,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1838",
+    "id": "OOPJ-B5-1845",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66773,7 +67073,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1839",
+    "id": "OOPJ-B5-1846",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66808,7 +67108,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1840",
+    "id": "OOPJ-B5-1847",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66843,7 +67143,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1841",
+    "id": "OOPJ-B5-1848",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66878,7 +67178,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1842",
+    "id": "OOPJ-B5-1849",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66913,7 +67213,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1843",
+    "id": "OOPJ-B5-1850",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66948,7 +67248,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1844",
+    "id": "OOPJ-B5-1851",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -66983,7 +67283,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1845",
+    "id": "OOPJ-B5-1852",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67018,7 +67318,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1846",
+    "id": "OOPJ-B5-1853",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67053,7 +67353,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1847",
+    "id": "OOPJ-B5-1854",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67088,7 +67388,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1848",
+    "id": "OOPJ-B5-1855",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67123,7 +67423,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1849",
+    "id": "OOPJ-B5-1856",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67158,7 +67458,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1850",
+    "id": "OOPJ-B5-1857",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67193,7 +67493,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1851",
+    "id": "OOPJ-B5-1858",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67228,7 +67528,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1852",
+    "id": "OOPJ-B5-1859",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67263,7 +67563,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1853",
+    "id": "OOPJ-B5-1860",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67298,7 +67598,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1854",
+    "id": "OOPJ-B5-1861",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67333,7 +67633,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1855",
+    "id": "OOPJ-B5-1862",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67368,7 +67668,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1856",
+    "id": "OOPJ-B5-1863",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67403,7 +67703,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1857",
+    "id": "OOPJ-B5-1864",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67438,7 +67738,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1858",
+    "id": "OOPJ-B5-1865",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67473,7 +67773,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1859",
+    "id": "OOPJ-B5-1866",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67508,7 +67808,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1860",
+    "id": "OOPJ-B5-1867",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67543,7 +67843,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1861",
+    "id": "OOPJ-B5-1868",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67578,7 +67878,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1862",
+    "id": "OOPJ-B5-1869",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67613,7 +67913,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1863",
+    "id": "OOPJ-B5-1870",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67648,7 +67948,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1864",
+    "id": "OOPJ-B5-1871",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67683,7 +67983,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1865",
+    "id": "OOPJ-B5-1872",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67718,7 +68018,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1866",
+    "id": "OOPJ-B5-1873",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67753,7 +68053,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1867",
+    "id": "OOPJ-B5-1874",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67788,7 +68088,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1868",
+    "id": "OOPJ-B5-1875",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67823,7 +68123,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1869",
+    "id": "OOPJ-B5-1876",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67858,7 +68158,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1870",
+    "id": "OOPJ-B5-1877",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67893,7 +68193,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1871",
+    "id": "OOPJ-B5-1878",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67928,7 +68228,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1872",
+    "id": "OOPJ-B5-1879",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67963,7 +68263,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1873",
+    "id": "OOPJ-B5-1880",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -67998,7 +68298,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1874",
+    "id": "OOPJ-B5-1881",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -68033,7 +68333,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1875",
+    "id": "OOPJ-B5-1882",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -68068,7 +68368,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1876",
+    "id": "OOPJ-B5-1883",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -68103,7 +68403,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1877",
+    "id": "OOPJ-B5-1884",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -68138,7 +68438,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "OOPJ-B5-1878",
+    "id": "OOPJ-B5-1885",
     "subjectId": "OOPJ",
     "chapter": 5,
     "part": "B",
@@ -68173,7 +68473,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1879",
+    "id": "SE-A1-1886",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68182,7 +68482,7 @@ const QUESTIONS_DATABASE = [
       2026,
       2024
     ],
-    "frequency": 3,
+    "frequency": 4,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "List the types of software myths.",
@@ -68207,11 +68507,25 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      },
+      {
         "year": 2024,
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -68237,7 +68551,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1880",
+    "id": "SE-A1-1887",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68287,7 +68601,56 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1881",
+    "id": "SE-A1-1888",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "List the types of other software process models.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A1-1889",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68322,7 +68685,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1882",
+    "id": "SE-A1-1890",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68357,7 +68720,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1883",
+    "id": "SE-A1-1891",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68392,7 +68755,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1884",
+    "id": "SE-A1-1892",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68427,7 +68790,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1885",
+    "id": "SE-A1-1893",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68462,7 +68825,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1886",
+    "id": "SE-A1-1894",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68497,7 +68860,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1887",
+    "id": "SE-A1-1895",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68532,7 +68895,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1888",
+    "id": "SE-A1-1896",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68547,7 +68910,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -68555,7 +68918,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -68567,7 +68930,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1889",
+    "id": "SE-A1-1897",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68602,7 +68965,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1890",
+    "id": "SE-A1-1898",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68637,7 +69000,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1891",
+    "id": "SE-A1-1899",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68672,7 +69035,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1892",
+    "id": "SE-A1-1900",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68707,33 +69070,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1893",
+    "id": "SE-A1-1901",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
-    "question": "List the types of other software process models.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Write the other name of waterfall model and who invented waterfall) model?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "1.a",
         "marks": 1,
@@ -68742,7 +69105,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1894",
+    "id": "SE-A1-1902",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Classify the models in CMMI?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A1-1903",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68777,7 +69175,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1895",
+    "id": "SE-A1-1904",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68788,7 +69186,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
-    "question": "Mention the Advantage and Disadvantages of Waterfall model.",
+    "question": "= Mention the Advantage and Disadvantages of Waterfall model.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 1,
@@ -68812,7 +69210,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1896",
+    "id": "SE-A1-1905",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68847,7 +69245,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1897",
+    "id": "SE-A1-1906",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68882,7 +69280,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1898",
+    "id": "SE-A1-1907",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68917,7 +69315,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1899",
+    "id": "SE-A1-1908",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68952,7 +69350,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1900",
+    "id": "SE-A1-1909",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -68987,7 +69385,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A1-1901",
+    "id": "SE-A1-1910",
     "subjectId": "SE",
     "chapter": 1,
     "part": "A",
@@ -69022,7 +69420,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1902",
+    "id": "SE-B1-1911",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69060,7 +69458,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -69086,7 +69484,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1903",
+    "id": "SE-B1-1912",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69098,7 +69496,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 2,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Describe \"Software myth\"? Discuss on various types of software myths and the true aspects of these myths?",
+    "question": "Describe \"Software myth? Discuss on various types of software myths and the true aspects of these myths?",
     "paperName": "2025 july.pdf",
     "driveFileId": "1FD8nJpg0dMn2kUDvAK3uw9Ygcwkjv-3n",
     "pageNumber": 1,
@@ -69124,7 +69522,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -69136,7 +69534,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1904",
+    "id": "SE-B1-1913",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69186,7 +69584,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1905",
+    "id": "SE-B1-1914",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69235,7 +69633,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1906",
+    "id": "SE-B1-1915",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69285,7 +69683,203 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1907",
+    "id": "SE-B1-1916",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain \"Evolutionary Process Flow\" with a neat sketch.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B1-1917",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Explain in detail about Scrum.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B1-1918",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain framework activities with a neat diagram.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B1-1919",
+    "subjectId": "SE",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Explain briefly the Generic Process Model.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B1-1920",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69320,7 +69914,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1908",
+    "id": "SE-B1-1921",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69355,7 +69949,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1909",
+    "id": "SE-B1-1922",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69390,7 +69984,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1910",
+    "id": "SE-B1-1923",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69425,7 +70019,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1911",
+    "id": "SE-B1-1924",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69460,7 +70054,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1912",
+    "id": "SE-B1-1925",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69495,7 +70089,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1913",
+    "id": "SE-B1-1926",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69530,7 +70124,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1914",
+    "id": "SE-B1-1927",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69565,7 +70159,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1915",
+    "id": "SE-B1-1928",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69600,7 +70194,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1916",
+    "id": "SE-B1-1929",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69635,7 +70229,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1917",
+    "id": "SE-B1-1930",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69670,7 +70264,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1918",
+    "id": "SE-B1-1931",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69705,7 +70299,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1919",
+    "id": "SE-B1-1932",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69740,7 +70334,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1920",
+    "id": "SE-B1-1933",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69755,7 +70349,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -69763,7 +70357,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -69775,7 +70369,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1921",
+    "id": "SE-B1-1934",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69786,11 +70380,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Compare and contrast perspective process models and iterative process models.",
+    "question": "Compare and conirasi perspective process models atid iterative process models.",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -69798,7 +70392,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -69810,7 +70404,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1922",
+    "id": "SE-B1-1935",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69821,7 +70415,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Explain about Changing nature of software and its impact in software engineering.",
+    "question": "Explain about Changing nature of software and its impact in software I engineering.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -69845,7 +70439,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1923",
+    "id": "SE-B1-1936",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69880,7 +70474,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1924",
+    "id": "SE-B1-1937",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69915,7 +70509,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1925",
+    "id": "SE-B1-1938",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69926,7 +70520,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Explain the Spiral model and Waterfall Model.",
+    "question": "Explain the Spiral modei aud Watertait Model.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -69950,7 +70544,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1926",
+    "id": "SE-B1-1939",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -69985,7 +70579,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1927",
+    "id": "SE-B1-1940",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70020,7 +70614,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1928",
+    "id": "SE-B1-1941",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70055,7 +70649,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1929",
+    "id": "SE-B1-1942",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70090,33 +70684,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1930",
+    "id": "SE-B1-1943",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
-    "question": "Explain \"Evolutionary Process Flow\" with a neat sketch.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Describe \"Software myth? Discuss on various types of software myths?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "2.a",
         "marks": 5,
@@ -70125,33 +70719,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1931",
+    "id": "SE-B1-1944",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Explain in detail about Scrum.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Demonstrate the evolving role of software?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "2.b",
         "marks": 5,
@@ -70160,33 +70754,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1932",
+    "id": "SE-B1-1945",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
-    "question": "Explain framework activities with a neat diagram.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Explain different software applications? 2.4) Describe with the help of the diagram discuss in detail waterfall model?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "2.c",
         "marks": 5,
@@ -70195,33 +70789,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1933",
+    "id": "SE-B1-1946",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
-    "question": "Explain briefly the Generic Process Model.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Describe with the help of the diagram discuss in detail model?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "2.d",
         "marks": 5,
@@ -70230,7 +70824,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1934",
+    "id": "SE-B1-1947",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70265,7 +70859,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1935",
+    "id": "SE-B1-1948",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70276,7 +70870,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
-    "question": "Explain about the Umbrella Activities which support the software development process and discuss about their necessity in maintaining.",
+    "question": "Lxplain about the Umbrella Activities which support the software developtnent process and discuss about their recessity in maintaining. 2c) Assume that you are the technical manager of a software development organization. A Client approached you for a software solution the problems stated by the client have uncertainties which lead to loss if it not planned and solved which software development modcl you will suggest for this project -justify. Explain that model with its pros and cons and neat sketch 2d) VNseuss Manager's myths about software development and their effect on the practitioner's performance as well as on the overall outcome.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 1,
@@ -70300,7 +70894,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1936",
+    "id": "SE-B1-1949",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70335,7 +70929,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1937",
+    "id": "SE-B1-1950",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70370,7 +70964,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1938",
+    "id": "SE-B1-1951",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70405,7 +70999,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1939",
+    "id": "SE-B1-1952",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70440,7 +71034,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1940",
+    "id": "SE-B1-1953",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70475,7 +71069,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1941",
+    "id": "SE-B1-1954",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70510,7 +71104,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1942",
+    "id": "SE-B1-1955",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70545,7 +71139,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1943",
+    "id": "SE-B1-1956",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70580,7 +71174,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1944",
+    "id": "SE-B1-1957",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70615,7 +71209,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1945",
+    "id": "SE-B1-1958",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70650,7 +71244,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1946",
+    "id": "SE-B1-1959",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70685,7 +71279,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B1-1947",
+    "id": "SE-B1-1960",
     "subjectId": "SE",
     "chapter": 1,
     "part": "B",
@@ -70720,16 +71314,17 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1948",
+    "id": "SE-A2-1961",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
     "marks": 1,
     "years": [
       2026,
+      2025,
       2024
     ],
-    "frequency": 2,
+    "frequency": 3,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Define requirements validation.",
@@ -70754,6 +71349,20 @@ const QUESTIONS_DATABASE = [
         "part": "A"
       },
       {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      },
+      {
         "year": 2024,
         "month": 2,
         "session": "Feb 2024 Regular",
@@ -70770,7 +71379,105 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1949",
+    "id": "SE-A2-1962",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Explain functional requirements.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A2-1963",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Explain user requirements in detail.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A2-1964",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70805,7 +71512,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1950",
+    "id": "SE-A2-1965",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70840,7 +71547,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1951",
+    "id": "SE-A2-1966",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70875,7 +71582,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1952",
+    "id": "SE-A2-1967",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70910,7 +71617,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1953",
+    "id": "SE-A2-1968",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70945,7 +71652,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1954",
+    "id": "SE-A2-1969",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -70980,7 +71687,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1955",
+    "id": "SE-A2-1970",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71015,7 +71722,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1956",
+    "id": "SE-A2-1971",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71030,7 +71737,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -71038,7 +71745,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -71050,7 +71757,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1957",
+    "id": "SE-A2-1972",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71065,7 +71772,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -71073,7 +71780,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -71085,7 +71792,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1958",
+    "id": "SE-A2-1973",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71120,7 +71827,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1959",
+    "id": "SE-A2-1974",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71131,7 +71838,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
-    "question": "Summarize requirement elicitation and analysis?",
+    "question": "Summarize requirement clicitation and analysis?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -71155,7 +71862,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1960",
+    "id": "SE-A2-1975",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71190,7 +71897,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1961",
+    "id": "SE-A2-1976",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71225,7 +71932,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1962",
+    "id": "SE-A2-1977",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71260,77 +71967,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1963",
-    "subjectId": "SE",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.c",
-    "topicTag": "Unit 2",
-    "question": "Explain functional requirements.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Regular/Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 1,
-        "qno": "1.c",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "SE-A2-1964",
-    "subjectId": "SE",
-    "chapter": 2,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.d",
-    "topicTag": "Unit 2",
-    "question": "Explain user requirements in detail.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Regular/Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 1,
-        "qno": "1.d",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "SE-A2-1965",
+    "id": "SE-A2-1978",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71341,7 +71978,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
-    "question": "Define feasibility study. And list the types.",
+    "question": "Define feasibility study. And list the types?",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 1,
@@ -71365,7 +72002,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1966",
+    "id": "SE-A2-1979",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71376,7 +72013,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
-    "question": "Differentiate between Functional and Non-functional Requirements.",
+    "question": "Differentiate between lunctional and Non-functional Requirements.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 1,
@@ -71400,7 +72037,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1967",
+    "id": "SE-A2-1980",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71435,7 +72072,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1968",
+    "id": "SE-A2-1981",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71470,7 +72107,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1969",
+    "id": "SE-A2-1982",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71505,7 +72142,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1970",
+    "id": "SE-A2-1983",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71540,7 +72177,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1971",
+    "id": "SE-A2-1984",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71575,7 +72212,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A2-1972",
+    "id": "SE-A2-1985",
     "subjectId": "SE",
     "chapter": 2,
     "part": "A",
@@ -71610,7 +72247,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1973",
+    "id": "SE-B2-1986",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71690,7 +72327,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1974",
+    "id": "SE-B2-1987",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71740,7 +72377,253 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1975",
+    "id": "SE-B2-1988",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025,
+      2024
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Compare functional requirements with non-functional requirements.",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Regular",
+        "examType": "Regular",
+        "semester": null,
+        "label": "Aug 2024 Regular",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-1989",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "How requirements are classified? List them with an example for} each.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-1990",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Classify the following as functional /non-functional requirements for a banking system. i. Verifying bank balance iit. Withdrawing money from a bank iii. Completion of transactions in less than one second. iv. Extending the system by providing more tellers for the customers",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-1991",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "C) Analyze the requirement engineering process and how the requirements are managed.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-1992",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "What is requirement elicitation? Briefly describe the various activities performed in requirements elicitation with an example of a watch system that facilitates setting time and alarm and assessment.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-1993",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71775,7 +72658,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1976",
+    "id": "SE-B2-1994",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71810,7 +72693,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1977",
+    "id": "SE-B2-1995",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71845,7 +72728,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1978",
+    "id": "SE-B2-1996",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71880,7 +72763,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1979",
+    "id": "SE-B2-1997",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71915,7 +72798,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1980",
+    "id": "SE-B2-1998",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71950,7 +72833,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1981",
+    "id": "SE-B2-1999",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -71985,7 +72868,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1982",
+    "id": "SE-B2-2000",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72020,7 +72903,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1983",
+    "id": "SE-B2-2001",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72055,7 +72938,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1984",
+    "id": "SE-B2-2002",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72090,7 +72973,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1985",
+    "id": "SE-B2-2003",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72125,7 +73008,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1986",
+    "id": "SE-B2-2004",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72160,7 +73043,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1987",
+    "id": "SE-B2-2005",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72175,7 +73058,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -72183,7 +73066,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -72195,42 +73078,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1988",
-    "subjectId": "SE",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.b",
-    "topicTag": "Unit 2",
-    "question": "Compare functional requirements with non-functional requirements.",
-    "paperName": "Aug 2024.pdf",
-    "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Aug 2024 Regular",
-        "paperName": "Aug 2024.pdf",
-        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "SE-B2-1989",
+    "id": "SE-B2-2006",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72245,7 +73093,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -72253,7 +73101,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -72265,7 +73113,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1990",
+    "id": "SE-B2-2007",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72280,7 +73128,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -72288,7 +73136,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -72300,7 +73148,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1991",
+    "id": "SE-B2-2008",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72335,18 +73183,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1992",
+    "id": "SE-B2-2009",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2025
     ],
     "frequency": 1,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
-    "question": "List the activities of Requirements elicitation and analysis? Explain in detail.",
+    "question": "List the activities of Requirements clicitation and analysis? Explain in detail.",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -72364,48 +73212,13 @@ const QUESTIONS_DATABASE = [
         "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
         "page": 1,
         "qno": "3.c",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
   },
   {
-    "id": "SE-B2-1993",
-    "subjectId": "SE",
-    "chapter": 2,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.d",
-    "topicTag": "Unit 2",
-    "question": "Explain the Software Requirement Specification (SRS).",
-    "paperName": "Dec 2024.pdf",
-    "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 1,
-        "session": "Jan 2025 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2025 Supplementary",
-        "paperName": "Dec 2024.pdf",
-        "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
-        "page": 1,
-        "qno": "3.d",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "SE-B2-1994",
+    "id": "SE-B2-2010",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72440,7 +73253,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1995",
+    "id": "SE-B2-2011",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72475,7 +73288,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1996",
+    "id": "SE-B2-2012",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72510,7 +73323,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1997",
+    "id": "SE-B2-2013",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72545,7 +73358,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1998",
+    "id": "SE-B2-2014",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72580,7 +73393,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-1999",
+    "id": "SE-B2-2015",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72615,7 +73428,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2000",
+    "id": "SE-B2-2016",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72650,103 +73463,103 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2001",
+    "id": "SE-B2-2017",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
-    "questionNumber": "Q3.a",
+    "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
-    "question": "How requirements are classified? List them with an example for} each.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Demonstrate system requirements in a detail manner?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
-        "qno": "3.a",
+        "qno": "3.b",
         "marks": 5,
         "part": "B"
       }
     ]
   },
   {
-    "id": "SE-B2-2002",
-    "subjectId": "SE",
-    "chapter": 2,
-    "part": "B",
-    "marks": 10,
-    "years": [
-      2026
-    ],
-    "frequency": 1,
-    "questionNumber": "Q3.b",
-    "topicTag": "Unit 2",
-    "question": "Classify the following as functional /non-functional requirements for a banking system. i. Verifying bank balance ii. Withdrawing money from a bank iii. Completion of transactions in less than one second. iv. Extending the system by providing more tellers for customers",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Regular/Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 1,
-        "qno": "3.b",
-        "marks": 10,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "SE-B2-2003",
+    "id": "SE-B2-2018",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Summarize briefly how requirement validation is done?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B2-2019",
+    "subjectId": "SE",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
-    "question": "What is requirement elicitation? Briefly describe the various activities performed in requirements elicitation with an example a watch system that facilitates setting time and alarm assessment.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Explain interface specification in detail?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "3.d",
         "marks": 5,
@@ -72755,7 +73568,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2004",
+    "id": "SE-B2-2020",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72790,7 +73603,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2005",
+    "id": "SE-B2-2021",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72825,7 +73638,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2006",
+    "id": "SE-B2-2022",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72860,7 +73673,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2007",
+    "id": "SE-B2-2023",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72871,7 +73684,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
-    "question": "Compare the scenarios that are interrelated with Agility and the Cost of Change.",
+    "question": "Compare ihe scenarios that are inierrclaicd wiih Agility aud the Cosi of Chance 4 aN ' wet ' 4 ti i. i ae 4 ad Fa i) y 'P. ety) BK PACER CE CIEE A. a os KUOTER REDE aol Lsvyhcl PELE L Dede oe, Cue otal clita advo tide,? VW, lt charnctertsites of eood user titerfaee desien, A fy Discuss the basie desren principles of class-based cotmpoucnis.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 1,
@@ -72895,7 +73708,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2008",
+    "id": "SE-B2-2024",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72930,7 +73743,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2009",
+    "id": "SE-B2-2025",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -72965,7 +73778,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2010",
+    "id": "SE-B2-2026",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73000,7 +73813,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2011",
+    "id": "SE-B2-2027",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73035,7 +73848,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2012",
+    "id": "SE-B2-2028",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73070,7 +73883,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2013",
+    "id": "SE-B2-2029",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73105,7 +73918,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2014",
+    "id": "SE-B2-2030",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73140,7 +73953,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2015",
+    "id": "SE-B2-2031",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73175,7 +73988,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2016",
+    "id": "SE-B2-2032",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73210,7 +74023,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2017",
+    "id": "SE-B2-2033",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73245,7 +74058,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2018",
+    "id": "SE-B2-2034",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73280,7 +74093,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B2-2019",
+    "id": "SE-B2-2035",
     "subjectId": "SE",
     "chapter": 2,
     "part": "B",
@@ -73315,7 +74128,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2020",
+    "id": "SE-A3-2036",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73379,7 +74192,105 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2021",
+    "id": "SE-A3-2037",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.e",
+    "topicTag": "Unit 3",
+    "question": "List kinds of behavioural and object models.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A3-2038",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.f",
+    "topicTag": "Unit 3",
+    "question": "Explain requirement review.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A3-2039",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73414,7 +74325,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2022",
+    "id": "SE-A3-2040",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73449,7 +74360,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2023",
+    "id": "SE-A3-2041",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73484,7 +74395,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2024",
+    "id": "SE-A3-2042",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73519,7 +74430,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2025",
+    "id": "SE-A3-2043",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73554,7 +74465,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2026",
+    "id": "SE-A3-2044",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73589,42 +74500,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2027",
-    "subjectId": "SE",
-    "chapter": 3,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
-    "question": "Justify the importance of refactoring.",
-    "paperName": "Aug 2024.pdf",
-    "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Aug 2024 Regular",
-        "paperName": "Aug 2024.pdf",
-        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-        "page": 1,
-        "qno": "1.e",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "SE-A3-2028",
+    "id": "SE-A3-2045",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73639,7 +74515,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -73647,7 +74523,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -73659,7 +74535,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2029",
+    "id": "SE-A3-2046",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73670,7 +74546,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
-    "question": "Illustrate the Software architecture?",
+    "question": "e) [lustrate the Software architecture?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -73694,7 +74570,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2030",
+    "id": "SE-A3-2047",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73729,7 +74605,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2031",
+    "id": "SE-A3-2048",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73764,7 +74640,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2032",
+    "id": "SE-A3-2049",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73799,33 +74675,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2033",
+    "id": "SE-A3-2050",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
-    "question": "List kinds of behavioural and object models.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Discuss analysis and design model?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "1.e",
         "marks": 1,
@@ -73834,33 +74710,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2034",
+    "id": "SE-A3-2051",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
-    "question": "Explain requirement review.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Write short notes on architecture patterns?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "1.f",
         "marks": 1,
@@ -73869,7 +74745,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2035",
+    "id": "SE-A3-2052",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73904,7 +74780,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2036",
+    "id": "SE-A3-2053",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73939,7 +74815,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2037",
+    "id": "SE-A3-2054",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -73974,7 +74850,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2038",
+    "id": "SE-A3-2055",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -74009,7 +74885,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2039",
+    "id": "SE-A3-2056",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -74044,7 +74920,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2040",
+    "id": "SE-A3-2057",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -74079,7 +74955,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2041",
+    "id": "SE-A3-2058",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -74114,7 +74990,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A3-2042",
+    "id": "SE-A3-2059",
     "subjectId": "SE",
     "chapter": 3,
     "part": "A",
@@ -74149,7 +75025,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2043",
+    "id": "SE-B3-2060",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74199,7 +75075,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2044",
+    "id": "SE-B3-2061",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74249,7 +75125,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2045",
+    "id": "SE-B3-2062",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74299,7 +75175,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2046",
+    "id": "SE-B3-2063",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74349,7 +75225,203 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2047",
+    "id": "SE-B3-2064",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 3",
+    "question": "Analyze briefly the structural system analysis in detail.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B3-2065",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 3",
+    "question": "What is the purpose of data flow diagrams? What are the notations used for the same?",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B3-2066",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.c",
+    "topicTag": "Unit 3",
+    "question": "Develop an online railway reservation system, which allows the; user to select book/cancel tickets using net banking/credit/debit cards.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B3-2067",
+    "subjectId": "SE",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4.d",
+    "topicTag": "Unit 3",
+    "question": "Draw and explain the use case diagram for an ATM system] in requirement elicitation.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B3-2068",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74384,7 +75456,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2048",
+    "id": "SE-B3-2069",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74419,7 +75491,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2049",
+    "id": "SE-B3-2070",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74454,7 +75526,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2050",
+    "id": "SE-B3-2071",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74489,7 +75561,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2051",
+    "id": "SE-B3-2072",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74524,7 +75596,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2052",
+    "id": "SE-B3-2073",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74559,7 +75631,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2053",
+    "id": "SE-B3-2074",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74594,7 +75666,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2054",
+    "id": "SE-B3-2075",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74629,7 +75701,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2055",
+    "id": "SE-B3-2076",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74664,7 +75736,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2056",
+    "id": "SE-B3-2077",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74699,7 +75771,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2057",
+    "id": "SE-B3-2078",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74734,7 +75806,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2058",
+    "id": "SE-B3-2079",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74769,22 +75841,22 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2059",
+    "id": "SE-B3-2080",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
-    "marks": 5,
+    "marks": 10,
     "years": [
       2024
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Explain a two level process? Why should system design be finished before the detailed design, rather starting the detailed design after the requirements specification? Explain with the help of a suitable example",
+    "question": "Explain a two level process? Why should system design be finished before the detailed design, rather starting the detailed design after the requirements specification? Explain with the help of a suitable example Ab) Explain briefly the following: 1) Coupling between the modules, it) The internal Cohesion of a module.",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -74792,19 +75864,19 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
         "page": 1,
         "qno": "4.a",
-        "marks": 5,
+        "marks": 10,
         "part": "B"
       }
     ]
   },
   {
-    "id": "SE-B3-2060",
+    "id": "SE-B3-2081",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74815,11 +75887,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "Explain briefly the following: i) Coupling between the modules, ii) The internal Cohesion of a module.",
+    "question": "Describe the way of conducting a component level design.",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -74827,7 +75899,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -74839,42 +75911,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2061",
-    "subjectId": "SE",
-    "chapter": 3,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "Describe the way of conducting a component level design.",
-    "paperName": "Aug 2024.pdf",
-    "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Aug 2024 Regular",
-        "paperName": "Aug 2024.pdf",
-        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
-        "page": 1,
-        "qno": "4.c",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "SE-B3-2062",
+    "id": "SE-B3-2082",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74889,7 +75926,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -74897,7 +75934,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -74909,7 +75946,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2063",
+    "id": "SE-B3-2083",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74944,7 +75981,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2064",
+    "id": "SE-B3-2084",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74979,7 +76016,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2065",
+    "id": "SE-B3-2085",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -74990,7 +76027,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Explain various strategies of design.Which design strategy is most popular and practical?",
+    "question": "Lc) Explain various strategies of design.Which design strategy is most} popular and practical?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -75014,7 +76051,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2066",
+    "id": "SE-B3-2086",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75049,7 +76086,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2067",
+    "id": "SE-B3-2087",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75084,7 +76121,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2068",
+    "id": "SE-B3-2088",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75119,7 +76156,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2069",
+    "id": "SE-B3-2089",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75154,7 +76191,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2070",
+    "id": "SE-B3-2090",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75189,33 +76226,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2071",
+    "id": "SE-B3-2091",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
-    "question": "Analyze briefly the structural system analysis in detail.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Explain with a neat diagram of architectural design?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "4.a",
         "marks": 5,
@@ -75224,33 +76261,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2072",
+    "id": "SE-B3-2092",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
-    "question": "What is the purpose of data flow diagrams? What are the notations used for the same?",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Analyze mapping data flow into software architecture?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "4.b",
         "marks": 5,
@@ -75259,33 +76296,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2073",
+    "id": "SE-B3-2093",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
-    "question": "Develop an online railway reservation system, which allows the} user to select book/cancel tickets using net banking/credit/debit cards.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Explain the design concepts in software engineering?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "4.c",
         "marks": 5,
@@ -75294,33 +76331,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2074",
+    "id": "SE-B3-2094",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "Draw and explain the use case diagram for an ATM system} in requirement elicitation.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Illustrate architectural styles and patterns? '.a) Compare black box tesung with white box testing:?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "4.d",
         "marks": 5,
@@ -75329,7 +76366,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2075",
+    "id": "SE-B3-2095",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75364,7 +76401,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2076",
+    "id": "SE-B3-2096",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75399,7 +76436,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2077",
+    "id": "SE-B3-2097",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75434,7 +76471,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2078",
+    "id": "SE-B3-2098",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75445,7 +76482,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
-    "question": "Describe the differences and interrelations between the UML sequence diagram and activity diagram. Use real-world examples to illustrate your answer.",
+    "question": "Describe the differences and interrelations between the UML diagram and activity diagram. Use real-world examples to your answer.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1-4ZiLHGbqSHpn9MtXORuNwf6lCngts_7",
     "pageNumber": 2,
@@ -75469,7 +76506,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2079",
+    "id": "SE-B3-2099",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75504,7 +76541,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2080",
+    "id": "SE-B3-2100",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75539,7 +76576,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2081",
+    "id": "SE-B3-2101",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75574,7 +76611,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2082",
+    "id": "SE-B3-2102",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75609,7 +76646,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2083",
+    "id": "SE-B3-2103",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75644,7 +76681,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2084",
+    "id": "SE-B3-2104",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75679,7 +76716,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2085",
+    "id": "SE-B3-2105",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75714,7 +76751,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2086",
+    "id": "SE-B3-2106",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75749,7 +76786,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2087",
+    "id": "SE-B3-2107",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75784,7 +76821,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2088",
+    "id": "SE-B3-2108",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75819,7 +76856,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2089",
+    "id": "SE-B3-2109",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75854,7 +76891,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B3-2090",
+    "id": "SE-B3-2110",
     "subjectId": "SE",
     "chapter": 3,
     "part": "B",
@@ -75889,7 +76926,105 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2091",
+    "id": "SE-A4-2111",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.g",
+    "topicTag": "Unit 4",
+    "question": "Describe white box testing.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A4-2112",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.h",
+    "topicTag": "Unit 4",
+    "question": "Distinguish between testing and debugging.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.h",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.h",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A4-2113",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -75924,7 +77059,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2092",
+    "id": "SE-A4-2114",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -75959,7 +77094,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2093",
+    "id": "SE-A4-2115",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -75994,7 +77129,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2094",
+    "id": "SE-A4-2116",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76029,7 +77164,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2095",
+    "id": "SE-A4-2117",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76064,7 +77199,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2096",
+    "id": "SE-A4-2118",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76099,7 +77234,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2097",
+    "id": "SE-A4-2119",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76134,7 +77269,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2098",
+    "id": "SE-A4-2120",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76169,7 +77304,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2099",
+    "id": "SE-A4-2121",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76184,7 +77319,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -76192,7 +77327,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -76204,7 +77339,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2100",
+    "id": "SE-A4-2122",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76219,7 +77354,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -76227,7 +77362,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -76239,7 +77374,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2101",
+    "id": "SE-A4-2123",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76274,7 +77409,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2102",
+    "id": "SE-A4-2124",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76309,7 +77444,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2103",
+    "id": "SE-A4-2125",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76344,7 +77479,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2104",
+    "id": "SE-A4-2126",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76379,7 +77514,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2105",
+    "id": "SE-A4-2127",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76414,7 +77549,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2106",
+    "id": "SE-A4-2128",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76449,33 +77584,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2107",
+    "id": "SE-A4-2129",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
-    "question": "Describe white box testing.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Write short notes on validation testing?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "1.g",
         "marks": 1,
@@ -76484,33 +77619,33 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2108",
+    "id": "SE-A4-2130",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
-    "question": "Distinguish between testing and debugging.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Explain art of debugging?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
         "qno": "1.h",
         "marks": 1,
@@ -76519,7 +77654,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2109",
+    "id": "SE-A4-2131",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76554,7 +77689,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2110",
+    "id": "SE-A4-2132",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76589,7 +77724,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2111",
+    "id": "SE-A4-2133",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76624,7 +77759,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2112",
+    "id": "SE-A4-2134",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76659,7 +77794,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2113",
+    "id": "SE-A4-2135",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76694,7 +77829,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2114",
+    "id": "SE-A4-2136",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76729,7 +77864,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2115",
+    "id": "SE-A4-2137",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76764,7 +77899,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A4-2116",
+    "id": "SE-A4-2138",
     "subjectId": "SE",
     "chapter": 4,
     "part": "A",
@@ -76799,7 +77934,71 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2117",
+    "id": "SE-B4-2139",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026,
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q5.d",
+    "topicTag": "Unit 4",
+    "question": "Discuss the process of debugging.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1zVaScPFgh6pZVACqsqFJhF-l_ts78MdE",
+        "page": 1,
+        "qno": "5.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B4-2140",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -76849,57 +78048,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2118",
-    "subjectId": "SE",
-    "chapter": 4,
-    "part": "B",
-    "marks": 5,
-    "years": [
-      2026,
-      2023
-    ],
-    "frequency": 2,
-    "questionNumber": "Q5.d",
-    "topicTag": "Unit 4",
-    "question": "Explain the process of debugging.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
-    "examType": "Regular/Supplementary",
-    "appearances": [
-      {
-        "year": 2026,
-        "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
-        "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
-        "qno": "5.d",
-        "marks": 5,
-        "part": "B"
-      },
-      {
-        "year": 2023,
-        "month": 9,
-        "session": "Sep 2023 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Sep 2023 Regular",
-        "paperName": "Aug 2023.pdf",
-        "driveFileId": "1zVaScPFgh6pZVACqsqFJhF-l_ts78MdE",
-        "page": 1,
-        "qno": "5.a",
-        "marks": 5,
-        "part": "B"
-      }
-    ]
-  },
-  {
-    "id": "SE-B4-2119",
+    "id": "SE-B4-2141",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -76949,7 +78098,154 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2120",
+    "id": "SE-B4-2142",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5.a",
+    "topicTag": "Unit 4",
+    "question": "Generalize your view about different varicties of testing.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "5.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "5.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B4-2143",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 4",
+    "question": "Discuss black box testing in a detailed view.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B4-2144",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5.c",
+    "topicTag": "Unit 4",
+    "question": "Explain about metrics for maintenance.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "5.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "5.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B4-2145",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -76984,7 +78280,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2121",
+    "id": "SE-B4-2146",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77019,7 +78315,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2122",
+    "id": "SE-B4-2147",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77054,7 +78350,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2123",
+    "id": "SE-B4-2148",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77089,7 +78385,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2124",
+    "id": "SE-B4-2149",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77124,7 +78420,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2125",
+    "id": "SE-B4-2150",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77159,7 +78455,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2126",
+    "id": "SE-B4-2151",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77194,7 +78490,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2127",
+    "id": "SE-B4-2152",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77229,7 +78525,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2128",
+    "id": "SE-B4-2153",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77264,7 +78560,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2129",
+    "id": "SE-B4-2154",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77299,7 +78595,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2130",
+    "id": "SE-B4-2155",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77334,7 +78630,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2131",
+    "id": "SE-B4-2156",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77369,7 +78665,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2132",
+    "id": "SE-B4-2157",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77384,7 +78680,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -77392,7 +78688,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -77404,7 +78700,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2133",
+    "id": "SE-B4-2158",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77415,11 +78711,11 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "Compare black box testing with white box testing.",
+    "question": "Compare black box testing with white box testing,",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -77427,7 +78723,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -77439,7 +78735,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2134",
+    "id": "SE-B4-2159",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77454,7 +78750,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 2,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -77462,7 +78758,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -77474,7 +78770,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2135",
+    "id": "SE-B4-2160",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77489,7 +78785,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 2,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -77497,7 +78793,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -77509,7 +78805,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2136",
+    "id": "SE-B4-2161",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77544,7 +78840,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2137",
+    "id": "SE-B4-2162",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77555,7 +78851,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "Justify the difference between Black box testing and White box testing?",
+    "question": "Sb) Justify the difference between Black box testing, and White box tosting,?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -77579,7 +78875,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2138",
+    "id": "SE-B4-2163",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77614,7 +78910,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2139",
+    "id": "SE-B4-2164",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77649,7 +78945,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2140",
+    "id": "SE-B4-2165",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77684,7 +78980,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2141",
+    "id": "SE-B4-2166",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77719,7 +79015,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2142",
+    "id": "SE-B4-2167",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77754,7 +79050,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2143",
+    "id": "SE-B4-2168",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77789,7 +79085,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2144",
+    "id": "SE-B4-2169",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77824,7 +79120,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2145",
+    "id": "SE-B4-2170",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77859,7 +79155,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2146",
+    "id": "SE-B4-2171",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -77894,34 +79190,34 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2147",
+    "id": "SE-B4-2172",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
-    "question": "Generalize your view about different varieties of testing.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Demonstrate art of debugeine, 5?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "5.a",
         "marks": 5,
         "part": "B"
@@ -77929,34 +79225,34 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2148",
+    "id": "SE-B4-2173",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
-    "question": "Discuss black box testing in a detailed view.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Explain about Metrics for software quality?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "5.b",
         "marks": 5,
         "part": "B"
@@ -77964,34 +79260,34 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2149",
+    "id": "SE-B4-2174",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
-    "question": "Explain about metrics for maintenance.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Demonstrate art of debugging",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "5.c",
         "marks": 5,
         "part": "B"
@@ -77999,7 +79295,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2150",
+    "id": "SE-B4-2175",
+    "subjectId": "SE",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.d",
+    "topicTag": "Unit 4",
+    "question": "Simplity test strategies tor conventional software >. a) [explain about RMMM Plan?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B4-2176",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78034,7 +79365,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2151",
+    "id": "SE-B4-2177",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78069,7 +79400,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2152",
+    "id": "SE-B4-2178",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78104,7 +79435,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2153",
+    "id": "SE-B4-2179",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78139,7 +79470,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2154",
+    "id": "SE-B4-2180",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78174,7 +79505,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2155",
+    "id": "SE-B4-2181",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78209,7 +79540,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2156",
+    "id": "SE-B4-2182",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78244,7 +79575,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2157",
+    "id": "SE-B4-2183",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78279,7 +79610,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2158",
+    "id": "SE-B4-2184",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78314,7 +79645,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2159",
+    "id": "SE-B4-2185",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78349,7 +79680,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2160",
+    "id": "SE-B4-2186",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78384,7 +79715,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2161",
+    "id": "SE-B4-2187",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78419,7 +79750,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2162",
+    "id": "SE-B4-2188",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78454,7 +79785,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2163",
+    "id": "SE-B4-2189",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78489,7 +79820,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B4-2164",
+    "id": "SE-B4-2190",
     "subjectId": "SE",
     "chapter": 4,
     "part": "B",
@@ -78524,7 +79855,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2165",
+    "id": "SE-A5-2191",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78589,7 +79920,71 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2166",
+    "id": "SE-A5-2192",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026,
+      2024
+    ],
+    "frequency": 3,
+    "questionNumber": "Q1.j",
+    "topicTag": "Unit 5",
+    "question": "Define risk components.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Regular",
+        "examType": "Regular",
+        "semester": null,
+        "label": "Aug 2024 Regular",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A5-2193",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78639,19 +80034,68 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2167",
+    "id": "SE-A5-2194",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
     "marks": 1,
     "years": [
-      2026,
+      2025,
       2024
     ],
     "frequency": 2,
-    "questionNumber": "Q1.j",
+    "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Define risk components?",
+    "question": "Write about quality concepts?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 1,
+        "part": "A"
+      },
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1Z2RSU8t1IBt7djgITCnDM7ZESzY4ybaB",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "SE-A5-2195",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5",
+    "question": "What is FTR?",
     "paperName": "jan 2026.pdf",
     "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
     "pageNumber": 1,
@@ -78668,28 +80112,28 @@ const QUESTIONS_DATABASE = [
         "paperName": "jan 2026.pdf",
         "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
         "page": 1,
-        "qno": "1.j",
+        "qno": "1.i",
         "marks": 1,
         "part": "A"
       },
       {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Aug 2024 Regular",
-        "paperName": "Aug 2024.pdf",
-        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
         "page": 1,
-        "qno": "1.j",
+        "qno": "1.i",
         "marks": 1,
         "part": "A"
       }
     ]
   },
   {
-    "id": "SE-A5-2168",
+    "id": "SE-A5-2196",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78724,7 +80168,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2169",
+    "id": "SE-A5-2197",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78759,7 +80203,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2170",
+    "id": "SE-A5-2198",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78794,7 +80238,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2171",
+    "id": "SE-A5-2199",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78829,7 +80273,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2172",
+    "id": "SE-A5-2200",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78864,7 +80308,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2173",
+    "id": "SE-A5-2201",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78879,7 +80323,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 1,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -78887,7 +80331,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -78899,7 +80343,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2174",
+    "id": "SE-A5-2202",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -78910,7 +80354,7 @@ const QUESTIONS_DATABASE = [
     "frequency": 1,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
-    "question": "Determine few Software risks?",
+    "question": ". 1) Determine few Software risks?",
     "paperName": "Dec 2024.pdf",
     "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
     "pageNumber": 1,
@@ -78934,42 +80378,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2175",
-    "subjectId": "SE",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2025
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.j",
-    "topicTag": "Unit 5",
-    "question": "Explain risk projection and how it is used in risk management?",
-    "paperName": "Dec 2024.pdf",
-    "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
-    "pageNumber": 1,
-    "semester": "IV",
-    "examType": "Supplementary",
-    "appearances": [
-      {
-        "year": 2025,
-        "month": 1,
-        "session": "Jan 2025 Supplementary",
-        "examType": "Supplementary",
-        "semester": "IV",
-        "label": "Jan 2025 Supplementary",
-        "paperName": "Dec 2024.pdf",
-        "driveFileId": "1z_ImkK_xr4rPnNrTl2t91LRyzq0HmOcB",
-        "page": 1,
-        "qno": "1.j",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "SE-A5-2176",
+    "id": "SE-A5-2203",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79004,42 +80413,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2177",
-    "subjectId": "SE",
-    "chapter": 5,
-    "part": "A",
-    "marks": 1,
-    "years": [
-      2024
-    ],
-    "frequency": 1,
-    "questionNumber": "Q1.i",
-    "topicTag": "Unit 5",
-    "question": "Write about quality concepts?",
-    "paperName": "Jan 2024 reg.pdf",
-    "driveFileId": "1Z2RSU8t1IBt7djgITCnDM7ZESzY4ybaB",
-    "pageNumber": 1,
-    "semester": "III",
-    "examType": "Regular",
-    "appearances": [
-      {
-        "year": 2024,
-        "month": 2,
-        "session": "Feb 2024 Regular",
-        "examType": "Regular",
-        "semester": "III",
-        "label": "Feb 2024 Regular",
-        "paperName": "Jan 2024 reg.pdf",
-        "driveFileId": "1Z2RSU8t1IBt7djgITCnDM7ZESzY4ybaB",
-        "page": 1,
-        "qno": "1.i",
-        "marks": 1,
-        "part": "A"
-      }
-    ]
-  },
-  {
-    "id": "SE-A5-2178",
+    "id": "SE-A5-2204",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79074,42 +80448,42 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2179",
+    "id": "SE-A5-2205",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
     "marks": 1,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
-    "questionNumber": "Q1.i",
+    "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
-    "question": "What is FTR?",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "question": "Simplify software reliability?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
     "pageNumber": 1,
-    "semester": "III",
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
         "page": 1,
-        "qno": "1.i",
+        "qno": "1.j",
         "marks": 1,
         "part": "A"
       }
     ]
   },
   {
-    "id": "SE-A5-2180",
+    "id": "SE-A5-2206",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79144,7 +80518,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2181",
+    "id": "SE-A5-2207",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79179,7 +80553,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2182",
+    "id": "SE-A5-2208",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79214,7 +80588,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2183",
+    "id": "SE-A5-2209",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79249,7 +80623,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2184",
+    "id": "SE-A5-2210",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79284,7 +80658,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2185",
+    "id": "SE-A5-2211",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79319,7 +80693,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-A5-2186",
+    "id": "SE-A5-2212",
     "subjectId": "SE",
     "chapter": 5,
     "part": "A",
@@ -79354,7 +80728,71 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2187",
+    "id": "SE-B5-2213",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026,
+      2024
+    ],
+    "frequency": 3,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 5",
+    "question": "Create a risk table for the project that if you are the project manager for a major software company. you have been asked to lead a team that's developing \"next generation \"word- processing software.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Regular",
+        "examType": "Regular",
+        "semester": null,
+        "label": "Aug 2024 Regular",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
+        "page": 2,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B5-2214",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79404,7 +80842,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2188",
+    "id": "SE-B5-2215",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79454,7 +80892,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2189",
+    "id": "SE-B5-2216",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79504,19 +80942,18 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2190",
+    "id": "SE-B5-2217",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
     "marks": 5,
     "years": [
-      2026,
-      2024
+      2026
     ],
     "frequency": 2,
-    "questionNumber": "Q6.b",
+    "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
-    "question": "Create a risk table for the project that if you are the project manager for a major software company. you have been asked to lead a team that's developing \"next generation \"word- processing software.",
+    "question": "Discuss about reactive Vs Pro-active risk strategies.",
     "paperName": "jan 2026.pdf",
     "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
     "pageNumber": 2,
@@ -79533,19 +80970,117 @@ const QUESTIONS_DATABASE = [
         "paperName": "jan 2026.pdf",
         "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
         "page": 2,
-        "qno": "6.b",
+        "qno": "6.a",
         "marks": 5,
         "part": "B"
       },
       {
-        "year": 2024,
-        "month": 8,
-        "session": "Aug 2024 Regular",
-        "examType": "Regular",
-        "semester": "IV",
-        "label": "Aug 2024 Regular",
-        "paperName": "Aug 2024.pdf",
-        "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "6.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B5-2218",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q6.c",
+    "topicTag": "Unit 5",
+    "question": "Define the Risk Projection Process.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
+        "page": 2,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B5-2219",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q6.d",
+    "topicTag": "Unit 5",
+    "question": "Discuss about Software Reviews.",
+    "paperName": "jan 2026.pdf",
+    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+    "pageNumber": 2,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "jan 2026.pdf",
+        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
+        "page": 2,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "mr 22 supple.pdf",
+        "driveFileId": "1RfbixxYsmgeA09IdPILtz7W7YxKtpWUA",
         "page": 2,
         "qno": "6.d",
         "marks": 5,
@@ -79554,7 +81089,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2191",
+    "id": "SE-B5-2220",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79589,7 +81124,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2192",
+    "id": "SE-B5-2221",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79624,7 +81159,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2193",
+    "id": "SE-B5-2222",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79659,7 +81194,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2194",
+    "id": "SE-B5-2223",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79694,7 +81229,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2195",
+    "id": "SE-B5-2224",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79729,7 +81264,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2196",
+    "id": "SE-B5-2225",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79764,7 +81299,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2197",
+    "id": "SE-B5-2226",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79799,7 +81334,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2198",
+    "id": "SE-B5-2227",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79834,7 +81369,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2199",
+    "id": "SE-B5-2228",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79869,7 +81404,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2200",
+    "id": "SE-B5-2229",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79904,7 +81439,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2201",
+    "id": "SE-B5-2230",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79939,7 +81474,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2202",
+    "id": "SE-B5-2231",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79974,7 +81509,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2203",
+    "id": "SE-B5-2232",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -79989,7 +81524,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 2,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -79997,7 +81532,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -80009,7 +81544,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2204",
+    "id": "SE-B5-2233",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80024,7 +81559,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 2,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -80032,7 +81567,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -80044,7 +81579,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2205",
+    "id": "SE-B5-2234",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80059,7 +81594,7 @@ const QUESTIONS_DATABASE = [
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
     "pageNumber": 2,
-    "semester": "IV",
+    "semester": null,
     "examType": "Regular",
     "appearances": [
       {
@@ -80067,7 +81602,7 @@ const QUESTIONS_DATABASE = [
         "month": 8,
         "session": "Aug 2024 Regular",
         "examType": "Regular",
-        "semester": "IV",
+        "semester": null,
         "label": "Aug 2024 Regular",
         "paperName": "Aug 2024.pdf",
         "driveFileId": "1boIa7tfxFVIKOTkxg0y0261iMtaKFKEE",
@@ -80079,7 +81614,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2206",
+    "id": "SE-B5-2235",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80114,7 +81649,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2207",
+    "id": "SE-B5-2236",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80149,7 +81684,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2208",
+    "id": "SE-B5-2237",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80184,7 +81719,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2209",
+    "id": "SE-B5-2238",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80219,7 +81754,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2210",
+    "id": "SE-B5-2239",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80254,7 +81789,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2211",
+    "id": "SE-B5-2240",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80289,7 +81824,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2212",
+    "id": "SE-B5-2241",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80324,7 +81859,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2213",
+    "id": "SE-B5-2242",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80359,7 +81894,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2214",
+    "id": "SE-B5-2243",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80394,7 +81929,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2215",
+    "id": "SE-B5-2244",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80429,7 +81964,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2216",
+    "id": "SE-B5-2245",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80464,34 +81999,34 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2217",
+    "id": "SE-B5-2246",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
-    "question": "Discuss about reactive Vs Pro-active risk strategies.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Gd) Explain in detail (sO 9000 quality standards?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "6.a",
         "marks": 5,
         "part": "B"
@@ -80499,34 +82034,69 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2218",
+    "id": "SE-B5-2247",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 5",
+    "question": "Explain about software risks? Che",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "SE-B5-2248",
+    "subjectId": "SE",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
-    "question": "Define the Risk Projection Process.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Demonstraic risk identification?",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "6.c",
         "marks": 5,
         "part": "B"
@@ -80534,34 +82104,34 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2219",
+    "id": "SE-B5-2249",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
     "marks": 5,
     "years": [
-      2026
+      2025
     ],
     "frequency": 1,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
-    "question": "Discuss about Software Reviews.",
-    "paperName": "jan 2026.pdf",
-    "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-    "pageNumber": 2,
-    "semester": "III",
+    "question": "Not one 1 \" thd nota 4 1 ves \"4 an wees ors aN, Pvt, UVRAEIKGS.",
+    "paperName": "jan 2025 supple.pdf",
+    "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+    "pageNumber": 1,
+    "semester": null,
     "examType": "Regular/Supplementary",
     "appearances": [
       {
-        "year": 2026,
+        "year": 2025,
         "month": 1,
-        "session": "Jan 2026 Regular/Supplementary",
+        "session": "Jan 2025 Regular/Supplementary",
         "examType": "Regular/Supplementary",
-        "semester": "III",
-        "label": "Jan 2026 Regular/Supplementary",
-        "paperName": "jan 2026.pdf",
-        "driveFileId": "1rfbaesWw8UcfQDP7ey4zsxzErd6M-MVA",
-        "page": 2,
+        "semester": null,
+        "label": "Jan 2025 Regular/Supplementary",
+        "paperName": "jan 2025 supple.pdf",
+        "driveFileId": "1EfdY4pk2UsIWI4ZSUi3aXXMGzGegz4RW",
+        "page": 1,
         "qno": "6.d",
         "marks": 5,
         "part": "B"
@@ -80569,7 +82139,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2220",
+    "id": "SE-B5-2250",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80604,7 +82174,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2221",
+    "id": "SE-B5-2251",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80639,7 +82209,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2222",
+    "id": "SE-B5-2252",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80674,7 +82244,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2223",
+    "id": "SE-B5-2253",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80709,7 +82279,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2224",
+    "id": "SE-B5-2254",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80744,7 +82314,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2225",
+    "id": "SE-B5-2255",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80779,7 +82349,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2226",
+    "id": "SE-B5-2256",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80814,7 +82384,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2227",
+    "id": "SE-B5-2257",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80849,7 +82419,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2228",
+    "id": "SE-B5-2258",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80884,7 +82454,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2229",
+    "id": "SE-B5-2259",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80919,7 +82489,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2230",
+    "id": "SE-B5-2260",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80954,7 +82524,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2231",
+    "id": "SE-B5-2261",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -80989,7 +82559,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2232",
+    "id": "SE-B5-2262",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -81024,7 +82594,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2233",
+    "id": "SE-B5-2263",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -81059,7 +82629,7 @@ const QUESTIONS_DATABASE = [
     ]
   },
   {
-    "id": "SE-B5-2234",
+    "id": "SE-B5-2264",
     "subjectId": "SE",
     "chapter": 5,
     "part": "B",
@@ -81090,6 +82660,1546 @@ const QUESTIONS_DATABASE = [
         "qno": "6.d",
         "marks": 5,
         "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2265",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Enumerate the classification of ecosystems.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2266",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Summarize the socioeconomic impacts of floods and droughts.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "1.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2267",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Define the biogeochemical cycle. Explain the carbon cycle in detail.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "2.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2268",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "List renewable energy sources and explain their advantages.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "2.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2269",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Define food chain and food web, giving suitable examples.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "3.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2270",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Discuss the consequences of overexploitation of mineral resources.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "3.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2271",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 2",
+    "question": "Describe the benefits and problems associated with the construction of big dams.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "4.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2272",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 2",
+    "question": "Explain ecosystem values and services.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "4.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2273",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.a",
+    "topicTag": "Unit 3",
+    "question": "Define genetic, species, and ecosystem biodiversity with examples.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "5.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2274",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 3",
+    "question": "What are ecological pyramids? Discuss the pyramid of energy.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "5.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2275",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 3",
+    "question": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "6.a",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2276",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 3",
+    "question": "Summarize the benefits of forests and the harmful effects of deforestation.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 6,
+        "session": "June 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "June 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 3,
+        "qno": "6.b",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2277",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Describe the structure of an ecosystem.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "1.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2278",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "List the benefits and problems associated with big dams.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2279",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Define the biogeochemical cycle. Explain the processes of the nitrogen cycle with a diagram.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "2.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-2280",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Analyze the reasons for deforestation and its consequences on the environment.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "2.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2281",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Explain food chains and food webs with suitable examples. Give their significance.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "3.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2282",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "What is a flood? Analyze the socioeconomic implications of flood conditions.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "3.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2283",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 2",
+    "question": "Enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "4.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-2284",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 2",
+    "question": "Illustrate the universal energy-flow model of an ecosystem.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "4.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2285",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.a",
+    "topicTag": "Unit 3",
+    "question": "Explain genetic, species, and ecosystem biodiversity with examples.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "5.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2286",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 3",
+    "question": "Evaluate the environmental effects of mineral-resource extraction.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "5.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2287",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 3",
+    "question": "Discuss the consumptive and social values of biodiversity, giving examples of each.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "6.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-2288",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 3",
+    "question": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Descriptive",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Descriptive",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 4,
+        "qno": "6.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-A1-2289",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1",
+    "topicTag": "Unit 1",
+    "question": "Organisms that feed on dead matter and convert it into nutrients are called: (a) Producers (b) Detritivores (c) Carnivores (d) Decomposers.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "1",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A1-2290",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2",
+    "topicTag": "Unit 1",
+    "question": "The accumulation of non-biodegradable matter or chemicals in living organisms is known as: (a) Ecological balance (b) Bioaccumulation (c) Carrying capacity (d) Biomagnification.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "2",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A1-2291",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3",
+    "topicTag": "Unit 1",
+    "question": "The amount of radiant energy stored at the producer level by photosynthesis is called: (a) Primary production (b) Homeostasis (c) Carrying capacity (d) All of the above.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "3",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A1-2292",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4",
+    "topicTag": "Unit 1",
+    "question": "The total number of living organisms at the various trophic levels of a food chain is depicted by: (a) Pyramid of numbers (b) Pyramid of energy (c) Pyramid of mass (d) All of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "4",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-2293",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5",
+    "topicTag": "Unit 2",
+    "question": "Which of the following is unidirectional in an ecosystem? (a) Flow of energy (b) Flow of nutrients (c) Flow of matter (d) All of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "5",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-2294",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6",
+    "topicTag": "Unit 2",
+    "question": "Which of the following are non-renewable energy sources? (a) Coal (b) Petroleum (c) Natural gas (d) All of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "6",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-2295",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q7",
+    "topicTag": "Unit 2",
+    "question": "Solar energy can be harnessed using the principle of: (a) Photoelectric effect (b) Photo-oxidation (c) Photo-reduction (d) None of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "7",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-2296",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q8",
+    "topicTag": "Unit 2",
+    "question": "Identify the environmental damage caused by mining: (a) Devegetation (b) Ground subsidence (c) Air and water pollution (d) All of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "8",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-2297",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q9",
+    "topicTag": "Unit 3",
+    "question": "Variation among individuals of the same species is which type of biodiversity? (a) Genetic (b) Species (c) Ecosystem (d) Both (b) and (c).",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "9",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-2298",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q10",
+    "topicTag": "Unit 3",
+    "question": "The direct-use values of biodiversity include: (a) Food (b) Fuels (c) Medicines (d) All of these.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "10",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-2299",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q11",
+    "topicTag": "Unit 3",
+    "question": "The organisms that feed directly on producers are called ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "11",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-2300",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q12",
+    "topicTag": "Unit 3",
+    "question": "The process of eating and being eaten in an ecosystem is called ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "12",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-2301",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q13",
+    "topicTag": "Unit 4",
+    "question": "Wind energy can be harnessed using ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "13",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-2302",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q14",
+    "topicTag": "Unit 4",
+    "question": "True or false: Nitrogen-fixing bacteria are present in the root nodules of leguminous plants.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "14",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-2303",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q15",
+    "topicTag": "Unit 4",
+    "question": "True or false: Gross Primary Productivity (GPP) = Net Primary Productivity (NPP) + Respiration (R).",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "15",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-2304",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q16",
+    "topicTag": "Unit 4",
+    "question": "A scarcity of water leads to a situation called ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "16",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-2305",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q17",
+    "topicTag": "Unit 5",
+    "question": "The process of extracting ores from mines is called ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "17",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-2306",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q18",
+    "topicTag": "Unit 5",
+    "question": "Give examples of non-renewable energy resources.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "18",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-2307",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q19",
+    "topicTag": "Unit 5",
+    "question": "Quinine is obtained from the bark of the ____ tree.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "19",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-2308",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q20",
+    "topicTag": "Unit 5",
+    "question": "The variety and variability among all living organisms is called ____.",
+    "paperName": "ES-model question paper-MID-1.pdf",
+    "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 11,
+        "session": "November 2023 Midterm I - Objective",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "November 2023 Midterm I - Objective",
+        "paperName": "ES-model question paper-MID-1.pdf",
+        "driveFileId": "1VAunuOEsY3Za2l5dtB5qtUXc1qr1o2E2",
+        "page": 5,
+        "qno": "20",
+        "marks": 1,
+        "part": "A"
       }
     ]
   }

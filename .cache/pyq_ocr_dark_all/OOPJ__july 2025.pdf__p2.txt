@@ -1,0 +1,10 @@
+6.a) — [ixplain about JTree with the help of suitable example. — 5 3 5) 1,23
+
+6.b) — Explain how parameter is passed to Applet. 5 2 S  1,2,3
+OR
+
+6.c) — [:xplatn in detail about classification of swing components. 5 2 S  1,2,3
+
+6.d)  Ditferentiate between AWT and swings. 5 2. 5  1,2,3,
+
+M: Marks: I: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

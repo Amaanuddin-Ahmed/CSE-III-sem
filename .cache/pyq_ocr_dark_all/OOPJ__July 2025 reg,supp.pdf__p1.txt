@@ -1,0 +1,60 @@
+Hall Ticket Number:
+| | | | | | | | | | | MR-21 | Code: B415CS4S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, July 2025
+Java Programming
+(Common to CSE and IT)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+: Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question | M L | CO | PO
+l.a) Define Dynamic method dispatch. 2 | | 1,2
+l.b) List the different types of inheritance. 2 | | 1,2
+[.c) Multiple inheritance can be achieved using interfaces. How? 2 | | 1,2
+l.d) Define throw, throws, finally. 2 | 2 1,2
+l.e) Define Serialization and Enumerations. 2 | 3 1,2
+1. f) | Why threads need to be synchronized in java. 2 It 4 1,2
+I.g) | Compare Hashtable and Dictionary. 2 2 3 1,2
+l.h) — List the operations on Stack. 2 | 3 1,2
+1.1) Draw the Applet life Cycle. 2 2 #5 | ,2
+1.j) List out the limitations of AWT. 2 | 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M;L)CO | PO |
+
+2.a) Define Class. Explain declaration of object with an example. 6 2 | 1,2,3
+
+2.b) Show the syntax to declare an object for bank class defined with two | 4 | | 1,2,3
+relevant attributes and two methods.
+OR
+2.c) Illustrate the usage of super keyword with an example. 4 2 1 1,2,3
+2.d) Specify the purpose of a constructor. Explain different types of | 6 3 l 1,2
+constructors with examples.
+3.a) Explain nested interfaces with a suitable example. 4 2 2 1,2
+3.b) Define CLASSPATH. Analyze the different access protection| 6 4 2 1,2
+mechanisms used in packages?
+
+OR
+3.c) List any three built-in exceptions in java with examples. 4 1 2 | ,2
+3.d) Write a java program to define user-defined exceptions. 6 3 2 1,2,3
+4.a) Explain different console input and output methods with examples. 4 2 3 1,2
+4.b) Write a java program to read a string and sort the string using streams. 6 3 3 1,2,3
+OR
+4.c) | Compare thread-based and process-based multitasking. 4 3 4 |,2
+4.d) Write a java program to copy one file to another file. 6 3 3  1,2,3
+5.a) | Explain about String Tokenizer with an example. 5 2 3. 1,2,3
+5S.b) Explain LinkedList with an example. 5 2 3 1,2,3
+OR
+S.c) Explain Collection classes with an example. 4 2 3 1,2
+5.d) Write a Java program to read your name and access the content using} 6 3 3  1,2,3
+iterator.
+6.a) Write a simple Applet program to display welcome message. 6 3 5  1,2,3
+6.b) Explain about MVC architecture in detail. 4 2 5 1,2
+OR
+6.c) Write a java program to handle mouse and keyboard events. 6 3 5 1,2,3
+6.d) Explain different layout managers. 4 2 § 1,2 |
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

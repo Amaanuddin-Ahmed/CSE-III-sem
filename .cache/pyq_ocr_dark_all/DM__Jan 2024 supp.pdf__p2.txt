@@ -1,0 +1,40 @@
+4c) Construct a recursive version of a binary search alporithim. | 5 3 3
+f#.d) ‘The English alphabet contains 2.1 consonants and five vowels. How many | 5 | 3
+
+stings of six lowercase letters of the English alphabet contain
+a) exactly one vowel?
+
+b) isxactly two vowels?
+
+c) At least one vowel?
+
+d) At Ieast two vowels?
+
+52a) Explain Bayes’ theorem with an example. | 5 / “4
+5.) Find the solution to the recurrence relation ty = Gay Ebay fF Gay 4 with | ? a
+the intual conditions ag = 2, ay = 5, and ay = 15,
+OR
+5.c) What is the variance of the number of times a 6 appears when a fair dic is | 5 | 4
+rolled 10 times? . .
+5, d) Pind the cocflicient of x’ in the power series of (x? bx? +b YR EXD EES 2. A
+x byt b x! to) using Recurrence Relation. |
+it) Deferming wheiher the graphs are lsomorphic. 5 5 5
+Vit ue
+®t
+va \
+va ~
+Vv? V5 we us
+\ ,
+* “) ud
+v3 Ved
+6, b) Hlustrate how Kruskal’s alporithr and Prinw’s alporithm are used to finda | 2 5
+minimum spanning tres, using. a weiphicd eraph with at least ciphi
+vertices and 15 edges.
+OR
+6.) What is Puler’s formula? tustraie with an exatniple, 5 | 5
+6. d) Pxplatn how to use breadib-tirst search to find the loupily of a shortest | 5 2 y
+
+path beiweeu two vertices in an undirected graph.
+
+M: Marks: 1: Bloom’s Uaxouomy Love: CO: Course Outcome: PO: Provramune Outcome
+B 3 y 3

@@ -1,0 +1,11 @@
+OR
+5.c) | How does Java handle mouse events using event listeners? 5 2 4 p
+5.d) Compare and contrast Flow, Grid layout managers in terms of | 5 3 4 a
+flexibility and usage.
+6.a) Describe the MVC architecture with a neat diagram. 5 2 5 1
+6.b) How are parameters passed to an applet? Illustrate with a simple | 5 4 5 2
+program.
+OR
+6.c) Design a simple calculator using Swing components like JTextField,| 10 5 5 3
+JButton, and appropriate event handling.
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

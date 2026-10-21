@@ -1,0 +1,22 @@
+5.a) | In how many ways can 14 people be partitioned into 6 teams when 5 3 4 1
+the first and second teams have 3 members each and the third, fourth,
+fifth, and sixth teams have 2 members each?
+5.b) — Prove that C(n, r) = C(n -l, r) + C(n -l, r- 1). 5 2 a 1
+OR
+5.c) Find the coefficient of v2xy3z4 In(v+wt+x+y+z)’”. 5 2 4 13
+5.d) | How many integers between | and 1000 are not divisible by 2,3,5 or | 5 3 4 1
+7?
+6.a) | Show that the two graphs are isomorphic or not. 5 2 5 1,2
+c d 7 by
+e——-e 2
+N\
+je ez h’'e —ee’
+NLA | |
+i h 2
+8 ff
+6.b) Show that tree with n vertices has exactly n— 1 edges. iS) 2 5 1
+OR
+6.c) | What is a Hamiltonian Cycle? Draw bipartite graph K3,4 and prove | 5 2 5 1
+that this graph does not have a Hamiltonian cycle.
+6.d) Write short notes on DFS and BFS 5 2 5 1
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

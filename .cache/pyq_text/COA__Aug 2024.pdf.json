@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B324CS5S\nTime: 3 Hours\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Supplementary Examinations, July/August-2024\nComputer Organization and Architecture\n(Common to CSE, CSB, CSM and CSD)\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nExplain Von-Neumann Architecture with neat diagram.\n1\n2\n1\n1\n1. b)\nDistinguish Instruction Cycle and Machine Cycle.\n1\n4\n1\n1\n1. c) Explain in-detail about all data transfer and manipulation\ninstructions.\n1\n2\n2\n1\n1. d)\nExplain basic organization of control unit with diagram.\n1\n2\n2\n2\n1. e)\nExplain 2's complement.\n1\n2\n3\n2\n1.f)\nExplain Decimal Arithmetic unit.\n1\n2\n3\n3\n1. g)\nExplain types of memories.\n1\n2\n4\n1. h) Differentiate Synchronous and Asynchronous data transmission (any\n2 differences).\n1\n4\n4\n2\n1. i)\nExplain Pipelining.\n1\n2\n5\n2\n1. j)\nExplain parallel processing.\n1\n2\n5\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\n2. a) Explain the block diagram of digital computer 4bit arithmetic circuit?\n2. b) Describe the various registers in a typical CPU with a neat diagram.\nOR\n2. c)\nExplain the following.\ni) Conditional branching micro program.\nii) Micro instruction instruction format.\n2. d) Draw and explain single bus structure.\n3. a) Explain Addressing modes in-detail with examples\n3. b) List the types of Arithmetic instructions and explain it.\nOR\n3. c) Explain the concept of micro programmed control unit.\n3. d) Explain the design of Control unit with a neat diagram.\n4. a) Perform the arithmetic operations (+42) +(-13) and (-42) -(-13) in\nbinary using signed 2's complement representation for negative\nnumbers.\n4. b) Explain the difference between micro programmed control and\nhardwired control.\nOR\nM\nL\nCO\nPO\n5\n3\n1\n3\n5\n3\n1\n2\n5\n2\n1\n1\n5\n2\n1\n2\n5\n2\n2\n2\n5\n2\n2\n3\n5\n2\n2\n1\n5\n2\n2\n2\n5\n3\n3\n4\n5\n3\n3\n1\n4. c) Explain the fixed and floating type numbers that are represented in\ncomputers with example.\n5\n2\n3\n1\n5\n2\n3\n2\n4. d) Suppose two numbers located in memory are to be added. What are\nthe functional units of digital computer system will carry out this?\nExplain.\n5. a) Explain input/output operations of computer architecture.\n5. b) Discuss the different mapping techniques used in cache memories\nand their relative merits and demerits.\n5\n2\n4\n1\n5\n2\n4\n2\nP.T.O.\n",
+   "chars": 2319,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n5. c) How can you enhance the speed and capacity of memories? Explain.\n5. d) Explain the Direct Memory Access. How it improves the\nperformance of the system?\n5\n2\n4\n2\n5\n2\n4\n3\n6. a) Differentiate CISC and RISC Architectures.\n5\n4\n5\n1\n6. b) Explain Arithmetic pipeline with suitable diagram.\n5\n2\n5\n2\nOR\n6. c) Explain the characteristics of Multiprocessor?\n5\n2\n5\n2\n6. d) Explain in-detail about vector processing and array processing.\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme\n5\n2\n5\n3\nOutcome\n",
+   "chars": 519,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

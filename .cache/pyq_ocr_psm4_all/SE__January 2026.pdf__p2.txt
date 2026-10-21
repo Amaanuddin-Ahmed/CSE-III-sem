@@ -1,0 +1,6 @@
+OR
+6.c) | What types of risk occur during software development? Discuss. > a 5 7
+6.d) Summarize the role of formal technique reviews in achieving good | 5 Z 5 4
+quality software.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B415CB4S2\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2025/January 2026\nObject Oriented Programming Using Java\n(Common to CSB, CSM and CSD)\nTime: 3 Hours\nQ. No.\nAnswer ALL Questions\nPart-A (10 x 2 = 20 Marks)\nStem of the Question\nMax. Marks: 70\nM\nL\nCO\nPO\n1. c) Define a package in Java. What are the steps to import a user-defined\npackage?\n1. a) List any four principles of Object-Oriented Programming.\n1. b) Explain the difference between method overloading and overriding\nwith an example.\n1. d) Illustrate the use of throws keyword in exception handling.\n1. e) What is the purpose of thread synchronization?\n2\n1\n1\n1\n2\n2\n1\n1\n2\n2\n2\n1\n2\n3\n2\n2\n2\n2\n3\n1\n1. f)\nDifferentiate between byte stream and character stream.\n2\n2\n3\n2\n1. g)\nDefine Iterator. How is it used in a Collection?\n2\n2\n4\n1\n1.h) Write the difference between HashMap and TreeMap.\n2\n2\n4\n1\n1. i)\nWhat is event delegation? Give one example.\n2\n2\n5\n2\n1. j)\nDefine LayoutManager and mention any two of its types.\n2\n1\n5\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\n2. a) Explain the structure of a Java program and the role of JVM and\nJDK.\n2. b) Write a Java program to demonstrate the use of \"this\" and \"super\"\nkeywords.\nOR\n2. c) Discuss access modifiers in Java with examples.\n2. d) Write a Java program to demonstrate single and multilevel\ninheritance.\n3. a) Explain how interfaces support multiple inheritance in Java.\n3. b) Develop a Java program implementing multiple interfaces for\ncalculating area and volume.\n3. c)\nOR\nExplain different types of exceptions in Java.\n3. d) Develop a Java program using try-catch-finally to handle\nArrayIndexOutOfBoundsException.\n4. a) Explain the thread life cycle and how priorities affect scheduling.\n4. b) Write a Java program to create two threads and run them\nconcurrently.\nM\nL\nCO\nPO\n5\n2\n1\n1\n5\n2\n1\n1,2\n5\n2\n1\n1\n5\n2\n1\n1,2\n5\n5\n2\n3\n2\n2\n1,2\n5\n2\n5\n3\n2\n2\n1\n1,2,3\n5\n2\n5\n3\n3\n3\n1\n1,2\nOR\n4. c) Explain file handling using FileReader and BufferedReader classes.\n4. d) Develop a Java program to count the number of words in a text file.\n5\n2\n5\n3\n3\n3\n1,2\n5. a) Categorise the major interfaces in the Java Collections framework?\nExplain any three.\n5\n3\n4\n5. b) Implement a Java program to demonstrate sorting using\nCollections.sort().\n5\n3\n4\n1,2\nP.T.O.\n",
+   "chars": 2339,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "OR\n5. c) Explain the role of HashSet, LinkedHashSet, and TreeSet with\nexamples.\n5\n2\n4\n1\n5. d) Develop a Java program that counts unique words from a file using a\nHashSet.\n5\n4\n4\n1,2,3\n6. a) Discuss the architecture of Swing and its advantages over AWT.\n5\n2\n5\n1\n6. b)\nDevelop a Java Swing program to display a calculator GUI.\n5\n4\n5\n1,2\nOR\n6. c) Explain different layout managers used in GUI design.\n6. d) Develop a Java program to demonstrate mouse and keyboard event\nhandling using adapter classes.\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n5\n2\n5\n1\n5\n4\n5\n1,2,3\nPage 2 of 2\n",
+   "chars": 608,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

@@ -1,0 +1,69 @@
+Hall Ticket Number:
+
+PITT E ITT tt tt
+
+Time: 3 Hours
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+
+B.Tech. IV Semester Regular Examinations, Aug/Sep-2023
+
+Introduction to Database Management Systems
+
+(Common to CSB, CSM &CSD)
+
+Answer ALL Questions
+Part-A (10 x 2 =20 Marks)
+
+Code: B413CB3
+
+Max. Marks: 70
+
+Q. No. | Stem of the Question M | L [co | PO
+l.a) | Write about the Database languages. Z 1 1 1,2
+1.b) | What is a weak entity set? How do you represent it using ER diagram? | 2 2 1 1,2
+1.c) | What are the SQL statements used to retrieve and modify the 2 1 Z 1,2
+
+database?
+1.d) | What is the difference between primary key and unique key? Give | 2 2 a 1,2
+example.
+1.e) | What is schema refinement? Z 1 3 1,2
+1.f) Define multi valued dependency and Join dependency. 2 1 3 1,2
+1.g) | What are the properties of Transaction? Za 1 4 1,2
+1.h) When do you say that two schedules are conflict serializable and View | 2 2 4 1,2
+serializable?
+
+1.i) Differentiate between Primary Indexing and Secondary Indexing. 2 3 5 1,2
+1.3) | Write the differences between tree based and Hash based indexes. 2 3 5 1,2
+Part-B (5 x 10 = 50 Marks)
+
+| Q. No. Stem of the Question M |L [co] PO
+2.a) What is DBMS? Explain its advantages over file system. 5 1 1 1,2
+2.b) | What are speciality databases? Explain. 5 1 1 1,2
+OR
+2.c) Draw an ER diagram for an Airline Reservation system. a 3 I 1,2
+2.d) Write about the Integrity constraints over Relations with examples. 5 1 I Le
+3.a) Explain the fundamental operations in relational algebra with | 5 1 pe 1,2
+examples.
+3.b) | What is a view? Can you create view on multiple tables? Illustrate =] 3 2 1,2
+With examples.
+OR
+3.c) Consider the following schema: 5 3 2 1,2
+Suppliers(sid: integer, sname: string, address: string)
+Parts(pid: integer, pname: string, color: string)
+Catalog(sid: integer, pid: integer, cost: real)
+The Catalog relation lists the prices charged for parts by Suppliers.
+Write the following queries in SQL
+1. Find the pnames of parts for which there is some supplier.
+2. Find the snames of suppliers who supply every part.
+3. Find the pnames of parts supplied by Acme Widget Suppliers and
+by no one else.
+4. Find the sids of suppliers who charge more for some part than the
+average cost of that part (averaged over all the suppliers who supply
+that part).
+5. For each part, find the sname of the supplier who charges the most
+for that par.
+3.d) What is trigger? Explain how to implement triggers in SQL? 5 3 2 1,2
+
+P.T.O.
+

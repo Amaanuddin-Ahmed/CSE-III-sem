@@ -1,0 +1,60 @@
+Hall Ticket Number:
+
+MR-22 Code: B425CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2025 / January 2026
+
+Software Engineering
+(Common to CSE, CSB and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q. No. | Stem of the Question M |L|CO | PO
+1.a) | What are software engineering layers? 1 | l |
+1.b) | What is process assessment? l l l I
+1.c) | What is interface specification? l l Z 2
+1.d) Define requirements validation. 1 2 2 2
+l.e) | What is class diagram? 1 1 3 3
+1.f) | What is software architecture? Define. 1 1 3 3
+1.g) What is software testing? | 1 4 4
+1.h) | What is meant by debugging? 1 1 ‘| 4
+1.1) | What is software review? 1 1 5 4
+1.j) Define Risk Refinement. 1 2 5 A
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L |Cco | PO
+2.a) Illustrate in brief about that waterfall model. 5 2 1 1
+2.b) Explain about evaluation of software engineering methodologies. 5 2 | |
+
+OR
+2.c) Explain about software development process models. 5 2 1 l
+2.d) Demonstrate the various software myths. 5 2 1 |
+3.a) Explain how a software requirements document is structure? 5 3 2 2
+3.b) What are feasibility studies? Explain its types. 5 2 Z ze
+OR
+3.c) | What are the desirable characteristics of a good software requirement | 5 3 2 2
+specification document? Discuss.
+3.d) Explain about requirements management phases of requirement | 5 2 Z 2
+
+engineering process.
+
+4.a) Briefly explain about the design model. 5 3 .. 3
+4.b) Model the class diagram and explain various relationships that exist | 5 3 3 3
+between classes.
+
+OR
+4.c) Construct software architecture. Explain why it may be necessary to | 5 3 a a
+design the system architecture before the specifications.
+4.d) Distinguish between sequence and collaboration diagrams. 5 4 3 3
+5.a) Explain in detail about black box testing techniques. 3 4 4 4
+5.b) Explain clearly about metrics for software quality. 5 3 a |
+OR
+5.c) | Write short note on system testing. 5 2 4 44
+5.d) Discuss about metrics for testing in detail. 5 3 4 4
+6.a) Explain significance formal technical review. 5 2 5 a:
+6.b) Examine the methods for Risk Projection. 5 4 5 4
+
+P.T.O.

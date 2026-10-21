@@ -1,0 +1,44 @@
+5. a)
+
+6. d)
+
+Draw and explain a flowchart for a multiplication algorithm. 5 3 l
+Describe the decimal arithmetic operations used in computers. | 5 4. ‘
+Explain the role of a decimal arithmetic unit in performing these
+
+operations effectively in digital systems.
+
+Explain the need for input-output interface and discuss| 5 2 3
+asynchronous data transfer in detail.
+Illustrate interrupt priority schemes with a neat diagram. Explain | 5 4 4
+how these schemes are utilized in managing interrupts.
+
+OR
+Explain the following Auxiliary memory devices with suitable | 5 2 3
+diagrams:
+i. Magnetic Disks ii. Magnetic Tape.
+Draw and explain the memory hierarchy in a computer system with | 5 2 2
+
+necessary block diagrams.
+
+Differentiate CISC and RISC computer characteristics? 5 2 |
+List various parallel processing challenges. Draw the block | 5 3 2
+diagram of 5 stage pipeline system.
+
+OR
+Explain inter processor communication and synchronization in a| 5 zZ 4
+
+shared multiprocessor environment.
+Explain the implementation of Arithmetic and Instructional | 5 3 2
+pipeline.
+
+2,4
+
+1,2
+
+1,2
+Le
+
+2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

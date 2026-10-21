@@ -1,0 +1,20 @@
+Generalize your view about different varieties of testing. 5 4 4
+
+Discuss black box testing in a detailed view. 5 3 4
+OR
+
+Explain about metrics for maintenance. 5 2 4
+
+Discuss the process of debugging. 5 2 4
+
+Discuss about reactive Vs Pro-active risk strategies. 5 3 5
+
+Create a risk table for the project that if you the project manager for| 5 6 5
+a major software company. You have been asked to lead a team
+that’s developing “next generation” “word processing software”
+
+OR
+Define the Risk Projection Process. > 3 $5
+Discuss about Software Reviews. 5 4 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

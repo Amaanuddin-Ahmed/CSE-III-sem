@@ -1,0 +1,34 @@
+“A
+
+Ay,
+
+_b)
+
+y. «)
+
+i \
+(i)
+
+Discuss the Memory Tierarchy in computer system with reeard to | 5 3 A
+speed, Size and Cost?
+
+Explain the mechanism involved in Maepnetic Disks and Magnetic | 5 . 4
+Tapes.
+
+OR
+Ixplam about DMA controller and its mode of data transfer. 5 2 A
+Contrast Daisy-Chaining priority aud Parallel priority Interrupt with its | 5 4. a:
+
+hardware dlagrain.
+
+Write about pipelining and its importance in high speed applications. — | 5 2 5
+Ol
+
+explain inter processor communication and synchronization in a shared 1 3 5 5
+
+multiprocessor environment.
+
+ifustrate serial and parallet arbitration produces in a shared | 5 3 5
+
+multiprocessor crvironment.
+M: Marks: .: Bloomn’s Paxonomy Level: CO: Course Outcome; PO: Propramime Outcoie

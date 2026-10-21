@@ -1,0 +1,32 @@
+5.)
+
+5. d)
+6. a)
+
+6. b)
+
+6. c)
+6. d)
+
+OR
+
+Solve the recurrence relation an = 2an—1 +3an—2 for n= 2 where 5 3 4
+do =2 and a, =2.
+
+State and Prove Baye’s Theorem. 5 2 a
+What are the chromatic numbers of the graph G and H?
+
+5 | 5
+¢ 4 i ¢ Py f
+Write down the applications of trees. 5 2 5
+OR
+State and Prove fundamental theorem of graph theory. 5 2 2
+Find the minimal spanning tree using Kruskal’s algorithm. > 2 5
+
+L2
+
+Le
+
+12
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

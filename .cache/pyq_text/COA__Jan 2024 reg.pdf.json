@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\n15/02/24 F0\nCode: B324CS5\nTime: 3 Hours\nМAHАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Regular Examinations, Jan/Feb-2024\nComputer Organization and Architecture\n(Common to CSE, CSB, CSM & CSD)\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nDraw the block diagram to depict P: R2€R1.\n1\n1\n1\n1\n1. b)\nWhat is the role of PC and IR?\n1\n1\n2\n1\n1. c)\nWhat is the role of micro programmed control unit?\n1\n2\n2\n2\n1. d)\nWhat is the difference between ADD and ADDC instructions?\n1\n2\n2\n2\n1. e) Convert the following into binary numbers.\n1\n3\n5\n2\ni. (ACD)16=()2\nii. (657)8-()2\n1. f) Draw the hardware configuration for signed-magnitude addition and\nsubtraction.\n1. g)\nWhat is pipelining?\n1. h)\nDefine mapping in cache memory?\n1. i) List the characteristics of CISC architecture.\n1. j) Write the classification of parallel processing.\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\n2. a) The initial values of 8-bit registers R1, R2, R3, R4 are given below.\nR1=11110000, R2=11111111, R3=10111001, R4=11101010\nDetermine the values of the registers R1, R2, R3, R4 after execution of\nthe following operations.\nR1←R1+R2\nR3←R3^R4\nR2R2+1\nR1R1-R3\n2. b)\nList and explain the phases of instruction cycle with flowchart.\nOR\n2. c) Consider the register R=11011101. Determine the value of R after\nperforming the following operations in sequence.\ni. Logical shift left\nii. Circular shift right\niii. Logical shift right\niv. Circular shift left\n2. d) Draw the common bus structure to connect basic computer registers.\n3. a) Differentiate hardwired control and microprogrammed control.\n3. b) Write the assembly language program to evaluate A = (B+C)/D*Е\nusing two address instruction format.\nOR\n3. c) Explain the fields of microinstruction instruction format.\n3. d) Explain different addressing modes present in accessing the data in\nmemory?\n1\n1\n5\n1\n1\n1\n3\n1\n1\n3\n1\n1\n1\n3\n2\n1\n1\n4\n1\nM\nL\nCO\nPO\n5\n3\n2\n1\n5\n2\n2\n1\n5\n3\n2\n1\n5\n2\n2\n1\n5\n2\n2\n3\n5\n3\n2\n1\n5\n2\n2\n1\n5\n3\n2\n1\nP.T.O.\n",
+   "chars": 2046,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "",
+   "chars": 0,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

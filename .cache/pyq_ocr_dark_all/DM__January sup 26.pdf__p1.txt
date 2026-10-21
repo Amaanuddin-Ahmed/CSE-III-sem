@@ -1,0 +1,51 @@
+Hall Ticket Number:
+| | | | | | | | | MR-22 Code: B425CS2S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, December 2025 / January 2026
+Discrete Mathematics
+(Common to CSE, IT and CSM)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x I = 10 Marks)
+
+Q. No. | Stem of the Question M | L | co | PO
+1.a) | What are well formed formulas? l l l l
+l.b) Define CNF. l 2 l l
+l.c) | What is the difference between a subset and a proper subset? 1 2 2 2
+1.d) | Give an example of a Bijective function. l I 2 2
+l.e) Define Algebraic system. 1 I 3 l
+1.f) | How do we denote Boolean algebra? 1 2 3 l
+1.g) Define permutation. I l 4 |
+1.h) How many 10 digit numbers are there with exactly six 1’s? I 2 4 2
+1.i) Define order and size of a Graph. 1 2 5 I
+1.4) What is the chromatic number of a graph? Il | 5 l
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. Stem of the Question M | L | CO | PO
+2.a) Show that (P VQ) A7=(-P A (- QV -R))) V CPA 7Q) V CP Am] OS 2 | 3
+R) is a tautology.
+2.b) Prove that 4x M(x) follows logically from the premises (x) (H(x) — M(x)) | 5 1 1 3
+
+and 4x H(x).
+OR
+2.c) Obtain PDNF for (-P — R) A(Q@P). 5 I 1 2
+2.d) Define Predicate. Discuss about Free and Bound variables with | 5 l 2 l
+examples.
+3.a) Let A= {1,2,3,4}, B= {3,4,5,6}, C= {1,3,5} 5 2 2 2
+Find: a) AUB, b) ANB, c)(AUB)NC, d)(AUBUC), e) (ANBNC).
+3.b) Define Binary operation. Discuss some general properties of Binary | 5 2 2 1
+operations.
+OR
+3.c) Draw Hasse diagram for [Ija, |]. 5 3 2 2
+3.d) State and explain about any four frequently used Primitive Recursive | 5 4 2 l
+Functions.
+4.a) Discuss about Homomorphism of Semigroups and Monoids. 5 2 3 l
+4.b) Prove that in any lattice (L,V,A), the following identity holds: 5 2 3 2
+aV(aAb)=a and aA(aVb)=a.
+OR
+4.c) Give an example of an algebraic system that is associative but not} 5 2 3 2
+commutative. Prove both properties using examples.
+4.d) Describe the concepts Subalgebra and Direct Product. 5 l 3 l
+
+P.T.O.

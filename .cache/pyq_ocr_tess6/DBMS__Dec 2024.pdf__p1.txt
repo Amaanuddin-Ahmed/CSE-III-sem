@@ -1,0 +1,54 @@
+Hall Ticket Number:
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+Database Management Systems
+(Common to CSE, IT, CSB, CSM and CSD)
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+(Q.No. [ Stemofthe Question | ML [CO | PO |
+l.a) Explain Entity set with suitable example. 1 2 1 1,2
+1.b) | What are the most common errors you can potentially face in data} 1 1 | l2
+
+modeling?
+1.c) List the constraints in relation model. 1 1 2 1,2
+1.d) Describe different operators in relational algebra. 1 2 2 1,2
+l.e) Discuss different types of SQL operators. 1 2 3 1,2,3,12
+1.f) Illustrate UNION and INTERSECT in SQL. 1 2 3 1,2,3,12
+1.g) Name the disadvantages of Time stamp protocol. 1 1 A 1,2,3,12
+1.h) — Classify the Lock based protocol. 1 2 4 1,2,3
+1.i) | Explain memory storage device hierarchy. 1 2 5 1,2
+1.j) | Mention the objectives of file organization. 1 1 5 L2
+Part-B (5 x 10 = 50 Marks)
+
+(Q.No.[ ss Stemofthe Question | ML | CO] PO |
+2.a) Outline Database — System Applications in detail. 5 2 1 1,2
+2.b) | What are five main functions of a Database administrator? 5 1 1 I 2
+
+OR
+2.c) | Compare Weak Entity Set and Strong Entity Set with example. 5 2 1 1,2
+2.d) Design an ER diagram for a Hospital management system that; 5 5 1 12
+includes entities such as patients, employees, doctors, nurses,
+room, receptionist, test report, and billing. Specify the
+relationships between these entities and their attributes.
+3.a) Describe constraints on a single relationship. 5 2 2 1,2,3,12
+3.b) Explain Tuple Relation Calculus with example. > 2 Z 12512
+OR
+3.c) Write the given queries in SQL 5 4 2 1,2,3,12
+student(Roll-number, Name, Address, Age, Phone)
+i. Select names of all students who stay in Delhi.
+ii. Find the name, Roll-number of all students in ascending order
+by age.
+iii. Select Name, Address, AVG (age) from student based on
+Address.
+3.d) i. Develop Salesman Table (salesperson ID, name, city and| 5 4 2 1,2,3,12
+commission).
+ii. Create a view to Update the city name which salesperson ID is
+'5007'.",
+4.a) | Write the given queries in SQL 5 4 3 1,2,3,12
+Sailors(sid: integer, sname: string, rating: integer, age: real);
+Boats(bid: integer, bname: string, color: string);
+Reserves(sid: integer, bid: integer, day: date).
+i. Find the ids and names of sailors who have reserved two
+different boats on the same day.
+P.T.O.

@@ -1,0 +1,61 @@
+Hall Ticket Number:
+
+MR-22 Code: B424CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+Software Engineering
+(Common to CSE, CSB and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks
+Stem of the Question
+Explain about Software Myths?
+Define CMMI?
+What are the User Requirements?
+Summarize requirement elicitation and analysis?
+Illustrate the Software architecture?
+Construct a Collaboration diagram with your own example?
+Justify the concept of White box testing?
+List few metrics for software quality?
+Determine few Software risks?
+Explain risk projection and how it is used in risk management?
+
+Part-B (5 x 10 = = 3 0 Marks
+
+Explain about Changing nature of software and its impact in software
+engineering.
+Define Process framework and explain in detail its activities.
+OR
+Why Agile is used and also tell the Agile methodology.
+Explain the Spiral model and Waterfall Model.
+
+Explain how a software requirement document is structured?
+Distinguish between functional and non-functional requirements?
+
+OR
+
+List the activities of Requirements elicitation and analysis? Explain in
+detail.
+Explain the Software Requirement Specification (SRS).
+
+Determine the basic elements of class based model with suitable
+diagram.
+Distinguish between Coupling and Cohesion? How do they affect
+software design?
+
+OR
+
+Explain various strategies of design .Which design strategy is most
+popular and practical?
+
+Evaluate the various challenges faced during the design process and
+strategies for overcoming them?
+
+Explain the art of debugging with sketch?
+Justify the difference between Black box testing and White box
+testing?
+
+OR
+
+P.T.O.

@@ -1,0 +1,73 @@
+Hall Ticket Number:
+
+MR-21 Code: B414CB4S3
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+Object Oriented Programming using Java
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks
+
+List the core OOP’s concepts.
+1.b) | What is Constructor overloading?
+
+1.c) | What is Exception handling?
+
+1.d) Define Package. How to create Package?
+
+1.e) | Compare thread based and process based multi-tasking.
+1.f) | Define Enumerations with example.
+
+1.g) | What is Collection?
+
+1.h) Describe StringTokenizer.
+
+Define an Applet.
+
+What is Layout Manager? List Layout Managers.
+
+Part-B (5 x 10 = 50 Marks
+
+Describe in detail about the control flow statements in Java with
+suitable examples.
+2.b) Describe the following in detail
+
+(i)Data Abstraction and encapsulation.
+
+(ii)Polymorphism and dynamic binding
+
+OR
+2.c) Discuss the following:
+(i) using super keyword.
+
+(i1) Data types in Java
+2.d) Analyse and Develop a simple Java program to sort the given
+numbers in increasing order.
+
+Illustrate what is meant by package? How it is created and
+implemented in Java.
+3.b) | What is an interface? Explain how to define and implement by taking
+
+suitable Example.
+
+OR
+
+3.c) | Summarize what is finally class. How to catch exception?
+
+Write an example.
+3.d) Discuss in detail about exception handling constructs and write a
+program to illustrate Divide by zero exception.
+
+Describe the lifecycle of thread in Java with an example.
+4.b) Explain the concept of readers writers’ problem and implement the
+concept using the suitable class and methods available in Java.
+OR
+4.c) Explain the following
+(i)thread priorities.
+(ii)Explain how threads are created in Java.
+4.d) (illustrate the concept of synchronization in thread.
+(ii) The Stream Classes-Byte streams and Character streams.
+
+P.T.O.

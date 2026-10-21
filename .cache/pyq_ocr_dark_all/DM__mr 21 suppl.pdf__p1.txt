@@ -1,0 +1,62 @@
+Hall Ticket Number:
+|] | tod | MR-21 Code: B315CS582
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, December 2025/January 2026
+Discrete Mathematics
+(Common to CSE, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question 'M |L|COo | PO
+l.a) Define Tautology with a suitable example. 2 l l |
+1.b) | Write contra positive of the conditional statement: p: 2+2=4, q: lam | 2 l | l
+
+not the Prime Minister of India.
+1.c) Define Binary relation. 2 l 2 l
+l.d) If A={a,8}, B={1,2,3}. Find out (AxB) U (BxA) and (AxB) 9 (BxA). | 2 1 2 1,2
+l.e) | What is recursive algorithm? 2 | 3 |
+1.f) | Write the Principle of Mathematical Induction. 2 | 3 1
+1.g) | Write the Fibonacci Recurrence Relation. 2 | 4 1
+1.h) What is Inclusion-Exclusion principle? 2 | 4 l
+1.1) | What is Planar Graph? 2 l 5 1
+1.j) | Define Shortest Path Algorithm. 2 | 5 l
+Part-B (5 x 10 = 50 Marks)
+
+| Q. No. | Stem of the Question M L | CO | PO
+
+2.a) Prove that (Vx)(P(x)VQ(x))=(x)P(x)V(Ax)Q(x) 5 3 l 1,2
+
+2.b) Verify the following argument is valid by translating into symbols and 5 2 1 1,2
+using rules of inference
+If Clifton does not live in Franc, then he does not speak French
+Clifton does not drive a Datsum
+If Clifton lives in France, then he rides a bicycle
+Either Clifton speaks French, or he drives a Datsun
+Hence, Clifton rides a bicycle.
+
+OR
+2.c) Show that rA(pVq) isa valid conclusion from the premises 5 2 1 1,2
+(pVq),(q-r),(p—m) and (~m).
+2.d) Show that (p—q) A (qr) — (pr) is a Tautology. 5 2 1 1,2
+3.a) LetA= {1, 2,3, 4} and R= {(1, 2), (2, 3), G, 4), (2, I}. 5 2 2 1,2
+
+Determine the (i) Reflexive Closure of R (11) Symmetric Closure of R
+(iii) transitive closure of R?
+3.b) Describe Hasse diagram? Let X = {2, 3, 6, 12, 24, 36}, and the relation | 5 3 2 1,2
+<be such that x <y ifx divides y. Draw the Hasse diagram of (X, <).
+OR
+3.c) | What are the truth sets of the Predicates of P(x),Q(x) and R(x), where 5 2 2 1,2
+the domain is the set of integers and P(x) is |x|=1,Q(x) is x°=2 and R(x)
+is |x|=x.
+
+3.d) Find fog and gof, where (x)=x’°+1 and g(x)=x+2 are functions from R 5 3 2 1,2
+to R.
+4.a) | Suppose the postal department prints only 5 and 9 cent stamps. Prove 5 3 3.0 1,2
+
+that it is possible to make up any postage of n cents using only 5 and 9
+cent stamps for n > 35.
+4.b) Explain the principle of strong induction with example. 5 2 3 l
+
+P.T.O.

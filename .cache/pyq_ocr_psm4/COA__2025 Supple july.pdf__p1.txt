@@ -1,0 +1,67 @@
+Inf F] oe SA)
+Code: B315CB6S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, July 2025
+Computer Organization and Architecture
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2= 20 Marks)
+
+Hall Ticket Number:
+
+What are register transfer logic languages? Explain RTL statements?
+Define machine instruction what are the elements of machine
+instruction?
+
+Draw the block diagram of a control memory and associated
+hardware needed for selecting the next microinstruction address.
+How to map micro operation to a micro instruction address.
+
+What are the various ways to represent the negative value in fixed
+point numbers?
+
+What is meant by normalization in floating point representation?
+Why do we need it?
+
+Compare synchronous and Asynchronous serial data transmission.
+Differentiate between Write through a cache policy and Write back a
+cache policy?
+
+Compare RISC & CISC design philosophy?
+
+Explain the static Inter process arbitration process?
+
+Part-B (5 x 10 = 50 Marks)
+
+Demonstrate the functional units and components that are used for
+Understanding of computer Organization with neat sketch.
+Construct a circuit to addition, subtraction for 4 bit register using full
+adders and explain control logic?
+
+OR
+Identify different types of instructions and describe their formats with
+their Constituent Fields?
+Design and implement a very simple CPU with respective RTL code
+and fetch decode cycles?
+
+What are the major design considerations in microinstruction
+sequencing?
+What are the design goals for a designer while deciding a hardwired
+or micro-programmed CU for a CPU?
+
+OR
+Explain about microinstruction sequencing techniques, specifically
+variable format address microinstruction.
+What is addressing mode? List out the various addressing modes with
+suitable examples.
+
+Explain about sign magnitude and 2’s complement approaches for
+representation fixed point numbers? Why 2’s complement is
+preferable.
+
+What is overflow and underflow? If the computer is considered as
+infinite system does still have these problems?
+
+P.T.O.

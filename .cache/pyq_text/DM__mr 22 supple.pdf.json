@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B325CB2\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Regular/Supplementary Examinations, December 2025/January 2026\nDiscrete Mathematics\n(Common to CSB and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nMax. Marks: 60\nPart-A (10 x 1 = 10 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\n1. a)\nWrite the following statement in symbolic form.\n1\n2\n1\nPO\n1\n\"If either Jerry takes Calculus or Ken takes Sociology, then Larry\nwill take English.\"\n1. b) What is the difference between Statement Calculus and Predicate\nCalculus?\n1\n2\n1\n1\n1. c) Define a set and give two examples.\n1\n1\n2\n1. d) Recall the formula for the number of subsets of a set with n elements.\n1. e) List any two lattice basic operations.\n1\n1\n2\n1\n1\n1\n4\n1. i)\n1. f) Define monoid and state its properties.\n1. g) What is meant by repetition in permutation?\nTell about Euler circuit.\n1\n1\n4\n1\n1\n3\n1. h) Omit the principle of inclusion and exclusion.\n1. j) Find the purpose of a Hamiltonian circuit.\n1\n1\n3\n1\n1\n1\n5\n1\n5\n1\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\nM\nL\nCO\nPO\n2. a) Explain the basic connectives (AND, OR, NOT, IF-THEN, IF AND\nONLY IF) with truth tables.\n5\n2\n1\n1\n5\n2\n1\n2\n2. b) Write an equivalent formula for P(Q R) which contains neither\nthe biconditional nor the conditional.\n2. c)\nOR\nObtain the principal disjunctive normal forms of the following:\n(a) PVQ (b) (PAQ) V (PAR) V (QAR)\n2. d) Let S(x) be the predicate \"x is a multiple of 5\" where x is an integer.\nExpress the statement \"There is no integer that is a multiple of 5\"\nusing predicate logic.\n3. a) If A={1,2,3,4} and B={3,4,5,6} find AUB, ANB, A-B and AAB\nusing Venn diagrams.\n3. b) Define total ordering and partial ordering with one example each.\nOR\n5\n4\n1\n2\n5\n3\n1\n2\n5\n2\n2\n2\n5\n2\n2\n1\n5\n4\n2\n2\n3. d) Given A={1,2,3}, R={(1,1),(2,2),(3,3),(1,2),(2,3)}. Find if R\nreflexive, symmetric, or transitive.\nis\n5\n2\n2\n2\n3. c) Let f(x)=3x+2 for xER. Show that f is a one-to-one function.\n4. a) Show with examples how lattice operations satisfy commutative and\nassociative laws.\n5\n4\n4\n1\n4. b) Explain the concept of identity and inverse elements in algebraic\nsystems with examples.\n5\n2\n4\n1\nOR\nP.T.O.\n",
+   "chars": 2171,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "4. c) Explain the concept of complement in a Boolean algebra and\nillustrate with an example.\n5\n2\n4\n1\n4. d) Apply Boolean simplification to minimize the expression\nF=AB+A C+BC\n5\n3\n4\n2\n5. a) Find the number of ways in which the letters of the word\n'MATHEMATICS' can be arranged.\n5\n3\n3\n2\n5. b) Explain the practical importance of combinatorial analysis in\nalgorithm design.\n5\n2\n3\n3\nOR\n5. c) State and explain the Binomial Theorem with meaning of each term.\n5. d) Compute the number of ways to distribute 10 identical balls into 4\nboxes such that no box is empty.\n5\n2\n3\n1\n5\n4\n3\n2\n6. a) Explain the concept of graph isomorphism with an example.\n6. b) Find the chromatic number of a graph with 4 vertices and 4 edges\nforming a cycle.\nOR\n6. c) Explain the practical significance of the Four-Color Problem.\n6. d) Determine if a directed graph can have both Euler and Hamiltonian\ncircuits.\n5\n2\n5\n1\n5\n2\n5\n2\n5\n2\n5\n3\n5\n5\n5\n2\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 991,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

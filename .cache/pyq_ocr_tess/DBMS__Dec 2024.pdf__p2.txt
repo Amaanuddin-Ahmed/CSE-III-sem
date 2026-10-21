@@ -1,0 +1,66 @@
+4.c)
+4. d)
+
+5. a)
+5. b)
+
+ii. Find the ids of sailors who have reserved a red boat or a green
+
+boat.
+iii. Find the name and the age of the youngest sailor.
+Mention the differences between triggers and stored procedures
+with example.
+
+OR
+Discuss about Third and BCNF Normal form with example.
+Discuss the problems caused by decomposition in Schema
+refinement.
+
+Explain Timestamp based protocols in detail.
+Describe Multiple Granularity in detail.
+
+OR
+What is the Distinction between a Deferred and an Immediate
+Update?
+Describe recovery algorithm using log records from transaction
+failure.
+
+Differentiate Static Hashing and Dynamic Hashing.
+Compare Ordered indexing and Hashing.
+OR
+Explain Clustered Index and Non-Clustered Index with example.
+Illustrate different Types of File Organizations techniques.
+
+5
+
+5
+=
+
+2
+
+2
+pi
+
+Ww
+
+5
+
+5
+5
+
+1.2,3,12
+
+12,312
+12,012
+
+123
+1,2,3
+12.3
+G23
+12,3
+1,2,3
+
+1,2,3
+12,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

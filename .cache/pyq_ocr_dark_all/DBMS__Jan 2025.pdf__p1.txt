@@ -1,0 +1,77 @@
+Hall Picket Number:
+ryt] fit) -[4 / MR-21 | Code:B414C8383
+
+MAHATMA GANDHI INSTIPUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Uxaminations, December 2024/January 2025
+Database Management Systems
+(Common to CSE and IT)
+
+lime: 3 Elours Answer ALL Questions Max. Marks: 70
+Q.No. | Stem of the Question | M L | co | PO ;
+1.a) What do you mean by Logical Data Independence? 2 | l 1,2
+1.b) | What is Composite Attribute? Give an example. 2 2 l 1,2
+1.c) Compare Procedural and Non- Procedural Query Languages. 2 4 2 1,2
+1.d) | What is the purpose of Join operations? 2 l 2 1,2
+l.e) What is trivial l‘unctional Dependency? 2 l 3 1,?
+1.f) Why Decomposition is unportant? Also Explain the types of | 2 3 3 12.3
+
+Decomposition.
+1.g) Define a Schedule? Give an Example. 2 | 4 1.2
+l.h) = What is ‘Transaction? [’xplain with example. 2 ? 4 1,2
+1.1) | What is Sparse index? Give an example. 2 2 5 1,2
+1.j) Classify the Hash Indexing techniques. 2 2 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M [|L | CO | PO
+2.a) Explain Data Abstraction. Why is it important? 3 2 l 1,2
+2.b) What is ER diagram? Discuss various symbols used in ER diagram.
+
+Draw and Explain the ER diagram for Library Management System.
+OR
+2.c) Explain the Advantages of Database management system over File} ,, 4 . a
+System. LU Z i LZ
+
+3.a)  Lxplain the Dilference between Nested Queries and Correlated
+Queries. Explain with the help of an example.
+
+3.b) What is Referential Integrity? Explain its enforcement in DBMS by
+illustrating with an example SQL statements. 5 3 2 1,2
+
+OR
+
+3.c) Consider the following relations:
+
+Hotel (hotelNo, name, address)
+
+Room (roomNo, hotelNo, type, price)
+
+Booking (hotelNo, guestNo, dateFrom, dateTo, roomNo)
+
+Guest (guestNo, name, address)
+
+Write the SQL statements for the following: .
+
+a es ; ; , ; lO 3 2 1,2,3
+
+i) List all family rooms with a price below Rs.400, in ascending order
+
+of price.
+
+11) Display the number of hotels.
+
+iii) Display guestNo, name, address and roomNo details of guests
+
+booked room from UI -Jan-25.
+
+iv) Display notelNo aud the aunber of roois tt cach hotel,
+
+5 2 2 1,2,3
+
+A a) What is Normalization? Differcutiate between BCNE and 3 NE wtih
+proper example.
+
+Ab) What do you mean by redundancy? Discuss about insertion, updation
+and deletion anomalies.
+
+OR

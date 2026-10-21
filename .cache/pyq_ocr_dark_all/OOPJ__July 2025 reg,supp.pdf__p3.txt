@@ -1,0 +1,37 @@
+5.)
+
+5. d)
+
+6. b)
+
+6. d)
+
+Explain methods associated with Set Interfaces of Collection | 5 3 4
+framework with Examples.
+
+With syntax, explain the following utility classes. 5 I 4
+1) String Vokenizer 11) Date and Calendar i) Scanner.
+OR
+Differentiate between ArrayList and Vector. List the methods of | 5 4 “4
+Stack class.
+With syntax, explain the following utility classes. 5 I 4
+
+1) HashSet it) TreeSet — 111) Hash ‘Table.
+
+Write an applet program to handle all mouse events 5 3 5
+Explain briefly components and containers used in swings. Wrile a | 5 3 5
+
+program to create three buttons with caption OK, SUBMIT, |
+CANCET..
+
+OR
+Create a swing applet that has two buttons named as “CSBS” and | 5 3 5
+“TE and When either of the button is pressed, it should display
+“CSBS ts pressed” and “I'l 1s pressed respectively”.
+What are the various layout managers used tn Java? Give java code | 5 ? 5
+
+for at least two types.
+
+M: Marks; L.: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Prograinme Outcome
+
+yaa)

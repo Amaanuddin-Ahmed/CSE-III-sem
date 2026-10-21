@@ -1,0 +1,39 @@
+5. b)
+
+5. ©)
+5. d)
+
+6. a)
+6. b)
+6. Cc)
+
+6. d)
+
+Given the main memory access time is 1200ns and cache access time is | 5 4
+100ns. The average memory access time is not to exceed 120 ns.
+Determine the hit ratio for the cache?
+
+OR
+Compare and Contrast between Memory mapped I/O and isolated I/O 4 4
+Discuss the design of typical input/output interface? 6 2
+
+Explain inter-process arbitration? Give various arbitration techniques | 6 2
+
+with neat sketch and explain in detail.
+
+Write about Time shared common bus and multiport memory. 4 1
+OR
+
+Explain four segment pipelines with neat sketch and show the pipeline | 5 3
+
+flow of execution through space time diagram.
+
+What are the various conflicts raised in the pipeline processing and | 5 2
+
+give various solutions to handle conflicts.
+
+10
+
+12
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

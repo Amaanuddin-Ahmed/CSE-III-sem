@@ -1,0 +1,38 @@
+Perform the subtraction with the following unsigned binary numbers.
+is 11010-1000
+il. 11010-1101
+lil. 10101-101
+iv. 1111-0101
+4.b) Draw the flow chart for decimal division and explain division of 23
+with 4.
+
+OR
+4.c) Draw the flow chart of floating point addition operation?
+
+4.d) Draw the flow chart for booth multiplication and explain multiplication
+of 12 with 13. ,
+
+Explain the working of DMA controller.
+5.b) A cache consists of memory size of 256X16, and 8 bloeks. The. main
+memory contains memory. size of 4096X16 find out. how many bits are.
+there in Index, Tag, block, and Word fields in. the case of direct:
+mapping.
+OR
+5.c) Discuss daisy-chain priority interrupt using neat diagram.
+5.d) Draw the classification diagram of semiconductor memory and explain
+briefly about ROM, PROM, EEPROM and Flash memory.
+
+Explain in detail about RISC instruction pipeline with data conflicts
+problem?
+
+6.b) Discuss about the following Interconnection structures
+
+i. Time-shared common bus
+
+;, Os Crossbar switch
+OR
+
+6.c) Explain about vector.processing?
+6.d) What is cache coherence problem? Suggest the solution for it. .
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+

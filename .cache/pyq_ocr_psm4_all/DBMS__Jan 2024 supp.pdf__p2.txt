@@ -1,0 +1,96 @@
+.C)
+.d)
+
+.C)
+.d)
+
+(iii) | For each publisher, print the names of employees
+who have borrowed more than five books of that
+publisher.
+OR
+What is Primary Key, Super Key and Candidate Key explain with an| 4 2
+example.
+Consider the following Relational Database and write SQI, queries: 6 3
+employee (person_name, street, city)
+works (person_name, company name, salary)
+company (company_name, city)
+a. Find the names of all employees who live in city “Miami”.
+b. Find the names of all employees whose salary is greater than $10,000.
+c. Find the names of all employees who live in “Miami” and whose salary is
+greater than $500,000.
+
+Define Normalization and write the importance of Normalization. 5 2
+Suppose that data base schema R = (A, B, C, D, E, F) of explain and Apply | 5 2
+3NF
+AB—C
+A—D
+B — EF
+
+OR
+Explain different types of joins with examples. 5 2
+Write rules to find closure set of functional dependencies. Given relation | 5 3
+schema r (A, B, C, G, H, J) and the set of functional dependencies:
+AB
+A7>C
+CGH
+
+‘CGI
+
+B>H
+Compute at least one super for the above schema (Hint: use attribute
+closure).
+
+Compare Conflict Serializability and View Serializability with an example. 2 2
+
+Describe the anomalies in concurrent execution of Transactions. 5 2
+OR
+
+Explain Multiple Granularity protocol. 5 yi
+
+Explain Conflict Serializable schedule. Consider the precedence graph of | 5 3
+
+Figure verify the corresponding schedule Conflict Serializable or not.
+
+Write short notes on Indexing Techniques. 5 2
+Construct a B+ tree with fan-out (no of pointers per node) is 3 for the | 5 3
+following search key values 80, 50, 30, 70, 30, 100, 90. Assume that the tree
+is initially empty, and the values are added in the order given.
+
+a) Show the tree after insertion of 10, after insertion of 30, and after
+
+insertion of 90.
+b) Show the tree after deletion of 30, 10.
+OR
+
+Explain File Organization and Indexing. 5 Z
+Show the Extendable Hash structure for the file which contains records with | 5 3
+the following search
+key values:2 3 5 7 12 17 19 23 29 3]
+
+Where Hash Function is h(x)=x mod 8 and_ bucket size is 3.
+
+1,2
+
+1,2,3
+
+femal Sa
+
+Ls
+1,2,3
+
+L2
+L253
+
+Lue
+1,2
+
+1,2
+1,2
+
+La
+L253
+
+L2
+Laud
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

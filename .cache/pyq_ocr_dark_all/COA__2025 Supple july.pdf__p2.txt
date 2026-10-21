@@ -1,0 +1,38 @@
+6.
+6.
+
+6.
+
+6,
+
+.a)
+
+_b)
+
+¥\
+. Ct)
+
+a)
+b)
+
+Cc)
+
+Perform LOLLT * LOTT using 2°s complement Multiplication | 10 3 5 2
+algorithm.
+Design working principle of DMA controller with a neat diagram. 6 3 3 3
+Explain interrupt initiated [/O in detail. 4 3 |
+OR
+Why do hicrarchical memory systems are employed to achieve | 5 3 3 |
+optimal performance by a computer system.
+What is a cache mapping function and cxplam vartous types of | 5 2 5
+mapping techniques in cache memory organization.
+Explain Matrix multiplication in related with Vector Processing. _ | 4 |
+List and explain various types of solutions for handling pipeline | 5 | 4 |
+Hazards.
+OR
+Design Time Shared common bus structure for multiprocessors with | 5 2 4. 3
+a neat sketch.
+Distinguish between tightly coupled microprocessors and tightly | 5 4 df |
+coupled Microprocessors. ; 1 Z
+
+M: Marks; I.: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

@@ -1,0 +1,58 @@
+Hall Ticket Number: ce
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B. Lech. LV Semester Regular [xaminations, July/August-2024
+Software Engineering
+(Common to CSE, CSB & CSD)
+
+Time: 3 [ours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 = 10 Marks)
+
+Q. No. | Stem of the Question M {|L | CO | PO |
+l.a) Explain is legacy software. l l l I
+1.b) — List the types of software myths. l | | 2
+l.c) Explain the kinds of system requirements. | 2 2 I
+1.d) Discuss data flow model. l l 2 2
+l.c) — Justify the importance of refactoring. l l 3 I
+1. f) Define software architecture with its importance. | 2 3 2
+l.g) | Compare verification and validation. l 3 4
+I.h) Describe smoke testing. l l 4 2
+1. 1) List out the generic subcategories of predictable risks? | 2 5 |
+1.j) | Define risk components? 1 2 5 2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L [CO] Po |
+2.a) Explain the evolving role of software? 5 | | 1 |
+2.b) Describe “Software myth’? Discuss on various types of software | 5 l l 2
+myths and the true aspects of these myths?
+OR
+2.c) Explain about the evolutionary process models. 5 2 l I
+2.d) Compare and conirasi perspective process models atid iterative | 5 2 i 2
+
+process models.
+
+3.a) Write short notes on user requirements. What are requirements? 5 2 2 l
+3.b) | Compare functional requirements with non-functional requirements. 5 2 2 2
+OR
+3.c) Explain state machine model with a suitable example. 5 2 2 |
+3.d) Demonstrate class hierarchy for library by using interface | 5 2 2 2
+specification.
+
+4.a) Explain a two level process? Why should system design be finished | 5 5 3 l
+before the detailed design, rather starting the detailed design after the
+requirements specification? Explain with the help of a suitable
+
+example
+Ab) Explain briefly the following: 1) Coupling between the modules, it) | 5 3 3 2,
+The internal Cohesion of a module.
+OR
+A.c) Describe the way of conducting a component level design. 5 3 3
+46d. Piscolotn the guide lines of comnonent level decter 5 6 . ?
+5. a) Explain about the importance of test strategies for conventional | 5 2 a |
+software.
+5.b) Compare black box testing with white box testing, 5 2 A 2
+OR
+
+eo ay
+foe book ste

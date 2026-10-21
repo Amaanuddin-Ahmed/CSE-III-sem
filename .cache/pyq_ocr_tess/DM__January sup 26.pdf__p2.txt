@@ -1,0 +1,51 @@
+5.a) | Consider the word TRIANNUAL. 5 3 4
+(i) How many arrangements are there of these 9letters?
+(11) How many 9-letter words are there with the letters T, I, and U
+Separated by exactly 2 of the other letters?
+(111) How many 6-letter words can be formed from the letters of
+
+TRIANNUAL with no N's?
+5.b) What is the coefficient of x*y’ in (x + y)'° and in (2x - 9y)'"? 5 2 4
+OR
+5.c) Evaluate the sum 5 Z 4
+
+(ij) 1+24+3+..4+n.
+(ii) P+27+327 +... +n.
+5.d) Ina survey of 800 voters, the following information was found: 300 | 5 2 4
+were college educated, 260 were from high-income families, 325 were
+registered Democrats, 184 were college educated and from high-
+income families, 155 were college educated and registered Democrats,
+165 were from high-income families and were registered Democrats,
+94 were college educated, from high-income families, and were
+registered Democrats. Let
+E = {voters who were college educated}
+I= {voters who were from high-income families}
+D = {voters who were registered Democrats}.
+Draw a Venn diagram and list the number of elements in the 8 different
+regions of the diagram.
+
+6.a) Identify whether the following graphs G and G’ are isomorphic or not. 5 3 5
+Justify.
+
+a
+
+td
+
+7 Se
+S¢
+
+SS a
+
+eo OF
+
+2
+Graph G Graph G’
+6.b) Differentiate between Euler graphs and Hamiltonian Graphs. 5 3 5
+OR
+
+6.c) What is a Planar Graph? Find the number of regions in Graph G, given | 5 1 5
+vertices are 20 and degree of each vertex is 3.
+6.d) Construct the minimum spanning tree (MST) for the given graph using | 5 3 5
+Kruskal’s Algorithm.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

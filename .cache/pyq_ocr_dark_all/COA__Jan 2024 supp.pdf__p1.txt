@@ -1,0 +1,67 @@
+CEN)
+
+17/o2-[26 aS
+
+Hall Ticket Number: co
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. TH Semester Supplementary Examinations, Jan/Feb-2024
+
+Computer Organization and Architecture
+(Common to CSB, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+. Part-A (10 x 2 =20 Marks) _
+
+Q.No. | Stem of the Question M | L [co |Po
+1.a) Define computer organization and computer architecture? 2 3 I |
+1.b) What is one address, two address and three address instruction | 2 2 1 1
+
+formats?
+1.c) | What are the functions of control memory? 2 2 2 2
+1.d) | What is Register Indirect Addressing mode? Give an example? 2 2 2 2
+l.c) Solve (1001101 - 10101001) using 2’s complement. 2 3 3 2
+
+1.f) Add given signed decimal number +86 and -17. Perform (using 8— | 2 3 3 2
+bit representation) using 2’s complement Addition.
+
+1.¢) | What is interrupt? Give the steps for handling interrupt? 2 2 4 |
+1.h) What is Auxiliary memory? 2 2 4 3
+1.1) | Compare RISC and CISC? 2 2 5 2
+1.j) | Explain the cache incoherence. 2 2 5 3
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L ‘| co [PO
+2.a) Explain the components of the Computer system. 5 2 ] I
+2.b) List and explain the steps involved in the execution of a complete | 5 2 ] 3
+
+instruction.
+OR
+2.c) What is Micro operation? Briefly explain the arithmetic micro} 5 2 | I
+operations?
+
+2.d) With neat sketch explain the process of transferring the data} 5 2 l 3
+between various registers of computer using bus structures.
+
+3.a) Explain the three basic types of data manipulation instructions. 5 2 2 l
+3.b) Mention the advantages and disadvantages of microprogrammed ; 5 2 2 2
+control hardwired control.
+OR
+3.c) | What do you mean by addressing mode? Explain the following; 5 2 2 2
+addressing modes with examples. i) Index addressing mode ii)
+Relative addressing mode.
+
+3.d) Explain the block diagram of Microprogrammed control unit? 5 2 2 2
+4.a) Discuss about fixed point and floating-point representations. 5 2 3 2
+4.b) Perform and explain arithmetic addition, subtraction, and overflow | 5 3 3 2
+
+detection using fixed point representation.
+
+4.c) Perform floating point addition using the numbers 0.256X10° and| 5 3 3 2
+0.4375X10° use the floating point addition algorithm.
+
+4.d) Explain the multiplication of positive numbers using a booth; 5 2 3 2
+multiplier with a neat sketch.
+
+P.T.O.

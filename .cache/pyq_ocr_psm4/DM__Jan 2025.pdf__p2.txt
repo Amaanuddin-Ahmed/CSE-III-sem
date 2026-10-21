@@ -1,0 +1,38 @@
+Show that if n is a positive integer, then
+n(n + 1)
+——.
+
+1+2+---+n=
+
+Express the linear search algorithm as a recursive procedure.
+OR
+
+What is the coefficient of x’’y’’ in the expansion of (2x — By)?
+
+How many solutions does the equation x; + x 2 + x3 = 11 have,
+
+where x), X 2 and x3 are non-negative integers?
+
+A sequence of 10 bits is randomly generated. What is the probability
+that at least one of these bits is 0?
+What is the variance of the random variable X, where X is the
+number that comes up when a fair die is rolled?
+OR
+Solve the recurrence relation @, - 7@y-) + 10 ay.2 =O n> 2.
+What is the solution of the recurrence relation
+@n = Ap-1 + 2an-2 With ap = 2 and a; = 7?
+
+State and Prove Euler’s Formula.
+Draw the minimum spanning tree for the following graph by using
+kruskal’s algorithm.
+
+OR
+Find a minimum spanning tree for the given weighted graph using
+Prim’s algorithm. a h
+
+d
+
+Find the minimum number of colors that are required to assign
+vertices of the following graph.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

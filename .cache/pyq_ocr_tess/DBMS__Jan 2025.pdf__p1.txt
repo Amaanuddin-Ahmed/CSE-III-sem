@@ -1,0 +1,67 @@
+Hall Ticket Number:
+
+| |
+
+FT itil
+
+Code:B414CS3S3
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, December 2024/January 2025
+
+Database Management Systems
+(Common to CSE and IT)
+
+Time: 3 Hours Answer ALL Questions
+
+Part-A (10 x 2 =20 Marks)
+
+Max. Marks: 70
+
+| Stem of the Question M|L |CO | PO |
+What do you mean by Logical Data Independence? 2 1 1 1,2
+What is Composite Attribute? Give an example. 2 2 [ 1,2
+Compare Procedural and Non- Procedural Query Languages. 2 4 pi 1,2
+What is the purpose of Join operations? 2 1 Zz 12
+What is Trivial Functional Dependency? 2 1 3 1,2
+Why Decomposition is important? Also Explain the types of | 2 3 3 1,2,3
+Decomposition.
+Define a Schedule? Give an Example. 2 1 4 1,2
+What is Transaction? Explain with example. 2 2 4 1,2
+What is Sparse index? Give an example. 2 2 5 1,2
+Classify the Hash Indexing techniques. 2 2 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M [| L |Cco | PO
+2.a) Explain Data Abstraction. Why is it important? 3 2 1 Lz
+2.b) What is ER diagram? Discuss various symbols used in ER diagram. 4 3 1 123
+
+Draw and Explain the ER diagram for Library Management System. ™
+OR
+2.c) Explain the Advantages of Database management system over File 10 2 1 12
+System. °
+3.a) Explain the Difference between Nested Queries and Correlated 5 ) > 123
+Queries. Explain with the help of an example. -_
+3.b) What is Referential Integrity? Explain its enforcement in DBMS by
+illustrating with an example SQL statements. 5 3 2 ie:
+OR
+3.c) | Consider the following relations:
+Hotel (hotelNo, name, address)
+Room (roomNo, hotelNo, type, price)
+Booking (hotelNo, guestNo, dateFrom, dateTo, roomNo)
+Guest (guestNo, name, address)
+Write the SQL statements for the following: 10 3 > 123
+i) List all family rooms with a price below Rs.400, in ascending order -_
+of price.
+ii) Display the number of hotels.
+iii) Display guestNo, name, address and roomNo details of guests
+booked room from 01-Jan-23.
+iv) Display hotelNo and the number of rooms in each hotel.
+4.a) | What is Normalization? Differentiate between BCNF and 3 NF with 5 4 3 123
+proper example. a
+4.b) What do you mean by redundancy? Discuss about insertion, updation 5 D 3 12
+and deletion anomalies. °
+OR
+
+P.T.O.

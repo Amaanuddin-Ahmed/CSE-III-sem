@@ -1,0 +1,18 @@
+.C)
+. d)
+
+OR
+How can you enhance the speed and capacity of memories? Explain. 5 2 4
+Explain the Direct Memory Access. How it improves the] 5 2 4
+performance of the system’?
+
+.a) Differentiate CISC and RISC Architectures. 5 4 5
+
+.b) — Explain Arithmetic pipeline with suitable diagram. 5 2 5
+OR
+
+.c) Explain the characteristics of Multiprocessor? 5 2 5
+
+.d) __ Explain in-detail about vector processing and array processing. 5 2 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

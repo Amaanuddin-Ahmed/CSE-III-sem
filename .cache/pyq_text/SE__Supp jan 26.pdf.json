@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-21\nCode: B415CB5S2\nTime: 3 Hours\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2025/January 2026\nSoftware Engineering\n(Computer Science and Business System)\nAnswer ALL Questions\nPart-A (10 x 2 = 20 Marks)\nMax. Marks: 70\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nWhat is meant by software engineering?\n2\n1\n1\n1\n1. b)\nWrite the nature of software.\n2\n1\n1\n2\n1. c) What is the significance of feasibility studies in requirement\nengineering?\n2\n2\n2\n1. d)\nDefine data model.\n2\n1\n2\n1\n1. e) How do we assess the quality of a software design?\n2\n1\n3\n2\n1. f)\nWhat is meant by software architecture?\n2\n2\n3\n1\n1. g) What is the primary goal of a testing strategy?\n2\n1\n4\n1\n1. h) Which metric evaluates design complexity?\n2\n1\n4\n1\n1. i) Write the ISO 9000 quality standards.\n2\n1\n5\n1\n1. j) Define software reliability.\n2\n1\n5\n1\nPart-B (5 x 10 = 50 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n5\n2\n1\n1\n5\n3\n1\n2\n5\n4\n1\n2\n2. a) State and explain various software myths and reality.\n2. b) Discuss the capability maturity model integration.\nOR\n2. c) Explain the difference between a software process and a software\nprocess model. Suggest two ways in which a software process model\nmight be helpful in identifying possible process improvements.\nExplain any two process models.\n2. d) Describe the evolving role of software.\n3. a) Explain various categories of non-functional requirements and their\nimportance in SRS.\n3. b) Discuss the Context models and behavioral models.\nOR\n3. c) Identify and explain four types of requirements that may be defined\nfor s computer based system.\n3. d) Explain the requirements elicitation and analysis process.\n4. a) Briefly describe each of the four elements of the design model.\n4. b) Explain the sequence diagrams and collaboration diagrams.\nOR\n4. c) Discuss the Design process and design quality.\n4. d) Illustrate the architectural styles and patterns.\n5. a) Compare and contrast the block box testing and white box testing.\n5. b) Discuss the Metrics for Analysis Model and Metrics for Design\nModel.\nOR\n5. c) What is black box testing? What is boundary value Analysis? Explain\nthe technique specifying rules and its usage with the help of an\nexample.\n5\n3\n2\n5\n2\n2\n2\n5\n2\n2\n2\n5\n3\n2\n1,2\n5\n2\n2\n2\n5\n2\n3\n5\n2\n3\n1\n5\n2\n3\n2\n5\n2\n3\n3\n5\n2\n4\n2\n5\n4\n4\n1,2\n5\n2\n4\nP.T.O.\n",
+   "chars": 2345,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. d) Explain the framework for product metrics.\n5\n3\n4\n1\n6. a) Compare and contrast the reactive Vs proactive risk strategies.\n6. b) Describe the RMMM, RMMM plan.\n5\n2\n5\n2\n5\n3\n5\n1,2\nOR\n6. c) We understand that quality is a \"bottom line\" issue in all companies.\nExplain how does software quality assurance fit into an effective\nproject management approach. Describe the activities of software\nquality assurance team.\n5\n5\n5\n4\n6. d) Explain the software risks, risk identification.\n5\n2\n5\n2\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 564,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

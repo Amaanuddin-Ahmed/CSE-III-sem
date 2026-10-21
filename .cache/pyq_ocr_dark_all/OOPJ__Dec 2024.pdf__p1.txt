@@ -1,0 +1,59 @@
+Llall Ticket Number:
+| | | | || | MR-21 | Code: B414CS483
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, December 2024/January 2025
+Java Programming
+(Common to CSE and IT)
+
+Time: 3 Tours Answer ALL Questions Max. Marks: 70
+oo — Part-A (10x 2 = 20 Marks) |
+
+Q. No. Stem of the Question |M |{L |co | PO
+l.a) Define object. Write the syntax for creating an object. 2 l I l
+1.b) Differentiate method overloading and method overriding. 2 2 | 2
+l.c) Mention any four inbuilt packages in java. 2 | 2 l
+1.d) — Give the syntax of try and catch blocks in exception handling. 2 | 2 l
+l.c) Differentiate thread based multitasking and process based iiultie | 2 2 3 2
+
+tasking.
+
+1.f) — Explain the usage of Console class in java with an example. 2 2 3 |
+i.g) List any four inbuilt methods of Stack class. 2 l 4 l
+|.h) Explain the usage of Scanner class with an example. 2 2 4 l
+1.1) | Compare and contrast applets and applications. 2 2 5 2
+
+_1.j)___ State any two limitations of AWT. 2 ot 5d
+
+Part-B (5 x 10 = 50 Marks)
+
+_Q. No. | Stem of the Question | M | L | CO PO
+2.a) Explain about java buzzwords. 5 l l |
+2.b) Write a java program that illustrates constructor overloading. 5 3 l l
+
+OR
+2.c) Discuss about the usage of final keyword with inheritance. 5 2, | l
+Z.d)  Uitterentiate class and an abstract class using suitable examples. 5 3 I 2
+3.a) Define package. Lixplain how packages can be created and imported | 5 2 2 |
+with suitable examples.
+3.b) Explain how multiple inheritance is achieved through interfaces in) 5 4 2 2
+java using suitable examples.
+OR
+3.¢) Discuss about the usage of finally keyword in exception handling | 5 2 2 I
+with examples.
+3.d) Write a java program that illustrates the creation of own exception | 5 3 2 2
+subclasses.
+4.a) Explain the creation of thread by extending Thread class using | 5 2 3 l
+suitable examples.
+Ab) Discuss about inter thread communication in java. 5 5 5 )
+OR
+4.c) Describe the usage of generics in java. 5 | 3 I
+Ad) Write a java program that copics the coiitcnt of oue file io anoiher | 5 3 3 7
+file.
+5. a) Explain the usage of ArrayList class usiiy, suitable java proprais, 5 y) f |
+5.b) Write a java program that illustrates the usage of String Tokenizer | 5 3 4 |
+class.
+
+ORR
+
+i 4 oot

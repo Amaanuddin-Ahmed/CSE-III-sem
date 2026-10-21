@@ -1,0 +1,42 @@
+OR
+4.c)  Construct.a recursive version of a binary:search algorithm. ca 2
+4.d) The English alphabet contains 21 consonants and five vowels. How many; 5 1
+strings of six lowercase letters of the English alphabet contain
+a) Exactly one vowel? |
+b) Exactly two vowels?
+c) At least one vowel?
+d) At least two vowels?
+
+\
+
+5.a) Explain Bayes’ theorem with an example. 5 2 4
+5.b) Find the solution to the recurrence relation &y = 6ay7— lla,» +6a,-3 with| 5 2 4
+the initial conditions ap = 2, a; = 5, and ay = 15,
+
+OR
+
+5.c) What is the variance of the number of times a 6 appears when a fairdieis| 5 4
+rolled 10 times?
+
+5.d) Find the coefficient of x’ in the power series of (x? + x° + x°)(x? + x\x+] 5 2 4
+x + x8 +x4 4: ~) using Recurrence Relation,
+
+6.a) Determine whether the graphs are isomorphic. | 5 5 5
+
+Vi u2
+
+V2 VS ul
+
+u3
+
+V3 V4
+
+6.b) — Tlustrate how Kruskal’s algorithm and Prim’s algorithm are used to finda| 5 2 5
+minimum spanning tree, using a weighted graph with at least eight
+vertices and 15 edges.
+OR
+6.c) | What is Euler’s formula? Illustrate with an example. 5 J 5
+6.d) Explain how to use breadth-first search to. find the length of a shortest] 5 2 5
+path between two vertices in an undirected graph,
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

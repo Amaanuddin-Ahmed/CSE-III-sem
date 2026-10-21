@@ -1,0 +1,74 @@
+Hall Ticket Number:
+
+MR-22 Code: B325CM2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III] Semester Regular/Supplementary Examinations, December 2025/January 2026
+Software Engineering
+(Computer Science and Engineering (AI and ML))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x i= 10 Marks)
+
+List the types of other software process models.
+List the types of software myths.
+
+Explain functional requirements.
+
+Explain user requirements in detail.
+
+List kinds of behavioural and object models.
+Explain requirement review.
+
+Describe white box testing.
+
+Distinguish between testing and debugging.
+What is FTR?
+
+Define risk components.
+
+Part-B (5 x 1 0= 50 Marks)
+
+Explain “Evolutionary Process Flow” with a neat sketch.
+Explain in detail about Scrum.
+
+OR
+Explain framework activities with a neat diagram.
+Explain briefly the Generic Process Model.
+
+How requirements are classified? List them with an example for
+each.
+Classify the following as functional /non-functional
+requirements for a banking system.
+
+i. Verifying bank balance
+
+ii. Withdrawing money from a bank
+
+iii. Completion of transactions in less than one second.
+
+iv. Extending the system by providing more tellers for the
+
+customers
+
+OR
+
+Analyze the requirement engineering process and how
+the requirements are managed.
+What is requirement elicitation? Briefly describe the various
+activities performed in requirements elicitation with an example of
+a watch system that facilitates setting time and alarm and
+assessment.
+
+Analyze briefly the structural system analysis in detail.
+What is the purpose of data flow diagrams? What are the notations
+used for the same?
+
+OR
+Develop an online railway reservation system, which allows the
+user to select book/cancel tickets using net banking/credit/debit
+cards.
+Draw and explain the use case diagram for an ATM system
+in requirement elicitation.
+
+P.T.O.

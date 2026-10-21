@@ -1,0 +1,53 @@
+Hall Ticket Number:
+
+MAHATMA GANDHI INSTITUTE OF TECHNGLOGY (Autonomous)
+B. ech. II Semester Regular/Supplementary [xaminations, December 2024/January 2025
+Software Engineering
+(Computer Science and Engineering (Al and M1)
+
+time: 3 Hours Answer ALL, Questions Max. Marks: 60
+Q.No.|  ————~—CSStem ofthe Question = SE M [LL | CO | PO
+l.a) | Write the other name of waterfall model and who invented waterfall) 1 l 1 l
+
+model?
+1.b) Classify the models in CMMI? 1 4 | I
+l.c) — Distinguish functional requirement? | 4 | l
+1. d) Explain requirement validation? l 2 | |
+i.c) Discuss analysis and design model? | 6 2 3
+i. f) Write short notes on architecture patterns’? | i 2 3
+l.g) | Write short notes on validation testing? | I 3 3
+1.h) Explain art of debugging? 1 2 3 A
+1.1) | Write about quality concepts? l l 3 6
+1.j) Simplify software reliability? _ . | le 4 3 1
+Part-B (5 x 10 = 50 Marks)
+Q. No. | _ Stem of the Question — M | L |CO| PO
+2.a) Describe “Software myth’? Discuss on various types of software |} 5 2 I |
+myths?
+2.b) Demonstrate the evolving role of software? 5 2 I I
+OR
+2.c) Explain different software applications? 5 2 l l
+2.4) Describe with the help of the diagram discuss in detail waterfall | 5 2 | !
+model?
+3.a) Compare functional requirements with non-functional requirements? 5 4 2 |
+3.b) Demonstrate system requirements in a detail manner? 5 2 I l
+OR
+3.c) Summarize briefly how requirement validation is done? 5 6 3 3
+3.d) Explain interface specification in detail? 5 2 2 2
+4.a) Explain with a neat diagram of architectural design’? 5 2 ? 3
+4.b) Analyze mapping data flow into software architecture? 5 4 2 3
+OR
+4.c) Explain the design concepts in software engineering? 5 2 2 3
+4.d) Illustrate architectural styles and patterns? 5 2 2 4
+‘.a) Compare black box tesung with white box testing:? 5 44 4 ‘)
+5.b) Explain about Metrics for software quality? 5 A 2 |
+OR
+S.c¢) Demonstrate art of debugeine, 5 ? 4 A
+5.d)  Simplity test strategies tor conventional software 5 A 3 5
+>. a) [explain about RMMM Plan? 5 5 3 |
+6.b) — Explain about software risks? 5 5 3 2
+Che
+6.c)  Demonstraic risk identification? 5 2 s) 2
+Gd) Explain in detail (sO 9000 quality standards? 5 } 2 j
+
+Not one 1 ” thd nota 4 1 ves “4 an wees ors aN,
+Pvt, UVRAEIKGS. bL. TaTCOHTEL Cy EEA CATER RACV CEL 8 AA A CHEER SED RPL Ee PART ata, CTATS ATT EER

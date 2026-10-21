@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B325CB2S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. III Semester Supplementary Examinations, July 2025\nDiscrete Mathematics\n(Common to CSB and CSD)\nTime: 3 Hours\nAnswer ALL Questions\nPart-A (10 x 1 = 10 Marks)\nMax. Marks: 60\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nDefine Tautology.\n1\n1\n1. b) Find (P→ (P V Q)) formula is tautology or contradiction.\n1\n1\n1. c)\nDefine Venn Diagram with Example.\n1\n1\n2\n1. d) What is Hasse Diagram?\n1\n1\n2\n1. e)\nDefine Group.\n1\n1\n3\n1. f)\nDefine Lattice.\n1\n1\n3\n1. g) If P(n,4) = 42 P(n,2) (permutation), find the value of n?\n1\n2\n4\n1\n1. h) How many persons must be chosen in order that at least five of them\nwill have birthdays in the same calendar month?\n1\n2\n4\n1\n1. i)\nDefine bipartite graph.\n1\n1\n5\n1\n1. j)\nWhat is Chromatic number?\n1\n1\n5\n1\nQ. No.\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\nM\nL\nCO\nPO\n2. a)\n2. b)\nShow that (TP A (IQ A R)) V (Q AR) V (PAR) R.\nDefine Free and Bound variables, Predicates with example.\n5\n3\n1\n1\n5\n1\n1\nOR\n2. c)\nObtain PDNF of (Q→Р) А (ПР A Q).\n5\n3\n1\n1\n2. d) Show that R can be derived from the premises P→ Q, Q→ R and P.\n5\n2\n1\n1\n3. a) Find the inverse of the function f(x) = x²+2.\n5\n1\n2\n1\n3. b) Compute the adjacency matrix of the transitive closure on the set\nG={a,b,c,d,e},and R={a,b),(b,c),(c,d),(d,e),(e,d)}.\n5\n2\n2\n1\nOR\n3. c) For A={1,2,3,4}, Let R={(1,1),(1,2),(2,3),(3,3),(3,4)} be a relation on\nA. Find R2 R³ R4 and draw their diagram.\n5\n2\n2\n1\n5\n3\n2\n1\n3. d) Let R be a relation on the se t of all ordered pairs of natural numbers\ndefined by (x,y) R (u,v) iff xv=yu. Show that R is an equivalence\nrelation.\n4. a) Let G={1,-1,i,-i}, Judge whether G forms an abelian group under usual\nmultiplication.\n5\n2\n3\n1\n4. b) Write the properties of algebraic system with an example.\n5\n1\n3\n1\nOR\n4. c) In any group (G,*), by proving the inverse of every element is unique.\nShow that (a*b)\n=b* a, for all a,b € G.\n5\n3\n3\n1\n4. d) Let * be a binary operation on the set R of real numbers defined by\na*b=a+b+2ab.Is (R,*) a monoid? Justify.\n5\n3\n3\n1\n5. a) How many ways can we get a sum of 8 when two indistinguishable\ndice are rolled?\n5\n3\n4\n1\n5. b) How many different permutations of the letters are there in the word\n\"COMPUTERS\".\n5\n3\n4\n1\nOR\nP.T.O.\n",
+   "chars": 2249,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "5. c) Use Multinomial theorem to Expand (X1+X 2+X 3 +X 4)4.\n5. d) How many integers between 1 and 300(inclusive) are divisible by at\nleast one of 5, 6, 8.\n6. a) Let G be a 4-regular connected planar graph having 16 edges. Find the\nnumber of regions of G.\n6. b) Show that the two graphs are not isomorphic.\na\nb\na\nb\n5\n3\n4\n1\n5\n3\n4\n1\n5\n2\n5\n1\n5\n3\n5\nh\nd\nh\nd\nOR\n6. c)\nLet D be the digraph whose vertex set is V={v1,v2,v3,v4,v5} and the\ndirected edge set is E={(v1,v4),(v2,v3),(v3,v5),(v4,v2),(v4,v4),(v4,v5),\n(v5,v1)} Draw a diagram of D and indicate the out-degree and\nin-degree of all vertices.\n5\n2\n5\n1\n6. d)\nWhat is a Hamiltonian Cycle? Draw bipartiate graph K3, 4 and prove\nthat this graph does not have a Hamiltonian Cycle.\n5\n1\n5\n1\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 808,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

@@ -1,0 +1,34 @@
+3,6)
+5. d)
+
+6. a)
+6. b)
+6. Cc)
+
+6. d)
+
+Write a Java program to sort a list of names using a Comparator. 5 3 4
+
+Write a Java program that uses Scanner to read data and store it intoa | 5 3 4
+
+LinkedList.
+
+Demonstrate the delegation event model in Java with an example. 5 2 5
+
+Write a Swing applet to draw a rectangle and a circle on the screen. 5 3 5
+OR
+
+How can parameters be passed to an applet using the <param> tag? | 5 3 5
+
+Give a code example.
+Explain the working of FlowLayout, BorderLayout, and GridLayout | 5 2 5
+with examples.
+
+12
+1,2
+
+12
+
+1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

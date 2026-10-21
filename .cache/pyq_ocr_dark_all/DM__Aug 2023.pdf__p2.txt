@@ -1,0 +1,48 @@
+6.
+6.
+
+.d)
+.a)
+
+.b)
+
+C)
+
+d)
+
+—yb
+WIn
+
+Solve the recurrence relation @n = 2apn—-1 +3Qn—2 for n= 2 where 5 3 4
+
+Go =2 and a, =2.
+
+State and Prove Baye’s Theorein. 5 2 4
+What are the chromatic numbers of the graph G and /7?
+| 5 1 5
+u e b \
+, fo oy 4 \
+“ ox as K Ns :
+yo wa No, No
+é é wv ‘é
+t ! ‘ uy f
+Write down the applications of trees. | 5 2 5
+OR
+State and Prove fundamental theorem of graph theory. 5 2 5
+lind the minimal spanning tree using Kruskal’s algorithm. 5 2 5
+by i / \ ‘NI
+/ , torn,
+Ky ;ooy
+1 SN ¥ / /
+Bex | ee
+\ / .
+
+|
+
+1,2
+
+oe
+
+1,2
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

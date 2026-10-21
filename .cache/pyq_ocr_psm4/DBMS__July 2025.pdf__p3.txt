@@ -1,0 +1,62 @@
+Hall Ticket Number:
+
+MR-21 Code: B415CB3S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, July 2025
+Introduction to Database Management Systems
+(Common to CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10x 2= 20 Marks)
+
+Define schema and instance?
+
+List Various Types of Attributes?
+
+Discuss the use of Rename operation?
+
+Write about project operation relational algebra?
+Write about functional dependency?
+
+Define redundancy and list the problems with it?
+Demonstrate conflict serializability?
+
+Explain about transaction stages?
+
+Discuss about data on external storage?
+
+Define tree indexing?
+
+Part-B (5 x 1 = = 50 Marks
+
+Explain the Architecture of the database?
+Compare different data modes?
+OR
+Discuss about different types of integrity constraints?
+Explain about the E-R diagram concept?
+
+Illustrate different set operations in relational algebra with an
+example?
+Discuss about domain relational calculus in detail?
+OR
+Explain all the aggregate functions with example?
+Define trigger and explain all the three parts of it with an example?
+
+Illustrate dependency? And explain the problems caused by it?
+Define normalization and explain 1“ and 2™ normal forms with an
+example?
+
+OR
+Define and Compare BCNF with 3" Normal forms?
+Illustrate multivalued dependency and 4" normal form with an
+example?
+
+List and explain ACID properties in detail?
+Explain about timestamp-based protocol?
+OR
+Discuss about Two-Phase locking protocol in detail?
+What is recovery and explain about log-based recovery with
+example?
+
+P.T.O.

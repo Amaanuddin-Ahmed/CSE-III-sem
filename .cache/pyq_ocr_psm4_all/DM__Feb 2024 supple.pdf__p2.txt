@@ -1,0 +1,75 @@
+4.c)
+4. d)
+
+5. a)
+
+5. b)
+
+Da)
+5S. d)
+
+6. a)
+6. b)
+
+6. Cc)
+
+6. d)
+
+OR
+
+Out of S consonants and 3 vowels, how many words of 3 consonants and | 5
+2 vowels can be formed?
+
+Find the number: of: permutations that can be made out of the letter in| 5 2
+
+word ASSASSINATION.
+
+Two friends Harish and Kalyan appeared for an exam. Let A be the event| 5 4
+
+that Harish is selected and B is the event that Kalyan is selected. The
+
+probability of A is 2/5 and that of B is 3/7. Find the probability that both of
+them are selected.
+
+Find the solution for ay— 3ap-1 — 4ay-2 = 0 for n > 2 and, ay = a1 = 1. 5 2
+OR |
+Solve the recurrence relation a,=8ap.;—16ap-2 for n>2 ap=16, aj=80? 5 3
+
+A car manufacturing factory has two plants, X and Y. Plant X manufactures 5 2
+
+70% of cars and plant Y manufactures.30%. 80% of the cars at plant x and
+
+90% of the cars at plant Y are rated of standard quality. A. car is.chosen at.
+
+random and i is found to. be of standard quality. What is the probability that: |
+it has come from plant x
+
+Show that:the complete. bi-partite. graph K3 3.18 not planar graph. 3 a | Ss 2
+What is a Hamiltonian Cycle? Draw bipartite graph K3,4.and prove that this |. 5 3. -
+
+graph does not have a Hamiltonian cycle. -
+OR
+
+Define spanning tree. Apply Prim’s algorithm to find minitium spanning | 5 3
+
+tree on the following weighted graph.
+
+Graph G(V, E) . .
+Show that the following graph is verified by Euler’s formula or not? 5 2
+P Q R
+oe S
+V U T
+
+5
+
+Laat
+
+[,2
+
+1,2
+
+1,2
+
+I
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

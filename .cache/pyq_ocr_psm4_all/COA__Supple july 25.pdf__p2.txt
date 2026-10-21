@@ -1,0 +1,16 @@
+OR
+S.c) List and explain different types of cache memory mapping | 5 3 4
+
+techniques.
+5.d) Differentiate between RAM and ROM. 5 2 4
+6.a) With the diagram explain the crossbar switch interconnection | 5 2 5
+
+structure for 8 CPUs and its memory module.
+6.b) With the neat diagram explain the concepts of pipelining with an| 5 1 5
+
+example.
+OR
+6.c) Illustrate multistage switching network with an example. 5 l 5
+6.d) Explain the concept of cache coherence problem and its solution. 5 2 5
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

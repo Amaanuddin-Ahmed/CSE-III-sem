@@ -1,0 +1,47 @@
+6. d)
+
+OR
+Using induction principles prove that n°+2n is divisible by 3. > 4 3
+A class consists of 6 girls and 10 boys. If a committee of 3 is chosen at | 5 3 3
+random from the class, find the probability that
+(i) 3 boys are selected (ii) exactly 2 girls are selected.
+
+Determine the solution of the recurrence relation ay, = 6a,-| — 9an_2 With | 5 4 4
+initial conditions ap = 1 and a; = 6?
+Let X = {1, 2, 3, 4, 5, 6, 7} and R = {(x, y)| x-y is divisible by 3 in 5 3 4
+X}. Show that R is an equivalence relation.
+
+OR
+Let R and S be the following relations A= {a,b,c,d} defined R= 5 3 4
+{(a,a) (a,c) , (c,b) , (c,d),(d,b) } and S= {(b,a) , (c,c ), (c,d) ,
+(d,a)} Findi)RoS ii) SoR iti) RoR.
+
+Solve the recurrence relation of the Fibonacci series of numbers. 5 3 4.
+Show that a graph Kn has a Hamiltonian cycle whenever n > 3. 5 2 5
+A simple graph contains 35 edges, four vertices of degree 5, five 5 2 5
+
+vertices of degree 4 and four vertices of degree 3. Find the number
+of vertices with degree 2.
+
+OR
+Show that Ks is an Euler’s circuit and also Hamiltonian cycle. 5 2 5
+Define the following with Diagram. (i) Chromatic Number (ii) Euler 5 i 5
+Path (iii) Euler circuit (iv) Hamiltonian cycle (v) coloring of a graph.
+
+12
+ee.
+
+La
+
+1,2
+
+L2
+
+1,2
+
+1,2
+
+l
+|
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

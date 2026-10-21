@@ -1,0 +1,59 @@
+Hall Ticket Number:
+
+MR-22 Code: B325CS4S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. II] Semester Supplementary Examinations, July 2025
+Object Oriented Programming through Java
+(Common to CSE, CSB and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1= 10 Marks)
+
+Q. No. | Stem of the Question M{|L | CO | PO
+l.a) “JVM?” is platform dependant. Justify. 1 1 | 1
+1.b) Explain the role of java garbage collection in memory management. | 1 2 l 1,2
+1.c) | Why is inheritance important? I 2 2 1,2
+1.d) Explain private and protected keywords. 1 2 2 l
+l.e) List the methods in Thread class. l Il 3 l
+1.f) | What is the difference between error and exception? l l 3 1,2
+1.g) | What is an adapter class? 1 1 ‘| 12
+1.h) Name three sub classes of component class. 1 3 A 1
+1.i) Define applet. 1 2 5 l
+1.j) | What is an event in java AWT? 1 2 5 1,2
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L |CO| PO
+2.a) Explain the features of Java in detail. 5 2 1 = 1,2,3
+2.b) How can you find the maximum and minimum values in an array in| 5 l 1 1,2,3
+
+Java?
+OR
+
+2.c) | What are the drawbacks of procedural languages? Explain the need of | 5 3 1 1,2,3
+object oriented programming with suitable program.
+
+2.d) Define overloading. How to overload constructor? Explain in detail. 5 2 1 = 1,2,3
+3.a) Is multiple inheritance allowed in Java? Justify your answer with | 5 3 Z Ilys
+suitable example.
+3.b) Write in detail about creating and accessing packages. 5 2 2  1,2,3
+OR
+3.c) Differentiate between abstract class and interfaces. 5 3 = Iles
+3.d) Explain Runtime polymorphism with the help of suitable example. 5 3 2  1,2,3
+4.a) Explain the following clauses 5 2 DS Iya
+i)try
+ii)throw
+iii)catch.
+4.b) Explain thread life cycle with a neat labelled diagram. 5 2 3 Ades
+OR
+4.c) | Explain thread synchronization with the help of suitable program. 5 2 3 -1,2,3
+4.d) Write a Java program to implement Runnable class to create a thread. 5 6 3 1,23
+5.a) Explain Delegation Event model with the help of an example. 5 3 4  1,2,3
+5.b) Write a program to demonstrate Mouse Events. 5 3 4 1,2,3
+OR
+5.c) Explain the following AWT components 5 Z 4  1,2,3
+i)TextField 11)TextArea iii)Label
+5.d) Explain BorderLayout Manager with the help of suitable program. 5 3 4 1,2,3
+
+P.T.O.

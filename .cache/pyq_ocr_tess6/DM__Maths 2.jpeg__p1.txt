@@ -1,0 +1,46 @@
+4.a) “In a lattice (L, <, A, V) state and prove the laws” indempotent, | 5-3-3 —
+commutative, association and absorption, i pie
+4.b) Let G = {0,1,2,3,4,5}, verify whether G forms a group under addition 5 3
+| modulo 6. 3
+OR
+| 4.c) Define semigroup, monoid, group, abelian group with example. Eig
+| 4 d) Let G={1,-1,i,-i}, Judge whether G forms an abelian group under | 5 3 ; :
+| usual multiplication, My
+5.a) Find the total number of positive integers formed from the digits} 5 3 4
+| 1,2,3,4 and 5 if no number is repeated in any integer. I
+| 5.b) How many ways to get an odd sum when two distinguishable dies are 3 eee 1
+| rolled?
+| OR
+5.c) In how many ways can 4 mathematics books, 3 history books, 3] 5 2 4 1
+| chemistry books and 2 sociology books be arranged on the shelf so
+| that all books of the same subject are together?
+| S.d) Find the number of integers between 1 and 250 that are divisible by | Do ge? ee 1
+any of the integers 2, 3 and 6,
+| 6.a) — Inspect whether the following graphs are isomorphic or not, Justify | 5 4 Sve 19
+| your answer. S
+| 5 8
+| Von 0 ———__ 9h
+|
+| L Ux
+| Cha aarret PI a NV
+| a’ ¢
+| 6.b) Find the dual of the following graph, 5 ose 1g
+|
+| o———___o
+| Nea a7
+| 5
+o_o
+| al
+| OR vt ne
+| 6.c) Define spanning tree. Apply Prim’s algorithm to find minimum| 5 2 »
+| spanning tree on the following weighted graph.
+|
+‘
+20 ay
+ome d\12 “ =|
+t >< J |
+o—— 5
+| : be lourabl s 4S
+6.d) Prove that a simple planar graph is 5 colourable. ; PO: Programme Outce
+= SED US DAD cee “O: Course Outcome; PO:
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Ow

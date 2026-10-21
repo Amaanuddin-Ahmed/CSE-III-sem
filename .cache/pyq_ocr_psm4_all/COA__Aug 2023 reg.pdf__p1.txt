@@ -1,0 +1,70 @@
+Hall Ticket Number:
+
+MR-21 Code: B413CS5
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Regular Examinations, Aug/Sep-2023
+Computer Organization and Architecture
+(Computer Science and Engineering)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+Q. No. | Stem of the Question M |L |CO | PO
+l.a) Difference between Computer Organization and Computer|} 2 Z 2 l
+Architecture?
+1.b) — Explain various types of Shift operations? io 1 2 #)
+l.c) | Explain RTL statements? 2 2 2 l
+1.d) Outline the need of data manipulation instructions? 2 2 | |
+
+l.e) Find the largest and smallest values that could be stored in an 8 bit | 2 4 5 l
+signed register & unsigned register?
+
+1.f) | What is meant by normalization in floating point representation? Why | 2 4 5 3
+do we need it?
+
+1.g) | What are the various I/O commands used in Input/output interface? 2 1 Z |
+
+1.h) Howto calculate the hit-ratio in cache memory organization? 2 4 3 2
+
+1.1) Differentiate between RISC and CISC architectures. 2 1 4 5
+
+1.j) Illustrate the terms Multiprocessors and Multi Computers? Ps bs | 5
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. | Stem of the Question M | L | CO | PO
+2.a) Design a circuit transferring data from a 4 bit register uses} 10 2 2 a
+multiplexer’s to another register? And use selection circuit to select
+any of four 4-bit registers content as to bus. Give full explanation?
+
+OR
+2.c) With neat flow chart, explain the phases of instruction cycle in digital | 5 2 l 1
+computer.
+2.d) Design a combinational circuit to addition, subtraction, increment and | 5 2 2 3
+decrement for 4 bit register using full adders and explain control logic?
+3.a) How do we classify CPU’s instructions based on their register| 10 4 I 4.
+
+organizations? In which Organizations zero address instructions are
+used? Mention few zero address Instructions And their actual
+execution in practice?
+
+OR
+3.c) Explain the role of an addressing mode in an instruction operand] 10 2 2 6
+fetching? Explain various addressing modes with suitable flow
+
+diagrams?
+
+4.a) Given Booth's algorithm to multiply two binary numbers, explain the | 10 5 5 pi)
+working of the algorithm with neat flowchart? Perform Multiply 10111
+with 10011?
+
+OR
+4.c) Construct the flowchart for Restore division operation for Signed | 4 Zz 5 l
+numbers?
+4.d) Solve a restore division operation between 25 as Dividend and 6 asa| 6 3 5 3
+Divisor? And show the remainder and quotient in their respective
+registers?
+5.a) Discuss about cache memory and how its supports to enhance the | 5 2 3 1
+
+performance of a computer?
+
+P.T.O.

@@ -1,0 +1,17 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "text": "Hall Ticket Number:\nMR-22\nCode: B424CM5S\nМАНАТMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)\nB.Tech. IV Semester Supplementary Examinations, December 2024/January 2025\nObject Oriented Programming through Java\n(Computer Science and Engineering (AI and ML))\nTime: 3 Hours\nAnswer ALL Questions\nMax. Marks: 60\nPart-A (10 x 1 = 10 Marks)\nQ. No.\nStem of the Question\nM\nL\nCO\nPO\n1. a)\nWhat is the significance of the 'this' keyword in Java?\n1\n2\n1\n3\n1. b)\nWhat are Java buzzwords? List any two.\n1\n1\n1\n1\n1. c)\nExplain the term polymorphism.\n1\n2\n1\n2\n2\n2\n1. e)\n1\n1\n3\n2\n1\n2\n3\n3\n1\n1\n4\n3\n1\n2\n4\n3\n1\n5\n1\n1\n2\n5\n3\n1. d) What is the purpose of the 'super' keyword in Java?\nDefine the term \"multithreading\".\n1. f) What is the use of the 'try' keyword in exception handling?\n1. g) State the purpose of checkbox group AWT component.\n1. h) What is the difference between a button and a canvas in AWT?\n1. i) List differences between applets and applications.\n1. j) Define MVC architecture in the context of Swing.\nQ. No.\n2. a)\nPart-B (5 x 10 = 50 Marks)\nStem of the Question\nExplain the concept of constructors in Java with examples.\n2. b) Describe the life cycle of a Java object and the role of garbage\ncollection.\nOR\n2. c) Develop a Java program to demonstrate the use of nested and inner\nclasses.\n2. d) Explain the various types of operators in Java with examples.\n3. a) Explain hierarchical abstractions with an example.\n3. b) Develop a Java program to implement polymorphism using methop\noverriding.\nOR\n3. c) Explain how Java handles multiple inheritance using interfaces.\n3. d) Develop a Java program to read from and write to a file using java.io\npackage.\n4. a)\n4. b)\nDevelop a Java program to create and run multiple threads.\nExplain how to use annotations in Java with a program example.\nOR\n4. c) Discuss the concept of synchronized threads with a program example.\n4. d) Write a Java program to create custom exception subclasses.\n5. a) Develop a Java program to handle a keyboard event using а\nKeyListener.\n5. b) Explain the AWT class hierarchy with an example.\nOR\n5. c) Develop a Java Swing application that includes a tabbed pane, combo\nboxes and radio buttons to create a complex user interface.\n5. d) Develop a Java program to create a menu bar with menus and menu\nitems.\nM L\nCO\nPO\n5\n2\n1\n2\n5\n1\n3\n5\n1\n3\n5\n1\n1\n5\n2\n2\n2\n5\n4\n2\n4\n5\n4\n2\n3\n5\n2\n2\n4\n5\n4\n3\n4\n5\n3\n3\n3\n5\n2\n3\n1\n5\n3\n3\n2\n5\n4\n4\n4\n5\n2\n4\n2\n5\n4\n4\n4\n5\n3\n4\n4\nP.T.O.\n",
+   "chars": 2400,
+   "images": 1
+  },
+  {
+   "page": 2,
+   "text": "6. a) Develop a Java applet to accept and display user input through\nparameters.\n5\n4\n5\n4\n6. b) Explain the concept and use of JComboBox in Swing with an example\nprogram.\n5\n2\n5\n2\nOR\n6. c) Describe the differences between applets and applications in Java with\nexamples.\n5\n2\n5\n2\n6. d) Analyze the use of JScrollPane in Swing and develop a Java program\ndemonstrating its functionality.\n5\n4\n5\n4\nM: Marks; L: Bloom's Taxonomy Level; CO: Course Outcome; PO: Programme Outcome\n",
+   "chars": 468,
+   "images": 1
+  }
+ ],
+ "pageCount": 2
+}

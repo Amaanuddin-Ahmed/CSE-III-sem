@@ -1,0 +1,30 @@
+.c) What is white box testing? How white box testing is carried out? | 5 |
+
+)
+
+Demonstrate with example.
+
+Sd) Discuss about the metrics used for software Quality model. 5 4
+6.a) — Discuss the role of formal technical reviews in achicving good quality | 5 4
+soliware.
+6.b) What is risk identification? Discuss various methods used for tisk | 5 |
+identification.
+OR
+G.c) = What is Statistical Soltware Quality Assurance? Discuss its objectives. | 5 |
+6.d) Explain ISO 9000 Quality standards, _ 5 3
+
+M: Marks; lL: Blooni’s Taxonomy Level; CO: Course Outconie; PO: Programme Outconic
+
++
+
+Vag
+
+a
+
+a]
+
+5
+
+»
+
+10

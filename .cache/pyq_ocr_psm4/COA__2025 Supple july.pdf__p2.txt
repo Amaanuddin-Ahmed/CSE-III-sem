@@ -1,0 +1,24 @@
+OR
+Perform 10111 * 10111 using 2’s complement Multiplication
+algorithm.
+
+Design working principle of DMA controller with a neat diagram.
+Explain interrupt initiated I/O in detail.
+
+OR
+Why do hierarchical memory systems are employed to achieve
+optimal performance by a computer system.
+What is a cache mapping function and explain various types of
+mapping techniques in cache memory organization.
+
+Explain Matrix multiplication in related with Vector Processing.
+List and explain various types of solutions for handling pipeline
+Hazards.
+
+OR
+Design Time Shared common bus structure for multiprocessors with
+a neat sketch.
+Distinguish between tightly coupled microprocessors and tightly
+coupled Microprocessors.
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+

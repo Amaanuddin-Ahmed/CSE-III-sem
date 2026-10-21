@@ -1,0 +1,55 @@
+Hall Ticket Number:
+| | || i | | | | | | MR-21 | Code: B414CS5S3
+
+MAHATMA GANDITINSTITUTE OF TECHNOLOGY (Auionomous)
+B. Lech. IV Semester Supplementary Examinations, December 2024/January 2025
+Computer Organization and Architecture
+(Computer Science and Inegineering)
+
+time: 3 Hours Answer ALL Questions Max. Marks: 70
+oe Part-A_ (10 x Z = 26 Marks)
+
+Q. No. | _ Stem of the Question M L CO | PO
+l.a) List any two arithmetic micro-operations. 2 1 I |
+1.b) What are different types of buses used in computers? Why is the | 2 2 2 2
+
+address bus unidirectional?
+1.c) | What are the advantages of microprogrammed control unit? 2 2 2 2
+1.d) What is the purpose of Program Control instructions in a | ? 3 ? 3
+processor?
+l.e) Identify the two types of data types used in computer arithmetic. 2 | |
+1.f) | Define fixed-point representation used in data representation. 2 2 2 2
+1.g) | What is a cache memory? What is its use? 2 | 2 |
+1.h) What are advantages of DMA control? 2 3 3 |
+1.i) | What is vector processing, and how does it improve computational | 2 2 | 2
+performance?
+1.j) List and explain the key characteristics of a multiprocessor system. | 2 2 2 2
+Part-B (5x 10=50 Marks)
+Q. No. | Stem of the Question M | L CO | PO
+2.a) Explain the basic operational concepts of a computer with the help | 5 2 ] 1,2
+of a suitable diagram.
+2.6) 9 Explain the bus structure in detail with a ivat diayiaius. Discuss iis | 5 2 2 1,2,35
+types and significance in the context of computer architecture.
+OR
+2.c) Draw the schematic diagram of an Arithmetic Logic Shift Unit | 5 3 4 1,2,4
+(ALU) and explain its working.
+2.d) | What is an Instruction Cycle? Ilustrate the flowchart diagram of | 5 2 3 1,3
+the Instruction Cycle and explain its phases bricfly.
+3.a) Compare the hard-wired control unit and micro programmed | 5 4 | 2.4
+control unit
+3.b) Explain address sequencing process of a microprogrammed control | 5 2 2 2,4
+unit with a suitable block diagram?
+OR
+3.c) Explain the different types of data transfer and data manipulation | 5 2 3 1,2
+instructions in computer with suitable examples.
+3. d) Distinguish between direct and indirect address instructions. Also, | 5 A 3 2.3
+explain the various addressing modes with examples.
+Ava) [ixplain the concept of floating-point representation and how it} 5 9 2 13
+differs from fixed-point representation. Discuss its advantages aid
+CHSACVaNlaees.
+4.0) Uaxplaiie how complemenis are used io binary arithmeuc for} 5 4 / | 4
+subtraction, with suitable example.
+OR
+
+Wy PHA ®
+a Ld a

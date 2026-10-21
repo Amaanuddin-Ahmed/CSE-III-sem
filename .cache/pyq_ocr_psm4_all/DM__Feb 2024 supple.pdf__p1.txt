@@ -1,0 +1,70 @@
+( OAL,
+_ Hall Ticket Number: LU [2{oet (BAY
+a MR-21 Code: B414IT5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [IV Semester Supplementary Examinations, Jan/Feb-2024
+
+Discrete Mathematics
+(Information Technology)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 =20 Marks)
+Q. No. | Stem of the Question M | L | co | PO
+1.a) | Write the inverse, contrapositive of the following statement. 2 1 | L2
+P : It rains.
+Q: There is a flood in city.
+1.b) Obtain CNF of (P > (Q— R)) ~> P > (R- Q)). Zz 3 | |
+l.c) — State principle of inclusion-Exclusion. 2 1 2 1,2
+
+1.d) Let X ={1,2,3,4,5,6} and R be a relation defined as (x,y) xRy € ifand| 2 3 2 I
+only if x —y is divisible by 3. Find the elements of relation of R.
+
+1.e) How many words of three distinct letters can be formed from CAKE? 2 2 3 1,2
+1.f) | Give any three applications of Pigeonhole principle? 2 2 os l
+“’ 1. g)  Asingle coin is tossed 5 times. What is the probability of getting atleast | 2 3 4 1,2
+
+one head?
+
+1.h) Write the characteristic equation for the following recurrence relation 2 3 4 I
+an — 4an-4 = 0, n > 4 and solve it.
+
+1.i) What do you mean by isomorphism? Give examples of isomorphic | 2 | 5 I
+graphs.
+
+1.j) | What is a planar graph? Give examples of planar and non-planar graphs. 2 2 5 l
+
+Part-B (5 x 10 = 50 Marks)
+Q. No. Stem of the Question MiL{| CO} PO
+2.a) Obtain principal conjunctive normal form (PCNF) for the formula 5 3 1 I
+(~p > r) A (4 p).
+2.b) Verify the validity of the following arguments. “Every living thing isa] 5 3 I 12
+plant or an animal. Logu‘‘s dog is alive and it is not a plant. All animals
+have heart. Therefore Logu“s dog has a heart.”
+
+OR
+_. 2.c) — Using indirect proof, derive P > ~S from P—> QVR,Q—>~P,S—~R]} 5 3 l |
+i
+2.d) Show that (AQ a (P >Q)) >-P is a tautology. 5 2 1 I
+
+3.a) There are 40 computer programmers for a job. 25 know Java, 28 know] 5 4 2 1
+Oracle and 7 know neither language. Using principle of inclusion exclusion
+
+find how many know both languages.
+3.b) Let A={a,b,c} be a_ set and Relation R on A is as} 5 I 2 I
+
+R={(a,a),(a,b),(b,c),(c,c)}.
+Is R i) Reflexive ii) Symmetric iii) Transitive.
+OR
+3.¢) £:R —> R is defined by f(x) = axt b, for a, b ER and af 0. Show thatf is} > 2 2
+invertible and find the inverse of /
+
+3.d) Draw the Hasse diagram for the partial ordering {(A,B):A<B} onthe power| 5 2 2 1,2
+set e(S) where S={a,b,c} and < is subset relation.
+
+4.a) By using mathematical induction prove that the given equation is true for] 5 2 3. 1,2
+all positive integers.2+4+6+....+2n=n(mtl).
+
+4.b) Find the mid term of (2x — 1/3x)'°. 5 2 3 1,2
+
+P.T.O.

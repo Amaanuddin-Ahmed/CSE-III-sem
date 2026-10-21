@@ -1,0 +1,52 @@
+4. d)
+
+5. a)
+
+5. b)
+
+3. @)
+5. d)
+
+6. a)
+6. b)
+
+6. c)
+
+6. d)
+
+In how many ways can 6 men and 6 women be seated in a row? 5 3
+i) If any person may sit next to any other. ii) If men and women must
+occupy alternative seats.
+Solve ap-7ap-1+10a)-2=0, n>=2, given ap=10, aj=41 using generating | 5 3
+functions.
+Solve the recurrence relation using substitution method. 5 3
+an= a ne t3n74+3n+1 where ap=1.
+
+OR
+Solve the recurrence relation a, - 4a y-) + 4 ap = (n?+1)2" for n >2,| 5 3
+given ag=0, a;=1 by generating functions method.
+How many different words can be formed with the letters of the word | 5 3
+‘SUPER’ such that the vowels always come together?
+What is the significance of Planar graphs? Is K3 3, planar? 5 l
+Differentiate between Eulerian graph and Hamiltonian graph with an | 5 4
+example each.
+
+OR
+Explain kruskal’s algorithm and using the same obtain the minimal} 5 3
+spanning tree for the following weighted graph.
+
+Write algorithms for various tree traversals. 5 i
+
+5
+
+Ls
+
+1,2
+
+152
+
+2
+
+|
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

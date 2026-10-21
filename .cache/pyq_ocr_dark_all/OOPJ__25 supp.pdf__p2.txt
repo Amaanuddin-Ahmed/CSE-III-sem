@@ -1,0 +1,30 @@
+6.
+6.
+
+,
+,
+
+GQ.
+
+b)
+
+l)
+
+Discuss the architecture and components of Swing with examples.
+Write a Java program to create a user interface with JLabels,
+Jiextitelds, and JButtons.
+
+OR
+Wriie a Java program lo create a tabbed pane and add tabs with
+different components teach tab
+[explain the life cycle of an applet with an cxample program that
+demonstrates cach phase,
+
+LUN sf Fa
+
+Mi: Marks; 1. Bloom’s Paxonomy Level: CO: Course Outcome; PO: Propramme Outcome
+
+AL
+1
+
+/l

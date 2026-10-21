@@ -1,0 +1,71 @@
+Hall Ticket Number:
+
+Pi ft | | | dt tt dh | MR-21 | Code: B4L4CB4S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, Jan/l‘eb-2024
+Object Oriented Programming Using Java
+(Common to CSB, CSM & CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 = 20 Marks)
+
+Q. No. | Stem of the Question M | L | CO PO
+l.a) List String comparison methods. 2 l l 1,2
+1.b) Mention the benefits of inheritance. 2 I | 1,2
+1.c) | What is the datatype of the methods and variables in interfaces? 2 i 2 1,2
+1.d) Define package. List any two predefined packages in java. 2 l 2 1,2
+l.e Specify different thread priorities. 2 2 4 1,2
+1. f) Define generics. 2 | 3 1,2
+1.g) Mention any two classes in java.util package. 2 2 3 1,2
+1.h) What are the different ways to generate random number in Java? 2 | 3 1,2
+1.i) List any four methods defined by Applet? 2 | 5 1,2
+
+| 1.j) Differentiate between Panel and Window class. 2 4 5 1,2
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L | co | PO
+2.a) Explain the Features of Java with examples. 5 2 1 1,2
+2.b) List different types of access control and explain with suitable| 5 2 I 1,2
+
+examples.
+OR
+2.c) Define constructor and explain different types of constructors with | 5 2 ] 1,2
+examples.
+2.d) Strings are immutable-Explain. 5 2 I 1,2
+3.a) Write a java program to extend a superclass and implement at least] 5 3 2 1,2,3
+two interfaces.
+3.b) How does the Java run-time system know where to look for packages | 5 2 2 1,2
+that you create?
+OR
+3.c) If a class includes an interface but does not fully implement the | 4 5 2 1,2
+
+methods defined by that interface, then that class must be declared as
+abstract-Justify.
+
+3.d) Compare and contrast final, finally, finalize keywords. 6 4 2 1,2
+
+4.a) Write a java program to create thread using Thread class. 5S 3 4 1,2,3
+
+4.b) Mention any 4 methods for console I/O. 5 3 3 1,2
+OR
+
+4.c) Explain the commonly used methods for threads. 4 2 4 1,2
+
+4.d) Differentiate how enum works within a class and switch statement. 6 4 3 1,2
+
+5.a) List the advantages and limitations of Java iterators. 5 I 3 1,2
+
+5.b) Analyze the different methods to read input of various data types} 5 4 3 1,2
+using the Scanner class.
+
+OR
+5.c) List and explain briefly three constructors in StringTokenizer class. 5 2 3 1,2
+5.d) Explain four different types of Vector constructors. 5S 2 3 1,2
+6.a) Write ajava program by passing parameters to applets. 5S 3 5 1,2,3
+6.b) Explain any two Layout Managers. 5 2 5 1,2
+OR
+6.c) Write ajava program to demonstrate key event handlers. 5 3 5 1,2,3
+6.d) Explain Swing MVC components. 5 2 5 1,2,3
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

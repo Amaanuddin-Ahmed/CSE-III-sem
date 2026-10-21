@@ -1,0 +1,63 @@
+Hall Ticket Number: : ee
+PPL ELT ET «Lr, Code: BA2SCS2
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Regular/Supplementary Examinations, July 2025
+Discrete Mathematics
+(Common to CSE, IT and CSM)
+
+‘Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10x I = 10 Marks) | .
+
+Q.No. | Stem of the Question M|L [Co | PO
+l.a) When do we say that two statement formulas are Equivalent? 1 2 4 1
+1.b) Define DNF’. 1 | 1 1
+
+« l.c)  Whatis “Power set? , . I 1 2 2
+1.d) Give an example of a Inj ective f unctton. eo Il 2 2 2
+l.c) Define Monoid. . 1 1 3 1
+1.  Staté any two properties of Lattices. lL 2 3 2
+
+-l.g) Define combination. 9 ] 1 4 1
+1.h) How many ways are there to distribute 10 different books among 15 | 1 2 4 3
+| people if no person is to receive more than 1 book?
+1.1) Whatis the degree of a graph? 1 2 5 |
+1.j) What is the maximum number of edges in a simple undirected graph | 1 iF 5 2
+
+with n vertices?
+
+Part-B (5 x 10 = 50 Marks)
+
+. | Q. No. | Stem of the Question | M [ L | co | Po
+2.a) Show thatP -(Q— R)@P—>(-Q VR SPAQ)OR. a) 2 1 2
+2.b) Verify whether the following premises are consistent or not. 5 2 4] 3
+
+1. If Jack misses many classes through illness, then he fails high |
+school.
+
+2. If Jack fails high school, then heis uneducated.
+3. If Jack reads a lot of books, then he 1s not uneducated.
+4. Jack misses many classes through illness and reads a lot of books.
+
+OR
+2.c) Obtain PCNF for (-P - R) AQeP). | 5 2 1 3
+2.d) Show that (x) (PQ) > QCD) A ()(QQ) — RX) )> &) PR) - RG). | 5 2 2 3
+3.a) Show that for any two sets A and B, A- (ANB) = A-B. 5 2 2 3
+3.b) State and explain about any four Primitive Recursive Functions. 5 i 2 2
+OR
+3.c) Let f(x)= =x+2, @(x)=x- 2, hOx)=3x for x € R, where Ris a set of real 5 3 2 3
+° numbers, Find .
+, (i) fog
+Gigof,
+(iii)fogoh,
+(iv)gohof. .
+3.d) Show that the set of integers, positive, negative and zero is| 5 3° 2 1
+denumerable.
+4.a) Discuss about Subsemigroups and Submonoids. 5 1 3 2
+4.b) Let A= {1,2,3,6} with partial order defined by divisibility 5 3 3 3
+
+(.c., a < b = a|b). Prove that (A, S) is a lattice by showing that LUB
+Goin) and GLB (meet) exist for all pairs.
+OR
+
+P.T.O.

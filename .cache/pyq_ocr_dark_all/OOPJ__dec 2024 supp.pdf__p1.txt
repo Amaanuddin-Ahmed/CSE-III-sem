@@ -1,0 +1,53 @@
+Hall Ticket Number: ee
+
+MAHATMA GANDHI INSTEPUPE OF TECHNOLOGY (Autonomous)
+B.Tech. [V Semester Supplementary Examinations, December 2024/January 2025
+Object Oriented Programming through Java
+(Computer Science and Engineering (Al and ML))
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10 x 1 ~ 10 Marks)
+
+Q. No. | Stem of the Question Mj}L| CO | PO
+l.a) | What is the significance of the 'this' keyword in Java? 1 2 I 3
+1.b) | What are Java buzzwords? List any two. l l l |
+l.c) Explain the term polymorphism. l l 2 |
+1.d) | What is the purpose of the 'super' keyword in Java? 1 2 2 2
+l.e) Define the term "multithreading". | | : ,
+1. f) = What is the use of the 'try' keyword in exception handling? 1 2 3 3
+l.g) — State the purpose of checkbox group AW'T component. | | 4 3
+|.h) What is the difference between a button and a canvas in AW'L"? I 2 4 3
+L. 1) List differences between applets and applications. l I 5 |
+1.4) Define MVC architecture in the context of Swing. Jd 2 5 3
+
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M|L[CO| PO
+2.a) Explain the concept of constructors in Java with examples. 5 2 | 2
+2.6) Describe the life cycle of a Java object and the role of garbage; 5 | | 3
+
+collection.
+OR
+2.c) Develop a Java program to demonstrate the use of nested and inner | 5 | l 3
+classcs.
+2.d) Explain the various types of operators in Java with examples. | | |
+3.a) Explain hierarchical abstractions with an example. 5 2 2 2
+3.b) Develop a Java program to implement polymorphism using method|5 4 2 4
+overriding.
+OR
+3.¢) — Explain how Java handles multiple inheritance using interfaccs. 5 4 2 3
+3.d) Develop a Java program to read from and write to a file using java.io} 5 2% 2 4
+package.
+4.a) Develop a Java program to create and run multiple threads. 5S 4 3 4
+4.b) — Explain how to use annotations in Java with a program example. 5 3 3 3
+OR
+Ac) Discuss the concept of synchronized thrcads witht a program example. dy 4 5
+Ad) Write a Java program to create custom excepiton subclasses S 4 j )
+S.a) Develop a Java progiain io tandle a keyboard event using a} 4 4 “4
+Key Listcies,
+5. b) Eixplaig the AWE class ticrarchy wiih au examine " ) A )
+OR
+5.c) Develop a Java Swing application that includes a tabbed pane, combo | 5 4 4 4
+boxes and radio buttons to create a complex user interface.
+5. dd) Develop a Java program to create a menu bar with menus and menu} 5 4 4 ‘A
+LEE.

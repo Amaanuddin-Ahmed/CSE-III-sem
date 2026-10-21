@@ -1,0 +1,60 @@
+|S) 0a}au frye
+
+Hall Vicket Number: ne
+
+MAHATMA GANDIEIL INSTITUTE OF TECHNOLOGY (Autononious)
+B.Tech. If Semester Regular Examinations, Jan/Feb-2024
+Computer Organization and Architecture
+(Common to CSE, CSB, CSM & CSD)
+
+‘Lime: 3 Hours Answer ALL Questions Max. Marks: 60
+—_— i Part-A (10x 1= 10 Marks) 7
+Q. No. | _______ Stem of the Question ML CO PO
+l.a) Draw the block diagram to depict P: R2€RI. l | J |
+1.b) What is the role of PC and IR? I I 2 J
+1.c) | What is the role of micro programmed control unit? 1 2 2 2
+1.d) | What is the difference between ADD and ADDC instructions? 1 2 2 2
+l.c) Convert the following into binary numbers. 1 3 5 2
+il. (657)s=(__ a
+i.f) Draw the hardware configuration for signed-magnitude addition and | | 1 5 l
+subtraction.
+1.g) What is pipelining? 1 l 3 1
+1.h) Define mapping in cache memory? I I 3 it
+1.i) List the characteristics of CISC architecture. I J 3 2
+1.j) Write the classification of parallel processing. ee 1 | 44
+
+Part-B (5 x 10 = 50 Marks).
+
+Q. No. | Stem of the Question _ .
+
+2.a) The initial values of 8-bit registers R1, R2, R3, R4 are given below.
+Ri=11110000, R2=11111111, R3=10111001, R4=11101010
+Determine the values of the registers R1, R2, R3, R4 after execution of
+the following operations.
+
+RI<RI+R2
+R3B<}|R3°R4
+R2<R2+1
+RI<RI-R3
+2.b) List and explain the phases of instruction cycle with flowchart.
+OR
+
+2.c) Consider the register R=11011101. Determine the value of R after
+
+performing the following operations in sequence.
+i. Logical shift left
+
+il. Circular shift right
+iit. Logical shift nght
+IV. Circular shift left
+
+2.d) Draw the common bus structure to connect basic computer registers.
+
+3.a) Differentiate hardwired control and microprogrammed control.
+3.b) Write the assembly language program to evaluate A = (B+C)/D*E
+using two address instruction format.
+OR
+3.c) Explain the fields of microinstruction instruction format.
+3.d) Explain different addressing modes present in accessing the data in
+memory?
+

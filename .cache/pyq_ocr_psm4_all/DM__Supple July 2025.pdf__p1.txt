@@ -1,0 +1,66 @@
+Hall Ticket Number:
+
+MR-21 Code: B415IT5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. IV Semester Supplementary Examinations, July 2025
+Discrete Mathematics
+(Information Technology)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 70
+Part-A (10 x 2 =20 Marks)
+
+Q. No. | Stem of the Question M |L|CO | PO
+1.a) Construct the truth tables for the logical connectives. zz i 1 1,2
+1.b) Explain about Normal forms. 2 1 l 1
+1.c) | Define Binary Relation and write its properties. 2 1 2 1,2
+1.d) Write about compatibility relation with example. 2 1 2 1,2
+l.e) Write a recursive algorithm to find Fibonacci sequence for a number. z 2 3 1
+
+1.f) How many different 3 digit numbers can be formed with 3 four’s, | 2 2 3 lw
+4 two’s and 2 three’s.
+
+1.g) Explain Bayes’ theorem. 2 | 4 l
+1.h) Solve recurrence relation ap-4ap.1+4a)-2=0, where ap=0, aj=1. 2 3 4 1,2
+1.i) | Define isomorphism and state the rules for isomorphic graphs. 2 | > l
+1.j) Explain tree traversals. 2 4 5 l
+Part-B (5 x 10 = 50 Marks)
+
+Q. No. | Stem of the Question M | L |CO|PO
+
+2.a) Show that the following statements are logically equivalent without | 5 2 1 12
+using truth table.
+(PR) A(Q>R) & (PVQ)>R
+2.b) State and explain the rules that can generate a well formed formula. S 1 1 1
+OR
+
+2.c) Prove the following argument, using symbolic logic. 5 2 l |
+
+All men are fallible.
+All kings are men.
+Therefore, all kings are fallible.
+2.d) Using the truth table, show that the proposition PVI(PAQ) is a] 5 ps l 1
+tautology.
+
+3.a) Suppose that R is the relation on the set of strings that consist of | 5 3 Zz Ii12
+English letters such that a Rb if and only if l(a) = 1(b), where I(x) is the
+length of the string x. Is R an equivalence relation?
+3.b) Let f& g be functions from R to R defined by f(x) =ax+b and | 5 3 2 12
+g(x) = I-x+x”. If (gof) (x)=9x? -9x+3, determine a,b.
+OR
+3.c) Draw the Hasse diagram representing the positive divisors of 36. 5 2 2 1
+3.d) Given X= {1, 2, 3, 4), R= {(x, y)/ x > y}. Draw the graph of R and give | 5 3 2 l
+its matrix. Also state the properties satisfied by it.
+
+4.a) By using mathematical induction prove that the given equation is true | 5 2 3 «1,2
+for all positive integers.
+127+ 27+ 3? +..... +n? = (1/6){n(n + 1)(2n + 1} for alln EN.
+4.b) State binomial theorem. Expand (2a+8b)'° using binomial theorem. 5 3 3 1,2
+OR
+4.c) Discuss Pigeon hole principle with a suitable example. 5 | 3 l
+4.d) In how many ways can a committee of 5 ladies and 4 gents be chosen | 5 2 3 |
+
+from 9 ladies and 15 gents, if gent A refuses to take part if lady B is on
+the committee?
+
+P.T.O.

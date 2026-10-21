@@ -1,0 +1,56 @@
+4d)
+
+5.)
+
+6. a)
+
+6. b)
+
+7
+
+6.)
+
+6. d)
+
+In how many ways can 6 men and 6 women be seated in a row? 5 3
+1) If any person may sit next to any other. ii) If men and women must
+occupy alternative seats.
+
+Solve ay-7ap.1+1]0ap2=0, n>=2, given ay=10, aj=4l using generating | 5 3
+functions.
+Solve the recurrence relation using substitution method. 5 3
+an= a wpt3n’+3ntI where ag=1.
+
+OR
+Solve the recurrence relation ay - 4a yy + 4 ago 7 (ni1)2" for no, | 3 3
+given ay=0. aj=1 by generating functions method. |
+How many different words can be formed with the letters of the word | 5 3
+‘SUPER’ such that the vowels always come together? |
+What ts the significance of Planar graphs? Is Ka. 3, planar? 5 |
+Differentiate between Culerian graph and Hamiltonian graph with an; 5 4
+example each.
+
+OR
+Explain kruskal’s alyoritim and using the same obtain the minimal) 5 3
+spanning tree for the following weighted graph.
+
+-
+i. 6 \
+
+Write algorithms for various tree traversals. i 5 |
+
+4
+ra]
+
+ae 2 .
+
+M: Marks; L.: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome
+
+12
+
+gi
+
+1”
+
+‘
+{

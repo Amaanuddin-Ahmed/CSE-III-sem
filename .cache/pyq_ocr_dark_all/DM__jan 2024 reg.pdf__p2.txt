@@ -1,0 +1,39 @@
+S.a) Define binomial theorem. What is the coefficient of xy in the | 5 3 4
+og 3. \200.
+expansion of (2x) 3y)"%
+
+5.b) In how many ways 4 boys and 4 girls can be seated in a row so that | 5 3 4
+boys and girls are alternate?
+
+OR
+
+5.¢) There are 7 men and 3 women. Find the number of ways in which a} 5 3 4
+
+committee of 6 persons can be formed if the committee is to have
+
+(i) exacily 4 imen, and (ii) at least 2 women.
+5.d) bind the number of intepers solutions oF x, Fox, Fxg bh xp hx 90.1 5 2 4
+
+Where x) > 2, x0 > 3, x%3 > 4, X%4 > 2, x5 > 0.
+6.a) Prove that a complete graph Ky, is planar if and only ifm < 4. 5 3 5
+6.b)  Txplain kruskal’s algorithm and using the same obtain the imiinimal | 5 2 5
+
+spanning, tree for the fotlowing, weighted praph.
+
+i 2 ¥,
+{ ‘ . ( %
+ees. en
+a I . | _
+“ } N | ;
+( 8 iN. 4 je
+ON | S| 7
+OR
+6.c) Show that the given pair of graphs are isomorphic. 5 2 5
+\ / [x \ |
+e d & d
+
+6.d) Differentiate between Mulerian praph and Hamiltonian graph with an) 5 2 5
+
+cxauiple cach,
+
+M: Marks; 1: Bloom’s Vaxonomy Level; CO: Course Outcome; PO: Propramimne Outcome

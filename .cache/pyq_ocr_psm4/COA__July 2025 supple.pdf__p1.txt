@@ -1,0 +1,66 @@
+Hall Ticket Number:
+
+MR-22 Code: B325CS5S
+
+MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Autonomous)
+B.Tech. III Semester Supplementary Examinations, July 2025
+Computer Organization and Architecture
+(Common to CSE, CSB, CSM and CSD)
+
+Time: 3 Hours Answer ALL Questions Max. Marks: 60
+Part-A (10x I= 10 Marks)
+
+Define interrupt?
+
+What is the use of load and store memory reference instruction?
+Discuss about the term control word?
+
+Differentiate hardwired control and micro-programmed control.
+Draw the flow chart for the add and subtract operations.
+
+Write about various decimal arithmetic micro operation symbols.
+Define burst transfer.
+
+Define Hit ratio and Miss ratio.
+
+What is Microprocessor?
+
+Explain the advantages of pipelining.
+
+Part-B (5 x 10 = 50 Marks)
+
+Analyse the Basic Operational concepts of Computers.
+List and explain the steps involved in the execution of a complete
+instruction cycle. List the basic symbols used in register transfer
+Language.
+
+OR
+Contrast memory reference instructions with respect to register
+reference instructions.
+Define bus structures. Explain about the bus structures of computers.
+Explain Address sequencing in micro programmed control unit?
+Illustrate the micro-programmed control unit (MCU) with a neat
+diagram and how instructions will be processed in MCU?
+
+OR
+Explain different types of addressing modes.
+Define an instruction format? Explain different types of instruction
+formats in detail.
+With a neat Flowchart analyse Floating-Point Addition and
+Subtraction.
+Explain the hardware implementation for signed magnitude for
+addition and subtraction.
+
+OR
+Elaborate steps used in Booth algorithm for multiplying following
+binary numbers (+15) * (-13).
+Demonstrate division algorithm for fixed point numbers with the help
+of a flow chart.
+What is auxiliary memory? Explain the various memory components
+used as auxiliary memory in computer systems.
+Explain the following with respect to asynchronous data transfer.
+i) Strobe control ii) Handshaking 111) Asynchronous serial transfer.
+
+OR
+
+P.T.O.

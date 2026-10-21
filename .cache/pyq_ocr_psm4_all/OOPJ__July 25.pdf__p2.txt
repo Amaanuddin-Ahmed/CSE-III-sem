@@ -1,0 +1,10 @@
+6.a) Explain the limitations of AWT. 5 2 4 Z
+
+6.b) Develop a program for Mouse Handling Events. 5 3 4 1,2,3
+OR
+
+6.c) Whatis MVC? Explain MVC Architecture. 5 3 A LZ
+
+6.d) Explain about the Card Layout and Grid Bag Layout. 5 Z 4 l
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

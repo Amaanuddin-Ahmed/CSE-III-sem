@@ -1,0 +1,13 @@
+6.a) Develop a Java applet to accept and display user input through|5 4 5
+
+parameters.
+6.b) Explain the concept and use of JComboBox in Swing with an example |5 2 5
+program.
+OR
+6.c) Describe the differences between applets and applications in Java with}5 2 5
+examples.
+
+6.d) Analyze the use of JScrollPane in Swing and develop a Java program |5 4 5
+demonstrating its functionality.
+
+M: Marks; L: Bloom’s Taxonomy Level; CO: Course Outcome; PO: Programme Outcome

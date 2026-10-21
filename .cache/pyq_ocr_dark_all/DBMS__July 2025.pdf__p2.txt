@@ -1,0 +1,113 @@
+4.
+
+4.
+
+6,
+
+b)
+
+c)
+
+_d)
+
+. a)
+
+.b)
+
+_d)
+
+.a)
+_b)
+
+.C)
+
+Illustrate the features of tuple relational calculus and Domain
+relational calculus.
+Analyse the utilization of union, intersect, and except operations.
+
+Define Armstrong’s Axioms. Llucidate the closure of a set of
+dependencics.
+Assess the functionality of first, second and third normal forms.
+
+OR
+Discuss the concept of ‘Trivial and Non-Trivial functional
+dependencies
+Infer the strategy followed in BCNE and fourth normal form.
+
+Diagnose the important propertics of transactions to maintain data in
+the face of concurrent access and system failures.
+Demonstrate the role of strict two-phase locking protocol.
+
+OR
+Llaborate the impact of various anomalies due to interleaved
+>xecution.
+Outline the implementation of timestamp-based protocols and
+validation. based protocols.
+
+Show the process of Hash-Based indexing with a suitable example.
+Label the [ISAM index structure and interpret the operations
+performed on ISAM.
+
+OR
+With an appropriate cxample, discuss the procedure used in Tree-
+Based indexing.
+[low does a B+ tree index handle search, insert, and delete? Explain.
+
+“
+
+5
+
+5
+
+3
+
+ae
+
+ya)
+
+ant
+
+2
+
+ae
+
+mae)
+
+a
+
+=)
+
+M: Marks: 1: Bloom's Taxonomy Level; CO: Course Outcome: PO: Pro
+
+(
+Me, ‘
+
+yramme Outcome
+
+yet
+
+3
+
+3
+
+5
+
+1.2
+
+1,2
+|?
+
+aie
+
+1,2
+
+12
+
+1.2
+1.2
+
+ds
+
+1,2
+
+12

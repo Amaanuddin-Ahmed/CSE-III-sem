@@ -1,0 +1,54 @@
+6.
+
+6.
+
+‘o
+
+.a)
+
+Toy
+wD)
+
+fan
+
+2 \IY
+
+it)
+
+b)
+
+_d)
+
+Analyze the Java thread fife cycle and discuss how understanding af 5 A 3
+helps ta writing cffierent multithreaded programs,
+Desin a JBC application that demonsiraies the baste steps tavotved | 5 3 5
+mm connecting to a database, creating. a new database, and creatine a
+table.
+
+OR
+Develop a multithreaded Java program that demonstrates the use of | 5 3 5
+synchronized methods or blocks to cnsure thread satety.
+
+fYaminare and eanteact the litfereant dumee af IYO Tete Vier in JL 9%
+Ls NPERER TEARS CRELARH SOAFZELEP CLOE LITS, REPRESS ERLE EL Ly pyre | FL FEIN VEL V VSUELD, PFU EODD af i ,
+Desieit a owing application tollowiy the MVC architecture, Discuss | 35 3 “4
+
+ihe role of cach component (Viodcl, View, Controller).
+Compare and contrast the Delegation cvent model with other event; 5 A A
+
+handling mocdcts in Java. Discuss the advantages aid disadvantages |
+
+ol cache diode.
+A Ras
+
+oe
+Paploroe faefors such as tHosdbilify, ease of use, and responsiveness i} 5 4 /\
+choosiug, ite appropriaic layout imanaper for differenti Ut
+roquurremens,
+Dosien a Java appltcaitou thai demonsitates event handlae toe both | 5 5 A
+
+HOUSe and kKoyboard Cveuis, |
+
+M: Marks: lL: Bloom’s Taxonomy Level, CO: Course Outcome: PO: Programme Oulconie
+
+12

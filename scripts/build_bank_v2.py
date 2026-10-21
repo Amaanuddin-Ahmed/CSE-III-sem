@@ -31,9 +31,11 @@ OUT_RAW = ROOT / ".cache" / "papers_v2.json"
 OUT = ROOT / ".cache" / "question_bank_v2.json"
 OUT_JS = ROOT / "pyq-data.js"
 FIXES_PATH = ROOT / "scripts" / "manual_fixes.json"
+ES_QUESTIONS_PATH = ROOT / "scripts" / "es_questions.json"
 MANUAL_FIXES = (
     json.loads(FIXES_PATH.read_text(encoding="utf-8")) if FIXES_PATH.exists() else {}
 )
+CURATED_ES_PAPERS = json.loads(ES_QUESTIONS_PATH.read_text(encoding="utf-8"))
 
 SUBJECT_NAMES = {
     "DM": "Discrete Mathematics",
@@ -1467,7 +1469,7 @@ def main():
     for item in manifest:
         if "error" in item:
             continue
-        if item["subject"] not in {"DM", "COA", "OOPJ", "DBMS", "SE"}:
+        if item["subject"] not in {"DM", "COA", "OOPJ", "DBMS", "SE", "ES"}:
             continue
         pdf_path = ROOT / item["localPath"]
         if pdf_path.suffix.lower() not in {".pdf"}:
@@ -1662,6 +1664,44 @@ def main():
             "examType": first["examType"],
             "appearances": appearances,
         })
+
+    final = [q for q in final if q["subjectId"] != "ES"]
+    for paper in CURATED_ES_PAPERS:
+        for question in paper["questions"]:
+            question_number = question["number"]
+            question_part = paper["part"]
+            appearance = {
+                "year": paper["year"],
+                "month": paper["month"],
+                "session": paper["label"],
+                "examType": paper["examType"],
+                "semester": "I",
+                "label": paper["label"],
+                "paperName": paper["paperName"],
+                "driveFileId": paper["driveFileId"],
+                "page": paper["pageNumber"],
+                "qno": question_number,
+                "marks": question["marks"],
+                "part": question_part,
+            }
+            final.append({
+                "id": "",
+                "subjectId": "ES",
+                "chapter": question["chapter"],
+                "part": question_part,
+                "marks": question["marks"],
+                "years": [paper["year"]],
+                "frequency": 1,
+                "questionNumber": f"Q{question_number}",
+                "topicTag": f"Unit {question['chapter']}",
+                "question": question["text"],
+                "paperName": appearance["paperName"],
+                "driveFileId": appearance["driveFileId"],
+                "pageNumber": paper["pageNumber"],
+                "semester": "I",
+                "examType": paper["examType"],
+                "appearances": [appearance],
+            })
 
     for i, q in enumerate(final, 1):
         q["id"] = f"{q['subjectId']}-{q['part']}{q['chapter']}-{i:04d}"
