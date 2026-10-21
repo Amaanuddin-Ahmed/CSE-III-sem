@@ -50,6 +50,11 @@ out/
 build/
 dist/
 
+# Local OCR sources and generated data
+.cache/
+__pycache__/
+*.py[cod]
+
 # Large Binary Files & Temporary Processing Output
 # Note: Source PDFs reside in Google Drive; do not store mass PDFs in GitHub
 *.pdf
