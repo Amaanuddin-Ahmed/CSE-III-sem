@@ -234,40 +234,57 @@
 
         <!-- PYQ Search & Filter Controls -->
         <div class="pyq-filters-container">
-          <!-- Instant Search Box -->
-          <div class="pyq-search-box">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="pyqSearchInput" class="pyq-search-input" placeholder="Search questions across all chapters (e.g. Normalization, Booth, Tautology, AVL)..." autocomplete="off">
-            <button type="button" id="clearPyqSearchBtn" class="pyq-search-clear" style="display: none;" title="Clear search">&times;</button>
-          </div>
-
-          <!-- Academic Year Filter Pills -->
-          <div class="filter-row">
-            <span class="filter-heading"><i class="fa-regular fa-calendar-days"></i> Academic Year:</span>
-            <div class="year-pills-row" id="yearPillsRow">
-              <button type="button" class="year-pill-btn active" data-year="all">All Years</button>
-              <button type="button" class="year-pill-btn" data-year="2025">2025</button>
-              <button type="button" class="year-pill-btn" data-year="2024">2024</button>
-              <button type="button" class="year-pill-btn" data-year="2023">2023</button>
-              <button type="button" class="year-pill-btn" data-year="2022">2022</button>
-              <button type="button" class="year-pill-btn" data-year="2021">2021</button>
+          <!-- Search + collapsible filters -->
+          <div class="pyq-toolbar">
+            <div class="pyq-search-box">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="pyqSearchInput" class="pyq-search-input" placeholder="Search this subject (e.g. Normalization, Booth, Tautology)..." autocomplete="off">
+              <button type="button" id="clearPyqSearchBtn" class="pyq-search-clear" style="display: none;" title="Clear search">&times;</button>
             </div>
+            <button type="button" id="pyqFilterToggle" class="pyq-filter-toggle" aria-expanded="false" aria-controls="pyqFilterPanel">
+              <i class="fa-solid fa-sliders"></i>
+              <span>Filters</span>
+              <span class="filter-count" id="activeFilterCount" hidden>0</span>
+            </button>
           </div>
 
-          <!-- Part & Repetition Filter Pills -->
-          <div class="filter-row">
-            <span class="filter-heading"><i class="fa-solid fa-filter"></i> Exam Part / Marks:</span>
-            <div class="part-buttons" id="partToggleButtons">
-              <button type="button" class="part-btn active" data-part="all">All Questions</button>
-              <button type="button" class="part-btn" data-part="A">Part A (2 Marks)</button>
-              <button type="button" class="part-btn" data-part="B">Part B (5/10 Marks)</button>
-              <button type="button" class="part-btn repeated-filter-btn" data-part="repeated"><i class="fa-solid fa-fire"></i> Repeated (2+ Times)</button>
+          <div class="pyq-filter-panel" id="pyqFilterPanel" hidden>
+            <div class="filter-group">
+              <div class="filter-group-title">Year</div>
+              <div class="filter-options" id="yearFilterOptions">
+                <!-- year checkboxes are generated from the loaded papers -->
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-group-title">Printed semester</div>
+              <div class="filter-options" id="semesterFilterOptions">
+                <!-- semester checkboxes are generated from the loaded papers -->
+              </div>
+              <p class="filter-group-note">Some Drive papers are printed for other semesters and are labelled honestly.</p>
+            </div>
+            <div class="filter-group">
+              <div class="filter-group-title">Part</div>
+              <div class="filter-options">
+                <label class="filter-option"><input type="radio" name="partFilter" value="all" checked> <span>All questions</span></label>
+                <label class="filter-option"><input type="radio" name="partFilter" value="A"> <span>Part A</span></label>
+                <label class="filter-option"><input type="radio" name="partFilter" value="B"> <span>Part B</span></label>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-group-title">Show</div>
+              <div class="filter-options">
+                <label class="filter-option"><input type="checkbox" id="repeatedOnlyFilter"> <span>Repeated questions only</span></label>
+              </div>
+            </div>
+            <div class="filter-panel-actions">
+              <button type="button" id="resetFiltersBtn" class="btn-secondary-flat">Reset filters</button>
+              <button type="button" id="applyFiltersBtn" class="btn-action-primary">Apply</button>
             </div>
           </div>
 
           <!-- Dynamic Question Count Summary -->
           <div class="pyq-count-banner" id="pyqCountBanner">
-            Showing authentic questions across all 5 chapters
+            Showing questions across all 5 units
           </div>
         </div>
 
@@ -329,6 +346,7 @@
           <span class="modal-badge" id="modalSubjectBadge">COA</span>
           <span class="modal-badge secondary" id="modalPartBadge">Part A &bull; 2 Marks</span>
           <span class="modal-badge tertiary" id="modalUnitBadge">Unit 1</span>
+          <span class="modal-badge quaternary" id="modalSemesterBadge" style="display:none;">Printed: Sem IV paper</span>
         </div>
         <button type="button" class="modal-close-btn" id="closeQuestionModalBtn" aria-label="Close">&times;</button>
       </div>
@@ -388,16 +406,16 @@
             Thank you for helping keep MGIT PYQ Hub accurate and useful for our CSE batch.
           </p>
           <p class="guideline-soft-sub">
-            Please ensure you are uploading authentic MGIT Semester III question papers, faculty-verified lecture notes, or mid-exam resources with the correct subject and unit.
+            Please share authentic MGIT question papers, faculty notes, or mid-exam resources with the correct subject and unit.
           </p>
           <p class="guideline-soft-note">
-            <i class="fa-solid fa-shield-halved"></i> All submissions are held in a moderation queue and verified before being published.
+            <i class="fa-brands fa-whatsapp"></i> Submissions are sent to Amaan on WhatsApp. Files are checked before they are added to the site, so let us know which subject and unit they belong to.
           </p>
         </div>
       </div>
       <div class="modal-footer-buttons">
         <button type="button" class="btn-secondary-flat" id="cancelContribBtn">Cancel</button>
-        <button type="button" class="btn-action-primary" id="agreeContribBtn">I Understand &amp; Continue</button>
+        <button type="button" class="btn-action-primary" id="agreeContribBtn">Continue</button>
       </div>
     </div>
   </div>
@@ -408,7 +426,7 @@
   <div class="modal-backdrop" id="contribUploadModal" style="display: none;" role="dialog" aria-modal="true">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h4 class="modal-dialog-title"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Study Resources</h4>
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-cloud-arrow-up"></i> Share Study Resources</h4>
         <button type="button" class="modal-close-btn" id="closeUploadModalBtn" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
@@ -464,11 +482,11 @@
           </div>
 
           <div class="form-group file-dropzone-group">
-            <label class="form-label">Select Files (PDF, Word DOC/DOCX, PPT/PPTX, Images) *</label>
+            <label class="form-label">Files You Want to Share</label>
             <div class="file-picker-box" id="filePickerBox">
               <i class="fa-solid fa-file-arrow-up picker-icon"></i>
-              <p class="picker-main">Click here to browse files from your device</p>
-              <p class="picker-sub">Supports PDF, Word (.docx), PowerPoint (.pptx), and Images (Max 25 MB per file)</p>
+              <p class="picker-main">Click here to pick the files from your device</p>
+              <p class="picker-sub">The names are added to your WhatsApp message. You attach the actual files in WhatsApp.</p>
               <input type="file" id="contribFilesInput" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg" style="display: none;">
             </div>
             <div class="selected-files-list" id="selectedFilesList"></div>
@@ -477,12 +495,30 @@
           <div class="modal-footer-buttons">
             <button type="button" class="btn-secondary-flat" id="cancelUploadBtn">Cancel</button>
             <button type="submit" class="btn-action-primary" id="submitUploadBtn">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span>Submit for Moderation</span>
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Continue in WhatsApp</span>
             </button>
           </div>
 
         </form>
+
+        <div id="contribHandoffPanel" class="contrib-handoff" hidden>
+          <div class="handoff-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h5 class="handoff-title">WhatsApp should now be open</h5>
+          <p class="handoff-text">
+            Your details are written in the message. Attach the selected file(s) to that chat and press send, and Amaan will add them after checking them.
+          </p>
+          <p class="handoff-note" id="contribHandoffNote"></p>
+          <div class="handoff-actions">
+            <button type="button" class="btn-secondary-flat" id="copyContribMessageBtn">
+              <i class="fa-regular fa-copy"></i> Copy message
+            </button>
+            <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" class="btn-action-primary" id="reopenWhatsAppBtn">
+              <i class="fa-brands fa-whatsapp"></i> Open WhatsApp again
+            </a>
+          </div>
+          <button type="button" class="btn-secondary-flat handoff-done" id="contribDoneBtn">Done</button>
+        </div>
       </div>
     </div>
   </div>
@@ -493,49 +529,52 @@
   <div class="modal-backdrop" id="adminModal" style="display: none;" role="dialog" aria-modal="true">
     <div class="modal-dialog large-dialog">
       <div class="modal-header">
-        <h4 class="modal-dialog-title"><i class="fa-solid fa-shield-halved"></i> Admin Management Portal</h4>
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-shield-halved"></i> Editor View</h4>
         <button type="button" class="modal-close-btn" id="closeAdminModalBtn" aria-label="Close">&times;</button>
       </div>
 
-      <!-- Admin Login Form (Shown when logged out) -->
+      <!-- Admin Login Form (Shown when locked) -->
       <div id="adminLoginFormContainer" class="modal-body">
-        <p class="admin-login-notice">Enter administrator password to access system statistics and moderation portal.</p>
+        <p class="admin-login-notice">Editor view for checking extracted papers and data quality. Every question is public already, so this only keeps the audit tools out of the way.</p>
         <form id="adminLoginForm" class="admin-form">
           <div class="form-group">
             <label for="adminPassword" class="form-label">Password</label>
             <input type="password" id="adminPassword" class="form-input" required autocomplete="current-password" placeholder="Enter Password">
           </div>
           <div class="admin-form-actions">
-            <button type="submit" class="btn-action-primary">Unlock Dashboard</button>
+            <button type="submit" class="btn-action-primary">Unlock Editor View</button>
           </div>
         </form>
       </div>
 
-      <!-- Admin Dashboard View (Shown when logged in) -->
+      <!-- Admin Dashboard View (Shown when unlocked) -->
       <div id="adminDashboardContainer" class="modal-body" style="display: none;">
         <div class="admin-top-stats">
           <div class="admin-stat-card">
-            <span class="stat-num" id="adminPendingCount">0</span>
-            <span class="stat-lbl">Pending Review</span>
+            <span class="stat-num" id="adminBankQuestions">0</span>
+            <span class="stat-lbl">Questions in Bank</span>
           </div>
           <div class="admin-stat-card">
-            <span class="stat-num" id="adminVerifiedCount">101</span>
-            <span class="stat-lbl">Drive Inventory Items</span>
+            <span class="stat-num" id="adminBankPapers">0</span>
+            <span class="stat-lbl">Unique Papers Parsed</span>
           </div>
           <div class="admin-stat-card">
-            <span class="stat-num">7</span>
-            <span class="stat-lbl">Core Subjects</span>
+            <span class="stat-num" id="adminBankFlagged">0</span>
+            <span class="stat-lbl">Papers Needing a Check</span>
           </div>
         </div>
 
         <div class="moderation-section">
-          <h5 class="moderation-title">Student Contributions Moderation Queue</h5>
+          <h5 class="moderation-title">Editor Notes</h5>
           <div class="moderation-table-wrapper" id="moderationTableWrapper">
-            <p class="empty-queue-msg">No submissions currently pending moderation.</p>
+            <p class="empty-queue-msg">Open the full editor view for the paper-by-paper audit.</p>
           </div>
         </div>
 
         <div class="admin-footer-bar">
+          <a href="admin.html" class="btn-action-primary">
+            <i class="fa-solid fa-table-list"></i> Open Full Editor View
+          </a>
           <button type="button" id="adminLogoutBtn" class="btn-secondary-flat">Log Out</button>
         </div>
       </div>
@@ -772,7 +811,6 @@
 
   <!-- Application Scripts -->
   <script src="pyq-data.js"></script>
-  <script src="supabase-client.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

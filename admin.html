@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Portal &amp; Statistics — MGIT PYQ Hub</title>
-  <meta name="description" content="MGIT PYQ Hub Administrative Dashboard, Resource Analytics, and Moderation Queue.">
-  
+  <title>Editor View — Question Bank Audit | MGIT PYQ Hub</title>
+  <meta name="description" content="Paper-by-paper audit of the MGIT PYQ Hub question bank: source paper, printed semester, question counts and Drive links.">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-  
+
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   <link rel="stylesheet" href="style.css">
 
   <!-- Vercel Web Analytics -->
@@ -28,16 +28,16 @@
 </head>
 <body class="admin-page-body">
 
-  <!-- Admin Top Navigation Header -->
+  <!-- Editor Top Navigation Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand-group" style="text-decoration: none;">
         <div class="brand-seal">
-          <i class="fa-solid fa-shield-halved"></i>
+          <i class="fa-solid fa-table-list"></i>
         </div>
         <div class="brand-info">
-          <h1 class="brand-name">MGIT PYQ Hub — Admin Portal</h1>
-          <p class="brand-sub">Resource Analytics &bull; Moderation Queue &bull; Pipelines</p>
+          <h1 class="brand-name">MGIT PYQ Hub — Editor View</h1>
+          <p class="brand-sub">Paper audit &bull; Extraction checks &bull; Source links</p>
         </div>
       </a>
 
@@ -54,18 +54,19 @@
     </div>
   </header>
 
-  <!-- Admin Main Content Area -->
   <main class="main-container">
 
-    <!-- Password Prompt Gate (shown if not authenticated) -->
+    <!-- Password Prompt Gate -->
     <div id="authGateContainer" class="auth-gate-wrapper" style="display: none;">
       <div class="auth-gate-card">
         <div class="brand-seal" style="margin: 0 auto 14px; width: 48px; height: 48px; font-size: 22px;">
           <i class="fa-solid fa-lock"></i>
         </div>
-        <h2 class="auth-gate-title">Admin Authentication Required</h2>
-        <p class="auth-gate-desc">Please enter the administrator password to view full system statistics and moderation queues.</p>
-        
+        <h2 class="auth-gate-title">Editor Access</h2>
+        <p class="auth-gate-desc">
+          This page audits how each question paper was parsed. All questions and papers are already public on the main site, so the password only keeps these check tools together.
+        </p>
+
         <form id="authGateForm" class="admin-form">
           <div class="form-group">
             <label for="gatePassword" class="form-label">Password</label>
@@ -73,186 +74,206 @@
           </div>
           <div class="auth-gate-actions">
             <a href="index.html" class="btn-secondary-flat" style="text-decoration: none;">Cancel</a>
-            <button type="submit" class="btn-action-primary">Unlock Portal</button>
+            <button type="submit" class="btn-action-primary">Unlock Editor View</button>
           </div>
         </form>
       </div>
     </div>
 
-    <!-- Authenticated Dashboard View -->
-    <div id="adminMainView">
-      
-      <!-- Welcome & Status Banner -->
+    <!-- Editor Dashboard -->
+    <div id="adminMainView" style="display: none;">
+
       <div class="admin-banner-card">
         <div class="banner-text">
-          <h2 class="admin-heading">System Overview &amp; Analytics</h2>
-          <p class="admin-sub">Real-time statistics for Mahatma Gandhi Institute of Technology CSE Semester III.</p>
+          <h2 class="admin-heading">Question Bank Audit</h2>
+          <p class="admin-sub">Every question on the site is traced back to a real paper in the Drive folder. This view shows that trail paper by paper.</p>
         </div>
         <div class="pipeline-badge-group">
-          <span class="status-pill green"><i class="fa-solid fa-circle"></i> Supabase Connected</span>
-          <span class="status-pill blue"><i class="fa-solid fa-circle"></i> Google Drive Synced</span>
-          <span class="status-pill purple"><i class="fa-solid fa-circle"></i> Vercel Analytics &amp; Speed Insights Ready</span>
+          <span class="status-pill blue"><i class="fa-solid fa-circle"></i> Data from pyq-data.js</span>
+          <span class="status-pill green"><i class="fa-solid fa-circle"></i> Drive links verified</span>
         </div>
       </div>
 
-      <!-- Section 1: KPI Statistics Grid -->
       <section class="admin-kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-icon blue"><i class="fa-brands fa-google-drive"></i></div>
-          <div class="kpi-info">
-            <span class="kpi-number">101</span>
-            <span class="kpi-label">Drive Verified Files</span>
-            <span class="kpi-hint">Across 6 active subject subfolders</span>
-          </div>
-        </div>
-
         <div class="kpi-card">
           <div class="kpi-icon navy"><i class="fa-solid fa-book-open"></i></div>
           <div class="kpi-info">
-            <span class="kpi-number">7</span>
-            <span class="kpi-label">Active Core Subjects</span>
-            <span class="kpi-hint">DM, COA, OOPJ, DBMS, SE, ES, I&amp;E</span>
+            <span class="kpi-number" id="kpiTotalQuestions">0</span>
+            <span class="kpi-label">Questions in Bank</span>
+            <span class="kpi-hint">After merging repeated questions</span>
           </div>
         </div>
 
         <div class="kpi-card">
-          <div class="kpi-icon amber"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="kpi-icon blue"><i class="fa-regular fa-file-lines"></i></div>
           <div class="kpi-info">
-            <span class="kpi-number" id="kpiTotalQuestions">34</span>
-            <span class="kpi-label">Mapped Authentic Questions</span>
-            <span class="kpi-hint">Exam years 2020 – 2024</span>
+            <span class="kpi-number" id="kpiTotalPapers">0</span>
+            <span class="kpi-label">Unique Papers</span>
+            <span class="kpi-hint">Duplicates removed by paper code</span>
           </div>
         </div>
 
         <div class="kpi-card">
-          <div class="kpi-icon green"><i class="fa-regular fa-file-lines"></i></div>
+          <div class="kpi-icon amber"><i class="fa-solid fa-triangle-exclamation"></i></div>
           <div class="kpi-info">
-            <span class="kpi-number">4</span>
-            <span class="kpi-label">Verified Notes Documents</span>
-            <span class="kpi-hint">COA Unit 1 &amp; ES Units 1, 2</span>
+            <span class="kpi-number" id="kpiFlaggedPapers">0</span>
+            <span class="kpi-label">Papers to Recheck</span>
+            <span class="kpi-hint">Fewer than 12 questions parsed</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon green"><i class="fa-solid fa-glasses"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-number" id="kpiOtherSemPapers">0</span>
+            <span class="kpi-label">Non-III-Sem Papers</span>
+            <span class="kpi-hint">Kept, and labelled with their printed semester</span>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Subject-by-Subject Deep Breakdown -->
       <section class="admin-section-box">
         <div class="admin-box-header">
-          <h3 class="admin-box-title"><i class="fa-solid fa-table-list"></i> Subject-Wise Inventory &amp; PYQ Breakdown</h3>
-          <span class="badge-total">7 Subjects Monitored</span>
+          <h3 class="admin-box-title"><i class="fa-solid fa-table-list"></i> Subject-Wise Inventory</h3>
+          <span class="badge-total" id="subjectCountBadge">0 Subjects</span>
         </div>
 
         <div class="table-responsive">
           <table class="admin-data-table">
             <thead>
               <tr>
-                <th>Code</th>
-                <th>Subject Name</th>
-                <th>Short</th>
-                <th>Drive Folder ID</th>
-                <th>Past Papers</th>
-                <th>Notes</th>
-                <th>PYQ Bank</th>
-                <th>Drive Link</th>
+                <th>Subject</th>
+                <th>Full Name</th>
+                <th>Papers on Drive</th>
+                <th>Questions in Bank</th>
+                <th>Units Covered</th>
+                <th>Drive Folder</th>
               </tr>
             </thead>
-            <tbody id="subjectStatsTableBody">
-              <!-- Dynamically populated from SUBJECTS_DATA -->
-            </tbody>
+            <tbody id="subjectStatsTableBody"></tbody>
           </table>
         </div>
       </section>
 
-      <!-- Section 3: Question Bank Examination Statistics -->
       <section class="admin-section-box">
         <div class="admin-box-header">
-          <h3 class="admin-box-title"><i class="fa-solid fa-chart-pie"></i> Examination Question Distribution &amp; Recurrence</h3>
+          <h3 class="admin-box-title"><i class="fa-solid fa-magnifying-glass-chart"></i> Paper-by-Paper Audit</h3>
+          <span class="badge-total" id="paperCountBadge">0 Papers</span>
+        </div>
+
+        <div class="audit-toolbar">
+          <input type="text" id="paperSearchInput" class="form-input audit-search" placeholder="Search a paper name or subject...">
+          <label class="filter-option audit-toggle">
+            <input type="checkbox" id="onlyFlaggedToggle">
+            <span>Only papers that parsed short</span>
+          </label>
+        </div>
+
+        <p class="audit-hint">
+          A full MGIT paper normally yields 10 Part-A sub-questions and 4–5 Part-B questions. A lower count usually means the scan was hard to read, not that the paper was short.
+        </p>
+
+        <div class="table-responsive">
+          <table class="admin-data-table audit-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Paper</th>
+                <th>Printed Sem</th>
+                <th>Questions Parsed</th>
+                <th>Status</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody id="paperAuditBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-section-box">
+        <div class="admin-box-header">
+          <h3 class="admin-box-title"><i class="fa-solid fa-chart-pie"></i> Distribution &amp; Recurrence</h3>
         </div>
 
         <div class="distribution-grid">
-          <!-- By Academic Year -->
           <div class="dist-card">
-            <h4 class="dist-card-title">Distribution by Year</h4>
-            <div class="dist-list" id="distByYearList">
-              <!-- Rendered via JS -->
-            </div>
+            <h4 class="dist-card-title">Questions by Year</h4>
+            <div class="dist-list" id="distByYearList"></div>
           </div>
 
-          <!-- By Exam Part & Marks -->
           <div class="dist-card">
-            <h4 class="dist-card-title">Distribution by Part &amp; Marks</h4>
-            <div class="dist-list" id="distByPartList">
-              <!-- Rendered via JS -->
-            </div>
+            <h4 class="dist-card-title">Questions by Part</h4>
+            <div class="dist-list" id="distByPartList"></div>
           </div>
 
-          <!-- By Recurrence Frequency -->
           <div class="dist-card">
-            <h4 class="dist-card-title">Recurrence &amp; High-Yield Frequency</h4>
-            <div class="dist-list" id="distByFreqList">
-              <!-- Rendered via JS -->
-            </div>
+            <h4 class="dist-card-title">Repeat Frequency</h4>
+            <div class="dist-list" id="distByFreqList"></div>
           </div>
         </div>
       </section>
 
-      <!-- Section 4: Student Contribution Moderation Queue -->
       <section class="admin-section-box">
         <div class="admin-box-header">
-          <h3 class="admin-box-title"><i class="fa-solid fa-inbox"></i> Student Contributions Moderation Queue</h3>
-          <span class="badge-pending" id="badgePendingCount">0 Pending</span>
+          <h3 class="admin-box-title"><i class="fa-brands fa-whatsapp"></i> Incoming Contributions</h3>
         </div>
-
-        <div class="table-responsive" id="adminModTableWrapper">
-          <p class="empty-queue-msg">No submissions currently pending moderation. All verified.</p>
+        <p class="audit-hint">
+          Students send papers and notes straight to WhatsApp from the website, and each one is opened, checked against the printed header, and added here by hand. Nothing is published automatically, and nothing is stored in this browser.
+        </p>
+        <div class="pipeline-actions">
+          <a href="https://wa.me/916303191696" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+            <i class="fa-brands fa-whatsapp"></i> Open Contribution Chat
+          </a>
+          <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+            <i class="fa-brands fa-google-drive"></i> Open the Drive Folder
+          </a>
         </div>
       </section>
 
-      <!-- Section 5: Connected Pipelines & Infrastructure -->
       <section class="admin-section-box">
         <div class="admin-box-header">
-          <h3 class="admin-box-title"><i class="fa-solid fa-server"></i> Connected Infrastructure &amp; Pipelines</h3>
+          <h3 class="admin-box-title"><i class="fa-solid fa-link"></i> Where the Data Comes From</h3>
         </div>
 
         <div class="pipelines-grid">
           <div class="pipeline-card">
             <div class="pipeline-header">
-              <i class="fa-solid fa-database" style="color: #059669;"></i>
-              <h5>Supabase PostgreSQL</h5>
-            </div>
-            <p class="pipeline-desc">Project Reference: <code>nnqhtpuylejrahgfklzw</code></p>
-            <p class="pipeline-desc">Endpoint: <code>https://nnqhtpuylejrahgfklzw.supabase.co</code></p>
-            <div class="pipeline-actions">
-              <a href="https://supabase.com/dashboard/project/nnqhtpuylejrahgfklzw" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Supabase Dashboard
-              </a>
-            </div>
-          </div>
-
-          <div class="pipeline-card">
-            <div class="pipeline-header">
               <i class="fa-brands fa-google-drive" style="color: #2563eb;"></i>
               <h5>Google Drive Repository</h5>
             </div>
-            <p class="pipeline-desc">Root Folder: <code>SEM 3 (1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr)</code></p>
-            <p class="pipeline-desc">Inventory: <code>101 files verified across 6 subfolders</code></p>
+            <p class="pipeline-desc">Root: <code>SEM 3</code> folder, shared read-only.</p>
+            <p class="pipeline-desc">Each question card links to its own source PDF page.</p>
             <div class="pipeline-actions">
               <a href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Source Drive Folder
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Drive Folder
               </a>
             </div>
           </div>
 
           <div class="pipeline-card">
             <div class="pipeline-header">
-              <i class="fa-solid fa-chart-line" style="color: #7c3aed;"></i>
-              <h5>Vercel Web Analytics &amp; Speed Insights</h5>
+              <i class="fa-brands fa-github" style="color: #111827;"></i>
+              <h5>Source Repository</h5>
             </div>
-            <p class="pipeline-desc">GitHub Repository: <code>Amaanuddin-Ahmed/CSE-III-sem</code></p>
-            <p class="pipeline-desc">Web Analytics: <code>Active (/_vercel/insights/script.js)</code></p>
-            <p class="pipeline-desc">Speed Insights: <code>Active (/_vercel/speed-insights/script.js)</code></p>
+            <p class="pipeline-desc">The extractor, this page, and the question bank all live in one repo.</p>
+            <p class="pipeline-desc">Repo: <code>Amaanuddin-Ahmed/CSE-III-sem</code></p>
             <div class="pipeline-actions">
-              <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Vercel Analytics Dashboard
+              <a href="https://github.com/Amaanuddin-Ahmed/CSE-III-sem" target="_blank" rel="noopener noreferrer" class="btn-pipeline-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="pipeline-card">
+            <div class="pipeline-header">
+              <i class="fa-solid fa-robot" style="color: #7c3aed;"></i>
+              <h5>AI Answers</h5>
+            </div>
+            <p class="pipeline-desc">Handled by the serverless function <code>/api/gemini</code>, so the key never reaches the browser.</p>
+            <p class="pipeline-desc" id="aiStatusText">Checking AI availability...</p>
+            <div class="pipeline-actions">
+              <a href="index.html" class="btn-pipeline-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Test on the Website
               </a>
             </div>
           </div>
@@ -262,12 +283,9 @@
     </div>
   </main>
 
-  <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Scripts -->
   <script src="pyq-data.js"></script>
-  <script src="supabase-client.js"></script>
   <script>
     (function () {
       'use strict';
@@ -293,13 +311,41 @@
         distByYearList: document.getElementById('distByYearList'),
         distByPartList: document.getElementById('distByPartList'),
         distByFreqList: document.getElementById('distByFreqList'),
-        adminModTableWrapper: document.getElementById('adminModTableWrapper'),
-        badgePendingCount: document.getElementById('badgePendingCount'),
         kpiTotalQuestions: document.getElementById('kpiTotalQuestions'),
+        kpiTotalPapers: document.getElementById('kpiTotalPapers'),
+        kpiFlaggedPapers: document.getElementById('kpiFlaggedPapers'),
+        kpiOtherSemPapers: document.getElementById('kpiOtherSemPapers'),
+        subjectCountBadge: document.getElementById('subjectCountBadge'),
+        paperCountBadge: document.getElementById('paperCountBadge'),
+        paperAuditBody: document.getElementById('paperAuditBody'),
+        paperSearchInput: document.getElementById('paperSearchInput'),
+        onlyFlaggedToggle: document.getElementById('onlyFlaggedToggle'),
+        aiStatusText: document.getElementById('aiStatusText'),
         toastContainer: document.getElementById('toastContainer')
       };
 
-      // Check Authentication State
+      const SHORT_PAPER_THRESHOLD = 12;
+      let paperRows = [];
+
+      function escapeHtml(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function showToast(msg) {
+        if (!el.toastContainer) return;
+        const t = document.createElement('div');
+        t.className = 'toast';
+        t.textContent = msg;
+        el.toastContainer.appendChild(t);
+        setTimeout(() => t.remove(), 3200);
+      }
+
       function checkAuth() {
         const isAuth = sessionStorage.getItem('mgit_admin_auth') === 'authenticated';
         if (isAuth) {
@@ -318,215 +364,220 @@
         const enteredHash = await sha256Hex(entered);
         if (enteredHash && ADMIN_HASHES.includes(enteredHash)) {
           sessionStorage.setItem('mgit_admin_auth', 'authenticated');
-          showToast('Portal unlocked successfully.');
+          el.gatePassword.value = '';
           checkAuth();
         } else {
-          showToast('Invalid administrator password.');
+          showToast('That password is not right.');
           el.gatePassword.value = '';
         }
       }
 
       function handleLogout() {
         sessionStorage.removeItem('mgit_admin_auth');
-        showToast('Logged out of admin portal.');
-        setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 500);
+        window.location.href = 'index.html';
+      }
+
+      function buildPaperIndex() {
+        const map = new Map();
+        const questions = typeof QUESTIONS_DATABASE !== 'undefined' ? QUESTIONS_DATABASE : [];
+
+        questions.forEach(q => {
+          const appearances = Array.isArray(q.appearances) && q.appearances.length
+            ? q.appearances
+            : [{
+                driveFileId: q.driveFileId,
+                paperName: q.paperName,
+                semester: q.semester,
+                page: q.pageNumber
+              }];
+
+          appearances.forEach(a => {
+            const key = a.driveFileId || `${q.subjectId}:${a.paperName || q.paperName}`;
+            if (!map.has(key)) {
+              map.set(key, {
+                key,
+                subjectId: q.subjectId,
+                paperName: a.paperName || q.paperName || 'Unknown paper',
+                driveFileId: a.driveFileId || q.driveFileId || '',
+                semester: a.semester || q.semester || 'III',
+                page: a.page || q.pageNumber || 1,
+                count: 0
+              });
+            }
+            map.get(key).count += 1;
+          });
+        });
+
+        return Array.from(map.values()).sort((a, b) => {
+          if (a.subjectId !== b.subjectId) return a.subjectId.localeCompare(b.subjectId);
+          return a.paperName.localeCompare(b.paperName);
+        });
       }
 
       function renderDashboard() {
+        paperRows = buildPaperIndex();
+        renderKpis();
         renderSubjectTable();
+        renderPaperAudit();
         renderDistributionStats();
-        renderModerationQueue();
+        checkAiStatus();
+      }
+
+      function renderKpis() {
+        if (el.kpiTotalQuestions) {
+          el.kpiTotalQuestions.textContent = (typeof QUESTIONS_DATABASE !== 'undefined' ? QUESTIONS_DATABASE.length : 0);
+        }
+        if (el.kpiTotalPapers) el.kpiTotalPapers.textContent = paperRows.length;
+        if (el.kpiFlaggedPapers) {
+          el.kpiFlaggedPapers.textContent = paperRows.filter(p => p.count < SHORT_PAPER_THRESHOLD).length;
+        }
+        if (el.kpiOtherSemPapers) {
+          el.kpiOtherSemPapers.textContent = paperRows.filter(p => String(p.semester) !== 'III').length;
+        }
       }
 
       function renderSubjectTable() {
         if (!el.subjectStatsTableBody || typeof SUBJECTS_DATA === 'undefined') return;
         el.subjectStatsTableBody.innerHTML = '';
 
-        let totalQuestions = 0;
+        const keys = Object.keys(SUBJECTS_DATA);
+        if (el.subjectCountBadge) el.subjectCountBadge.textContent = `${keys.length} Subjects`;
 
-        Object.keys(SUBJECTS_DATA).forEach(key => {
+        keys.forEach(key => {
           const sub = SUBJECTS_DATA[key];
-          const qCount = typeof QUESTIONS_DATABASE !== 'undefined'
-            ? QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id).length
-            : 0;
-
-          totalQuestions += qCount;
+          const subjectQuestions = typeof QUESTIONS_DATABASE !== 'undefined'
+            ? QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id)
+            : [];
+          const units = new Set(subjectQuestions.map(q => q.chapter).filter(Boolean));
 
           const tr = document.createElement('tr');
           tr.innerHTML = `
-            <td><code>${sub.code}</code></td>
+            <td><span class="q-badge unit">${escapeHtml(sub.shortName)}</span></td>
             <td><strong>${escapeHtml(sub.title)}</strong></td>
-            <td><span class="q-badge unit">${sub.shortName}</span></td>
-            <td><code>${sub.driveFolderId || 'N/A (Sparse/Pending)'}</code></td>
-            <td>${sub.paperCount} Papers</td>
-            <td>${sub.notesCount} Verified</td>
-            <td><strong>${qCount} Questions</strong></td>
+            <td>${Number(sub.paperCount) || 0}</td>
+            <td><strong>${subjectQuestions.length}</strong></td>
+            <td>${units.size ? `Units ${Array.from(units).sort().join(', ')}` : '—'}</td>
             <td>
-              <a href="${sub.driveUrl}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
+              <a href="${escapeHtml(sub.driveUrl)}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
                 <i class="fa-brands fa-google-drive"></i> Open
               </a>
             </td>
           `;
           el.subjectStatsTableBody.appendChild(tr);
         });
+      }
 
-        if (el.kpiTotalQuestions) {
-          el.kpiTotalQuestions.textContent = totalQuestions;
+      function renderPaperAudit() {
+        if (!el.paperAuditBody) return;
+        const query = (el.paperSearchInput && el.paperSearchInput.value || '').trim().toLowerCase();
+        const flaggedOnly = Boolean(el.onlyFlaggedToggle && el.onlyFlaggedToggle.checked);
+        const subNames = typeof SUBJECTS_DATA !== 'undefined' ? SUBJECTS_DATA : {};
+
+        const visible = paperRows.filter(p => {
+          if (flaggedOnly && p.count >= SHORT_PAPER_THRESHOLD) return false;
+          if (!query) return true;
+          const subjectTitle = subNames[p.subjectId] ? subNames[p.subjectId].title : '';
+          return `${p.paperName} ${p.subjectId} ${subjectTitle}`.toLowerCase().includes(query);
+        });
+
+        if (el.paperCountBadge) {
+          el.paperCountBadge.textContent = `${visible.length} of ${paperRows.length} Papers`;
         }
+
+        if (visible.length === 0) {
+          el.paperAuditBody.innerHTML = '<tr><td colspan="6" class="empty-queue-msg">No papers match that search.</td></tr>';
+          return;
+        }
+
+        el.paperAuditBody.innerHTML = visible.map(p => {
+          const short = p.count < SHORT_PAPER_THRESHOLD;
+          const isThird = String(p.semester) === 'III';
+          const source = p.driveFileId
+            ? `<a href="https://drive.google.com/file/d/${encodeURIComponent(p.driveFileId)}/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="note-open-btn"><i class="fa-regular fa-file-pdf"></i> PDF p${Number(p.page) || 1}</a>`
+            : '<span class="audit-muted">No file id</span>';
+          return `
+            <tr class="${short ? 'audit-row-flag' : ''}">
+              <td><span class="q-badge unit">${escapeHtml(p.subjectId)}</span></td>
+              <td>${escapeHtml(p.paperName)}</td>
+              <td><span class="q-badge ${isThird ? 'unit' : 'part-b'}">Sem ${escapeHtml(String(p.semester))}</span></td>
+              <td><strong>${p.count}</strong></td>
+              <td>${short ? '<span class="audit-flag"><i class="fa-solid fa-triangle-exclamation"></i> Recheck scan</span>' : '<span class="audit-ok"><i class="fa-solid fa-check"></i> Looks complete</span>'}</td>
+              <td>${source}</td>
+            </tr>
+          `;
+        }).join('');
       }
 
       function renderDistributionStats() {
         if (typeof QUESTIONS_DATABASE === 'undefined') return;
 
-        // Year distribution
-        const yearsMap = { 2024: 0, 2023: 0, 2022: 0, 2021: 0, 2020: 0 };
-        let partA = 0, partB = 0;
-        let highYieldCount = 0;
+        const yearMap = new Map();
+        let partA = 0;
+        let partB = 0;
+        let repeated = 0;
+        let oneOff = 0;
 
         QUESTIONS_DATABASE.forEach(q => {
-          if (q.years) {
-            q.years.forEach(yr => {
-              if (yearsMap[yr] !== undefined) yearsMap[yr]++;
-            });
-          }
+          (q.years || []).forEach(yr => yearMap.set(yr, (yearMap.get(yr) || 0) + 1));
           if (q.part === 'A') partA++;
           if (q.part === 'B') partB++;
-          if (q.frequency >= 3) highYieldCount++;
+          if ((q.frequency || 1) > 1) repeated++;
+          else oneOff++;
         });
 
-        // Render Years
-        if (el.distByYearList) {
-          el.distByYearList.innerHTML = Object.keys(yearsMap).reverse().map(yr => `
-            <div class="dist-row">
-              <span class="dist-lbl">${yr} Examinations</span>
-              <span class="dist-val">${yearsMap[yr]} questions appeared</span>
-            </div>
-          `).join('');
-        }
-
-        // Render Parts
-        if (el.distByPartList) {
-          el.distByPartList.innerHTML = `
-            <div class="dist-row">
-              <span class="dist-lbl">Part A (2 Marks Short Questions)</span>
-              <span class="dist-val"><strong>${partA}</strong> questions</span>
-            </div>
-            <div class="dist-row">
-              <span class="dist-lbl">Part B (5/10 Marks Essay Questions)</span>
-              <span class="dist-val"><strong>${partB}</strong> questions</span>
-            </div>
-          `;
-        }
-
-        // Render Freq
-        if (el.distByFreqList) {
-          el.distByFreqList.innerHTML = `
-            <div class="dist-row">
-              <span class="dist-lbl">High-Yield Repeated Questions (&ge; 3x)</span>
-              <span class="dist-val"><strong style="color: #15803d;">${highYieldCount}</strong> recurrent topics</span>
-            </div>
-            <div class="dist-row">
-              <span class="dist-lbl">Single-Appearance Questions (1x)</span>
-              <span class="dist-val">${QUESTIONS_DATABASE.length - highYieldCount} topics</span>
-            </div>
-          `;
-        }
-      }
-
-      function renderModerationQueue() {
-        const queue = JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]');
-        if (el.badgePendingCount) el.badgePendingCount.textContent = `${queue.length} Pending`;
-
-        if (queue.length === 0) {
-          el.adminModTableWrapper.innerHTML = `
-            <p class="empty-queue-msg">No submissions currently pending moderation. All clear.</p>
-          `;
-          return;
-        }
-
-        let html = `
-          <table class="admin-data-table">
-            <thead>
-              <tr>
-                <th>Submitted</th>
-                <th>Subject</th>
-                <th>Resource Type</th>
-                <th>Unit</th>
-                <th>Files</th>
-                <th>Contributor</th>
-                <th>Moderation</th>
-              </tr>
-            </thead>
-            <tbody>
+        const total = Math.max(1, QUESTIONS_DATABASE.length);
+        const row = (label, count) => `
+          <div class="dist-row">
+            <span class="dist-label">${escapeHtml(String(label))}</span>
+            <div class="dist-bar-track"><div class="dist-bar-fill" style="width:${Math.round((count / total) * 100)}%"></div></div>
+            <span class="dist-value">${count}</span>
+          </div>
         `;
 
-        queue.forEach((item, idx) => {
-          const fileNames = item.files.map(f => f.name).join(', ');
-          const dateStr = new Date(item.submittedAt).toLocaleDateString();
-          html += `
-            <tr>
-              <td>${dateStr}</td>
-              <td><strong>${item.subject}</strong></td>
-              <td>${item.resourceType}</td>
-              <td>${item.chapter}</td>
-              <td>${escapeHtml(fileNames)}</td>
-              <td>${escapeHtml(item.contributor)}</td>
-              <td>
-                <button type="button" class="mod-action-btn approve" data-idx="${idx}">Approve &amp; Sync</button>
-                <button type="button" class="mod-action-btn reject" data-idx="${idx}">Reject</button>
-              </td>
-            </tr>
-          `;
-        });
+        const years = Array.from(yearMap.keys()).sort((a, b) => b - a);
+        if (el.distByYearList) {
+          el.distByYearList.innerHTML = years.length
+            ? years.map(y => row(y, yearMap.get(y))).join('')
+            : '<p class="empty-queue-msg">No dated questions yet.</p>';
+        }
+        if (el.distByPartList) {
+          el.distByPartList.innerHTML = row('Part A (2 marks)', partA) + row('Part B (long answer)', partB);
+        }
+        if (el.distByFreqList) {
+          el.distByFreqList.innerHTML = row('Repeated questions', repeated) + row('Asked once', oneOff);
+        }
+      }
 
-        html += `</tbody></table>`;
-        el.adminModTableWrapper.innerHTML = html;
-
-        el.adminModTableWrapper.querySelectorAll('.mod-action-btn.approve').forEach(b => {
-          b.addEventListener('click', (e) => {
-            const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-            queue.splice(idx, 1);
-            localStorage.setItem('mgit_pending_contributions', JSON.stringify(queue));
-            renderModerationQueue();
-            showToast('Approved and queued for Drive sync.');
+      async function checkAiStatus() {
+        if (!el.aiStatusText) return;
+        try {
+          const res = await fetch('/api/gemini', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: 'Reply with the single word OK.' })
           });
-        });
-
-        el.adminModTableWrapper.querySelectorAll('.mod-action-btn.reject').forEach(b => {
-          b.addEventListener('click', (e) => {
-            const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-            queue.splice(idx, 1);
-            localStorage.setItem('mgit_pending_contributions', JSON.stringify(queue));
-            renderModerationQueue();
-            showToast('Submission rejected.');
-          });
-        });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && !data.error) {
+            el.aiStatusText.textContent = 'Status: answering normally.';
+          } else if (data.code === 'AI_NOT_CONFIGURED') {
+            el.aiStatusText.textContent = 'Status: no GEMINI_API_KEY set on the server yet.';
+          } else if (data.code === 'AI_QUOTA_EXCEEDED' || res.status === 429) {
+            el.aiStatusText.textContent = 'Status: key works, but the free quota is used up right now.';
+          } else {
+            el.aiStatusText.textContent = `Status: unavailable (HTTP ${res.status}).`;
+          }
+        } catch (err) {
+          el.aiStatusText.textContent = 'Status: could not reach /api/gemini.';
+        }
       }
 
-      function showToast(msg) {
-        if (!el.toastContainer) return;
-        const toast = document.createElement('div');
-        toast.className = 'toast-msg';
-        toast.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${escapeHtml(msg)}</span>`;
-        el.toastContainer.appendChild(toast);
-        setTimeout(() => {
-          toast.style.opacity = '0';
-          setTimeout(() => toast.remove(), 250);
-        }, 3200);
-      }
-
-      function escapeHtml(str) {
-        if (!str) return '';
-        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-      }
-
-      // Event Listeners
-      if (el.authGateForm) el.authGateForm.addEventListener('submit', handleAuthSubmit);
-      if (el.adminPageLogoutBtn) el.adminPageLogoutBtn.addEventListener('click', handleLogout);
-
-      checkAuth();
+      document.addEventListener('DOMContentLoaded', () => {
+        if (el.authGateForm) el.authGateForm.addEventListener('submit', handleAuthSubmit);
+        if (el.adminPageLogoutBtn) el.adminPageLogoutBtn.addEventListener('click', handleLogout);
+        if (el.paperSearchInput) el.paperSearchInput.addEventListener('input', renderPaperAudit);
+        if (el.onlyFlaggedToggle) el.onlyFlaggedToggle.addEventListener('change', renderPaperAudit);
+        checkAuth();
+      });
 
     })();
   </script>

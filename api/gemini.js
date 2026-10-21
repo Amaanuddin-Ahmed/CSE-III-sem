@@ -1,133 +1,142 @@
 /**
  * Vercel Serverless Function: /api/gemini
- * Provides genuine Google Gemini AI study assistance for MGIT CSE Semester III.
+ * Server-side Gemini proxy for the MGIT PYQ Hub study assistant.
+ *
+ * The API key is read only from the server environment (GEMINI_API_KEY).
+ * It is never sent to, or stored in, the browser bundle.
  */
 
+const SYSTEM_INSTRUCTION = `You are the MGIT PYQ Hub study assistant: a careful, accurate academic tutor for B.Tech CSE students at Mahatma Gandhi Institute of Technology (Autonomous), Hyderabad.
+
+Subjects in this hub:
+1. Discrete Mathematics (DM)
+2. Computer Organization & Architecture (COA)
+3. Object-Oriented Programming through Java (OOPJ)
+4. Database Management Systems (DBMS)
+5. Software Engineering (SE)
+
+How MGIT end-semester papers in this hub are actually structured:
+- Part A is one compulsory question (Q1) with ten short sub-parts, 1.a to 1.j. Each sub-part is usually 1 or 2 marks. The ten sub-parts normally cover all five units (two per unit).
+- Part B has Q2 to Q6, one question per unit. Each numbered question is worth 10 marks and normally contains an internal choice: either (a and b) OR (c and d), usually 5 marks each. Some papers use a single 10-mark sub-part instead.
+- Do not claim that Part A always has five questions, and do not invent a marking scheme. If the exact marks are provided with the question, follow them.
+
+Answering rules:
+- Answer the exact question asked. Do not change the question or answer a different one.
+- Match the depth to the marks: a 1–2 mark answer should be a few precise sentences; a 5 mark answer should have a short introduction, 3–6 key points, and a conclusion or example; a 10 mark answer should be a structured long answer with headings, diagrams described in words, and a worked example where relevant.
+- For mathematics and numerical subjects, show the method and the intermediate steps, then state the final answer clearly. Use LaTeX only where it improves readability.
+- For programming questions, give correct, compilable Java/SQL and explain the key lines.
+- For diagram questions, describe the diagram completely (components, connections, flow) so a student can draw it; do not pretend to render an image.
+- If the question is ambiguous or appears to contain an OCR error, state the most likely reading, answer that, and note the ambiguity briefly.
+- Never invent a formula, a definition, a paper reference, or a statistic. If you are not certain, say so.
+- Answer as a tutor, not as a chatbot: no meta-commentary, no mention of prompts or policies.
+- Use clean Markdown: short headings, bold key terms, numbered steps, tables where useful.`;
+
+function buildContents(history, query, subject) {
+  const turns = [];
+  if (Array.isArray(history)) {
+    for (const turn of history.slice(-12)) {
+      const text = typeof turn?.text === 'string' ? turn.text.trim() : '';
+      if (!text) continue;
+      turns.push({
+        role: turn.role === 'model' || turn.role === 'assistant' ? 'model' : 'user',
+        parts: [{ text }],
+      });
+    }
+  }
+  const finalQuery = (query || '').trim();
+  if (finalQuery) {
+    const last = turns[turns.length - 1];
+    if (!last || last.role !== 'user' || last.parts[0].text !== finalQuery) {
+      turns.push({ role: 'user', parts: [{ text: finalQuery }] });
+    }
+  }
+  if (!turns.length) return [];
+  // Gemini requires the conversation to start with a user turn.
+  while (turns.length && turns[0].role !== 'user') turns.shift();
+  return turns;
+}
+
 export default async function handler(req, res) {
-  // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return res.status(503).json({
+      error: 'AI_NOT_CONFIGURED',
+      message: 'The AI assistant is not configured on this deployment.',
+    });
   }
 
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+  let body = req.body;
+  if (typeof body === 'string') {
+    try { body = JSON.parse(body); } catch { body = {}; }
+  }
+  const { query, subject, history, image } = body || {};
+  const contents = buildContents(history, query, subject || '');
+  if (!contents.length) {
+    return res.status(400).json({ error: 'Missing query or history' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY || 
-    Buffer.from('QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=', 'base64').toString('utf8');
-
-  try {
-    const { query, subject, history } = req.body || {};
-    if (!query && (!history || history.length === 0)) {
-      return res.status(400).json({ error: 'Missing query or history in request body' });
+  // Optional photo of a question paper / notes page.
+  if (image && typeof image.base64Data === 'string' && /^image\//.test(image.mimeType || '')) {
+    if (image.base64Data.length < 6_000_000) {
+      const last = contents[contents.length - 1];
+      last.parts.push({ inlineData: { mimeType: image.mimeType, data: image.base64Data } });
     }
+  }
 
-    const systemInstruction = `You are the MGIT PYQ Hub AI Study Assistant, an expert academic tutor for Mahatma Gandhi Institute of Technology (MGIT) Autonomous CSE Semester III students.
-The 7 core semester subjects are:
-1. Discrete Mathematics (DM) [Logic, Sets, Relations, POSETs, Lattices, Groups, Permutations, Combinations, Recurrence Relations, Graphs, Euler/Hamiltonian]
-2. Computer Organization & Architecture (COA) [Addressing Modes, ALU, Booth's Algorithm, Microprogrammed Control, Cache Mapping, Virtual Memory, Pipelining, Hazards, DMA]
-3. Object Oriented Programming through Java (OOPJ) [Classes, OOP, Overloading vs Overriding, Interfaces, Packages, Multithreading, Exceptions, Collections, AWT/Swing]
-4. Database Management Systems (DBMS) [ER Diagrams, Relational Algebra, SQL, Normalization 1NF-BCNF, Transactions, ACID, 2PL, Indexing, B+ Trees]
-5. Software Engineering (SE) [Process Models, Waterfall, Agile Scrum, SRS, Architecture, Coupling & Cohesion, Black-box & White-box Testing, Cyclomatic Complexity]
-6. Environmental Studies (ES) [Ecosystems, Ecological Pyramids, Biodiversity Hotspots, Pollution, Waste Management, Global Treaties, Green Energy]
-7. Innovation and Entrepreneurship (I&E) [Design Thinking, Ideation, Business Model Canvas, IPR, Patents, Funding, Startup Lifecycle]
+  const context = `Subject context: ${subject || 'General CSE Semester III'}.\n`;
+  contents[0].parts.unshift({ text: `${SYSTEM_INSTRUCTION}\n\n${context}` });
 
-MGIT Autonomous Examination Structure & Regulation Blueprint:
-- Total Marks: 60 Marks (Part A: 10 Marks, Part B: 50 Marks).
-- Part A (10 Marks Total - Compulsory): Question 1 consists of exactly 5 sub-questions: 1(a), 1(b), 1(c), 1(d), and 1(e) (one question from each of Units 1 to 5), each carrying 2 marks (5 × 2 = 10 Marks). All 5 sub-questions are compulsory with no choice.
-- Part B (50 Marks Total - Essay): Consists of 5 compulsory numbered questions: Question 2, Question 3, Question 4, Question 5, and Question 6 (corresponding to Units 1, 2, 3, 4, and 5 respectively). There is no choice between question numbers (answering all numbers 2 through 6 is mandatory). Inside each numbered question, there is an internal choice between two fixed pairs: either [a, b] OR [c, d] (e.g., 2(a) [5M] & 2(b) [5M] OR 2(c) [5M] & 2(d) [5M]). Each sub-question carries 5 marks, making each numbered question worth 10 marks (5 questions × 10 Marks = 50 Marks). Students can ONLY choose [a, b] or [c, d] — no cross-pair mixing is permitted (e.g., combining 2(a) and 2(d) is invalid).
+  const models = ['gemini-3.5-flash', 'gemini-flash-latest'];
+  let lastError = null;
+  let lastStatus = 502;
 
-Guidelines for Answers:
-- When asked about "2 marks questions" or "short questions": provide crisp, high-scoring answers with formal definitions, key formulas, equations, or examples worth full 2 marks.
-- When asked to "continue" or follow up: seamlessly continue from the previous turn in the conversation without restarting or skipping.
-- Math & Formulas: use standard human-readable math or standard LaTeX ($...$ or $$...$$).
-- Output directly as the academic tutor. Never output internal checklists, prompt evaluation steps, or meta-instructions.
-- Use clean GitHub-style Markdown with bolding, lists, and code blocks.`;
-
-    // Construct multi-turn contents
-    let contents = [];
-    if (Array.isArray(history) && history.length > 0) {
-      contents = history.map((turn, idx) => {
-        const role = turn.role === 'model' || turn.role === 'assistant' ? 'model' : 'user';
-        let text = turn.text || '';
-        // Prepend system instruction to the very first user message for guaranteed grounding
-        if (idx === 0 && role === 'user') {
-          text = `${systemInstruction}\n\nSubject Context: ${subject || 'General CSE Sem III'}\n\nStudent: ${text}`;
-        }
-        return {
-          role: role,
-          parts: [{ text: text }]
-        };
-      });
-
-      // If query is provided and not already the last message in history, append it
-      const lastMsg = history[history.length - 1];
-      if (query && (!lastMsg || lastMsg.text !== query)) {
-        contents.push({
-          role: 'user',
-          parts: [{ text: query }]
-        });
-      }
-    } else {
-      contents = [
+  for (const model of models) {
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
         {
-          role: 'user',
-          parts: [
-            { text: `${systemInstruction}\n\nSubject Context: ${subject || 'General CSE Sem III'}\n\nStudent Question: ${query}` }
-          ]
-        }
-      ];
-    }
-
-    const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
-    let lastError = null;
-
-    for (const model of models) {
-      try {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-
-        const response = await fetch(url, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            contents: contents,
-            generationConfig: {
-              temperature: 0.35,
-              maxOutputTokens: 4096
-            }
-          })
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (candidate) {
-            return res.status(200).json({ success: true, text: candidate });
-          }
-        } else {
-          lastError = await response.text();
+            contents,
+            generationConfig: { temperature: 0.25, maxOutputTokens: 4096, topP: 0.9 },
+          }),
         }
-      } catch (err) {
-        lastError = err.message;
-      }
-    }
+      );
 
-    return res.status(200).json({
-      fallback: true,
-      error: 'API_ERROR',
-      details: lastError
-    });
-  } catch (err) {
-    return res.status(200).json({
-      fallback: true,
-      error: 'SERVER_EXCEPTION',
-      message: err.message
-    });
+      if (response.ok) {
+        const data = await response.json();
+        const text = data.candidates?.[0]?.content?.parts
+          ?.map((p) => p.text || '')
+          .join('')
+          .trim();
+        if (text) return res.status(200).json({ success: true, text, model });
+        lastError = 'Empty response from model';
+        continue;
+      }
+
+      lastStatus = response.status;
+      lastError = await response.text();
+      // Bad API key / permission errors will not improve with another model.
+      if (response.status === 400 && /API key not valid/i.test(lastError)) break;
+      if (response.status === 401 || response.status === 403) break;
+    } catch (err) {
+      lastError = err?.message || String(err);
+    }
   }
+
+  const quota = lastStatus === 429;
+  return res.status(quota ? 429 : 502).json({
+    error: quota ? 'AI_QUOTA_EXCEEDED' : 'AI_UPSTREAM_ERROR',
+    message: quota
+      ? 'The AI assistant has reached its request limit for now. Please try again later.'
+      : 'The AI assistant could not generate an answer right now. Please try again.',
+  });
 }

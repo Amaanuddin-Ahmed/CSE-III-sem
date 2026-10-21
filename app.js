@@ -21,14 +21,14 @@
     currentSubject: null,
     currentMode: null, // 'notes' or 'pyqs'
     notesChapterFilter: 'all',
-    selectedYears: [2024, 2023, 2022, 2021, 2020],
-    selectedYear: 'all',
-    selectedPart: 'all', // 'all', 'A', 'B', 'repeated'
+    selectedYears: null,
+    selectedSemesters: null,
+    selectedPart: 'all', // 'all', 'A', 'B'
+    repeatedOnly: false,
     pyqSearchQuery: '',
     expandedChapters: { 1: true, 2: false, 3: false, 4: false, 5: false },
-    isAdminLoggedIn: false,
+    isAdminLoggedIn: sessionStorage.getItem('mgit_admin_auth') === 'authenticated',
     selectedFiles: [],
-    pendingContributions: JSON.parse(localStorage.getItem('mgit_pending_contributions') || '[]'),
 
     // Onboarding Walkthrough Tour State
     currentTourStep: 0,
@@ -41,9 +41,6 @@
     speechRecognition: null
   };
 
-  const DEFAULT_GEMINI_KEY = (typeof atob === 'function') 
-    ? atob('QVEuQWI4Uk42SURuTDU5MU1aXzlrbmlPclg4M1haaUxKNjFjdGRONWp6OG9DS1VaY1hCQ3c=') 
-    : '';
   const DRIVE_ROOT_URL = "https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing";
 
   // -------------------------------------------------------------
@@ -88,9 +85,15 @@
     viewSubjectDrivePapersBtn: document.getElementById('viewSubjectDrivePapersBtn'),
     pyqSearchInput: document.getElementById('pyqSearchInput'),
     clearPyqSearchBtn: document.getElementById('clearPyqSearchBtn'),
-    yearPillsRow: document.getElementById('yearPillsRow'),
+    pyqFilterToggle: document.getElementById('pyqFilterToggle'),
+    pyqFilterPanel: document.getElementById('pyqFilterPanel'),
+    yearFilterOptions: document.getElementById('yearFilterOptions'),
+    semesterFilterOptions: document.getElementById('semesterFilterOptions'),
+    activeFilterCount: document.getElementById('activeFilterCount'),
+    repeatedOnlyFilter: document.getElementById('repeatedOnlyFilter'),
+    resetFiltersBtn: document.getElementById('resetFiltersBtn'),
+    applyFiltersBtn: document.getElementById('applyFiltersBtn'),
     pyqCountBanner: document.getElementById('pyqCountBanner'),
-    partToggleButtons: document.getElementById('partToggleButtons'),
     chapterAccordionsContainer: document.getElementById('chapterAccordionsContainer'),
 
     // Question Modal
@@ -99,6 +102,7 @@
     modalSubjectBadge: document.getElementById('modalSubjectBadge'),
     modalPartBadge: document.getElementById('modalPartBadge'),
     modalUnitBadge: document.getElementById('modalUnitBadge'),
+    modalSemesterBadge: document.getElementById('modalSemesterBadge'),
     modalQuestionTitle: document.getElementById('modalQuestionTitle'),
     modalYearsAppeared: document.getElementById('modalYearsAppeared'),
     modalRecurrence: document.getElementById('modalRecurrence'),
@@ -126,6 +130,10 @@
     filePickerBox: document.getElementById('filePickerBox'),
     contribFilesInput: document.getElementById('contribFilesInput'),
     selectedFilesList: document.getElementById('selectedFilesList'),
+    contribHandoffPanel: document.getElementById('contribHandoffPanel'),
+    contribHandoffNote: document.getElementById('contribHandoffNote'),
+    copyContribMessageBtn: document.getElementById('copyContribMessageBtn'),
+    contribDoneBtn: document.getElementById('contribDoneBtn'),
 
     // Admin Modal
     adminModal: document.getElementById('adminModal'),
@@ -134,8 +142,9 @@
     adminDashboardContainer: document.getElementById('adminDashboardContainer'),
     adminLoginForm: document.getElementById('adminLoginForm'),
     adminPassword: document.getElementById('adminPassword'),
-    adminPendingCount: document.getElementById('adminPendingCount'),
-    adminVerifiedCount: document.getElementById('adminVerifiedCount'),
+    adminBankQuestions: document.getElementById('adminBankQuestions'),
+    adminBankPapers: document.getElementById('adminBankPapers'),
+    adminBankFlagged: document.getElementById('adminBankFlagged'),
     moderationTableWrapper: document.getElementById('moderationTableWrapper'),
     adminLogoutBtn: document.getElementById('adminLogoutBtn'),
 
@@ -194,6 +203,7 @@
     subjectId: 'DM',
     resourceType: 'PYQ'
   };
+  let lastContributionMessage = '';
 
   // -------------------------------------------------------------
   // Initialization
@@ -266,6 +276,22 @@
     state.currentSubject = sub;
     state.currentMode = null;
     state.notesChapterFilter = 'all';
+
+    // Reset PYQ filters when moving to a different subject
+    state.selectedYears = null;
+    state.selectedSemesters = null;
+    state.selectedPart = 'all';
+    state.repeatedOnly = false;
+    state.pyqSearchQuery = '';
+    state._yearOptionsSignature = null;
+    state._semesterOptionsSignature = null;
+    if (el.pyqSearchInput) el.pyqSearchInput.value = '';
+    if (el.clearPyqSearchBtn) el.clearPyqSearchBtn.style.display = 'none';
+    if (el.repeatedOnlyFilter) el.repeatedOnlyFilter.checked = false;
+    const allPartInput = document.querySelector('input[name="partFilter"][value="all"]');
+    if (allPartInput) allPartInput.checked = true;
+    closeFilterPanel();
+    updateActiveFilterCount();
 
     // Update Top Drive Button dynamically to this Subject's folder
     if (sub.driveUrl) {
@@ -462,6 +488,172 @@
   // -------------------------------------------------------------
   // Division 2: PYQs 5 Chapter Accordions Rendering & Filtering (CH 1 to CH 5)
   // -------------------------------------------------------------
+  function getSubjectYears(questions) {
+    const years = new Set();
+    questions.forEach(q => {
+      if (Array.isArray(q.years)) q.years.forEach(y => { if (Number.isFinite(y)) years.add(y); });
+    });
+    return Array.from(years).sort((a, b) => b - a);
+  }
+
+  function renderYearFilterOptions(questions) {
+    if (!el.yearFilterOptions) return;
+    const years = getSubjectYears(questions);
+    const signature = state.currentSubject ? state.currentSubject.id + ':' + years.join(',') : years.join(',');
+    if (state._yearOptionsSignature === signature) return;
+    state._yearOptionsSignature = signature;
+
+    // Drop any selected years that no longer exist for this subject
+    if (Array.isArray(state.selectedYears)) {
+      state.selectedYears = state.selectedYears.filter(y => years.includes(y));
+      if (state.selectedYears.length === 0) state.selectedYears = null;
+    }
+
+    if (years.length === 0) {
+      el.yearFilterOptions.innerHTML = '<span class="filter-empty">No dated papers for this subject.</span>';
+      return;
+    }
+
+    const selected = new Set(state.selectedYears || []);
+    el.yearFilterOptions.innerHTML = years.map(year => `
+      <label class="filter-option">
+        <input type="checkbox" name="yearFilter" value="${year}" ${selected.has(year) ? 'checked' : ''}>
+        <span>${year}</span>
+      </label>
+    `).join('');
+
+    // Keep the active count in sync with programmatic changes
+    updateActiveFilterCount();
+  }
+
+  function getSubjectSemesters(questions) {
+    const set = new Set();
+    questions.forEach(q => printedSemesters(q).forEach(s => set.add(s)));
+    const order = ['III', 'IV', 'V', 'II', 'VI', 'VII', 'VIII'];
+    return Array.from(set).sort((a, b) => {
+      const ia = order.indexOf(a);
+      const ib = order.indexOf(b);
+      return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+    });
+  }
+
+  function renderSemesterFilterOptions(questions) {
+    if (!el.semesterFilterOptions) return;
+    const semesters = getSubjectSemesters(questions);
+    const signature = (state.currentSubject ? state.currentSubject.id : '') + ':' + semesters.join(',');
+    if (state._semesterOptionsSignature === signature) return;
+    state._semesterOptionsSignature = signature;
+
+    // Drop selections that no longer exist for this subject
+    if (Array.isArray(state.selectedSemesters)) {
+      state.selectedSemesters = state.selectedSemesters.filter(s => semesters.includes(s));
+      if (state.selectedSemesters.length === 0) state.selectedSemesters = null;
+    }
+
+    if (semesters.length === 0) {
+      el.semesterFilterOptions.innerHTML = '<span class="filter-empty">No semester metadata for this subject.</span>';
+      return;
+    }
+
+    const selected = new Set(state.selectedSemesters || []);
+    el.semesterFilterOptions.innerHTML = semesters.map(sem => `
+      <label class="filter-option">
+        <input type="checkbox" name="semesterFilter" value="${escapeHtml(sem)}" ${selected.has(sem) ? 'checked' : ''}>
+        <span>Semester ${escapeHtml(sem)}</span>
+      </label>
+    `).join('');
+
+    updateActiveFilterCount();
+  }
+
+  function updateActiveFilterCount() {
+    if (!el.activeFilterCount) return;
+    const yearCount = Array.isArray(state.selectedYears) ? state.selectedYears.length : 0;
+    const semesterCount = Array.isArray(state.selectedSemesters) ? state.selectedSemesters.length : 0;
+    const count = yearCount + semesterCount + (state.selectedPart !== 'all' ? 1 : 0) + (state.repeatedOnly ? 1 : 0);
+    el.activeFilterCount.textContent = String(count);
+    el.activeFilterCount.hidden = count === 0;
+  }
+
+  function applyFiltersFromPanel() {
+    if (el.yearFilterOptions) {
+      const checked = Array.from(el.yearFilterOptions.querySelectorAll('input[name="yearFilter"]:checked'))
+        .map(input => parseInt(input.value, 10))
+        .filter(Number.isFinite);
+      state.selectedYears = checked.length ? checked : null;
+    }
+
+    if (el.semesterFilterOptions) {
+      const checkedSems = Array.from(el.semesterFilterOptions.querySelectorAll('input[name="semesterFilter"]:checked'))
+        .map(input => input.value)
+        .filter(Boolean);
+      state.selectedSemesters = checkedSems.length ? checkedSems : null;
+    }
+
+    const partInput = document.querySelector('input[name="partFilter"]:checked');
+    state.selectedPart = partInput ? partInput.value : 'all';
+
+    state.repeatedOnly = Boolean(el.repeatedOnlyFilter && el.repeatedOnlyFilter.checked);
+
+    closeFilterPanel();
+    updateActiveFilterCount();
+    renderPyqsDivision();
+  }
+
+  function resetFilters() {
+    state.selectedYears = null;
+    state.selectedSemesters = null;
+    state.selectedPart = 'all';
+    state.repeatedOnly = false;
+
+    if (el.yearFilterOptions) {
+      el.yearFilterOptions.querySelectorAll('input[name="yearFilter"]').forEach(input => { input.checked = false; });
+    }
+    if (el.semesterFilterOptions) {
+      el.semesterFilterOptions.querySelectorAll('input[name="semesterFilter"]').forEach(input => { input.checked = false; });
+    }
+    const allPartInput = document.querySelector('input[name="partFilter"][value="all"]');
+    if (allPartInput) allPartInput.checked = true;
+    if (el.repeatedOnlyFilter) el.repeatedOnlyFilter.checked = false;
+
+    updateActiveFilterCount();
+    renderPyqsDivision();
+  }
+
+  function openFilterPanel() {
+    if (!el.pyqFilterPanel || !el.pyqFilterToggle) return;
+    el.pyqFilterPanel.hidden = false;
+    el.pyqFilterToggle.setAttribute('aria-expanded', 'true');
+    el.pyqFilterToggle.classList.add('active');
+  }
+
+  function closeFilterPanel() {
+    if (!el.pyqFilterPanel || !el.pyqFilterToggle) return;
+    el.pyqFilterPanel.hidden = true;
+    el.pyqFilterToggle.setAttribute('aria-expanded', 'false');
+    el.pyqFilterToggle.classList.remove('active');
+  }
+
+  function toggleFilterPanel() {
+    if (!el.pyqFilterPanel) return;
+    if (el.pyqFilterPanel.hidden) openFilterPanel();
+    else closeFilterPanel();
+  }
+
+  function getPartMarksSummary(partAQuestions) {
+    const marks = new Set(partAQuestions.map(q => Number(q.marks)).filter(Number.isFinite));
+    if (marks.size === 0) return 'Short Answer Questions';
+    const sorted = Array.from(marks).sort((a, b) => a - b);
+    return 'Short Answer Questions (' + sorted.join(' / ') + ' Marks)';
+  }
+
+  function getLongMarksSummary(partBQuestions) {
+    const marks = new Set(partBQuestions.map(q => Number(q.marks)).filter(Number.isFinite));
+    if (marks.size === 0) return 'Long Answer Questions';
+    const sorted = Array.from(marks).sort((a, b) => a - b);
+    return 'Long Answer Questions (' + sorted.join(' / ') + ' Marks)';
+  }
+
   function renderPyqsDivision() {
     if (!el.chapterAccordionsContainer || !state.currentSubject) return;
     el.chapterAccordionsContainer.innerHTML = '';
@@ -476,13 +668,24 @@
     }
 
     // Filter questions for current subject
-    let allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId);
+    const allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId);
 
-    // Apply Year filter
+    // Build the year filter checkboxes from the years actually present in this subject
+    renderYearFilterOptions(allSubQuestions);
+    renderSemesterFilterOptions(allSubQuestions);
+
     let filteredQuestions = allSubQuestions;
-    if (state.selectedYear && state.selectedYear !== 'all') {
-      const targetYr = parseInt(state.selectedYear, 10);
-      filteredQuestions = filteredQuestions.filter(q => q.years && q.years.includes(targetYr));
+
+    // Apply Year filter (no selected years = all years)
+    if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
+      const yearSet = new Set(state.selectedYears);
+      filteredQuestions = filteredQuestions.filter(q => q.years && q.years.some(y => yearSet.has(y)));
+    }
+
+    // Apply printed-semester filter (no selected semesters = all semesters)
+    if (Array.isArray(state.selectedSemesters) && state.selectedSemesters.length > 0) {
+      const semSet = new Set(state.selectedSemesters);
+      filteredQuestions = filteredQuestions.filter(q => printedSemesters(q).some(s => semSet.has(s)));
     }
 
     // Apply Part filter
@@ -490,7 +693,10 @@
       filteredQuestions = filteredQuestions.filter(q => q.part === 'A');
     } else if (state.selectedPart === 'B') {
       filteredQuestions = filteredQuestions.filter(q => q.part === 'B');
-    } else if (state.selectedPart === 'repeated') {
+    }
+
+    // Apply "repeated only" filter
+    if (state.repeatedOnly) {
       filteredQuestions = filteredQuestions.filter(q => q.frequency > 1);
     }
 
@@ -506,11 +712,23 @@
       });
     }
 
+    // Reflect active filters on the Filters button
+    updateActiveFilterCount();
+
     // Update Banner
     if (el.pyqCountBanner) {
-      const yearLabel = (state.selectedYear === 'all') ? 'All Years' : state.selectedYear;
-      const partLabel = (state.selectedPart === 'all') ? 'All Parts' : (state.selectedPart === 'repeated' ? 'Repeated (2+ Times)' : 'Part ' + state.selectedPart);
-      el.pyqCountBanner.textContent = 'Showing ' + filteredQuestions.length + ' authentic question' + (filteredQuestions.length === 1 ? '' : 's') + ' across 5 chapters (' + yearLabel + ', ' + partLabel + (query ? ', search: "' + query + '"' : '') + ')';
+      const activeLabels = [];
+      if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
+        activeLabels.push(state.selectedYears.slice().sort((a, b) => b - a).join(', '));
+      }
+      if (Array.isArray(state.selectedSemesters) && state.selectedSemesters.length > 0) {
+        activeLabels.push('Sem ' + state.selectedSemesters.join('/'));
+      }
+      if (state.selectedPart !== 'all') activeLabels.push('Part ' + state.selectedPart);
+      if (state.repeatedOnly) activeLabels.push('Repeated only');
+      if (query) activeLabels.push('search: "' + query + '"');
+      const filterLabel = activeLabels.length ? ' (' + activeLabels.join(' · ') + ')' : '';
+      el.pyqCountBanner.textContent = 'Showing ' + filteredQuestions.length + ' question' + (filteredQuestions.length === 1 ? '' : 's') + ' across 5 units' + filterLabel;
     }
 
     // Check if all chapters are expanded
@@ -523,6 +741,8 @@
       const chShortCount = chQuestions.filter(q => q.part === 'A').length;
       const chLongCount = chQuestions.filter(q => q.part === 'B').length;
       const chRepCount = chQuestions.filter(q => q.frequency > 1).length;
+      const chShortMarks = Array.from(new Set(chQuestions.filter(q => q.part === 'A').map(q => Number(q.marks)).filter(Number.isFinite))).sort((a, b) => a - b);
+      const chLongMarks = Array.from(new Set(chQuestions.filter(q => q.part === 'B').map(q => Number(q.marks)).filter(Number.isFinite))).sort((a, b) => a - b);
 
       // Auto-expand if active search matches questions in this chapter
       let isExpanded = Boolean(state.expandedChapters[ch]);
@@ -547,8 +767,8 @@
           <div class="ch-header-right">
             <span class="ch-count-badge">${chQuestions.length} Question${chQuestions.length === 1 ? '' : 's'}</span>
             <div class="ch-breakdown-tags">
-              <span class="ch-sub-tag short">${chShortCount} Short (2M)</span>
-              <span class="ch-sub-tag long">${chLongCount} Long (5/10M)</span>
+              <span class="ch-sub-tag short">${chShortCount} Short${chShortMarks.length ? ' (' + chShortMarks.join('/') + 'M)' : ''}</span>
+              <span class="ch-sub-tag long">${chLongCount} Long${chLongMarks.length ? ' (' + chLongMarks.join('/') + 'M)' : ''}</span>
               ${chRepCount > 0 ? `<span class="ch-sub-tag rep"><i class="fa-solid fa-fire"></i> ${chRepCount} Repeated</span>` : ''}
             </div>
             <i class="fa-solid fa-chevron-down ch-chevron"></i>
@@ -588,7 +808,7 @@
         if (partAQuestions.length > 0) {
           const secTitleA = document.createElement('div');
           secTitleA.className = 'chapter-part-section-title';
-          secTitleA.innerHTML = '<i class="fa-solid fa-pen-fancy"></i> Part A — Short Answer Questions (2 Marks Compulsory)';
+          secTitleA.innerHTML = '<i class="fa-solid fa-pen-fancy"></i> Part A — ' + escapeHtml(getPartMarksSummary(partAQuestions));
           listEl.appendChild(secTitleA);
 
           partAQuestions.forEach(q => {
@@ -599,7 +819,7 @@
         if (partBQuestions.length > 0) {
           const secTitleB = document.createElement('div');
           secTitleB.className = 'chapter-part-section-title';
-          secTitleB.innerHTML = '<i class="fa-solid fa-book-open"></i> Part B — Long Answer / Essay Questions (5 / 10 Marks)';
+          secTitleB.innerHTML = '<i class="fa-solid fa-book-open"></i> Part B — ' + escapeHtml(getLongMarksSummary(partBQuestions));
           listEl.appendChild(secTitleB);
 
           partBQuestions.forEach(q => {
@@ -662,10 +882,31 @@
     el.toggleAllChaptersText.textContent = allOpen ? 'Collapse All' : 'Expand All';
   }
 
+  function printedSemesters(q) {
+    const list = (q.appearances && q.appearances.length) ? q.appearances : [{ semester: q.semester }];
+    return Array.from(new Set(list.map(a => a && a.semester).filter(Boolean)));
+  }
+
+  // The Drive folders mix in papers that are printed for other semesters (mostly
+  // IV-sem Java/DBMS/SE papers from MR-21/22). Label them honestly instead of
+  // pretending every paper is a III-semester paper.
+  function semesterBadgeHtml(q) {
+    const sems = printedSemesters(q);
+    const other = sems.filter(s => s !== 'III');
+    if (!other.length) return '';
+    const mixed = other.length !== sems.length;
+    const label = mixed ? ('Also in Sem ' + other.join('/')) : ('Sem ' + other.join('/') + ' paper');
+    const title = mixed
+      ? 'This question also appeared in a paper printed for Semester ' + other.join('/') + '.'
+      : 'The original Drive paper is printed for Semester ' + other.join('/') + '. It is kept here because the file is filed under this subject.';
+    return '<span class="q-badge semester-off" title="' + escapeHtml(title) + '">' +
+      '<i class="fa-solid fa-circle-info"></i> ' + escapeHtml(label) + '</span>';
+  }
+
   function createQuestionCardElement(q) {
     const isPartA = q.part === 'A';
     const partBadgeClass = isPartA ? 'part-a' : 'part-b';
-    const partLabel = isPartA ? 'Part A • 2 Marks' : ('Part B • ' + q.marks + ' Marks');
+    const partLabel = 'Part ' + q.part + ' • ' + q.marks + ' Marks';
     const recurrenceBadge = q.frequency > 1
       ? '<span class="q-badge recurrence"><i class="fa-solid fa-fire"></i> Repeated ' + q.frequency + 'x (' + (q.years ? q.years.join(', ') : '') + ')</span>'
       : '';
@@ -687,6 +928,7 @@
           <span class="q-badge q-num">${escapeHtml(q.questionNumber || 'Q')}</span>
           <span class="q-badge ${partBadgeClass}">${partLabel}</span>
           <span class="q-badge topic">${escapeHtml(q.topicTag || 'Core Syllabus')}</span>
+          ${semesterBadgeHtml(q)}
           ${recurrenceBadge}
         </div>
         <div class="question-years-tag">
@@ -753,7 +995,7 @@
   function solveQuestionWithGemini(q) {
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
     const subName = sub ? (sub.shortName + ' — ' + sub.title) : q.subjectId;
-    const partDesc = q.part === 'A' ? 'Part A (2 Marks - Short Answer)' : ('Part B (' + q.marks + ' Marks - Long Answer/Essay)');
+    const partDesc = 'Part ' + q.part + ' (' + q.marks + ' Marks - ' + (q.part === 'A' ? 'Short Answer' : 'Long Answer') + ')';
 
     const promptText = 'Explain and solve this authentic MGIT examination question from ' + subName + ':\n\n' +
       'Unit: Unit ' + q.chapter + '\n' +
@@ -775,6 +1017,23 @@
     el.modalSubjectBadge.textContent = sub ? sub.shortName : q.subjectId;
     el.modalPartBadge.textContent = `Part ${q.part} • ${q.marks} Marks`;
     el.modalUnitBadge.textContent = `Unit ${q.chapter}`;
+
+    if (el.modalSemesterBadge) {
+      const sems = printedSemesters(q);
+      const off = sems.filter(s => s !== 'III');
+      if (off.length) {
+        el.modalSemesterBadge.style.display = '';
+        el.modalSemesterBadge.textContent = off.length !== sems.length
+          ? `Sem ${sems.join(' + ')} papers`
+          : `Printed: Sem ${off.join('/')} paper`;
+        el.modalSemesterBadge.title = off.length !== sems.length
+          ? `This question appeared in papers printed for Semester ${sems.join(' and ')}.`
+          : `The original Drive paper is printed for Semester ${off.join('/')}, not Semester III. It is kept here because the file is filed under this subject.`;
+      } else {
+        el.modalSemesterBadge.style.display = 'none';
+        el.modalSemesterBadge.textContent = '';
+      }
+    }
 
     el.modalQuestionTitle.textContent = q.question;
     el.modalYearsAppeared.textContent = q.years ? q.years.join(', ') : 'Not specified';
@@ -828,6 +1087,11 @@
     state.selectedFiles = [];
     renderSelectedFiles();
 
+    // Always start from the form, not the WhatsApp hand-off panel
+    const form = el.contribUploadForm;
+    if (form) form.hidden = false;
+    if (el.contribHandoffPanel) el.contribHandoffPanel.hidden = true;
+
     el.contribUploadModal.style.display = 'flex';
   }
 
@@ -870,52 +1134,75 @@
     e.preventDefault();
 
     if (state.selectedFiles.length === 0) {
-      showToast('Please select at least one file to upload.');
+      showToast('Please pick at least one file so we know what to expect.');
       return;
     }
 
     const subCode = el.uploadSubjectSelect.value;
     const resType = el.uploadResourceType.value;
     const chapterVal = el.uploadChapterSelect.value;
-    const examYear = el.uploadExamYear.value.trim() || 'Unspecified';
-    const contributor = el.uploadContributorName.value.trim() || 'Anonymous Student';
+    const examYear = el.uploadExamYear.value.trim() || 'Not specified';
+    const contributor = el.uploadContributorName.value.trim() || 'A student';
 
-    const submission = {
-      id: 'contrib-' + Date.now(),
-      subject: subCode,
-      resourceType: resType,
-      chapter: chapterVal,
-      examYear: examYear,
-      contributor: contributor,
-      files: state.selectedFiles.map(f => ({ name: f.name, size: f.size })),
-      submittedAt: new Date().toISOString(),
-      status: 'pending'
-    };
+    const subMeta = SUBJECTS_DATA[subCode];
+    const subLabel = subMeta ? `${subMeta.shortName} - ${subMeta.title}` : subCode;
+    const unitLabel = chapterVal === 'Mixed' ? 'Mixed units / full syllabus' : `Unit ${chapterVal}`;
+    const fileLines = state.selectedFiles
+      .map(f => `- ${f.name} (${Math.max(1, Math.round(f.size / 1024))} KB)`)
+      .join('\n');
 
-    state.pendingContributions.push(submission);
-    localStorage.setItem('mgit_pending_contributions', JSON.stringify(state.pendingContributions));
+    const message = [
+      'Hi Amaan, I want to contribute study material to MGIT PYQ Hub.',
+      '',
+      `Subject: ${subLabel}`,
+      `Type: ${resType}`,
+      `Unit: ${unitLabel}`,
+      `Exam session: ${examYear}`,
+      `From: ${contributor}`,
+      '',
+      'Files I am attaching to this chat:',
+      fileLines,
+      '',
+      'Please check them and add them if they are correct.'
+    ].join('\n');
 
-    if (window.SupabasePipeline && typeof window.SupabasePipeline.submitContribution === 'function') {
-      window.SupabasePipeline.submitContribution(submission);
+    lastContributionMessage = message;
+    const waUrl = 'https://wa.me/916303191696?text=' + encodeURIComponent(message);
+    window.open(waUrl, '_blank', 'noopener');
+
+    // Swap the form for honest next-step instructions
+    if (el.contribUploadForm) el.contribUploadForm.hidden = true;
+    if (el.contribHandoffNote) {
+      el.contribHandoffNote.textContent = state.selectedFiles.length === 1
+        ? `Attach: ${state.selectedFiles[0].name}`
+        : `Attach ${state.selectedFiles.length} files: ${state.selectedFiles.map(f => f.name).join(', ')}`;
     }
+    if (el.contribHandoffPanel) el.contribHandoffPanel.hidden = false;
 
-    // Reset and close
-    el.contribUploadModal.style.display = 'none';
     state.selectedFiles = [];
     el.contribUploadForm.reset();
+    renderSelectedFiles();
+  }
 
-    showToast('Upload received! Your resources have been sent to the moderation queue.');
-    setupAdminStats();
+  async function copyContributionMessage() {
+    if (!lastContributionMessage) return;
+    try {
+      await navigator.clipboard.writeText(lastContributionMessage);
+      showToast('Message copied. Paste it into the WhatsApp chat if it was empty.');
+    } catch (err) {
+      showToast('Could not copy automatically. Your WhatsApp message already has the details.');
+    }
   }
 
   // -------------------------------------------------------------
   // Admin Portal & Moderation Queue
   // -------------------------------------------------------------
   function openAdminModal() {
+    state.isAdminLoggedIn = sessionStorage.getItem('mgit_admin_auth') === 'authenticated';
     if (state.isAdminLoggedIn) {
       el.adminLoginFormContainer.style.display = 'none';
       el.adminDashboardContainer.style.display = 'block';
-      renderModerationQueue();
+      renderEditorNotes();
     } else {
       el.adminLoginFormContainer.style.display = 'block';
       el.adminDashboardContainer.style.display = 'none';
@@ -946,99 +1233,104 @@
     const enteredHash = await sha256Hex(pass);
     if (enteredHash && ADMIN_HASHES.includes(enteredHash)) {
       sessionStorage.setItem('mgit_admin_auth', 'authenticated');
-      showToast('Password verified! Redirecting to Admin Portal...');
+      state.isAdminLoggedIn = true;
       el.adminLoginForm.reset();
-      setTimeout(() => {
-        window.location.href = 'admin.html';
-      }, 350);
+      el.adminLoginFormContainer.style.display = 'none';
+      el.adminDashboardContainer.style.display = 'block';
+      renderEditorNotes();
+      showToast('Editor view unlocked.');
     } else {
-      showToast('Incorrect administrator password. Access denied.');
+      showToast('Incorrect password. Access denied.');
       el.adminPassword.value = '';
     }
   }
 
   function handleAdminLogout() {
     state.isAdminLoggedIn = false;
+    sessionStorage.removeItem('mgit_admin_auth');
     el.adminDashboardContainer.style.display = 'none';
     el.adminLoginFormContainer.style.display = 'block';
-    showToast('Admin logged out.');
+    showToast('Logged out of the editor view.');
+  }
+
+  function computeBankStats() {
+    const papers = new Map();
+    const touch = (key, name, subjectId, semester) => {
+      if (!papers.has(key)) {
+        papers.set(key, {
+          name: name || 'Unknown paper',
+          subjectId,
+          semester: semester || 'III',
+          count: 0
+        });
+      }
+      papers.get(key).count += 1;
+    };
+
+    QUESTIONS_DATABASE.forEach(q => {
+      const appearances = Array.isArray(q.appearances) && q.appearances.length
+        ? q.appearances
+        : [{
+            driveFileId: q.driveFileId,
+            paperName: q.paperName,
+            semester: q.semester
+          }];
+      appearances.forEach(a => {
+        const key = a.driveFileId || `${q.subjectId}:${a.paperName || q.paperName}`;
+        touch(key, a.paperName || q.paperName, q.subjectId, a.semester || q.semester);
+      });
+    });
+
+    const list = Array.from(papers.values());
+    // A full MGIT paper has 10 Part-A sub-questions plus 4-5 Part-B majors.
+    const flagged = list
+      .filter(p => p.count < 12)
+      .sort((a, b) => a.count - b.count);
+
+    return {
+      questions: QUESTIONS_DATABASE.length,
+      papers: list.length,
+      flagged
+    };
   }
 
   function setupAdminStats() {
-    if (el.adminPendingCount) {
-      el.adminPendingCount.textContent = state.pendingContributions.length;
-    }
+    const stats = computeBankStats();
+    if (el.adminBankQuestions) el.adminBankQuestions.textContent = stats.questions;
+    if (el.adminBankPapers) el.adminBankPapers.textContent = stats.papers;
+    if (el.adminBankFlagged) el.adminBankFlagged.textContent = stats.flagged.length;
   }
 
-  function renderModerationQueue() {
+  function renderEditorNotes() {
     setupAdminStats();
     if (!el.moderationTableWrapper) return;
 
-    if (state.pendingContributions.length === 0) {
+    const stats = computeBankStats();
+    if (stats.flagged.length === 0) {
       el.moderationTableWrapper.innerHTML = `
-        <p class="empty-queue-msg">No submissions currently pending moderation. All verified.</p>
+        <p class="empty-queue-msg">Every parsed paper has a full set of questions. Nothing looks under-extracted.</p>
       `;
       return;
     }
 
-    let html = `
+    const rows = stats.flagged.slice(0, 8).map(p => `
+      <tr>
+        <td><strong>${escapeHtml(p.subjectId)}</strong></td>
+        <td>${escapeHtml(p.name)}</td>
+        <td>Sem ${escapeHtml(String(p.semester))}</td>
+        <td>${p.count} question${p.count === 1 ? '' : 's'}</td>
+      </tr>
+    `).join('');
+
+    el.moderationTableWrapper.innerHTML = `
+      <p class="editor-note-sub">These papers parsed with fewer questions than expected, so their OCR is worth a second look.</p>
       <table class="moderation-table">
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Subject</th>
-            <th>Type</th>
-            <th>Unit</th>
-            <th>Files</th>
-            <th>Contributor</th>
-            <th>Action</th>
-          </tr>
+          <tr><th>Subject</th><th>Paper</th><th>Printed Sem</th><th>Questions Found</th></tr>
         </thead>
-        <tbody>
+        <tbody>${rows}</tbody>
+      </table>
     `;
-
-    state.pendingContributions.forEach((item, idx) => {
-      const fileNames = item.files.map(f => f.name).join(', ');
-      const dateStr = new Date(item.submittedAt).toLocaleDateString();
-      html += `
-        <tr>
-          <td>${dateStr}</td>
-          <td><strong>${item.subject}</strong></td>
-          <td>${item.resourceType}</td>
-          <td>${item.chapter}</td>
-          <td title="${escapeHtml(fileNames)}">${escapeHtml(fileNames)}</td>
-          <td>${escapeHtml(item.contributor)}</td>
-          <td>
-            <button type="button" class="mod-action-btn approve" data-idx="${idx}">Approve</button>
-            <button type="button" class="mod-action-btn reject" data-idx="${idx}">Reject</button>
-          </td>
-        </tr>
-      `;
-    });
-
-    html += `</tbody></table>`;
-    el.moderationTableWrapper.innerHTML = html;
-
-    // Attach approve/reject events
-    el.moderationTableWrapper.querySelectorAll('.mod-action-btn.approve').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-        state.pendingContributions.splice(idx, 1);
-        localStorage.setItem('mgit_pending_contributions', JSON.stringify(state.pendingContributions));
-        renderModerationQueue();
-        showToast('Resource approved and queued for Drive sync.');
-      });
-    });
-
-    el.moderationTableWrapper.querySelectorAll('.mod-action-btn.reject').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-        state.pendingContributions.splice(idx, 1);
-        localStorage.setItem('mgit_pending_contributions', JSON.stringify(state.pendingContributions));
-        renderModerationQueue();
-        showToast('Submission rejected.');
-      });
-    });
   }
 
   // -------------------------------------------------------------
@@ -1587,15 +1879,10 @@
   }
 
   function initGeminiKey() {
-    const savedKey = localStorage.getItem('mgit_user_gemini_key');
-    if (savedKey) {
-      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Custom Gemini AI Active (Personal Key)';
-      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Personal Key Active';
-      if (el.userGeminiKeyInput) el.userGeminiKeyInput.value = savedKey;
-    } else {
-      if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'Gemini AI Active (Ready for All Students)';
-      if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'Use Custom Key (Optional)';
-    }
+    if (el.geminiModeIndicator) el.geminiModeIndicator.textContent = 'AI study assistant ready';
+    if (el.apiKeyBtnLabel) el.apiKeyBtnLabel.textContent = 'AI settings';
+    if (el.toggleApiKeyBtn) el.toggleApiKeyBtn.style.display = 'none';
+    if (el.geminiKeyDrawer) el.geminiKeyDrawer.style.display = 'none';
   }
 
   function toggleApiKeyDrawer() {
@@ -1690,23 +1977,7 @@
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // 1. Direct call to Google Gemini API with FULL multi-turn conversation history
-    const activeKey = localStorage.getItem('mgit_user_gemini_key') || DEFAULT_GEMINI_KEY;
-    try {
-      const liveAnswer = await fetchGeminiDirect(activeKey, chat.messages, q, attachedImg);
-      if (liveAnswer) {
-        updateAiMessageContent(thinkingMsg, liveAnswer);
-        chat.messages.push({ role: 'model', text: liveAnswer, timestamp: Date.now() });
-        saveGeminiChats();
-        renderGeminiHistoryList();
-        el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-        return;
-      }
-    } catch (err) {
-      console.warn('Direct Gemini API call failed, trying serverless endpoint:', err);
-    }
-
-    // 2. Try serverless /api/gemini endpoint with FULL multi-turn history
+    // Server-side Gemini proxy only. The API key never reaches the browser.
     try {
       const serverRes = await fetch('/api/gemini', {
         method: 'POST',
@@ -1714,36 +1985,34 @@
         body: JSON.stringify({
           query: q,
           subject: state.currentSubject ? state.currentSubject.title : '',
-          history: chat.messages
+          history: chat.messages.map(m => ({ role: m.role, text: m.text })),
+          image: attachedImg && attachedImg.base64Data
+            ? { mimeType: attachedImg.mimeType, base64Data: attachedImg.base64Data }
+            : null
         })
       });
-      if (serverRes.ok) {
-        const data = await serverRes.json();
-        if (data.success && data.text) {
-          updateAiMessageContent(thinkingMsg, data.text);
-          chat.messages.push({ role: 'model', text: data.text, timestamp: Date.now() });
-          saveGeminiChats();
-          renderGeminiHistoryList();
-          el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-          return;
-        }
-      }
-    } catch (e) {
-      console.warn('Serverless endpoint failed:', e);
-    }
 
-    // 3. Fallback
-    setTimeout(() => {
-      const fallbackText = generateGeminiResponse(q);
-      updateAiMessageContent(thinkingMsg, fallbackText);
-      chat.messages.push({ role: 'model', text: fallbackText, timestamp: Date.now() });
-      saveGeminiChats();
-      renderGeminiHistoryList();
-      el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
-    }, 250);
+      const data = await serverRes.json().catch(() => ({}));
+      if (serverRes.ok && data.success && data.text) {
+        updateAiMessageContent(thinkingMsg, data.text);
+        chat.messages.push({ role: 'model', text: data.text, timestamp: Date.now() });
+        saveGeminiChats();
+        renderGeminiHistoryList();
+        el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+        return;
+      }
+
+      const reason = data.message || (serverRes.status === 429
+        ? 'The AI assistant has reached its request limit for now. Please try again later.'
+        : 'The AI assistant could not answer right now. Please try again.');
+      updateAiMessageContent(thinkingMsg, `**Unable to generate an answer**\n\n${reason}\n\nYou can still use the original paper link on the question card, or ask again in a moment.`, true);
+    } catch (e) {
+      console.warn('AI request failed:', e);
+      updateAiMessageContent(thinkingMsg, '**Unable to reach the AI assistant**\n\nPlease check your connection and try again. The question bank and Drive links still work normally.', true);
+    }
   }
 
-  function updateAiMessageContent(element, rawMarkdown) {
+  function updateAiMessageContent(element, rawMarkdown, isError) {
     const formattedHtml = formatGeminiResponse(rawMarkdown);
     element.innerHTML = `
       <div class="ai-msg-header">
@@ -1751,9 +2020,9 @@
           <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
             <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
           </svg>
-          <span class="ai-sender-name">Gemini Study Assistant</span>
+          <span class="ai-sender-name">AI Study Assistant</span>
         </div>
-        <span class="ai-model-tag">Gemini 2.5 Flash</span>
+        <span class="ai-model-tag">${isError ? 'Not available' : 'Gemini'}</span>
       </div>
       <div class="ai-msg-body">
         ${formattedHtml}
@@ -1762,7 +2031,7 @@
         <button type="button" class="btn-copy-response" onclick="copyGeminiAiAnswer(this)">
           <i class="fa-regular fa-copy"></i> <span>Copy Answer</span>
         </button>
-        <span class="ai-verified-tag"><i class="fa-solid fa-graduation-cap"></i> MGIT Syllabus Aligned</span>
+        <span class="ai-verified-tag"><i class="fa-solid fa-graduation-cap"></i> Verify against your notes</span>
       </div>
     `;
   }
@@ -2468,29 +2737,34 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
-    // Year Pills
-    if (el.yearPillsRow) {
-      el.yearPillsRow.querySelectorAll('.year-pill-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          el.yearPillsRow.querySelectorAll('.year-pill-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          state.selectedYear = btn.getAttribute('data-year');
-          renderPyqsDivision();
-        });
+    // Filters dropdown (year checkboxes, Part radio, repeated-only)
+    if (el.pyqFilterToggle) {
+      el.pyqFilterToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleFilterPanel();
       });
     }
 
-    // Part Pills
-    if (el.partToggleButtons) {
-      el.partToggleButtons.querySelectorAll('.part-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          el.partToggleButtons.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          state.selectedPart = btn.getAttribute('data-part');
-          renderPyqsDivision();
-        });
-      });
+    if (el.applyFiltersBtn) {
+      el.applyFiltersBtn.addEventListener('click', applyFiltersFromPanel);
     }
+
+    if (el.resetFiltersBtn) {
+      el.resetFiltersBtn.addEventListener('click', resetFilters);
+    }
+
+    // Close the panel on outside click / Escape
+    document.addEventListener('click', (e) => {
+      if (!el.pyqFilterPanel || el.pyqFilterPanel.hidden) return;
+      if (el.pyqFilterPanel.contains(e.target) || (el.pyqFilterToggle && el.pyqFilterToggle.contains(e.target))) return;
+      closeFilterPanel();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && el.pyqFilterPanel && !el.pyqFilterPanel.hidden) {
+        closeFilterPanel();
+        if (el.pyqFilterToggle) el.pyqFilterToggle.focus();
+      }
+    });
 
     // URL State Popstate listener for Browser Back button
     window.addEventListener('popstate', (e) => {
@@ -2600,6 +2874,17 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     // Upload Form Submit
     if (el.contribUploadForm) {
       el.contribUploadForm.addEventListener('submit', submitContribution);
+    }
+
+    if (el.copyContribMessageBtn) {
+      el.copyContribMessageBtn.addEventListener('click', copyContributionMessage);
+    }
+    if (el.contribDoneBtn) {
+      el.contribDoneBtn.addEventListener('click', () => {
+        el.contribUploadModal.style.display = 'none';
+        if (el.contribUploadForm) el.contribUploadForm.hidden = false;
+        if (el.contribHandoffPanel) el.contribHandoffPanel.hidden = true;
+      });
     }
 
     // Admin Modal triggers
