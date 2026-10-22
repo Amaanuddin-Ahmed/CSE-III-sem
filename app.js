@@ -472,10 +472,16 @@
   }
 
   function syncHistoryUi() {
-    const backBtn = document.getElementById('headerNavBackBtn');
-    const fwdBtn = document.getElementById('headerNavForwardBtn');
-    if (backBtn) backBtn.disabled = (state.appHistoryIndex || 0) <= 0;
-    if (fwdBtn) fwdBtn.disabled = (state.appHistoryIndex || 0) >= (state.maxAppHistoryIndex || 0);
+    const atStart = (state.appHistoryIndex || 0) <= 0;
+    const atEnd = (state.appHistoryIndex || 0) >= (state.maxAppHistoryIndex || 0);
+    ['headerNavBackBtn', 'mobileNavBackBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.disabled = atStart;
+    });
+    ['headerNavForwardBtn', 'mobileNavForwardBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.disabled = atEnd;
+    });
   }
 
   function getExamConfig(examId) {
@@ -2805,37 +2811,39 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
   // Event Listeners Setup
   // -------------------------------------------------------------
   function setupEventListeners() {
-    // Header Browser-like Navigation Arrows (use the app's own history)
-    const backNavBtn = document.getElementById('headerNavBackBtn');
-    const fwdNavBtn = document.getElementById('headerNavForwardBtn');
-    if (backNavBtn) {
-      backNavBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const exitModal = document.getElementById('practiceExitModal');
-        const progressModal = document.getElementById('progressModal');
-        const practiceModal = document.getElementById('practiceSelectorModal');
-        const geminiModal = document.getElementById('geminiModal');
-        const sessionScreen = document.getElementById('practiceSessionScreen');
-        if (exitModal && exitModal.style.display !== 'none') { exitModal.style.display = 'none'; return; }
-        if (progressModal && progressModal.style.display !== 'none') { progressModal.style.display = 'none'; return; }
-        if (practiceModal && practiceModal.style.display !== 'none') { practiceModal.style.display = 'none'; return; }
-        if (geminiModal && geminiModal.style.display !== 'none') { closeGeminiModal(); return; }
-        if (sessionScreen && sessionScreen.style.display !== 'none') {
-          if (window.PracticeRunner) window.PracticeRunner.requestExit();
-          return;
-        }
-        // Never leave the site from the first app screen.
-        if ((state.appHistoryIndex || 0) > 0) {
-          window.history.back();
-        }
-      });
-    }
-    if (fwdNavBtn) {
-      fwdNavBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        window.history.forward();
-      });
-    }
+    // Header and mobile page navigation (use the app's own history)
+    const handleAppBack = (e) => {
+      e.stopPropagation();
+      const exitModal = document.getElementById('practiceExitModal');
+      const progressModal = document.getElementById('progressModal');
+      const practiceModal = document.getElementById('practiceSelectorModal');
+      const geminiModal = document.getElementById('geminiModal');
+      const sessionScreen = document.getElementById('practiceSessionScreen');
+      if (exitModal && exitModal.style.display !== 'none') { exitModal.style.display = 'none'; return; }
+      if (progressModal && progressModal.style.display !== 'none') { progressModal.style.display = 'none'; return; }
+      if (practiceModal && practiceModal.style.display !== 'none') { practiceModal.style.display = 'none'; return; }
+      if (geminiModal && geminiModal.style.display !== 'none') { closeGeminiModal(); return; }
+      if (sessionScreen && sessionScreen.style.display !== 'none') {
+        if (window.PracticeRunner) window.PracticeRunner.requestExit();
+        return;
+      }
+      // Never leave the site from the first app screen.
+      if ((state.appHistoryIndex || 0) > 0) {
+        window.history.back();
+      }
+    };
+    const handleAppForward = (e) => {
+      e.stopPropagation();
+      window.history.forward();
+    };
+    ['headerNavBackBtn', 'mobileNavBackBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.addEventListener('click', handleAppBack);
+    });
+    ['headerNavForwardBtn', 'mobileNavForwardBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.addEventListener('click', handleAppForward);
+    });
     syncHistoryUi();
 
     // Brand Link returns home

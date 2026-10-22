@@ -8074,3 +8074,226 @@ body {
 .attribution-link:hover {
   transform: translateY(-1px);
 }
+
+/* ==========================================================================
+   Mobile Header Cleanup + Practice Cat Idle Animation
+   ========================================================================== */
+
+.mobile-header-history {
+  display: none;
+}
+
+.header-arrow-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transform: none;
+}
+
+.header-arrow-btn:disabled:hover {
+  background: #ffffff;
+  color: #475569;
+  border-color: rgba(203, 213, 225, 0.8);
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  /* The two history arrows live below the main row on phones, at the edges. */
+  .header-browser-arrows {
+    display: none;
+  }
+
+  .mobile-header-history {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 12px 8px;
+  }
+
+  .mobile-header-history .header-arrow-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    box-shadow: none;
+  }
+
+  .mobile-header-history .header-arrow-btn:hover:not(:disabled) {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+  }
+
+  /* Keep the brand on one line and reclaim the space used by the Drive label. */
+  .brand-group {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .brand-info {
+    min-width: 0;
+  }
+
+  .brand-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .top-drive-btn-text {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  /* Top row: hint beside the cat; all remaining copy spans the full width. */
+  .practice-fun-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 85px;
+    grid-template-areas:
+      "hint cat"
+      "title title"
+      "hook hook"
+      "sub sub"
+      "btn btn";
+    column-gap: 15px;
+    row-gap: 0;
+    align-items: start;
+    padding: 22px 18px 20px;
+  }
+
+  .practice-fun-content {
+    display: contents;
+  }
+
+  .practice-hint-tag {
+    grid-area: hint;
+    position: relative;
+    z-index: 3;
+    justify-self: stretch;
+    align-self: start;
+    margin: -4px 0 10px;
+    max-width: none;
+    align-items: flex-start;
+  }
+
+  .practice-hint-tag span {
+    line-height: 1.35;
+  }
+
+  /* The cat keeps its exact top-right visual position. */
+  .practice-fun-mascot-peek {
+    grid-area: cat;
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-self: end;
+    align-self: start;
+    margin: -29px 0 10px;
+    width: 85px;
+    height: 90px;
+    z-index: 2;
+  }
+
+  .practice-fun-title,
+  .practice-fun-hook,
+  .practice-fun-sub,
+  .practice-fun-btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  .practice-fun-title { grid-area: title; margin-top: 0; }
+  .practice-fun-hook { grid-area: hook; }
+  .practice-fun-sub { grid-area: sub; }
+  .practice-fun-btn { grid-area: btn; justify-self: start; }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 8px;
+    padding: 9px 12px;
+  }
+
+  .brand-group {
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 7px;
+  }
+
+  .brand-info {
+    min-width: 0;
+  }
+
+  .brand-name {
+    font-size: 14.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  /* The Drive icon is enough on a phone; this keeps the full brand visible. */
+  .top-drive-btn-text {
+    display: none;
+  }
+
+  .top-drive-btn {
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .top-admin-btn,
+  .top-admin-icon-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Idle wave + blink: the cat faces the viewer and greets them without hover. */
+.cat-wave-arm {
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation: catWaveHello 2.8s ease-in-out infinite;
+}
+
+@keyframes catWaveHello {
+  0%, 58%, 100% { transform: rotate(0deg); }
+  8% { transform: rotate(-17deg); }
+  16% { transform: rotate(7deg); }
+  24% { transform: rotate(-17deg); }
+  32% { transform: rotate(7deg); }
+  40% { transform: rotate(0deg); }
+}
+
+.cat-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catBlink 5.4s ease-in-out infinite;
+}
+
+@keyframes catBlink {
+  0%, 91%, 100% { transform: scaleY(1); }
+  94%, 96% { transform: scaleY(0.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-wave-arm,
+  .cat-eye {
+    animation: none;
+  }
+}

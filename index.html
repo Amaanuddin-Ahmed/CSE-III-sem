@@ -116,7 +116,8 @@
            target="_blank" 
            rel="noopener noreferrer" 
            class="top-drive-btn" 
-           title="Open Google Drive Folder">
+           title="Open Google Drive Folder"
+           aria-label="Open Google Drive Folder">
           <i class="fa-brands fa-google-drive"></i>
           <span id="topDriveBtnText" class="top-drive-btn-text">View entire folder</span>
         </a>
@@ -131,6 +132,16 @@
           <i class="fa-solid fa-lock"></i>
         </button>
       </div>
+    </div>
+
+    <!-- Mobile-only page navigation: placed below the main header row -->
+    <div class="mobile-header-history" aria-label="Page navigation">
+      <button type="button" class="header-arrow-btn" id="mobileNavBackBtn" title="Go back (Previous page)" aria-label="Go back">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button type="button" class="header-arrow-btn" id="mobileNavForwardBtn" title="Go forward" aria-label="Go forward">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
     </div>
   </header>
 
@@ -235,7 +246,7 @@
           </div>
         </div>
         <div class="practice-fun-mascot-peek">
-          <svg class="cat-peek-svg" viewBox="0 0 100 100" width="85" height="85">
+          <svg class="cat-peek-svg" viewBox="0 0 100 100" width="85" height="85" aria-hidden="true" focusable="false">
             <ellipse cx="50" cy="58" rx="34" ry="28" fill="#ea580c" />
             <ellipse cx="50" cy="65" rx="20" ry="16" fill="#fef3c7" />
             <!-- Pointed Ears -->
@@ -243,11 +254,15 @@
             <polygon points="28,39 20,20 40,32" fill="#f472b6" />
             <polygon points="74,42 84,14 58,32" fill="#c2410c" />
             <polygon points="72,39 80,20 60,32" fill="#f472b6" />
-            <!-- Eyes -->
-            <ellipse cx="38" cy="52" rx="4.5" ry="6" fill="#1e293b" />
-            <circle cx="36.5" cy="50" r="1.8" fill="#ffffff" />
-            <ellipse cx="62" cy="52" rx="4.5" ry="6" fill="#1e293b" />
-            <circle cx="60.5" cy="50" r="1.8" fill="#ffffff" />
+            <!-- Blinking eyes looking at the viewer -->
+            <g class="cat-eye">
+              <ellipse cx="38" cy="52" rx="4.5" ry="6" fill="#1e293b" />
+              <circle cx="36.5" cy="50" r="1.8" fill="#ffffff" />
+            </g>
+            <g class="cat-eye">
+              <ellipse cx="62" cy="52" rx="4.5" ry="6" fill="#1e293b" />
+              <circle cx="60.5" cy="50" r="1.8" fill="#ffffff" />
+            </g>
             <!-- Pink Nose & Cute Mouth -->
             <polygon points="50,60 47,56 53,56" fill="#f43f5e" />
             <path d="M45 62 Q47.5 65 50 62.5 Q52.5 65 55 62" stroke="#78350f" stroke-width="1.8" fill="none" stroke-linecap="round" />
@@ -256,9 +271,12 @@
             <line x1="27" y1="62" x2="11" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
             <line x1="72" y1="58" x2="88" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
             <line x1="73" y1="62" x2="89" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
-            <!-- Front Paws peeking over edge -->
+            <!-- Left paw rests on the edge; the right paw waves hello -->
             <ellipse cx="36" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
-            <ellipse cx="64" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
+            <g class="cat-wave-arm">
+              <path d="M72 81 Q82 78 87 69" stroke="#ea580c" stroke-width="7" stroke-linecap="round" fill="none" />
+              <ellipse cx="88" cy="66" rx="6" ry="5.2" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
+            </g>
           </svg>
         </div>
       </div>
