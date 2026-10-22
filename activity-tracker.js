@@ -225,6 +225,96 @@ const ActivityTracker = (function () {
     save(data);
   }
 
+  function recordCardViewed(examId, subjectId, cardId) {
+    if (arguments.length === 3 && cardId === undefined) {
+      // Called as (subjectId, cardId) for convenience.
+      cardId = subjectId;
+      subjectId = examId;
+      examId = getActiveExam();
+    }
+    if (!subjectId || !cardId) return;
+
+    const data = load();
+    const exam = data.exams[examId] = data.exams[examId] || { subjects: {} };
+    const sub = exam.subjects[subjectId] = exam.subjects[subjectId] || {
+      gotItCardIds: [],
+      revisedCardIds: [],
+      viewedCardIds: [],
+      masteredQuestionIds: []
+    };
+    sub.viewedCardIds = sub.viewedCardIds || [];
+    if (!sub.viewedCardIds.includes(cardId)) {
+      sub.viewedCardIds.push(cardId);
+      save(data);
+    }
+  }
+
+  function recordQuestionViewed(examId, subjectId, questionId) {
+    if (arguments.length === 2) {
+      questionId = subjectId;
+      subjectId = examId;
+      examId = getActiveExam();
+    }
+    if (!subjectId || !questionId) return;
+
+    const data = load();
+    const exam = data.exams[examId] = data.exams[examId] || { subjects: {} };
+    const sub = exam.subjects[subjectId] = exam.subjects[subjectId] || {
+      gotItCardIds: [],
+      revisedCardIds: [],
+      viewedCardIds: [],
+      viewedQuestionIds: [],
+      masteredQuestionIds: []
+    };
+    sub.viewedQuestionIds = sub.viewedQuestionIds || [];
+    if (!sub.viewedQuestionIds.includes(questionId)) {
+      sub.viewedQuestionIds.push(questionId);
+      save(data);
+    }
+  }
+
+  function getFlashcardProgress(subjectId) {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+    const subjects = exam.subjects || {};
+
+    const collect = (key) => {
+      if (subjectId && subjectId !== 'MIXED') {
+        return ((subjects[subjectId] && subjects[subjectId][key]) || []).slice();
+      }
+      const all = [];
+      Object.keys(subjects).forEach(k => {
+        all.push(...((subjects[k] && subjects[k][key]) || []));
+      });
+      return Array.from(new Set(all));
+    };
+
+    return {
+      viewed: collect('viewedCardIds'),
+      mastered: collect('gotItCardIds'),
+      revise: collect('revisedCardIds')
+    };
+  }
+
+  function getQuestionProgress(subjectId) {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+    const subjects = exam.subjects || {};
+    const collect = (key) => {
+      if (subjectId && subjectId !== 'MIXED') {
+        return ((subjects[subjectId] && subjects[subjectId][key]) || []).slice();
+      }
+      const all = [];
+      Object.keys(subjects).forEach(k => {
+        all.push(...((subjects[k] && subjects[k][key]) || []));
+      });
+      return Array.from(new Set(all));
+    };
+    return { viewed: collect('viewedQuestionIds'), mastered: collect('masteredQuestionIds') };
+  }
+
   function recordFlashcardLearned(arg1, arg2, arg3, arg4) {
     // Overloaded:
     // 1. recordFlashcardLearned(examId, subjectId, cardId, isGotIt)
@@ -253,12 +343,19 @@ const ActivityTracker = (function () {
     };
 
     sub.gotItCardIds = sub.gotItCardIds || [];
-    const idx = sub.gotItCardIds.indexOf(cardId);
+    sub.revisedCardIds = sub.revisedCardIds || [];
+    sub.viewedCardIds = sub.viewedCardIds || [];
+    if (!sub.viewedCardIds.includes(cardId)) sub.viewedCardIds.push(cardId);
 
-    if (isGotIt && idx === -1) {
-      sub.gotItCardIds.push(cardId);
-    } else if (!isGotIt && idx !== -1) {
-      sub.gotItCardIds.splice(idx, 1);
+    const gotItIdx = sub.gotItCardIds.indexOf(cardId);
+    const reviseIdx = sub.revisedCardIds.indexOf(cardId);
+
+    if (isGotIt) {
+      if (gotItIdx === -1) sub.gotItCardIds.push(cardId);
+      if (reviseIdx !== -1) sub.revisedCardIds.splice(reviseIdx, 1);
+    } else {
+      if (reviseIdx === -1) sub.revisedCardIds.push(cardId);
+      if (gotItIdx !== -1) sub.gotItCardIds.splice(gotItIdx, 1);
     }
 
     save(data);
@@ -329,12 +426,22 @@ const ActivityTracker = (function () {
     getSubjectStats,
     getSubjectMastery,
     getLearnedFlashcards,
+    getFlashcardProgress,
+    getQuestionProgress,
     recordQuizResult,
+    recordCardViewed,
+    recordQuestionViewed,
     recordFlashcardLearned,
     getGlobalSummary,
     resetAll
   };
 })();
+
+// Top-level `const` does not become a property of `window`. The practice
+// runner intentionally reads `window.ActivityTracker`, so publish it here.
+if (typeof window !== 'undefined') {
+  window.ActivityTracker = ActivityTracker;
+}
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = ActivityTracker;

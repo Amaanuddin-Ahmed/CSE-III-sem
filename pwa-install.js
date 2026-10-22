@@ -19,7 +19,6 @@
   }
 
   // 2. 15-Second Active Usage Install Prompt
-  let deferredPrompt = null;
   const PWA_DELAY_MS = 15000;
   let activeTimeAccumulated = 0;
   let lastActiveTimestamp = null;
@@ -38,6 +37,22 @@
   function isDismissed() {
     const until = parseInt(localStorage.getItem(DISMISSED_KEY) || '0', 10);
     return Date.now() < until;
+  }
+
+  function isInstalled() {
+    if (window.__pwaInstalled) return true;
+    try {
+      return localStorage.getItem('mgit_pwa_installed') === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function updateInstallEntry() {
+    const btn = document.getElementById('headerInstallBtn');
+    if (!btn) return;
+    const canOffer = !isStandalone() && !isInstalled();
+    btn.hidden = !canOffer;
   }
 
   function dismissPrompt() {
@@ -60,8 +75,10 @@
     if (timerInterval) clearInterval(timerInterval);
   }
 
-  function showInstallPrompt() {
-    if (installPromptShown || isStandalone() || isDismissed()) return;
+  function showInstallPrompt(force) {
+    if (document.getElementById('pwaInstallPrompt')) return;
+    if (isInstalled() || isStandalone()) return;
+    if (!force && (installPromptShown || isDismissed())) return;
 
     // Do NOT interrupt active practice session / quiz
     const sessionScreen = document.getElementById('practiceSessionScreen');
@@ -109,55 +126,98 @@
       promptCard.classList.add('visible');
     });
 
-    document.getElementById('pwaInstallNowBtn').addEventListener('click', async () => {
-      if (deferredPrompt) {
+    const installNowBtn = document.getElementById('pwaInstallNowBtn');
+    if (installNowBtn) {
+      installNowBtn.addEventListener('click', (event) => {
+        // Keep the click away from any outside-click / swipe dismiss handler.
+        event.preventDefault();
+        event.stopPropagation();
+
+        const deferred = window.__deferredInstall;
+        if (!deferred) {
+          showFallbackInstructions(promptCard);
+          return;
+        }
+
+        // prompt() must be called synchronously inside the user gesture.
+        // It is single-use, so discard it immediately.
+        window.__deferredInstall = null;
         try {
-          deferredPrompt.prompt();
-          const choice = await deferredPrompt.userChoice;
+          deferred.prompt();
+        } catch (err) {
+          showFallbackInstructions(promptCard);
+          return;
+        }
+
+        deferred.userChoice.then((choice) => {
           if (choice && choice.outcome === 'accepted') {
-            console.log('[PWA] User accepted installation');
-            dismissPrompt();
+            window.__pwaInstalled = true;
+            try { localStorage.setItem('mgit_pwa_installed', '1'); } catch (e) {}
+            installPromptShown = true;
+            if (timerInterval) clearInterval(timerInterval);
+            promptCard.classList.remove('visible');
+            setTimeout(() => promptCard.remove(), 300);
+            updateInstallEntry();
             return;
           }
-          deferredPrompt = null;
-        } catch (err) {
-          console.warn('[PWA] prompt error:', err);
-        }
-      }
+          // Dismissed in the browser: treat it as "Later" (3-day rule).
+          dismissPrompt();
+        }).catch(() => {
+          showFallbackInstructions(promptCard);
+        });
+      });
+    }
 
-      // If deferredPrompt is unavailable (e.g. iOS Safari, or browser requiring menu action)
-      // Provide actionable step-by-step guidance right inside the prompt!
-      const contentEl = promptCard.querySelector('.pwa-prompt-content');
-      if (contentEl) {
-        const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-        contentEl.innerHTML = `
-          <h4 class="pwa-prompt-title" style="color: #4338ca;">To Add to Home Screen:</h4>
-          <p class="pwa-prompt-desc" style="font-size: 13px; line-height: 1.5; color: #1e293b; margin: 8px 0 12px;">
-            ${isIos 
-              ? '1. Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket"></i> at the bottom of Safari.<br>2. Tap <strong>"Add to Home Screen"</strong>.' 
-              : '1. Tap the <strong>three dots (&vellip;)</strong> menu in your browser bar.<br>2. Select <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.'}
-          </p>
-          <div class="pwa-prompt-actions">
-            <button type="button" class="btn-pwa-install" id="pwaDoneBtn" style="padding: 7px 18px; font-size: 12.5px;">
-              <i class="fa-solid fa-check"></i> <span>Got it!</span>
-            </button>
-          </div>
-        `;
-        const doneBtn = document.getElementById('pwaDoneBtn');
-        if (doneBtn) doneBtn.addEventListener('click', dismissPrompt);
-      } else {
-        dismissPrompt();
-      }
-    });
-
-    document.getElementById('pwaInstallLaterBtn').addEventListener('click', dismissPrompt);
-    document.getElementById('pwaCloseIconBtn').addEventListener('click', dismissPrompt);
+    const laterBtn = document.getElementById('pwaInstallLaterBtn');
+    if (laterBtn) laterBtn.addEventListener('click', dismissPrompt);
+    const closeBtn = document.getElementById('pwaCloseIconBtn');
+    if (closeBtn) closeBtn.addEventListener('click', dismissPrompt);
   }
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
+  function showFallbackInstructions(promptCard) {
+    const contentEl = promptCard.querySelector('.pwa-prompt-content');
+    if (!contentEl) return;
+    const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+    contentEl.innerHTML = `
+      <h4 class="pwa-prompt-title" style="color: #4338ca;">Add MGIT Hub to your device</h4>
+      <p class="pwa-prompt-desc" style="font-size: 13px; line-height: 1.55; color: #1e293b; margin: 8px 0 12px;">
+        ${isIos
+          ? '1. Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket"></i> at the bottom of Safari.<br>2. Scroll and tap <strong>Add to Home Screen</strong>.<br>3. Tap <strong>Add</strong> to finish.'
+          : '1. Open the browser menu (<strong>⋮</strong>).<br>2. Choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.<br>3. Confirm to install.'}
+      </p>
+      <div class="pwa-prompt-actions">
+        <button type="button" class="btn-pwa-install" id="pwaDoneBtn" style="padding: 7px 18px; font-size: 12.5px;">
+          <i class="fa-solid fa-check"></i> <span>Got it</span>
+        </button>
+      </div>
+    `;
+    const doneBtn = document.getElementById('pwaDoneBtn');
+    if (doneBtn) doneBtn.addEventListener('click', dismissPrompt);
+  }
+
+  // The inline head script captures the event; this listener keeps the UI in sync.
+  window.addEventListener('mgit-installable', () => {
+    updateInstallEntry();
+    if (!isDismissed()) {
+      // The scheduled 15-second timer will show the friendly prompt.
+    }
   });
+
+  window.addEventListener('mgit-installed', () => {
+    const banner = document.getElementById('pwaInstallPrompt');
+    if (banner) banner.remove();
+    updateInstallEntry();
+  });
+
+  const installEntry = document.getElementById('headerInstallBtn');
+  if (installEntry) {
+    installEntry.addEventListener('click', (event) => {
+      event.stopPropagation();
+      showInstallPrompt(true);
+    });
+  }
+
+  updateInstallEntry();
 
   // Track active time
   function startActiveTracking() {

@@ -27,8 +27,17 @@
     // Mascot
     mascot: null,
 
+    // Element to focus when a practice modal or session closes
+    _returnFocus: null,
+
     init() {
       this.bindTriggers();
+      // Keep multi-tab progress and an open progress panel in sync.
+      window.addEventListener('storage', (event) => {
+        if (event.key !== 'mgit_study_progress_v1') return;
+        const modal = document.getElementById('progressModal');
+        if (modal && modal.style.display !== 'none') this.openProgressModal();
+      });
     },
 
     bindTriggers() {
@@ -85,21 +94,19 @@
       const keepBtn = document.getElementById('confirmExitNoBtn');
       const confirmExitBtn = document.getElementById('confirmExitYesBtn');
 
+      const closeExitModal = () => {
+        if (exitModal) exitModal.style.display = 'none';
+        if (exitBtn && document.contains(exitBtn)) exitBtn.focus();
+      };
+
       if (exitBtn) {
-        exitBtn.addEventListener('click', () => {
-          if (exitModal) {
-            exitModal.style.display = 'flex';
-            exitModal.style.zIndex = '100005';
-          } else {
-            this.exitSession();
-          }
-        });
+        exitBtn.addEventListener('click', () => this.requestExit());
       }
       if (closeExitBtn && exitModal) {
-        closeExitBtn.addEventListener('click', () => exitModal.style.display = 'none');
+        closeExitBtn.addEventListener('click', closeExitModal);
       }
       if (keepBtn && exitModal) {
-        keepBtn.addEventListener('click', () => exitModal.style.display = 'none');
+        keepBtn.addEventListener('click', closeExitModal);
       }
       if (confirmExitBtn) {
         confirmExitBtn.addEventListener('click', () => {
@@ -163,6 +170,18 @@
         const sessionScreen = document.getElementById('practiceSessionScreen');
         if (!sessionScreen || sessionScreen.style.display === 'none') return;
 
+        if (e.key === 'Escape') {
+          const exitModal = document.getElementById('practiceExitModal');
+          if (exitModal && exitModal.style.display !== 'none') {
+            exitModal.style.display = 'none';
+            const exitBtn = document.getElementById('sessionExitBtn');
+            if (exitBtn) exitBtn.focus();
+          } else {
+            this.requestExit();
+          }
+          return;
+        }
+
         // Space or Enter to proceed on feedback banner
         if ((e.key === ' ' || e.key === 'Enter') && this.isAnswered && this.mode === 'quiz') {
           // If focus is not inside an active input
@@ -201,13 +220,36 @@
     openSelectorModal() {
       const modal = document.getElementById('practiceSelectorModal');
       if (!modal) return;
+      const active = document.activeElement;
+      if (active && active !== document.body && active !== document.documentElement &&
+          document.contains(active) && active.getClientRects().length) {
+        this._returnFocus = active;
+      }
       this.goToModeSelection();
       modal.style.display = 'flex';
     },
 
-    closeSelectorModal() {
+    restoreFocus() {
+      const candidates = [
+        this._returnFocus,
+        document.getElementById('practiceFunCard'),
+        document.getElementById('choosePyqsCard'),
+        document.getElementById('chooseNotesCard'),
+        document.getElementById('backToSubjectsBtn')
+      ];
+      for (const el of candidates) {
+        if (!el || !document.contains(el)) continue;
+        if (!el.getClientRects().length || getComputedStyle(el).visibility === 'hidden') continue;
+        el.focus();
+        return true;
+      }
+      return false;
+    },
+
+    closeSelectorModal(restoreFocus = true) {
       const modal = document.getElementById('practiceSelectorModal');
       if (modal) modal.style.display = 'none';
+      if (restoreFocus) this.restoreFocus();
     },
 
     goToModeSelection() {
@@ -289,13 +331,13 @@
         `;
 
         card.addEventListener('click', () => {
-          this.closeSelectorModal();
+          this.closeSelectorModal(false);
           this.startSession(sub.id, this.mode);
         });
         card.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            this.closeSelectorModal();
+            this.closeSelectorModal(false);
             this.startSession(sub.id, this.mode);
           }
         });
@@ -308,18 +350,21 @@
     startSession(subjectId, mode) {
       this.subjectId = subjectId;
       this.mode = mode;
+      if (!this._returnFocus || !document.contains(this._returnFocus) || !this._returnFocus.getClientRects().length) {
+        this._returnFocus = document.activeElement;
+      }
 
       const sessionScreen = document.getElementById('practiceSessionScreen');
       if (!sessionScreen) return;
       sessionScreen.style.display = 'block';
       document.body.style.overflow = 'hidden'; // lock background scrolling
 
-      // Initialize Puppy Mascot in Slot
+      // Initialize the cat mascot in its fixed slot
       const mascotSlot = document.getElementById('sessionMascotSlot');
-      if (mascotSlot && window.PuppyMascot) {
+      if (mascotSlot && window.Mascot) {
         mascotSlot.innerHTML = '';
-        this.mascot = window.PuppyMascot.createInstance('session-mascot');
-        mascotSlot.appendChild(this.mascot.element);
+        window.Mascot.init(mascotSlot);
+        this.mascot = window.Mascot;
         this.mascot.setState('idle', "Ready to study together!");
       }
 
@@ -334,7 +379,10 @@
       const title = document.getElementById('sessionTitle');
       if (badge) badge.textContent = subjectId === 'MIXED' ? 'ALL' : subjectId;
       if (title) {
-        const modeText = mode === 'quiz' ? 'Interactive Questions' : 'High-Yield Flashcards';
+        const compact = window.innerWidth <= 480;
+        const modeText = mode === 'quiz'
+          ? (compact ? 'Quiz' : 'Interactive Questions')
+          : (compact ? 'Flashcards' : 'High-Yield Flashcards');
         title.textContent = `${subjectId === 'MIXED' ? 'Mixed Practice' : subjectId} • ${modeText}`;
       }
 
@@ -345,6 +393,27 @@
       }
     },
 
+    requestExit() {
+      // Flashcards keep their progress immediately; a quiz with no answers
+      // loses nothing either, so exit without a misleading confirmation.
+      const isFlashcards = this.mode === 'flashcards';
+      const hasQuizProgress = this.mode === 'quiz' && (this.currentIndex > 0 || this.totalAttempts > 0);
+      if (isFlashcards || !hasQuizProgress) {
+        this.exitSession();
+        return;
+      }
+
+      const exitModal = document.getElementById('practiceExitModal');
+      if (exitModal) {
+        exitModal.style.display = 'flex';
+        exitModal.style.zIndex = '100005';
+        const keepBtn = document.getElementById('confirmExitNoBtn');
+        if (keepBtn) keepBtn.focus();
+      } else {
+        this.exitSession();
+      }
+    },
+
     exitSession() {
       const sessionScreen = document.getElementById('practiceSessionScreen');
       if (sessionScreen) sessionScreen.style.display = 'none';
@@ -352,6 +421,8 @@
       if (exitModal) exitModal.style.display = 'none';
       document.body.style.overflow = '';
       if (this.mascot) this.mascot = null;
+      this.restoreFocus();
+      this._returnFocus = null;
     },
 
     getActiveDataSource() {
@@ -455,6 +526,13 @@
       const q = this.activeQueue[this.currentIndex];
       this.isAnswered = false;
 
+      if (window.ActivityTracker && q.id) {
+        const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+        if (typeof window.ActivityTracker.recordQuestionViewed === 'function') {
+          window.ActivityTracker.recordQuestionViewed(activeExam, q.subjectId || this.subjectId, q.id);
+        }
+      }
+
       // Mascot State
       if (this.mascot) {
         this.mascot.setState('thinking', "You've got this!");
@@ -467,12 +545,19 @@
       const textEl = document.getElementById('sessionQuestionText');
 
       if (unitTag) unitTag.textContent = `Unit ${q.unit}`;
-      if (typeTag) typeTag.textContent = q.type === 'mcq' ? 'Multiple Choice' : 'Fill in the Blank';
+      if (typeTag) {
+        typeTag.textContent = q.type === 'mcq'
+          ? 'Multiple Choice'
+          : (q.type === 'tf' ? 'True / False' : 'Fill in the Blank');
+      }
       if (diffTag) {
         diffTag.textContent = (q.difficulty || 'Medium').toUpperCase();
         diffTag.className = `q-difficulty-tag ${(q.difficulty || 'medium').toLowerCase()}`;
       }
-      if (textEl) textEl.textContent = q.question;
+      if (textEl) {
+        if (window.RichText) window.RichText.renderInto(textEl, q.question);
+        else textEl.textContent = q.question;
+      }
 
       // Hide Feedback Banner
       const feedback = document.getElementById('sessionFeedbackBanner');
@@ -482,20 +567,23 @@
       const fibForm = document.getElementById('sessionFibForm');
       const fibInput = document.getElementById('sessionFibInput');
 
-      if (q.type === 'mcq') {
+      if (q.type === 'mcq' || q.type === 'tf') {
         if (fibForm) fibForm.style.display = 'none';
         if (optionsGrid) {
           optionsGrid.style.display = 'grid';
+          optionsGrid.classList.toggle('q-options-tf', q.type === 'tf');
           optionsGrid.innerHTML = '';
+          const optionList = q.type === 'tf' ? ['True', 'False'] : (q.options || []);
 
-          (q.options || []).forEach((opt, idx) => {
+          optionList.forEach((opt, idx) => {
             const btn = document.createElement('button');
             btn.type = 'button';
-            btn.className = 'q-option-card';
+            btn.className = 'q-option-card' + (q.type === 'tf' ? ' q-option-tf' : '');
             btn.setAttribute('data-index', idx);
+            const text = window.RichText ? window.RichText.render(opt) : opt;
             btn.innerHTML = `
-              <span class="opt-prefix">${String.fromCharCode(65 + idx)}</span>
-              <span class="opt-text">${opt}</span>
+              <span class="opt-prefix">${q.type === 'tf' ? (idx === 0 ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>') : String.fromCharCode(65 + idx)}</span>
+              <span class="opt-text">${text}</span>
             `;
 
             btn.addEventListener('click', () => {
@@ -587,7 +675,10 @@
           feedback.className = 'q-feedback-banner correct';
           if (feedbackTitle) feedbackTitle.textContent = "Brilliant! That's correct.";
           if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-          if (feedbackExp) feedbackExp.textContent = q.explanation;
+          if (feedbackExp) {
+            if (window.RichText) window.RichText.renderInto(feedbackExp, q.explanation || '');
+            else feedbackExp.textContent = q.explanation || '';
+          }
           feedback.style.display = 'block';
         }
       } else {
@@ -614,12 +705,19 @@
           if (feedbackTitle) {
             if (q.type === 'mcq') {
               feedbackTitle.textContent = `Not quite! The correct answer is Option ${String.fromCharCode(65 + q.answerIndex)}.`;
+            } else if (q.type === 'tf') {
+              feedbackTitle.textContent = `Not quite! The correct answer is ${q.answerIndex === 0 ? 'True' : 'False'}.`;
             } else {
-              feedbackTitle.textContent = `Not quite! Accepted answer: "${q.accepted[0]}".`;
+              const acceptedAnswer = (q.accepted && q.accepted[0]) || '';
+              if (window.RichText) window.RichText.renderInto(feedbackTitle, `Not quite! Accepted answer: "${acceptedAnswer}".`);
+              else feedbackTitle.textContent = `Not quite! Accepted answer: "${acceptedAnswer}".`;
             }
           }
           if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
-          if (feedbackExp) feedbackExp.textContent = q.explanation;
+          if (feedbackExp) {
+            if (window.RichText) window.RichText.renderInto(feedbackExp, q.explanation || '');
+            else feedbackExp.textContent = q.explanation || '';
+          }
           feedback.style.display = 'block';
         }
       }
@@ -668,10 +766,20 @@
     renderFlashcard() {
       if (this.activeDeck.length === 0) return;
       const card = this.activeDeck[this.currentCardIndex];
-      this.isFlipped = false;
 
       const cardEl = document.getElementById('sessionFlashcardCard');
-      if (cardEl) cardEl.classList.remove('flipped');
+      // Kill the flip transition for one frame so the next card's answer can
+      // never flash while the deck swaps content.
+      if (cardEl) {
+        cardEl.style.transition = 'none';
+        cardEl.classList.remove('flipped');
+        cardEl.setAttribute('aria-pressed', 'false');
+        // Force a style flush, then restore the transition next frame.
+        void cardEl.offsetWidth;
+        requestAnimationFrame(() => { cardEl.style.transition = ''; });
+      }
+      this.isFlipped = false;
+      if (cardEl) this.syncFlashcardAria(cardEl);
 
       const unitTag = document.getElementById('fcUnitTag');
       const yieldTag = document.getElementById('fcYieldTag');
@@ -682,8 +790,26 @@
       if (unitTag) unitTag.textContent = `Unit ${card.unit}`;
       if (yieldTag) yieldTag.style.display = card.highYield ? 'inline-flex' : 'none';
       if (topicLabel) topicLabel.textContent = card.topic || 'Core Concept';
-      if (frontText) frontText.textContent = card.front;
-      if (backText) backText.textContent = card.back;
+      if (frontText) {
+        if (window.RichText) window.RichText.renderInto(frontText, card.front || '');
+        else frontText.textContent = card.front || '';
+      }
+      if (backText) {
+        if (window.RichText) window.RichText.renderInto(backText, card.back || '');
+        else backText.textContent = card.back || '';
+      }
+
+      const liveRegion = document.getElementById('fcAriaLive');
+      if (liveRegion) liveRegion.textContent = '';
+
+      // Count the card as viewed as soon as it is shown.
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const subId = card.subjectId || this.subjectId;
+      if (window.ActivityTracker && card.id) {
+        if (typeof window.ActivityTracker.recordCardViewed === 'function') {
+          window.ActivityTracker.recordCardViewed(activeExam, subId, card.id);
+        }
+      }
 
       // Update counters
       const currentCount = document.getElementById('sessionCurrentCount');
@@ -692,6 +818,8 @@
 
       if (currentCount) currentCount.textContent = this.currentCardIndex + 1;
       if (totalCount) totalCount.textContent = this.activeDeck.length;
+      const fcCounter = document.getElementById('fcCounter');
+      if (fcCounter) fcCounter.textContent = `${this.currentCardIndex + 1} / ${this.activeDeck.length}`;
       if (fill) {
         const pct = ((this.currentCardIndex + 1) / this.activeDeck.length) * 100;
         fill.style.width = `${pct}%`;
@@ -702,11 +830,32 @@
       }
     },
 
+    syncFlashcardAria(cardEl) {
+      if (!cardEl) return;
+      const showAnswer = this.isFlipped;
+      cardEl.querySelectorAll('.flashcard-face').forEach((face) => {
+        const isBack = face.classList.contains('flashcard-back');
+        const hidden = showAnswer ? !isBack : isBack;
+        if (hidden) face.setAttribute('aria-hidden', 'true');
+        else face.removeAttribute('aria-hidden');
+      });
+      cardEl.setAttribute('aria-label', showAnswer
+        ? 'Flashcard answer. Tap or press Space to show the question.'
+        : 'Flashcard question. Tap or press Space to reveal the answer.');
+    },
+
     toggleFlipFlashcard() {
       const cardEl = document.getElementById('sessionFlashcardCard');
       if (!cardEl) return;
       this.isFlipped = !this.isFlipped;
       cardEl.classList.toggle('flipped', this.isFlipped);
+      cardEl.setAttribute('aria-pressed', this.isFlipped ? 'true' : 'false');
+      this.syncFlashcardAria(cardEl);
+
+      const liveRegion = document.getElementById('fcAriaLive');
+      if (liveRegion) {
+        liveRegion.textContent = this.isFlipped ? 'Answer shown' : 'Question shown';
+      }
 
       if (this.mascot) {
         if (this.isFlipped) {
@@ -793,6 +942,17 @@
         if (streakVal) streakVal.textContent = `${window.ActivityTracker.getStreak()} 🔥`;
         if (qVal) qVal.textContent = window.ActivityTracker.getTotalQuestionsMastered();
         if (fcVal) fcVal.textContent = window.ActivityTracker.getTotalFlashcardsLearned();
+
+        const summaryEl = document.getElementById('progressFlashcardSummary');
+        if (summaryEl && typeof window.ActivityTracker.getFlashcardProgress === 'function') {
+          const progress = window.ActivityTracker.getFlashcardProgress('MIXED');
+          const dataBank = this.getActiveDataSource() || {};
+          let totalCards = 0;
+          Object.keys(dataBank.flashcards || {}).forEach(sub => {
+            totalCards += (dataBank.flashcards[sub] || []).length;
+          });
+          summaryEl.textContent = `${progress.viewed.length} viewed · ${progress.mastered.length} mastered · ${progress.revise.length} to revise · of ${totalCards}`;
+        }
 
         if (barsContainer) {
           barsContainer.innerHTML = '';

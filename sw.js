@@ -1,9 +1,14 @@
 /**
  * MGIT PYQ Hub - Service Worker (Feature 1)
- * Strategy: Cache-first for static assets, Network-first for dynamic content, bypass for external Drive & Gemini APIs.
+ * Strategy:
+ * - Network-first for documents, scripts and styles so a deploy is picked up
+ *   on the next load instead of being one refresh behind.
+ * - Cache-first with a background refresh for images, fonts and the manifest.
+ * - Cached shell fallback when the network is unavailable.
+ * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v1';
+const CACHE_NAME = 'mgit-hub-v3';
 
 const STATIC_ASSETS = [
   './',
@@ -11,9 +16,11 @@ const STATIC_ASSETS = [
   'style.css',
   'app.js',
   'scope-map.js',
+  'rich-text.js',
   'mascot.js',
   'activity-tracker.js',
   'practice-runner.js',
+  'pwa-install.js',
   'pyq-data.js',
   'data/mid2-practice.js',
   'data/sem-practice.js',
@@ -25,36 +32,68 @@ const STATIC_ASSETS = [
   'assets/icons/icon-maskable-512.png'
 ];
 
+const NETWORK_FIRST_DESTINATIONS = new Set(['document', 'script', 'style']);
+
 // Install Event
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
   );
 });
 
 // Activate Event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      );
-    }).then(() => self.clients.claim())
+    caches.keys()
+      .then((keys) => Promise.all(
+        keys.map((key) => (key !== CACHE_NAME ? caches.delete(key) : undefined))
+      ))
+      .then(() => self.clients.claim())
   );
 });
 
+function cachePut(request, response) {
+  if (!response || response.status !== 200 || response.type !== 'basic') {
+    return response;
+  }
+  const copy = response.clone();
+  caches.open(CACHE_NAME)
+    .then((cache) => cache.put(request, copy))
+    .catch(() => { /* Cache quota or opaque response - ignore. */ });
+  return response;
+}
+
+function networkFirst(event) {
+  return fetch(event.request)
+    .then((response) => cachePut(event.request, response))
+    .catch(() => caches.match(event.request).then((cached) => {
+      if (cached) return cached;
+      if (event.request.mode === 'navigate') return caches.match('index.html');
+      return Response.error();
+    }));
+}
+
+function cacheFirst(event) {
+  return caches.match(event.request).then((cached) => {
+    if (cached) {
+      // Refresh in the background for the next visit.
+      fetch(event.request)
+        .then((response) => cachePut(event.request, response))
+        .catch(() => { /* Offline - keep the cached copy. */ });
+      return cached;
+    }
+    return fetch(event.request).then((response) => cachePut(event.request, response));
+  });
+}
+
 // Fetch Event
 self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+
   const url = new URL(event.request.url);
 
-  // 1. Bypass Service Worker completely for external API calls, Google Drive, or Gemini endpoints
+  // 1. Bypass the SW for external APIs, Google Drive, Gemini and Tally.
   if (
     url.origin !== self.location.origin ||
     url.pathname.startsWith('/api/') ||
@@ -62,41 +101,15 @@ self.addEventListener('fetch', (event) => {
     url.hostname.includes('generativelanguage.googleapis.com') ||
     url.hostname.includes('tally.so')
   ) {
-    return; // Pass through to network
+    return;
   }
 
-  // 2. Cache-first strategy with network fallback for local assets
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        // Fetch in background to update cache for next time
-        fetch(event.request)
-          .then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200) {
-              caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResponse));
-            }
-          })
-          .catch(() => {/* Offline */});
-        return cachedResponse;
-      }
+  // 2. Navigation and code/assets that ship with a deploy: network first.
+  if (event.request.mode === 'navigate' || NETWORK_FIRST_DESTINATIONS.has(event.request.destination)) {
+    event.respondWith(networkFirst(event));
+    return;
+  }
 
-      return fetch(event.request)
-        .then((networkResponse) => {
-          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-            return networkResponse;
-          }
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-          return networkResponse;
-        })
-        .catch(() => {
-          // If navigation request fails, return cached index.html
-          if (event.request.mode === 'navigate') {
-            return caches.match('index.html');
-          }
-        });
-    })
-  );
+  // 3. Everything else (icons, fonts, manifest): cache first + refresh.
+  event.respondWith(cacheFirst(event));
 });

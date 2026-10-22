@@ -28,12 +28,16 @@
     pyqSearchQuery: '',
     expandedChapters: { 1: false, 2: false, 3: false, 4: false, 5: false },
     activeExam: (function() {
-      const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('mid1')) return 'mid1';
-      if (hash.includes('mid2')) return 'mid2';
-      if (hash.includes('sem')) return 'sem';
-      return localStorage.getItem('mgit_active_exam') || 'mid2';
+      try {
+        const saved = localStorage.getItem('mgit_active_exam');
+        return ['mid1', 'mid2', 'sem'].includes(saved) ? saved : 'mid2';
+      } catch (e) {
+        return 'mid2';
+      }
     })(),
+    currentView: 'home',
+    appHistoryIndex: 0,
+    maxAppHistoryIndex: 0,
     isAdminLoggedIn: sessionStorage.getItem('mgit_admin_auth') === 'authenticated',
     selectedFiles: [],
 
@@ -60,14 +64,11 @@
     adminLoginBtn: document.getElementById('adminLoginBtn'),
     restartTourBtn: document.getElementById('restartTourBtn'),
 
-    welcomeSection: document.getElementById('welcomeSection'),
     subjectsSection: document.getElementById('subjectsSection'),
     subjectsGrid: document.getElementById('subjectsGrid'),
     attributionDivision: document.getElementById('attributionDivision'),
 
     // Exam Selector & Scoping Elements
-    headerExamBadge: document.getElementById('headerExamBadge'),
-    headerExamName: document.getElementById('headerExamName'),
     examSelectorSection: document.getElementById('examSelectorSection'),
     examActiveBanner: document.getElementById('examActiveBanner'),
     bannerExamTag: document.getElementById('bannerExamTag'),
@@ -247,9 +248,7 @@
     el.subjectsGrid.innerHTML = '';
 
     const examKey = state.activeExam || 'mid2';
-    const examConfig = (window.EXAM_CONFIG && window.EXAM_CONFIG[examKey]) 
-      ? window.EXAM_CONFIG[examKey] 
-      : { name: 'Mid-2', unitsLabel: 'Units 2.5–5' };
+    const examConfig = getExamConfig(examKey);
 
     const subjectKeys = Object.keys(SUBJECTS_DATA);
     subjectKeys.forEach(key => {
@@ -267,12 +266,8 @@
       const qCount = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey))).length;
       const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(n, examKey))).length;
 
-      // Determine unit scope label for this subject
-      let subjectUnits = examConfig.unitsLabel;
-      if (window.SCOPE_MAP && window.SCOPE_MAP[sub.id] && window.SCOPE_MAP[sub.id][examKey]) {
-        const units = window.SCOPE_MAP[sub.id][examKey].units;
-        subjectUnits = `Units ${units.join(', ')}`;
-      }
+      // Exam-level unit scope label (same for every subject in this exam).
+      const subjectUnits = examConfig.unitsLabel || 'Units 1 – 5';
 
       card.innerHTML = `
         <div class="subject-card-header-bar">
@@ -308,8 +303,13 @@
   // -------------------------------------------------------------
   // Subject Selection & Detail View
   // -------------------------------------------------------------
-  function selectSubject(sub) {
+  function selectSubject(sub, options) {
+    const opts = options || {};
+    if (!opts.fromHistory && (!state.currentSubject || state.currentSubject.id !== sub.id)) {
+      pushAppState('subject', { exam: state.activeExam, subject: sub.id });
+    }
     state.currentSubject = sub;
+    state.currentView = 'subject';
     state.currentMode = null;
     state.notesChapterFilter = 'all';
 
@@ -362,7 +362,7 @@
     }
 
     // Toggle main sections
-    el.welcomeSection.style.display = 'none';
+    if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
     el.subjectsSection.style.display = 'none';
     el.subjectDetailSection.style.display = 'block';
     if (el.attributionDivision) {
@@ -444,31 +444,61 @@
   // -------------------------------------------------------------
   // Exam Selector & Syllabus Scoping Engine (Feature 2)
   // -------------------------------------------------------------
-  function setExam(examId, navigateToSubjects) {
-    if (!['mid1', 'mid2', 'sem'].includes(examId)) examId = 'mid2';
-    state.activeExam = examId;
-    localStorage.setItem('mgit_active_exam', examId);
 
-    // Update URL hash without jumping
-    if (window.location.hash !== '#/' + examId && !state.currentSubject) {
-      history.replaceState(null, '', '#/' + examId);
-    }
+  // The app owns its own history. The address bar always stays clean ("/")
+  // and the current view is stored in history.state.
+  function appBasePath() {
+    return window.location.pathname || '/';
+  }
 
-    const cfg = (window.EXAM_CONFIG && window.EXAM_CONFIG[examId]) 
-      ? window.EXAM_CONFIG[examId] 
-      : { name: examId.toUpperCase(), subtitle: "Syllabus Scoped" };
+  function pushAppState(view, extra) {
+    if (typeof history.pushState !== 'function') return;
+    const nextIndex = (state.appHistoryIndex || 0) + 1;
+    const nextState = Object.assign({ app: 'mgit-pyq-hub', view, appIndex: nextIndex }, extra || {});
+    history.pushState(nextState, '', appBasePath());
+    state.appHistoryIndex = nextIndex;
+    state.maxAppHistoryIndex = Math.max(state.maxAppHistoryIndex || 0, nextIndex);
+    syncHistoryUi();
+  }
 
-    // Update Header Badge
-    if (el.headerExamBadge) {
-      el.headerExamBadge.style.display = 'inline-flex';
-      if (el.headerExamName) el.headerExamName.textContent = cfg.name;
-    }
+  function replaceAppState(view, extra) {
+    if (typeof history.replaceState !== 'function') return;
+    const nextState = Object.assign({
+      app: 'mgit-pyq-hub',
+      view,
+      appIndex: state.appHistoryIndex || 0
+    }, extra || {});
+    history.replaceState(nextState, '', appBasePath());
+  }
 
-    // Update Active Banner
+  function syncHistoryUi() {
+    const backBtn = document.getElementById('headerNavBackBtn');
+    const fwdBtn = document.getElementById('headerNavForwardBtn');
+    if (backBtn) backBtn.disabled = (state.appHistoryIndex || 0) <= 0;
+    if (fwdBtn) fwdBtn.disabled = (state.appHistoryIndex || 0) >= (state.maxAppHistoryIndex || 0);
+  }
+
+  function getExamConfig(examId) {
+    const map = (typeof window !== 'undefined' && window.EXAM_CONFIG) ? window.EXAM_CONFIG : null;
+    if (map && map[examId]) return map[examId];
+    const fallbackLabels = {
+      mid1: { name: 'Mid-1', unitsLabel: 'Units 1 – 2.5' },
+      mid2: { name: 'Mid-2', unitsLabel: 'Units 2.5 – 5' },
+      sem: { name: 'Semester End', unitsLabel: 'All 5 Units' }
+    };
+    return Object.assign({ id: examId, bannerSubtitle: "Only what's in your syllabus" }, fallbackLabels[examId] || fallbackLabels.mid2);
+  }
+
+  function applyExamSelection(examId, navigateToSubjects) {
+    const cfg = getExamConfig(examId);
+
+    // Update Active Banner (the header badge has been removed deliberately)
     if (el.examActiveBanner) {
       el.examActiveBanner.style.display = 'flex';
       if (el.bannerExamTag) el.bannerExamTag.textContent = cfg.name;
-      if (el.bannerExamSubtitle) el.bannerExamSubtitle.textContent = cfg.subtitle;
+      if (el.bannerExamSubtitle) {
+        el.bannerExamSubtitle.textContent = cfg.bannerSubtitle || cfg.subtitle || "Only what's in your syllabus";
+      }
     }
 
     // Update Continue Chip
@@ -496,7 +526,7 @@
       el.subjectsSection.style.display = 'block';
     }
 
-    // If instructed or coming from card click, hide hero selector and scroll to subjects
+    // If instructed or coming from card click, hide hero selector
     if (navigateToSubjects) {
       if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
       if (el.subjectsSection) {
@@ -514,12 +544,36 @@
     }
   }
 
-  function showExamSelector() {
+  function setExam(examId, navigateToSubjects, options) {
+    if (!['mid1', 'mid2', 'sem'].includes(examId)) examId = 'mid2';
+    const opts = options || {};
+    const changed = state.activeExam !== examId || state.currentView !== 'exam';
+
+    state.activeExam = examId;
+    state.currentView = 'exam';
+    try { localStorage.setItem('mgit_active_exam', examId); } catch (e) {}
+
+    if (!opts.fromHistory && navigateToSubjects && changed) {
+      pushAppState('exam', { exam: examId });
+    }
+
+    applyExamSelection(examId, navigateToSubjects);
+    syncHistoryUi();
+  }
+
+  function showExamSelector(options) {
+    const opts = options || {};
     state.currentSubject = null;
     state.currentMode = null;
+
+    if (!opts.fromHistory && state.currentView !== 'home') {
+      pushAppState('home');
+    }
+    state.currentView = 'home';
+
     if (el.examSelectorSection) {
       el.examSelectorSection.style.display = 'block';
-      el.examSelectorSection.scrollIntoView({ behavior: 'smooth' });
+      if (!opts.noScroll) el.examSelectorSection.scrollIntoView({ behavior: 'smooth' });
     }
     if (el.examActiveBanner) {
       el.examActiveBanner.style.display = 'none';
@@ -536,34 +590,20 @@
     if (el.welcomeSection) {
       el.welcomeSection.style.display = 'none';
     }
-    // Update hash to home
-    if (window.location.hash && window.location.hash !== '#/' && window.location.hash !== '#') {
-      history.pushState(null, '', '#/');
-    }
     // Reset top drive button to root folder
-    el.topDriveBtn.href = DRIVE_ROOT_URL;
-    el.topDriveBtn.title = 'Open Entire SEM 3 Google Drive Folder';
-    updateTopDriveBtnLabel();
+    if (el.topDriveBtn) {
+      el.topDriveBtn.href = DRIVE_ROOT_URL;
+      el.topDriveBtn.title = 'Open Entire SEM 3 Google Drive Folder';
+      updateTopDriveBtnLabel();
+    }
+    syncHistoryUi();
   }
 
   function initExamSelector() {
-    // Read initial exam from URL hash or localStorage
-    const hash = (window.location.hash || '').toLowerCase();
-    let initialExam = 'mid2';
-    if (hash.includes('mid1')) initialExam = 'mid1';
-    else if (hash.includes('mid2')) initialExam = 'mid2';
-    else if (hash.includes('sem')) initialExam = 'sem';
-    else {
-      initialExam = localStorage.getItem('mgit_active_exam') || 'mid2';
-    }
-
-    // If URL has specific exam hash, open that exam, otherwise show clean 3-card home page
-    const hasHashExam = hash.includes('mid1') || hash.includes('mid2') || hash.includes('sem');
-    if (hasHashExam) {
-      setExam(initialExam, true);
-    } else {
-      showExamSelector();
-    }
+    // Start on the clean three-card home screen. A refresh intentionally
+    // returns here; "Continue with …" restores the last active exam.
+    replaceAppState('home');
+    showExamSelector({ fromHistory: true, noScroll: true });
 
     // Event listeners on exam cards
     document.querySelectorAll('.exam-card').forEach(card => {
@@ -586,31 +626,36 @@
       });
     }
 
-    // Change Exam buttons
+    // Change Exam button in the active-exam banner (header badge removed)
     if (el.bannerChangeExamBtn) {
-      el.bannerChangeExamBtn.addEventListener('click', showExamSelector);
-    }
-    if (el.headerExamBadge) {
-      el.headerExamBadge.addEventListener('click', showExamSelector);
-      el.headerExamBadge.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          showExamSelector();
-        }
-      });
+      el.bannerChangeExamBtn.addEventListener('click', () => showExamSelector());
     }
 
-    // Hash routing for back/forward browser buttons
-    window.addEventListener('hashchange', () => {
-      const h = (window.location.hash || '').toLowerCase();
-      if (h.includes('mid1') && state.activeExam !== 'mid1') setExam('mid1', false);
-      else if (h.includes('mid2') && state.activeExam !== 'mid2') setExam('mid2', false);
-      else if (h.includes('sem') && state.activeExam !== 'sem') setExam('sem', false);
+    // History API routing for browser back/forward buttons.
+    window.addEventListener('popstate', (event) => {
+      const navState = event.state;
+      state.appHistoryIndex = (navState && Number(navState.appIndex)) || 0;
+
+      if (!navState || navState.view === 'home') {
+        showExamSelector({ fromHistory: true, noScroll: true });
+      } else if (navState.view === 'exam') {
+        setExam(navState.exam, true, { fromHistory: true });
+        returnToSubjectsList({ fromHistory: true });
+      } else if (navState.view === 'subject' && navState.subject && typeof SUBJECTS_DATA !== 'undefined' && SUBJECTS_DATA[navState.subject]) {
+        setExam(navState.exam, true, { fromHistory: true });
+        selectSubject(SUBJECTS_DATA[navState.subject], { fromHistory: true });
+      }
+      syncHistoryUi();
     });
   }
 
-  function returnToSubjectsList() {
+  function returnToSubjectsList(options) {
+    const opts = options || {};
+    if (!opts.fromHistory && state.currentSubject) {
+      pushAppState('exam', { exam: state.activeExam });
+    }
     state.currentSubject = null;
+    state.currentView = 'exam';
     state.currentMode = null;
     state.expandedChapters = { 1: false, 2: false, 3: false, 4: false, 5: false };
 
@@ -620,7 +665,6 @@
     updateTopDriveBtnLabel();
 
     el.subjectDetailSection.style.display = 'none';
-    el.welcomeSection.style.display = 'block';
     el.subjectsSection.style.display = 'block';
     if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'block';
     if (el.examActiveBanner) el.examActiveBanner.style.display = 'flex';
@@ -629,6 +673,7 @@
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    syncHistoryUi();
   }
 
   // -------------------------------------------------------------
@@ -643,7 +688,7 @@
 
     // Populate notes chapter dropdown with in-scope units
     if (el.notesChapterSelect) {
-      const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(subId, examKey) : [1, 2, 3, 4, 5];
+      const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(examKey) : [1, 2, 3, 4, 5];
       let opts = '<option value="all">All In-Scope Units</option>';
       inScopeChapters.forEach(ch => {
         const title = window.getScopedChapterTitle ? window.getScopedChapterTitle(subId, ch, examKey) : `Unit ${ch}`;
@@ -958,8 +1003,8 @@
     // Check if all chapters are expanded
     updateToggleAllButtonState();
 
-    const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(subId, examKey) : [1, 2, 3, 4, 5];
-    const examConfig = (window.EXAM_CONFIG && window.EXAM_CONFIG[examKey]) ? window.EXAM_CONFIG[examKey] : { name: 'Mid-2' };
+    const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(examKey) : [1, 2, 3, 4, 5];
+    const examConfig = getExamConfig(examKey);
 
     // Update Banner with active scope
     if (el.pyqCountBanner) {
@@ -1216,12 +1261,10 @@
 
   function formatQuestionMath(text) {
     if (!text) return '';
-    // Replace $...$ math with rendered KaTeX or clean symbols
-    let formatted = escapeHtml(text);
-    formatted = formatted.replace(/\$([^\$\n]+?)\$/g, (match, expr) => {
-      return renderMathExpr(expr, false);
-    });
-    return formatted;
+    if (window.RichText && typeof window.RichText.render === 'function') {
+      return window.RichText.render(text);
+    }
+    return escapeHtml(text);
   }
 
   function solveQuestionWithGemini(q) {
@@ -1255,7 +1298,7 @@
       el.modalSemesterBadge.textContent = '';
     }
 
-    el.modalQuestionTitle.textContent = q.question;
+    el.modalQuestionTitle.innerHTML = formatQuestionMath(q.question);
     el.modalYearsAppeared.textContent = q.years ? q.years.join(', ') : 'Not specified';
     el.modalRecurrence.textContent = q.frequency > 1
       ? `Repeated across ${q.frequency} exam papers (${q.years.join(', ')})`
@@ -1264,7 +1307,7 @@
     el.modalOutcome.textContent = `Course Outcome CO${q.chapter}`;
 
     // Tip: concise exam tip
-    el.modalTipText.textContent = q.tip ? `Tip: ${q.tip}` : 'Tip: Support theoretical answers with neat labelled block diagrams.';
+    el.modalTipText.innerHTML = formatQuestionMath(q.tip ? `Tip: ${q.tip}` : 'Tip: Support theoretical answers with neat labelled block diagrams.');
 
     // Direct PDF Drive Paper button (Never general folder)
     if (q.driveFileId) {
@@ -2762,7 +2805,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
   // Event Listeners Setup
   // -------------------------------------------------------------
   function setupEventListeners() {
-    // Header Browser-like Navigation Arrows
+    // Header Browser-like Navigation Arrows (use the app's own history)
     const backNavBtn = document.getElementById('headerNavBackBtn');
     const fwdNavBtn = document.getElementById('headerNavForwardBtn');
     if (backNavBtn) {
@@ -2777,10 +2820,14 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
         if (progressModal && progressModal.style.display !== 'none') { progressModal.style.display = 'none'; return; }
         if (practiceModal && practiceModal.style.display !== 'none') { practiceModal.style.display = 'none'; return; }
         if (geminiModal && geminiModal.style.display !== 'none') { closeGeminiModal(); return; }
-        if (sessionScreen && sessionScreen.style.display !== 'none') { if (window.PracticeRunner) window.PracticeRunner.exitSession(); return; }
-        if (state.currentSubject) { returnToSubjectsList(); return; }
-        if (el.examSelectorSection && el.examSelectorSection.style.display === 'none') { showExamSelector(); return; }
-        window.history.back();
+        if (sessionScreen && sessionScreen.style.display !== 'none') {
+          if (window.PracticeRunner) window.PracticeRunner.requestExit();
+          return;
+        }
+        // Never leave the site from the first app screen.
+        if ((state.appHistoryIndex || 0) > 0) {
+          window.history.back();
+        }
       });
     }
     if (fwdNavBtn) {
@@ -2789,6 +2836,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
         window.history.forward();
       });
     }
+    syncHistoryUi();
 
     // Brand Link returns home
     if (el.brandHomeLink) {
@@ -2798,9 +2846,15 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
-    // Back to subjects
+    // Back to subjects (browser-style back when possible)
     if (el.backToSubjectsBtn) {
-      el.backToSubjectsBtn.addEventListener('click', returnToSubjectsList);
+      el.backToSubjectsBtn.addEventListener('click', () => {
+        if ((state.appHistoryIndex || 0) > 0) {
+          window.history.back();
+        } else {
+          returnToSubjectsList({ fromHistory: true });
+        }
+      });
     }
 
     // Two-Step Mode Choice Cards
@@ -2872,23 +2926,6 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       if (e.key === 'Escape' && el.pyqFilterPanel && !el.pyqFilterPanel.hidden) {
         closeFilterPanel();
         if (el.pyqFilterToggle) el.pyqFilterToggle.focus();
-      }
-    });
-
-    // URL State Popstate listener for Browser Back button
-    window.addEventListener('popstate', (e) => {
-      if (e.state && e.state.subjectId) {
-        const targetSub = SUBJECTS_DATA[e.state.subjectId];
-        if (targetSub) {
-          selectSubject(targetSub, false);
-          if (e.state.mode === 'pyqs') {
-            showPyqsView(false);
-          } else if (e.state.mode === 'notes') {
-            showNotesView(false);
-          }
-        }
-      } else {
-        returnToSubjectsList(false);
       }
     });
 

@@ -248,6 +248,10 @@ const Mascot = (function () {
   };
 })();
 
+if (typeof window !== 'undefined') {
+  window.Mascot = Mascot;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Mascot;
 }

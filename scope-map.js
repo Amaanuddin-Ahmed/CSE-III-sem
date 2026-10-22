@@ -110,6 +110,20 @@ const SCOPE_MAP = {
   }
 };
 
+/*
+ * `const` declarations do NOT become properties of `window`. The app reads
+ * `window.EXAM_CONFIG` and `window.SCOPE_MAP`, so publish compatible views of
+ * the config here instead of silently falling back to Mid-2 everywhere.
+ */
+if (typeof window !== 'undefined') {
+  // Flat map keyed by exam id: { mid1, mid2, sem }
+  window.EXAM_CONFIG = EXAM_CONFIG.exams;
+  // Preserve the full nested object for callers that need `unit3Splits`.
+  window.SCOPE_MAP = SCOPE_MAP.unit3Splits;
+  window.EXAM_CONFIG_FULL = EXAM_CONFIG;
+  window.SCOPE_MAP_FULL = SCOPE_MAP;
+}
+
 /**
  * Check whether a question, note or resource belongs to the requested examination scope
  */

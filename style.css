@@ -426,9 +426,15 @@ body {
   border-left: 6px solid var(--sub-accent, #2563eb);
   border-radius: 16px;
   padding: 20px 18px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  grid-template-areas:
+    "header header"
+    "icon info";
+  align-items: start;
+  column-gap: 16px;
+  row-gap: 12px;
+  min-height: 168px;
   cursor: pointer;
   box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.05);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -436,6 +442,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.subject-card-header-bar { grid-area: header; }
+.subject-icon-box { grid-area: icon; }
+.subject-info { grid-area: info; }
 
 .subject-card::before {
   content: '';
@@ -1143,7 +1153,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px;
-  z-index: 2000;
+  z-index: 10001;
   backdrop-filter: blur(2px);
 }
 
@@ -6598,7 +6608,7 @@ body {
   max-width: 820px;
   width: 100%;
   margin: 0 auto;
-  padding: 24px 18px 48px;
+  padding: 24px 18px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6898,18 +6908,30 @@ body {
   width: 100%;
   max-width: 640px;
   perspective: 1200px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .flashcard-card {
   width: 100%;
-  min-height: 320px;
+  height: clamp(280px, 44vh, 400px);
+  min-height: 280px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   user-select: none;
   border-radius: 20px;
+  /* A backdrop-filter on the flipping element forces transform-style: flat
+     in Chrome/Safari, which is what produced the mirrored front face. */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  overflow: visible;
+  outline: none;
+}
+
+.flashcard-card:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 4px;
 }
 
 .flashcard-card.flipped {
@@ -7019,10 +7041,23 @@ body {
 }
 
 .fc-answer-text {
-  font-size: 15px;
+  font-size: clamp(13.5px, 2.2vw, 16px);
   line-height: 1.6;
   color: var(--text-main);
-  white-space: pre-line;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.flashcard-back .fc-content-wrap {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fc-prompt-text {
+  overflow-wrap: anywhere;
 }
 
 .fc-card-footer {
@@ -7038,11 +7073,138 @@ body {
 /* Flashcard Controls */
 .flashcard-controls-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
   max-width: 640px;
-  gap: 12px;
+  gap: 10px;
+}
+
+.fc-rating-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.fc-rating-actions .btn-fc-revise,
+.fc-rating-actions .btn-fc-gotit {
+  justify-content: center;
+  min-height: 48px;
+}
+
+.fc-nav-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.fc-nav-row .btn-fc-nav {
+  justify-content: center;
+  min-height: 44px;
+}
+
+.fc-counter {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Screen-reader-only live region */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* True / False answer buttons */
+.q-options-grid.q-options-tf {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.q-option-card.q-option-tf {
+  min-height: 64px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Shared RichText output */
+.rt-math-block {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+.rt-inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+
+.rt-code-block {
+  margin: 10px 0;
+  padding: 12px 14px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.rt-code-block code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  white-space: pre;
+}
+
+/* 3D flip is replaced by a crossfade for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .flashcard-card,
+  .flashcard-card.flipped {
+    transform: none !important;
+    transition: none !important;
+  }
+  .flashcard-face {
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    transition: opacity 0.16s ease;
+  }
+  .flashcard-front {
+    opacity: 1;
+    visibility: visible;
+  }
+  .flashcard-back {
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .flashcard-card.flipped .flashcard-front {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .flashcard-card.flipped .flashcard-back {
+    opacity: 1;
+    visibility: visible;
+  }
+  .btn-fc-revise:hover,
+  .btn-fc-gotit:hover,
+  .btn-fc-nav:hover {
+    transform: none;
+  }
 }
 
 .btn-fc-nav {
@@ -7063,11 +7225,6 @@ body {
 .btn-fc-nav:hover {
   background: #f8fafc;
   border-color: #94a3b8;
-}
-
-.fc-rating-actions {
-  display: flex;
-  gap: 10px;
 }
 
 .btn-fc-revise {
@@ -7247,11 +7404,14 @@ body {
     font-size: 17px;
   }
   .flashcard-card {
-    min-height: 280px;
+    height: clamp(260px, 42vh, 380px);
+    min-height: 260px;
   }
   .flashcard-controls-bar {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 8px;
+  }
+  .fc-rating-actions {
+    grid-template-columns: 1fr 1fr;
   }
   .results-stats-grid {
     grid-template-columns: 1fr;
@@ -7334,7 +7494,7 @@ body {
   box-shadow: 0 6px 20px rgba(139, 92, 246, 0.06) !important;
   height: auto !important;
   max-height: none !important;
-  overflow-y: visible !important;
+  overflow: visible !important;
   min-width: 0 !important;
   box-sizing: border-box !important;
 }
@@ -7345,7 +7505,7 @@ body {
   color: #1e293b;
   height: auto !important;
   max-height: none !important;
-  overflow-y: visible !important;
+  overflow: visible !important;
   max-width: 100% !important;
   min-width: 0 !important;
   word-break: break-word !important;
@@ -7543,6 +7703,12 @@ body {
     left: 12px;
     width: auto;
     max-width: none;
+  }
+
+  /* The session title already starts with the subject code, so hiding the
+     duplicate badge keeps "DM • Flashcards" from truncating on small phones. */
+  .session-subject-badge {
+    display: none;
   }
 }
 
