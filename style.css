@@ -7257,3 +7257,154 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   AI Study Assistant Layout Redesign (Feature 9)
+   - Natural height expansion without nested scrollbars
+   - Horizontal scrolling for code blocks, KaTeX math, and tables
+   - Distinct hairline borders: student prompt (#3b82f6) vs AI response (#8b5cf6)
+   - Fullscreen 100dvh on mobile, spacious 960px modal on desktop
+   ========================================================================== */
+
+#geminiModal .gemini-app-layout {
+  width: 90vw;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 90vh;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 60px -12px rgba(15, 23, 42, 0.25);
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #geminiModal .gemini-app-layout {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+}
+
+/* Chat Output Container - Single Smooth Scroll */
+.gemini-chat-output {
+  flex: 1;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 22px 24px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Student Prompt Container - Distinct Hairline Border */
+.user-msg {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(59, 130, 246, 0.45) !important;
+  border-radius: 18px 18px 4px 18px !important;
+  padding: 12px 18px !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  max-width: 82% !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.22) !important;
+  word-break: break-word !important;
+  font-weight: 500;
+}
+
+/* Gemini AI Response Container - Distinct Hairline Border & Natural Height */
+.ai-msg {
+  align-self: flex-start;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%) !important;
+  border: 1.5px solid rgba(139, 92, 246, 0.35) !important;
+  border-radius: 18px !important;
+  padding: 20px 22px !important;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.06) !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.ai-msg-body {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #1e293b;
+  height: auto !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  word-break: break-word !important;
+}
+
+/* Horizontal Scrolling for Code Blocks */
+.ai-msg-body pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  padding: 14px 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid #334155 !important;
+  margin: 14px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.ai-msg-body code {
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace !important;
+  font-size: 13px !important;
+}
+
+/* Horizontal Scrolling for KaTeX & Math Blocks */
+.ai-msg-body .gemini-math,
+.ai-msg-body .gemini-math-block,
+.ai-msg-body .katex-display {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box !important;
+  padding: 4px 0 !important;
+}
+
+/* Horizontal Scrolling for Markdown Tables */
+.ai-msg-body table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse !important;
+  margin: 14px 0 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.ai-msg-body th,
+.ai-msg-body td {
+  padding: 10px 14px !important;
+  border: 1px solid #e2e8f0 !important;
+  white-space: nowrap !important;
+  font-size: 13.5px !important;
+}
+
+.ai-msg-body th {
+  background: #f8fafc !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
