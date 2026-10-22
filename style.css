@@ -6826,6 +6826,72 @@ body {
   background: #4338ca;
 }
 
+/* Quiz navigation: Previous / Skip */
+.q-session-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f7;
+}
+
+.btn-quiz-nav,
+.btn-quiz-skip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-quiz-nav {
+  background: #ffffff;
+  color: #475569;
+  border: 1.5px solid #cbd5e1;
+}
+
+.btn-quiz-nav:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+.btn-quiz-nav:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-quiz-skip {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1.5px solid #fde68a;
+  margin-left: auto;
+}
+
+.btn-quiz-skip:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+@media (max-width: 480px) {
+  .q-session-nav {
+    gap: 8px;
+  }
+
+  .btn-quiz-nav,
+  .btn-quiz-skip {
+    padding: 9px 12px;
+    font-size: 12.5px;
+  }
+}
+
 /* Feedback Banner */
 .q-feedback-banner {
   margin-top: 22px;

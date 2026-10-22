@@ -93,8 +93,16 @@
     if (/[\\^_{}=<>]/.test(value)) return true;
     // Common Unicode maths and Greek letters.
     if (/[∑∏∫∈∉≤≥≠≈≡⊂⊆∪∩∀∃→⇒←⇔⊕¬∧∨πθλμσΩ∞√]/.test(value)) return true;
+    // Delimited variables such as $G$, $H$, $x_i$, $NO_x$ and $f(x)$.
+    // Currency is still protected by the escaped-dollar check and the
+    // trailing-digit lookahead in tokenizeMath, so "$5" stays literal.
+    if (/[A-Za-z]/.test(value)) return true;
     // Typical algebra: a_n = 3a_{n-1} + 2, n!/(r!(n-r)!) etc.
-    if (/[A-Za-z]/.test(value) && /[+\-*/!|]/.test(value)) return true;
+    if (/[+\-*/!|]/.test(value)) return true;
+    // Ranges, ordered pairs, numeric lists and single values: $[10, 50]$,
+    // $(1, 0)$, $9, 10, 11$, $0$.
+    if (/[\[\],;]/.test(value)) return true;
+    if (/^\d+(?:\.\d+)?$/.test(value)) return true;
     return false;
   }
 
@@ -112,8 +120,13 @@
       .replace(/\s+/g, ' ')
       .trim();
 
-    // KaTeX can leave literal $ and backslashes behind on malformed input.
-    clean = clean.replace(/\$/g, '').replace(/\\/g, '');
+    // Drop stray maths delimiters but keep escaped currency readable.
+    clean = clean
+      .replace(/(^|[^\\])\$/g, '$1')
+      .replace(/\\\$/g, '$')
+      .replace(/\\%/g, '%')
+      .replace(/\\_/g, '_')
+      .replace(/\\/g, '');
     return clean;
   }
 
@@ -125,7 +138,7 @@
       try {
         return window.katex.renderToString(value, {
           displayMode: !!isBlock,
-          throwOnError: false,
+          throwOnError: true,
           strict: 'ignore',
           trust: false
         });
@@ -157,7 +170,7 @@
     });
 
     // Inline maths: $...$ and \(...\)
-    output = output.replace(/(^|[^\\])\$([^$\n]+?)\$(?!\d)/g, (match, prefix, expr) => {
+    output = output.replace(/(^|[^\\])\$((?:\\\$|[^$\n])+?)\$(?!\d)/g, (match, prefix, expr) => {
       if (!hasMathSignal(expr)) return match;
       const index = tokens.length;
       tokens.push({ type: 'math', expr, block: false });
@@ -194,6 +207,10 @@
     });
 
     source = tokenizeMath(source, tokens);
+
+    // Escaped dollar signs left outside maths are literal currency. Inside
+    // maths they stay as \$ so KaTeX can render the currency symbol.
+    source = source.replace(/\\\$/g, '$');
 
     let html = escapeHtml(source);
     html = html.replace(/\r\n/g, '\n').replace(/\n/g, '<br>');

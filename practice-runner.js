@@ -121,6 +121,12 @@
         nextBtn.addEventListener('click', () => this.nextQuestion());
       }
 
+      // Previous / Skip Question Buttons
+      const prevBtn = document.getElementById('sessionPrevBtn');
+      const skipBtn = document.getElementById('sessionSkipBtn');
+      if (prevBtn) prevBtn.addEventListener('click', () => this.previousQuestion());
+      if (skipBtn) skipBtn.addEventListener('click', () => this.skipQuestion());
+
       // 7. FIB Form Submit
       const fibForm = document.getElementById('sessionFibForm');
       if (fibForm) {
@@ -524,7 +530,8 @@
       }
 
       const q = this.activeQueue[this.currentIndex];
-      this.isAnswered = false;
+      const savedState = q._answer || null;
+      this.isAnswered = !!savedState;
 
       if (window.ActivityTracker && q.id) {
         const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
@@ -559,9 +566,14 @@
         else textEl.textContent = q.question;
       }
 
-      // Hide Feedback Banner
+      // Feedback is restored below when revisiting an answered question.
       const feedback = document.getElementById('sessionFeedbackBanner');
       if (feedback) feedback.style.display = 'none';
+
+      const navPrev = document.getElementById('sessionPrevBtn');
+      const navSkip = document.getElementById('sessionSkipBtn');
+      if (navPrev) navPrev.disabled = this.currentIndex === 0;
+      if (navSkip) navSkip.style.display = savedState ? 'none' : 'inline-flex';
 
       const optionsGrid = document.getElementById('sessionOptionsGrid');
       const fibForm = document.getElementById('sessionFibForm');
@@ -586,6 +598,12 @@
               <span class="opt-text">${text}</span>
             `;
 
+            if (savedState) {
+              btn.disabled = true;
+              if (idx === q.answerIndex) btn.classList.add('correct');
+              else if (idx === savedState.chosenIdx) btn.classList.add('wrong');
+            }
+
             btn.addEventListener('click', () => {
               if (this.isAnswered) return;
               this.handleAnswer(idx);
@@ -600,12 +618,22 @@
         if (fibForm) {
           fibForm.style.display = 'block';
           if (fibInput) {
-            fibInput.value = '';
-            fibInput.disabled = false;
-            fibInput.focus();
+            fibInput.value = savedState ? (savedState.userVal || '') : '';
+            fibInput.disabled = !!savedState;
+            fibInput.classList.toggle('correct', !!(savedState && savedState.isCorrect));
+            fibInput.classList.toggle('wrong', !!(savedState && !savedState.isCorrect));
+            if (!savedState) fibInput.focus();
           }
         }
       }
+
+      if (savedState) {
+        this.renderQuestionFeedback(q, savedState.isCorrect, savedState.chosenIdx);
+      }
+
+      // Start each question from the top, especially after Previous or Skip.
+      const screen = document.getElementById('practiceSessionScreen');
+      if (screen) screen.scrollTop = 0;
     },
 
     handleAnswer(chosenIdx) {
@@ -624,7 +652,7 @@
         }
       });
 
-      this.processAnswerOutcome(isCorrect, q);
+      this.processAnswerOutcome(isCorrect, q, { chosenIdx });
     },
 
     submitFibAnswer() {
@@ -632,7 +660,8 @@
       this.isAnswered = true;
       const q = this.activeQueue[this.currentIndex];
       const input = document.getElementById('sessionFibInput');
-      const userVal = (input ? input.value : '').trim().toLowerCase();
+      const rawVal = (input ? input.value : '').trim();
+      const userVal = rawVal.toLowerCase();
 
       if (input) input.disabled = true;
 
@@ -641,10 +670,11 @@
         input.classList.add(isCorrect ? 'correct' : 'wrong');
       }
 
-      this.processAnswerOutcome(isCorrect, q);
+      this.processAnswerOutcome(isCorrect, q, { userVal: rawVal });
     },
 
-    processAnswerOutcome(isCorrect, q) {
+    processAnswerOutcome(isCorrect, q, details) {
+      const answerDetails = details || {};
       this.totalAttempts++;
       const isFirstTry = !(q.id in this.firstTryMap);
       if (isFirstTry) {
@@ -652,39 +682,26 @@
         if (isCorrect) this.correctFirstTry++;
       }
 
+      q._answer = {
+        isCorrect,
+        chosenIdx: answerDetails.chosenIdx,
+        userVal: answerDetails.userVal
+      };
+
       // Record in ActivityTracker
       if (window.ActivityTracker) {
         window.ActivityTracker.recordQuizResult(q.subjectId || this.subjectId, q.id, isCorrect);
       }
 
-      const feedback = document.getElementById('sessionFeedbackBanner');
-      const feedbackTitle = document.getElementById('feedbackTitle');
-      const feedbackExp = document.getElementById('feedbackExplanation');
-      const feedbackIcon = document.getElementById('feedbackIcon');
-
       if (isCorrect) {
-        // Correct answer flow
         this.masteredCount++;
         this.updateProgressUi();
 
         if (this.mascot) {
           this.mascot.setState('happy', "Woohoo! Nailed it! 🎉");
         }
-
-        if (feedback) {
-          feedback.className = 'q-feedback-banner correct';
-          if (feedbackTitle) feedbackTitle.textContent = "Brilliant! That's correct.";
-          if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-          if (feedbackExp) {
-            if (window.RichText) window.RichText.renderInto(feedbackExp, q.explanation || '');
-            else feedbackExp.textContent = q.explanation || '';
-          }
-          feedback.style.display = 'block';
-        }
       } else {
-        // Wrong answer flow
-        // Progress bar does NOT move!
-        // Mascot sad for 1.5s then concentrating
+        // Wrong answers stay in the queue and come back a few slots later.
         if (this.mascot) {
           this.mascot.setState('sad', "Oh no! But we learn from mistakes.");
           setTimeout(() => {
@@ -694,38 +711,81 @@
           }, 1500);
         }
 
-        // Re-queue question 3–5 slots later
         const currentQ = this.activeQueue[this.currentIndex];
         const remainingSlots = this.activeQueue.length - (this.currentIndex + 1);
         const insertOffset = Math.min(Math.max(3, Math.floor(Math.random() * 3) + 3), remainingSlots);
-        this.activeQueue.splice(this.currentIndex + 1 + insertOffset, 0, { ...currentQ });
-
-        if (feedback) {
-          feedback.className = 'q-feedback-banner wrong';
-          if (feedbackTitle) {
-            if (q.type === 'mcq') {
-              feedbackTitle.textContent = `Not quite! The correct answer is Option ${String.fromCharCode(65 + q.answerIndex)}.`;
-            } else if (q.type === 'tf') {
-              feedbackTitle.textContent = `Not quite! The correct answer is ${q.answerIndex === 0 ? 'True' : 'False'}.`;
-            } else {
-              const acceptedAnswer = (q.accepted && q.accepted[0]) || '';
-              if (window.RichText) window.RichText.renderInto(feedbackTitle, `Not quite! Accepted answer: "${acceptedAnswer}".`);
-              else feedbackTitle.textContent = `Not quite! Accepted answer: "${acceptedAnswer}".`;
-            }
-          }
-          if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
-          if (feedbackExp) {
-            if (window.RichText) window.RichText.renderInto(feedbackExp, q.explanation || '');
-            else feedbackExp.textContent = q.explanation || '';
-          }
-          feedback.style.display = 'block';
-        }
+        const retryQuestion = { ...currentQ };
+        delete retryQuestion._answer;
+        this.activeQueue.splice(this.currentIndex + 1 + insertOffset, 0, retryQuestion);
       }
+
+      this.renderQuestionFeedback(q, isCorrect, answerDetails.chosenIdx);
+
+      const skipBtn = document.getElementById('sessionSkipBtn');
+      if (skipBtn) skipBtn.style.display = 'none';
+    },
+
+    renderQuestionFeedback(q, isCorrect, chosenIdx) {
+      const feedback = document.getElementById('sessionFeedbackBanner');
+      const feedbackTitle = document.getElementById('feedbackTitle');
+      const feedbackExp = document.getElementById('feedbackExplanation');
+      const feedbackIcon = document.getElementById('feedbackIcon');
+      if (!feedback) return;
+
+      if (isCorrect) {
+        feedback.className = 'q-feedback-banner correct';
+        if (feedbackTitle) feedbackTitle.textContent = "Brilliant! That's correct.";
+        if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      } else {
+        feedback.className = 'q-feedback-banner wrong';
+        if (feedbackTitle) {
+          if (q.type === 'mcq') {
+            const correctAnswer = (q.options && q.options[q.answerIndex]) || '';
+            const correctLabel = `Not quite! The correct answer is Option ${String.fromCharCode(65 + q.answerIndex)}: ${correctAnswer}`;
+            if (window.RichText) window.RichText.renderInto(feedbackTitle, correctLabel);
+            else feedbackTitle.textContent = correctLabel;
+          } else if (q.type === 'tf') {
+            feedbackTitle.textContent = `Not quite! The correct answer is ${q.answerIndex === 0 ? 'True' : 'False'}.`;
+          } else {
+            const acceptedAnswer = (q.accepted && q.accepted[0]) || '';
+            // Accepted answers are sometimes stored as raw TeX (e.g. \neg q).
+            const acceptedDisplay = /\\/.test(acceptedAnswer) ? `$${acceptedAnswer}$` : acceptedAnswer;
+            if (window.RichText) window.RichText.renderInto(feedbackTitle, `Not quite! Accepted answer: "${acceptedDisplay}".`);
+            else feedbackTitle.textContent = `Not quite! Accepted answer: "${acceptedDisplay}".`;
+          }
+        }
+        if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+      }
+
+      if (feedbackExp) {
+        if (window.RichText) window.RichText.renderInto(feedbackExp, q.explanation || '');
+        else feedbackExp.textContent = q.explanation || '';
+      }
+      feedback.style.display = 'block';
     },
 
     nextQuestion() {
       this.currentIndex++;
-      if (this.masteredCount >= this.totalToMaster) {
+      if (this.currentIndex >= this.activeQueue.length || this.masteredCount >= this.totalToMaster) {
+        this.showResults();
+      } else {
+        this.renderCurrentQuestion();
+      }
+    },
+
+    previousQuestion() {
+      if (this.currentIndex <= 0) return;
+      this.currentIndex--;
+      this.renderCurrentQuestion();
+    },
+
+    skipQuestion() {
+      if (this.isAnswered) {
+        this.nextQuestion();
+        return;
+      }
+      this.currentIndex++;
+      if (this.currentIndex >= this.activeQueue.length) {
         this.showResults();
       } else {
         this.renderCurrentQuestion();
@@ -915,10 +975,10 @@
       const streakNum = document.getElementById('resultsStreak');
 
       if (masteredNum) {
-        masteredNum.textContent = this.mode === 'quiz' ? this.totalToMaster : this.activeDeck.length;
+        masteredNum.textContent = this.mode === 'quiz' ? this.masteredCount : this.activeDeck.length;
       }
       if (accuracyNum) {
-        const acc = this.totalAttempts > 0 ? Math.round((this.correctFirstTry / this.totalAttempts) * 100) : 100;
+        const acc = this.totalAttempts > 0 ? Math.round((this.correctFirstTry / this.totalAttempts) * 100) : 0;
         accuracyNum.textContent = `${acc}%`;
       }
       if (streakNum && window.ActivityTracker) {
