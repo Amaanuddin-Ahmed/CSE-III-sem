@@ -10,6 +10,14 @@ const ActivityTracker = (function () {
 
   const STORAGE_KEY = 'mgit_study_progress_v1';
 
+  function getActiveExam() {
+    try {
+      return (typeof localStorage !== 'undefined' && localStorage.getItem('mgit_active_exam')) || 'mid2';
+    } catch (e) {
+      return 'mid2';
+    }
+  }
+
   function getDefaultData() {
     return {
       version: 1,
@@ -27,6 +35,7 @@ const ActivityTracker = (function () {
 
   function load() {
     try {
+      if (typeof localStorage === 'undefined') return getDefaultData();
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return getDefaultData();
       const parsed = JSON.parse(raw);
@@ -41,6 +50,7 @@ const ActivityTracker = (function () {
 
   function save(data) {
     try {
+      if (typeof localStorage === 'undefined') return;
       data.lastActive = Date.now();
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (e) {
@@ -63,9 +73,13 @@ const ActivityTracker = (function () {
   }
 
   function getSubjectStats(examId, subjectId) {
+    if (!subjectId && examId) {
+      subjectId = examId;
+      examId = getActiveExam();
+    }
     const data = load();
-    const exam = data.exams[examId] || data.exams.mid2;
-    const sub = exam.subjects[subjectId] || {
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+    const sub = (exam.subjects && exam.subjects[subjectId]) || {
       sessionsCount: 0,
       bestScore: 0,
       masteredQuestionIds: [],
@@ -82,7 +96,91 @@ const ActivityTracker = (function () {
     };
   }
 
-  function recordQuizResult(examId, subjectId, result) {
+  function getSubjectMastery(subjectId) {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+
+    if (subjectId === 'MIXED') {
+      let totalMastered = 0;
+      Object.keys(exam.subjects || {}).forEach(k => {
+        totalMastered += ((exam.subjects[k] && exam.subjects[k].masteredQuestionIds) || []).length;
+      });
+      const target = 140;
+      const pct = Math.min(100, Math.round((totalMastered / target) * 100));
+      return { percentage: pct, count: totalMastered };
+    }
+
+    const sub = (exam.subjects && exam.subjects[subjectId]) || {};
+    const mastered = (sub.masteredQuestionIds || []).length;
+    const target = 25; // standard target per subject
+    const pct = Math.min(100, Math.round((mastered / target) * 100));
+    return { percentage: pct, count: mastered };
+  }
+
+  function getLearnedFlashcards(subjectId) {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+
+    if (subjectId === 'MIXED') {
+      const allCards = [];
+      Object.keys(exam.subjects || {}).forEach(k => {
+        allCards.push(...((exam.subjects[k] && exam.subjects[k].gotItCardIds) || []));
+      });
+      return allCards;
+    }
+
+    const sub = (exam.subjects && exam.subjects[subjectId]) || {};
+    return sub.gotItCardIds || [];
+  }
+
+  function recordQuizResult(arg1, arg2, arg3) {
+    // Overloaded:
+    // 1. recordQuizResult(examId, subjectId, { total, correct, score, masteredIds, missedTopics })
+    // 2. recordQuizResult(subjectId, questionId, isCorrect)
+    let examId, subjectId, result;
+
+    if (typeof arg3 === 'boolean') {
+      // Called as: recordQuizResult(subjectId, questionId, isCorrect)
+      examId = getActiveExam();
+      subjectId = arg1;
+      const qId = arg2;
+      const isCorrect = arg3;
+
+      const data = load();
+      const exam = data.exams[examId] = data.exams[examId] || {
+        sessionsCount: 0,
+        questionsMastered: 0,
+        totalAttempted: 0,
+        correctCount: 0,
+        subjects: {}
+      };
+      exam.totalAttempted += 1;
+      if (isCorrect) exam.correctCount += 1;
+
+      const sub = exam.subjects[subjectId] = exam.subjects[subjectId] || {
+        sessionsCount: 0,
+        bestScore: 0,
+        masteredQuestionIds: [],
+        gotItCardIds: [],
+        weakTopics: {}
+      };
+
+      if (isCorrect && qId) {
+        sub.masteredQuestionIds = sub.masteredQuestionIds || [];
+        if (!sub.masteredQuestionIds.includes(qId)) {
+          sub.masteredQuestionIds.push(qId);
+        }
+      }
+      save(data);
+      return;
+    }
+
+    examId = arg1 || getActiveExam();
+    subjectId = arg2;
+    result = arg3 || {};
+
     const data = load();
     const exam = data.exams[examId] = data.exams[examId] || {
       sessionsCount: 0,
@@ -127,7 +225,26 @@ const ActivityTracker = (function () {
     save(data);
   }
 
-  function recordFlashcardLearned(examId, subjectId, cardId, isGotIt) {
+  function recordFlashcardLearned(arg1, arg2, arg3, arg4) {
+    // Overloaded:
+    // 1. recordFlashcardLearned(examId, subjectId, cardId, isGotIt)
+    // 2. recordFlashcardLearned(subjectId, cardId, isGotIt)
+    let examId, subjectId, cardId, isGotIt;
+
+    if (arg4 !== undefined) {
+      examId = arg1 || getActiveExam();
+      subjectId = arg2;
+      cardId = arg3;
+      isGotIt = !!arg4;
+    } else {
+      examId = getActiveExam();
+      subjectId = arg1;
+      cardId = arg2;
+      isGotIt = (arg3 !== undefined) ? !!arg3 : true;
+    }
+
+    if (!subjectId || !cardId) return;
+
     const data = load();
     const exam = data.exams[examId] = data.exams[examId] || { subjects: {} };
     const sub = exam.subjects[subjectId] = exam.subjects[subjectId] || {
@@ -147,15 +264,43 @@ const ActivityTracker = (function () {
     save(data);
   }
 
+  function getStreak() {
+    const data = load();
+    return data.streakDays || 1;
+  }
+
+  function getTotalQuestionsMastered() {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+    let total = 0;
+    Object.values(exam.subjects || {}).forEach(s => {
+      total += (s.masteredQuestionIds || []).length;
+    });
+    return total;
+  }
+
+  function getTotalFlashcardsLearned() {
+    const examId = getActiveExam();
+    const data = load();
+    const exam = data.exams[examId] || data.exams.mid2 || {};
+    let total = 0;
+    Object.values(exam.subjects || {}).forEach(s => {
+      total += (s.gotItCardIds || []).length;
+    });
+    return total;
+  }
+
   function resetAll() {
     try {
-      localStorage.removeItem(STORAGE_KEY);
+      if (typeof localStorage !== 'undefined') localStorage.removeItem(STORAGE_KEY);
     } catch (e) {}
   }
 
   function getGlobalSummary(examId) {
+    if (!examId) examId = getActiveExam();
     const data = load();
-    const exam = data.exams[examId] || data.exams.mid2;
+    const exam = data.exams[examId] || data.exams.mid2 || {};
     let totalMastered = 0;
     let totalFlashcards = 0;
 
@@ -178,7 +323,12 @@ const ActivityTracker = (function () {
   }
 
   return {
+    getStreak,
+    getTotalQuestionsMastered,
+    getTotalFlashcardsLearned,
     getSubjectStats,
+    getSubjectMastery,
+    getLearnedFlashcards,
     recordQuizResult,
     recordFlashcardLearned,
     getGlobalSummary,

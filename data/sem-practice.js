@@ -1,6 +1,6 @@
 /**
- * MGIT PYQ HUB - Semester End Practice Data (Units 1 to 5 Complete Syllabus)
- * Auto-generated & verified for MR-25 CSE Semester III
+ * MGIT PYQ HUB - Semester End Comprehensive Question Bank & Flashcards
+ * Auto-generated & verified for MR-25 CSE Semester III (Units 1-5 Complete)
  */
 const SEM_PRACTICE = {
   "version": "1.0.0",
@@ -26,12 +26,12 @@ const SEM_PRACTICE = {
         "topic": "Tautology",
         "question": "A compound proposition that evaluates to true under every possible truth assignment is called a:",
         "options": [
-          "Tautology",
           "Contradiction",
-          "Contingency",
-          "Equivalence"
+          "Tautology",
+          "Equivalence",
+          "Contingency"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-SEM-2023",
         "explanation": "A tautology is universally true under every interpretation (e.g., $p \\lor \\neg p$)."
@@ -60,12 +60,12 @@ const SEM_PRACTICE = {
         "topic": "Modus Ponens",
         "question": "Which rule of inference deduces $q$ from premises $p$ and $p \\rightarrow q$?",
         "options": [
-          "Modus Ponens",
           "Modus Tollens",
           "Hypothetical Syllogism",
+          "Modus Ponens",
           "Disjunctive Syllogism"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-SEM-2024",
         "explanation": "Modus Ponens affirms antecedent: $(p \\land (p \\rightarrow q)) \\implies q$."
@@ -92,12 +92,12 @@ const SEM_PRACTICE = {
         "topic": "Lattices",
         "question": "A POSET $(L, \\le)$ is called a Lattice if every pair of elements has:",
         "options": [
-          "Both a unique GLB (meet) and unique LUB (join)",
           "A maximum element only",
-          "A minimum element only",
-          "No cycles"
+          "No cycles",
+          "Both a unique GLB (meet) and unique LUB (join)",
+          "A minimum element only"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-SEM-2023",
         "explanation": "In a lattice, every pair has a unique greatest lower bound ($a \\land b$) and least upper bound ($a \\lor b$)."
@@ -125,12 +125,12 @@ const SEM_PRACTICE = {
         "topic": "Groups & Properties",
         "question": "An algebraic structure $(G, *)$ is called a group if it satisfies which of the following set of axioms?",
         "options": [
-          "Closure, Associativity, Identity, and Inverses",
           "Closure and Associativity only",
-          "Closure, Associativity, and Identity only",
-          "Closure, Identity, and Commutativity"
+          "Closure, Associativity, Identity, and Inverses",
+          "Closure, Identity, and Commutativity",
+          "Closure, Associativity, and Identity only"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "A group must satisfy four fundamental axioms: closure, associativity, existence of an identity element, and existence of an inverse for every element."
@@ -143,12 +143,12 @@ const SEM_PRACTICE = {
         "topic": "Lagrange's Theorem",
         "question": "According to Lagrange's Theorem for finite groups, if $H$ is a subgroup of a finite group $G$, then:",
         "options": [
-          "The order of $H$ divides the order of $G$",
           "The order of $G$ divides the order of $H$",
           "$|G| = |H| + 1$",
-          "$|H|$ and $|G|$ must both be prime numbers"
+          "$|H|$ and $|G|$ must both be prime numbers",
+          "The order of $H$ divides the order of $G$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2024",
         "explanation": "Lagrange's Theorem states that the order of any subgroup $H$ divides the order of the parent finite group $G$. The ratio $|G|/|H|$ is called the index of $H$ in $G$."
@@ -177,12 +177,12 @@ const SEM_PRACTICE = {
         "topic": "Cyclic Groups",
         "question": "Which of the following elements are generators of the cyclic group $(\\mathbb{Z}_6, +_6)$?",
         "options": [
-          "1 and 5",
           "2 and 4",
+          "1 and 5",
           "3 only",
           "0 only"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "In $(\\mathbb{Z}_n, +_n)$, an element $g$ is a generator if and only if $\\gcd(g, n) = 1$. The positive integers less than 6 and coprime to 6 are 1 and 5."
@@ -211,12 +211,12 @@ const SEM_PRACTICE = {
         "topic": "Normal Subgroups",
         "question": "A subgroup $H$ of a group $G$ is called a normal subgroup if for all $g \\in G$ and $h \\in H$:",
         "options": [
-          "$g h g^{-1} \\in H$",
-          "$g h = h$",
           "$g h g = h$",
-          "$g^2 \\in H$"
+          "$g h = h$",
+          "$g^2 \\in H$",
+          "$g h g^{-1} \\in H$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2022",
         "explanation": "A subgroup $H$ is normal ($H \\trianglelefteq G$) if and only if it is invariant under conjugation, meaning $g h g^{-1} \\in H$ for all $g \\in G$ and $h \\in H$."
@@ -246,12 +246,12 @@ const SEM_PRACTICE = {
         "topic": "Subgroup Test",
         "question": "A non-empty subset $H$ of a group $G$ is a subgroup if and only if for every pair of elements $a, b \\in H$:",
         "options": [
-          "$a * b^{-1} \\in H$",
-          "$a * b \\in G$",
           "$a^{-1} * b^{-1} \\in G$",
-          "$a = b$"
+          "$a * b \\in G$",
+          "$a = b$",
+          "$a * b^{-1} \\in H$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The standard one-step subgroup criterion requires $a * b^{-1} \\in H$ for all $a, b \\in H$, automatically proving both closure and existence of inverses."
@@ -264,12 +264,12 @@ const SEM_PRACTICE = {
         "topic": "Prime Order",
         "question": "Every finite group of prime order $p$ is guaranteed to be:",
         "options": [
-          "Cyclic and Abelian",
-          "Non-abelian",
           "Infinite",
-          "Without an identity element"
+          "Without an identity element",
+          "Non-abelian",
+          "Cyclic and Abelian"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "By Lagrange's theorem, any group of prime order has no proper non-trivial subgroups, so every non-identity element generates the whole group. Every cyclic group is abelian."
@@ -298,12 +298,12 @@ const SEM_PRACTICE = {
         "topic": "Pigeonhole Principle",
         "question": "If $k+1$ objects are distributed into $k$ boxes, then at least one box must contain at least how many objects?",
         "options": [
-          "2",
           "k",
           "k+1",
-          "1"
+          "1",
+          "2"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The Pigeonhole Principle states that if $n$ items are placed into $k$ boxes and $n > k$, at least one box contains $\\ge \\lceil n/k \\rceil = 2$ items."
@@ -331,12 +331,12 @@ const SEM_PRACTICE = {
         "topic": "Inclusion-Exclusion",
         "question": "For two finite sets $A$ and $B$, the cardinality $|A \\cup B|$ is given by:",
         "options": [
-          "$|A| + |B| - |A \\cap B|$",
           "$|A| + |B| + |A \\cap B|$",
-          "$|A| \\times |B|$",
-          "$|A| + |B|$"
+          "$|A| + |B| - |A \\cap B|$",
+          "$|A| + |B|$",
+          "$|A| \\times |B|$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2022",
         "explanation": "The Principle of Inclusion-Exclusion corrects for double-counted intersection elements: $|A \\cup B| = |A| + |B| - |A \\cap B|$."
@@ -349,12 +349,12 @@ const SEM_PRACTICE = {
         "topic": "Recurrence Relations",
         "question": "What is the characteristic equation for the recurrence relation $a_n - 5a_{n-1} + 6a_{n-2} = 0$?",
         "options": [
+          "$r - 5 = 0$",
           "$r^2 - 5r + 6 = 0$",
-          "$r^2 + 5r - 6 = 0$",
           "$r^2 - 6r + 5 = 0$",
-          "$r - 5 = 0$"
+          "$r^2 + 5r - 6 = 0$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "Substituting $a_n = r^n$ gives $r^n - 5r^{n-1} + 6r^{n-2} = 0$. Dividing by $r^{n-2}$ yields $r^2 - 5r + 6 = 0$."
@@ -382,12 +382,12 @@ const SEM_PRACTICE = {
         "topic": "Fibonacci Numbers",
         "question": "Given $F_0 = 0$, $F_1 = 1$, and $F_n = F_{n-1} + F_{n-2}$, what is the value of $F_6$?",
         "options": [
-          "8",
-          "5",
+          "21",
           "13",
-          "21"
+          "5",
+          "8"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The sequence values are: F0=0, F1=1, F2=1, F3=2, F4=3, F5=5, F6=8."
@@ -400,12 +400,12 @@ const SEM_PRACTICE = {
         "topic": "Generating Functions",
         "question": "The ordinary generating function for the constant sequence $1, 1, 1, 1, \\dots$ is:",
         "options": [
-          "$\\frac{1}{1 - x}$",
           "$\\frac{1}{1 + x}$",
-          "$\\frac{x}{1 - x}$",
-          "$e^x$"
+          "$e^x$",
+          "$\\frac{1}{1 - x}$",
+          "$\\frac{x}{1 - x}$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "The infinite geometric series $\\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + \\dots = \\frac{1}{1-x}$ for $|x| < 1$."
@@ -434,12 +434,12 @@ const SEM_PRACTICE = {
         "topic": "Circular Permutations",
         "question": "In how many ways can 5 distinct people sit around a circular table?",
         "options": [
-          "24",
-          "120",
           "60",
-          "12"
+          "120",
+          "12",
+          "24"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2022",
         "explanation": "Circular permutations of $n$ distinct objects is $(n-1)!$. For 5 people, $(5-1)! = 4! = 24$ ways."
@@ -467,12 +467,12 @@ const SEM_PRACTICE = {
         "topic": "Handshaking Theorem",
         "question": "The Handshaking Theorem states that in any undirected graph $G=(V, E)$, the sum of vertex degrees equals:",
         "options": [
-          "$2 \\times |E|$",
           "$|E|$",
+          "$2 \\times |E|$",
           "$|V| \\times |E|$",
           "$2 \\times |V|$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "Each edge has two incident endpoints, so each edge contributes exactly 2 to the sum of degrees: $\\sum_{v \\in V} \\deg(v) = 2|E|$."
@@ -501,8 +501,8 @@ const SEM_PRACTICE = {
         "question": "A connected undirected graph contains an Euler circuit if and only if:",
         "options": [
           "Every vertex has an even degree",
-          "Exactly two vertices have odd degree",
           "It is a complete graph",
+          "Exactly two vertices have odd degree",
           "It has no cycles"
         ],
         "answerIndex": 0,
@@ -533,12 +533,12 @@ const SEM_PRACTICE = {
         "topic": "Hamiltonian Cycle",
         "question": "A Hamiltonian cycle in a graph is a closed loop that visits:",
         "options": [
+          "All odd degree vertices only",
           "Every vertex exactly once (except start/end)",
-          "Every edge exactly once",
           "Every face of the graph",
-          "All odd degree vertices only"
+          "Every edge exactly once"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "A Hamiltonian cycle visits every vertex of the graph exactly once, unlike an Euler circuit which traverses every edge."
@@ -552,9 +552,9 @@ const SEM_PRACTICE = {
         "question": "For any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces), Euler's formula is:",
         "options": [
           "$V - E + R = 2$",
+          "$V + E + R = 2$",
           "$V + E - R = 2$",
-          "$V - E - R = 2$",
-          "$V + E + R = 2$"
+          "$V - E - R = 2$"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -584,12 +584,12 @@ const SEM_PRACTICE = {
         "topic": "Complete Graphs",
         "question": "How many edges are present in a complete graph $K_n$ on $n$ vertices?",
         "options": [
-          "$\\frac{n(n-1)}{2}$",
+          "$2n - 1$",
           "$n^2$",
-          "$n(n-1)$",
-          "$2n - 1$"
+          "$\\frac{n(n-1)}{2}$",
+          "$n(n-1)$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2022",
         "explanation": "In $K_n$, every pair of distinct vertices has an edge, giving $C(n,2) = \\frac{n(n-1)}{2}$ edges."
@@ -602,12 +602,12 @@ const SEM_PRACTICE = {
         "topic": "Bipartite Graphs",
         "question": "A graph $G$ is bipartite if and only if it contains no cycles of:",
         "options": [
-          "Odd length",
-          "Even length",
           "Length 4",
-          "Length greater than 3"
+          "Odd length",
+          "Length greater than 3",
+          "Even length"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2024",
         "explanation": "König's theorem states that a graph is bipartite (2-colorable) if and only if it contains no odd-length cycles."
@@ -635,12 +635,12 @@ const SEM_PRACTICE = {
         "topic": "Four Color Theorem",
         "question": "According to the Four Color Theorem, what is the maximum chromatic number for any planar graph?",
         "options": [
-          "4",
-          "5",
           "3",
-          "6"
+          "5",
+          "6",
+          "4"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "The Four Color Theorem proves that any planar graph can be colored using at most 4 colors ($\\\\chi(G) \\le 4$)."
@@ -671,12 +671,12 @@ const SEM_PRACTICE = {
         "topic": "2's Complement Range",
         "question": "What is the numerical range of an $n$-bit 2's complement signed integer?",
         "options": [
-          "$-2^{n-1}$ to $2^{n-1} - 1$",
-          "$-2^n$ to $2^n - 1$",
           "$0$ to $2^n - 1$",
+          "$-2^n$ to $2^n - 1$",
+          "$-2^{n-1}$ to $2^{n-1} - 1$",
           "$-(2^{n-1}-1)$ to $2^{n-1}-1$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-SEM-2022",
         "explanation": "An $n$-bit 2's complement integer has range $[-2^{n-1}, 2^{n-1}-1]$ because 0 is represented with sign bit 0."
@@ -707,8 +707,8 @@ const SEM_PRACTICE = {
         "question": "Which of the following is an advantage of Hardwired Control units over Microprogrammed Control units?",
         "options": [
           "Faster instruction execution speed",
-          "Ease of modifying instruction set",
           "Lower hardware chip layout complexity",
+          "Ease of modifying instruction set",
           "Lower cost for complex CISC architectures"
         ],
         "answerIndex": 0,
@@ -739,12 +739,12 @@ const SEM_PRACTICE = {
         "topic": "Division Algorithms",
         "question": "In the restoring division algorithm, what operation is performed if the trial subtraction $(A - M)$ yields a negative remainder?",
         "options": [
-          "$A$ is restored by adding $M$ back and $Q_0$ is set to 0",
           "$A$ is left as negative and $Q_0$ is set to 1",
           "$M$ is shifted left",
-          "The dividend is cleared"
+          "The dividend is cleared",
+          "$A$ is restored by adding $M$ back and $Q_0$ is set to 0"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2023",
         "explanation": "In restoring division, if the remainder becomes negative, the partial remainder must be restored by adding divisor $M$ back ($A \\leftarrow A + M$) and setting quotient bit $Q_0 = 0$."
@@ -773,12 +773,12 @@ const SEM_PRACTICE = {
         "topic": "IEEE 754 Format",
         "question": "In the standard IEEE 754 32-bit single-precision floating-point format, how many bits are allocated for sign, exponent, and mantissa (fraction)?",
         "options": [
-          "1 bit sign, 8 bits exponent, 23 bits fraction",
+          "1 bit sign, 7 bits exponent, 24 bits fraction",
           "1 bit sign, 11 bits exponent, 20 bits fraction",
           "2 bits sign, 8 bits exponent, 22 bits fraction",
-          "1 bit sign, 7 bits exponent, 24 bits fraction"
+          "1 bit sign, 8 bits exponent, 23 bits fraction"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "IEEE 754 single-precision (32-bit) uses 1 bit for sign, 8 bits for biased exponent, and 23 bits for normalized mantissa."
@@ -840,12 +840,12 @@ const SEM_PRACTICE = {
         "topic": "Floating-Point Multiplication",
         "question": "When multiplying two floating-point numbers in IEEE 754, what is done with the exponents?",
         "options": [
+          "Exponents remain unchanged",
           "Exponents are added and bias is subtracted",
-          "Exponents are multiplied",
           "Exponents are subtracted",
-          "Exponents remain unchanged"
+          "Exponents are multiplied"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Since stored exponents already contain bias ($E_1 + B$ and $E_2 + B$), adding them gives $E_1 + E_2 + 2B$, so bias $B$ must be subtracted once."
@@ -873,12 +873,12 @@ const SEM_PRACTICE = {
         "topic": "Floating-Point Zero",
         "question": "In IEEE 754 standard, zero is represented when:",
         "options": [
-          "Exponent is 0 and fraction is 0",
-          "Exponent is 255 and fraction is 0",
           "All 32 bits are 1",
-          "Fraction is 1 and exponent is 0"
+          "Exponent is 0 and fraction is 0",
+          "Fraction is 1 and exponent is 0",
+          "Exponent is 255 and fraction is 0"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "When both the biased exponent and fraction fields are all zeros, the number represents $\\pm 0$ depending on the sign bit."
@@ -910,8 +910,8 @@ const SEM_PRACTICE = {
         "options": [
           "CPU Registers",
           "Level 1 Cache",
-          "Main Memory (RAM)",
-          "Solid State Drive (SSD)"
+          "Solid State Drive (SSD)",
+          "Main Memory (RAM)"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -943,9 +943,9 @@ const SEM_PRACTICE = {
         "question": "In direct-mapped cache, a memory block $j$ is mapped to cache line $i$ using the formula:",
         "options": [
           "$i = j \\pmod m$, where $m$ is the number of cache lines",
+          "$i = j / m$",
           "$i = j \\times m$",
-          "$i = j + m$",
-          "$i = j / m$"
+          "$i = j + m$"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -977,8 +977,8 @@ const SEM_PRACTICE = {
         "options": [
           "Write-Through",
           "Write-Back",
-          "Write-Allocate",
-          "No-Write Allocate"
+          "No-Write Allocate",
+          "Write-Allocate"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -1010,12 +1010,12 @@ const SEM_PRACTICE = {
         "topic": "SRAM vs DRAM",
         "question": "Why is Dynamic RAM (DRAM) slower than Static RAM (SRAM)?",
         "options": [
-          "DRAM stores charge on capacitors and requires periodic refreshing",
-          "DRAM uses 6 transistors per cell",
           "DRAM is non-volatile",
-          "DRAM cannot be multiplexed"
+          "DRAM uses 6 transistors per cell",
+          "DRAM cannot be multiplexed",
+          "DRAM stores charge on capacitors and requires periodic refreshing"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2022",
         "explanation": "DRAM cells store bits as charge on tiny capacitors that leak and require periodic refresh cycles, whereas SRAM uses bistable flip-flop latches."
@@ -1028,12 +1028,12 @@ const SEM_PRACTICE = {
         "topic": "Virtual Memory",
         "question": "Virtual memory gives the programmer the illusion of a main memory that is:",
         "options": [
+          "Completely immune to address errors",
           "Much larger than actual physical memory",
-          "Faster than CPU registers",
           "Non-volatile like magnetic tape",
-          "Completely immune to address errors"
+          "Faster than CPU registers"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2023",
         "explanation": "Virtual memory maps large virtual address spaces onto smaller physical RAM by swapping pages to and from secondary storage."
@@ -1061,12 +1061,12 @@ const SEM_PRACTICE = {
         "topic": "Page Fault",
         "question": "A page fault exception is generated by the MMU when:",
         "options": [
-          "The referenced page is not currently present in physical RAM",
-          "A cache line is evicted",
           "The CPU executes an invalid opcode",
+          "A cache line is evicted",
+          "The referenced page is not currently present in physical RAM",
           "Virtual memory is full"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "A page fault occurs when a program attempts to access a page marked invalid in the page table (not loaded in physical memory)."
@@ -1079,12 +1079,12 @@ const SEM_PRACTICE = {
         "topic": "DMA Transfer",
         "question": "Direct Memory Access (DMA) allows high-speed I/O devices to transfer data directly to/from memory without:",
         "options": [
-          "Continuous CPU involvement",
           "The system bus",
           "Any memory address register",
-          "A clock signal"
+          "A clock signal",
+          "Continuous CPU involvement"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2023",
         "explanation": "DMA offloads block data transfers from the CPU, transferring data directly between memory and peripherals under DMA controller supervision."
@@ -1112,12 +1112,12 @@ const SEM_PRACTICE = {
         "topic": "Interrupts",
         "question": "In vectored interrupts, how does the CPU determine the address of the Interrupt Service Routine (ISR)?",
         "options": [
+          "The address is hardcoded at location 0",
           "The interrupting device supplies a vector address on the data bus",
           "The CPU polls every peripheral in sequence",
-          "The address is hardcoded at location 0",
           "The OS searches the disk"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2024",
         "explanation": "In vectored interrupt systems, the peripheral hardware provides an interrupt vector that directly indexes the interrupt vector table."
@@ -1146,12 +1146,12 @@ const SEM_PRACTICE = {
         "topic": "Instruction Pipelining",
         "question": "In an ideal $k$-stage instruction pipeline with cycle time $\\tau$, what is the speedup factor for $n$ instructions when $n$ is very large?",
         "options": [
-          "$k$",
           "$k \\times n$",
           "$n / k$",
+          "$k$",
           "$k / 2$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2023",
         "explanation": "The maximum theoretical speedup of a $k$-stage pipeline over a non-pipelined processor for large $n$ approaches the number of stages $k$."
@@ -1164,12 +1164,12 @@ const SEM_PRACTICE = {
         "topic": "Pipeline Hazards",
         "question": "A data hazard (RAW - Read After Write) in a pipeline occurs when:",
         "options": [
-          "An instruction depends on the result of a previous instruction still in the pipeline",
-          "Two instructions need the same hardware resource simultaneously",
           "A branch instruction changes program counter",
-          "A cache miss occurs"
+          "A cache miss occurs",
+          "An instruction depends on the result of a previous instruction still in the pipeline",
+          "Two instructions need the same hardware resource simultaneously"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "Data hazards occur when an instruction attempts to read a register or memory location before a preceding instruction has written its result."
@@ -1198,12 +1198,12 @@ const SEM_PRACTICE = {
         "topic": "Operand Forwarding",
         "question": "Which hardware optimization resolves data hazards without stalling the pipeline?",
         "options": [
-          "Operand Forwarding (Bypassing)",
           "Dynamic RAM refreshing",
-          "Branch target buffers",
-          "Instruction cache prefetching"
+          "Instruction cache prefetching",
+          "Operand Forwarding (Bypassing)",
+          "Branch target buffers"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2022",
         "explanation": "Operand forwarding (data bypassing) routes the output of the ALU directly back to the ALU input for the next instruction, eliminating stall bubbles."
@@ -1233,8 +1233,8 @@ const SEM_PRACTICE = {
         "question": "The primary disadvantage of Programmed I/O is that:",
         "options": [
           "The CPU wastes clock cycles in a busy-waiting polling loop",
-          "It requires specialized DMA controllers",
           "It cannot transfer bytes",
+          "It requires specialized DMA controllers",
           "It causes pipeline structural hazards"
         ],
         "answerIndex": 0,
@@ -1250,12 +1250,12 @@ const SEM_PRACTICE = {
         "topic": "Daisy Chaining",
         "question": "In interrupt priority management, daisy chaining is a hardware technique that establishes priority through:",
         "options": [
-          "Serial connection of devices in priority order",
-          "Software polling",
+          "Time-slice multiplexing",
           "Independent interrupt lines for each device",
-          "Time-slice multiplexing"
+          "Serial connection of devices in priority order",
+          "Software polling"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2024",
         "explanation": "Daisy chaining connects the interrupt acknowledge signal in series from the highest priority device to lowest priority device."
@@ -1285,12 +1285,12 @@ const SEM_PRACTICE = {
         "topic": "JVM Bytecode",
         "question": "What is Java bytecode and how is it executed?",
         "options": [
+          "Encrypted source text",
           "Intermediate machine-independent instruction set executed by the Java Virtual Machine (JVM)",
           "Native x86 machine instructions",
-          "Assembly source code compiled by C++ linker",
-          "Encrypted source text"
+          "Assembly source code compiled by C++ linker"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-SEM-2022",
         "explanation": "Java javac compiles source code (.java) into platform-independent bytecode (.class), which any platform JVM interprets or JIT-compiles."
@@ -1319,9 +1319,9 @@ const SEM_PRACTICE = {
         "question": "Why does Java support multiple inheritance of interfaces but not multiple inheritance of classes?",
         "options": [
           "To prevent the Diamond Problem of ambiguous state and method implementations",
+          "Java does support multiple class inheritance",
           "Because interfaces cannot declare constants",
-          "Because interfaces are slower to allocate",
-          "Java does support multiple class inheritance"
+          "Because interfaces are slower to allocate"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -1351,12 +1351,12 @@ const SEM_PRACTICE = {
         "topic": "Thread Creation",
         "question": "Which two mechanisms can be used in Java to define and create a new thread of execution?",
         "options": [
-          "Extending the Thread class or implementing the Runnable interface",
           "Implementing the Callable interface or extending the Process class",
-          "Extending the Applet class or implementing Serializable",
-          "Using the synchronized keyword or using volatile variables"
+          "Extending the Thread class or implementing the Runnable interface",
+          "Using the synchronized keyword or using volatile variables",
+          "Extending the Applet class or implementing Serializable"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "In Java, a thread can be created either by subclassing java.lang.Thread and overriding run(), or by implementing java.lang.Runnable and passing it to a Thread instance."
@@ -1384,12 +1384,12 @@ const SEM_PRACTICE = {
         "topic": "Thread Lifecycle States",
         "question": "Which of the following represents valid states in the Java Thread lifecycle (Thread.State enum)?",
         "options": [
-          "NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED",
           "STARTING, RUNNING, SLEEPING, DEAD",
+          "NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED",
           "READY, EXECUTING, SUSPENDED, STOPPED",
           "INIT, ACTIVE, IDLE, DESTROYED"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2024",
         "explanation": "Thread.State enum defines six distinct lifecycle states: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, and TERMINATED."
@@ -1402,12 +1402,12 @@ const SEM_PRACTICE = {
         "topic": "Thread Synchronization",
         "question": "What happens when a thread enters a synchronized instance method of an object?",
         "options": [
-          "It acquires the intrinsic lock (monitor) of that object instance",
-          "It acquires the lock on the entire class object",
           "It prevents all other threads from accessing local variables",
-          "It terminates all lower-priority threads running in parallel"
+          "It acquires the lock on the entire class object",
+          "It terminates all lower-priority threads running in parallel",
+          "It acquires the intrinsic lock (monitor) of that object instance"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "Every Java object has an intrinsic monitor lock. A thread entering a synchronized instance method must acquire this monitor lock on 'this' instance before executing."
@@ -1435,12 +1435,12 @@ const SEM_PRACTICE = {
         "topic": "IllegalMonitorStateException",
         "question": "If a thread calls wait() or notify() on an object without holding that object's monitor lock, what runtime exception is thrown?",
         "options": [
-          "IllegalMonitorStateException",
           "InterruptedException",
+          "IllegalMonitorStateException",
           "IllegalThreadStateException",
           "NullPointerException"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Calling wait(), notify(), or notifyAll() outside a synchronized context synchronized on that specific object throws java.lang.IllegalMonitorStateException at runtime."
@@ -1469,9 +1469,9 @@ const SEM_PRACTICE = {
         "question": "What is the purpose of invoking threadA.join() from within threadB?",
         "options": [
           "ThreadB pauses execution until ThreadA completes execution",
+          "ThreadA is assigned the highest priority",
           "ThreadA immediately terminates ThreadB",
-          "Both threads merge their call stacks and run concurrently",
-          "ThreadA is assigned the highest priority"
+          "Both threads merge their call stacks and run concurrently"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -1501,12 +1501,12 @@ const SEM_PRACTICE = {
         "topic": "Volatile Keyword",
         "question": "What guarantee does the 'volatile' keyword provide for a variable in Java multithreading?",
         "options": [
+          "Ensures the variable cannot be serialized",
           "Guarantees visibility of changes across threads by reading/writing directly from main memory",
           "Guarantees mutual exclusion and atomic compound operations (like count++)",
-          "Prevents the variable from being garbage collected",
-          "Ensures the variable cannot be serialized"
+          "Prevents the variable from being garbage collected"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "The volatile modifier ensures memory visibility: reads and writes go directly to main memory rather than thread-local CPU caches, though it does not provide atomicity for compound updates."
@@ -1519,12 +1519,12 @@ const SEM_PRACTICE = {
         "topic": "Byte Streams vs Character Streams",
         "question": "Which superclasses form the root of all byte-oriented input and output streams in Java respectively?",
         "options": [
+          "DataInputStream and DataOutputStream",
           "InputStream and OutputStream",
-          "Reader and Writer",
           "FileInputStream and FileOutputStream",
-          "DataInputStream and DataOutputStream"
+          "Reader and Writer"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "In java.io, byte streams are derived from abstract classes InputStream and OutputStream (handling 8-bit bytes), while character streams derive from Reader and Writer (16-bit Unicode)."
@@ -1552,12 +1552,12 @@ const SEM_PRACTICE = {
         "topic": "Java Serialization",
         "question": "Which interface must a Java class implement to permit its instances to be serialized using ObjectOutputStream?",
         "options": [
-          "java.io.Serializable",
-          "java.io.Clonable",
+          "java.io.External",
           "java.lang.Comparable",
-          "java.io.External"
+          "java.io.Serializable",
+          "java.io.Clonable"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2024",
         "explanation": "java.io.Serializable is a marker interface (with no methods) that indicates a class can be flattened into a byte stream via ObjectOutputStream."
@@ -1584,12 +1584,12 @@ const SEM_PRACTICE = {
         "topic": "Try-With-Resources",
         "question": "In Java 7+ try-with-resources statement, what interface must the resource object implement so that it is closed automatically?",
         "options": [
+          "java.lang.Flushable",
           "java.lang.AutoCloseable",
-          "java.io.CloseableInterface",
           "java.lang.Disposable",
-          "java.lang.Flushable"
+          "java.io.CloseableInterface"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Any resource object implementing java.lang.AutoCloseable (or java.io.Closeable) can be opened in a try(...) header and will have its close() invoked automatically upon exit."
@@ -1602,12 +1602,12 @@ const SEM_PRACTICE = {
         "topic": "Generics Type Safety",
         "question": "What is the primary motivation for introducing Generics in Java 5?",
         "options": [
-          "Compile-time type checking and eliminating explicit type casts",
+          "Allowing primitive types as template parameters directly",
           "Increasing runtime speed through multiple inheritance",
           "Enabling automatic memory management for primitives",
-          "Allowing primitive types as template parameters directly"
+          "Compile-time type checking and eliminating explicit type casts"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "Generics provide compile-time type safety by detecting type mismatches at compilation, eliminating the need for error-prone explicit runtime type casts."
@@ -1635,12 +1635,12 @@ const SEM_PRACTICE = {
         "topic": "Bounded Type Parameters",
         "question": "Which syntax correctly defines an upper-bounded generic method accepting any subclass of Number in Java?",
         "options": [
-          "public <T extends Number> void process(List<T> list)",
-          "public <T super Number> void process(List<T> list)",
+          "public <T : Number> void process(List<T> list)",
           "public <T implements Number> void process(List<T> list)",
-          "public <T : Number> void process(List<T> list)"
+          "public <T super Number> void process(List<T> list)",
+          "public <T extends Number> void process(List<T> list)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "Upper bounds in generics are specified using the 'extends' keyword (<T extends Number>), which restricts T to Number or any of its subclasses (Integer, Double, etc.)."
@@ -1669,9 +1669,9 @@ const SEM_PRACTICE = {
         "question": "Which java.io class allows both reading and writing at arbitrary positions within a file using seek()?",
         "options": [
           "RandomAccessFile",
-          "FileChannelStream",
           "DataOutputStream",
-          "SequenceInputStream"
+          "SequenceInputStream",
+          "FileChannelStream"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -1686,12 +1686,12 @@ const SEM_PRACTICE = {
         "topic": "Collections Hierarchy",
         "question": "Which of the following interfaces is NOT a sub-interface of java.util.Collection?",
         "options": [
-          "java.util.Map",
           "java.util.List",
+          "java.util.Map",
           "java.util.Set",
           "java.util.Queue"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "Map represents key-value pairs and does not extend java.util.Collection; List, Set, and Queue are the three primary direct sub-interfaces of Collection."
@@ -1720,12 +1720,12 @@ const SEM_PRACTICE = {
         "topic": "ArrayList vs LinkedList",
         "question": "Why is an ArrayList generally preferred over a LinkedList for random read access operations?",
         "options": [
-          "ArrayList provides $O(1)$ constant-time indexed lookup via underlying array",
-          "LinkedList uses contiguous memory blocks",
+          "LinkedList does not implement the List interface",
           "ArrayList takes $O(1)$ time to insert at the beginning",
-          "LinkedList does not implement the List interface"
+          "LinkedList uses contiguous memory blocks",
+          "ArrayList provides $O(1)$ constant-time indexed lookup via underlying array"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "ArrayList is backed by a dynamic array, so get(i) performs direct pointer offset calculation in O(1) time, whereas LinkedList requires O(n) sequential node traversal."
@@ -1752,12 +1752,12 @@ const SEM_PRACTICE = {
         "topic": "Comparable vs Comparator",
         "question": "What is the key difference between Comparable and Comparator interfaces?",
         "options": [
+          "Comparator modifies the original class bytecode",
           "Comparable defines natural order inside the class via compareTo(), while Comparator provides custom order outside via compare()",
           "Comparable is in java.util while Comparator is in java.lang",
-          "Comparator modifies the original class bytecode",
           "Comparable cannot be used with TreeSet"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "Comparable<T> (java.lang) imparts natural ordering inside the class definition (compareTo), whereas Comparator<T> (java.util) allows multiple separate custom comparison strategies (compare)."
@@ -1770,12 +1770,12 @@ const SEM_PRACTICE = {
         "topic": "HashMap Internal Hashing",
         "question": "In Java 8, when the number of colliding elements in a single HashMap bucket exceeds the TREEIFY_THRESHOLD (8), the linked list is converted into a:",
         "options": [
-          "Balanced Red-Black Tree",
           "Binary Search Tree without balance",
-          "Min-Heap",
-          "Skip List"
+          "Skip List",
+          "Balanced Red-Black Tree",
+          "Min-Heap"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Java 8 improves HashMap worst-case collision performance from O(n) to O(log n) by transforming chained lists exceeding 8 entries into balanced red-black trees."
@@ -1803,12 +1803,12 @@ const SEM_PRACTICE = {
         "topic": "Delegation Event Model",
         "question": "In Java's Delegation Event Model, which component generates the event when a user interacts with a GUI control?",
         "options": [
+          "Event Dispatch Thread",
           "Event Source",
           "Event Listener",
-          "Event Adapter",
-          "Event Dispatch Thread"
+          "Event Adapter"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "In the Delegation Event Model, the Event Source (e.g. JButton) detects the user interaction, creates an Event object, and delegates it to registered Event Listeners."
@@ -1836,12 +1836,12 @@ const SEM_PRACTICE = {
         "topic": "Event Adapters",
         "question": "What is the primary benefit of using Event Adapter classes (such as MouseAdapter or WindowAdapter)?",
         "options": [
-          "They provide empty default implementations so you override only the methods you need",
-          "They convert AWT events to Swing events automatically",
           "They run event callbacks in a separate daemon thread",
-          "They increase rendering speed of GUI components"
+          "They provide empty default implementations so you override only the methods you need",
+          "They increase rendering speed of GUI components",
+          "They convert AWT events to Swing events automatically"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Adapter classes implement listener interfaces with blank method bodies, sparing developers from implementing unused methods of multi-method listener interfaces."
@@ -1854,12 +1854,12 @@ const SEM_PRACTICE = {
         "topic": "Swing vs AWT",
         "question": "Why are Swing components referred to as 'lightweight' compared to AWT components?",
         "options": [
-          "Swing components are written purely in Java and drawn without native OS peer windows",
+          "Swing does not support mouse events",
           "Swing components consume zero RAM memory",
           "Swing components only run in applet browsers",
-          "Swing does not support mouse events"
+          "Swing components are written purely in Java and drawn without native OS peer windows"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "AWT components are heavyweight because they tie directly to underlying OS GUI widgets (peers). Swing components are lightweight, painted entirely in Java on top of top-level containers."
@@ -1889,12 +1889,12 @@ const SEM_PRACTICE = {
         "topic": "Three-Schema Architecture",
         "question": "Which level of the ANSI-SPARC three-schema architecture describes what data is stored in the database and the relationships among them?",
         "options": [
-          "Conceptual (Logical) Schema",
           "Physical (Internal) Schema",
           "External (View) Schema",
-          "Storage Engine Schema"
+          "Storage Engine Schema",
+          "Conceptual (Logical) Schema"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-SEM-2022",
         "explanation": "The conceptual level describes the entire database structure, entities, relationships, constraints, and security rules without physical disk storage details."
@@ -1921,12 +1921,12 @@ const SEM_PRACTICE = {
         "topic": "Relational Algebra Operations",
         "question": "Which relational algebra operation selects rows that satisfy a specified predicate condition?",
         "options": [
-          "Selection ($\\sigma$)",
-          "Projection ($\\pi$)",
           "Cartesian Product ($\\times$)",
-          "Intersection ($\\cap$)"
+          "Intersection ($\\cap$)",
+          "Projection ($\\pi$)",
+          "Selection ($\\sigma$)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-SEM-2024",
         "explanation": "Selection ($\\sigma_p(R)$) filters rows meeting condition $p$. Projection ($\\pi$) filters columns."
@@ -1954,12 +1954,12 @@ const SEM_PRACTICE = {
         "topic": "First Normal Form (1NF)",
         "question": "A relation is in First Normal Form (1NF) if and only if:",
         "options": [
-          "All attribute values are atomic and non-divisible",
           "Every non-key attribute is fully functionally dependent on the primary key",
-          "There are no transitive dependencies",
-          "Every determinant is a super key"
+          "Every determinant is a super key",
+          "All attribute values are atomic and non-divisible",
+          "There are no transitive dependencies"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "First Normal Form requires that every attribute domain contains only atomic (indivisible) scalar values and each tuple has a single value for each attribute."
@@ -1989,9 +1989,9 @@ const SEM_PRACTICE = {
         "question": "For a non-trivial functional dependency $X \\rightarrow Y$ to hold in 3NF, which condition must be met?",
         "options": [
           "$X$ is a superkey OR $Y$ is a prime attribute",
-          "$X$ must be a candidate key AND $Y$ must be a prime attribute",
+          "$Y$ must be a foreign key",
           "$X$ must be a single attribute",
-          "$Y$ must be a foreign key"
+          "$X$ must be a candidate key AND $Y$ must be a prime attribute"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -2006,12 +2006,12 @@ const SEM_PRACTICE = {
         "topic": "Boyce-Codd Normal Form (BCNF)",
         "question": "How does Boyce-Codd Normal Form (BCNF) differ from 3NF?",
         "options": [
-          "BCNF requires every determinant $X$ in $X \\rightarrow Y$ to be a superkey without exception",
-          "BCNF allows non-prime attributes to determine prime attributes",
           "BCNF handles multi-valued dependencies",
-          "BCNF does not guarantee lossless-join decomposition"
+          "BCNF does not guarantee lossless-join decomposition",
+          "BCNF allows non-prime attributes to determine prime attributes",
+          "BCNF requires every determinant $X$ in $X \\rightarrow Y$ to be a superkey without exception"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "BCNF is strictly stronger than 3NF: for every non-trivial FD $X \\rightarrow Y$, $X$ must be a superkey. It eliminates the 3NF loophole where $Y$ is a prime attribute."
@@ -2040,12 +2040,12 @@ const SEM_PRACTICE = {
         "topic": "Dependency Preservation",
         "question": "Which of the following normal forms guarantees both lossless-join decomposition AND dependency preservation simultaneously?",
         "options": [
-          "3NF",
-          "BCNF",
           "4NF",
-          "5NF"
+          "5NF",
+          "3NF",
+          "BCNF"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "Any relation can always be decomposed into 3NF while preserving dependencies and guaranteeing a lossless join. BCNF guarantees lossless join, but dependency preservation is not always achievable."
@@ -2094,8 +2094,8 @@ const SEM_PRACTICE = {
         "options": [
           "Atomicity",
           "Consistency",
-          "Isolation",
-          "Durability"
+          "Durability",
+          "Isolation"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -2124,12 +2124,12 @@ const SEM_PRACTICE = {
         "topic": "Conflict Serializability",
         "question": "Two operations $I_i$ and $I_j$ in a concurrent schedule are said to conflict if they belong to different transactions, access the same data item, and:",
         "options": [
-          "At least one of them is a write operation",
           "Both of them are read operations",
           "Both of them are commit operations",
+          "At least one of them is a write operation",
           "They are separated by a checkpoint"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "Operations conflict if they are from different transactions on the same data item and at least one is a write ($R_1(A)-W_2(A)$, $W_1(A)-R_2(A)$, or $W_1(A)-W_2(A)$)."
@@ -2194,12 +2194,12 @@ const SEM_PRACTICE = {
         "topic": "Deadlock in 2PL",
         "question": "Does the basic Two-Phase Locking (2PL) protocol guarantee freedom from deadlocks?",
         "options": [
-          "No, 2PL guarantees serializability but does NOT prevent deadlocks",
           "Yes, 2PL prevents both serializability violations and deadlocks",
-          "Yes, because the shrinking phase resolves all cycles",
-          "Only if shared locks are disallowed"
+          "No, 2PL guarantees serializability but does NOT prevent deadlocks",
+          "Only if shared locks are disallowed",
+          "Yes, because the shrinking phase resolves all cycles"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "2PL guarantees conflict serializability, but it does NOT prevent deadlock. Two transactions can easily enter a mutual lock wait state."
@@ -2226,12 +2226,12 @@ const SEM_PRACTICE = {
         "topic": "Timestamp-Ordering Protocol",
         "question": "Thomas' Write Rule is an optimization to the Timestamp-Ordering protocol that safely ignores outdated write operations when:",
         "options": [
+          "The transaction aborts",
           "$TS(T) < W\\text{-timestamp}(Q)$",
-          "$TS(T) < R\\text{-timestamp}(Q)$",
           "$TS(T) > W\\text{-timestamp}(Q)$",
-          "The transaction aborts"
+          "$TS(T) < R\\text{-timestamp}(Q)$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Thomas' Write Rule observes that if $TS(T) < W\\text{-timestamp}(Q)$, the value written by $T$ has already been overwritten by a newer transaction, so $T$'s write can be safely skipped without aborting."
@@ -2245,8 +2245,8 @@ const SEM_PRACTICE = {
         "question": "Which statement accurately describes the relationship between Conflict Serializability and View Serializability?",
         "options": [
           "Every conflict serializable schedule is view serializable, but not vice versa",
-          "Every view serializable schedule is conflict serializable",
           "Conflict serializability and view serializability are completely identical sets",
+          "Every view serializable schedule is conflict serializable",
           "Neither set is a subset of the other"
         ],
         "answerIndex": 0,
@@ -2262,12 +2262,12 @@ const SEM_PRACTICE = {
         "topic": "Write-Ahead Logging (WAL)",
         "question": "The Write-Ahead Logging (WAL) protocol dictates that:",
         "options": [
-          "The log record for an update must be written to stable non-volatile storage before the actual database page is written to disk",
-          "Database buffer frames must be written to disk before transactions commit",
           "All read locks must be written to the log",
-          "Checkpoints must occur before every update"
+          "Database buffer frames must be written to disk before transactions commit",
+          "Checkpoints must occur before every update",
+          "The log record for an update must be written to stable non-volatile storage before the actual database page is written to disk"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "WAL requires that undo log records are flushed to non-volatile disk before dirty database pages are written to disk, ensuring atomicity and recoverability."
@@ -2296,12 +2296,12 @@ const SEM_PRACTICE = {
         "topic": "Deferred Modification Recovery",
         "question": "In the Deferred Database Modification recovery scheme, updates are written to the database disk only after:",
         "options": [
-          "The transaction commits successfully",
-          "The first read operation is completed",
+          "The system enters an idle state",
           "Every single SQL statement executes",
-          "The system enters an idle state"
+          "The first read operation is completed",
+          "The transaction commits successfully"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "Deferred modification postpones all disk writes until transaction commit. Hence, uncommitted aborted transactions require no UNDO operations, only REDO for committed ones."
@@ -2328,12 +2328,12 @@ const SEM_PRACTICE = {
         "topic": "Shadow Paging",
         "question": "What is the primary advantage of Shadow Paging compared to log-based recovery schemes?",
         "options": [
+          "It works without a page table",
           "It does not require maintaining an undo log or redo log during runtime",
-          "It allows multiple transactions to write to the same page concurrently",
           "It completely eliminates disk fragmentation",
-          "It works without a page table"
+          "It allows multiple transactions to write to the same page concurrently"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Shadow paging maintains two page tables: a current page table and a shadow page table. Recovery simply discards the current page table without needing log redo/undo, though it causes data clustering loss."
@@ -2361,12 +2361,12 @@ const SEM_PRACTICE = {
         "topic": "Clustering Index",
         "question": "A clustering (primary) index is defined as an index on a file where:",
         "options": [
-          "The physical ordering of records in the data file matches the ordering of the index search keys",
           "The index is stored exclusively in RAM cache",
-          "Multiple search keys point to the same physical disk block",
-          "Every field in the record is indexed simultaneously"
+          "The physical ordering of records in the data file matches the ordering of the index search keys",
+          "Every field in the record is indexed simultaneously",
+          "Multiple search keys point to the same physical disk block"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "A clustering index is built on an ordered data file where the physical record sequence corresponds to the index search key ordering. A file can have at most one clustering index."
@@ -2379,12 +2379,12 @@ const SEM_PRACTICE = {
         "topic": "B+ Tree Leaf Nodes",
         "question": "In a B+ Tree index, where are actual record pointers (data pointers) stored?",
         "options": [
-          "Only in the leaf nodes, which are linked together in a doubly linked list",
           "In both internal nodes and leaf nodes equally",
           "Only in the root node",
-          "Exclusively in a separate hash table"
+          "Exclusively in a separate hash table",
+          "Only in the leaf nodes, which are linked together in a doubly linked list"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "In a B+ Tree, internal nodes store only router search-keys and child pointers; all actual record pointers reside in leaf nodes, which are linked sequentially for efficient range scans."
@@ -2446,12 +2446,12 @@ const SEM_PRACTICE = {
         "topic": "Secondary Indexing",
         "question": "Why must a secondary index on an unordered (heap) data file always be a dense index?",
         "options": [
-          "Because records are not physically sorted by the secondary key, so sparse pointers cannot determine ranges",
-          "Because heap files do not support primary keys",
           "Because secondary indexes are stored on magnetic tape",
+          "Because heap files do not support primary keys",
+          "Because records are not physically sorted by the secondary key, so sparse pointers cannot determine ranges",
           "Because secondary indexes only allow unique attributes"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "Sparse indexing relies on physical sorting of records to bracket search ranges. If the file is not sorted on the indexed attribute, every record must have an explicit entry, requiring a dense index."
@@ -2464,12 +2464,12 @@ const SEM_PRACTICE = {
         "topic": "ARIES Recovery Algorithm",
         "question": "Which three phases are executed in order during crash recovery by the ARIES recovery algorithm?",
         "options": [
-          "Analysis, Redo, and Undo",
-          "Scan, Lock, and Release",
           "Check, Log, and Commit",
-          "Verify, Clean, and Rebuild"
+          "Analysis, Redo, and Undo",
+          "Verify, Clean, and Rebuild",
+          "Scan, Lock, and Release"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "ARIES operates in three distinct phases: 1. Analysis (reconstructs state and dirty pages at crash), 2. Redo (repeats history to bring database to exact crash state), 3. Undo (reverses uncommitted transactions)."
@@ -2500,12 +2500,12 @@ const SEM_PRACTICE = {
         "topic": "Waterfall vs Agile",
         "question": "Which software process model is most appropriate when requirements are highly dynamic, ambiguous, and rapidly evolving?",
         "options": [
+          "Cleanroom Engineering",
           "Agile / Scrum Model",
-          "Classical Waterfall Model",
           "V-Model",
-          "Cleanroom Engineering"
+          "Classical Waterfall Model"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-SEM-2022",
         "explanation": "Agile welcomes changing requirements through short iterative sprints, continuous customer feedback, and adaptive planning."
@@ -2534,12 +2534,12 @@ const SEM_PRACTICE = {
         "topic": "Functional vs Non-Functional",
         "question": "Which of the following is an example of a Non-Functional Requirement (NFR)?",
         "options": [
-          "The system must process 1,000 transactions per second with 99.99% uptime",
           "The user can search products by title",
-          "The admin can generate monthly sales reports",
-          "The system calculates GST tax on invoices"
+          "The system must process 1,000 transactions per second with 99.99% uptime",
+          "The system calculates GST tax on invoices",
+          "The admin can generate monthly sales reports"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-SEM-2024",
         "explanation": "Non-functional requirements specify quality attributes, constraints, performance, scalability, and security rather than specific behaviors."
@@ -2567,12 +2567,12 @@ const SEM_PRACTICE = {
         "topic": "Cohesion Types",
         "question": "Which type of cohesion is considered the highest and most desirable in component-level software design?",
         "options": [
-          "Functional Cohesion",
-          "Sequential Cohesion",
+          "Coincidental Cohesion",
           "Communicational Cohesion",
-          "Coincidental Cohesion"
+          "Sequential Cohesion",
+          "Functional Cohesion"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2022",
         "explanation": "Functional cohesion is the strongest form, where every element in a component contributes solely to executing a single, well-defined mathematical or logical task."
@@ -2599,12 +2599,12 @@ const SEM_PRACTICE = {
         "topic": "Coupling Types",
         "question": "Which of the following coupling types represents the worst (tightest) form of coupling between two modules?",
         "options": [
-          "Content Coupling",
-          "Common Coupling",
           "Control Coupling",
-          "Data Coupling"
+          "Content Coupling",
+          "Data Coupling",
+          "Common Coupling"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "Content coupling is the tightest and worst form: one module modifies or relies on the internal implementation, branch targets, or private memory of another module."
@@ -2632,12 +2632,12 @@ const SEM_PRACTICE = {
         "topic": "Common Coupling",
         "question": "Common coupling occurs between two or more software modules when:",
         "options": [
+          "Modules call each other's public constructors",
           "Both modules access and manipulate shared global data structures",
-          "One module passes composite data records to another",
           "One module controls the internal logic branch of another",
-          "Modules call each other's public constructors"
+          "One module passes composite data records to another"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Common coupling arises when multiple modules share access to global memory areas or global variables, making side effects hard to trace."
@@ -2650,12 +2650,12 @@ const SEM_PRACTICE = {
         "topic": "Theo Mandel's Golden Rules",
         "question": "According to Theo Mandel's three Golden Rules of User Interface Design, which of the following is NOT one of the rules?",
         "options": [
-          "Maximize graphics and animation complexity",
           "Place the user in control",
+          "Make the interface consistent",
           "Reduce the user's memory load",
-          "Make the interface consistent"
+          "Maximize graphics and animation complexity"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "Theo Mandel's 3 Golden Rules are: 1. Place the user in control, 2. Reduce the user's memory load, and 3. Make the interface consistent."
@@ -2685,8 +2685,8 @@ const SEM_PRACTICE = {
         "question": "In software engineering, what is the core difference between Verification and Validation (Boehm's definitions)?",
         "options": [
           "Verification asks 'Are we building the product right?', while Validation asks 'Are we building the right product?'",
-          "Verification is performed by users, while Validation is performed by compilers",
           "Verification only tests code, while Validation only checks design diagrams",
+          "Verification is performed by users, while Validation is performed by compilers",
           "There is no difference; they are synonymous"
         ],
         "answerIndex": 0,
@@ -2717,12 +2717,12 @@ const SEM_PRACTICE = {
         "topic": "Bottom-Up Integration Drivers",
         "question": "In Bottom-Up integration testing, what auxiliary program component is written to invoke and pass test cases to low-level modules?",
         "options": [
-          "Test Driver",
           "Test Stub",
           "Mock Spy",
-          "Virtual Anchor"
+          "Virtual Anchor",
+          "Test Driver"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "In bottom-up testing, high-level control routines are absent, so test drivers are constructed to invoke worker modules and capture their return values."
@@ -2737,8 +2737,8 @@ const SEM_PRACTICE = {
         "options": [
           "To confirm that recent bug fixes or changes have not introduced new defects into previously working features",
           "To measure the execution speed of database transactions",
-          "To verify that code passes compiler optimization passes",
-          "To replace manual black-box tests with unit tests"
+          "To replace manual black-box tests with unit tests",
+          "To verify that code passes compiler optimization passes"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -2769,12 +2769,12 @@ const SEM_PRACTICE = {
         "topic": "Cyclomatic Complexity Formula",
         "question": "For a program flow graph with $E$ edges, $N$ nodes, and $P$ connected components, McCabe's Cyclomatic Complexity $V(G)$ is calculated as:",
         "options": [
-          "$V(G) = E - N + 2P$",
+          "$V(G) = E \\times N / P$",
           "$V(G) = E + N - P$",
           "$V(G) = N - E + 2$",
-          "$V(G) = E \\times N / P$"
+          "$V(G) = E - N + 2P$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2023",
         "explanation": "McCabe's cyclomatic complexity is $V(G) = E - N + 2P$. For a single component ($P = 1$), it equals $E - N + 2$, which also equals the number of predicate nodes $+ 1$ ($P_{red} + 1$)."
@@ -2803,8 +2803,8 @@ const SEM_PRACTICE = {
         "question": "For an integer input variable valid in the range $[10, 50]$, which set of test input values reflects Boundary Value Analysis guidelines?",
         "options": [
           "9, 10, 11, 49, 50, 51",
-          "0, 10, 25, 50, 100",
           "15, 25, 35, 45",
+          "0, 10, 25, 50, 100",
           "10, 20, 30, 40, 50"
         ],
         "answerIndex": 0,
@@ -2835,12 +2835,12 @@ const SEM_PRACTICE = {
         "topic": "White-Box vs Black-Box",
         "question": "Which of the following testing methodologies relies exclusively on knowledge of internal control flow paths, conditions, and statements?",
         "options": [
-          "White-Box Testing (Structural Testing)",
           "Black-Box Testing (Behavioral Testing)",
-          "User Acceptance Testing (UAT)",
-          "Boundary Value Analysis"
+          "Boundary Value Analysis",
+          "White-Box Testing (Structural Testing)",
+          "User Acceptance Testing (UAT)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "White-box (glass-box/structural) testing exercises internal logic paths, data flow, loops, and conditions based directly on source code inspection."
@@ -2854,9 +2854,9 @@ const SEM_PRACTICE = {
         "question": "Where and by whom is Alpha testing typically conducted?",
         "options": [
           "At the developer's site by end users in a controlled environment",
-          "At end-user customer sites in live unmonitored settings",
+          "By independent ISO certification auditors",
           "By compilers during automated nightly builds",
-          "By independent ISO certification auditors"
+          "At end-user customer sites in live unmonitored settings"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -2904,12 +2904,12 @@ const SEM_PRACTICE = {
         "topic": "CMMI Level 5",
         "question": "What is the primary characteristic of an organization operating at CMMI Level 5 (Optimizing)?",
         "options": [
-          "Continuous process improvement powered by quantitative feedback and piloting innovative ideas",
-          "Processes are documented but unpredictable",
+          "Software development is outsourced",
           "Project metrics are completely eliminated",
-          "Software development is outsourced"
+          "Continuous process improvement powered by quantitative feedback and piloting innovative ideas",
+          "Processes are documented but unpredictable"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2024",
         "explanation": "At Level 5 (Optimizing), an organization focuses on continuous process improvement using statistical root-cause analysis, defect prevention, and innovative technology pilots."
@@ -2938,12 +2938,12 @@ const SEM_PRACTICE = {
         "topic": "Basic COCOMO Model",
         "question": "In Boehm's Basic COCOMO model, what are the three development modes classified according to project team size and innovation?",
         "options": [
+          "Standard, Enterprise, and Critical",
           "Organic, Semidetached, and Embedded",
-          "Small, Medium, and Large",
           "Agile, Waterfall, and Spiral",
-          "Standard, Enterprise, and Critical"
+          "Small, Medium, and Large"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Basic COCOMO defines 3 project modes: Organic (small, familiar teams), Semidetached (intermediate team with mixed experience), and Embedded (tight hardware/software constraints)."
@@ -2972,12 +2972,12 @@ const SEM_PRACTICE = {
         "topic": "Formal Technical Review (FTR)",
         "question": "What is the primary objective of a Formal Technical Review (FTR) during software quality assurance?",
         "options": [
+          "To replace compilers and automated linters",
           "To uncover defects in function, logic, or implementation early in the development lifecycle",
           "To evaluate individual team member performance for annual bonuses",
-          "To explain marketing strategies to clients",
-          "To replace compilers and automated linters"
+          "To explain marketing strategies to clients"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2024",
         "explanation": "FTRs (inspections and walkthroughs) are peer reviews aimed strictly at discovering defects early in artifacts (specs, designs, code), where fixes cost a fraction of post-release remediation."
@@ -3005,9 +3005,9 @@ const SEM_PRACTICE = {
         "question": "Modifying software to adapt it to changes in its execution environment (such as a new OS version, updated DBMS, or cloud infrastructure) is termed:",
         "options": [
           "Adaptive Maintenance",
+          "Preventive Maintenance",
           "Corrective Maintenance",
-          "Perfective Maintenance",
-          "Preventive Maintenance"
+          "Perfective Maintenance"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3022,12 +3022,12 @@ const SEM_PRACTICE = {
         "topic": "Corrective Maintenance",
         "question": "Which software maintenance category addresses diagnosing and rectifying residual errors and bug reports submitted by end users after release?",
         "options": [
-          "Corrective Maintenance",
           "Adaptive Maintenance",
           "Perfective Maintenance",
+          "Corrective Maintenance",
           "Preventive Maintenance"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Corrective maintenance (bug fixing) repairs errors and defects discovered while the application is in live operational production."
@@ -3054,12 +3054,12 @@ const SEM_PRACTICE = {
         "topic": "Risk Projection",
         "question": "In software risk projection (estimation), risk impact is calculated using which two primary metrics?",
         "options": [
+          "Compiler warnings and Cyclomatic complexity",
           "Probability of occurrence and Severity of impact (Loss)",
-          "Cost of code and Lines of code",
           "Number of developers and Project duration",
-          "Compiler warnings and Cyclomatic complexity"
+          "Cost of code and Lines of code"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2024",
         "explanation": "Risk exposure is quantified as $RE = P \\times C$, where $P$ is the probability of the hazard occurring and $C$ is the cost/consequence of loss if it occurs."
@@ -3072,12 +3072,12 @@ const SEM_PRACTICE = {
         "topic": "ISO 9126 Standard",
         "question": "The ISO 9126 standard evaluates software product quality across six key attributes: Functionality, Reliability, Usability, Efficiency, Maintainability, and:",
         "options": [
-          "Portability",
-          "Profitability",
+          "Programmability",
           "Popularity",
-          "Programmability"
+          "Portability",
+          "Profitability"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "ISO 9126 defines six top-level software characteristics: Functionality, Reliability, Usability, Efficiency, Maintainability, and Portability."
@@ -3107,9 +3107,9 @@ const SEM_PRACTICE = {
         "question": "Which ecological pyramid is ALWAYS upright and cannot be inverted in any ecosystem?",
         "options": [
           "Pyramid of Energy",
+          "Pyramid of Trophic Depth",
           "Pyramid of Numbers",
-          "Pyramid of Biomass",
-          "Pyramid of Trophic Depth"
+          "Pyramid of Biomass"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3140,9 +3140,9 @@ const SEM_PRACTICE = {
         "question": "A high Biochemical Oxygen Demand (BOD) value in a freshwater stream indicates:",
         "options": [
           "Heavy organic pollution and severe depletion of dissolved oxygen",
-          "Clean, pristine drinking water",
+          "Excessive groundwater percolation",
           "High dissolved mineral salt concentration",
-          "Excessive groundwater percolation"
+          "Clean, pristine drinking water"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3173,12 +3173,12 @@ const SEM_PRACTICE = {
         "topic": "Noise Pollution Limits",
         "question": "According to the Central Pollution Control Board (CPCB) of India, what is the permissible ambient noise level for residential zones during daytime?",
         "options": [
-          "55 dB(A)",
-          "65 dB(A)",
           "75 dB(A)",
-          "45 dB(A)"
+          "65 dB(A)",
+          "45 dB(A)",
+          "55 dB(A)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "CPCB noise limits for residential zones are 55 dB(A) during day time (6:00 AM to 10:00 PM) and 45 dB(A) during night time (10:00 PM to 6:00 AM)."
@@ -3207,12 +3207,12 @@ const SEM_PRACTICE = {
         "topic": "Solid Waste Management Hierarchy",
         "question": "Which waste management approach is considered the highest priority according to the universal waste hierarchy?",
         "options": [
-          "Source Reduction (Reduce)",
           "Recycling",
+          "Source Reduction (Reduce)",
           "Energy Recovery (Incineration)",
           "Sanitary Landfilling"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2024",
         "explanation": "The 3R hierarchy places Source Reduction (Prevention/Reduce) at the very top, followed by Reuse, Recycling, Energy Recovery, and finally Landfilling as the last resort."
@@ -3240,12 +3240,12 @@ const SEM_PRACTICE = {
         "topic": "Landfill Leachate",
         "question": "What is 'leachate' in the context of municipal solid waste sanitary landfills?",
         "options": [
-          "Contaminated liquid percolating through landfill waste that can pollute groundwater aquifers",
           "Methane gas extracted from decomposing trash",
           "The top clay barrier preventing rainwater intrusion",
-          "Ash remaining after waste incineration"
+          "Ash remaining after waste incineration",
+          "Contaminated liquid percolating through landfill waste that can pollute groundwater aquifers"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2022",
         "explanation": "Leachate is toxic liquid formed when rainwater percolates through compacted landfill waste, dissolving heavy metals and toxic chemicals that threaten groundwater aquifers."
@@ -3273,12 +3273,12 @@ const SEM_PRACTICE = {
         "topic": "Bio-magnification",
         "question": "Biomagnification of non-biodegradable persistent organic pollutants like DDT causes which ecological effect in predatory birds?",
         "options": [
-          "Eggshell thinning leading to premature egg breakage and population collapse",
           "Loss of feather pigmentation",
+          "Resistance to bacterial infection",
           "Accelerated chick gestation",
-          "Resistance to bacterial infection"
+          "Eggshell thinning leading to premature egg breakage and population collapse"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "DDT accumulates in apex raptors (e.g. bald eagles, falcons) via biomagnification, inhibiting calcium ATPase and causing severe eggshell thinning that crushes clutches."
@@ -3291,12 +3291,12 @@ const SEM_PRACTICE = {
         "topic": "Earthquake Measurement",
         "question": "The amount of energy released by an earthquake at its hypocenter is quantified on the:",
         "options": [
+          "Beaufort Scale",
           "Richter Magnitude Scale",
           "Mercalli Intensity Scale",
-          "Beaufort Scale",
           "Mohs Scale"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "The Richter scale calculates earthquake magnitude based on the logarithm of seismic wave amplitude, whereas the Mercalli scale rates observed surface damage intensity."
@@ -3310,9 +3310,9 @@ const SEM_PRACTICE = {
         "question": "According to the 1987 Brundtland Commission Report 'Our Common Future', Sustainable Development is defined as:",
         "options": [
           "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs",
-          "Achieving 100% industrial output through fossil fuel expansion",
           "Complete preservation of all nature reserves without human economic activity",
-          "Equal distribution of mineral wealth among all nations"
+          "Equal distribution of mineral wealth among all nations",
+          "Achieving 100% industrial output through fossil fuel expansion"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3341,12 +3341,12 @@ const SEM_PRACTICE = {
         "topic": "Acid Rain Chemistry",
         "question": "Which primary atmospheric pollutants react with water vapor to precipitate as Acid Rain ($pH < 5.6$)?",
         "options": [
-          "Sulfur dioxide ($SO_2$) and Nitrogen oxides ($NO_x$)",
-          "Carbon monoxide ($CO$) and Methane ($CH_4$)",
           "Chlorofluorocarbons ($CFCs$) and Ozone ($O_3$)",
-          "Lead particulates and Ammonia"
+          "Sulfur dioxide ($SO_2$) and Nitrogen oxides ($NO_x$)",
+          "Lead particulates and Ammonia",
+          "Carbon monoxide ($CO$) and Methane ($CH_4$)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2024",
         "explanation": "$SO_2$ and $NO_x$ emitted from coal power plants and vehicles oxidize into sulfuric acid ($H_2SO_4$) and nitric acid ($HNO_3$), depressing rain pH below 5.6."
@@ -3375,9 +3375,9 @@ const SEM_PRACTICE = {
         "question": "Which international environmental treaty was adopted in 1987 to phase out the production of Chlorofluorocarbons (CFCs) and protect the stratospheric ozone layer?",
         "options": [
           "Montreal Protocol",
-          "Kyoto Protocol",
           "Paris Agreement",
-          "Ramsar Convention"
+          "Ramsar Convention",
+          "Kyoto Protocol"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3408,12 +3408,12 @@ const SEM_PRACTICE = {
         "topic": "Greenhouse Effect GWP",
         "question": "Which major greenhouse gas has the highest 100-year Global Warming Potential (GWP) among the common atmospheric greenhouse gases listed below?",
         "options": [
-          "Nitrous Oxide ($N_2O$)",
-          "Methane ($CH_4$)",
           "Carbon Dioxide ($CO_2$)",
-          "Water Vapor ($H_2O$)"
+          "Water Vapor ($H_2O$)",
+          "Methane ($CH_4$)",
+          "Nitrous Oxide ($N_2O$)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "While $CO_2$ has a baseline GWP of 1, methane ($CH_4$) has a GWP of ~28-30, and nitrous oxide ($N_2O$) has a very high GWP of ~265-298 over 100 years."
@@ -3441,12 +3441,12 @@ const SEM_PRACTICE = {
         "topic": "Chernobyl Nuclear Disaster",
         "question": "The Chernobyl nuclear power disaster occurred in 1986 in which former Soviet republic?",
         "options": [
-          "Ukraine",
-          "Belarus",
+          "Russia",
           "Kazakhstan",
-          "Russia"
+          "Ukraine",
+          "Belarus"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "The Chernobyl disaster occurred on April 26, 1986, at reactor No. 4 of the Chernobyl Nuclear Power Plant near Pripyat in northern Ukraine."
@@ -3459,12 +3459,12 @@ const SEM_PRACTICE = {
         "topic": "Resettlement and Rehabilitation",
         "question": "What is the primary socio-environmental challenge associated with constructing mega hydroelectric dams like Sardar Sarovar or Tehri?",
         "options": [
-          "Involuntary displacement, loss of cultural heritage, and inadequate rehabilitation of local indigenous communities",
           "Depletion of atmospheric nitrogen",
-          "Cooling of downstream river temperatures causing ice formation",
-          "Loss of tidal energy"
+          "Involuntary displacement, loss of cultural heritage, and inadequate rehabilitation of local indigenous communities",
+          "Loss of tidal energy",
+          "Cooling of downstream river temperatures causing ice formation"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "Large dams submerge fertile agricultural valleys and displacement leads to severance from traditional livelihoods, necessitating comprehensive Resettlement and Rehabilitation (R&R)."
@@ -3477,12 +3477,12 @@ const SEM_PRACTICE = {
         "topic": "Environment Protection Act Year",
         "question": "The umbrella 'Environment (Protection) Act' in India was enacted by Parliament in the year:",
         "options": [
-          "1986",
-          "1974",
           "1981",
+          "1974",
+          "1986",
           "1992"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "Enacted in 1986 in the wake of the 1984 Bhopal Gas Tragedy, the Environment (Protection) Act serves as overarching umbrella legislation empowering the central government to set national quality standards."
@@ -3509,12 +3509,12 @@ const SEM_PRACTICE = {
         "topic": "Air Act Amendment",
         "question": "In which year was the Air (Prevention and Control of Pollution) Act amended to explicitly include 'noise' within the definition of air pollutants?",
         "options": [
-          "1987",
           "1981",
-          "1995",
-          "2000"
+          "1987",
+          "2000",
+          "1995"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2024",
         "explanation": "Originally passed in 1981, the Air Act was amended in 1987 to expand the definition of air pollutant to include noise, paving the way for the Noise Pollution Rules 2000."
@@ -3541,12 +3541,12 @@ const SEM_PRACTICE = {
         "topic": "Forest Conservation Act",
         "question": "Under the Forest Conservation Act 1980, whose prior approval is mandatory before any reserved forest land can be diverted for non-forest purposes?",
         "options": [
-          "The Central Government of India (MoEFCC)",
-          "The local Gram Panchayat",
           "Private timber corporations",
-          "State Forest Department officers only"
+          "State Forest Department officers only",
+          "The Central Government of India (MoEFCC)",
+          "The local Gram Panchayat"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "Section 2 of the Forest Conservation Act 1980 mandates prior approval from the Central Government (Ministry of Environment, Forest and Climate Change) before diverting any forest land."
@@ -3575,12 +3575,12 @@ const SEM_PRACTICE = {
         "topic": "HIV/AIDS Transmission",
         "question": "Human Immunodeficiency Virus (HIV) does NOT transmit through which of the following everyday interactions?",
         "options": [
-          "Sharing meals, handshakes, or using the same toilet seat",
           "Unscreened blood transfusions",
+          "Mother-to-child transmission during childbirth or breastfeeding",
           "Unprotected sexual intercourse",
-          "Mother-to-child transmission during childbirth or breastfeeding"
+          "Sharing meals, handshakes, or using the same toilet seat"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "HIV cannot survive outside body fluids and is not transmitted through casual social contact, saliva, sweat, hugging, food sharing, or insect bites."
@@ -3609,12 +3609,12 @@ const SEM_PRACTICE = {
         "topic": "Value Education",
         "question": "What is the primary role of Value Education in environmental sustainability?",
         "options": [
+          "Teaching advanced industrial coal mining techniques",
           "Inculcating moral responsibility, ecological respect, and sustainable lifestyle ethics among citizens",
           "Maximizing consumer demand for single-use plastic goods",
-          "Teaching advanced industrial coal mining techniques",
           "Eliminating traditional agrarian conservation wisdom"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "Value education cultivates an ethical ecocentric mindset, fostering respect for biodiversity, self-restraint, and sustainable conservation behavior."
@@ -3643,12 +3643,12 @@ const SEM_PRACTICE = {
         "topic": "ENVIS Information System",
         "question": "The Environmental Information System (ENVIS) established by MoEFCC serves to:",
         "options": [
-          "Collect, collate, and disseminate environmental information to researchers, policy-makers, and the public",
+          "Manufacture solar panels",
           "Issue corporate patent licenses",
           "Manage defense satellite operations",
-          "Manufacture solar panels"
+          "Collect, collate, and disseminate environmental information to researchers, policy-makers, and the public"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "ENVIS was established in 1982 by the Indian Ministry of Environment to act as a decentralized network providing reliable ecological data and scientific research across nodal centers."
@@ -3677,12 +3677,12 @@ const SEM_PRACTICE = {
         "topic": "E-Waste Hazards",
         "question": "Which hazardous heavy metal commonly found in CRT computer monitors and solder causes neurological and developmental damage?",
         "options": [
-          "Lead ($Pb$)",
           "Gold ($Au$)",
-          "Iron ($Fe$)",
-          "Aluminum ($Al$)"
+          "Lead ($Pb$)",
+          "Aluminum ($Al$)",
+          "Iron ($Fe$)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2023",
         "explanation": "E-waste contains toxic heavy metals, most notably lead in soldering alloys and CRT funnel glass, which impairs cognitive development and damages kidneys."
@@ -3711,12 +3711,12 @@ const SEM_PRACTICE = {
         "topic": "Design Thinking Stages",
         "question": "What are the 5 iterative stages of Stanford d.school's Design Thinking process?",
         "options": [
-          "Empathize, Define, Ideate, Prototype, and Test",
           "Plan, Code, Test, Deploy, and Maintain",
           "Attract, Engage, Convert, Retain, and Delight",
-          "Discover, Fund, File, Sell, and Exit"
+          "Discover, Fund, File, Sell, and Exit",
+          "Empathize, Define, Ideate, Prototype, and Test"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-SEM-2022",
         "explanation": "Design Thinking follows: 1. Empathize (understand users), 2. Define (frame problem), 3. Ideate (brainstorm solutions), 4. Prototype (build low-fidelity models), 5. Test (gather feedback)."
@@ -3745,8 +3745,8 @@ const SEM_PRACTICE = {
         "question": "What is the core iterative engine of the Lean Startup methodology?",
         "options": [
           "Build-Measure-Learn feedback loop",
-          "Plan-Do-Check-Act loop",
           "Waterfall phased progression",
+          "Plan-Do-Check-Act loop",
           "Risk-Mitigation cycle"
         ],
         "answerIndex": 0,
@@ -3776,12 +3776,12 @@ const SEM_PRACTICE = {
         "topic": "Business Model Canvas Blocks",
         "question": "How many building blocks constitute Alexander Osterwalder's standard Business Model Canvas (BMC)?",
         "options": [
-          "9",
           "7",
           "5",
-          "12"
+          "12",
+          "9"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "The Business Model Canvas comprises exactly 9 core building blocks covering the four primary areas of a business: customers, offer, infrastructure, and financial viability."
@@ -3810,9 +3810,9 @@ const SEM_PRACTICE = {
         "question": "Which block of the Business Model Canvas defines the different groups of people or organizations an enterprise aims to reach and serve?",
         "options": [
           "Customer Segments",
-          "Channels",
           "Customer Relationships",
-          "Key Partnerships"
+          "Key Partnerships",
+          "Channels"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3843,12 +3843,12 @@ const SEM_PRACTICE = {
         "topic": "Cost-Driven vs Value-Driven",
         "question": "In the BMC Cost Structure block, what distinguishes a 'Cost-Driven' business model (like Ryanair or IndiGo)?",
         "options": [
-          "Focuses on minimizing costs wherever possible through lean operations, low pricing, and automation",
-          "Focuses primarily on premium value creation and personalized luxury service",
           "Operates as a non-profit charity",
-          "Relying purely on government subsidies"
+          "Relying purely on government subsidies",
+          "Focuses on minimizing costs wherever possible through lean operations, low pricing, and automation",
+          "Focuses primarily on premium value creation and personalized luxury service"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2023",
         "explanation": "Cost-driven models focus on aggressive cost minimization, low price value propositions, maximum automation, and extensive outsourcing."
@@ -3877,12 +3877,12 @@ const SEM_PRACTICE = {
         "topic": "Channels Block",
         "question": "What is the primary function of the 'Channels' block in the Business Model Canvas?",
         "options": [
-          "Describing how a company communicates with and reaches its customer segments to deliver a value proposition",
           "Defining internal employee HR hierarchy",
-          "Documenting legal patent filings",
-          "Calculating manufacturing depreciation rates"
+          "Calculating manufacturing depreciation rates",
+          "Describing how a company communicates with and reaches its customer segments to deliver a value proposition",
+          "Documenting legal patent filings"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Channels encompass communication, distribution, and sales touchpoints: awareness, evaluation, purchase, delivery, and after-sales support."
@@ -3895,12 +3895,12 @@ const SEM_PRACTICE = {
         "topic": "Bootstrapping",
         "question": "What does 'Bootstrapping' mean in the startup ecosystem?",
         "options": [
+          "Merging with a publicly listed shell company",
           "Building and growing a business using personal savings and early customer revenue without external equity investment",
           "Raising a Series A venture capital round from Silicon Valley funds",
-          "Merging with a publicly listed shell company",
           "Taking an emergency short-term bank loan"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "Bootstrapping refers to self-funding a startup through founder savings, sweat equity, and customer cash flows, retaining 100% equity and control."
@@ -3929,12 +3929,12 @@ const SEM_PRACTICE = {
         "topic": "Pre-Money vs Post-Money Valuation",
         "question": "If an investor invests \\$2 million into a startup at a \\$8 million pre-money valuation, what is the post-money valuation and the investor's equity stake?",
         "options": [
-          "Post-money is \\$10 million, investor gets 20% equity",
-          "Post-money is \\$8 million, investor gets 25% equity",
+          "Post-money is \\$6 million, investor gets 33.3% equity",
           "Post-money is \\$10 million, investor gets 25% equity",
-          "Post-money is \\$6 million, investor gets 33.3% equity"
+          "Post-money is \\$10 million, investor gets 20% equity",
+          "Post-money is \\$8 million, investor gets 25% equity"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-2024",
         "explanation": "$\\text{Post-Money} = \\text{Pre-Money} + \\text{Investment} = \\$8M + \\$2M = \\$10M$. The investor's equity ownership is $\\text{Investment} / \\text{Post-Money} = \\$2M / \\$10M = 20\\%$."
@@ -3962,12 +3962,12 @@ const SEM_PRACTICE = {
         "topic": "Break-Even Point Formula",
         "question": "In financial planning, the Break-Even Point (in units) is calculated using which formula?",
         "options": [
-          "$\\text{Fixed Costs} / (\\text{Selling Price per Unit} - \\text{Variable Cost per Unit})$",
+          "$\\text{Variable Costs} / \\text{Fixed Costs}$",
           "$(\\text{Fixed Costs} + \\text{Variable Costs}) \\times \\text{Selling Price}$",
-          "$\\text{Total Revenue} / \\text{Total Assets}$",
-          "$\\text{Variable Costs} / \\text{Fixed Costs}$"
+          "$\\text{Fixed Costs} / (\\text{Selling Price per Unit} - \\text{Variable Cost per Unit})$",
+          "$\\text{Total Revenue} / \\text{Total Assets}$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "Break-Even Quantity = Fixed Costs / Contribution Margin per Unit, where Contribution Margin = Selling Price - Variable Cost per unit."
@@ -3994,12 +3994,12 @@ const SEM_PRACTICE = {
         "topic": "Term Sheet Liquidation Preference",
         "question": "In a venture capital Term Sheet, what does a '1x Non-Participating Liquidation Preference' mean?",
         "options": [
-          "Preferred shareholders receive back their initial investment amount before common shareholders receive any exit proceeds",
-          "Founders receive their salary before investors get paid",
           "Investors can force liquidation after 1 year",
-          "The company cannot be sold for less than 1x its valuation"
+          "Founders receive their salary before investors get paid",
+          "The company cannot be sold for less than 1x its valuation",
+          "Preferred shareholders receive back their initial investment amount before common shareholders receive any exit proceeds"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Liquidation preference determines payout order upon an exit: preferred shareholders get their initial invested capital (1x) back before common shareholders receive distributions."
@@ -4028,12 +4028,12 @@ const SEM_PRACTICE = {
         "topic": "Crowdfunding Models",
         "question": "Kickstarter and Indiegogo operate primarily on which crowdfunding model?",
         "options": [
-          "Reward-based Crowdfunding",
+          "Donation Crowdfunding for disaster relief",
           "Equity Crowdfunding",
           "Debt Crowdfunding (Peer-to-Peer)",
-          "Donation Crowdfunding for disaster relief"
+          "Reward-based Crowdfunding"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2023",
         "explanation": "Platforms like Kickstarter use reward-based crowdfunding: backers pledge funds in exchange for non-financial rewards (early product prototypes, special merchandise) rather than equity shares."
@@ -4046,12 +4046,12 @@ const SEM_PRACTICE = {
         "topic": "Government Startup Initiatives",
         "question": "The 'Startup India Seed Fund Scheme' (SISFS) was launched by the Government of India primarily to:",
         "options": [
-          "Provide financial assistance to early-stage startups for proof of concept, prototype development, and product trials",
-          "Buy controlling equity in private unicorn tech startups",
+          "Collect corporate taxes in advance",
           "Mandate that startups hire only government civil servants",
-          "Collect corporate taxes in advance"
+          "Provide financial assistance to early-stage startups for proof of concept, prototype development, and product trials",
+          "Buy controlling equity in private unicorn tech startups"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "SISFS provides financial assistance up to Rs 20 lakh as a grant for proof-of-concept and up to Rs 50 lakh via debt/convertibles for commercialization through recognized incubators."
@@ -4064,12 +4064,12 @@ const SEM_PRACTICE = {
         "topic": "Patent Criteria",
         "question": "Under the Indian Patents Act 1970, which three criteria must an invention satisfy to be granted a patent?",
         "options": [
-          "Novelty, Inventive Step (Non-obviousness), and Industrial Applicability",
           "Low cost, High popularity, and Cloud compatibility",
-          "Open source licensing, Brevity, and Artistic beauty",
-          "Theoretical elegance, Academic publication, and Free use"
+          "Theoretical elegance, Academic publication, and Free use",
+          "Novelty, Inventive Step (Non-obviousness), and Industrial Applicability",
+          "Open source licensing, Brevity, and Artistic beauty"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "To qualify for a patent, an invention must be new (novelty), involve an inventive step not obvious to a person skilled in the art, and be capable of industrial application."
@@ -4097,12 +4097,12 @@ const SEM_PRACTICE = {
         "topic": "Trademark Protection",
         "question": "What is the primary function of a Trademark under the Trade Marks Act 1999?",
         "options": [
+          "To keep computer source code confidential",
           "To distinguish goods or services of one enterprise from those of competitors and prevent consumer confusion",
           "To protect the functional mechanical design of a machine",
-          "To grant exclusive rights over mathematical formulas",
-          "To keep computer source code confidential"
+          "To grant exclusive rights over mathematical formulas"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "A trademark protects distinctive symbols, words, logos, or slogans (e.g. Nike Swoosh, Apple logo) that identify the commercial source of goods and prevent brand impersonation."
@@ -4132,8 +4132,8 @@ const SEM_PRACTICE = {
         "options": [
           "Lifetime of the author plus 60 years after their death",
           "20 years from registration",
-          "50 years from publication",
-          "100 years from creation"
+          "100 years from creation",
+          "50 years from publication"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -4163,12 +4163,12 @@ const SEM_PRACTICE = {
         "topic": "Geographical Indication (GI)",
         "question": "Which of the following is an example of an authorized Geographical Indication (GI Tag) in India?",
         "options": [
-          "Darjeeling Tea",
-          "Windows 11",
+          "Intel Core i7",
           "Tesla Model 3",
-          "Intel Core i7"
+          "Darjeeling Tea",
+          "Windows 11"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Darjeeling Tea was the first product in India to receive a GI tag (2004-05), certifying that its unique quality and aroma originate exclusively from the Darjeeling region of West Bengal."
@@ -4196,12 +4196,12 @@ const SEM_PRACTICE = {
         "topic": "Initial Public Offering (IPO)",
         "question": "An Initial Public Offering (IPO) represents which type of startup exit strategy?",
         "options": [
-          "Selling company shares to the public for the first time on a recognized stock exchange (e.g. BSE/NSE)",
           "Selling company assets at auction due to insolvency",
-          "Acquiring a smaller competing firm",
-          "Distributing products through retail franchisors"
+          "Selling company shares to the public for the first time on a recognized stock exchange (e.g. BSE/NSE)",
+          "Distributing products through retail franchisors",
+          "Acquiring a smaller competing firm"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "An IPO transitions a privately held corporation into a publicly traded company on stock exchanges, providing massive liquidity to founders, early employees, and investors."
@@ -4214,12 +4214,12 @@ const SEM_PRACTICE = {
         "topic": "Acqui-hire Exit",
         "question": "What is an 'Acqui-hire' in tech venture exits?",
         "options": [
-          "A larger corporation acquires a startup primarily to recruit its specialized engineering and product talent rather than for its product",
-          "Outsourcing recruitment to third-party headhunters",
           "Hiring only remote independent contractors",
-          "A hostile takeover by competing founders"
+          "A hostile takeover by competing founders",
+          "A larger corporation acquires a startup primarily to recruit its specialized engineering and product talent rather than for its product",
+          "Outsourcing recruitment to third-party headhunters"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-2023",
         "explanation": "In an acqui-hire (acquisition + hire), a larger tech company buys a struggling or nascent startup to onboard its skilled engineering/AI team, often shutting down the original product."
@@ -4247,12 +4247,12 @@ const SEM_PRACTICE = {
         "topic": "Network Effects",
         "question": "Network Effects occur when a product or platform becomes increasingly valuable to existing users as:",
         "options": [
-          "More people use the service (e.g. WhatsApp, LinkedIn, Uber)",
-          "Manufacturing factory size doubles",
           "The company borrows bank debt",
-          "Server CPU clocks increase"
+          "Server CPU clocks increase",
+          "More people use the service (e.g. WhatsApp, LinkedIn, Uber)",
+          "Manufacturing factory size doubles"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Direct and indirect network effects (Metcalfe's Law) create immense defensive moats: each incremental user adds utility to the entire network of participants."
@@ -4282,8 +4282,8 @@ const SEM_PRACTICE = {
         "options": [
           "2%",
           "5%",
-          "1%",
-          "10%"
+          "10%",
+          "1%"
         ],
         "answerIndex": 0,
         "difficulty": "medium",

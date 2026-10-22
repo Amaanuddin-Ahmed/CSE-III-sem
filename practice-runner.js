@@ -87,7 +87,12 @@
 
       if (exitBtn) {
         exitBtn.addEventListener('click', () => {
-          if (exitModal) exitModal.style.display = 'flex';
+          if (exitModal) {
+            exitModal.style.display = 'flex';
+            exitModal.style.zIndex = '100005';
+          } else {
+            this.exitSession();
+          }
         });
       }
       if (closeExitBtn && exitModal) {
@@ -248,14 +253,14 @@
       container.innerHTML = '';
 
       const subjects = [
-        { id: 'DM', code: 'DM', name: 'Discrete Mathematics' },
-        { id: 'COA', code: 'COA', name: 'Computer Org. & Architecture' },
-        { id: 'OOPJ', code: 'OOPJ', name: 'OOP through Java' },
-        { id: 'DBMS', code: 'DBMS', name: 'Database Management Systems' },
-        { id: 'SE', code: 'SE', name: 'Software Engineering' },
-        { id: 'ES', code: 'ES', name: 'Environmental Science' },
-        { id: 'IE', code: 'IE', name: 'Innovation & Entrepreneurship' },
-        { id: 'MIXED', code: 'ALL', name: 'Mixed Practice (All Subjects)' }
+        { id: 'DM', code: 'DM', icon: 'fa-solid fa-calculator' },
+        { id: 'COA', code: 'COA', icon: 'fa-solid fa-microchip' },
+        { id: 'OOPJ', code: 'OOPJ', icon: 'fa-solid fa-code' },
+        { id: 'DBMS', code: 'DBMS', icon: 'fa-solid fa-database' },
+        { id: 'SE', code: 'SE', icon: 'fa-solid fa-laptop-code' },
+        { id: 'ES', code: 'ES', icon: 'fa-solid fa-leaf' },
+        { id: 'IE', code: 'IE', icon: 'fa-solid fa-lightbulb' },
+        { id: 'MIXED', code: 'Mixed', icon: 'fa-solid fa-shuffle' }
       ];
 
       subjects.forEach(sub => {
@@ -266,19 +271,19 @@
 
         let progressLabel = '0% Mastered';
         if (window.ActivityTracker) {
-          const stats = window.ActivityTracker.getSubjectMastery(sub.id);
           if (this.mode === 'quiz') {
+            const stats = window.ActivityTracker.getSubjectMastery(sub.id);
             progressLabel = `${stats.percentage}% Mastered`;
           } else {
-            const learned = window.ActivityTracker.getLearnedFlashcards(sub.id).length;
+            const learned = (window.ActivityTracker.getLearnedFlashcards(sub.id) || []).length;
             progressLabel = `${learned} Cards Learned`;
           }
         }
 
         card.innerHTML = `
           <div class="practice-subject-info">
+            <span class="practice-sub-icon"><i class="${sub.icon}"></i></span>
             <span class="practice-sub-code">${sub.code}</span>
-            <span class="practice-sub-title">${sub.name}</span>
           </div>
           <span class="practice-sub-progress">${progressLabel}</span>
         `;
@@ -343,6 +348,8 @@
     exitSession() {
       const sessionScreen = document.getElementById('practiceSessionScreen');
       if (sessionScreen) sessionScreen.style.display = 'none';
+      const exitModal = document.getElementById('practiceExitModal');
+      if (exitModal) exitModal.style.display = 'none';
       document.body.style.overflow = '';
       if (this.mascot) this.mascot = null;
     },
@@ -380,8 +387,39 @@
         }
       }
 
-      // Clone queue
-      this.activeQueue = rawQuestions.map(q => ({ ...q }));
+      // Prepare questions: shuffle options for MCQs and calculate new answerIndex
+      const preparedQuestions = rawQuestions.map(q => {
+        const copy = { ...q };
+        if (copy.type === 'mcq' && Array.isArray(copy.options) && copy.options.length > 1) {
+          const originalCorrect = copy.options[copy.answerIndex !== undefined ? copy.answerIndex : 0];
+          const opts = [...copy.options];
+          for (let i = opts.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [opts[i], opts[j]] = [opts[j], opts[i]];
+          }
+          copy.options = opts;
+          copy.answerIndex = opts.indexOf(originalCorrect);
+        }
+        return copy;
+      });
+
+      // Structure queue: 5 MCQs, then 2 FIBs/TF, 5 MCQs, 2 FIBs/TF... (MCQs predominant)
+      const mcqs = preparedQuestions.filter(q => q.type === 'mcq');
+      const fibs = preparedQuestions.filter(q => q.type !== 'mcq');
+
+      const structuredQueue = [];
+      let m = 0;
+      let f = 0;
+      while (m < mcqs.length || f < fibs.length) {
+        for (let i = 0; i < 5 && m < mcqs.length; i++) {
+          structuredQueue.push(mcqs[m++]);
+        }
+        for (let i = 0; i < 2 && f < fibs.length; i++) {
+          structuredQueue.push(fibs[f++]);
+        }
+      }
+
+      this.activeQueue = structuredQueue;
       this.currentIndex = 0;
       this.masteredCount = 0;
       this.totalToMaster = this.activeQueue.length;
@@ -697,8 +735,10 @@
 
     markFlashcard(gotIt) {
       const card = this.activeDeck[this.currentCardIndex];
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const subId = (card && card.subjectId) || this.subjectId;
       if (window.ActivityTracker && card) {
-        window.ActivityTracker.recordFlashcardLearned(card.subjectId || this.subjectId, card.id);
+        window.ActivityTracker.recordFlashcardLearned(activeExam, subId, card.id, gotIt);
       }
       if (gotIt && this.mascot) {
         this.mascot.setState('happy', "Awesome! Card remembered.");

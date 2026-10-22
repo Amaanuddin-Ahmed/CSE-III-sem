@@ -1,6 +1,6 @@
 /**
- * MGIT PYQ HUB - Mid-1 Practice Bank & Flashcards (Units 1, 2, and 3 Part 1)
- * Auto-generated & verified for MR-25 CSE Semester III
+ * MGIT PYQ HUB - Mid-1 Practice Question Bank & Flashcards
+ * Auto-generated & verified for MR-25 CSE Semester III (Units 1–3 Part 1)
  */
 const MID1_PRACTICE = {
   "version": "1.0.0",
@@ -26,12 +26,12 @@ const MID1_PRACTICE = {
         "topic": "Tautology",
         "question": "A compound proposition that is true under every truth assignment is called a:",
         "options": [
-          "Tautology",
+          "Fallacy",
           "Contradiction",
-          "Contingency",
-          "Fallacy"
+          "Tautology",
+          "Contingency"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-M1-2023",
         "explanation": "A tautology is a logical formula that is true in every possible interpretation."
@@ -61,12 +61,12 @@ const MID1_PRACTICE = {
         "topic": "Contrapositive",
         "question": "What is the contrapositive of the conditional statement 'If it rains, the grass is wet' ($p \\rightarrow q$)?",
         "options": [
-          "If the grass is not wet, it does not rain ($\\neg q \\rightarrow \\neg p$)",
-          "If it does not rain, the grass is not wet",
           "If the grass is wet, it rains",
+          "If it does not rain, the grass is not wet",
+          "If the grass is not wet, it does not rain ($\\neg q \\rightarrow \\neg p$)",
           "It rains and the grass is not wet"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-M1-2024",
         "explanation": "The contrapositive of $p \\to q$ is $\\neg q \\to \\neg p$, which is logically equivalent to $p \\to q$."
@@ -93,12 +93,12 @@ const MID1_PRACTICE = {
         "topic": "Predicates & Quantifiers",
         "question": "Which quantified formula correctly translates 'Every student loves mathematics'?",
         "options": [
-          "$\\forall x (S(x) \\rightarrow M(x))$",
+          "$\\exists x (S(x) \\rightarrow M(x))$",
           "$\\exists x (S(x) \\land M(x))$",
-          "$\\forall x (S(x) \\land M(x))$",
-          "$\\exists x (S(x) \\rightarrow M(x))$"
+          "$\\forall x (S(x) \\rightarrow M(x))$",
+          "$\\forall x (S(x) \\land M(x))$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-M1-2024",
         "explanation": "Universal claims across a category use conditional implication: for all $x$, if $x$ is a student then $x$ loves mathematics."
@@ -111,12 +111,12 @@ const MID1_PRACTICE = {
         "topic": "Equivalence Relations",
         "question": "Which of the following is NOT a requirement for a relation to be an Equivalence Relation?",
         "options": [
-          "Antisymmetry",
-          "Reflexivity",
           "Symmetry",
-          "Transitivity"
+          "Reflexivity",
+          "Transitivity",
+          "Antisymmetry"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-M1-2022",
         "explanation": "An equivalence relation requires reflexivity, symmetry, and transitivity. Antisymmetry is required for a POSET, not an equivalence relation."
@@ -144,12 +144,12 @@ const MID1_PRACTICE = {
         "topic": "POSET Definition",
         "question": "A relation that is reflexive, antisymmetric, and transitive is called a:",
         "options": [
-          "Partial Order",
           "Equivalence Relation",
-          "Total Disjunction",
-          "Symmetric Closure"
+          "Symmetric Closure",
+          "Partial Order",
+          "Total Disjunction"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-M1-2024",
         "explanation": "A partially ordered set (POSET) is defined by reflexivity, antisymmetry, and transitivity."
@@ -177,12 +177,12 @@ const MID1_PRACTICE = {
         "topic": "Semigroup Definition",
         "question": "An algebraic structure $(S, *)$ is called a Semigroup if the binary operation $*$ satisfies:",
         "options": [
-          "Closure and Associativity",
-          "Closure only",
           "Closure, Associativity, and Identity",
-          "Closure and Commutativity only"
+          "Closure only",
+          "Closure and Commutativity only",
+          "Closure and Associativity"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-M1-2022",
         "explanation": "A semigroup satisfies closure and associativity. A monoid adds an identity element."
@@ -210,12 +210,12 @@ const MID1_PRACTICE = {
         "topic": "Semigroup Homomorphism",
         "question": "A mapping $f: (S, *) \\rightarrow (T, \\cdot)$ between two semigroups is a Homomorphism if for all $a, b \\in S$:",
         "options": [
-          "$f(a * b) = f(a) \\cdot f(b)$",
           "$f(a * b) = f(a) + f(b)$",
+          "$f(a * b) = f(a) \\cdot f(b)$",
           "$f(a) = f(b)$",
           "$f(a * b) = a \\cdot b$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-M1-2024",
         "explanation": "A homomorphism preserves algebraic operations: $f(a * b) = f(a) \\cdot f(b)$."
@@ -230,12 +230,12 @@ const MID1_PRACTICE = {
         "topic": "2's Complement",
         "question": "What is the 2's complement of the binary number 0101100?",
         "options": [
+          "0101101",
           "1010100",
           "1010011",
-          "0101101",
           "1101100"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-M1-2023",
         "explanation": "To find 2's complement: invert all bits (1010011) and add 1 $\\implies 1010100$."
@@ -264,12 +264,12 @@ const MID1_PRACTICE = {
         "topic": "Microinstruction Sequencing",
         "question": "Which hardware component selects between the incrementer and branch address in a microprogrammed control unit?",
         "options": [
-          "Multiplexer",
-          "Decoder",
           "ALU",
-          "Priority Encoder"
+          "Decoder",
+          "Priority Encoder",
+          "Multiplexer"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-M1-2024",
         "explanation": "A multiplexer selects whether the next microinstruction address comes from the sequencer incrementer or an external branch address."
@@ -300,12 +300,12 @@ const MID1_PRACTICE = {
         "topic": "Java Platform Independence",
         "question": "Java achieves platform independence through which architectural mechanism?",
         "options": [
+          "Translating into C++ code",
           "Compilation into bytecode executed on platform-specific JVMs",
           "Direct assembly generation",
-          "Running purely in web browsers",
-          "Translating into C++ code"
+          "Running purely in web browsers"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-M1-2023",
         "explanation": "Javac compiles source into standard bytecode (.class), which is executed on any system equipped with a compatible JVM."
@@ -334,8 +334,8 @@ const MID1_PRACTICE = {
         "options": [
           "finally",
           "catch",
-          "try",
-          "throw"
+          "throw",
+          "try"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -352,12 +352,12 @@ const MID1_PRACTICE = {
         "topic": "Database Users",
         "question": "Which database user interacts with the system primarily by invoking pre-written application programs (e.g. bank teller)?",
         "options": [
-          "Naive (Parametric) User",
           "Database Administrator (DBA)",
           "Sophisticated User",
+          "Naive (Parametric) User",
           "System Analyst"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-M1-2023",
         "explanation": "Naive users interact with the database via dedicated application forms and interfaces without knowing SQL."
@@ -385,12 +385,12 @@ const MID1_PRACTICE = {
         "topic": "Attribute Closure",
         "question": "The attribute closure $X^+$ with respect to a set of functional dependencies $F$ is:",
         "options": [
+          "All candidate keys",
           "The set of all attributes functionally determined by $X$ under $F$",
           "The primary key of $X$",
-          "The foreign keys pointing to $X$",
-          "All candidate keys"
+          "The foreign keys pointing to $X$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-M1-2024",
         "explanation": "$X^+$ is computed using Armstrong's axioms and includes every attribute $A$ such that $X \\rightarrow A$ can be derived from $F$."
@@ -405,12 +405,12 @@ const MID1_PRACTICE = {
         "topic": "Waterfall Strengths",
         "question": "The Classical Waterfall model is best suited for projects where:",
         "options": [
-          "Requirements are completely clear, stable, and well-understood upfront",
           "Requirements change every week",
           "Prototypes must be demonstrated immediately",
-          "The team has never used the programming language"
+          "The team has never used the programming language",
+          "Requirements are completely clear, stable, and well-understood upfront"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-M1-2023",
         "explanation": "Waterfall works well for stable projects where requirements are locked in stone and changes are minimal."
@@ -438,12 +438,12 @@ const MID1_PRACTICE = {
         "topic": "Architectural Styles",
         "question": "Which software architectural style organizes subsystems into layers, where each layer provides services only to the layer above it?",
         "options": [
-          "Layered (Multitier) Architecture",
           "Pipe-and-Filter Architecture",
+          "Blackboard Architecture",
           "Event-Driven Architecture",
-          "Blackboard Architecture"
+          "Layered (Multitier) Architecture"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-M1-2024",
         "explanation": "In layered architecture (e.g. presentation, business logic, data access), dependencies flow strictly top-to-bottom."
@@ -459,9 +459,9 @@ const MID1_PRACTICE = {
         "question": "In a terrestrial ecosystem, green plants and phytoplankton occupy which trophic level?",
         "options": [
           "Primary Producers (First Trophic Level)",
-          "Primary Consumers",
           "Secondary Consumers",
-          "Decomposers"
+          "Decomposers",
+          "Primary Consumers"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -490,12 +490,12 @@ const MID1_PRACTICE = {
         "topic": "Air Pollution Smog",
         "question": "Photochemical smog is primarily formed by the reaction of sunlight with:",
         "options": [
-          "Nitrogen oxides ($NO_x$) and Volatile Organic Compounds (VOCs)",
+          "Argon and Neon",
           "Carbon monoxide and Water vapor",
-          "Sulfur dioxide and Clay dust",
-          "Argon and Neon"
+          "Nitrogen oxides ($NO_x$) and Volatile Organic Compounds (VOCs)",
+          "Sulfur dioxide and Clay dust"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-M1-2024",
         "explanation": "Solar ultraviolet rays trigger photochemical reactions between automobile $NO_x$ and VOCs, producing secondary pollutants like tropospheric ozone and PAN."
@@ -510,12 +510,12 @@ const MID1_PRACTICE = {
         "topic": "Entrepreneurial Traits",
         "question": "Which psychological characteristic is most strongly associated with successful entrepreneurs (David McClelland)?",
         "options": [
-          "High Need for Achievement (nAch) and Calculated Risk-Taking",
+          "Avoidance of customer communication",
           "Aversion to all financial risk",
           "Desire for routine repetitive tasks",
-          "Avoidance of customer communication"
+          "High Need for Achievement (nAch) and Calculated Risk-Taking"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-M1-2023",
         "explanation": "McClelland's empirical research identifies high Need for Achievement (nAch), internal locus of control, and calculated risk-taking as primary entrepreneurial traits."
@@ -543,12 +543,12 @@ const MID1_PRACTICE = {
         "topic": "Value Proposition Canvas",
         "question": "The Value Proposition Canvas maps which two key components against each other?",
         "options": [
-          "Customer Profile (Pains, Gains, Jobs) and Company Value Map (Pain Relievers, Gain Creators, Products)",
-          "Balance Sheet and Profit & Loss Statement",
+          "Patent claims and Prior art",
           "Equity dilution and Cap table",
-          "Patent claims and Prior art"
+          "Balance Sheet and Profit & Loss Statement",
+          "Customer Profile (Pains, Gains, Jobs) and Company Value Map (Pain Relievers, Gain Creators, Products)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-M1-2024",
         "explanation": "Strategyzer's Value Proposition Canvas achieves product-market fit by aligning customer Jobs, Pains, and Gains with company Products, Pain Relievers, and Gain Creators."

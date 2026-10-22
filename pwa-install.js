@@ -111,14 +111,43 @@
 
     document.getElementById('pwaInstallNowBtn').addEventListener('click', async () => {
       if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const choice = await deferredPrompt.userChoice;
-        if (choice && choice.outcome === 'accepted') {
-          console.log('[PWA] User accepted installation');
+        try {
+          deferredPrompt.prompt();
+          const choice = await deferredPrompt.userChoice;
+          if (choice && choice.outcome === 'accepted') {
+            console.log('[PWA] User accepted installation');
+            dismissPrompt();
+            return;
+          }
+          deferredPrompt = null;
+        } catch (err) {
+          console.warn('[PWA] prompt error:', err);
         }
-        deferredPrompt = null;
       }
-      dismissPrompt();
+
+      // If deferredPrompt is unavailable (e.g. iOS Safari, or browser requiring menu action)
+      // Provide actionable step-by-step guidance right inside the prompt!
+      const contentEl = promptCard.querySelector('.pwa-prompt-content');
+      if (contentEl) {
+        const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+        contentEl.innerHTML = `
+          <h4 class="pwa-prompt-title" style="color: #4338ca;">To Add to Home Screen:</h4>
+          <p class="pwa-prompt-desc" style="font-size: 13px; line-height: 1.5; color: #1e293b; margin: 8px 0 12px;">
+            ${isIos 
+              ? '1. Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket"></i> at the bottom of Safari.<br>2. Tap <strong>"Add to Home Screen"</strong>.' 
+              : '1. Tap the <strong>three dots (&vellip;)</strong> menu in your browser bar.<br>2. Select <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.'}
+          </p>
+          <div class="pwa-prompt-actions">
+            <button type="button" class="btn-pwa-install" id="pwaDoneBtn" style="padding: 7px 18px; font-size: 12.5px;">
+              <i class="fa-solid fa-check"></i> <span>Got it!</span>
+            </button>
+          </div>
+        `;
+        const doneBtn = document.getElementById('pwaDoneBtn');
+        if (doneBtn) doneBtn.addEventListener('click', dismissPrompt);
+      } else {
+        dismissPrompt();
+      }
     });
 
     document.getElementById('pwaInstallLaterBtn').addEventListener('click', dismissPrompt);

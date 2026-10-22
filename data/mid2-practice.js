@@ -26,12 +26,12 @@ const MID2_PRACTICE = {
         "topic": "Groups & Properties",
         "question": "An algebraic structure $(G, *)$ is called a group if it satisfies which of the following set of axioms?",
         "options": [
-          "Closure, Associativity, Identity, and Inverses",
-          "Closure and Associativity only",
           "Closure, Associativity, and Identity only",
+          "Closure and Associativity only",
+          "Closure, Associativity, Identity, and Inverses",
           "Closure, Identity, and Commutativity"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "A group must satisfy four fundamental axioms: closure, associativity, existence of an identity element, and existence of an inverse for every element."
@@ -45,9 +45,9 @@ const MID2_PRACTICE = {
         "question": "According to Lagrange's Theorem for finite groups, if $H$ is a subgroup of a finite group $G$, then:",
         "options": [
           "The order of $H$ divides the order of $G$",
-          "The order of $G$ divides the order of $H$",
+          "$|H|$ and $|G|$ must both be prime numbers",
           "$|G| = |H| + 1$",
-          "$|H|$ and $|G|$ must both be prime numbers"
+          "The order of $G$ divides the order of $H$"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -78,12 +78,12 @@ const MID2_PRACTICE = {
         "topic": "Cyclic Groups",
         "question": "Which of the following elements are generators of the cyclic group $(\\mathbb{Z}_6, +_6)$?",
         "options": [
-          "1 and 5",
           "2 and 4",
           "3 only",
+          "1 and 5",
           "0 only"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "In $(\\mathbb{Z}_n, +_n)$, an element $g$ is a generator if and only if $\\gcd(g, n) = 1$. The positive integers less than 6 and coprime to 6 are 1 and 5."
@@ -112,12 +112,12 @@ const MID2_PRACTICE = {
         "topic": "Normal Subgroups",
         "question": "A subgroup $H$ of a group $G$ is called a normal subgroup if for all $g \\in G$ and $h \\in H$:",
         "options": [
-          "$g h g^{-1} \\in H$",
           "$g h = h$",
-          "$g h g = h$",
-          "$g^2 \\in H$"
+          "$g^2 \\in H$",
+          "$g h g^{-1} \\in H$",
+          "$g h g = h$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2022",
         "explanation": "A subgroup $H$ is normal ($H \\trianglelefteq G$) if and only if it is invariant under conjugation, meaning $g h g^{-1} \\in H$ for all $g \\in G$ and $h \\in H$."
@@ -147,12 +147,12 @@ const MID2_PRACTICE = {
         "topic": "Subgroup Test",
         "question": "A non-empty subset $H$ of a group $G$ is a subgroup if and only if for every pair of elements $a, b \\in H$:",
         "options": [
-          "$a * b^{-1} \\in H$",
+          "$a = b$",
           "$a * b \\in G$",
           "$a^{-1} * b^{-1} \\in G$",
-          "$a = b$"
+          "$a * b^{-1} \\in H$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The standard one-step subgroup criterion requires $a * b^{-1} \\in H$ for all $a, b \\in H$, automatically proving both closure and existence of inverses."
@@ -165,12 +165,12 @@ const MID2_PRACTICE = {
         "topic": "Prime Order",
         "question": "Every finite group of prime order $p$ is guaranteed to be:",
         "options": [
-          "Cyclic and Abelian",
-          "Non-abelian",
           "Infinite",
-          "Without an identity element"
+          "Without an identity element",
+          "Cyclic and Abelian",
+          "Non-abelian"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "By Lagrange's theorem, any group of prime order has no proper non-trivial subgroups, so every non-identity element generates the whole group. Every cyclic group is abelian."
@@ -199,12 +199,12 @@ const MID2_PRACTICE = {
         "topic": "Pigeonhole Principle",
         "question": "If $k+1$ objects are distributed into $k$ boxes, then at least one box must contain at least how many objects?",
         "options": [
-          "2",
           "k",
           "k+1",
-          "1"
+          "1",
+          "2"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The Pigeonhole Principle states that if $n$ items are placed into $k$ boxes and $n > k$, at least one box contains $\\ge \\lceil n/k \\rceil = 2$ items."
@@ -232,12 +232,12 @@ const MID2_PRACTICE = {
         "topic": "Inclusion-Exclusion",
         "question": "For two finite sets $A$ and $B$, the cardinality $|A \\cup B|$ is given by:",
         "options": [
+          "$|A| + |B|$",
           "$|A| + |B| - |A \\cap B|$",
-          "$|A| + |B| + |A \\cap B|$",
           "$|A| \\times |B|$",
-          "$|A| + |B|$"
+          "$|A| + |B| + |A \\cap B|$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2022",
         "explanation": "The Principle of Inclusion-Exclusion corrects for double-counted intersection elements: $|A \\cup B| = |A| + |B| - |A \\cap B|$."
@@ -250,12 +250,12 @@ const MID2_PRACTICE = {
         "topic": "Recurrence Relations",
         "question": "What is the characteristic equation for the recurrence relation $a_n - 5a_{n-1} + 6a_{n-2} = 0$?",
         "options": [
-          "$r^2 - 5r + 6 = 0$",
           "$r^2 + 5r - 6 = 0$",
+          "$r - 5 = 0$",
           "$r^2 - 6r + 5 = 0$",
-          "$r - 5 = 0$"
+          "$r^2 - 5r + 6 = 0$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "Substituting $a_n = r^n$ gives $r^n - 5r^{n-1} + 6r^{n-2} = 0$. Dividing by $r^{n-2}$ yields $r^2 - 5r + 6 = 0$."
@@ -283,12 +283,12 @@ const MID2_PRACTICE = {
         "topic": "Fibonacci Numbers",
         "question": "Given $F_0 = 0$, $F_1 = 1$, and $F_n = F_{n-1} + F_{n-2}$, what is the value of $F_6$?",
         "options": [
+          "13",
           "8",
           "5",
-          "13",
           "21"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "The sequence values are: F0=0, F1=1, F2=1, F3=2, F4=3, F5=5, F6=8."
@@ -301,12 +301,12 @@ const MID2_PRACTICE = {
         "topic": "Generating Functions",
         "question": "The ordinary generating function for the constant sequence $1, 1, 1, 1, \\dots$ is:",
         "options": [
-          "$\\frac{1}{1 - x}$",
           "$\\frac{1}{1 + x}$",
           "$\\frac{x}{1 - x}$",
+          "$\\frac{1}{1 - x}$",
           "$e^x$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2023",
         "explanation": "The infinite geometric series $\\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + \\dots = \\frac{1}{1-x}$ for $|x| < 1$."
@@ -335,12 +335,12 @@ const MID2_PRACTICE = {
         "topic": "Circular Permutations",
         "question": "In how many ways can 5 distinct people sit around a circular table?",
         "options": [
-          "24",
-          "120",
           "60",
-          "12"
+          "12",
+          "24",
+          "120"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2022",
         "explanation": "Circular permutations of $n$ distinct objects is $(n-1)!$. For 5 people, $(5-1)! = 4! = 24$ ways."
@@ -368,12 +368,12 @@ const MID2_PRACTICE = {
         "topic": "Handshaking Theorem",
         "question": "The Handshaking Theorem states that in any undirected graph $G=(V, E)$, the sum of vertex degrees equals:",
         "options": [
-          "$2 \\times |E|$",
-          "$|E|$",
           "$|V| \\times |E|$",
-          "$2 \\times |V|$"
+          "$2 \\times |V|$",
+          "$|E|$",
+          "$2 \\times |E|$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "Each edge has two incident endpoints, so each edge contributes exactly 2 to the sum of degrees: $\\sum_{v \\in V} \\deg(v) = 2|E|$."
@@ -401,12 +401,12 @@ const MID2_PRACTICE = {
         "topic": "Euler Circuit",
         "question": "A connected undirected graph contains an Euler circuit if and only if:",
         "options": [
+          "It is a complete graph",
           "Every vertex has an even degree",
           "Exactly two vertices have odd degree",
-          "It is a complete graph",
           "It has no cycles"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "Euler's theorem guarantees a closed trail traversing every edge exactly once if and only if all vertices have an even degree."
@@ -434,12 +434,12 @@ const MID2_PRACTICE = {
         "topic": "Hamiltonian Cycle",
         "question": "A Hamiltonian cycle in a graph is a closed loop that visits:",
         "options": [
-          "Every vertex exactly once (except start/end)",
+          "All odd degree vertices only",
           "Every edge exactly once",
-          "Every face of the graph",
-          "All odd degree vertices only"
+          "Every vertex exactly once (except start/end)",
+          "Every face of the graph"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2024",
         "explanation": "A Hamiltonian cycle visits every vertex of the graph exactly once, unlike an Euler circuit which traverses every edge."
@@ -453,8 +453,8 @@ const MID2_PRACTICE = {
         "question": "For any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces), Euler's formula is:",
         "options": [
           "$V - E + R = 2$",
-          "$V + E - R = 2$",
           "$V - E - R = 2$",
+          "$V + E - R = 2$",
           "$V + E + R = 2$"
         ],
         "answerIndex": 0,
@@ -486,9 +486,9 @@ const MID2_PRACTICE = {
         "question": "How many edges are present in a complete graph $K_n$ on $n$ vertices?",
         "options": [
           "$\\frac{n(n-1)}{2}$",
-          "$n^2$",
           "$n(n-1)$",
-          "$2n - 1$"
+          "$2n - 1$",
+          "$n^2$"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -503,12 +503,12 @@ const MID2_PRACTICE = {
         "topic": "Bipartite Graphs",
         "question": "A graph $G$ is bipartite if and only if it contains no cycles of:",
         "options": [
-          "Odd length",
-          "Even length",
           "Length 4",
-          "Length greater than 3"
+          "Even length",
+          "Length greater than 3",
+          "Odd length"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DM-2024",
         "explanation": "König's theorem states that a graph is bipartite (2-colorable) if and only if it contains no odd-length cycles."
@@ -536,12 +536,12 @@ const MID2_PRACTICE = {
         "topic": "Four Color Theorem",
         "question": "According to the Four Color Theorem, what is the maximum chromatic number for any planar graph?",
         "options": [
-          "4",
           "5",
           "3",
+          "4",
           "6"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DM-2023",
         "explanation": "The Four Color Theorem proves that any planar graph can be colored using at most 4 colors ($\\\\chi(G) \\le 4$)."
@@ -561,6 +561,70 @@ const MID2_PRACTICE = {
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "A tree is a connected graph with no cycles, which always contains exactly $n - 1$ edges for $n$ vertices."
+      },
+      {
+        "id": "DM-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Subgroups & Lagrange's Theorem",
+        "question": "According to Lagrange's Theorem, the order of every subgroup of a finite group G divides the order of G.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-DM-Standard",
+        "explanation": "True. Lagrange's theorem states that if G is a finite group and H is a subgroup of G, then |H| divides |G|."
+      },
+      {
+        "id": "DM-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Groups & Identity Uniqueness",
+        "question": "A group (G, *) can possess more than one distinct identity element.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "easy",
+        "source": "pyq:MR25-DM-Standard",
+        "explanation": "False. The identity element in any group is strictly unique."
+      },
+      {
+        "id": "DM-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Normal Subgroups",
+        "question": "Every subgroup of an abelian group is a normal subgroup.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "medium",
+        "source": "pyq:MR25-DM-Standard",
+        "explanation": "True. In an abelian group, g*h = h*g for all elements, so g*H = H*g holds for all g in G."
+      },
+      {
+        "id": "DM-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Cyclic Groups",
+        "question": "Every cyclic group is guaranteed to be an abelian group.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-DM-Standard",
+        "explanation": "True. Since all elements in a cyclic group are powers of a generator g (i.e. g^a * g^b = g^(a+b) = g^b * g^a), all cyclic groups are abelian."
       }
     ],
     "COA": [
@@ -573,9 +637,9 @@ const MID2_PRACTICE = {
         "question": "In the restoring division algorithm, what operation is performed if the trial subtraction $(A - M)$ yields a negative remainder?",
         "options": [
           "$A$ is restored by adding $M$ back and $Q_0$ is set to 0",
-          "$A$ is left as negative and $Q_0$ is set to 1",
           "$M$ is shifted left",
-          "The dividend is cleared"
+          "The dividend is cleared",
+          "$A$ is left as negative and $Q_0$ is set to 1"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -606,12 +670,12 @@ const MID2_PRACTICE = {
         "topic": "IEEE 754 Format",
         "question": "In the standard IEEE 754 32-bit single-precision floating-point format, how many bits are allocated for sign, exponent, and mantissa (fraction)?",
         "options": [
+          "2 bits sign, 8 bits exponent, 22 bits fraction",
           "1 bit sign, 8 bits exponent, 23 bits fraction",
           "1 bit sign, 11 bits exponent, 20 bits fraction",
-          "2 bits sign, 8 bits exponent, 22 bits fraction",
           "1 bit sign, 7 bits exponent, 24 bits fraction"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "IEEE 754 single-precision (32-bit) uses 1 bit for sign, 8 bits for biased exponent, and 23 bits for normalized mantissa."
@@ -639,12 +703,12 @@ const MID2_PRACTICE = {
         "topic": "Floating-Point Normalization",
         "question": "In normalized IEEE 754 representation, what is the implicit leading bit of the mantissa?",
         "options": [
-          "1",
-          "0",
           "Sign bit",
+          "0",
+          "1",
           "Parity bit"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "Normalized binary floating point numbers have a hidden/implicit 1 before the binary point ($1.F$), saving one bit of storage precision."
@@ -673,12 +737,12 @@ const MID2_PRACTICE = {
         "topic": "Floating-Point Multiplication",
         "question": "When multiplying two floating-point numbers in IEEE 754, what is done with the exponents?",
         "options": [
-          "Exponents are added and bias is subtracted",
-          "Exponents are multiplied",
+          "Exponents remain unchanged",
           "Exponents are subtracted",
-          "Exponents remain unchanged"
+          "Exponents are multiplied",
+          "Exponents are added and bias is subtracted"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Since stored exponents already contain bias ($E_1 + B$ and $E_2 + B$), adding them gives $E_1 + E_2 + 2B$, so bias $B$ must be subtracted once."
@@ -707,9 +771,9 @@ const MID2_PRACTICE = {
         "question": "In IEEE 754 standard, zero is represented when:",
         "options": [
           "Exponent is 0 and fraction is 0",
-          "Exponent is 255 and fraction is 0",
+          "Fraction is 1 and exponent is 0",
           "All 32 bits are 1",
-          "Fraction is 1 and exponent is 0"
+          "Exponent is 255 and fraction is 0"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -742,9 +806,9 @@ const MID2_PRACTICE = {
         "question": "Which of the following memories is fastest in access time but has the smallest storage capacity?",
         "options": [
           "CPU Registers",
+          "Solid State Drive (SSD)",
           "Level 1 Cache",
-          "Main Memory (RAM)",
-          "Solid State Drive (SSD)"
+          "Main Memory (RAM)"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -775,12 +839,12 @@ const MID2_PRACTICE = {
         "topic": "Cache Mapping",
         "question": "In direct-mapped cache, a memory block $j$ is mapped to cache line $i$ using the formula:",
         "options": [
+          "$i = j / m$",
           "$i = j \\pmod m$, where $m$ is the number of cache lines",
-          "$i = j \\times m$",
           "$i = j + m$",
-          "$i = j / m$"
+          "$i = j \\times m$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2023",
         "explanation": "Direct mapping uniquely maps main memory block $j$ to cache block $i = j \\pmod m$, where $m$ is the total number of lines in cache."
@@ -808,12 +872,12 @@ const MID2_PRACTICE = {
         "topic": "Cache Write Policies",
         "question": "Which cache write policy writes updated data simultaneously to both the cache and main memory?",
         "options": [
-          "Write-Through",
-          "Write-Back",
           "Write-Allocate",
-          "No-Write Allocate"
+          "Write-Through",
+          "No-Write Allocate",
+          "Write-Back"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "Write-through immediately updates both cache and main memory on a write hit, guaranteeing consistency at the expense of memory bus traffic."
@@ -844,9 +908,9 @@ const MID2_PRACTICE = {
         "question": "Why is Dynamic RAM (DRAM) slower than Static RAM (SRAM)?",
         "options": [
           "DRAM stores charge on capacitors and requires periodic refreshing",
+          "DRAM cannot be multiplexed",
           "DRAM uses 6 transistors per cell",
-          "DRAM is non-volatile",
-          "DRAM cannot be multiplexed"
+          "DRAM is non-volatile"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -861,12 +925,12 @@ const MID2_PRACTICE = {
         "topic": "Virtual Memory",
         "question": "Virtual memory gives the programmer the illusion of a main memory that is:",
         "options": [
-          "Much larger than actual physical memory",
           "Faster than CPU registers",
+          "Much larger than actual physical memory",
           "Non-volatile like magnetic tape",
           "Completely immune to address errors"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2023",
         "explanation": "Virtual memory maps large virtual address spaces onto smaller physical RAM by swapping pages to and from secondary storage."
@@ -894,12 +958,12 @@ const MID2_PRACTICE = {
         "topic": "Page Fault",
         "question": "A page fault exception is generated by the MMU when:",
         "options": [
-          "The referenced page is not currently present in physical RAM",
-          "A cache line is evicted",
           "The CPU executes an invalid opcode",
-          "Virtual memory is full"
+          "Virtual memory is full",
+          "The referenced page is not currently present in physical RAM",
+          "A cache line is evicted"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "A page fault occurs when a program attempts to access a page marked invalid in the page table (not loaded in physical memory)."
@@ -912,12 +976,12 @@ const MID2_PRACTICE = {
         "topic": "DMA Transfer",
         "question": "Direct Memory Access (DMA) allows high-speed I/O devices to transfer data directly to/from memory without:",
         "options": [
-          "Continuous CPU involvement",
-          "The system bus",
           "Any memory address register",
-          "A clock signal"
+          "Continuous CPU involvement",
+          "A clock signal",
+          "The system bus"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2023",
         "explanation": "DMA offloads block data transfers from the CPU, transferring data directly between memory and peripherals under DMA controller supervision."
@@ -946,9 +1010,9 @@ const MID2_PRACTICE = {
         "question": "In vectored interrupts, how does the CPU determine the address of the Interrupt Service Routine (ISR)?",
         "options": [
           "The interrupting device supplies a vector address on the data bus",
-          "The CPU polls every peripheral in sequence",
+          "The OS searches the disk",
           "The address is hardcoded at location 0",
-          "The OS searches the disk"
+          "The CPU polls every peripheral in sequence"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -979,12 +1043,12 @@ const MID2_PRACTICE = {
         "topic": "Instruction Pipelining",
         "question": "In an ideal $k$-stage instruction pipeline with cycle time $\\tau$, what is the speedup factor for $n$ instructions when $n$ is very large?",
         "options": [
-          "$k$",
           "$k \\times n$",
           "$n / k$",
+          "$k$",
           "$k / 2$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2023",
         "explanation": "The maximum theoretical speedup of a $k$-stage pipeline over a non-pipelined processor for large $n$ approaches the number of stages $k$."
@@ -997,12 +1061,12 @@ const MID2_PRACTICE = {
         "topic": "Pipeline Hazards",
         "question": "A data hazard (RAW - Read After Write) in a pipeline occurs when:",
         "options": [
-          "An instruction depends on the result of a previous instruction still in the pipeline",
-          "Two instructions need the same hardware resource simultaneously",
           "A branch instruction changes program counter",
-          "A cache miss occurs"
+          "An instruction depends on the result of a previous instruction still in the pipeline",
+          "A cache miss occurs",
+          "Two instructions need the same hardware resource simultaneously"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2024",
         "explanation": "Data hazards occur when an instruction attempts to read a register or memory location before a preceding instruction has written its result."
@@ -1032,8 +1096,8 @@ const MID2_PRACTICE = {
         "question": "Which hardware optimization resolves data hazards without stalling the pipeline?",
         "options": [
           "Operand Forwarding (Bypassing)",
-          "Dynamic RAM refreshing",
           "Branch target buffers",
+          "Dynamic RAM refreshing",
           "Instruction cache prefetching"
         ],
         "answerIndex": 0,
@@ -1065,12 +1129,12 @@ const MID2_PRACTICE = {
         "topic": "Programmed I/O",
         "question": "The primary disadvantage of Programmed I/O is that:",
         "options": [
-          "The CPU wastes clock cycles in a busy-waiting polling loop",
           "It requires specialized DMA controllers",
-          "It cannot transfer bytes",
-          "It causes pipeline structural hazards"
+          "It causes pipeline structural hazards",
+          "The CPU wastes clock cycles in a busy-waiting polling loop",
+          "It cannot transfer bytes"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-COA-2023",
         "explanation": "In Programmed I/O, the CPU is trapped in a tight loop repeatedly polling the device status register until the device is ready."
@@ -1083,12 +1147,12 @@ const MID2_PRACTICE = {
         "topic": "Daisy Chaining",
         "question": "In interrupt priority management, daisy chaining is a hardware technique that establishes priority through:",
         "options": [
+          "Independent interrupt lines for each device",
           "Serial connection of devices in priority order",
           "Software polling",
-          "Independent interrupt lines for each device",
           "Time-slice multiplexing"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-COA-2024",
         "explanation": "Daisy chaining connects the interrupt acknowledge signal in series from the highest priority device to lowest priority device."
@@ -1107,6 +1171,70 @@ const MID2_PRACTICE = {
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Pipeline efficiency $\\eta = \\frac{\\text{Speedup}}{k}$ measures the proportion of time that stages are actively doing useful work."
+      },
+      {
+        "id": "COA-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Restoring Division Algorithm",
+        "question": "In the restoring division algorithm, if the remainder after subtraction is negative, the original value must be restored by adding the divisor back.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-COA-Standard",
+        "explanation": "True. When A < 0, the quotient bit is set to 0 and A is restored by computing A = A + M."
+      },
+      {
+        "id": "COA-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "IEEE 754 Floating Point",
+        "question": "In the IEEE 754 32-bit single-precision floating point standard, the exponent bias is 127.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-COA-Standard",
+        "explanation": "True. For an 8-bit exponent, the bias is 2^(8-1) - 1 = 127."
+      },
+      {
+        "id": "COA-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Non-Restoring Division",
+        "question": "Non-restoring division performs a restoring addition step in every clock cycle where remainder is negative.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "medium",
+        "source": "pyq:MR25-COA-Standard",
+        "explanation": "False. Non-restoring division eliminates the restore step entirely by shifting and either adding or subtracting in the subsequent cycle."
+      },
+      {
+        "id": "COA-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "DMA Direct Memory Access",
+        "question": "DMA controllers transfer blocks of data directly between I/O devices and main memory without continuous CPU intervention.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-COA-Standard",
+        "explanation": "True. The DMA controller takes over the system bus from the CPU to perform high-speed block transfers directly."
       }
     ],
     "OOPJ": [
@@ -1118,12 +1246,12 @@ const MID2_PRACTICE = {
         "topic": "Thread Creation",
         "question": "Which two mechanisms can be used in Java to define and create a new thread of execution?",
         "options": [
-          "Extending the Thread class or implementing the Runnable interface",
           "Implementing the Callable interface or extending the Process class",
           "Extending the Applet class or implementing Serializable",
-          "Using the synchronized keyword or using volatile variables"
+          "Using the synchronized keyword or using volatile variables",
+          "Extending the Thread class or implementing the Runnable interface"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "In Java, a thread can be created either by subclassing java.lang.Thread and overriding run(), or by implementing java.lang.Runnable and passing it to a Thread instance."
@@ -1151,12 +1279,12 @@ const MID2_PRACTICE = {
         "topic": "Thread Lifecycle States",
         "question": "Which of the following represents valid states in the Java Thread lifecycle (Thread.State enum)?",
         "options": [
+          "READY, EXECUTING, SUSPENDED, STOPPED",
           "NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED",
           "STARTING, RUNNING, SLEEPING, DEAD",
-          "READY, EXECUTING, SUSPENDED, STOPPED",
           "INIT, ACTIVE, IDLE, DESTROYED"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2024",
         "explanation": "Thread.State enum defines six distinct lifecycle states: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, and TERMINATED."
@@ -1169,12 +1297,12 @@ const MID2_PRACTICE = {
         "topic": "Thread Synchronization",
         "question": "What happens when a thread enters a synchronized instance method of an object?",
         "options": [
-          "It acquires the intrinsic lock (monitor) of that object instance",
           "It acquires the lock on the entire class object",
-          "It prevents all other threads from accessing local variables",
-          "It terminates all lower-priority threads running in parallel"
+          "It acquires the intrinsic lock (monitor) of that object instance",
+          "It terminates all lower-priority threads running in parallel",
+          "It prevents all other threads from accessing local variables"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "Every Java object has an intrinsic monitor lock. A thread entering a synchronized instance method must acquire this monitor lock on 'this' instance before executing."
@@ -1202,12 +1330,12 @@ const MID2_PRACTICE = {
         "topic": "IllegalMonitorStateException",
         "question": "If a thread calls wait() or notify() on an object without holding that object's monitor lock, what runtime exception is thrown?",
         "options": [
-          "IllegalMonitorStateException",
+          "NullPointerException",
           "InterruptedException",
           "IllegalThreadStateException",
-          "NullPointerException"
+          "IllegalMonitorStateException"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Calling wait(), notify(), or notifyAll() outside a synchronized context synchronized on that specific object throws java.lang.IllegalMonitorStateException at runtime."
@@ -1268,12 +1396,12 @@ const MID2_PRACTICE = {
         "topic": "Volatile Keyword",
         "question": "What guarantee does the 'volatile' keyword provide for a variable in Java multithreading?",
         "options": [
-          "Guarantees visibility of changes across threads by reading/writing directly from main memory",
-          "Guarantees mutual exclusion and atomic compound operations (like count++)",
+          "Ensures the variable cannot be serialized",
           "Prevents the variable from being garbage collected",
-          "Ensures the variable cannot be serialized"
+          "Guarantees visibility of changes across threads by reading/writing directly from main memory",
+          "Guarantees mutual exclusion and atomic compound operations (like count++)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "The volatile modifier ensures memory visibility: reads and writes go directly to main memory rather than thread-local CPU caches, though it does not provide atomicity for compound updates."
@@ -1286,12 +1414,12 @@ const MID2_PRACTICE = {
         "topic": "Byte Streams vs Character Streams",
         "question": "Which superclasses form the root of all byte-oriented input and output streams in Java respectively?",
         "options": [
-          "InputStream and OutputStream",
-          "Reader and Writer",
           "FileInputStream and FileOutputStream",
-          "DataInputStream and DataOutputStream"
+          "InputStream and OutputStream",
+          "DataInputStream and DataOutputStream",
+          "Reader and Writer"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "In java.io, byte streams are derived from abstract classes InputStream and OutputStream (handling 8-bit bytes), while character streams derive from Reader and Writer (16-bit Unicode)."
@@ -1319,12 +1447,12 @@ const MID2_PRACTICE = {
         "topic": "Java Serialization",
         "question": "Which interface must a Java class implement to permit its instances to be serialized using ObjectOutputStream?",
         "options": [
-          "java.io.Serializable",
           "java.io.Clonable",
-          "java.lang.Comparable",
-          "java.io.External"
+          "java.io.Serializable",
+          "java.io.External",
+          "java.lang.Comparable"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2024",
         "explanation": "java.io.Serializable is a marker interface (with no methods) that indicates a class can be flattened into a byte stream via ObjectOutputStream."
@@ -1352,8 +1480,8 @@ const MID2_PRACTICE = {
         "question": "In Java 7+ try-with-resources statement, what interface must the resource object implement so that it is closed automatically?",
         "options": [
           "java.lang.AutoCloseable",
-          "java.io.CloseableInterface",
           "java.lang.Disposable",
+          "java.io.CloseableInterface",
           "java.lang.Flushable"
         ],
         "answerIndex": 0,
@@ -1370,9 +1498,9 @@ const MID2_PRACTICE = {
         "question": "What is the primary motivation for introducing Generics in Java 5?",
         "options": [
           "Compile-time type checking and eliminating explicit type casts",
+          "Allowing primitive types as template parameters directly",
           "Increasing runtime speed through multiple inheritance",
-          "Enabling automatic memory management for primitives",
-          "Allowing primitive types as template parameters directly"
+          "Enabling automatic memory management for primitives"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -1402,12 +1530,12 @@ const MID2_PRACTICE = {
         "topic": "Bounded Type Parameters",
         "question": "Which syntax correctly defines an upper-bounded generic method accepting any subclass of Number in Java?",
         "options": [
-          "public <T extends Number> void process(List<T> list)",
-          "public <T super Number> void process(List<T> list)",
           "public <T implements Number> void process(List<T> list)",
-          "public <T : Number> void process(List<T> list)"
+          "public <T : Number> void process(List<T> list)",
+          "public <T extends Number> void process(List<T> list)",
+          "public <T super Number> void process(List<T> list)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "Upper bounds in generics are specified using the 'extends' keyword (<T extends Number>), which restricts T to Number or any of its subclasses (Integer, Double, etc.)."
@@ -1435,12 +1563,12 @@ const MID2_PRACTICE = {
         "topic": "RandomAccessFile",
         "question": "Which java.io class allows both reading and writing at arbitrary positions within a file using seek()?",
         "options": [
-          "RandomAccessFile",
           "FileChannelStream",
+          "SequenceInputStream",
           "DataOutputStream",
-          "SequenceInputStream"
+          "RandomAccessFile"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2024",
         "explanation": "RandomAccessFile implements DataInput and DataOutput and supports direct seeking to any byte offset using the seek(long position) method."
@@ -1453,12 +1581,12 @@ const MID2_PRACTICE = {
         "topic": "Collections Hierarchy",
         "question": "Which of the following interfaces is NOT a sub-interface of java.util.Collection?",
         "options": [
-          "java.util.Map",
           "java.util.List",
+          "java.util.Map",
           "java.util.Set",
           "java.util.Queue"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "Map represents key-value pairs and does not extend java.util.Collection; List, Set, and Queue are the three primary direct sub-interfaces of Collection."
@@ -1487,12 +1615,12 @@ const MID2_PRACTICE = {
         "topic": "ArrayList vs LinkedList",
         "question": "Why is an ArrayList generally preferred over a LinkedList for random read access operations?",
         "options": [
-          "ArrayList provides $O(1)$ constant-time indexed lookup via underlying array",
           "LinkedList uses contiguous memory blocks",
-          "ArrayList takes $O(1)$ time to insert at the beginning",
-          "LinkedList does not implement the List interface"
+          "LinkedList does not implement the List interface",
+          "ArrayList provides $O(1)$ constant-time indexed lookup via underlying array",
+          "ArrayList takes $O(1)$ time to insert at the beginning"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "ArrayList is backed by a dynamic array, so get(i) performs direct pointer offset calculation in O(1) time, whereas LinkedList requires O(n) sequential node traversal."
@@ -1519,12 +1647,12 @@ const MID2_PRACTICE = {
         "topic": "Comparable vs Comparator",
         "question": "What is the key difference between Comparable and Comparator interfaces?",
         "options": [
+          "Comparable cannot be used with TreeSet",
           "Comparable defines natural order inside the class via compareTo(), while Comparator provides custom order outside via compare()",
-          "Comparable is in java.util while Comparator is in java.lang",
           "Comparator modifies the original class bytecode",
-          "Comparable cannot be used with TreeSet"
+          "Comparable is in java.util while Comparator is in java.lang"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "Comparable<T> (java.lang) imparts natural ordering inside the class definition (compareTo), whereas Comparator<T> (java.util) allows multiple separate custom comparison strategies (compare)."
@@ -1537,12 +1665,12 @@ const MID2_PRACTICE = {
         "topic": "HashMap Internal Hashing",
         "question": "In Java 8, when the number of colliding elements in a single HashMap bucket exceeds the TREEIFY_THRESHOLD (8), the linked list is converted into a:",
         "options": [
-          "Balanced Red-Black Tree",
-          "Binary Search Tree without balance",
+          "Skip List",
           "Min-Heap",
-          "Skip List"
+          "Balanced Red-Black Tree",
+          "Binary Search Tree without balance"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Java 8 improves HashMap worst-case collision performance from O(n) to O(log n) by transforming chained lists exceeding 8 entries into balanced red-black trees."
@@ -1570,12 +1698,12 @@ const MID2_PRACTICE = {
         "topic": "Delegation Event Model",
         "question": "In Java's Delegation Event Model, which component generates the event when a user interacts with a GUI control?",
         "options": [
-          "Event Source",
           "Event Listener",
+          "Event Dispatch Thread",
           "Event Adapter",
-          "Event Dispatch Thread"
+          "Event Source"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-OOPJ-2022",
         "explanation": "In the Delegation Event Model, the Event Source (e.g. JButton) detects the user interaction, creates an Event object, and delegates it to registered Event Listeners."
@@ -1603,12 +1731,12 @@ const MID2_PRACTICE = {
         "topic": "Event Adapters",
         "question": "What is the primary benefit of using Event Adapter classes (such as MouseAdapter or WindowAdapter)?",
         "options": [
+          "They increase rendering speed of GUI components",
           "They provide empty default implementations so you override only the methods you need",
           "They convert AWT events to Swing events automatically",
-          "They run event callbacks in a separate daemon thread",
-          "They increase rendering speed of GUI components"
+          "They run event callbacks in a separate daemon thread"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Adapter classes implement listener interfaces with blank method bodies, sparing developers from implementing unused methods of multi-method listener interfaces."
@@ -1621,12 +1749,12 @@ const MID2_PRACTICE = {
         "topic": "Swing vs AWT",
         "question": "Why are Swing components referred to as 'lightweight' compared to AWT components?",
         "options": [
-          "Swing components are written purely in Java and drawn without native OS peer windows",
-          "Swing components consume zero RAM memory",
           "Swing components only run in applet browsers",
+          "Swing components consume zero RAM memory",
+          "Swing components are written purely in Java and drawn without native OS peer windows",
           "Swing does not support mouse events"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-OOPJ-2023",
         "explanation": "AWT components are heavyweight because they tie directly to underlying OS GUI widgets (peers). Swing components are lightweight, painted entirely in Java on top of top-level containers."
@@ -1645,6 +1773,70 @@ const MID2_PRACTICE = {
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "JFrame's content pane defaults to BorderLayout (dividing regions into North, South, East, West, and Center), while JPanel defaults to FlowLayout."
+      },
+      {
+        "id": "OOPJ-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Java Thread Invocation",
+        "question": "Directly invoking t.run() in Java causes the code to execute in a brand-new concurrent thread.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "medium",
+        "source": "pyq:MR25-OOPJ-Standard",
+        "explanation": "False. Calling run() directly merely executes the method in the caller's current thread; t.start() is required to spawn a new concurrent thread."
+      },
+      {
+        "id": "OOPJ-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Thread Synchronization",
+        "question": "In Java, the synchronized keyword can be applied to methods and blocks, but cannot be applied directly to class variables.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "medium",
+        "source": "pyq:MR25-OOPJ-Standard",
+        "explanation": "True. 'synchronized' modifier is valid only on methods and code blocks, not variable declarations (variables use 'volatile')."
+      },
+      {
+        "id": "OOPJ-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Thread join() Method",
+        "question": "Calling thread.join() causes the calling thread to pause until the referenced thread completes its execution.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-OOPJ-Standard",
+        "explanation": "True. join() waits for a thread to die before continuing execution."
+      },
+      {
+        "id": "OOPJ-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Inter-thread Communication",
+        "question": "The wait(), notify(), and notifyAll() methods in Java belong to java.lang.Thread rather than java.lang.Object.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "medium",
+        "source": "pyq:MR25-OOPJ-Standard",
+        "explanation": "False. They are defined directly on java.lang.Object because monitor locks are associated with individual object instances."
       }
     ],
     "DBMS": [
@@ -1656,12 +1848,12 @@ const MID2_PRACTICE = {
         "topic": "First Normal Form (1NF)",
         "question": "A relation is in First Normal Form (1NF) if and only if:",
         "options": [
-          "All attribute values are atomic and non-divisible",
           "Every non-key attribute is fully functionally dependent on the primary key",
-          "There are no transitive dependencies",
-          "Every determinant is a super key"
+          "Every determinant is a super key",
+          "All attribute values are atomic and non-divisible",
+          "There are no transitive dependencies"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "First Normal Form requires that every attribute domain contains only atomic (indivisible) scalar values and each tuple has a single value for each attribute."
@@ -1691,9 +1883,9 @@ const MID2_PRACTICE = {
         "question": "For a non-trivial functional dependency $X \\rightarrow Y$ to hold in 3NF, which condition must be met?",
         "options": [
           "$X$ is a superkey OR $Y$ is a prime attribute",
-          "$X$ must be a candidate key AND $Y$ must be a prime attribute",
           "$X$ must be a single attribute",
-          "$Y$ must be a foreign key"
+          "$Y$ must be a foreign key",
+          "$X$ must be a candidate key AND $Y$ must be a prime attribute"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -1708,12 +1900,12 @@ const MID2_PRACTICE = {
         "topic": "Boyce-Codd Normal Form (BCNF)",
         "question": "How does Boyce-Codd Normal Form (BCNF) differ from 3NF?",
         "options": [
+          "BCNF does not guarantee lossless-join decomposition",
           "BCNF requires every determinant $X$ in $X \\rightarrow Y$ to be a superkey without exception",
           "BCNF allows non-prime attributes to determine prime attributes",
-          "BCNF handles multi-valued dependencies",
-          "BCNF does not guarantee lossless-join decomposition"
+          "BCNF handles multi-valued dependencies"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "BCNF is strictly stronger than 3NF: for every non-trivial FD $X \\rightarrow Y$, $X$ must be a superkey. It eliminates the 3NF loophole where $Y$ is a prime attribute."
@@ -1742,12 +1934,12 @@ const MID2_PRACTICE = {
         "topic": "Dependency Preservation",
         "question": "Which of the following normal forms guarantees both lossless-join decomposition AND dependency preservation simultaneously?",
         "options": [
-          "3NF",
-          "BCNF",
           "4NF",
-          "5NF"
+          "BCNF",
+          "5NF",
+          "3NF"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "Any relation can always be decomposed into 3NF while preserving dependencies and guaranteeing a lossless join. BCNF guarantees lossless join, but dependency preservation is not always achievable."
@@ -1776,12 +1968,12 @@ const MID2_PRACTICE = {
         "topic": "Fifth Normal Form (5NF)",
         "question": "Fifth Normal Form (5NF), also known as Project-Join Normal Form (PJNF), deals with which type of dependencies?",
         "options": [
+          "Transitive Dependencies",
           "Join Dependencies",
-          "Multi-valued Dependencies",
           "Partial Dependencies",
-          "Transitive Dependencies"
+          "Multi-valued Dependencies"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "5NF deals with Join Dependencies (JD, denoted $\\bowtie[R_1, R_2, \\dots, R_n]$), ensuring relations cannot be losslessly decomposed into smaller projections unless all join components are superkeys."
@@ -1794,12 +1986,12 @@ const MID2_PRACTICE = {
         "topic": "ACID Properties",
         "question": "Which ACID property guarantees that all operations of a transaction are completed successfully or none of them have any effect?",
         "options": [
-          "Atomicity",
-          "Consistency",
           "Isolation",
+          "Consistency",
+          "Atomicity",
           "Durability"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "Atomicity (all-or-nothing principle) guarantees that a transaction is treated as a single atomic unit of work: if any step fails, the system rolls back to the initial state."
@@ -1826,12 +2018,12 @@ const MID2_PRACTICE = {
         "topic": "Conflict Serializability",
         "question": "Two operations $I_i$ and $I_j$ in a concurrent schedule are said to conflict if they belong to different transactions, access the same data item, and:",
         "options": [
-          "At least one of them is a write operation",
-          "Both of them are read operations",
           "Both of them are commit operations",
-          "They are separated by a checkpoint"
+          "Both of them are read operations",
+          "They are separated by a checkpoint",
+          "At least one of them is a write operation"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "Operations conflict if they are from different transactions on the same data item and at least one is a write ($R_1(A)-W_2(A)$, $W_1(A)-R_2(A)$, or $W_1(A)-W_2(A)$)."
@@ -1861,12 +2053,12 @@ const MID2_PRACTICE = {
         "topic": "Two-Phase Locking (2PL)",
         "question": "What is the defining rule of the Two-Phase Locking (2PL) protocol?",
         "options": [
-          "A transaction cannot acquire any new lock once it releases any lock",
+          "Read locks are released immediately after reading",
           "All locks must be exclusive locks",
-          "Transactions can only lock the entire database",
-          "Read locks are released immediately after reading"
+          "A transaction cannot acquire any new lock once it releases any lock",
+          "Transactions can only lock the entire database"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "In 2PL, a transaction consists of a Growing Phase (acquiring locks without releasing any) and a Shrinking Phase (releasing locks without acquiring any new ones)."
@@ -1896,12 +2088,12 @@ const MID2_PRACTICE = {
         "topic": "Deadlock in 2PL",
         "question": "Does the basic Two-Phase Locking (2PL) protocol guarantee freedom from deadlocks?",
         "options": [
-          "No, 2PL guarantees serializability but does NOT prevent deadlocks",
-          "Yes, 2PL prevents both serializability violations and deadlocks",
           "Yes, because the shrinking phase resolves all cycles",
-          "Only if shared locks are disallowed"
+          "Yes, 2PL prevents both serializability violations and deadlocks",
+          "Only if shared locks are disallowed",
+          "No, 2PL guarantees serializability but does NOT prevent deadlocks"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "2PL guarantees conflict serializability, but it does NOT prevent deadlock. Two transactions can easily enter a mutual lock wait state."
@@ -1928,12 +2120,12 @@ const MID2_PRACTICE = {
         "topic": "Timestamp-Ordering Protocol",
         "question": "Thomas' Write Rule is an optimization to the Timestamp-Ordering protocol that safely ignores outdated write operations when:",
         "options": [
-          "$TS(T) < W\\text{-timestamp}(Q)$",
-          "$TS(T) < R\\text{-timestamp}(Q)$",
           "$TS(T) > W\\text{-timestamp}(Q)$",
-          "The transaction aborts"
+          "$TS(T) < R\\text{-timestamp}(Q)$",
+          "The transaction aborts",
+          "$TS(T) < W\\text{-timestamp}(Q)$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Thomas' Write Rule observes that if $TS(T) < W\\text{-timestamp}(Q)$, the value written by $T$ has already been overwritten by a newer transaction, so $T$'s write can be safely skipped without aborting."
@@ -1946,12 +2138,12 @@ const MID2_PRACTICE = {
         "topic": "View Serializability",
         "question": "Which statement accurately describes the relationship between Conflict Serializability and View Serializability?",
         "options": [
-          "Every conflict serializable schedule is view serializable, but not vice versa",
           "Every view serializable schedule is conflict serializable",
+          "Neither set is a subset of the other",
           "Conflict serializability and view serializability are completely identical sets",
-          "Neither set is a subset of the other"
+          "Every conflict serializable schedule is view serializable, but not vice versa"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "Conflict Serializability $\\subset$ View Serializability. Schedules containing blind writes may be view serializable without being conflict serializable."
@@ -1964,12 +2156,12 @@ const MID2_PRACTICE = {
         "topic": "Write-Ahead Logging (WAL)",
         "question": "The Write-Ahead Logging (WAL) protocol dictates that:",
         "options": [
-          "The log record for an update must be written to stable non-volatile storage before the actual database page is written to disk",
           "Database buffer frames must be written to disk before transactions commit",
+          "The log record for an update must be written to stable non-volatile storage before the actual database page is written to disk",
           "All read locks must be written to the log",
           "Checkpoints must occur before every update"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "WAL requires that undo log records are flushed to non-volatile disk before dirty database pages are written to disk, ensuring atomicity and recoverability."
@@ -1998,12 +2190,12 @@ const MID2_PRACTICE = {
         "topic": "Deferred Modification Recovery",
         "question": "In the Deferred Database Modification recovery scheme, updates are written to the database disk only after:",
         "options": [
-          "The transaction commits successfully",
           "The first read operation is completed",
-          "Every single SQL statement executes",
-          "The system enters an idle state"
+          "The system enters an idle state",
+          "The transaction commits successfully",
+          "Every single SQL statement executes"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "Deferred modification postpones all disk writes until transaction commit. Hence, uncommitted aborted transactions require no UNDO operations, only REDO for committed ones."
@@ -2031,8 +2223,8 @@ const MID2_PRACTICE = {
         "question": "What is the primary advantage of Shadow Paging compared to log-based recovery schemes?",
         "options": [
           "It does not require maintaining an undo log or redo log during runtime",
-          "It allows multiple transactions to write to the same page concurrently",
           "It completely eliminates disk fragmentation",
+          "It allows multiple transactions to write to the same page concurrently",
           "It works without a page table"
         ],
         "answerIndex": 0,
@@ -2064,8 +2256,8 @@ const MID2_PRACTICE = {
         "question": "A clustering (primary) index is defined as an index on a file where:",
         "options": [
           "The physical ordering of records in the data file matches the ordering of the index search keys",
-          "The index is stored exclusively in RAM cache",
           "Multiple search keys point to the same physical disk block",
+          "The index is stored exclusively in RAM cache",
           "Every field in the record is indexed simultaneously"
         ],
         "answerIndex": 0,
@@ -2081,12 +2273,12 @@ const MID2_PRACTICE = {
         "topic": "B+ Tree Leaf Nodes",
         "question": "In a B+ Tree index, where are actual record pointers (data pointers) stored?",
         "options": [
-          "Only in the leaf nodes, which are linked together in a doubly linked list",
+          "Exclusively in a separate hash table",
           "In both internal nodes and leaf nodes equally",
           "Only in the root node",
-          "Exclusively in a separate hash table"
+          "Only in the leaf nodes, which are linked together in a doubly linked list"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-DBMS-2024",
         "explanation": "In a B+ Tree, internal nodes store only router search-keys and child pointers; all actual record pointers reside in leaf nodes, which are linked sequentially for efficient range scans."
@@ -2115,12 +2307,12 @@ const MID2_PRACTICE = {
         "topic": "B+ Tree Search Complexity",
         "question": "What is the worst-case time complexity to search for a record in a balanced B+ Tree with $N$ entries and fanout order $m$?",
         "options": [
+          "$O(1)$",
           "$O(\\log_m N)$",
           "$O(N)$",
-          "$O(N \\log N)$",
-          "$O(1)$"
+          "$O(N \\log N)$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-DBMS-2023",
         "explanation": "A B+ tree is height-balanced with height bounded by $\\lceil \\log_{\\lceil m/2 \\rceil} N \\rceil$, yielding $O(\\log_m N)$ disk I/O operations for search."
@@ -2148,12 +2340,12 @@ const MID2_PRACTICE = {
         "topic": "Secondary Indexing",
         "question": "Why must a secondary index on an unordered (heap) data file always be a dense index?",
         "options": [
-          "Because records are not physically sorted by the secondary key, so sparse pointers cannot determine ranges",
           "Because heap files do not support primary keys",
+          "Because records are not physically sorted by the secondary key, so sparse pointers cannot determine ranges",
           "Because secondary indexes are stored on magnetic tape",
           "Because secondary indexes only allow unique attributes"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "hard",
         "source": "pyq:MR25-DBMS-2022",
         "explanation": "Sparse indexing relies on physical sorting of records to bracket search ranges. If the file is not sorted on the indexed attribute, every record must have an explicit entry, requiring a dense index."
@@ -2166,12 +2358,12 @@ const MID2_PRACTICE = {
         "topic": "ARIES Recovery Algorithm",
         "question": "Which three phases are executed in order during crash recovery by the ARIES recovery algorithm?",
         "options": [
-          "Analysis, Redo, and Undo",
           "Scan, Lock, and Release",
           "Check, Log, and Commit",
+          "Analysis, Redo, and Undo",
           "Verify, Clean, and Rebuild"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "ARIES operates in three distinct phases: 1. Analysis (reconstructs state and dirty pages at crash), 2. Redo (repeats history to bring database to exact crash state), 3. Undo (reverses uncommitted transactions)."
@@ -2191,6 +2383,70 @@ const MID2_PRACTICE = {
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "Multi-level indexing treats the primary index as a base data file and builds a sparse outer index over it, reducing disk block transfers exponentially."
+      },
+      {
+        "id": "DBMS-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "BCNF vs 3NF",
+        "question": "Every relational schema that satisfies Boyce-Codd Normal Form (BCNF) is guaranteed to also satisfy Third Normal Form (3NF).",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-DBMS-Standard",
+        "explanation": "True. BCNF is a stricter form of 3NF. If every determinant is a superkey, 3NF conditions are automatically met."
+      },
+      {
+        "id": "DBMS-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "2NF Partial Dependency",
+        "question": "A relation in 2NF allows non-prime attributes to be partially dependent on a composite candidate key.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "easy",
+        "source": "pyq:MR25-DBMS-Standard",
+        "explanation": "False. 2NF strictly prohibits any partial dependency of non-prime attributes on candidate keys."
+      },
+      {
+        "id": "DBMS-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Binary Relation BCNF",
+        "question": "Any relational schema consisting of exactly two attributes is always in BCNF.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "medium",
+        "source": "pyq:MR25-DBMS-Standard",
+        "explanation": "True. In a binary relation R(A, B), either A -> B (A is key), B -> A (B is key), or neither (AB is key). In all cases it is in BCNF."
+      },
+      {
+        "id": "DBMS-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Lossless Join Decomposition",
+        "question": "It is always possible to decompose any relation into BCNF while simultaneously guaranteeing both Lossless Join and Dependency Preservation.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "hard",
+        "source": "pyq:MR25-DBMS-Standard",
+        "explanation": "False. While lossless join can always be achieved in BCNF, dependency preservation is not always achievable (it is guaranteed only up to 3NF)."
       }
     ],
     "SE": [
@@ -2202,12 +2458,12 @@ const MID2_PRACTICE = {
         "topic": "Cohesion Types",
         "question": "Which type of cohesion is considered the highest and most desirable in component-level software design?",
         "options": [
-          "Functional Cohesion",
-          "Sequential Cohesion",
           "Communicational Cohesion",
-          "Coincidental Cohesion"
+          "Sequential Cohesion",
+          "Coincidental Cohesion",
+          "Functional Cohesion"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2022",
         "explanation": "Functional cohesion is the strongest form, where every element in a component contributes solely to executing a single, well-defined mathematical or logical task."
@@ -2234,12 +2490,12 @@ const MID2_PRACTICE = {
         "topic": "Coupling Types",
         "question": "Which of the following coupling types represents the worst (tightest) form of coupling between two modules?",
         "options": [
-          "Content Coupling",
-          "Common Coupling",
           "Control Coupling",
-          "Data Coupling"
+          "Content Coupling",
+          "Data Coupling",
+          "Common Coupling"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "Content coupling is the tightest and worst form: one module modifies or relies on the internal implementation, branch targets, or private memory of another module."
@@ -2267,12 +2523,12 @@ const MID2_PRACTICE = {
         "topic": "Common Coupling",
         "question": "Common coupling occurs between two or more software modules when:",
         "options": [
-          "Both modules access and manipulate shared global data structures",
           "One module passes composite data records to another",
-          "One module controls the internal logic branch of another",
-          "Modules call each other's public constructors"
+          "Both modules access and manipulate shared global data structures",
+          "Modules call each other's public constructors",
+          "One module controls the internal logic branch of another"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Common coupling arises when multiple modules share access to global memory areas or global variables, making side effects hard to trace."
@@ -2286,9 +2542,9 @@ const MID2_PRACTICE = {
         "question": "According to Theo Mandel's three Golden Rules of User Interface Design, which of the following is NOT one of the rules?",
         "options": [
           "Maximize graphics and animation complexity",
-          "Place the user in control",
+          "Make the interface consistent",
           "Reduce the user's memory load",
-          "Make the interface consistent"
+          "Place the user in control"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -2319,12 +2575,12 @@ const MID2_PRACTICE = {
         "topic": "Verification vs Validation",
         "question": "In software engineering, what is the core difference between Verification and Validation (Boehm's definitions)?",
         "options": [
-          "Verification asks 'Are we building the product right?', while Validation asks 'Are we building the right product?'",
-          "Verification is performed by users, while Validation is performed by compilers",
           "Verification only tests code, while Validation only checks design diagrams",
-          "There is no difference; they are synonymous"
+          "There is no difference; they are synonymous",
+          "Verification asks 'Are we building the product right?', while Validation asks 'Are we building the right product?'",
+          "Verification is performed by users, while Validation is performed by compilers"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2022",
         "explanation": "Verification ensures that the software conforms to its design specification ('Are we building the product right?'). Validation ensures the software meets real user needs ('Are we building the right product?')."
@@ -2352,12 +2608,12 @@ const MID2_PRACTICE = {
         "topic": "Bottom-Up Integration Drivers",
         "question": "In Bottom-Up integration testing, what auxiliary program component is written to invoke and pass test cases to low-level modules?",
         "options": [
+          "Mock Spy",
           "Test Driver",
           "Test Stub",
-          "Mock Spy",
           "Virtual Anchor"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "In bottom-up testing, high-level control routines are absent, so test drivers are constructed to invoke worker modules and capture their return values."
@@ -2370,12 +2626,12 @@ const MID2_PRACTICE = {
         "topic": "Regression Testing",
         "question": "What is the primary objective of performing Regression Testing after a code modification?",
         "options": [
-          "To confirm that recent bug fixes or changes have not introduced new defects into previously working features",
           "To measure the execution speed of database transactions",
+          "To confirm that recent bug fixes or changes have not introduced new defects into previously working features",
           "To verify that code passes compiler optimization passes",
           "To replace manual black-box tests with unit tests"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Regression testing re-executes a subset of existing test suites after changes to ensure that existing functionality remains intact and bug-free."
@@ -2404,12 +2660,12 @@ const MID2_PRACTICE = {
         "topic": "Cyclomatic Complexity Formula",
         "question": "For a program flow graph with $E$ edges, $N$ nodes, and $P$ connected components, McCabe's Cyclomatic Complexity $V(G)$ is calculated as:",
         "options": [
-          "$V(G) = E - N + 2P$",
           "$V(G) = E + N - P$",
-          "$V(G) = N - E + 2$",
-          "$V(G) = E \\times N / P$"
+          "$V(G) = E \\times N / P$",
+          "$V(G) = E - N + 2P$",
+          "$V(G) = N - E + 2$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2023",
         "explanation": "McCabe's cyclomatic complexity is $V(G) = E - N + 2P$. For a single component ($P = 1$), it equals $E - N + 2$, which also equals the number of predicate nodes $+ 1$ ($P_{red} + 1$)."
@@ -2470,12 +2726,12 @@ const MID2_PRACTICE = {
         "topic": "White-Box vs Black-Box",
         "question": "Which of the following testing methodologies relies exclusively on knowledge of internal control flow paths, conditions, and statements?",
         "options": [
-          "White-Box Testing (Structural Testing)",
-          "Black-Box Testing (Behavioral Testing)",
           "User Acceptance Testing (UAT)",
+          "Black-Box Testing (Behavioral Testing)",
+          "White-Box Testing (Structural Testing)",
           "Boundary Value Analysis"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2024",
         "explanation": "White-box (glass-box/structural) testing exercises internal logic paths, data flow, loops, and conditions based directly on source code inspection."
@@ -2489,9 +2745,9 @@ const MID2_PRACTICE = {
         "question": "Where and by whom is Alpha testing typically conducted?",
         "options": [
           "At the developer's site by end users in a controlled environment",
+          "By independent ISO certification auditors",
           "At end-user customer sites in live unmonitored settings",
-          "By compilers during automated nightly builds",
-          "By independent ISO certification auditors"
+          "By compilers during automated nightly builds"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -2506,12 +2762,12 @@ const MID2_PRACTICE = {
         "topic": "McCall's Quality Factors",
         "question": "In McCall's Quality Factors model, into which three categories are software quality factors organized?",
         "options": [
-          "Product Operation, Product Revision, and Product Transition",
-          "Functional, Non-Functional, and Architectural",
           "Design, Coding, and Testing",
-          "Reliability, Usability, and Scalability"
+          "Reliability, Usability, and Scalability",
+          "Product Operation, Product Revision, and Product Transition",
+          "Functional, Non-Functional, and Architectural"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2022",
         "explanation": "McCall's model organizes 11 quality factors under 3 views: Product Operation (using it), Product Revision (changing it), and Product Transition (porting it to new environments)."
@@ -2539,12 +2795,12 @@ const MID2_PRACTICE = {
         "topic": "CMMI Level 5",
         "question": "What is the primary characteristic of an organization operating at CMMI Level 5 (Optimizing)?",
         "options": [
-          "Continuous process improvement powered by quantitative feedback and piloting innovative ideas",
+          "Software development is outsourced",
           "Processes are documented but unpredictable",
-          "Project metrics are completely eliminated",
-          "Software development is outsourced"
+          "Continuous process improvement powered by quantitative feedback and piloting innovative ideas",
+          "Project metrics are completely eliminated"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-SE-2024",
         "explanation": "At Level 5 (Optimizing), an organization focuses on continuous process improvement using statistical root-cause analysis, defect prevention, and innovative technology pilots."
@@ -2573,12 +2829,12 @@ const MID2_PRACTICE = {
         "topic": "Basic COCOMO Model",
         "question": "In Boehm's Basic COCOMO model, what are the three development modes classified according to project team size and innovation?",
         "options": [
+          "Standard, Enterprise, and Critical",
           "Organic, Semidetached, and Embedded",
-          "Small, Medium, and Large",
           "Agile, Waterfall, and Spiral",
-          "Standard, Enterprise, and Critical"
+          "Small, Medium, and Large"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Basic COCOMO defines 3 project modes: Organic (small, familiar teams), Semidetached (intermediate team with mixed experience), and Embedded (tight hardware/software constraints)."
@@ -2639,12 +2895,12 @@ const MID2_PRACTICE = {
         "topic": "Software Maintenance Types",
         "question": "Modifying software to adapt it to changes in its execution environment (such as a new OS version, updated DBMS, or cloud infrastructure) is termed:",
         "options": [
-          "Adaptive Maintenance",
-          "Corrective Maintenance",
           "Perfective Maintenance",
-          "Preventive Maintenance"
+          "Preventive Maintenance",
+          "Corrective Maintenance",
+          "Adaptive Maintenance"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2022",
         "explanation": "Adaptive maintenance modifies the system to cope with external environmental changes (hardware, operating system, external libraries) without altering core functionality."
@@ -2657,12 +2913,12 @@ const MID2_PRACTICE = {
         "topic": "Corrective Maintenance",
         "question": "Which software maintenance category addresses diagnosing and rectifying residual errors and bug reports submitted by end users after release?",
         "options": [
-          "Corrective Maintenance",
           "Adaptive Maintenance",
           "Perfective Maintenance",
-          "Preventive Maintenance"
+          "Preventive Maintenance",
+          "Corrective Maintenance"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-SE-2023",
         "explanation": "Corrective maintenance (bug fixing) repairs errors and defects discovered while the application is in live operational production."
@@ -2690,9 +2946,9 @@ const MID2_PRACTICE = {
         "question": "In software risk projection (estimation), risk impact is calculated using which two primary metrics?",
         "options": [
           "Probability of occurrence and Severity of impact (Loss)",
-          "Cost of code and Lines of code",
           "Number of developers and Project duration",
-          "Compiler warnings and Cyclomatic complexity"
+          "Compiler warnings and Cyclomatic complexity",
+          "Cost of code and Lines of code"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -2707,12 +2963,12 @@ const MID2_PRACTICE = {
         "topic": "ISO 9126 Standard",
         "question": "The ISO 9126 standard evaluates software product quality across six key attributes: Functionality, Reliability, Usability, Efficiency, Maintainability, and:",
         "options": [
-          "Portability",
-          "Profitability",
+          "Programmability",
           "Popularity",
-          "Programmability"
+          "Profitability",
+          "Portability"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "ISO 9126 defines six top-level software characteristics: Functionality, Reliability, Usability, Efficiency, Maintainability, and Portability."
@@ -2730,6 +2986,70 @@ const MID2_PRACTICE = {
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "Perfective maintenance involves adding new features and performance enhancements requested by users, accounting for the lion's share of total lifecycle maintenance spend."
+      },
+      {
+        "id": "SE-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Cohesion Principles",
+        "question": "Functional cohesion represents the highest, most desirable degree of cohesion in modular software design.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-SE-Standard",
+        "explanation": "True. A functionally cohesive module performs exactly one well-defined computation or objective."
+      },
+      {
+        "id": "SE-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Coupling Levels",
+        "question": "Content coupling is the most desirable form of coupling because it gives components direct access to each other's memory.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "easy",
+        "source": "pyq:MR25-SE-Standard",
+        "explanation": "False. Content coupling is the tightest and worst form of coupling because one module modifies the internal code or private data of another."
+      },
+      {
+        "id": "SE-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Design Heuristics",
+        "question": "High Cohesion paired with Low Coupling is a fundamental heuristic for creating maintainable, testable software.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-SE-Standard",
+        "explanation": "True. High cohesion ensures modules are focused, while low coupling prevents changes in one module from rippling into others."
+      },
+      {
+        "id": "SE-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Cyclomatic Complexity",
+        "question": "McCabe's Cyclomatic Complexity metric calculates the number of linearly independent paths through a module's control flow graph.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "medium",
+        "source": "pyq:MR25-SE-Standard",
+        "explanation": "True. V(G) = E - N + 2P provides the minimum number of test cases required to achieve branch coverage."
       }
     ],
     "ES": [
@@ -2741,12 +3061,12 @@ const MID2_PRACTICE = {
         "topic": "Noise Pollution Limits",
         "question": "According to the Central Pollution Control Board (CPCB) of India, what is the permissible ambient noise level for residential zones during daytime?",
         "options": [
+          "75 dB(A)",
           "55 dB(A)",
           "65 dB(A)",
-          "75 dB(A)",
           "45 dB(A)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "CPCB noise limits for residential zones are 55 dB(A) during day time (6:00 AM to 10:00 PM) and 45 dB(A) during night time (10:00 PM to 6:00 AM)."
@@ -2775,12 +3095,12 @@ const MID2_PRACTICE = {
         "topic": "Solid Waste Management Hierarchy",
         "question": "Which waste management approach is considered the highest priority according to the universal waste hierarchy?",
         "options": [
-          "Source Reduction (Reduce)",
-          "Recycling",
+          "Sanitary Landfilling",
           "Energy Recovery (Incineration)",
-          "Sanitary Landfilling"
+          "Source Reduction (Reduce)",
+          "Recycling"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2024",
         "explanation": "The 3R hierarchy places Source Reduction (Prevention/Reduce) at the very top, followed by Reuse, Recycling, Energy Recovery, and finally Landfilling as the last resort."
@@ -2808,12 +3128,12 @@ const MID2_PRACTICE = {
         "topic": "Landfill Leachate",
         "question": "What is 'leachate' in the context of municipal solid waste sanitary landfills?",
         "options": [
+          "Ash remaining after waste incineration",
           "Contaminated liquid percolating through landfill waste that can pollute groundwater aquifers",
-          "Methane gas extracted from decomposing trash",
           "The top clay barrier preventing rainwater intrusion",
-          "Ash remaining after waste incineration"
+          "Methane gas extracted from decomposing trash"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2022",
         "explanation": "Leachate is toxic liquid formed when rainwater percolates through compacted landfill waste, dissolving heavy metals and toxic chemicals that threaten groundwater aquifers."
@@ -2841,12 +3161,12 @@ const MID2_PRACTICE = {
         "topic": "Bio-magnification",
         "question": "Biomagnification of non-biodegradable persistent organic pollutants like DDT causes which ecological effect in predatory birds?",
         "options": [
+          "Accelerated chick gestation",
           "Eggshell thinning leading to premature egg breakage and population collapse",
           "Loss of feather pigmentation",
-          "Accelerated chick gestation",
           "Resistance to bacterial infection"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "DDT accumulates in apex raptors (e.g. bald eagles, falcons) via biomagnification, inhibiting calcium ATPase and causing severe eggshell thinning that crushes clutches."
@@ -2859,12 +3179,12 @@ const MID2_PRACTICE = {
         "topic": "Earthquake Measurement",
         "question": "The amount of energy released by an earthquake at its hypocenter is quantified on the:",
         "options": [
-          "Richter Magnitude Scale",
-          "Mercalli Intensity Scale",
+          "Mohs Scale",
           "Beaufort Scale",
-          "Mohs Scale"
+          "Richter Magnitude Scale",
+          "Mercalli Intensity Scale"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "The Richter scale calculates earthquake magnitude based on the logarithm of seismic wave amplitude, whereas the Mercalli scale rates observed surface damage intensity."
@@ -2878,9 +3198,9 @@ const MID2_PRACTICE = {
         "question": "According to the 1987 Brundtland Commission Report 'Our Common Future', Sustainable Development is defined as:",
         "options": [
           "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs",
-          "Achieving 100% industrial output through fossil fuel expansion",
+          "Equal distribution of mineral wealth among all nations",
           "Complete preservation of all nature reserves without human economic activity",
-          "Equal distribution of mineral wealth among all nations"
+          "Achieving 100% industrial output through fossil fuel expansion"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -2909,12 +3229,12 @@ const MID2_PRACTICE = {
         "topic": "Acid Rain Chemistry",
         "question": "Which primary atmospheric pollutants react with water vapor to precipitate as Acid Rain ($pH < 5.6$)?",
         "options": [
-          "Sulfur dioxide ($SO_2$) and Nitrogen oxides ($NO_x$)",
           "Carbon monoxide ($CO$) and Methane ($CH_4$)",
+          "Lead particulates and Ammonia",
           "Chlorofluorocarbons ($CFCs$) and Ozone ($O_3$)",
-          "Lead particulates and Ammonia"
+          "Sulfur dioxide ($SO_2$) and Nitrogen oxides ($NO_x$)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2024",
         "explanation": "$SO_2$ and $NO_x$ emitted from coal power plants and vehicles oxidize into sulfuric acid ($H_2SO_4$) and nitric acid ($HNO_3$), depressing rain pH below 5.6."
@@ -2942,12 +3262,12 @@ const MID2_PRACTICE = {
         "topic": "Ozone Layer Depletion",
         "question": "Which international environmental treaty was adopted in 1987 to phase out the production of Chlorofluorocarbons (CFCs) and protect the stratospheric ozone layer?",
         "options": [
-          "Montreal Protocol",
           "Kyoto Protocol",
           "Paris Agreement",
+          "Montreal Protocol",
           "Ramsar Convention"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "The Montreal Protocol (1987) is universally ratified and regulates nearly 100 ozone-depleting substances, famously allowing the stratospheric ozone hole to heal."
@@ -2977,9 +3297,9 @@ const MID2_PRACTICE = {
         "question": "Which major greenhouse gas has the highest 100-year Global Warming Potential (GWP) among the common atmospheric greenhouse gases listed below?",
         "options": [
           "Nitrous Oxide ($N_2O$)",
-          "Methane ($CH_4$)",
           "Carbon Dioxide ($CO_2$)",
-          "Water Vapor ($H_2O$)"
+          "Water Vapor ($H_2O$)",
+          "Methane ($CH_4$)"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -3009,12 +3329,12 @@ const MID2_PRACTICE = {
         "topic": "Chernobyl Nuclear Disaster",
         "question": "The Chernobyl nuclear power disaster occurred in 1986 in which former Soviet republic?",
         "options": [
-          "Ukraine",
+          "Russia",
           "Belarus",
-          "Kazakhstan",
-          "Russia"
+          "Ukraine",
+          "Kazakhstan"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "The Chernobyl disaster occurred on April 26, 1986, at reactor No. 4 of the Chernobyl Nuclear Power Plant near Pripyat in northern Ukraine."
@@ -3027,12 +3347,12 @@ const MID2_PRACTICE = {
         "topic": "Resettlement and Rehabilitation",
         "question": "What is the primary socio-environmental challenge associated with constructing mega hydroelectric dams like Sardar Sarovar or Tehri?",
         "options": [
-          "Involuntary displacement, loss of cultural heritage, and inadequate rehabilitation of local indigenous communities",
-          "Depletion of atmospheric nitrogen",
+          "Loss of tidal energy",
           "Cooling of downstream river temperatures causing ice formation",
-          "Loss of tidal energy"
+          "Involuntary displacement, loss of cultural heritage, and inadequate rehabilitation of local indigenous communities",
+          "Depletion of atmospheric nitrogen"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "Large dams submerge fertile agricultural valleys and displacement leads to severance from traditional livelihoods, necessitating comprehensive Resettlement and Rehabilitation (R&R)."
@@ -3045,12 +3365,12 @@ const MID2_PRACTICE = {
         "topic": "Environment Protection Act Year",
         "question": "The umbrella 'Environment (Protection) Act' in India was enacted by Parliament in the year:",
         "options": [
-          "1986",
-          "1974",
           "1981",
-          "1992"
+          "1986",
+          "1992",
+          "1974"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "Enacted in 1986 in the wake of the 1984 Bhopal Gas Tragedy, the Environment (Protection) Act serves as overarching umbrella legislation empowering the central government to set national quality standards."
@@ -3078,8 +3398,8 @@ const MID2_PRACTICE = {
         "question": "In which year was the Air (Prevention and Control of Pollution) Act amended to explicitly include 'noise' within the definition of air pollutants?",
         "options": [
           "1987",
-          "1981",
           "1995",
+          "1981",
           "2000"
         ],
         "answerIndex": 0,
@@ -3109,12 +3429,12 @@ const MID2_PRACTICE = {
         "topic": "Forest Conservation Act",
         "question": "Under the Forest Conservation Act 1980, whose prior approval is mandatory before any reserved forest land can be diverted for non-forest purposes?",
         "options": [
-          "The Central Government of India (MoEFCC)",
           "The local Gram Panchayat",
-          "Private timber corporations",
-          "State Forest Department officers only"
+          "The Central Government of India (MoEFCC)",
+          "State Forest Department officers only",
+          "Private timber corporations"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2023",
         "explanation": "Section 2 of the Forest Conservation Act 1980 mandates prior approval from the Central Government (Ministry of Environment, Forest and Climate Change) before diverting any forest land."
@@ -3143,12 +3463,12 @@ const MID2_PRACTICE = {
         "topic": "HIV/AIDS Transmission",
         "question": "Human Immunodeficiency Virus (HIV) does NOT transmit through which of the following everyday interactions?",
         "options": [
-          "Sharing meals, handshakes, or using the same toilet seat",
           "Unscreened blood transfusions",
           "Unprotected sexual intercourse",
-          "Mother-to-child transmission during childbirth or breastfeeding"
+          "Mother-to-child transmission during childbirth or breastfeeding",
+          "Sharing meals, handshakes, or using the same toilet seat"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-ES-2022",
         "explanation": "HIV cannot survive outside body fluids and is not transmitted through casual social contact, saliva, sweat, hugging, food sharing, or insect bites."
@@ -3177,12 +3497,12 @@ const MID2_PRACTICE = {
         "topic": "Value Education",
         "question": "What is the primary role of Value Education in environmental sustainability?",
         "options": [
-          "Inculcating moral responsibility, ecological respect, and sustainable lifestyle ethics among citizens",
-          "Maximizing consumer demand for single-use plastic goods",
+          "Eliminating traditional agrarian conservation wisdom",
           "Teaching advanced industrial coal mining techniques",
-          "Eliminating traditional agrarian conservation wisdom"
+          "Inculcating moral responsibility, ecological respect, and sustainable lifestyle ethics among citizens",
+          "Maximizing consumer demand for single-use plastic goods"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "syllabus",
         "explanation": "Value education cultivates an ethical ecocentric mindset, fostering respect for biodiversity, self-restraint, and sustainable conservation behavior."
@@ -3211,12 +3531,12 @@ const MID2_PRACTICE = {
         "topic": "ENVIS Information System",
         "question": "The Environmental Information System (ENVIS) established by MoEFCC serves to:",
         "options": [
-          "Collect, collate, and disseminate environmental information to researchers, policy-makers, and the public",
-          "Issue corporate patent licenses",
           "Manage defense satellite operations",
+          "Issue corporate patent licenses",
+          "Collect, collate, and disseminate environmental information to researchers, policy-makers, and the public",
           "Manufacture solar panels"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "ENVIS was established in 1982 by the Indian Ministry of Environment to act as a decentralized network providing reliable ecological data and scientific research across nodal centers."
@@ -3246,8 +3566,8 @@ const MID2_PRACTICE = {
         "question": "Which hazardous heavy metal commonly found in CRT computer monitors and solder causes neurological and developmental damage?",
         "options": [
           "Lead ($Pb$)",
-          "Gold ($Au$)",
           "Iron ($Fe$)",
+          "Gold ($Au$)",
           "Aluminum ($Al$)"
         ],
         "answerIndex": 0,
@@ -3268,6 +3588,70 @@ const MID2_PRACTICE = {
         "difficulty": "medium",
         "source": "pyq:MR25-ES-2022",
         "explanation": "Article 51A(g) establishes: 'It shall be the duty of every citizen of India to protect and improve the natural environment including forests, lakes, rivers and wildlife, and to have compassion for living creatures.'"
+      },
+      {
+        "id": "ES-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Noise Pollution Norms",
+        "question": "CPCB standards in India specify 55 dB(A) as the permitted daytime ambient noise level in residential zones.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "medium",
+        "source": "pyq:MR25-ES-Standard",
+        "explanation": "True. Under CPCB rules, daytime limit is 55 dB(A) for residential zones (and 45 dB(A) at night)."
+      },
+      {
+        "id": "ES-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Solid Waste Management",
+        "question": "In the integrated solid waste management hierarchy, landfill disposal is considered the most preferred management option.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "easy",
+        "source": "pyq:MR25-ES-Standard",
+        "explanation": "False. Landfilling is the least preferred (bottom) option in the waste hierarchy; source reduction and reuse are top."
+      },
+      {
+        "id": "ES-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Biomagnification",
+        "question": "Biomagnification describes the increasing concentration of persistent non-biodegradable toxins at each higher trophic level.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-ES-Standard",
+        "explanation": "True. Substances like DDT and heavy metals accumulate in fatty tissues and multiply up the food chain."
+      },
+      {
+        "id": "ES-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Composting",
+        "question": "Composting is a biological decomposition process that converts biodegradable organic waste into nutrient-rich humus.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-ES-Standard",
+        "explanation": "True. Aerobic composting by microorganisms transforms municipal organic waste into fertile soil conditioner."
       }
     ],
     "IE": [
@@ -3280,8 +3664,8 @@ const MID2_PRACTICE = {
         "question": "How many building blocks constitute Alexander Osterwalder's standard Business Model Canvas (BMC)?",
         "options": [
           "9",
-          "7",
           "5",
+          "7",
           "12"
         ],
         "answerIndex": 0,
@@ -3312,12 +3696,12 @@ const MID2_PRACTICE = {
         "topic": "BMC Customer Segments",
         "question": "Which block of the Business Model Canvas defines the different groups of people or organizations an enterprise aims to reach and serve?",
         "options": [
-          "Customer Segments",
           "Channels",
-          "Customer Relationships",
-          "Key Partnerships"
+          "Customer Segments",
+          "Key Partnerships",
+          "Customer Relationships"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Customer Segments defines who the product or service is built for (e.g. mass market, niche market, segmented, diversified, or multi-sided platforms)."
@@ -3346,12 +3730,12 @@ const MID2_PRACTICE = {
         "topic": "Cost-Driven vs Value-Driven",
         "question": "In the BMC Cost Structure block, what distinguishes a 'Cost-Driven' business model (like Ryanair or IndiGo)?",
         "options": [
-          "Focuses on minimizing costs wherever possible through lean operations, low pricing, and automation",
           "Focuses primarily on premium value creation and personalized luxury service",
           "Operates as a non-profit charity",
+          "Focuses on minimizing costs wherever possible through lean operations, low pricing, and automation",
           "Relying purely on government subsidies"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2023",
         "explanation": "Cost-driven models focus on aggressive cost minimization, low price value propositions, maximum automation, and extensive outsourcing."
@@ -3380,12 +3764,12 @@ const MID2_PRACTICE = {
         "topic": "Channels Block",
         "question": "What is the primary function of the 'Channels' block in the Business Model Canvas?",
         "options": [
-          "Describing how a company communicates with and reaches its customer segments to deliver a value proposition",
-          "Defining internal employee HR hierarchy",
+          "Calculating manufacturing depreciation rates",
           "Documenting legal patent filings",
-          "Calculating manufacturing depreciation rates"
+          "Describing how a company communicates with and reaches its customer segments to deliver a value proposition",
+          "Defining internal employee HR hierarchy"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Channels encompass communication, distribution, and sales touchpoints: awareness, evaluation, purchase, delivery, and after-sales support."
@@ -3398,12 +3782,12 @@ const MID2_PRACTICE = {
         "topic": "Bootstrapping",
         "question": "What does 'Bootstrapping' mean in the startup ecosystem?",
         "options": [
+          "Taking an emergency short-term bank loan",
           "Building and growing a business using personal savings and early customer revenue without external equity investment",
           "Raising a Series A venture capital round from Silicon Valley funds",
-          "Merging with a publicly listed shell company",
-          "Taking an emergency short-term bank loan"
+          "Merging with a publicly listed shell company"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "Bootstrapping refers to self-funding a startup through founder savings, sweat equity, and customer cash flows, retaining 100% equity and control."
@@ -3432,12 +3816,12 @@ const MID2_PRACTICE = {
         "topic": "Pre-Money vs Post-Money Valuation",
         "question": "If an investor invests \\$2 million into a startup at a \\$8 million pre-money valuation, what is the post-money valuation and the investor's equity stake?",
         "options": [
+          "Post-money is \\$10 million, investor gets 25% equity",
           "Post-money is \\$10 million, investor gets 20% equity",
           "Post-money is \\$8 million, investor gets 25% equity",
-          "Post-money is \\$10 million, investor gets 25% equity",
           "Post-money is \\$6 million, investor gets 33.3% equity"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-2024",
         "explanation": "$\\text{Post-Money} = \\text{Pre-Money} + \\text{Investment} = \\$8M + \\$2M = \\$10M$. The investor's equity ownership is $\\text{Investment} / \\text{Post-Money} = \\$2M / \\$10M = 20\\%$."
@@ -3465,12 +3849,12 @@ const MID2_PRACTICE = {
         "topic": "Break-Even Point Formula",
         "question": "In financial planning, the Break-Even Point (in units) is calculated using which formula?",
         "options": [
-          "$\\text{Fixed Costs} / (\\text{Selling Price per Unit} - \\text{Variable Cost per Unit})$",
-          "$(\\text{Fixed Costs} + \\text{Variable Costs}) \\times \\text{Selling Price}$",
           "$\\text{Total Revenue} / \\text{Total Assets}$",
-          "$\\text{Variable Costs} / \\text{Fixed Costs}$"
+          "$\\text{Fixed Costs} / (\\text{Selling Price per Unit} - \\text{Variable Cost per Unit})$",
+          "$\\text{Variable Costs} / \\text{Fixed Costs}$",
+          "$(\\text{Fixed Costs} + \\text{Variable Costs}) \\times \\text{Selling Price}$"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "Break-Even Quantity = Fixed Costs / Contribution Margin per Unit, where Contribution Margin = Selling Price - Variable Cost per unit."
@@ -3497,12 +3881,12 @@ const MID2_PRACTICE = {
         "topic": "Term Sheet Liquidation Preference",
         "question": "In a venture capital Term Sheet, what does a '1x Non-Participating Liquidation Preference' mean?",
         "options": [
-          "Preferred shareholders receive back their initial investment amount before common shareholders receive any exit proceeds",
           "Founders receive their salary before investors get paid",
           "Investors can force liquidation after 1 year",
+          "Preferred shareholders receive back their initial investment amount before common shareholders receive any exit proceeds",
           "The company cannot be sold for less than 1x its valuation"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "Liquidation preference determines payout order upon an exit: preferred shareholders get their initial invested capital (1x) back before common shareholders receive distributions."
@@ -3531,12 +3915,12 @@ const MID2_PRACTICE = {
         "topic": "Crowdfunding Models",
         "question": "Kickstarter and Indiegogo operate primarily on which crowdfunding model?",
         "options": [
-          "Reward-based Crowdfunding",
           "Equity Crowdfunding",
           "Debt Crowdfunding (Peer-to-Peer)",
-          "Donation Crowdfunding for disaster relief"
+          "Donation Crowdfunding for disaster relief",
+          "Reward-based Crowdfunding"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2023",
         "explanation": "Platforms like Kickstarter use reward-based crowdfunding: backers pledge funds in exchange for non-financial rewards (early product prototypes, special merchandise) rather than equity shares."
@@ -3550,9 +3934,9 @@ const MID2_PRACTICE = {
         "question": "The 'Startup India Seed Fund Scheme' (SISFS) was launched by the Government of India primarily to:",
         "options": [
           "Provide financial assistance to early-stage startups for proof of concept, prototype development, and product trials",
-          "Buy controlling equity in private unicorn tech startups",
           "Mandate that startups hire only government civil servants",
-          "Collect corporate taxes in advance"
+          "Collect corporate taxes in advance",
+          "Buy controlling equity in private unicorn tech startups"
         ],
         "answerIndex": 0,
         "difficulty": "medium",
@@ -3600,12 +3984,12 @@ const MID2_PRACTICE = {
         "topic": "Trademark Protection",
         "question": "What is the primary function of a Trademark under the Trade Marks Act 1999?",
         "options": [
-          "To distinguish goods or services of one enterprise from those of competitors and prevent consumer confusion",
           "To protect the functional mechanical design of a machine",
+          "To distinguish goods or services of one enterprise from those of competitors and prevent consumer confusion",
           "To grant exclusive rights over mathematical formulas",
           "To keep computer source code confidential"
         ],
-        "answerIndex": 0,
+        "answerIndex": 1,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "A trademark protects distinctive symbols, words, logos, or slogans (e.g. Nike Swoosh, Apple logo) that identify the commercial source of goods and prevent brand impersonation."
@@ -3633,12 +4017,12 @@ const MID2_PRACTICE = {
         "topic": "Copyright Term",
         "question": "Under the Indian Copyright Act 1957, what is the standard duration of copyright protection for original literary and computer software works?",
         "options": [
-          "Lifetime of the author plus 60 years after their death",
-          "20 years from registration",
+          "100 years from creation",
           "50 years from publication",
-          "100 years from creation"
+          "20 years from registration",
+          "Lifetime of the author plus 60 years after their death"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-2022",
         "explanation": "For literary, musical, dramatic, and artistic works (including software source code), copyright subsists during the author's lifetime plus 60 years counted from the year following death."
@@ -3666,12 +4050,12 @@ const MID2_PRACTICE = {
         "topic": "Geographical Indication (GI)",
         "question": "Which of the following is an example of an authorized Geographical Indication (GI Tag) in India?",
         "options": [
-          "Darjeeling Tea",
-          "Windows 11",
+          "Intel Core i7",
           "Tesla Model 3",
-          "Intel Core i7"
+          "Darjeeling Tea",
+          "Windows 11"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2024",
         "explanation": "Darjeeling Tea was the first product in India to receive a GI tag (2004-05), certifying that its unique quality and aroma originate exclusively from the Darjeeling region of West Bengal."
@@ -3699,12 +4083,12 @@ const MID2_PRACTICE = {
         "topic": "Initial Public Offering (IPO)",
         "question": "An Initial Public Offering (IPO) represents which type of startup exit strategy?",
         "options": [
-          "Selling company shares to the public for the first time on a recognized stock exchange (e.g. BSE/NSE)",
-          "Selling company assets at auction due to insolvency",
+          "Distributing products through retail franchisors",
           "Acquiring a smaller competing firm",
-          "Distributing products through retail franchisors"
+          "Selling company assets at auction due to insolvency",
+          "Selling company shares to the public for the first time on a recognized stock exchange (e.g. BSE/NSE)"
         ],
-        "answerIndex": 0,
+        "answerIndex": 3,
         "difficulty": "easy",
         "source": "pyq:MR25-IE-2022",
         "explanation": "An IPO transitions a privately held corporation into a publicly traded company on stock exchanges, providing massive liquidity to founders, early employees, and investors."
@@ -3717,12 +4101,12 @@ const MID2_PRACTICE = {
         "topic": "Acqui-hire Exit",
         "question": "What is an 'Acqui-hire' in tech venture exits?",
         "options": [
-          "A larger corporation acquires a startup primarily to recruit its specialized engineering and product talent rather than for its product",
+          "A hostile takeover by competing founders",
           "Outsourcing recruitment to third-party headhunters",
-          "Hiring only remote independent contractors",
-          "A hostile takeover by competing founders"
+          "A larger corporation acquires a startup primarily to recruit its specialized engineering and product talent rather than for its product",
+          "Hiring only remote independent contractors"
         ],
-        "answerIndex": 0,
+        "answerIndex": 2,
         "difficulty": "medium",
         "source": "pyq:MR25-IE-2023",
         "explanation": "In an acqui-hire (acquisition + hire), a larger tech company buys a struggling or nascent startup to onboard its skilled engineering/AI team, often shutting down the original product."
@@ -3751,9 +4135,9 @@ const MID2_PRACTICE = {
         "question": "Network Effects occur when a product or platform becomes increasingly valuable to existing users as:",
         "options": [
           "More people use the service (e.g. WhatsApp, LinkedIn, Uber)",
-          "Manufacturing factory size doubles",
+          "Server CPU clocks increase",
           "The company borrows bank debt",
-          "Server CPU clocks increase"
+          "Manufacturing factory size doubles"
         ],
         "answerIndex": 0,
         "difficulty": "easy",
@@ -3806,6 +4190,70 @@ const MID2_PRACTICE = {
         "difficulty": "hard",
         "source": "syllabus",
         "explanation": "The Designs Act 2000 protects novel aesthetic visual configurations and ornamental appearances of manufactured articles for an initial term of 10 years (extendable by 5)."
+      },
+      {
+        "id": "IE-M2-TF-01",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Business Model Canvas Structure",
+        "question": "Alexander Osterwalder's Business Model Canvas is structured around exactly 9 core building blocks.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-IE-Standard",
+        "explanation": "True. The 9 blocks are: Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, and Cost Structure."
+      },
+      {
+        "id": "IE-M2-TF-02",
+        "type": "mcq",
+        "unit": 3,
+        "scope": "mid2",
+        "topic": "Lean Canvas Unfair Advantage",
+        "question": "In the Lean Canvas framework, an Unfair Advantage is a feature that can be easily bought or copied by any competitor.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 1,
+        "difficulty": "easy",
+        "source": "pyq:MR25-IE-Standard",
+        "explanation": "False. An Unfair Advantage is something that cannot be easily copied or bought (e.g. proprietary patents, network effects, insider data)."
+      },
+      {
+        "id": "IE-M2-TF-03",
+        "type": "mcq",
+        "unit": 4,
+        "scope": "mid2",
+        "topic": "Product-Market Fit",
+        "question": "Product-Market Fit is achieved when the Value Proposition directly satisfies the core underserved needs of the target Customer Segments.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-IE-Standard",
+        "explanation": "True. Aligning the Value Proposition with Customer Segments is the definition of finding product-market fit."
+      },
+      {
+        "id": "IE-M2-TF-04",
+        "type": "mcq",
+        "unit": 5,
+        "scope": "mid2",
+        "topic": "Bootstrapping vs VC",
+        "question": "Bootstrapping refers to building a venture entirely with personal savings and customer revenues without raising external institutional capital.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answerIndex": 0,
+        "difficulty": "easy",
+        "source": "pyq:MR25-IE-Standard",
+        "explanation": "True. Bootstrapped founders retain 100% equity and fund growth through customer sales and internal cash flows."
       }
     ]
   },

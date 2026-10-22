@@ -515,6 +515,8 @@
   }
 
   function showExamSelector() {
+    state.currentSubject = null;
+    state.currentMode = null;
     if (el.examSelectorSection) {
       el.examSelectorSection.style.display = 'block';
       el.examSelectorSection.scrollIntoView({ behavior: 'smooth' });
@@ -522,6 +524,26 @@
     if (el.examActiveBanner) {
       el.examActiveBanner.style.display = 'none';
     }
+    if (el.practiceFunDivision) {
+      el.practiceFunDivision.style.display = 'none';
+    }
+    if (el.subjectsSection) {
+      el.subjectsSection.style.display = 'none';
+    }
+    if (el.subjectDetailSection) {
+      el.subjectDetailSection.style.display = 'none';
+    }
+    if (el.welcomeSection) {
+      el.welcomeSection.style.display = 'none';
+    }
+    // Update hash to home
+    if (window.location.hash && window.location.hash !== '#/' && window.location.hash !== '#') {
+      history.pushState(null, '', '#/');
+    }
+    // Reset top drive button to root folder
+    el.topDriveBtn.href = DRIVE_ROOT_URL;
+    el.topDriveBtn.title = 'Open Entire SEM 3 Google Drive Folder';
+    updateTopDriveBtnLabel();
   }
 
   function initExamSelector() {
@@ -535,8 +557,13 @@
       initialExam = localStorage.getItem('mgit_active_exam') || 'mid2';
     }
 
-    // Set exam state
-    setExam(initialExam, false);
+    // If URL has specific exam hash, open that exam, otherwise show clean 3-card home page
+    const hasHashExam = hash.includes('mid1') || hash.includes('mid2') || hash.includes('sem');
+    if (hasHashExam) {
+      setExam(initialExam, true);
+    } else {
+      showExamSelector();
+    }
 
     // Event listeners on exam cards
     document.querySelectorAll('.exam-card').forEach(card => {
@@ -2162,7 +2189,6 @@
         <button type="button" class="btn-copy-response" onclick="copyGeminiAiAnswer(this)">
           <i class="fa-regular fa-copy"></i> <span>Copy Answer</span>
         </button>
-        <span class="ai-verified-tag"><i class="fa-solid fa-graduation-cap"></i> Verify against your notes</span>
       </div>
     `;
   }
@@ -2736,11 +2762,39 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
   // Event Listeners Setup
   // -------------------------------------------------------------
   function setupEventListeners() {
+    // Header Browser-like Navigation Arrows
+    const backNavBtn = document.getElementById('headerNavBackBtn');
+    const fwdNavBtn = document.getElementById('headerNavForwardBtn');
+    if (backNavBtn) {
+      backNavBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const exitModal = document.getElementById('practiceExitModal');
+        const progressModal = document.getElementById('progressModal');
+        const practiceModal = document.getElementById('practiceSelectorModal');
+        const geminiModal = document.getElementById('geminiModal');
+        const sessionScreen = document.getElementById('practiceSessionScreen');
+        if (exitModal && exitModal.style.display !== 'none') { exitModal.style.display = 'none'; return; }
+        if (progressModal && progressModal.style.display !== 'none') { progressModal.style.display = 'none'; return; }
+        if (practiceModal && practiceModal.style.display !== 'none') { practiceModal.style.display = 'none'; return; }
+        if (geminiModal && geminiModal.style.display !== 'none') { closeGeminiModal(); return; }
+        if (sessionScreen && sessionScreen.style.display !== 'none') { if (window.PracticeRunner) window.PracticeRunner.exitSession(); return; }
+        if (state.currentSubject) { returnToSubjectsList(); return; }
+        if (el.examSelectorSection && el.examSelectorSection.style.display === 'none') { showExamSelector(); return; }
+        window.history.back();
+      });
+    }
+    if (fwdNavBtn) {
+      fwdNavBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.history.forward();
+      });
+    }
+
     // Brand Link returns home
     if (el.brandHomeLink) {
-      el.brandHomeLink.addEventListener('click', returnToSubjectsList);
+      el.brandHomeLink.addEventListener('click', showExamSelector);
       el.brandHomeLink.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') returnToSubjectsList();
+        if (e.key === 'Enter') showExamSelector();
       });
     }
 

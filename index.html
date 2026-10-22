@@ -63,7 +63,17 @@
         </div>
         <div class="brand-info">
           <h1 class="brand-name">MGIT PYQ Hub</h1>
-          <p class="brand-sub">CSE Semester III</p>
+          <div class="header-nav-sub-row">
+            <div class="header-browser-arrows" aria-label="Page navigation">
+              <button type="button" class="header-arrow-btn" id="headerNavBackBtn" title="Go back (Previous page)" aria-label="Go back">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="header-arrow-btn" id="headerNavForwardBtn" title="Go forward" aria-label="Go forward">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <p class="brand-sub">CSE Semester III</p>
+          </div>
         </div>
       </div>
 
@@ -179,7 +189,7 @@
 
     <!-- Division 1 of 8: Practice with Fun Card (Feature 3) -->
     <div class="practice-fun-division" id="practiceFunDivision" style="display: none;">
-      <div class="practice-fun-card glass-panel" id="practiceFunCard" role="button" tabindex="0">
+      <div class="practice-fun-card" id="practiceFunCard" role="button" tabindex="0">
         <div class="practice-fun-shine"></div>
         <div class="practice-fun-content">
           <div class="practice-hint-tag">
@@ -194,21 +204,30 @@
           </div>
         </div>
         <div class="practice-fun-mascot-peek">
-          <svg class="puppy-peek-svg" viewBox="0 0 100 100" width="85" height="85">
-            <ellipse cx="50" cy="55" rx="34" ry="30" fill="#fef3c7" stroke="#78350f" stroke-width="2.5" />
-            <ellipse cx="22" cy="42" rx="10" ry="18" fill="#d97706" transform="rotate(-20 22 42)" />
-            <ellipse cx="78" cy="42" rx="10" ry="18" fill="#d97706" transform="rotate(20 78 42)" />
-            <ellipse cx="38" cy="50" rx="4" ry="6" fill="#1e293b" />
-            <ellipse cx="62" cy="50" rx="4" ry="6" fill="#1e293b" />
-            <circle cx="39.5" cy="48" r="1.5" fill="#ffffff" />
-            <circle cx="63.5" cy="48" r="1.5" fill="#ffffff" />
-            <ellipse cx="50" cy="58" rx="5" ry="3.5" fill="#78350f" />
-            <path d="M47 62 Q50 67 53 62" stroke="#78350f" stroke-width="2" fill="none" />
-            <ellipse cx="50" cy="65" rx="3" ry="4" fill="#f43f5e" />
-            <circle cx="30" cy="56" r="4" fill="#fda4af" opacity="0.6" />
-            <circle cx="70" cy="56" r="4" fill="#fda4af" opacity="0.6" />
-            <ellipse cx="36" cy="84" rx="8" ry="6" fill="#fef3c7" stroke="#78350f" stroke-width="2" />
-            <ellipse cx="64" cy="84" rx="8" ry="6" fill="#fef3c7" stroke="#78350f" stroke-width="2" />
+          <svg class="cat-peek-svg" viewBox="0 0 100 100" width="85" height="85">
+            <ellipse cx="50" cy="58" rx="34" ry="28" fill="#ea580c" />
+            <ellipse cx="50" cy="65" rx="20" ry="16" fill="#fef3c7" />
+            <!-- Pointed Ears -->
+            <polygon points="26,42 16,14 42,32" fill="#c2410c" />
+            <polygon points="28,39 20,20 40,32" fill="#f472b6" />
+            <polygon points="74,42 84,14 58,32" fill="#c2410c" />
+            <polygon points="72,39 80,20 60,32" fill="#f472b6" />
+            <!-- Eyes -->
+            <ellipse cx="38" cy="52" rx="4.5" ry="6" fill="#1e293b" />
+            <circle cx="36.5" cy="50" r="1.8" fill="#ffffff" />
+            <ellipse cx="62" cy="52" rx="4.5" ry="6" fill="#1e293b" />
+            <circle cx="60.5" cy="50" r="1.8" fill="#ffffff" />
+            <!-- Pink Nose & Cute Mouth -->
+            <polygon points="50,60 47,56 53,56" fill="#f43f5e" />
+            <path d="M45 62 Q47.5 65 50 62.5 Q52.5 65 55 62" stroke="#78350f" stroke-width="1.8" fill="none" stroke-linecap="round" />
+            <!-- Whiskers -->
+            <line x1="28" y1="58" x2="12" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="27" y1="62" x2="11" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="72" y1="58" x2="88" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="73" y1="62" x2="89" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <!-- Front Paws peeking over edge -->
+            <ellipse cx="36" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
+            <ellipse cx="64" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
           </svg>
         </div>
       </div>
@@ -449,7 +468,13 @@
       <!-- Division 2: Attribution -->
       <div class="footer-division attribution-division" id="attributionDivision">
         <div class="attribution-box">
-          <span class="attribution-text">Made by <span class="amaan-name-gradient">Amaan..</span></span>
+          <a href="https://www.linkedin.com/in/amaanuddin-ahmed-725617340?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="attribution-link"
+             title="Connect with Amaan on LinkedIn">
+            <span class="attribution-text">Made by <span class="amaan-name-gradient" style="text-decoration: underline; text-underline-offset: 3px;">Amaan</span></span>
+          </a>
         </div>
         <div class="footer-rate-box">
           <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="footer-rate-link" id="footerRateBtn" title="Rate MGIT PYQ Hub">
@@ -495,10 +520,10 @@
 
         <!-- Step 2: Subject Selection (Shown after picking mode) -->
         <div id="practiceStepSubject" style="display: none;">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
-            <h5 class="practice-step-title" style="margin-bottom: 0;">Please select the subject you want to master</h5>
-            <button type="button" class="btn-secondary-flat" id="backToModeBtn" style="padding: 4px 10px; font-size: 12px;">
-              <i class="fa-solid fa-arrow-left"></i> Change Mode
+          <div class="practice-subject-picker-header">
+            <h5 class="practice-step-title">Please select the subject you want to master</h5>
+            <button type="button" class="btn-change-mode" id="backToModeBtn">
+              <i class="fa-solid fa-arrow-left"></i> <span>Change Mode</span>
             </button>
           </div>
           <p class="practice-step-sub" id="practiceSelectedModeLabel">Mode: MCQs &amp; Quick Questions</p>
@@ -917,7 +942,7 @@
                 <i class="fa-solid fa-arrow-up"></i>
               </button>
             </form>
-            <p class="gemini-legal-caption">Gemini Study Assistant can make mistakes. Verify critical dates and formulas with official MGIT syllabus.</p>
+            <p class="gemini-legal-caption">Gemini Study Assistant &bull; Comprehensive exam preparation for MGIT CSE Semester III</p>
           </div>
         </div>
       </section>
@@ -1125,7 +1150,7 @@
   </div>
 
   <!-- Exit Confirmation Modal -->
-  <div class="modal-backdrop" id="practiceExitModal" style="display: none;" role="dialog" aria-modal="true">
+  <div class="modal-backdrop practice-exit-backdrop" id="practiceExitModal" style="display: none; z-index: 100005;" role="dialog" aria-modal="true">
     <div class="modal-dialog small-dialog">
       <div class="modal-header">
         <h4 class="modal-dialog-title"><i class="fa-solid fa-circle-exclamation"></i> Leave Practice?</h4>

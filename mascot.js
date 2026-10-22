@@ -1,18 +1,21 @@
 /**
- * MGIT PYQ Hub — Cute Animated Puppy Learning Companion (Feature 5)
+ * MGIT PYQ Hub — Cute Animated Cat Learning Companion (Feature 5)
  * 
- * High-performance, lightweight inline SVG puppy with 6 distinct expressive states:
- * - idle: slow blink, happy tail sway
+ * High-performance, lightweight inline SVG cat with 6 distinct expressive states:
+ * - idle: slow blink, gentle tail swish
  * - thinking: tilted head, eyes glancing up, floating '...' thought bubble
  * - happy: joyful bounce, wagging tail, closed-eye smile (on correct answer)
  * - sad: drooped ears, small tear, lowered head (1-2s on wrong answer)
- * - concentrating: focused squint, slight head tilt, studying the explanation
+ * - concentrating: focused squint, cute spectacles, studying the explanation
  * - celebrating: party hat, triumphant jump, joyful celebration (end of session)
  * 
+ * Hover Effect: Flies/levitates gently in the air with soft floating sparkles!
  * Zero external dependencies. Fully responsive with prefers-reduced-motion support.
  */
 
 const Mascot = (function () {
+  'use strict';
+
   let currentState = 'idle';
   let targetContainer = null;
   let sadTimeout = null;
@@ -23,243 +26,225 @@ const Mascot = (function () {
   }
 
   function getSvg(state) {
-    // Shared puppy base geometry: golden-amber/caramel puppy with soft cream face
+    // Shared cute kitten base geometry: warm honey/golden-caramel cat with cream face & whiskers
     return `
-      <div class="puppy-mascot puppy-state-${state}" role="img" aria-label="Learning companion puppy is ${state}">
-        <svg class="puppy-svg" viewBox="0 0 140 120" width="130" height="110" xmlns="http://www.w3.org/2000/svg">
+      <div class="cat-mascot cat-state-${state}" role="img" aria-label="Learning companion cat is ${state}">
+        <div class="cat-wings-glow" aria-hidden="true">
+          <svg class="cat-floating-stars" viewBox="0 0 140 120" width="130" height="110">
+            <polygon points="20,24 23,30 30,30 25,35 27,42 20,38 13,42 15,35 10,30 17,30" fill="#fde047" opacity="0.9" class="sparkle-star s1" />
+            <polygon points="120,30 122,34 127,34 123,38 125,43 120,40 115,43 117,38 113,34 118,34" fill="#a78bfa" opacity="0.85" class="sparkle-star s2" />
+            <polygon points="70,10 72,14 77,14 73,17 75,22 70,19 65,22 67,17 63,14 68,14" fill="#f43f5e" opacity="0.85" class="sparkle-star s3" />
+          </svg>
+        </div>
+        <svg class="cat-svg" viewBox="0 0 140 120" width="130" height="110" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <!-- Soft gradients -->
-            <linearGradient id="pupFur" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fbbf24" />
-              <stop offset="100%" stop-color="#f59e0b" />
+            <!-- Warm Kitty Gradients -->
+            <linearGradient id="catFur" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" />
+              <stop offset="50%" stop-color="#ea580c" />
+              <stop offset="100%" stop-color="#c2410c" />
             </linearGradient>
-            <linearGradient id="pupEar" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#d97706" />
-              <stop offset="100%" stop-color="#b45309" />
+            <linearGradient id="catInnerEar" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#fbcfe8" />
+              <stop offset="100%" stop-color="#f472b6" />
             </linearGradient>
-            <linearGradient id="pupSnout" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#fffbeb" />
+            <linearGradient id="catSnout" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
               <stop offset="100%" stop-color="#fef3c7" />
             </linearGradient>
-            <filter id="softPupShadow" x="-10%" y="-10%" width="120%" height="130%">
-              <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.12" flood-color="#78350f" />
+            <filter id="softCatShadow" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.14" flood-color="#451a03" />
             </filter>
           </defs>
 
-          <!-- Ground shadow -->
-          <ellipse cx="70" cy="112" rx="38" ry="6" fill="rgba(15, 23, 42, 0.08)" />
+          <!-- Ground shadow (shrinks when hovering/flying in air) -->
+          <ellipse class="cat-ground-shadow" cx="70" cy="112" rx="38" ry="6" fill="rgba(15, 23, 42, 0.12)" />
 
-          <!-- Tail (sways or wags) -->
-          <path class="pup-tail" d="M30 84 Q14 74 22 58 Q28 68 34 80 Z" fill="#d97706" />
+          <!-- Tail (curled cat tail that sways or wags) -->
+          <path class="cat-tail" d="M32 86 C12 80 10 52 26 44 C30 42 34 48 30 52 C18 58 20 76 34 82 Z" fill="#c2410c" />
 
           <!-- Body -->
-          <ellipse cx="70" cy="85" rx="30" ry="24" fill="url(#pupFur)" filter="url(#softPupShadow)" />
-          <!-- Chest cream patch -->
-          <ellipse cx="70" cy="88" rx="16" ry="16" fill="url(#pupSnout)" />
+          <ellipse cx="70" cy="86" rx="28" ry="23" fill="url(#catFur)" filter="url(#softCatShadow)" />
+          <!-- Chest cream bib -->
+          <ellipse cx="70" cy="89" rx="15" ry="15" fill="url(#catSnout)" />
 
-          <!-- Collar with golden bell -->
-          <path d="M52 74 Q70 82 88 74" stroke="#e11d48" stroke-width="4.5" stroke-linecap="round" fill="none" />
-          <circle cx="70" cy="80" r="4" fill="#fbbf24" stroke="#b45309" stroke-width="1" />
+          <!-- Collar with cute bell -->
+          <path d="M48 76 Q70 85 92 76" stroke="#4f46e5" stroke-width="4.5" stroke-linecap="round" fill="none" />
+          <circle cx="70" cy="83" r="5" fill="#facc15" stroke="#ca8a04" stroke-width="1.2" />
+          <circle cx="70" cy="84" r="1.5" fill="#713f12" />
 
-          <!-- Paws resting forward -->
-          <ellipse cx="54" cy="106" rx="9" ry="6" fill="url(#pupSnout)" stroke="#d97706" stroke-width="1.2" />
-          <ellipse cx="86" cy="106" rx="9" ry="6" fill="url(#pupSnout)" stroke="#d97706" stroke-width="1.2" />
+          <!-- Cute Front Paws -->
+          <ellipse cx="55" cy="104" rx="7.5" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1" />
+          <ellipse cx="85" cy="104" rx="7.5" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1" />
 
-          <!-- HEAD GROUP (Rotates & Tilts per state) -->
-          <g class="pup-head-group">
-            <!-- Left Ear -->
-            <ellipse class="pup-ear pup-ear-left" cx="38" cy="46" rx="13" ry="24" fill="url(#pupEar)" transform="rotate(-18 38 46)" />
-            <!-- Right Ear -->
-            <ellipse class="pup-ear pup-ear-right" cx="102" cy="46" rx="13" ry="24" fill="url(#pupEar)" transform="rotate(18 102 46)" />
-
-            <!-- Main Head Circle -->
-            <ellipse cx="70" cy="52" rx="34" ry="30" fill="url(#pupFur)" filter="url(#softPupShadow)" />
-
-            <!-- Eyebrows -->
-            <path class="pup-brow pup-brow-left" d="M50 36 Q57 33 63 36" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
-            <path class="pup-brow pup-brow-right" d="M77 36 Q83 33 90 36" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
-
-            <!-- Eyes (changes per state: normal, glancing up, closed happy smile, sad droop, concentrated squint) -->
-            <g class="pup-eyes-group">
-              ${getEyesSvg(state)}
+          <!-- HEAD GROUP -->
+          <g class="cat-head-group">
+            <!-- Pointed Cat Ears -->
+            <g class="cat-ears">
+              <!-- Left Ear -->
+              <polygon class="cat-ear-left" points="40,48 30,16 56,36" fill="url(#catFur)" filter="url(#softCatShadow)" />
+              <polygon points="41,45 34,22 53,36" fill="url(#catInnerEar)" />
+              <!-- Right Ear -->
+              <polygon class="cat-ear-right" points="100,48 110,16 84,36" fill="url(#catFur)" filter="url(#softCatShadow)" />
+              <polygon points="99,45 106,22 87,36" fill="url(#catInnerEar)" />
             </g>
 
-            <!-- Snout (Cream Patch) -->
-            <ellipse cx="70" cy="62" rx="18" ry="14" fill="url(#pupSnout)" />
+            <!-- Head Round -->
+            <ellipse cx="70" cy="50" rx="34" ry="28" fill="url(#catFur)" filter="url(#softCatShadow)" />
 
-            <!-- Nose -->
-            <ellipse cx="70" cy="56" rx="6" ry="4" fill="#3e1d08" />
-            <ellipse cx="68.5" cy="54.5" rx="1.8" ry="1.2" fill="#ffffff" opacity="0.8" />
+            <!-- Cream Cheeks / Muzzle -->
+            <ellipse cx="70" cy="58" rx="22" ry="16" fill="url(#catSnout)" />
 
-            <!-- Mouth & Tongue -->
-            <g class="pup-mouth-group">
-              ${getMouthSvg(state)}
+            <!-- Cheek Whiskers (3 left, 3 right) -->
+            <g class="cat-whiskers" stroke="#78350f" stroke-width="1.3" stroke-linecap="round" opacity="0.75">
+              <line x1="38" y1="54" x2="16" y2="50" />
+              <line x1="37" y1="58" x2="14" y2="58" />
+              <line x1="38" y1="62" x2="16" y2="66" />
+              <line x1="102" y1="54" x2="124" y2="50" />
+              <line x1="103" y1="58" x2="126" y2="58" />
+              <line x1="102" y1="62" x2="124" y2="66" />
             </g>
 
-            <!-- Rosy Cheeks -->
-            <circle cx="46" cy="59" r="6" fill="#fb7185" opacity="${state === 'happy' || state === 'celebrating' ? '0.65' : '0.4'}" />
-            <circle cx="94" cy="59" r="6" fill="#fb7185" opacity="${state === 'happy' || state === 'celebrating' ? '0.65' : '0.4'}" />
+            <!-- Rosy Cheek Blushes -->
+            <circle cx="46" cy="58" r="5" fill="#f43f5e" opacity="0.35" />
+            <circle cx="94" cy="58" r="5" fill="#f43f5e" opacity="0.35" />
 
-            <!-- Optional State Accessories -->
-            ${getStateAccessories(state)}
+            <!-- Pink Button Nose & Cute :3 Mouth -->
+            <polygon points="70,57 66,53 74,53" fill="#f43f5e" rx="1" />
+            <path d="M64 59 Q67 63 70 60 Q73 63 76 59" stroke="#78350f" stroke-width="1.8" stroke-linecap="round" fill="none" />
+
+            <!-- STATE-SPECIFIC EXPRESSIONS -->
+            ${getStateExpression(state)}
           </g>
-
-          <!-- Floating Thought Bubble for Thinking State -->
-          ${state === 'thinking' ? `
-            <g class="pup-thought-bubble">
-              <circle cx="102" cy="24" r="3.5" fill="#e0e7ff" stroke="#818cf8" stroke-width="1" />
-              <circle cx="110" cy="15" r="5" fill="#e0e7ff" stroke="#818cf8" stroke-width="1.2" />
-              <rect x="112" y="2" width="24" height="15" rx="7" fill="#ffffff" stroke="#6366f1" stroke-width="1.5" />
-              <text x="124" y="13" font-family="monospace" font-size="12" font-weight="bold" fill="#4f46e5" text-anchor="middle">...</text>
-            </g>
-          ` : ''}
-
-          <!-- Floating Party Hat for Celebrating -->
-          ${state === 'celebrating' ? `
-            <polygon points="70,10 58,34 82,34" fill="#f43f5e" stroke="#ffe4e6" stroke-width="1" />
-            <circle cx="70" cy="8" r="3.5" fill="#fbbf24" />
-            <circle cx="64" cy="22" r="2" fill="#60a5fa" />
-            <circle cx="74" cy="26" r="2" fill="#34d399" />
-          ` : ''}
         </svg>
       </div>
     `;
   }
 
-  function getEyesSvg(state) {
-    if (state === 'happy' || state === 'celebrating') {
-      // Joyful closed eye arcs (^ ^)
-      return `
-        <path d="M52 46 Q58 40 64 46" stroke="#451a03" stroke-width="3" stroke-linecap="round" fill="none" />
-        <path d="M76 46 Q82 40 88 46" stroke="#451a03" stroke-width="3" stroke-linecap="round" fill="none" />
-      `;
+  function getStateExpression(state) {
+    switch (state) {
+      case 'happy':
+        // Joyful squinting smile ^ ^, tongue out, bouncing
+        return `
+          <!-- Happy closed-crescent eyes -->
+          <path d="M50 46 Q56 40 62 46" stroke="#451a03" stroke-width="2.8" stroke-linecap="round" fill="none" />
+          <path d="M78 46 Q84 40 90 46" stroke="#451a03" stroke-width="2.8" stroke-linecap="round" fill="none" />
+          <!-- Cute Pink Kitty Tongue -->
+          <path d="M68 60 Q70 68 72 60 Z" fill="#f43f5e" />
+          <!-- Star sparkle -->
+          <polygon points="106,28 108,34 114,34 109,38 111,44 106,40 101,44 103,38 98,34 104,34" fill="#fbbf24" class="sparkle-star" />
+        `;
+
+      case 'sad':
+        // Drooped sad eyes, tear on left cheek
+        return `
+          <ellipse cx="56" cy="46" rx="4.5" ry="5.5" fill="#1e293b" />
+          <ellipse cx="84" cy="46" rx="4.5" ry="5.5" fill="#1e293b" />
+          <!-- Drooping sad brows -->
+          <path d="M50 38 Q56 42 62 41" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
+          <path d="M78 41 Q84 42 90 38" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
+          <!-- Blue Teardrop -->
+          <path d="M48 54 C48 51 51 47 51 47 C51 47 54 51 54 54 C54 56 52 57 51 57 C50 57 48 56 48 54 Z" fill="#38bdf8" />
+        `;
+
+      case 'concentrating':
+        // Round Golden Spectacles on nose studying explanation
+        return `
+          <!-- Golden glasses -->
+          <circle cx="56" cy="46" r="8.5" stroke="#d97706" stroke-width="2" fill="rgba(255, 255, 255, 0.4)" />
+          <circle cx="84" cy="46" r="8.5" stroke="#d97706" stroke-width="2" fill="rgba(255, 255, 255, 0.4)" />
+          <line x1="64.5" y1="46" x2="75.5" y2="46" stroke="#d97706" stroke-width="2" />
+          <!-- Focused squint eyes -->
+          <ellipse cx="56" cy="46" rx="3.5" ry="4" fill="#1e293b" />
+          <ellipse cx="84" cy="46" rx="3.5" ry="4" fill="#1e293b" />
+          <circle cx="55" cy="44" r="1.2" fill="#ffffff" />
+          <circle cx="83" cy="44" r="1.2" fill="#ffffff" />
+        `;
+
+      case 'thinking':
+        // Head tilted, looking upward with thought bubble
+        return `
+          <ellipse cx="57" cy="44" rx="4.5" ry="5.5" fill="#1e293b" />
+          <ellipse cx="85" cy="44" rx="4.5" ry="5.5" fill="#1e293b" />
+          <!-- Gaze looking up and right -->
+          <circle cx="59" cy="42" r="2" fill="#ffffff" />
+          <circle cx="87" cy="42" r="2" fill="#ffffff" />
+          <!-- Thought bubbles -->
+          <circle cx="106" cy="22" r="3" fill="#cbd5e1" />
+          <circle cx="114" cy="14" r="5" fill="#cbd5e1" />
+          <ellipse cx="124" cy="8" rx="8" ry="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+          <text x="124" y="11" font-size="7" font-weight="bold" fill="#64748b" text-anchor="middle">?</text>
+        `;
+
+      case 'celebrating':
+        // Party Hat + Confetti Stars
+        return `
+          <!-- Party Cone Hat -->
+          <polygon points="70,6 58,34 82,34" fill="#ec4899" />
+          <polygon points="70,6 64,34 76,34" fill="#facc15" />
+          <circle cx="70" cy="6" r="3.5" fill="#38bdf8" />
+          <!-- Cheerful joyful eyes -->
+          <path d="M50 46 Q56 40 62 46" stroke="#451a03" stroke-width="2.8" stroke-linecap="round" fill="none" />
+          <path d="M78 46 Q84 40 90 46" stroke="#451a03" stroke-width="2.8" stroke-linecap="round" fill="none" />
+          <!-- Party Confetti -->
+          <rect x="36" y="22" width="4" height="4" fill="#38bdf8" transform="rotate(25 38 24)" />
+          <rect x="96" y="24" width="4" height="4" fill="#a855f7" transform="rotate(-30 98 26)" />
+          <circle cx="106" cy="42" r="2.5" fill="#22c55e" />
+          <circle cx="34" cy="40" r="2.5" fill="#f59e0b" />
+        `;
+
+      case 'idle':
+      default:
+        // Kawaii round eyes with bright double shine sparkles
+        return `
+          <g class="cat-eyes-idle">
+            <!-- Left Eye -->
+            <ellipse cx="56" cy="46" rx="5" ry="6.5" fill="#1e293b" />
+            <circle cx="54.5" cy="43.5" r="2" fill="#ffffff" />
+            <circle cx="58" cy="48" r="1" fill="#ffffff" />
+            <!-- Right Eye -->
+            <ellipse cx="84" cy="46" rx="5" ry="6.5" fill="#1e293b" />
+            <circle cx="82.5" cy="43.5" r="2" fill="#ffffff" />
+            <circle cx="86" cy="48" r="1" fill="#ffffff" />
+          </g>
+        `;
     }
-    if (state === 'sad') {
-      // Drooped sad eyes with small tear
-      return `
-        <ellipse cx="58" cy="47" rx="5" ry="6" fill="#451a03" />
-        <ellipse cx="82" cy="47" rx="5" ry="6" fill="#451a03" />
-        <circle cx="56.5" cy="45" r="1.8" fill="#ffffff" />
-        <circle cx="80.5" cy="45" r="1.8" fill="#ffffff" />
-        <!-- Small glistening tear on right cheek -->
-        <path class="pup-tear" d="M88 52 C88 52 86 56 86 58 C86 59.5 87 61 88.5 61 C90 61 91 59.5 91 58 C91 56 88 52 88 52 Z" fill="#38bdf8" />
-      `;
-    }
-    if (state === 'thinking') {
-      // Eyes glancing upwards to the right
-      return `
-        <ellipse cx="58" cy="44" rx="5.5" ry="6" fill="#451a03" />
-        <ellipse cx="82" cy="44" rx="5.5" ry="6" fill="#451a03" />
-        <circle cx="60" cy="41" r="2.2" fill="#ffffff" />
-        <circle cx="84" cy="41" r="2.2" fill="#ffffff" />
-      `;
-    }
-    if (state === 'concentrating') {
-      // Focused squint looking down at explanation
-      return `
-        <path d="M52 46 Q58 49 64 46" stroke="#451a03" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        <path d="M76 46 Q82 49 88 46" stroke="#451a03" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        <circle cx="58" cy="47.5" r="1.5" fill="#451a03" />
-        <circle cx="82" cy="47.5" r="1.5" fill="#451a03" />
-      `;
-    }
-    // Default idle eyes
-    return `
-      <ellipse cx="58" cy="45" rx="5.5" ry="6.5" fill="#451a03" />
-      <ellipse cx="82" cy="45" rx="5.5" ry="6.5" fill="#451a03" />
-      <circle cx="56.5" cy="43" r="2.2" fill="#ffffff" />
-      <circle cx="80.5" cy="43" r="2.2" fill="#ffffff" />
-    `;
   }
 
-  function getMouthSvg(state) {
-    if (state === 'happy' || state === 'celebrating') {
-      // Open joyful smile with pink tongue
-      return `
-        <path d="M64 61 Q70 67 76 61" stroke="#78350f" stroke-width="2.2" stroke-linecap="round" fill="none" />
-        <path d="M66 63 Q70 73 74 63 Z" fill="#f43f5e" stroke="#be123c" stroke-width="0.8" />
-      `;
-    }
-    if (state === 'sad') {
-      // Downward curved frown
-      return `
-        <path d="M64 65 Q70 60 76 65" stroke="#78350f" stroke-width="2.2" stroke-linecap="round" fill="none" />
-      `;
-    }
-    if (state === 'concentrating') {
-      // Small studious line/pout
-      return `
-        <path d="M66 63 L74 63" stroke="#78350f" stroke-width="2" stroke-linecap="round" />
-      `;
-    }
-    if (state === 'thinking') {
-      // Slight wry side-curve
-      return `
-        <path d="M66 63 Q72 65 75 61" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
-      `;
-    }
-    // Default gentle smile
-    return `
-      <path d="M64 61 Q70 66 76 61" stroke="#78350f" stroke-width="2" stroke-linecap="round" fill="none" />
-    `;
-  }
+  function setState(newState, message) {
+    currentState = newState;
+    if (!targetContainer) return;
 
-  function getStateAccessories(state) {
-    if (state === 'concentrating') {
-      // Small study glasses or miniature notebook peeking
-      return `
-        <g class="pup-glasses">
-          <circle cx="58" cy="46" r="8" stroke="#1e293b" stroke-width="1.8" fill="rgba(255,255,255,0.2)" />
-          <circle cx="82" cy="46" r="8" stroke="#1e293b" stroke-width="1.8" fill="rgba(255,255,255,0.2)" />
-          <line x1="66" y1="46" x2="74" y2="46" stroke="#1e293b" stroke-width="1.8" />
-        </g>
-      `;
-    }
-    return '';
-  }
-
-  function setState(newState) {
     if (sadTimeout) {
       clearTimeout(sadTimeout);
       sadTimeout = null;
     }
 
-    currentState = newState;
-    if (targetContainer) {
-      targetContainer.innerHTML = getSvg(newState);
+    targetContainer.innerHTML = getSvg(newState);
+
+    const speechEl = document.getElementById('mascotSpeechBubble');
+    if (speechEl && message) {
+      speechEl.textContent = message;
+      speechEl.style.display = 'block';
+    }
+
+    // Auto transition: wrong answer sad state reverts to concentrating after 1.5s
+    if (newState === 'sad') {
+      sadTimeout = setTimeout(() => {
+        setState('concentrating', "Let's review the explanation together!");
+      }, 1500);
     }
   }
 
-  /**
-   * On incorrect answer: show sad for 1.5 seconds, then smoothly transition into concentrating
-   */
-  function handleIncorrectAnswer() {
-    setState('sad');
-    sadTimeout = setTimeout(() => {
-      setState('concentrating');
-    }, 1500);
-  }
-
-  function handleCorrectAnswer() {
-    setState('happy');
-  }
-
-  function handleNewQuestion() {
-    setState('thinking');
-  }
-
-  function handleCelebrating() {
-    setState('celebrating');
+  function getState() {
+    return currentState;
   }
 
   return {
     init,
     setState,
-    handleCorrectAnswer,
-    handleIncorrectAnswer,
-    handleNewQuestion,
-    handleCelebrating,
-    getState: () => currentState
+    getState,
+    getSvg
   };
 })();
 
