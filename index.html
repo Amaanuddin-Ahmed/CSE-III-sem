@@ -205,6 +205,12 @@
           </svg>
         </div>
       </div>
+  <div class="practice-fun-footer-row" style="max-width: 960px; margin: 8px auto 0; display: flex; justify-content: flex-end;">
+        <button type="button" class="btn-progress-shortcut" id="viewProgressBtn" title="View your study streaks and mastery">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>My Progress &amp; Streaks</span>
+        </button>
+      </div>
     </div>
 
     <!-- Subjects Section (2 Columns Grid) -->
@@ -934,6 +940,236 @@
   </div>
 
   <!-- Toast Notification Container -->
+  
+  <!-- ============================================================== -->
+  <!-- FULLSCREEN PRACTICE SESSION SCREEN (Features 3, 4, 5, 6) -->
+  <!-- ============================================================== -->
+  <div id="practiceSessionScreen" class="practice-session-screen" style="display: none;" role="region" aria-label="Interactive Practice Session">
+    <!-- Top Fixed Session Bar -->
+    <header class="session-top-bar glass-panel">
+      <div class="session-bar-inner">
+        <button type="button" class="session-btn-exit" id="sessionExitBtn" title="Exit practice session">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Exit</span>
+        </button>
+
+        <div class="session-title-wrap">
+          <span class="session-subject-badge" id="sessionSubjectBadge">DM</span>
+          <h3 class="session-title" id="sessionTitle">Discrete Mathematics &bull; MCQs</h3>
+        </div>
+
+        <div class="session-stats-group">
+          <span class="session-streak-pill" id="sessionStreakPill" title="Current Daily Streak">
+            <i class="fa-solid fa-fire"></i> <span id="sessionStreakCount">1</span>
+          </span>
+          <span class="session-counter-pill" id="sessionCounterPill">
+            <span id="sessionCurrentCount">0</span> / <span id="sessionTotalCount">32</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Thin Animated Progress Bar (Advances ONLY on correct answers) -->
+      <div class="session-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="sessionProgressTrack">
+        <div class="session-progress-fill" id="sessionProgressFill" style="width: 0%;"></div>
+      </div>
+    </header>
+
+    <!-- Session Main Content Area -->
+    <main class="session-main-viewport">
+      <!-- Mascot Companion Wrap (Always visible, responsive) -->
+      <div class="session-mascot-container" id="sessionMascotSlot">
+        <!-- SVG Puppy injected here by mascot.js -->
+      </div>
+
+      <!-- VIEW A: QUIZ / FILL-IN-THE-BLANK VIEW -->
+      <div id="sessionQuizView" class="session-quiz-view">
+        <div class="session-question-card glass-panel" id="sessionQuestionCard">
+          <div class="q-card-header">
+            <span class="q-unit-tag" id="sessionUnitTag">Unit 3</span>
+            <span class="q-type-tag" id="sessionTypeTag">Multiple Choice</span>
+            <span class="q-difficulty-tag" id="sessionDifficultyTag">Medium</span>
+          </div>
+
+          <div class="q-card-body">
+            <h4 class="q-text" id="sessionQuestionText">Question text appears here...</h4>
+
+            <!-- Options Container for MCQs -->
+            <div class="q-options-grid" id="sessionOptionsGrid">
+              <!-- Dynamically populated 4 options -->
+            </div>
+
+            <!-- Input Container for Fill-in-the-Blank -->
+            <form class="q-fib-form" id="sessionFibForm" style="display: none;">
+              <div class="fib-input-wrap">
+                <input type="text" id="sessionFibInput" class="fib-input" placeholder="Type your answer here..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <button type="submit" class="btn-fib-submit" id="sessionFibSubmitBtn">Check Answer</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Instant Feedback Banner -->
+          <div class="q-feedback-banner" id="sessionFeedbackBanner" style="display: none;">
+            <div class="feedback-status-row">
+              <span class="feedback-icon" id="feedbackIcon"><i class="fa-solid fa-check"></i></span>
+              <strong class="feedback-title" id="feedbackTitle">Brilliant! That's correct.</strong>
+            </div>
+            <div class="feedback-explanation" id="feedbackExplanation">
+              Explanation text explaining why the answer is correct...
+            </div>
+            <button type="button" class="btn-session-next" id="sessionNextBtn">
+              <span>Next Question</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW B: 3D FLASHCARD VIEW -->
+      <div id="sessionFlashcardView" class="session-flashcard-view" style="display: none;">
+        <div class="flashcard-scene">
+          <div class="flashcard-card glass-panel" id="sessionFlashcardCard" role="button" tabindex="0" title="Click or press Space to flip">
+            <!-- Front Face -->
+            <div class="flashcard-face flashcard-front">
+              <div class="fc-card-header">
+                <span class="fc-unit-tag" id="fcUnitTag">Unit 3</span>
+                <span class="fc-yield-tag" id="fcYieldTag" style="display: none;"><i class="fa-solid fa-fire"></i> High-Yield</span>
+                <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Flip card</span>
+              </div>
+              <div class="fc-content-wrap">
+                <span class="fc-topic-label" id="fcTopicLabel">Group Axioms</span>
+                <h4 class="fc-prompt-text" id="fcFrontText">What four fundamental axioms define a mathematical Group?</h4>
+              </div>
+              <div class="fc-card-footer">
+                <span class="fc-click-cue"><i class="fa-solid fa-hand-pointer"></i> Tap card or press <strong>Space</strong> to reveal answer</span>
+              </div>
+            </div>
+
+            <!-- Back Face -->
+            <div class="flashcard-face flashcard-back">
+              <div class="fc-card-header">
+                <span class="fc-badge-back"><i class="fa-solid fa-lightbulb"></i> Answer &amp; Key Concepts</span>
+                <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Flip back</span>
+              </div>
+              <div class="fc-content-wrap">
+                <div class="fc-answer-text" id="fcBackText">Answer explanation appears here...</div>
+              </div>
+              <div class="fc-card-footer">
+                <span class="fc-click-cue"><i class="fa-solid fa-rotate"></i> Tap card to flip back</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Navigation & Rating Bar -->
+        <div class="flashcard-controls-bar">
+          <button type="button" class="btn-fc-nav" id="fcPrevBtn" title="Previous Card (Left Arrow)">
+            <i class="fa-solid fa-chevron-left"></i> <span>Previous</span>
+          </button>
+
+          <div class="fc-rating-actions">
+            <button type="button" class="btn-fc-revise" id="fcReviseBtn" title="Need to practice this again">
+              <i class="fa-solid fa-rotate-left"></i> <span>Revise Again</span>
+            </button>
+            <button type="button" class="btn-fc-gotit" id="fcGotItBtn" title="Marked as mastered">
+              <i class="fa-solid fa-check"></i> <span>Got It!</span>
+            </button>
+          </div>
+
+          <button type="button" class="btn-fc-nav" id="fcNextBtn" title="Next Card (Right Arrow)">
+            <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- VIEW C: SESSION COMPLETE / SUMMARY SCREEN -->
+      <div id="sessionResultsView" class="session-results-view" style="display: none;">
+        <div class="session-results-card glass-panel">
+          <div class="results-celebrate-header">
+            <div class="results-trophy-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h3 class="results-title" id="resultsTitle">Session Mastered!</h3>
+            <p class="results-sub" id="resultsSub">You've successfully conquered all questions in this session.</p>
+          </div>
+
+          <div class="results-stats-grid">
+            <div class="result-stat-box">
+              <span class="stat-num" id="resultsMasteredCount">32</span>
+              <span class="stat-lbl">Questions Mastered</span>
+            </div>
+            <div class="result-stat-box">
+              <span class="stat-num" id="resultsAccuracy">94%</span>
+              <span class="stat-lbl">First-Try Accuracy</span>
+            </div>
+            <div class="result-stat-box">
+              <span class="stat-num" id="resultsStreak">1 🔥</span>
+              <span class="stat-lbl">Daily Streak</span>
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button type="button" class="btn-results-primary" id="resultsAnotherBtn">
+              <i class="fa-solid fa-gamepad"></i> <span>Practice Another Subject</span>
+            </button>
+            <button type="button" class="btn-results-secondary" id="resultsHomeBtn">
+              <i class="fa-solid fa-house"></i> <span>Back to Syllabus Hub</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Exit Confirmation Modal -->
+  <div class="modal-backdrop" id="practiceExitModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog small-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-circle-exclamation"></i> Leave Practice?</h4>
+        <button type="button" class="modal-close-btn" id="closeExitModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 20px 24px;">
+        <p style="font-size: 14.5px; color: var(--text-main); margin-bottom: 8px; font-weight: 600;">
+          Are you sure you want to exit?
+        </p>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+          Your answered questions and daily streak are safely stored, but your active question queue will reset.
+        </p>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <button type="button" class="btn-secondary-flat" id="confirmExitNoBtn">Keep Practicing</button>
+          <button type="button" class="btn-danger-flat" id="confirmExitYesBtn" style="background: #ef4444; color: #fff; padding: 8px 18px; border-radius: var(--radius-md); font-weight: 700; border: none; cursor: pointer;">Exit Session</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Progress Modal (Feature 8) -->
+  <div class="modal-backdrop" id="progressModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-chart-line"></i> My Study Progress</h4>
+        <button type="button" class="modal-close-btn" id="closeProgressModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 20px 24px;">
+        <div class="progress-summary-row" style="display: flex; gap: 12px; margin-bottom: 20px;">
+          <div class="prog-stat-card glass-panel" style="flex: 1; padding: 14px; text-align: center; border-radius: var(--radius-md);">
+            <div style="font-size: 24px; font-weight: 800; color: #f59e0b;" id="progStreakVal">1 🔥</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted);">Daily Streak</div>
+          </div>
+          <div class="prog-stat-card glass-panel" style="flex: 1; padding: 14px; text-align: center; border-radius: var(--radius-md);">
+            <div style="font-size: 24px; font-weight: 800; color: #4f46e5;" id="progQuestionsVal">0</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted);">Questions Mastered</div>
+          </div>
+          <div class="prog-stat-card glass-panel" style="flex: 1; padding: 14px; text-align: center; border-radius: var(--radius-md);">
+            <div style="font-size: 24px; font-weight: 800; color: #10b981;" id="progFlashcardsVal">0</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted);">Cards Learned</div>
+          </div>
+        </div>
+
+        <h5 style="font-size: 14px; font-weight: 700; color: var(--text-main); margin-bottom: 12px;">Subject Mastery Breakdown</h5>
+        <div id="progressSubjectBars" style="display: flex; flex-direction: column; gap: 12px;">
+          <!-- Subject progress bars rendered dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- Application Scripts -->
@@ -942,6 +1178,7 @@
   <script src="mascot.js"></script>
   <script src="activity-tracker.js"></script>
   <script src="data/mid2-practice.js"></script>
+  <script src="practice-runner.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
