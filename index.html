@@ -61,6 +61,12 @@
       </div>
 
       <div class="header-actions">
+        <!-- Active Exam Pill / Switcher (Feature 2) -->
+        <div class="header-exam-badge" id="headerExamBadge" style="display: none;" role="button" tabindex="0" title="Click to change examination target">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span id="headerExamName">Mid-2</span>
+          <span class="change-exam-tag"><i class="fa-solid fa-repeat"></i> Change</span>
+        </div>
         <!-- Top dynamic Drive button -->
         <a id="topDriveBtn" 
            href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" 
@@ -83,14 +89,123 @@
   <!-- Main Application Container -->
   <main class="main-container">
 
-    <!-- Welcome Section (Gemini Style) -->
-    <section class="welcome-section" id="welcomeSection">
-      <div class="welcome-badge-pill">
-        <i class="fa-solid fa-sparkles"></i> <span>MGIT &bull; CSE Department</span>
+    <!-- Exam Selector Hero Section (Feature 2) -->
+    <section class="exam-selector-section" id="examSelectorSection">
+      <div class="exam-selector-header">
+        <div class="welcome-badge-pill">
+          <i class="fa-solid fa-sparkles"></i> <span>MGIT &bull; CSE Department &bull; MR-25</span>
+        </div>
+        <h2 class="exam-selector-title">What are you preparing for?</h2>
+        <p class="exam-selector-desc">Select your target examination to unlock scoped chapter notes, filtered PYQs, and interactive practice.</p>
+        
+        <div id="continueExamChipWrap" class="continue-chip-wrap" style="display: none;">
+          <button type="button" class="continue-exam-chip" id="continueExamChip">
+            <i class="fa-solid fa-bolt"></i> <span id="continueChipText">Continue with Mid-2</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
-      <h2 class="welcome-heading">Welcome to <span class="gemini-title-gradient">MGIT PYQ Hub</span></h2>
-      <p class="welcome-desc">Accurate OCR-performed Previous Year Questions, verified lecture notes, and AI study assistance.</p>
+
+      <div class="exam-cards-grid">
+        <!-- Mid-1 -->
+        <div class="exam-card glass-panel" data-exam-id="mid1" role="button" tabindex="0">
+          <div class="exam-card-header">
+            <span class="exam-units-pill">Units 1 – 2.5</span>
+          </div>
+          <div class="exam-card-icon-wrap exam-icon-mid1">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3 class="exam-card-name">Mid-1</h3>
+          <p class="exam-card-meta">Revise your first internal examination syllabus with focused unit coverage.</p>
+          <div class="exam-card-footer">
+            <span>Start Mid-1 Prep</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Mid-2 (Upcoming Highlight) -->
+        <div class="exam-card glass-panel exam-card-upcoming" data-exam-id="mid2" role="button" tabindex="0">
+          <div class="exam-card-header">
+            <span class="exam-units-pill">Units 2.5 – 5</span>
+            <span class="exam-upcoming-badge"><i class="fa-solid fa-fire"></i> Upcoming</span>
+          </div>
+          <div class="exam-card-icon-wrap exam-icon-mid2">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="exam-card-name">Mid-2</h3>
+          <p class="exam-card-meta">Focus on the upcoming internal examination with high-yield revision.</p>
+          <div class="exam-card-footer">
+            <span>Start Mid-2 Prep</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Semester End -->
+        <div class="exam-card glass-panel" data-exam-id="sem" role="button" tabindex="0">
+          <div class="exam-card-header">
+            <span class="exam-units-pill">All 5 Units</span>
+          </div>
+          <div class="exam-card-icon-wrap exam-icon-sem">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="exam-card-name">Semester End</h3>
+          <p class="exam-card-meta">Prepare across the complete semester syllabus with in-depth theory &amp; PYQs.</p>
+          <div class="exam-card-footer">
+            <span>Start Sem End Prep</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Active Exam Banner (Shown when an exam is active) -->
+    <div class="exam-active-banner glass-panel" id="examActiveBanner" style="display: none;">
+      <div class="active-banner-content">
+        <span class="active-banner-tag" id="bannerExamTag">Mid-2</span>
+        <span class="active-banner-divider">•</span>
+        <span class="active-banner-sub" id="bannerExamSubtitle">Units 2.5 – 5 · Only what's in your syllabus</span>
+      </div>
+      <button type="button" class="btn-switch-exam" id="bannerChangeExamBtn" title="Switch Examination Target">
+        <i class="fa-solid fa-repeat"></i>
+        <span>Change Exam</span>
+      </button>
+    </div>
+
+    <!-- Division 1 of 8: Practice with Fun Card (Feature 3) -->
+    <div class="practice-fun-division" id="practiceFunDivision" style="display: none;">
+      <div class="practice-fun-card glass-panel" id="practiceFunCard" role="button" tabindex="0">
+        <div class="practice-fun-shine"></div>
+        <div class="practice-fun-content">
+          <div class="practice-hint-tag">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Practice with interactive quiz games to memorize your fundamentals</span>
+          </div>
+          <h3 class="practice-fun-title">Practice with Fun</h3>
+          <p class="practice-fun-hook">Learn it. Play it. Remember it.</p>
+          <p class="practice-fun-sub">Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.</p>
+          <div class="practice-fun-btn">
+            <span>Choose Mode &amp; Subject</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="practice-fun-mascot-peek">
+          <svg class="puppy-peek-svg" viewBox="0 0 100 100" width="85" height="85">
+            <ellipse cx="50" cy="55" rx="34" ry="30" fill="#fef3c7" stroke="#78350f" stroke-width="2.5" />
+            <ellipse cx="22" cy="42" rx="10" ry="18" fill="#d97706" transform="rotate(-20 22 42)" />
+            <ellipse cx="78" cy="42" rx="10" ry="18" fill="#d97706" transform="rotate(20 78 42)" />
+            <ellipse cx="38" cy="50" rx="4" ry="6" fill="#1e293b" />
+            <ellipse cx="62" cy="50" rx="4" ry="6" fill="#1e293b" />
+            <circle cx="39.5" cy="48" r="1.5" fill="#ffffff" />
+            <circle cx="63.5" cy="48" r="1.5" fill="#ffffff" />
+            <ellipse cx="50" cy="58" rx="5" ry="3.5" fill="#78350f" />
+            <path d="M47 62 Q50 67 53 62" stroke="#78350f" stroke-width="2" fill="none" />
+            <ellipse cx="50" cy="65" rx="3" ry="4" fill="#f43f5e" />
+            <circle cx="30" cy="56" r="4" fill="#fda4af" opacity="0.6" />
+            <circle cx="70" cy="56" r="4" fill="#fda4af" opacity="0.6" />
+            <ellipse cx="36" cy="84" rx="8" ry="6" fill="#fef3c7" stroke="#78350f" stroke-width="2" />
+            <ellipse cx="64" cy="84" rx="8" ry="6" fill="#fef3c7" stroke="#78350f" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
 
     <!-- Subjects Section (2 Columns Grid) -->
     <section class="subjects-section" id="subjectsSection">
@@ -331,6 +446,57 @@
         </div>
       </div>
     </footer>
+
+  
+  <!-- ============================================================== -->
+  <!-- MODAL: Practice with Fun Mode & Subject Selector (Feature 3) -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="practiceSelectorModal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="modal-dialog practice-modal-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title"><i class="fa-solid fa-gamepad"></i> Practice with Fun</h4>
+        <button type="button" class="modal-close-btn" id="closePracticeModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Step 1: Mode Selection -->
+        <div id="practiceStepMode">
+          <h5 class="practice-step-title">Choose your practice mode</h5>
+          <p class="practice-step-sub">Select how you want to revise today's syllabus.</p>
+
+          <div class="practice-modes-grid" id="practiceModesGrid">
+            <!-- Mode 1: MCQs or Quick Test -->
+            <div class="practice-mode-card" id="modeCardQuiz" role="button" tabindex="0">
+              <div class="practice-mode-icon"><i class="fa-solid fa-circle-question"></i></div>
+              <h6 class="practice-mode-name" id="modeCardQuizTitle">Practice MCQs &amp; Quick Questions</h6>
+              <p class="practice-mode-desc" id="modeCardQuizDesc">Test your speed with objective questions, fill in the blanks, and instant feedback.</p>
+            </div>
+
+            <!-- Mode 2: Flashcards -->
+            <div class="practice-mode-card" id="modeCardFlashcards" role="button" tabindex="0">
+              <div class="practice-mode-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h6 class="practice-mode-name">View Flashcards</h6>
+              <p class="practice-mode-desc">High-yield revision cards covering definitions, formulas, and recurring exam patterns.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Subject Selection (Shown after picking mode) -->
+        <div id="practiceStepSubject" style="display: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+            <h5 class="practice-step-title" style="margin-bottom: 0;">Please select the subject you want to master</h5>
+            <button type="button" class="btn-secondary-flat" id="backToModeBtn" style="padding: 4px 10px; font-size: 12px;">
+              <i class="fa-solid fa-arrow-left"></i> Change Mode
+            </button>
+          </div>
+          <p class="practice-step-sub" id="practiceSelectedModeLabel">Mode: MCQs &amp; Quick Questions</p>
+
+          <div class="practice-subjects-list" id="practiceSubjectsList">
+            <!-- Dynamically populated: 7 subjects + Mixed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </main>
 
@@ -772,6 +938,10 @@
 
   <!-- Application Scripts -->
   <script src="pyq-data.js"></script>
+  <script src="scope-map.js"></script>
+  <script src="mascot.js"></script>
+  <script src="activity-tracker.js"></script>
+  <script src="data/mid2-practice.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -27,6 +27,13 @@
     repeatedOnly: false,
     pyqSearchQuery: '',
     expandedChapters: { 1: false, 2: false, 3: false, 4: false, 5: false },
+    activeExam: (function() {
+      const hash = (window.location.hash || '').toLowerCase();
+      if (hash.includes('mid1')) return 'mid1';
+      if (hash.includes('mid2')) return 'mid2';
+      if (hash.includes('sem')) return 'sem';
+      return localStorage.getItem('mgit_active_exam') || 'mid2';
+    })(),
     isAdminLoggedIn: sessionStorage.getItem('mgit_admin_auth') === 'authenticated',
     selectedFiles: [],
 
@@ -57,6 +64,22 @@
     subjectsSection: document.getElementById('subjectsSection'),
     subjectsGrid: document.getElementById('subjectsGrid'),
     attributionDivision: document.getElementById('attributionDivision'),
+
+    // Exam Selector & Scoping Elements
+    headerExamBadge: document.getElementById('headerExamBadge'),
+    headerExamName: document.getElementById('headerExamName'),
+    examSelectorSection: document.getElementById('examSelectorSection'),
+    examActiveBanner: document.getElementById('examActiveBanner'),
+    bannerExamTag: document.getElementById('bannerExamTag'),
+    bannerExamSubtitle: document.getElementById('bannerExamSubtitle'),
+    bannerChangeExamBtn: document.getElementById('bannerChangeExamBtn'),
+    continueExamChipWrap: document.getElementById('continueExamChipWrap'),
+    continueExamChip: document.getElementById('continueExamChip'),
+    continueChipText: document.getElementById('continueChipText'),
+    practiceFunDivision: document.getElementById('practiceFunDivision'),
+    practiceFunCard: document.getElementById('practiceFunCard'),
+    practiceSelectorModal: document.getElementById('practiceSelectorModal'),
+    closePracticeModalBtn: document.getElementById('closePracticeModalBtn'),
 
     subjectDetailSection: document.getElementById('subjectDetailSection'),
     backToSubjectsBtn: document.getElementById('backToSubjectsBtn'),
@@ -204,6 +227,7 @@
   // -------------------------------------------------------------
   function init() {
     localStorage.removeItem('mgit_user_gemini_key');
+    initExamSelector();
     renderSubjectsGrid();
     setupEventListeners();
     setupAdminStats();
@@ -222,6 +246,11 @@
     if (!el.subjectsGrid) return;
     el.subjectsGrid.innerHTML = '';
 
+    const examKey = state.activeExam || 'mid2';
+    const examConfig = (window.EXAM_CONFIG && window.EXAM_CONFIG[examKey]) 
+      ? window.EXAM_CONFIG[examKey] 
+      : { name: 'Mid-2', unitsLabel: 'Units 2.5–5' };
+
     const subjectKeys = Object.keys(SUBJECTS_DATA);
     subjectKeys.forEach(key => {
       const sub = SUBJECTS_DATA[key];
@@ -234,10 +263,22 @@
       card.style.setProperty('--sub-accent', sub.accentColor);
       card.style.setProperty('--sub-bg', sub.bgColor);
 
-      // Count matching questions in database
-      const qCount = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id).length;
+      // Count in-scope questions & notes in database
+      const qCount = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey))).length;
+      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(n, examKey))).length;
+
+      // Determine unit scope label for this subject
+      let subjectUnits = examConfig.unitsLabel;
+      if (window.SCOPE_MAP && window.SCOPE_MAP[sub.id] && window.SCOPE_MAP[sub.id][examKey]) {
+        const units = window.SCOPE_MAP[sub.id][examKey].units;
+        subjectUnits = `Units ${units.join(', ')}`;
+      }
 
       card.innerHTML = `
+        <div class="subject-card-header-bar">
+          <span class="subject-scope-units-badge"><i class="fa-solid fa-book-bookmark"></i> ${escapeHtml(subjectUnits)}</span>
+          <span class="subject-exam-tag">${escapeHtml(examConfig.name)}</span>
+        </div>
         <div class="subject-icon-box" style="background-color: ${sub.bgColor}; color: ${sub.accentColor};">
           <i class="${sub.icon}"></i>
         </div>
@@ -245,7 +286,7 @@
           <div class="subject-short-name">${escapeHtml(sub.shortName)}</div>
           <div class="subject-full-title">${escapeHtml(sub.title)}</div>
           <div class="subject-meta-tags">
-            <span class="subject-meta-item"><i class="fa-regular fa-file-lines"></i> ${sub.notesCount} Notes</span>
+            <span class="subject-meta-item"><i class="fa-regular fa-file-lines"></i> ${nTotal} Notes</span>
             <span class="subject-meta-item"><i class="fa-solid fa-layer-group"></i> ${qCount} Questions</span>
             <span class="subject-meta-item"><i class="fa-brands fa-google-drive"></i> ${sub.paperCount} Papers</span>
           </div>
@@ -301,13 +342,15 @@
     // Update Header in Detail Section (Zero Course Codes!)
     el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title}`;
 
-    // Update counts on the Mode Choice Cards
-    const notesCount = NOTES_DATA.filter(n => n.subjectId === sub.id).length;
+    // Update counts on the Mode Choice Cards (scoped to active exam)
+    const examKey = state.activeExam || 'mid2';
+    const scopedNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(n, examKey)));
+    const scopedQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey)));
     if (el.modeNotesCountText) {
-      el.modeNotesCountText.textContent = `${notesCount} Resource${notesCount === 1 ? '' : 's'}`;
+      el.modeNotesCountText.textContent = `${scopedNotes.length} Resource${scopedNotes.length === 1 ? '' : 's'}`;
     }
     if (el.modePyqsCountText) {
-      el.modePyqsCountText.textContent = `${sub.paperCount} Paper${sub.paperCount === 1 ? '' : 's'}`;
+      el.modePyqsCountText.textContent = `${scopedQuestions.length} Question${scopedQuestions.length === 1 ? '' : 's'}`;
     }
 
     // Show Mode Selector first — do not show notes or questions immediately
@@ -397,6 +440,148 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+
+  // -------------------------------------------------------------
+  // Exam Selector & Syllabus Scoping Engine (Feature 2)
+  // -------------------------------------------------------------
+  function setExam(examId, navigateToSubjects) {
+    if (!['mid1', 'mid2', 'sem'].includes(examId)) examId = 'mid2';
+    state.activeExam = examId;
+    localStorage.setItem('mgit_active_exam', examId);
+
+    // Update URL hash without jumping
+    if (window.location.hash !== '#/' + examId && !state.currentSubject) {
+      history.replaceState(null, '', '#/' + examId);
+    }
+
+    const cfg = (window.EXAM_CONFIG && window.EXAM_CONFIG[examId]) 
+      ? window.EXAM_CONFIG[examId] 
+      : { name: examId.toUpperCase(), subtitle: "Syllabus Scoped" };
+
+    // Update Header Badge
+    if (el.headerExamBadge) {
+      el.headerExamBadge.style.display = 'inline-flex';
+      if (el.headerExamName) el.headerExamName.textContent = cfg.name;
+    }
+
+    // Update Active Banner
+    if (el.examActiveBanner) {
+      el.examActiveBanner.style.display = 'flex';
+      if (el.bannerExamTag) el.bannerExamTag.textContent = cfg.name;
+      if (el.bannerExamSubtitle) el.bannerExamSubtitle.textContent = cfg.subtitle;
+    }
+
+    // Update Continue Chip
+    if (el.continueExamChipWrap && el.continueChipText) {
+      el.continueChipText.textContent = 'Continue with ' + cfg.name;
+      el.continueExamChipWrap.style.display = 'inline-block';
+    }
+
+    // Highlight selected card in hero section
+    document.querySelectorAll('.exam-card').forEach(c => {
+      if (c.getAttribute('data-exam-id') === examId) {
+        c.classList.add('selected');
+      } else {
+        c.classList.remove('selected');
+      }
+    });
+
+    // Show Practice Fun Card
+    if (el.practiceFunDivision) {
+      el.practiceFunDivision.style.display = 'block';
+    }
+
+    // Show subjects section
+    if (el.subjectsSection) {
+      el.subjectsSection.style.display = 'block';
+    }
+
+    // If instructed or coming from card click, hide hero selector and scroll to subjects
+    if (navigateToSubjects) {
+      if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
+      if (el.subjectsSection) {
+        el.subjectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Re-render subjects grid to reflect new exam unit scope tags and counts
+    renderSubjectsGrid();
+
+    // If inside subject detail, re-render divisions
+    if (state.currentSubject) {
+      if (state.currentMode === 'notes') renderNotesDivision();
+      if (state.currentMode === 'pyqs') renderPyqsDivision();
+    }
+  }
+
+  function showExamSelector() {
+    if (el.examSelectorSection) {
+      el.examSelectorSection.style.display = 'block';
+      el.examSelectorSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (el.examActiveBanner) {
+      el.examActiveBanner.style.display = 'none';
+    }
+  }
+
+  function initExamSelector() {
+    // Read initial exam from URL hash or localStorage
+    const hash = (window.location.hash || '').toLowerCase();
+    let initialExam = 'mid2';
+    if (hash.includes('mid1')) initialExam = 'mid1';
+    else if (hash.includes('mid2')) initialExam = 'mid2';
+    else if (hash.includes('sem')) initialExam = 'sem';
+    else {
+      initialExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+    }
+
+    // Set exam state
+    setExam(initialExam, false);
+
+    // Event listeners on exam cards
+    document.querySelectorAll('.exam-card').forEach(card => {
+      const examId = card.getAttribute('data-exam-id');
+      card.addEventListener('click', () => {
+        setExam(examId, true);
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setExam(examId, true);
+        }
+      });
+    });
+
+    // Continue Chip button
+    if (el.continueExamChip) {
+      el.continueExamChip.addEventListener('click', () => {
+        setExam(state.activeExam, true);
+      });
+    }
+
+    // Change Exam buttons
+    if (el.bannerChangeExamBtn) {
+      el.bannerChangeExamBtn.addEventListener('click', showExamSelector);
+    }
+    if (el.headerExamBadge) {
+      el.headerExamBadge.addEventListener('click', showExamSelector);
+      el.headerExamBadge.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showExamSelector();
+        }
+      });
+    }
+
+    // Hash routing for back/forward browser buttons
+    window.addEventListener('hashchange', () => {
+      const h = (window.location.hash || '').toLowerCase();
+      if (h.includes('mid1') && state.activeExam !== 'mid1') setExam('mid1', false);
+      else if (h.includes('mid2') && state.activeExam !== 'mid2') setExam('mid2', false);
+      else if (h.includes('sem') && state.activeExam !== 'sem') setExam('sem', false);
+    });
+  }
+
   function returnToSubjectsList() {
     state.currentSubject = null;
     state.currentMode = null;
@@ -410,6 +595,8 @@
     el.subjectDetailSection.style.display = 'none';
     el.welcomeSection.style.display = 'block';
     el.subjectsSection.style.display = 'block';
+    if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'block';
+    if (el.examActiveBanner) el.examActiveBanner.style.display = 'flex';
     if (el.attributionDivision) {
       el.attributionDivision.style.display = 'block';
     }
@@ -425,7 +612,24 @@
     el.notesListContainer.innerHTML = '';
 
     const subId = state.currentSubject.id;
+    const examKey = state.activeExam || 'mid2';
+
+    // Populate notes chapter dropdown with in-scope units
+    if (el.notesChapterSelect) {
+      const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(subId, examKey) : [1, 2, 3, 4, 5];
+      let opts = '<option value="all">All In-Scope Units</option>';
+      inScopeChapters.forEach(ch => {
+        const title = window.getScopedChapterTitle ? window.getScopedChapterTitle(subId, ch, examKey) : `Unit ${ch}`;
+        opts += `<option value="${ch}">Unit ${ch}: ${escapeHtml(title)}</option>`;
+      });
+      el.notesChapterSelect.innerHTML = opts;
+      el.notesChapterSelect.value = state.notesChapterFilter;
+    }
+
     let notes = NOTES_DATA.filter(n => n.subjectId === subId);
+    if (window.isItemInScope) {
+      notes = notes.filter(n => window.isItemInScope(n, examKey));
+    }
 
     if (state.notesChapterFilter !== 'all') {
       const chNum = parseInt(state.notesChapterFilter, 10);
@@ -665,8 +869,9 @@
       el.viewSubjectDrivePapersBtn.title = 'Open all raw ' + sub.shortName + ' question paper PDFs in Google Drive';
     }
 
-    // Filter questions for current subject
-    const allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId);
+    // Filter questions for current subject & active exam scope
+    const examKey = state.activeExam || 'mid2';
+    const allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId && (!window.isItemInScope || window.isItemInScope(q, examKey)));
 
     // Build the year filter checkboxes from the years actually present in this subject
     renderYearFilterOptions(allSubQuestions);
@@ -726,8 +931,25 @@
     // Check if all chapters are expanded
     updateToggleAllButtonState();
 
-    // Render 5 Chapter Accordions (CH 1 to CH 5)
-    for (let ch = 1; ch <= 5; ch++) {
+    const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(subId, examKey) : [1, 2, 3, 4, 5];
+    const examConfig = (window.EXAM_CONFIG && window.EXAM_CONFIG[examKey]) ? window.EXAM_CONFIG[examKey] : { name: 'Mid-2' };
+
+    // Update Banner with active scope
+    if (el.pyqCountBanner) {
+      const activeLabels = [];
+      if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
+        activeLabels.push(state.selectedYears.slice().sort((a, b) => b - a).join(', '));
+      }
+      if (state.selectedPart !== 'all') activeLabels.push('Part ' + state.selectedPart);
+      if (state.repeatedOnly) activeLabels.push('Repeated only');
+      if (query) activeLabels.push('search: "' + query + '"');
+      const filterLabel = activeLabels.length ? ' (' + activeLabels.join(' · ') + ')' : '';
+      el.pyqCountBanner.textContent = `Showing ${filteredQuestions.length} question${filteredQuestions.length === 1 ? '' : 's'} across ${inScopeChapters.length} in-scope units (${examConfig.name} Scope)${filterLabel}`;
+    }
+
+    // Render in-scope Chapter Accordions
+    for (let i = 0; i < inScopeChapters.length; i++) {
+      const ch = inScopeChapters[i];
       const chQuestions = filteredQuestions.filter(q => q.chapter === ch);
       const chTotalAll = allSubQuestions.filter(q => q.chapter === ch).length;
       const chShortCount = chQuestions.filter(q => q.part === 'A').length;
@@ -742,7 +964,7 @@
         isExpanded = true;
       }
 
-      const chapterTitle = (sub.chapters && sub.chapters[ch]) ? sub.chapters[ch] : 'Unit ' + ch + ' Syllabus Content';
+      const chapterTitle = window.getScopedChapterTitle ? window.getScopedChapterTitle(subId, ch, examKey) : ((sub.chapters && sub.chapters[ch]) ? sub.chapters[ch] : 'Unit ' + ch + ' Syllabus Content');
 
       const card = document.createElement('div');
       card.className = 'chapter-accordion-card' + (isExpanded ? ' open' : '');

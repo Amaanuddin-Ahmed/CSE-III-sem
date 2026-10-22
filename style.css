@@ -5733,3 +5733,723 @@ body {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Feature 2: Exam Selector & Scoping Dashboard Styles
+   ========================================================================== */
+
+.exam-selector-section {
+  padding: 24px 0 36px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.exam-selector-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 30px;
+}
+
+.exam-selector-title {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--brand-navy);
+  letter-spacing: -0.6px;
+  margin: 12px 0 8px;
+  line-height: 1.2;
+}
+
+.exam-selector-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.continue-chip-wrap {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.continue-exam-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid #c7d2fe;
+  border-radius: 9999px;
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.12);
+  transition: all 0.2s ease;
+}
+
+.continue-exam-chip:hover {
+  background: #ffffff;
+  border-color: #818cf8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.2);
+}
+
+.exam-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .exam-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+}
+
+.exam-card {
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--glass-radius-lg);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.exam-card-upcoming {
+  border-color: #d8b4fe;
+  box-shadow: 0 10px 32px -4px rgba(168, 85, 247, 0.2), 0 0 0 1px rgba(192, 132, 252, 0.35);
+  animation: subtlePulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0% { box-shadow: 0 10px 30px -4px rgba(168, 85, 247, 0.18), 0 0 0 1px rgba(192, 132, 252, 0.3); }
+  100% { box-shadow: 0 14px 38px -2px rgba(168, 85, 247, 0.32), 0 0 0 1.5px rgba(168, 85, 247, 0.55); }
+}
+
+.exam-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.exam-units-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--brand-navy);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.exam-upcoming-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f43f5e 0%, #db2777 100%);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(244, 63, 94, 0.3);
+}
+
+.exam-card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.exam-icon-mid1 {
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.exam-icon-mid2 {
+  background: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
+  color: #7c3aed;
+  border: 1px solid #ddd6fe;
+}
+
+.exam-icon-sem {
+  background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.exam-card-name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 6px;
+}
+
+.exam-card-meta {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.exam-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  padding-top: 12px;
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  transition: gap 0.2s ease;
+}
+
+.exam-card:hover .exam-card-footer {
+  color: #7c3aed;
+}
+
+.exam-card:hover .exam-card-footer i {
+  transform: translateX(4px);
+}
+
+/* Active Exam Banner */
+.exam-active-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(192, 132, 252, 0.35);
+  border-radius: var(--glass-radius-md);
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.08);
+}
+
+.active-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.active-banner-tag {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 800;
+  color: #6d28d9;
+  background: #f3e8ff;
+  border: 1px solid #e9d5ff;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.active-banner-divider {
+  color: var(--text-light);
+}
+
+.active-banner-sub {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.btn-switch-exam {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-switch-exam:hover {
+  background: #f8fafc;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+/* Header Active Exam Badge */
+.header-exam-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(238, 242, 255, 0.8);
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4338ca;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header-exam-badge:hover {
+  background: #ffffff;
+  border-color: #818cf8;
+  transform: translateY(-1px);
+}
+
+.change-exam-tag {
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+/* ==========================================================================
+   Feature 3: Practice with Fun Division & Card
+   ========================================================================== */
+
+.practice-fun-division {
+  margin-bottom: 24px;
+}
+
+.practice-fun-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 45%, #be185d 100%);
+  color: #ffffff;
+  padding: 28px 30px;
+  border-radius: var(--glass-radius-xl);
+  box-shadow: 0 16px 36px -6px rgba(109, 40, 217, 0.38), 0 4px 14px -2px rgba(219, 39, 119, 0.22);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.practice-fun-card:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 22px 44px -6px rgba(109, 40, 217, 0.46), 0 6px 18px -2px rgba(219, 39, 119, 0.3);
+}
+
+.practice-fun-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(-20deg);
+  animation: shineSweep 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shineSweep {
+  0% { left: -100%; }
+  25% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.practice-fun-content {
+  max-width: 620px;
+  z-index: 2;
+}
+
+.practice-hint-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fef08a;
+  letter-spacing: 0.2px;
+}
+
+.practice-fun-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.practice-fun-hook {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fed7aa;
+  margin-bottom: 6px;
+}
+
+.practice-fun-sub {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.practice-fun-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #4338ca;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.practice-fun-btn:hover {
+  background: #f8fafc;
+  transform: translateX(2px);
+}
+
+.practice-fun-mascot-peek {
+  flex-shrink: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.puppy-peek-svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  transform-origin: bottom center;
+  animation: peekBob 3s infinite ease-in-out;
+}
+
+@keyframes peekBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+@media (max-width: 680px) {
+  .practice-fun-card {
+    padding: 22px 18px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .practice-fun-mascot-peek {
+    align-self: flex-end;
+    margin-top: -30px;
+    margin-bottom: -15px;
+  }
+}
+
+/* ==========================================================================
+   Feature 5: Mascot Slot & Expression Keyframes
+   ========================================================================== */
+
+.mascot-slot {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  position: relative;
+  user-select: none;
+}
+
+.puppy-mascot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.puppy-svg {
+  display: block;
+  overflow: visible;
+}
+
+/* Idle animation */
+.puppy-state-idle .pup-tail {
+  transform-origin: 30px 84px;
+  animation: pupTailWag 2s infinite ease-in-out;
+}
+
+@keyframes pupTailWag {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(14deg); }
+}
+
+/* Thinking animation */
+.puppy-state-thinking .pup-head-group {
+  transform-origin: 70px 52px;
+  transform: rotate(-4deg);
+}
+
+.puppy-thought-bubble {
+  animation: bubbleFloat 2s infinite alternate ease-in-out;
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+/* Happy animation */
+.puppy-state-happy {
+  animation: pupJump 0.5s ease;
+}
+
+.puppy-state-happy .pup-tail {
+  transform-origin: 30px 84px;
+  animation: pupTailWagFast 0.4s infinite ease-in-out;
+}
+
+@keyframes pupJump {
+  0% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-12px) scale(1.08); }
+  70% { transform: translateY(2px) scale(0.98); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes pupTailWagFast {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(20deg); }
+}
+
+/* Sad animation */
+.puppy-state-sad .pup-ear-left {
+  transform-origin: 38px 46px;
+  transform: rotate(-32deg) translateY(4px);
+  transition: transform 0.3s ease;
+}
+
+.puppy-state-sad .pup-ear-right {
+  transform-origin: 102px 46px;
+  transform: rotate(32deg) translateY(4px);
+  transition: transform 0.3s ease;
+}
+
+.puppy-state-sad .pup-head-group {
+  transform-origin: 70px 52px;
+  transform: translateY(4px);
+}
+
+/* Concentrating animation */
+.puppy-state-concentrating .pup-head-group {
+  transform-origin: 70px 52px;
+  transform: rotate(3deg) translateY(2px);
+}
+
+/* Celebrating animation */
+.puppy-state-celebrating {
+  animation: pupCelebrate 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes pupCelebrate {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.06); }
+}
+
+/* ==========================================================================
+   Practice Selection Modal (Mode + Subject)
+   ========================================================================== */
+
+.practice-modal-dialog {
+  max-width: 620px;
+  width: 95%;
+}
+
+.practice-step-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 4px;
+}
+
+.practice-step-sub {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.practice-modes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 520px) {
+  .practice-modes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.practice-mode-card {
+  padding: 20px 18px;
+  border-radius: var(--glass-radius-md);
+  border: 1.5px solid var(--border-subtle);
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.practice-mode-card:hover,
+.practice-mode-card.active {
+  border-color: #818cf8;
+  background: #f5f3ff;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.14);
+  transform: translateY(-2px);
+}
+
+.practice-mode-icon {
+  font-size: 26px;
+  color: #6366f1;
+  margin-bottom: 12px;
+}
+
+.practice-mode-name {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 4px;
+}
+
+.practice-mode-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.practice-subjects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+@media (max-width: 520px) {
+  .practice-subjects-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.practice-subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  gap: 10px;
+}
+
+.practice-subject-card:hover {
+  border-color: #6366f1;
+  background: #faf5ff;
+  transform: translateY(-1px);
+}
+
+.practice-subject-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.practice-sub-code {
+  font-size: 12px;
+  font-weight: 800;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 3px 7px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.practice-sub-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.practice-sub-progress {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   Subject Card Exam Scope Header Tags (Feature 2)
+   ========================================================================== */
+
+.subject-card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.subject-scope-units-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4338ca;
+  background: rgba(238, 242, 255, 0.95);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  border: 1px solid rgba(199, 210, 254, 0.7);
+  box-shadow: 0 1px 2px rgba(99, 102, 241, 0.05);
+}
+
+.subject-exam-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #7c3aed;
+  background: rgba(245, 243, 255, 0.95);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(221, 214, 254, 0.7);
+  letter-spacing: 0.02em;
+}
