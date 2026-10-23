@@ -70,6 +70,7 @@
 
     // Exam Selector & Scoping Elements
     examSelectorSection: document.getElementById('examSelectorSection'),
+    examCardsGrid: document.getElementById('examCardsGrid'),
     examActiveBanner: document.getElementById('examActiveBanner'),
     bannerExamTag: document.getElementById('bannerExamTag'),
     bannerExamSubtitle: document.getElementById('bannerExamSubtitle'),
@@ -1906,11 +1907,17 @@
   // -------------------------------------------------------------
   // Interactive Onboarding Spotlight Tour
   // -------------------------------------------------------------
+  const TOUR_STORAGE_KEY = 'mgit_tour_seen_v2';
+
   function initOnboardingTourCheck() {
-    if (!localStorage.getItem('mgit_tour_seen')) {
+    if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
       setTimeout(() => {
-        // Trigger only if user is still on homepage and no modal is open
-        if (!state.currentSubject && (!el.geminiModal || el.geminiModal.style.display === 'none')) {
+        // Trigger only on the clean category home screen with no modal open.
+        if (state.currentView === 'home' &&
+            !state.currentSubject &&
+            el.examCardsGrid &&
+            el.examCardsGrid.offsetParent !== null &&
+            (!el.geminiModal || el.geminiModal.style.display === 'none')) {
           startOnboardingTour();
         }
       }, 2000);
@@ -1927,14 +1934,12 @@
       scrollAction: () => window.scrollTo({ top: 0, behavior: 'smooth' })
     },
     {
-      targetKey: 'subjectsSection',
+      targetKey: 'examCardsGrid',
       badge: 'Step 2 of 3',
-      title: 'Core Subjects & Notes',
-      desc: 'You can find related PYQs and notes here! Select any subject to explore chapter-wise study materials, recurrence frequencies, and question banks.',
+      title: 'Category-Based Learning',
+      desc: 'Pick your learning category — Mid-1, Mid-2, or Semester End — to unlock the exact units, notes, PYQs, and practice for that scope.',
       isLast: false,
-      scrollAction: () => {
-        if (el.subjectsSection) el.subjectsSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      scrollAction: () => window.scrollTo({ top: 0, behavior: 'smooth' })
     },
     {
       targetKey: 'floatingGeminiBtn',
@@ -1995,8 +2000,9 @@
     if (!targetEl || !el.tourSpotlight || !el.tourTooltip) return;
 
     const rect = targetEl.getBoundingClientRect();
-    const pad = (targetEl === el.subjectsSection) ? 10 : 6;
-    const r = (targetEl === el.floatingGeminiBtn) ? 26 : (targetEl === el.topDriveBtn ? 22 : 16);
+    const isCategoryStep = targetEl === el.examCardsGrid;
+    const pad = isCategoryStep ? 12 : ((targetEl === el.subjectsSection) ? 10 : 6);
+    const r = isCategoryStep ? 20 : ((targetEl === el.floatingGeminiBtn) ? 26 : (targetEl === el.topDriveBtn ? 22 : 16));
 
     // 1. Position Spotlight framing (Crystal-clear cutout, ZERO blur)
     el.tourSpotlight.style.display = 'block';
@@ -2027,8 +2033,22 @@
       // Step 1: Place directly BELOW top drive button
       top = rect.bottom + margin;
       left = rect.right - tooltipWidth;
+    } else if (isCategoryStep) {
+      // Step 2: Keep the three category cards unobstructed. Prefer the space
+      // above the grid, then below it, and only fall back to the viewport
+      // bottom on very short screens.
+      const aboveTop = rect.top - actualTooltipHeight - 18;
+      const belowTop = rect.bottom + 18;
+      if (aboveTop >= 16) {
+        top = aboveTop;
+      } else if (belowTop + actualTooltipHeight <= window.innerHeight - 16) {
+        top = belowTop;
+      } else {
+        top = window.innerHeight - actualTooltipHeight - 16;
+      }
+      left = (window.innerWidth - tooltipWidth) / 2;
     } else {
-      // Step 2: Subjects section — top center
+      // Fallback: top center of the target.
       top = Math.max(80, rect.top + 20);
       left = (window.innerWidth - tooltipWidth) / 2;
     }
@@ -2074,7 +2094,7 @@
     if (el.tourSpotlight) el.tourSpotlight.style.display = 'none';
     if (el.tourTooltip) el.tourTooltip.style.display = 'none';
     window.removeEventListener('scroll', handleTourScroll);
-    localStorage.setItem('mgit_tour_seen', 'true');
+    localStorage.setItem(TOUR_STORAGE_KEY, 'true');
   }
 
   // -------------------------------------------------------------
