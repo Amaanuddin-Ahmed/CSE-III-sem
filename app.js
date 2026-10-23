@@ -1939,7 +1939,7 @@
       title: 'Category-Based Learning',
       desc: 'Pick your learning category — Mid-1, Mid-2, or Semester End — to unlock the exact units, notes, PYQs, and practice for that scope.',
       isLast: false,
-      scrollAction: () => window.scrollTo({ top: 0, behavior: 'smooth' })
+      scrollAction: () => window.scrollTo({ top: 0, behavior: 'auto' })
     },
     {
       targetKey: 'floatingGeminiBtn',
