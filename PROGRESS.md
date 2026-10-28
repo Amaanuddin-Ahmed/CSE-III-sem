@@ -33,3 +33,4 @@ Format: `DONE / PARTIAL / BLOCKED — task — one line`
 - `94eb296` — feat(ui): mobile-first shell, navigation and study screens
 - `8d90ea6` — feat(scope): exam-aware navigation, practice, tour and AI flow
 - `5fcd2d4` — docs: audit results, scope review and verification notes
+- `59dc0a0` — fix: snap to top after exam selector re-render
