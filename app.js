@@ -614,6 +614,14 @@
       if (state.currentMode === 'notes') renderNotesDivision();
       if (state.currentMode === 'pyqs') renderPyqsDivision();
     }
+
+    // Hiding the hero changes document height; scroll anchoring can otherwise
+    // leave a small offset (seen at 360 px). Snap back after the re-render.
+    if (navigateToSubjects) {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
+    }
   }
 
   function setExam(examId, navigateToSubjects, options) {
