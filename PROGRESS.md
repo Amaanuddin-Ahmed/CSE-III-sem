@@ -29,4 +29,7 @@ Format: `DONE / PARTIAL / BLOCKED — task — one line`
 
 ## Commits
 
-Filled in after the branch is pushed.
+- `17a1ee0` — chore: remove admin surface and secure AI proxy
+- `94eb296` — feat(ui): mobile-first shell, navigation and study screens
+- `8d90ea6` — feat(scope): exam-aware navigation, practice, tour and AI flow
+- `5fcd2d4` — docs: audit results, scope review and verification notes
