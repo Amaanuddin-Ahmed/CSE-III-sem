@@ -17,7 +17,7 @@ from the public app. Anyone who needs the data can open it locally.
 |---|---|---|---|
 | 0 | Branch `fix/mobile-ux-overhaul`, PLAN/PROGRESS/AUDIT, baseline screenshots | `PLAN.md`, `PROGRESS.md`, `docs/AUDIT.md`, `docs/_qa/*`, `.gitignore` | None |
 | 1 | Recon, play every flow at 390/320, log reproduced issues | `docs/AUDIT.md` | Prompt describes an older build; only fix what reproduces |
-| 2 | Download + OCR MR-25 syllabus, write scope config, audit notes/PYQ gaps | `data/syllabus.mr25.sem3.json`, `data/scope.config.json`, `scope-map.js`, `docs/CONTENT_REVIEW.md` | Drive file may change; content gaps must stay honest |
+| 2 | OCR MR-25 syllabus, write the scope map, audit notes/PYQ gaps | `scope-map.js`, `docs/CONTENT_REVIEW.md`, local `docs/_work/syllabus-text/` | Drive file may change; content gaps must stay honest |
 | 3 | One scope helper drives every list/count/dropdown/quiz | `scope-map.js`, `app.js`, `practice-runner.js` | Unit 3 half logic must match existing tagged data |
 | 4 | Top-of-page on exam pick, toast, scroll memory, History API, popup manager | `app.js`, `index.html`, `style.css` (+ new `popup-manager.js`) | Android back must not leave the site |
 | 5 | Deep-blue header, bigger filled arrows, subject accents, Quiz Time card move, footer, A2HS | `index.html`, `style.css`, `app.js`, `pwa-install.js` | Keep Drive/WhatsApp/Tally URLs byte-identical |
