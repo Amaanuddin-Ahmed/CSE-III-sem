@@ -10,6 +10,7 @@
     // Current Session State
     mode: null,              // 'quiz' or 'flashcards'
     subjectId: null,         // 'DM', 'COA', etc., or 'MIXED'
+    unit: null,              // selected unit number, or 'all'
     activeQueue: [],         // Array of question objects
     currentIndex: 0,
     masteredCount: 0,
@@ -29,6 +30,7 @@
 
     // Element to focus when a practice modal or session closes
     _returnFocus: null,
+    _autoAdvanceTimer: null,
 
     init() {
       this.bindTriggers();
@@ -44,13 +46,28 @@
       // 1. Practice with Fun Main Card
       const funCard = document.getElementById('practiceFunCard');
       if (funCard) {
-        funCard.addEventListener('click', () => this.openSelectorModal());
+        funCard.addEventListener('click', (e) => {
+          // Let the choice buttons handle their own click; don't reopen at step 1.
+          if (e.target.closest('.quiz-time-choice, button, a')) return;
+          this.openSelectorModal();
+        });
         funCard.addEventListener('keydown', (e) => {
+          if (e.target !== funCard) return;
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             this.openSelectorModal();
           }
         });
+      }
+
+      // 1b. Quiz Time shortcut buttons (Quiz / Flashcards)
+      const quizTimeQuizBtn = document.getElementById('quizTimeQuizBtn');
+      const quizTimeFlashBtn = document.getElementById('quizTimeFlashBtn');
+      if (quizTimeQuizBtn) {
+        quizTimeQuizBtn.addEventListener('click', () => this.openSelectorModalFor('quiz'));
+      }
+      if (quizTimeFlashBtn) {
+        quizTimeFlashBtn.addEventListener('click', () => this.openSelectorModalFor('flashcards'));
       }
 
       // 2. Practice Selector Modal Close
@@ -85,6 +102,14 @@
       const backToModeBtn = document.getElementById('backToModeBtn');
       if (backToModeBtn) {
         backToModeBtn.addEventListener('click', () => this.goToModeSelection());
+      }
+      const backToSubjectBtn = document.getElementById('backToSubjectBtn');
+      if (backToSubjectBtn) {
+        backToSubjectBtn.addEventListener('click', () => this.goToSubjectSelection(this.mode));
+      }
+      const changeModeFromUnitsBtn = document.getElementById('changeModeFromUnitsBtn');
+      if (changeModeFromUnitsBtn) {
+        changeModeFromUnitsBtn.addEventListener('click', () => this.goToModeSelection());
       }
 
       // 5. Exit Session Buttons
@@ -139,13 +164,41 @@
       // 8. Flashcard Controls
       const fcCard = document.getElementById('sessionFlashcardCard');
       if (fcCard) {
-        fcCard.addEventListener('click', () => this.toggleFlipFlashcard());
+        fcCard.addEventListener('click', () => {
+          if (this._suppressCardClick) {
+            this._suppressCardClick = false;
+            return;
+          }
+          this.toggleFlipFlashcard();
+        });
         fcCard.addEventListener('keydown', (e) => {
           if (e.key === ' ' || e.key === 'Enter') {
             e.preventDefault();
             this.toggleFlipFlashcard();
           }
         });
+
+        // Swipe left / right to move between cards without flipping.
+        let touchStartX = 0;
+        let touchStartY = 0;
+        fcCard.addEventListener('touchstart', (e) => {
+          const touch = e.changedTouches && e.changedTouches[0];
+          if (!touch) return;
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+          this._suppressCardClick = false;
+        }, { passive: true });
+        fcCard.addEventListener('touchend', (e) => {
+          const touch = e.changedTouches && e.changedTouches[0];
+          if (!touch) return;
+          const dx = touch.clientX - touchStartX;
+          const dy = touch.clientY - touchStartY;
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+            this._suppressCardClick = true;
+            if (dx < 0) this.nextFlashcard();
+            else this.prevFlashcard();
+          }
+        }, { passive: true });
       }
 
       const fcPrev = document.getElementById('fcPrevBtn');
@@ -235,6 +288,11 @@
       modal.style.display = 'flex';
     },
 
+    openSelectorModalFor(mode) {
+      this.openSelectorModal();
+      this.goToSubjectSelection(mode);
+    },
+
     restoreFocus() {
       const candidates = [
         this._returnFocus,
@@ -261,8 +319,10 @@
     goToModeSelection() {
       const stepMode = document.getElementById('practiceStepMode');
       const stepSubject = document.getElementById('practiceStepSubject');
+      const stepUnit = document.getElementById('practiceStepUnit');
       if (stepMode) stepMode.style.display = 'block';
       if (stepSubject) stepSubject.style.display = 'none';
+      if (stepUnit) stepUnit.style.display = 'none';
 
       // Adapt title for active exam
       const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
@@ -283,10 +343,12 @@
       this.mode = mode;
       const stepMode = document.getElementById('practiceStepMode');
       const stepSubject = document.getElementById('practiceStepSubject');
+      const stepUnit = document.getElementById('practiceStepUnit');
       const modeLabel = document.getElementById('practiceSelectedModeLabel');
 
       if (stepMode) stepMode.style.display = 'none';
       if (stepSubject) stepSubject.style.display = 'block';
+      if (stepUnit) stepUnit.style.display = 'none';
 
       if (modeLabel) {
         modeLabel.textContent = mode === 'quiz' ? 'Mode: MCQs & Quick Questions' : 'Mode: View Flashcards';
@@ -336,15 +398,11 @@
           <span class="practice-sub-progress">${progressLabel}</span>
         `;
 
-        card.addEventListener('click', () => {
-          this.closeSelectorModal(false);
-          this.startSession(sub.id, this.mode);
-        });
+        card.addEventListener('click', () => this.goToUnitSelection(sub.id));
         card.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            this.closeSelectorModal(false);
-            this.startSession(sub.id, this.mode);
+            this.goToUnitSelection(sub.id);
           }
         });
 
@@ -352,10 +410,87 @@
       });
     },
 
+    goToUnitSelection(subjectId) {
+      this.subjectId = subjectId;
+      const stepSubject = document.getElementById('practiceStepSubject');
+      const stepUnit = document.getElementById('practiceStepUnit');
+      const subLabel = document.getElementById('practiceSelectedSubjectLabel');
+      const list = document.getElementById('practiceUnitsList');
+
+      if (stepSubject) stepSubject.style.display = 'none';
+      if (stepUnit) stepUnit.style.display = 'block';
+      if (subLabel) {
+        const label = subjectId === 'MIXED' ? 'Mixed practice' : subjectId;
+        subLabel.textContent = `${label} · ${this.mode === 'quiz' ? 'Quiz Mode' : 'Flashcards'}`;
+      }
+      if (!list) return;
+      list.innerHTML = '';
+
+      const bank = this.getActiveDataSource() || {};
+      const source = this.mode === 'quiz' ? (bank.quiz || {}) : (bank.flashcards || {});
+
+      const counts = {};
+      if (subjectId === 'MIXED') {
+        Object.keys(source).forEach(sub => {
+          (source[sub] || []).forEach(item => {
+            const u = Number(item.unit);
+            if (u >= 1 && u <= 5) counts[u] = (counts[u] || 0) + 1;
+          });
+        });
+      } else {
+        (source[subjectId] || []).forEach(item => {
+          const u = Number(item.unit);
+          if (u >= 1 && u <= 5) counts[u] = (counts[u] || 0) + 1;
+        });
+      }
+
+      const itemWord = this.mode === 'quiz' ? 'question' : 'card';
+      const addUnitButton = (unitValue, title, count) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'practice-unit-card';
+        btn.setAttribute('role', 'radio');
+        btn.setAttribute('aria-checked', 'false');
+        btn.disabled = count === 0;
+        btn.innerHTML = `
+          <span class="practice-unit-name">${title}</span>
+          <span class="practice-unit-count">${count > 0 ? `${count} ${itemWord}${count === 1 ? '' : 's'}` : 'Not available yet'}</span>
+        `;
+        if (count > 0) {
+          btn.addEventListener('click', () => {
+            this.closeSelectorModal(false);
+            this.startSession(subjectId, this.mode, unitValue);
+          });
+        }
+        list.appendChild(btn);
+      };
+
+      // Only offer units that belong to the active exam. Mid-2, for example,
+      // must not imply that Units 1–2 are "missing" when they are simply out of scope.
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const examCfg = window.EXAM_CONFIG ? window.EXAM_CONFIG[activeExam] : null;
+      const scopedUnits = (examCfg && Array.isArray(examCfg.units) && examCfg.units.length)
+        ? examCfg.units.slice()
+        : [1, 2, 3, 4, 5];
+
+      if (subjectId === 'MIXED') {
+        const total = scopedUnits.reduce((sum, u) => sum + (counts[u] || 0), 0);
+        addUnitButton('all', `All ${scopedUnits.length} in-scope units`, total);
+      }
+      scopedUnits.forEach(unit => {
+        addUnitButton(unit, `Unit ${unit}`, counts[unit] || 0);
+      });
+    },
+
     // Session Management
-    startSession(subjectId, mode) {
+    startSession(subjectId, mode, unit) {
       this.subjectId = subjectId;
       this.mode = mode;
+      this.unit = unit === undefined || unit === null ? 'all' : unit;
+      if (this._autoAdvanceTimer) {
+        clearTimeout(this._autoAdvanceTimer);
+        this._autoAdvanceTimer = null;
+      }
       if (!this._returnFocus || !document.contains(this._returnFocus) || !this._returnFocus.getClientRects().length) {
         this._returnFocus = document.activeElement;
       }
@@ -389,7 +524,9 @@
         const modeText = mode === 'quiz'
           ? (compact ? 'Quiz' : 'Interactive Questions')
           : (compact ? 'Flashcards' : 'High-Yield Flashcards');
-        title.textContent = `${subjectId === 'MIXED' ? 'Mixed Practice' : subjectId} • ${modeText}`;
+        const unitText = this.unit === 'all' ? 'All units' : `Unit ${this.unit}`;
+        // The subject badge already shows DM/COA/…, so the title stays short.
+        title.textContent = `${unitText} • ${modeText}`;
       }
 
       if (mode === 'quiz') {
@@ -421,6 +558,10 @@
     },
 
     exitSession() {
+      if (this._autoAdvanceTimer) {
+        clearTimeout(this._autoAdvanceTimer);
+        this._autoAdvanceTimer = null;
+      }
       const sessionScreen = document.getElementById('practiceSessionScreen');
       if (sessionScreen) sessionScreen.style.display = 'none';
       const exitModal = document.getElementById('practiceExitModal');
@@ -454,13 +595,19 @@
       let rawQuestions = [];
       if (dataBank && dataBank.quiz) {
         if (this.subjectId === 'MIXED') {
-          // Collect questions across all subjects
+          // Collect questions across all subjects, then keep the selected unit.
           Object.keys(dataBank.quiz).forEach(sub => {
             const list = dataBank.quiz[sub] || [];
-            rawQuestions.push(...list.slice(0, 5));
+            const scoped = this.unit === 'all'
+              ? list
+              : list.filter(q => Number(q.unit) === Number(this.unit));
+            rawQuestions.push(...(this.unit === 'all' ? scoped.slice(0, 5) : scoped));
           });
         } else {
           rawQuestions = dataBank.quiz[this.subjectId] || [];
+          if (this.unit !== 'all') {
+            rawQuestions = rawQuestions.filter(q => Number(q.unit) === Number(this.unit));
+          }
         }
       }
 
@@ -504,9 +651,47 @@
       this.totalAttempts = 0;
       this.correctFirstTry = 0;
 
+      if (this.activeQueue.length === 0) {
+        this.renderEmptyQuiz();
+        return;
+      }
+
       // Update Counter Pill
       this.updateProgressUi();
       this.renderCurrentQuestion();
+    },
+
+    renderEmptyQuiz() {
+      const unitText = this.unit === 'all' ? 'this subject' : `Unit ${this.unit}`;
+      const textEl = document.getElementById('sessionQuestionText');
+      const optionsGrid = document.getElementById('sessionOptionsGrid');
+      const fibForm = document.getElementById('sessionFibForm');
+      const nav = document.getElementById('sessionQuizNav');
+      const feedback = document.getElementById('sessionFeedbackBanner');
+      const unitTag = document.getElementById('sessionUnitTag');
+      const typeTag = document.getElementById('sessionTypeTag');
+      const diffTag = document.getElementById('sessionDifficultyTag');
+      const currentCount = document.getElementById('sessionCurrentCount');
+      const totalCount = document.getElementById('sessionTotalCount');
+      const fill = document.getElementById('sessionProgressFill');
+
+      if (unitTag) unitTag.textContent = this.unit === 'all' ? 'Quiz Time' : `Unit ${this.unit}`;
+      if (typeTag) typeTag.textContent = 'No questions yet';
+      if (diffTag) diffTag.textContent = '';
+      if (textEl) {
+        textEl.textContent = `No quiz questions are available for ${unitText} yet. Try another unit or add questions to the bank.`;
+      }
+      if (optionsGrid) {
+        optionsGrid.style.display = 'none';
+        optionsGrid.innerHTML = '';
+      }
+      if (fibForm) fibForm.style.display = 'none';
+      if (nav) nav.style.display = 'none';
+      if (feedback) feedback.style.display = 'none';
+      if (currentCount) currentCount.textContent = '0';
+      if (totalCount) totalCount.textContent = '0';
+      if (fill) fill.style.width = '0%';
+      if (this.mascot) this.mascot.setState('idle', 'Nothing here yet — try another unit.');
     },
 
     updateProgressUi() {
@@ -519,8 +704,8 @@
 
       if (fill) fill.style.width = `${percent}%`;
       if (track) track.setAttribute('aria-valuenow', Math.round(percent));
-      if (currentCount) currentCount.textContent = this.masteredCount;
-      if (totalCount) totalCount.textContent = this.totalToMaster;
+      if (currentCount) currentCount.textContent = Math.min(this.currentIndex + 1, Math.max(this.activeQueue.length, 1));
+      if (totalCount) totalCount.textContent = Math.max(this.activeQueue.length, 1);
     },
 
     renderCurrentQuestion() {
@@ -532,6 +717,10 @@
       const q = this.activeQueue[this.currentIndex];
       const savedState = q._answer || null;
       this.isAnswered = !!savedState;
+      this.updateProgressUi();
+
+      const nav = document.getElementById('sessionQuizNav');
+      if (nav) nav.style.display = '';
 
       if (window.ActivityTracker && q.id) {
         const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
@@ -542,7 +731,7 @@
 
       // Mascot State
       if (this.mascot) {
-        this.mascot.setState('thinking', "You've got this!");
+        this.mascot.setState('thinking', "You’ve got this!");
       }
 
       // Tags
@@ -706,7 +895,7 @@
           this.mascot.setState('sad', "Oh no! But we learn from mistakes.");
           setTimeout(() => {
             if (this.mascot && this.isAnswered) {
-              this.mascot.setState('concentrating', "Let's review the explanation.");
+              this.mascot.setState('concentrating', "Let’s review the explanation.");
             }
           }, 1500);
         }
@@ -723,6 +912,21 @@
 
       const skipBtn = document.getElementById('sessionSkipBtn');
       if (skipBtn) skipBtn.style.display = 'none';
+
+      // Auto-advance after a correct answer so revision keeps its rhythm.
+      if (this._autoAdvanceTimer) {
+        clearTimeout(this._autoAdvanceTimer);
+        this._autoAdvanceTimer = null;
+      }
+      if (isCorrect) {
+        const answeredIndex = this.currentIndex;
+        this._autoAdvanceTimer = setTimeout(() => {
+          this._autoAdvanceTimer = null;
+          if (this.currentIndex === answeredIndex && this.isAnswered) {
+            this.nextQuestion();
+          }
+        }, 1800);
+      }
     },
 
     renderQuestionFeedback(q, isCorrect, chosenIdx) {
@@ -734,7 +938,7 @@
 
       if (isCorrect) {
         feedback.className = 'q-feedback-banner correct';
-        if (feedbackTitle) feedbackTitle.textContent = "Brilliant! That's correct.";
+        if (feedbackTitle) feedbackTitle.textContent = "Brilliant! That’s correct.";
         if (feedbackIcon) feedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
       } else {
         feedback.className = 'q-feedback-banner wrong';
@@ -765,6 +969,10 @@
     },
 
     nextQuestion() {
+      if (this._autoAdvanceTimer) {
+        clearTimeout(this._autoAdvanceTimer);
+        this._autoAdvanceTimer = null;
+      }
       this.currentIndex++;
       if (this.currentIndex >= this.activeQueue.length || this.masteredCount >= this.totalToMaster) {
         this.showResults();
@@ -809,10 +1017,16 @@
         if (this.subjectId === 'MIXED') {
           Object.keys(dataBank.flashcards).forEach(sub => {
             const list = dataBank.flashcards[sub] || [];
-            rawDeck.push(...list.slice(0, 3));
+            const scoped = this.unit === 'all'
+              ? list
+              : list.filter(card => Number(card.unit) === Number(this.unit));
+            rawDeck.push(...(this.unit === 'all' ? scoped.slice(0, 3) : scoped));
           });
         } else {
           rawDeck = dataBank.flashcards[this.subjectId] || [];
+          if (this.unit !== 'all') {
+            rawDeck = rawDeck.filter(card => Number(card.unit) === Number(this.unit));
+          }
         }
       }
 
@@ -820,11 +1034,45 @@
       this.currentCardIndex = 0;
       this.isFlipped = false;
 
+      if (this.activeDeck.length === 0) {
+        this.renderEmptyFlashcards();
+        return;
+      }
+
       this.renderFlashcard();
     },
 
+    renderEmptyFlashcards() {
+      const unitText = this.unit === 'all' ? 'this subject' : `Unit ${this.unit}`;
+      const frontText = document.getElementById('fcFrontText');
+      const backText = document.getElementById('fcBackText');
+      const unitTag = document.getElementById('fcUnitTag');
+      const topicLabel = document.getElementById('fcTopicLabel');
+      const currentCount = document.getElementById('sessionCurrentCount');
+      const totalCount = document.getElementById('sessionTotalCount');
+      const fill = document.getElementById('sessionProgressFill');
+      const fcCounter = document.getElementById('fcCounter');
+      const cardEl = document.getElementById('sessionFlashcardCard');
+
+      if (unitTag) unitTag.textContent = this.unit === 'all' ? 'Quiz Time' : `Unit ${this.unit}`;
+      if (topicLabel) topicLabel.textContent = 'No cards yet';
+      if (frontText) {
+        frontText.textContent = `No flash cards are available for ${unitText} yet. Try another unit or add cards to the bank.`;
+      }
+      if (backText) backText.textContent = '';
+      if (cardEl) {
+        cardEl.classList.remove('flipped');
+        cardEl.setAttribute('aria-pressed', 'false');
+      }
+      if (currentCount) currentCount.textContent = '0';
+      if (totalCount) totalCount.textContent = '0';
+      if (fcCounter) fcCounter.textContent = '0 / 0';
+      if (fill) fill.style.width = '0%';
+      if (this.mascot) this.mascot.setState('idle', 'Nothing here yet — try another unit.');
+    },
+
     renderFlashcard() {
-      if (this.activeDeck.length === 0) return;
+      if (this.activeDeck.length === 0) { this.renderEmptyFlashcards(); return; }
       const card = this.activeDeck[this.currentCardIndex];
 
       const cardEl = document.getElementById('sessionFlashcardCard');
@@ -978,7 +1226,8 @@
         masteredNum.textContent = this.mode === 'quiz' ? this.masteredCount : this.activeDeck.length;
       }
       if (accuracyNum) {
-        const acc = this.totalAttempts > 0 ? Math.round((this.correctFirstTry / this.totalAttempts) * 100) : 0;
+        const firstTryCount = Object.keys(this.firstTryMap || {}).length;
+        const acc = firstTryCount > 0 ? Math.round((this.correctFirstTry / firstTryCount) * 100) : 0;
         accuracyNum.textContent = `${acc}%`;
       }
       if (streakNum && window.ActivityTracker) {
@@ -1017,8 +1266,10 @@
         if (barsContainer) {
           barsContainer.innerHTML = '';
           const subjects = ['DM', 'COA', 'OOPJ', 'DBMS', 'SE', 'ES', 'IE'];
+          let masteredTotal = 0;
           subjects.forEach(sub => {
             const stats = window.ActivityTracker.getSubjectMastery(sub);
+            masteredTotal += stats.count;
             const row = document.createElement('div');
             row.className = 'prog-sub-row';
             row.innerHTML = `
@@ -1032,6 +1283,8 @@
             `;
             barsContainer.appendChild(row);
           });
+          const emptyState = document.getElementById('progressEmptyState');
+          if (emptyState) emptyState.hidden = masteredTotal > 0;
         }
       }
 

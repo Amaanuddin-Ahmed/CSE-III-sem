@@ -2,8 +2,8 @@
  * MGIT PYQ Hub — Central Syllabus Scoping Engine & MR-25 Scope Map
  * 
  * Rules:
- * - Mid-1: Units 1 to 2.5 (Units 1, 2, and 1st half of Unit 3)
- * - Mid-2: Units 2.5 to 5 (2nd half of Unit 3, Unit 4, and Unit 5)
+ * - Mid-1: Units 1–2 plus the 1st half of Unit 3
+ * - Mid-2: 2nd half of Unit 3 plus Units 4–5
  * - Semester End: Complete applicable syllabus (Units 1 to 5)
  */
 
@@ -14,10 +14,10 @@ const EXAM_CONFIG = {
       id: 'mid1',
       name: 'Mid-1',
       title: 'Mid-Term 1',
-      unitsLabel: 'Units 1 – 2.5',
+      unitsLabel: 'Units 1–2 + Unit 3 (1st half)',
       badge: null,
       description: 'Revise your first internal examination syllabus.',
-      bannerSubtitle: "Units 1 – 2.5 · Only what's in your Mid-1 syllabus",
+      bannerSubtitle: "Units 1–2 + Unit 3 (1st half) · Only what’s in your Mid-1 syllabus",
       units: [1, 2, 3],
       unit3Scope: 'mid1',
       unit3Label: 'Unit 3 (1st half)'
@@ -26,10 +26,10 @@ const EXAM_CONFIG = {
       id: 'mid2',
       name: 'Mid-2',
       title: 'Mid-Term 2',
-      unitsLabel: 'Units 2.5 – 5',
+      unitsLabel: 'Unit 3 (2nd half) + Units 4–5',
       badge: 'Upcoming',
       description: 'Focus on the upcoming internal examination.',
-      bannerSubtitle: "Units 2.5 – 5 · Only what's in your Mid-2 syllabus",
+      bannerSubtitle: "Unit 3 (2nd half) + Units 4–5 · Only what’s in your Mid-2 syllabus",
       units: [3, 4, 5],
       unit3Scope: 'mid2',
       unit3Label: 'Unit 3 (2nd half)'
@@ -41,7 +41,7 @@ const EXAM_CONFIG = {
       unitsLabel: 'All 5 Units',
       badge: null,
       description: 'Prepare across the complete semester syllabus.',
-      bannerSubtitle: 'Units 1 – 5 · Complete semester-end syllabus',
+      bannerSubtitle: 'Units 1–5 · Complete semester-end syllabus',
       units: [1, 2, 3, 4, 5],
       unit3Scope: 'both',
       unit3Label: 'Unit 3'
@@ -53,59 +53,59 @@ const SCOPE_MAP = {
   unit3Splits: {
     DM: {
       subject: 'Discrete Mathematics',
-      unit3Title: 'Algebraic Structures, Semigroups, Monoids, Groups & Subgroups',
-      mid1Description: 'Algebraic Systems, Semigroups, Monoids, Homomorphism & Subsemigroups',
-      mid2Description: "Groups, Subgroups, Abelian Groups, Cosets, Lagrange's Theorem & Normal Subgroups",
-      mid1Keywords: ['semigroup', 'monoid', 'homomorphism', 'algebraic system', 'algebraic structure', 'closure', 'associative', 'identity element', 'subsemigroup', 'submonoid'],
-      mid2Keywords: ['group', 'subgroup', 'abelian', 'lagrange', 'coset', 'normal subgroup', 'cyclic', 'generator', 'permutation group', 'cayley', 'order of an element']
+      unit3Title: 'Algebraic Structures: Algebraic Systems, Semigroups, Monoids, Lattices and Boolean Algebra',
+      mid1Description: 'Algebraic Systems, Semigroups and Monoids',
+      mid2Description: 'Lattices as Partially Ordered Sets and Boolean Algebra',
+      mid1Keywords: ['algebraic system', 'algebraic structure', 'semigroup', 'semi group', 'monoid', 'submonoid', 'sub monoid', 'subsemigroup', 'closure', 'associative', 'binary operation', 'identity element', 'identity and inverse', 'inverse element', 'subalgebra', 'direct product', 'homomorphism', 'isomorphism', 'forms a group', 'group under', 'abelian group', 'define a group', 'multiplicative group', 'in any group', 'order of every element', 'order of an element', 'subgroup', 'cyclic group', 'coset', 'lagrange', 'normal subgroup'],
+      mid2Keywords: ['lattice', 'sublattice', 'poset', 'partially ordered', 'partial order', 'boolean algebra', 'boolean function', 'boolean expression', 'boolean simplification', 'bounded lattice', 'distributive lattice', 'lattice operations', 'complement', 'lub', 'glb', 'join and meet', 'absorption']
     },
     COA: {
       subject: 'Computer Organization & Architecture',
-      unit3Title: 'Computer Arithmetic, Fixed & Floating Point, Booth\'s Algorithm',
-      mid1Description: 'Fixed-Point Arithmetic, Addition/Subtraction Hardware & Booth\'s Multiplication Algorithm',
-      mid2Description: 'Division Algorithms (Restoring & Non-restoring), Floating-Point Arithmetic (IEEE 754) & Decimal ALU',
-      mid1Keywords: ['booth', 'multiplication', 'fixed point', '2\'s complement', 'adder', 'subtractor', 'carry lookahead', 'array multiplier', 'overflow'],
-      mid2Keywords: ['division', 'restoring', 'non-restoring', 'floating point', 'ieee 754', 'mantissa', 'exponent', 'decimal alu', 'bcd adder', 'normalization', 'biased exponent']
+      unit3Title: 'Register Transfer Language, Micro-operations and Basic Computer Organization',
+      mid1Description: 'Register Transfer Language, Bus and Memory Transfers, Arithmetic/Logic/Shift Micro-operations and the Arithmetic Logic Shift Unit',
+      mid2Description: 'Basic Computer Organization and Design: Instruction Codes, Computer Registers, Instruction Cycle, Memory-Reference Instructions, I/O and Interrupt',
+      mid1Keywords: ['register transfer', 'rtl', 'bus transfer', 'memory transfer', 'bus and memory', 'micro operation', 'microoperation', 'micro-operation', 'arithmetic micro', 'logic micro', 'shift micro', 'arithmetic logic shift', 'alsu'],
+      mid2Keywords: ['instruction code', 'computer register', 'instruction cycle', 'memory reference', 'timing and control', 'input output', 'input/output', 'interrupt', 'basic computer organization', 'program counter', 'instruction register', 'bidirectional input', 'enable/load']
     },
     OOPJ: {
       subject: 'Object-Oriented Programming through Java',
-      unit3Title: 'Exception Handling, Custom Exceptions & Multithreading',
-      mid1Description: 'Exception Handling, try-catch-finally, Built-in and Custom Exceptions, throw and throws',
-      mid2Description: 'Multithreading, Thread Lifecycle, Synchronization, Inter-thread Communication & Deadlocks',
-      mid1Keywords: ['exception', 'try', 'catch', 'finally', 'throw', 'throws', 'throwable', 'checked exception', 'unchecked exception', 'custom exception', 'user-defined exception'],
-      mid2Keywords: ['thread', 'multithreading', 'runnable', 'synchronization', 'synchronized', 'deadlock', 'inter-thread', 'wait', 'notify', 'notifyall', 'thread priority', 'lifecycle']
+      unit3Title: 'Exception Handling and Multithreading',
+      mid1Description: 'Exception Handling: try, catch, throw, throws and finally; Built-in and Custom Exception Subclasses',
+      mid2Description: 'Multithreading: Thread Life Cycle, Priorities, Synchronization, Inter-thread Communication, Thread Groups and Daemon Threads',
+      mid1Keywords: ['exception', 'try', 'catch', 'finally', 'throw', 'throws', 'throwable', 'checked exception', 'unchecked exception', 'custom exception', 'user-defined exception', 'resumptive', 'termination or resumptive'],
+      mid2Keywords: ['thread', 'multithreading', 'multitasking', 'lightweight process', 'process-based', 'process based', 'runnable', 'synchronization', 'synchronized', 'deadlock', 'inter-thread', 'inter thread', 'wait', 'notify', 'notifyall', 'thread priority', 'life cycle', 'daemon']
     },
     DBMS: {
       subject: 'Database Management Systems',
-      unit3Title: 'Schema Refinement, Functional Dependencies & Normalization (1NF to BCNF)',
-      mid1Description: 'Functional Dependencies, Closure of FDs & Attributes, Canonical Cover, Lossless Join & Dependency Preservation',
-      mid2Description: 'Normal Forms (1NF, 2NF, 3NF, BCNF), Multi-Valued Dependencies (4NF) & Join Dependencies (5NF)',
-      mid1Keywords: ['functional dependency', 'closure', 'canonical cover', 'minimal cover', 'lossless join', 'dependency preserving', 'armstrong', 'attribute closure'],
-      mid2Keywords: ['1nf', '2nf', '3nf', 'bcnf', 'normalization', 'multivalued dependency', '4nf', '5nf', 'join dependency', 'lossy', 'prime attribute', 'anomaly']
+      unit3Title: 'SQL, Constraints, Triggers and Schema Refinement (Normalization)',
+      mid1Description: 'SQL: Basic Queries, UNION/INTERSECT/EXCEPT, Nested Queries, Aggregation, NULLs, Constraints and Triggers',
+      mid2Description: 'Schema Refinement: Redundancy, Decompositions, Functional Dependencies, 1NF–BCNF, Lossless Join, Multivalued Dependencies, 4NF and 5NF',
+      mid1Keywords: ['sql', 'select', 'union', 'intersect', 'except', 'nested quer', 'aggregation', 'null value', 'trigger', 'active database', 'integrity constraint', 'constraint', 'types of joins', 'stored procedure'],
+      mid2Keywords: ['redundancy', 'decomposition', 'functional dependenc', '1nf', '2nf', '3nf', 'bcnf', 'lossless', 'multivalued dependenc', 'multi valued dependenc', 'join dependency', '4nf', '5nf', 'normal form', 'normalization', 'canonical cover', 'attribute closure', 'closure of', 'armstrong', 'prime attribute', 'anomaly', 'schema refinement']
     },
     SE: {
       subject: 'Software Engineering',
-      unit3Title: 'Software Architectural Design, Modular Decomposition & Coupling/Cohesion',
-      mid1Description: 'Architectural Styles and Patterns, System Design Concepts & Modular Decomposition',
-      mid2Description: 'Component-Level Design, Cohesion & Coupling Metrics, User Interface Design Principles',
-      mid1Keywords: ['architectural style', 'architecture', 'data-flow', 'call and return', 'client-server', 'layered', 'pipe and filter', 'modular decomposition', 'taxonomy'],
-      mid2Keywords: ['cohesion', 'coupling', 'component-level', 'ui design', 'interface design', 'golden rules', 'user interface', 'hiding', 'abstraction metric', 'fan-in', 'fan-out']
+      unit3Title: 'Design Engineering, Architectural Design and UML Modeling',
+      mid1Description: 'Design Process and Quality, Design Concepts and the Design Model, Software Architecture, Data Design, Architectural Styles and Patterns',
+      mid2Description: 'UML Conceptual Model, Structural Modeling, Use Case, Class, Sequence, Collaboration, Activity and Component Diagrams',
+      mid1Keywords: ['design process', 'design quality', 'design concept', 'design model', 'design principle', 'design strateg', 'software architecture', 'data design', 'architectural style', 'architectural pattern', 'architectural design', 'architecture', 'modularity', 'abstraction', 'refinement', 'cohesion', 'coupling', 'component level design', 'data flow'],
+      mid2Keywords: ['uml', 'use case', 'class diagram', 'sequence diagram', 'collaboration diagram', 'activity diagram', 'component diagram', 'structural modeling', 'unified modeling', 'class based model', 'object model', 'behavioural model', 'behavioral model', 'static diagram', 'generalization relationship']
     },
     ES: {
       subject: 'Environmental Studies',
-      unit3Title: 'Environmental Pollution (Air, Water, Soil, Noise) & Solid Waste',
-      mid1Description: 'Air Pollution and Water Pollution: Causes, Effects and Control Measures',
-      mid2Description: 'Soil Pollution, Noise Pollution, Thermal/Nuclear Hazards & Municipal Solid Waste Management',
-      mid1Keywords: ['air pollution', 'water pollution', 'smog', 'acid rain', 'greenhouse', 'bod', 'cod', 'effluent', 'aquatic', 'particulate matter', 'ozone depletion'],
-      mid2Keywords: ['soil pollution', 'noise pollution', 'solid waste', 'waste management', 'landfill', 'composting', 'incineration', 'radioactive', 'thermal pollution', 'plastic waste']
+      unit3Title: 'Biodiversity and Biotic Resources',
+      mid1Description: 'Biodiversity: Definition, Levels (Genetic, Species, Ecosystem) and Values',
+      mid2Description: 'Threats to Biodiversity (Habitat Loss, Poaching, Man–Wildlife Conflict) and In-situ / Ex-situ Conservation',
+      mid1Keywords: ['biodiversity', 'genetic diversity', 'species diversity', 'ecosystem diversity', 'value of biodiversity', 'consumptive', 'productive', 'aesthetic', 'ethical', 'optional value'],
+      mid2Keywords: ['habitat loss', 'poaching', 'man-wildlife', 'man wildlife', 'conservation', 'in-situ', 'ex-situ', 'endangered', 'extinction', 'threat to biodiversity', 'wildlife']
     },
     IE: {
       subject: 'Innovation and Entrepreneurship',
-      unit3Title: 'Business Model Generation, Lean Canvas & Value Proposition',
-      mid1Description: 'Business Model Fundamentals, Lean Startup Methodology & Value Proposition Canvas',
-      mid2Description: 'Business Model Canvas (9 Building Blocks), Customer Segments, Revenue Streams & Cost Structure',
-      mid1Keywords: ['lean startup', 'value proposition', 'mvp', 'minimum viable product', 'problem-solution', 'pivot', 'hypothesis', 'customer discovery'],
-      mid2Keywords: ['business model canvas', 'bmc', 'revenue stream', 'cost structure', 'customer segment', 'key activities', 'key resources', 'key partners', 'value proposition canvas']
+      unit3Title: 'Opportunity Assessment and Prototype Development',
+      mid1Description: 'Global Competitors, Industry Trends, Market Sizing (TAM, SAM, SOM) and Opportunity Scope',
+      mid2Description: 'Prototyping, Minimum Viable Product (MVP), Testing and Validation',
+      mid1Keywords: ['competitor', 'industry trend', 'market sizing', 'tam', 'sam', 'som', 'opportunity assessment', 'market size', 'potential scale'],
+      mid2Keywords: ['prototype', 'mvp', 'minimum viable product', 'testing', 'validation', 'validate', 'no-code', 'developing a prototype']
     }
   }
 };
@@ -122,6 +122,7 @@ if (typeof window !== 'undefined') {
   window.SCOPE_MAP = SCOPE_MAP.unit3Splits;
   window.EXAM_CONFIG_FULL = EXAM_CONFIG;
   window.SCOPE_MAP_FULL = SCOPE_MAP;
+  window.isNoteInScope = isNoteInScope;
 }
 
 /**
@@ -154,35 +155,59 @@ function isItemInScope(item, examId) {
   return true;
 }
 
-function matchUnit3Mid1(item) {
+/**
+ * Classify a Unit 3 item into one half of the syllabus.
+ * Returns 'mid1', 'mid2', or null when the text gives no confident answer.
+ *
+ * Null is deliberate: assigning an unknown question to a half by id parity
+ * (the old behaviour) invented scope. Unknown Unit 3 items stay visible in
+ * Semester End and are listed in docs/CONTENT_REVIEW.md for manual review.
+ */
+function classifyUnit3(item) {
+  if (!item) return null;
+  if (item.scope === 'mid1' || item.scope === 'mid2') return item.scope;
+
   const subCode = item.subjectId || item.subject || '';
   const splitInfo = SCOPE_MAP.unit3Splits[subCode];
-  if (!splitInfo) return true; // Default include if subject unknown
+  if (!splitInfo) return null;
 
   const text = ((item.question || '') + ' ' + (item.title || '') + ' ' + (item.topicTag || '')).toLowerCase();
-  
-  // Check mid1 keywords
+
   let mid1Score = 0;
   for (const kw of splitInfo.mid1Keywords) {
     if (text.includes(kw.toLowerCase())) mid1Score += 2;
   }
 
-  // Check mid2 keywords
   let mid2Score = 0;
   for (const kw of splitInfo.mid2Keywords) {
     if (text.includes(kw.toLowerCase())) mid2Score += 2;
   }
 
-  if (mid1Score > mid2Score) return true;
-  if (mid2Score > mid1Score) return false;
+  if (mid1Score > mid2Score) return 'mid1';
+  if (mid2Score > mid1Score) return 'mid2';
+  return null;
+}
 
-  // If tied or no keywords matched, check question id or index parity for balanced fallback
-  const numId = parseInt((item.id || '').replace(/\D/g, ''), 10);
-  return isNaN(numId) ? true : (numId % 2 === 1);
+function matchUnit3Mid1(item) {
+  return classifyUnit3(item) === 'mid1';
 }
 
 function matchUnit3Mid2(item) {
-  return !matchUnit3Mid1(item);
+  return classifyUnit3(item) === 'mid2';
+}
+
+/**
+ * Notes are whole-unit resources. Unlike a single question, a Unit 3 note
+ * covers both halves of the syllabus, so it must stay visible in Mid-1 and
+ * Mid-2 instead of being pushed through the Unit 3 keyword split.
+ */
+function isNoteInScope(note, examId) {
+  if (!note || !examId || examId === 'sem') return true;
+  const unit = Number(note.chapter !== undefined ? note.chapter : note.unit);
+  if (isNaN(unit) || unit <= 0) return true;
+  const exam = EXAM_CONFIG.exams[examId];
+  if (!exam || !Array.isArray(exam.units)) return true;
+  return exam.units.includes(unit);
 }
 
 /**
@@ -233,6 +258,8 @@ if (typeof module !== 'undefined' && module.exports) {
     EXAM_CONFIG,
     SCOPE_MAP,
     isItemInScope,
+    isNoteInScope,
+    classifyUnit3,
     filterItemsForExam,
     getInScopeChapters,
     getScopedChapterTitle

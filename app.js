@@ -6,9 +6,8 @@
  * - Dynamic Top Drive Link based on selected Subject
  * - Two Division Boxes: Notes (Chapter Dropdown) & PYQs (Year Checkbox Filter & Part A/B)
  * - Question Detail Modal with Repetition, Drive Paper Reference & Tip
- * - Contribution Warning Pop-up + Multi-file Upload Dialog
- * - Admin Portal with Moderation Queue
- * - Floating Gemini AI Assistant
+ * - Contribution warning + WhatsApp hand-off dialog
+ * - AI Study Assistant (server-side only)
  */
 
 (function () {
@@ -38,16 +37,18 @@
     currentView: 'home',
     appHistoryIndex: 0,
     maxAppHistoryIndex: 0,
-    isAdminLoggedIn: sessionStorage.getItem('mgit_admin_auth') === 'authenticated',
     selectedFiles: [],
+    homeScrollY: 0,
+    scrollMemory: {},
 
     // Onboarding Walkthrough Tour State
     currentTourStep: 0,
 
-    // Gemini Chat & Sessions State
+    // AI Chat & Sessions State
     activeChatId: null,
     geminiChats: JSON.parse(localStorage.getItem('mgit_gemini_chats') || '[]'),
     pendingGeminiImage: null,
+    aiBusy: false,
     isSpeechListening: false,
     speechRecognition: null
   };
@@ -61,8 +62,7 @@
     brandHomeLink: document.getElementById('brandHomeLink'),
     topDriveBtn: document.getElementById('topDriveBtn'),
     topDriveBtnText: document.getElementById('topDriveBtnText'),
-    adminLoginBtn: document.getElementById('adminLoginBtn'),
-    restartTourBtn: document.getElementById('restartTourBtn'),
+    appBreadcrumb: document.getElementById('appBreadcrumb'),
 
     subjectsSection: document.getElementById('subjectsSection'),
     subjectsGrid: document.getElementById('subjectsGrid'),
@@ -132,9 +132,11 @@
     modalYearsAppeared: document.getElementById('modalYearsAppeared'),
     modalRecurrence: document.getElementById('modalRecurrence'),
     modalPaperName: document.getElementById('modalPaperName'),
+    modalPaperInlineLink: document.getElementById('modalPaperInlineLink'),
     modalOutcome: document.getElementById('modalOutcome'),
     modalTipText: document.getElementById('modalTipText'),
     modalOpenDrivePaperBtn: document.getElementById('modalOpenDrivePaperBtn'),
+    modalSolveAiBtn: document.getElementById('modalSolveAiBtn'),
 
     // Contribute Warning Modal
     contribWarningModal: document.getElementById('contribWarningModal'),
@@ -160,20 +162,7 @@
     copyContribMessageBtn: document.getElementById('copyContribMessageBtn'),
     contribDoneBtn: document.getElementById('contribDoneBtn'),
 
-    // Admin Modal
-    adminModal: document.getElementById('adminModal'),
-    closeAdminModalBtn: document.getElementById('closeAdminModalBtn'),
-    adminLoginFormContainer: document.getElementById('adminLoginFormContainer'),
-    adminDashboardContainer: document.getElementById('adminDashboardContainer'),
-    adminLoginForm: document.getElementById('adminLoginForm'),
-    adminPassword: document.getElementById('adminPassword'),
-    adminBankQuestions: document.getElementById('adminBankQuestions'),
-    adminBankPapers: document.getElementById('adminBankPapers'),
-    adminBankFlagged: document.getElementById('adminBankFlagged'),
-    moderationTableWrapper: document.getElementById('moderationTableWrapper'),
-    adminLogoutBtn: document.getElementById('adminLogoutBtn'),
-
-    // Gemini Modal & App Elements
+    // AI Assistant Modal Elements
     floatingGeminiBtn: document.getElementById('floatingGeminiBtn'),
     geminiModal: document.getElementById('geminiModal'),
     closeGeminiModalBtn: document.getElementById('closeGeminiModalBtn'),
@@ -201,6 +190,8 @@
     geminiPreviewImg: document.getElementById('geminiPreviewImg'),
     removeGeminiImgBtn: document.getElementById('removeGeminiImgBtn'),
     geminiModeIndicator: document.getElementById('geminiModeIndicator'),
+    geminiLivePill: document.getElementById('geminiLivePill'),
+    geminiModelLabel: document.getElementById('geminiModelLabel'),
 
     // Walkthrough Tour Elements
     tourOverlay: document.getElementById('tourOverlay'),
@@ -232,12 +223,10 @@
     initExamSelector();
     renderSubjectsGrid();
     setupEventListeners();
-    setupAdminStats();
     loadGeminiChats();
     setupImageAndCameraAttachment();
     setupSpeechRecognition();
     initAnimatedPlaceholder();
-    initOnboardingTourCheck();
     initRatingPopup();
   }
 
@@ -263,9 +252,9 @@
       card.style.setProperty('--sub-accent', sub.accentColor);
       card.style.setProperty('--sub-bg', sub.bgColor);
 
-      // Count in-scope questions & notes in database
-      const qCount = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey))).length;
-      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(n, examKey))).length;
+      // Count in-scope notes in the database. Question totals stay inside the
+      // subject view, where they are labelled and scoped by the active exam.
+      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isNoteInScope || window.isNoteInScope(n, examKey))).length;
 
       // Exam-level unit scope label (same for every subject in this exam).
       const subjectUnits = examConfig.unitsLabel || 'Units 1 – 5';
@@ -283,7 +272,6 @@
           <div class="subject-full-title">${escapeHtml(sub.title)}</div>
           <div class="subject-meta-tags">
             <span class="subject-meta-item"><i class="fa-regular fa-file-lines"></i> ${nTotal} Notes</span>
-            <span class="subject-meta-item"><i class="fa-solid fa-layer-group"></i> ${qCount} Questions</span>
             <span class="subject-meta-item"><i class="fa-brands fa-google-drive"></i> ${sub.paperCount} Papers</span>
           </div>
         </div>
@@ -307,6 +295,7 @@
   function selectSubject(sub, options) {
     const opts = options || {};
     if (!opts.fromHistory && (!state.currentSubject || state.currentSubject.id !== sub.id)) {
+      state.homeScrollY = window.scrollY || 0;
       pushAppState('subject', { exam: state.activeExam, subject: sub.id });
     }
     state.currentSubject = sub;
@@ -345,13 +334,13 @@
 
     // Update counts on the Mode Choice Cards (scoped to active exam)
     const examKey = state.activeExam || 'mid2';
-    const scopedNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(n, examKey)));
+    const scopedNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isNoteInScope || window.isNoteInScope(n, examKey)));
     const scopedQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey)));
     if (el.modeNotesCountText) {
-      el.modeNotesCountText.textContent = `${scopedNotes.length} Resource${scopedNotes.length === 1 ? '' : 's'}`;
+      el.modeNotesCountText.textContent = `${scopedNotes.length} Note${scopedNotes.length === 1 ? '' : 's'}`;
     }
     if (el.modePyqsCountText) {
-      el.modePyqsCountText.textContent = `${scopedQuestions.length} Question${scopedQuestions.length === 1 ? '' : 's'}`;
+      el.modePyqsCountText.textContent = `${scopedQuestions.length} PYQ${scopedQuestions.length === 1 ? '' : 's'}`;
     }
 
     // Show Mode Selector first — do not show notes or questions immediately
@@ -366,11 +355,13 @@
     if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
     el.subjectsSection.style.display = 'none';
     el.subjectDetailSection.style.display = 'block';
+    if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'none';
     if (el.attributionDivision) {
       el.attributionDivision.style.display = 'none';
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateBreadcrumb();
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }
 
   function updateTopDriveBtnLabel() {
@@ -400,6 +391,7 @@
       el.topDriveBtn.href = state.currentSubject.driveUrl;
     }
     updateTopDriveBtnLabel();
+    updateBreadcrumb();
   }
 
   function showNotesView() {
@@ -418,7 +410,8 @@
       updateTopDriveBtnLabel();
       renderNotesDivision();
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateBreadcrumb();
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }
 
   function showPyqsView() {
@@ -438,7 +431,8 @@
       updateTopDriveBtnLabel();
       renderPyqsDivision();
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateBreadcrumb();
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }
 
 
@@ -489,11 +483,74 @@
     const map = (typeof window !== 'undefined' && window.EXAM_CONFIG) ? window.EXAM_CONFIG : null;
     if (map && map[examId]) return map[examId];
     const fallbackLabels = {
-      mid1: { name: 'Mid-1', unitsLabel: 'Units 1 – 2.5' },
-      mid2: { name: 'Mid-2', unitsLabel: 'Units 2.5 – 5' },
+      mid1: { name: 'Mid-1', unitsLabel: 'Units 1–2 + Unit 3 (1st half)' },
+      mid2: { name: 'Mid-2', unitsLabel: 'Unit 3 (2nd half) + Units 4–5' },
       sem: { name: 'Semester End', unitsLabel: 'All 5 Units' }
     };
-    return Object.assign({ id: examId, bannerSubtitle: "Only what's in your syllabus" }, fallbackLabels[examId] || fallbackLabels.mid2);
+    return Object.assign({ id: examId, bannerSubtitle: "Only what’s in your syllabus" }, fallbackLabels[examId] || fallbackLabels.mid2);
+  }
+
+  function updateBreadcrumb() {
+    if (!el.appBreadcrumb) return;
+    const items = [];
+    items.push({ label: 'Home', action: () => showExamSelector() });
+
+    if (state.currentView === 'home') {
+      items.push({ label: 'Choose category' });
+    } else {
+      const cfg = getExamConfig(state.activeExam);
+      items.push({ label: cfg.name, action: () => showExamSelector(), crumbClass: 'crumb-exam' });
+      if (state.currentSubject) {
+        items.push({
+          label: state.currentSubject.shortName,
+          action: state.currentMode ? () => showModeSelector() : null
+        });
+        if (state.currentMode === 'notes') items.push({ label: 'Notes' });
+        if (state.currentMode === 'pyqs') items.push({ label: 'PYQs' });
+      } else {
+        items.push({ label: 'Subjects' });
+      }
+    }
+
+    el.appBreadcrumb.innerHTML = '';
+    el.appBreadcrumb.classList.toggle('has-current-crumb', items.some(item => !item.action));
+    el.appBreadcrumb.classList.toggle('has-mode-crumb', !!state.currentMode);
+    items.forEach((item, index) => {
+      if (index > 0) {
+        const sep = document.createElement('span');
+        sep.className = 'crumb-sep';
+        sep.setAttribute('aria-hidden', 'true');
+        sep.textContent = '›';
+        el.appBreadcrumb.appendChild(sep);
+      }
+      if (item.action) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'crumb-link' + (item.crumbClass ? ' ' + item.crumbClass : '');
+        btn.textContent = item.label;
+        btn.addEventListener('click', item.action);
+        el.appBreadcrumb.appendChild(btn);
+      } else {
+        const span = document.createElement('span');
+        span.className = 'crumb-current';
+        span.setAttribute('aria-current', 'page');
+        span.textContent = item.label;
+        el.appBreadcrumb.appendChild(span);
+      }
+    });
+  }
+
+  function rememberScroll(key) {
+    if (!key) return;
+    state.scrollMemory[key] = window.scrollY || 0;
+  }
+
+  function restoreScroll(key) {
+    if (!key) return;
+    const y = Number(state.scrollMemory[key]) || 0;
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: y, left: 0, behavior: 'auto' });
+    });
   }
 
   function applyExamSelection(examId, navigateToSubjects) {
@@ -504,7 +561,7 @@
       el.examActiveBanner.style.display = 'flex';
       if (el.bannerExamTag) el.bannerExamTag.textContent = cfg.name;
       if (el.bannerExamSubtitle) {
-        el.bannerExamSubtitle.textContent = cfg.bannerSubtitle || cfg.subtitle || "Only what's in your syllabus";
+        el.bannerExamSubtitle.textContent = cfg.bannerSubtitle || cfg.subtitle || "Only what’s in your syllabus";
       }
     }
 
@@ -533,16 +590,24 @@
       el.subjectsSection.style.display = 'block';
     }
 
-    // If instructed or coming from card click, hide hero selector
+    // If instructed or coming from card click, hide the hero selector but
+    // deliberately stay at the top of the page. The revision hint toast tells
+    // students that Quiz Time is further down.
     if (navigateToSubjects) {
       if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
-      if (el.subjectsSection) {
-        el.subjectsSection.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
+        // First visit: the tour itself introduces Quiz Time, so skip the
+        // "scroll down" toast and let the tour guide the screen.
+        window.setTimeout(() => maybeStartTourAfterCategoryPick(), 900);
+      } else {
+        window.setTimeout(() => showRevisionHintToast(), 450);
       }
     }
 
     // Re-render subjects grid to reflect new exam unit scope tags and counts
     renderSubjectsGrid();
+    updateBreadcrumb();
 
     // If inside subject detail, re-render divisions
     if (state.currentSubject) {
@@ -600,9 +665,10 @@
     // Reset top drive button to root folder
     if (el.topDriveBtn) {
       el.topDriveBtn.href = DRIVE_ROOT_URL;
-      el.topDriveBtn.title = 'Open Entire SEM 3 Google Drive Folder';
+      el.topDriveBtn.title = 'Open entire SEM 3 Google Drive folder';
       updateTopDriveBtnLabel();
     }
+    updateBreadcrumb();
     syncHistoryUi();
   }
 
@@ -679,7 +745,10 @@
       el.attributionDivision.style.display = 'block';
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateBreadcrumb();
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: state.homeScrollY || 0, left: 0, behavior: 'auto' });
+    });
     syncHistoryUi();
   }
 
@@ -696,9 +765,13 @@
     // Populate notes chapter dropdown with in-scope units
     if (el.notesChapterSelect) {
       const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(examKey) : [1, 2, 3, 4, 5];
-      let opts = '<option value="all">All In-Scope Units</option>';
+      const examConfig = getExamConfig(examKey);
+      let opts = `<option value="all">All Units (${escapeHtml(examConfig.name)})</option>`;
       inScopeChapters.forEach(ch => {
-        const title = window.getScopedChapterTitle ? window.getScopedChapterTitle(subId, ch, examKey) : `Unit ${ch}`;
+        // Notes cover a complete unit, so the dropdown uses the full unit
+        // title rather than the Mid-1/Mid-2 half-title used by questions.
+        const subject = SUBJECTS_DATA[subId];
+        const title = (subject && subject.chapters && subject.chapters[ch]) || `Unit ${ch}`;
         opts += `<option value="${ch}">Unit ${ch}: ${escapeHtml(title)}</option>`;
       });
       el.notesChapterSelect.innerHTML = opts;
@@ -706,8 +779,8 @@
     }
 
     let notes = NOTES_DATA.filter(n => n.subjectId === subId);
-    if (window.isItemInScope) {
-      notes = notes.filter(n => window.isItemInScope(n, examKey));
+    if (window.isNoteInScope) {
+      notes = notes.filter(n => window.isNoteInScope(n, examKey));
     }
 
     if (state.notesChapterFilter !== 'all') {
@@ -721,7 +794,7 @@
         <div class="empty-notes-card">
           <i class="fa-regular fa-folder-open empty-icon"></i>
           <h5>No notes uploaded yet for ${escapeHtml(chLabel)}</h5>
-          <p>Be the first to share verified lecture notes or question bank answers! Click the contribute button below to upload study material.</p>
+          <p>Be the first to share verified lecture notes or question bank answers! Tap the contribute button below to upload study material.</p>
         </div>
       `;
       return;
@@ -856,25 +929,69 @@
     el.activeFilterCount.hidden = count === 0;
   }
 
-  function applyFiltersFromPanel() {
-    if (el.yearFilterOptions) {
-      const checked = Array.from(el.yearFilterOptions.querySelectorAll('input[name="yearFilter"]:checked'))
-        .map(input => parseInt(input.value, 10))
-        .filter(Number.isFinite);
-      state.selectedYears = checked.length ? checked : null;
-    }
-
-    if (el.semesterFilterOptions) {
-      const checkedSems = Array.from(el.semesterFilterOptions.querySelectorAll('input[name="semesterFilter"]:checked'))
-        .map(input => input.value)
-        .filter(Boolean);
-      state.selectedSemesters = checkedSems.length ? checkedSems : null;
-    }
-
+  function getPanelFilterOptions() {
+    const years = el.yearFilterOptions
+      ? Array.from(el.yearFilterOptions.querySelectorAll('input[name="yearFilter"]:checked'))
+          .map(input => parseInt(input.value, 10))
+          .filter(Number.isFinite)
+      : [];
     const partInput = document.querySelector('input[name="partFilter"]:checked');
-    state.selectedPart = partInput ? partInput.value : 'all';
+    return {
+      years: years.length ? years : null,
+      part: partInput ? partInput.value : 'all',
+      repeatedOnly: Boolean(el.repeatedOnlyFilter && el.repeatedOnlyFilter.checked),
+      query: state.pyqSearchQuery || ''
+    };
+  }
 
-    state.repeatedOnly = Boolean(el.repeatedOnlyFilter && el.repeatedOnlyFilter.checked);
+  function filterQuestionList(list, options) {
+    const opts = options || {};
+    let filtered = list;
+
+    if (Array.isArray(opts.years) && opts.years.length > 0) {
+      const yearSet = new Set(opts.years);
+      filtered = filtered.filter(q => q.years && q.years.some(y => yearSet.has(y)));
+    }
+
+    if (opts.part === 'A' || opts.part === 'B') {
+      filtered = filtered.filter(q => q.part === opts.part);
+    }
+
+    if (opts.repeatedOnly) {
+      filtered = filtered.filter(q => q.frequency > 1);
+    }
+
+    const query = (opts.query || '').trim().toLowerCase();
+    if (query) {
+      filtered = filtered.filter(q => {
+        const textMatch = (q.question || '').toLowerCase().includes(query);
+        const topicMatch = (q.topicTag || '').toLowerCase().includes(query);
+        const numMatch = (q.questionNumber || '').toLowerCase().includes(query);
+        const paperMatch = (q.paperName || '').toLowerCase().includes(query);
+        return textMatch || topicMatch || numMatch || paperMatch;
+      });
+    }
+
+    return filtered;
+  }
+
+  function updateApplyFilterCount() {
+    if (!el.applyFilterCountText || !state.currentSubject) return;
+    const examKey = state.activeExam || 'mid2';
+    const allSubQuestions = QUESTIONS_DATABASE.filter(q =>
+      q.subjectId === state.currentSubject.id && (!window.isItemInScope || window.isItemInScope(q, examKey))
+    );
+    const count = filterQuestionList(allSubQuestions, getPanelFilterOptions()).length;
+    el.applyFilterCountText.textContent = count === 0
+      ? 'No matches'
+      : `Show ${count} question${count === 1 ? '' : 's'}`;
+  }
+
+  function applyFiltersFromPanel() {
+    const opts = getPanelFilterOptions();
+    state.selectedYears = opts.years;
+    state.selectedPart = opts.part;
+    state.repeatedOnly = opts.repeatedOnly;
 
     closeFilterPanel();
     updateActiveFilterCount();
@@ -898,6 +1015,7 @@
     if (el.repeatedOnlyFilter) el.repeatedOnlyFilter.checked = false;
 
     updateActiveFilterCount();
+    updateApplyFilterCount();
     renderPyqsDivision();
   }
 
@@ -906,6 +1024,7 @@
     el.pyqFilterPanel.hidden = false;
     el.pyqFilterToggle.setAttribute('aria-expanded', 'true');
     el.pyqFilterToggle.classList.add('active');
+    updateApplyFilterCount();
   }
 
   function closeFilterPanel() {
@@ -921,18 +1040,30 @@
     else closeFilterPanel();
   }
 
+  function marksLabel(value) {
+    const n = Number(value);
+    if (!Number.isFinite(n) || n <= 0) return 'Marks not listed';
+    return n === 1 ? '1 Mark' : `${n} Marks`;
+  }
+
+  function marksSummary(value) {
+    const n = Number(value);
+    if (!Number.isFinite(n) || n <= 0) return 'Marks not listed';
+    return n === 1 ? '1 Mark' : `${n} Marks`;
+  }
+
   function getPartMarksSummary(partAQuestions) {
     const marks = new Set(partAQuestions.map(q => Number(q.marks)).filter(Number.isFinite));
     if (marks.size === 0) return 'Short Answer Questions';
     const sorted = Array.from(marks).sort((a, b) => a - b);
-    return 'Short Answer Questions (' + sorted.join(' / ') + ' Marks)';
+    return 'Short Answer Questions (' + sorted.map(marksSummary).join(' / ') + ')';
   }
 
   function getLongMarksSummary(partBQuestions) {
     const marks = new Set(partBQuestions.map(q => Number(q.marks)).filter(Number.isFinite));
     if (marks.size === 0) return 'Long Answer Questions';
     const sorted = Array.from(marks).sort((a, b) => a - b);
-    return 'Long Answer Questions (' + sorted.join(' / ') + ' Marks)';
+    return 'Long Answer Questions (' + sorted.map(marksSummary).join(' / ') + ')';
   }
 
   function renderPyqsDivision() {
@@ -956,64 +1087,23 @@
     renderYearFilterOptions(allSubQuestions);
     // renderSemesterFilterOptions(allSubQuestions);
 
-    let filteredQuestions = allSubQuestions;
+    const query = (state.pyqSearchQuery || '').trim();
+    const filterOptions = {
+      years: state.selectedYears,
+      part: state.selectedPart,
+      repeatedOnly: state.repeatedOnly,
+      query
+    };
+    const filteredQuestions = filterQuestionList(allSubQuestions, filterOptions);
 
-    // Apply Year filter (no selected years = all years)
-    if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
-      const yearSet = new Set(state.selectedYears);
-      filteredQuestions = filteredQuestions.filter(q => q.years && q.years.some(y => yearSet.has(y)));
-    }
-
-    // Semester filter removed
-
-    // Apply Part filter
-    if (state.selectedPart === 'A') {
-      filteredQuestions = filteredQuestions.filter(q => q.part === 'A');
-    } else if (state.selectedPart === 'B') {
-      filteredQuestions = filteredQuestions.filter(q => q.part === 'B');
-    }
-
-    // Apply "repeated only" filter
-    if (state.repeatedOnly) {
-      filteredQuestions = filteredQuestions.filter(q => q.frequency > 1);
-    }
-
-    // Apply Search keyword filter
-    const query = (state.pyqSearchQuery || '').trim().toLowerCase();
-    if (query) {
-      filteredQuestions = filteredQuestions.filter(q => {
-        const textMatch = (q.question || '').toLowerCase().includes(query);
-        const topicMatch = (q.topicTag || '').toLowerCase().includes(query);
-        const numMatch = (q.questionNumber || '').toLowerCase().includes(query);
-        const paperMatch = (q.paperName || '').toLowerCase().includes(query);
-        return textMatch || topicMatch || numMatch || paperMatch;
-      });
-    }
-
-    // Reflect active filters on the Filters button
+    // Reflect active filters on the Filters button and the Apply button count
     updateActiveFilterCount();
-
-    // Update Banner
-    if (el.pyqCountBanner) {
-      const activeLabels = [];
-      if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
-        activeLabels.push(state.selectedYears.slice().sort((a, b) => b - a).join(', '));
-      }
-      
-      if (state.selectedPart !== 'all') activeLabels.push('Part ' + state.selectedPart);
-      if (state.repeatedOnly) activeLabels.push('Repeated only');
-      if (query) activeLabels.push('search: "' + query + '"');
-      const filterLabel = activeLabels.length ? ' (' + activeLabels.join(' · ') + ')' : '';
-      el.pyqCountBanner.textContent = 'Showing ' + filteredQuestions.length + ' question' + (filteredQuestions.length === 1 ? '' : 's') + ' across 5 units' + filterLabel;
-    }
-
-    // Check if all chapters are expanded
-    updateToggleAllButtonState();
+    updateApplyFilterCount();
 
     const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(examKey) : [1, 2, 3, 4, 5];
     const examConfig = getExamConfig(examKey);
 
-    // Update Banner with active scope
+    // Single, accurate count banner
     if (el.pyqCountBanner) {
       const activeLabels = [];
       if (Array.isArray(state.selectedYears) && state.selectedYears.length > 0) {
@@ -1022,9 +1112,12 @@
       if (state.selectedPart !== 'all') activeLabels.push('Part ' + state.selectedPart);
       if (state.repeatedOnly) activeLabels.push('Repeated only');
       if (query) activeLabels.push('search: "' + query + '"');
-      const filterLabel = activeLabels.length ? ' (' + activeLabels.join(' · ') + ')' : '';
-      el.pyqCountBanner.textContent = `Showing ${filteredQuestions.length} question${filteredQuestions.length === 1 ? '' : 's'} across ${inScopeChapters.length} in-scope units (${examConfig.name} Scope)${filterLabel}`;
+      const filterLabel = activeLabels.length ? ' · ' + activeLabels.join(' · ') : '';
+      el.pyqCountBanner.textContent = `Showing ${filteredQuestions.length} question${filteredQuestions.length === 1 ? '' : 's'} · ${examConfig.unitsLabel || 'Units 1–5'}${filterLabel}`;
     }
+
+    // Check if all chapters are expanded
+    updateToggleAllButtonState();
 
     // Render in-scope Chapter Accordions
     for (let i = 0; i < inScopeChapters.length; i++) {
@@ -1085,10 +1178,16 @@
       // Populate questions inside this chapter body
       const listEl = card.querySelector('#chapterQuestionsList-' + ch);
       if (chQuestions.length === 0) {
+        const emptyTitle = chTotalAll === 0
+          ? `No in-scope questions in Unit ${ch} for ${examConfig.name}`
+          : `No questions matching current filters in Unit ${ch}`;
+        const emptyCopy = chTotalAll === 0
+          ? 'The bank has no question confidently mapped to this unit for the selected exam. Switch to Semester End to see every tagged question, or report a missing mapping.'
+          : `Total ${chTotalAll} authentic questions available in this chapter. Try selecting "All Years" or "All Questions".`;
         listEl.innerHTML = `
           <div class="empty-state-box" style="padding: 18px; margin: 6px 0;">
-            <div class="empty-state-title" style="font-size: 13.5px;">No questions matching current filters in Unit ${ch}</div>
-            <div class="empty-state-sub" style="font-size: 12px;">Total ${chTotalAll} authentic questions available in this chapter. Try selecting "All Years" or "All Questions".</div>
+            <div class="empty-state-title" style="font-size: 13.5px;">${escapeHtml(emptyTitle)}</div>
+            <div class="empty-state-sub" style="font-size: 12px;">${escapeHtml(emptyCopy)}</div>
           </div>
         `;
       } else {
@@ -1119,6 +1218,16 @@
             listEl.appendChild(createQuestionCardElement(q));
           });
         }
+
+        const collapseBtn = document.createElement('button');
+        collapseBtn.type = 'button';
+        collapseBtn.className = 'chapter-collapse-btn';
+        collapseBtn.innerHTML = `<i class="fa-solid fa-chevron-up" aria-hidden="true"></i> Collapse Unit ${ch}`;
+        collapseBtn.addEventListener('click', () => {
+          if (state.expandedChapters[ch]) toggleChapterAccordion(ch);
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        listEl.appendChild(collapseBtn);
       }
 
       el.chapterAccordionsContainer.appendChild(card);
@@ -1190,7 +1299,7 @@
   function createQuestionCardElement(q) {
     const isPartA = q.part === 'A';
     const partBadgeClass = isPartA ? 'part-a' : 'part-b';
-    const partLabel = 'Part ' + q.part + ' • ' + q.marks + ' Marks';
+    const partLabel = 'Part ' + q.part + ' • ' + marksLabel(q.marks);
     const recurrenceBadge = q.frequency > 1
       ? '<span class="q-badge recurrence"><i class="fa-solid fa-fire"></i> Repeated ' + q.frequency + 'x (' + (q.years ? q.years.join(', ') : '') + ')</span>'
       : '';
@@ -1233,7 +1342,7 @@
             <i class="fa-solid fa-lightbulb"></i>
             <span>Exam Tips</span>
           </button>
-          <button type="button" class="btn-card-action btn-card-ai" title="Generate instant MGIT model answer with Gemini AI">
+          <button type="button" class="btn-card-action btn-card-ai" title="Generate an instant MGIT-style model answer with AI">
             <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
               <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
             </svg>
@@ -1277,27 +1386,84 @@
   function solveQuestionWithGemini(q) {
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
     const subName = sub ? (sub.shortName + ' — ' + sub.title) : q.subjectId;
-    const partDesc = 'Part ' + q.part + ' (' + q.marks + ' Marks - ' + (q.part === 'A' ? 'Short Answer' : 'Long Answer') + ')';
+    const partDesc = 'Part ' + q.part + ' (' + marksLabel(q.marks) + ', ' + (q.part === 'A' ? 'short answer' : 'long answer') + ')';
 
-    const promptText = 'Explain and solve this authentic MGIT examination question from ' + subName + ':\n\n' +
-      'Unit: Unit ' + q.chapter + '\n' +
-      'Exam Part: ' + partDesc + '\n' +
-      'Paper: ' + q.paperName + ' (' + (q.years ? q.years.join(', ') : '') + ')\n\n' +
-      'Question: ' + q.question + '\n\n' +
-      'Please structure the answer according to the official MGIT marking scheme with clear definitions, formulas/circuit diagrams/flowcharts, and key points required for full marks.';
+    const promptText = 'Explain and solve this MGIT examination question from ' + subName + '. ' +
+      'Unit ' + q.chapter + ', ' + partDesc + ', paper: ' + q.paperName + '. ' +
+      'Question: ' + q.question + ' ' +
+      'Structure the answer with definitions, steps, a diagram description or formula where useful, and the key points needed for full marks.';
 
     openGeminiModal();
-    handleGeminiQuery(promptText);
+    if (el.geminiQueryInput) {
+      el.geminiQueryInput.value = promptText;
+      el.geminiQueryInput.focus();
+      const end = el.geminiQueryInput.value.length;
+      try { el.geminiQueryInput.setSelectionRange(end, end); } catch (e) {}
+    }
+    showToast('Question added. Tap send when you are ready.');
   }
 
   // -------------------------------------------------------------
   // Question Detail Modal
   // -------------------------------------------------------------
+  function formatPaperName(paperName) {
+    if (!paperName) return 'Original paper';
+    const raw = String(paperName).replace(/\.pdf$/i, '').trim();
+    const lower = raw.toLowerCase();
+
+    const months = {
+      jan: 'Jan', january: 'Jan',
+      feb: 'Feb', february: 'Feb',
+      mar: 'Mar', march: 'Mar',
+      apr: 'Apr', april: 'Apr',
+      may: 'May',
+      jun: 'Jun', june: 'Jun',
+      jul: 'Jul', july: 'Jul',
+      aug: 'Aug', august: 'Aug',
+      sep: 'Sep', sept: 'Sep', september: 'Sep',
+      oct: 'Oct', october: 'Oct',
+      nov: 'Nov', november: 'Nov',
+      dec: 'Dec', december: 'Dec'
+    };
+
+    let month = '';
+    const monthMatch = lower.match(/\b(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t|tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\b/);
+    if (monthMatch) month = months[monthMatch[1]] || '';
+
+    let year = '';
+    const yearMatch = lower.match(/\b(20\d{2})\b/);
+    if (yearMatch) {
+      year = yearMatch[1];
+    } else {
+      const shortYear = lower.match(/\b(\d{2})\b/);
+      if (shortYear) {
+        const n = parseInt(shortYear[1], 10);
+        if (n >= 10) year = '20' + shortYear[1];
+      }
+    }
+
+    let kind = '';
+    const hasSupp = /\bsupp(?:le|lement(?:ary)?)?\b/.test(lower);
+    const hasReg = /\breg(?:ular)?\b/.test(lower);
+    if (hasSupp && hasReg) kind = 'Regular & Supplementary';
+    else if (hasSupp) kind = 'Supplementary';
+    else if (hasReg) kind = 'Regular';
+
+    const parts = [];
+    if (month && year) parts.push(`${month} ${year}`);
+    else if (month) parts.push(month);
+    else if (year) parts.push(year);
+    if (kind) parts.push(kind);
+
+    return parts.length ? parts.join(' · ') : raw;
+  }
+
   function openQuestionModal(q) {
+    state.currentQuestion = q;
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
 
     el.modalSubjectBadge.textContent = sub ? sub.shortName : q.subjectId;
-    el.modalPartBadge.textContent = `Part ${q.part} • ${q.marks} Marks`;
+    el.modalPartBadge.textContent = `Part ${q.part} • ${marksLabel(q.marks)}`;
     el.modalUnitBadge.textContent = `Unit ${q.chapter}`;
 
     if (el.modalSemesterBadge) {
@@ -1310,22 +1476,35 @@
     el.modalRecurrence.textContent = q.frequency > 1
       ? `Repeated across ${q.frequency} exam papers (${q.years.join(', ')})`
       : 'Appeared in 1 exam paper';
-    el.modalPaperName.textContent = `${q.paperName} (Page ${q.pageNumber})`;
-    el.modalOutcome.textContent = `Course Outcome CO${q.chapter}`;
+    const pageLabel = Number.isFinite(Number(q.pageNumber)) && Number(q.pageNumber) > 0
+      ? ` · Page ${q.pageNumber}`
+      : '';
+    el.modalPaperName.textContent = `${formatPaperName(q.paperName)}${pageLabel}`;
+    el.modalOutcome.textContent = q.courseOutcome || q.outcome || 'Not mapped in this dataset';
 
-    // Tip: concise exam tip
-    el.modalTipText.innerHTML = formatQuestionMath(q.tip ? `Tip: ${q.tip}` : 'Tip: Support theoretical answers with neat labelled block diagrams.');
+    // What to write: use the verified tip when one exists; otherwise explain
+    // how the marks are usually earned without inventing content.
+    el.modalTipText.innerHTML = formatQuestionMath(
+      q.tip || `This is a ${marksLabel(q.marks)} ${q.part === 'A' ? 'short-answer' : 'long-answer'} question from Unit ${q.chapter}. Write the definition, the required steps or diagram, and a short concluding line.`
+    );
 
-    // Direct PDF Drive Paper button (Never general folder)
-    if (q.driveFileId) {
-      el.modalOpenDrivePaperBtn.href = `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`;
-      el.modalOpenDrivePaperBtn.querySelector('span').textContent = `Open "${q.paperName}" PDF in Google Drive`;
-      el.modalOpenDrivePaperBtn.title = `Direct link to original ${q.paperName} file in Google Drive`;
-    } else {
-      const folderUrl = sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL;
-      el.modalOpenDrivePaperBtn.href = folderUrl;
-      el.modalOpenDrivePaperBtn.querySelector('span').textContent = 'Open Drive Paper';
-      el.modalOpenDrivePaperBtn.title = 'Open Google Drive Folder';
+    // Direct PDF Drive paper button (never a general folder when a file ID exists)
+    const paperLink = q.driveFileId
+      ? `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`
+      : (sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL);
+    el.modalOpenDrivePaperBtn.href = paperLink;
+    el.modalOpenDrivePaperBtn.querySelector('span').textContent = q.driveFileId
+      ? `Open “${q.paperName}” PDF in Google Drive`
+      : 'Open the subject Drive folder';
+    el.modalOpenDrivePaperBtn.title = q.driveFileId
+      ? `Direct link to the original ${q.paperName} file in Google Drive`
+      : 'Open the Google Drive folder for this subject';
+
+    if (el.modalPaperInlineLink) {
+      el.modalPaperInlineLink.href = paperLink;
+      el.modalPaperInlineLink.innerHTML = q.driveFileId
+        ? 'Open paper in Drive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>'
+        : 'Open subject folder <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>';
     }
 
     el.questionModal.style.display = 'flex';
@@ -1408,145 +1587,6 @@
     } catch (err) {
       showToast('Could not copy automatically.');
     }
-  }
-
-  // -------------------------------------------------------------
-  // Admin Portal & Moderation Queue
-  // -------------------------------------------------------------
-  function openAdminModal() {
-    state.isAdminLoggedIn = sessionStorage.getItem('mgit_admin_auth') === 'authenticated';
-    if (state.isAdminLoggedIn) {
-      el.adminLoginFormContainer.style.display = 'none';
-      el.adminDashboardContainer.style.display = 'block';
-      renderEditorNotes();
-    } else {
-      el.adminLoginFormContainer.style.display = 'block';
-      el.adminDashboardContainer.style.display = 'none';
-    }
-    el.adminModal.style.display = 'flex';
-  }
-
-  const ADMIN_HASHES = [
-    '0c8eb177af8b76c29b3d34cabad3c33c9554435944b53d57501bdf4b5c7390bc',
-    '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'
-  ];
-
-  async function sha256Hex(str) {
-    if (!crypto || !crypto.subtle) return null;
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-  }
-
-  async function handleAdminLogin(e) {
-    e.preventDefault();
-    const pass = el.adminPassword.value.trim();
-
-    if (!pass) {
-      showToast('Please enter the administrator password.');
-      return;
-    }
-
-    const enteredHash = await sha256Hex(pass);
-    if (enteredHash && ADMIN_HASHES.includes(enteredHash)) {
-      sessionStorage.setItem('mgit_admin_auth', 'authenticated');
-      state.isAdminLoggedIn = true;
-      el.adminLoginForm.reset();
-      el.adminLoginFormContainer.style.display = 'none';
-      el.adminDashboardContainer.style.display = 'block';
-      renderEditorNotes();
-      showToast('Editor view unlocked.');
-    } else {
-      showToast('Incorrect password. Access denied.');
-      el.adminPassword.value = '';
-    }
-  }
-
-  function handleAdminLogout() {
-    state.isAdminLoggedIn = false;
-    sessionStorage.removeItem('mgit_admin_auth');
-    el.adminDashboardContainer.style.display = 'none';
-    el.adminLoginFormContainer.style.display = 'block';
-    showToast('Logged out of the editor view.');
-  }
-
-  function computeBankStats() {
-    const papers = new Map();
-    const touch = (key, name, subjectId, semester) => {
-      if (!papers.has(key)) {
-        papers.set(key, {
-          name: name || 'Unknown paper',
-          subjectId,
-          semester: semester || 'III',
-          count: 0
-        });
-      }
-      papers.get(key).count += 1;
-    };
-
-    QUESTIONS_DATABASE.forEach(q => {
-      const appearances = Array.isArray(q.appearances) && q.appearances.length
-        ? q.appearances
-        : [{
-            driveFileId: q.driveFileId,
-            paperName: q.paperName,
-            semester: q.semester
-          }];
-      appearances.forEach(a => {
-        const key = a.driveFileId || `${q.subjectId}:${a.paperName || q.paperName}`;
-        touch(key, a.paperName || q.paperName, q.subjectId, a.semester || q.semester);
-      });
-    });
-
-    const list = Array.from(papers.values());
-    // A full MGIT paper has 10 Part-A sub-questions plus 4-5 Part-B majors.
-    const flagged = list
-      .filter(p => p.count < 12)
-      .sort((a, b) => a.count - b.count);
-
-    return {
-      questions: QUESTIONS_DATABASE.length,
-      papers: list.length,
-      flagged
-    };
-  }
-
-  function setupAdminStats() {
-    const stats = computeBankStats();
-    if (el.adminBankQuestions) el.adminBankQuestions.textContent = stats.questions;
-    if (el.adminBankPapers) el.adminBankPapers.textContent = stats.papers;
-    if (el.adminBankFlagged) el.adminBankFlagged.textContent = stats.flagged.length;
-  }
-
-  function renderEditorNotes() {
-    setupAdminStats();
-    if (!el.moderationTableWrapper) return;
-
-    const stats = computeBankStats();
-    if (stats.flagged.length === 0) {
-      el.moderationTableWrapper.innerHTML = `
-        <p class="empty-queue-msg">Every parsed paper has a full set of questions. Nothing looks under-extracted.</p>
-      `;
-      return;
-    }
-
-    const rows = stats.flagged.slice(0, 8).map(p => `
-      <tr>
-        <td><strong>${escapeHtml(p.subjectId)}</strong></td>
-        <td>${escapeHtml(p.name)}</td>
-        <td>Sem ${escapeHtml(String(p.semester))}</td>
-        <td>${p.count} question${p.count === 1 ? '' : 's'}</td>
-      </tr>
-    `).join('');
-
-    el.moderationTableWrapper.innerHTML = `
-      <p class="editor-note-sub">These papers parsed with fewer questions than expected, so their OCR is worth a second look.</p>
-      <table class="moderation-table">
-        <thead>
-          <tr><th>Subject</th><th>Paper</th><th>Printed Sem</th><th>Questions Found</th></tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    `;
   }
 
   // -------------------------------------------------------------
@@ -1661,7 +1701,7 @@
     if (!chat) return;
 
     if (el.geminiCurrentChatTitle) {
-      el.geminiCurrentChatTitle.textContent = chat.title || 'Gemini Study Assistant';
+      el.geminiCurrentChatTitle.textContent = chat.title || 'AI Study Assistant';
     }
 
     if (!chat.messages || chat.messages.length === 0) {
@@ -1745,11 +1785,11 @@
             };
             if (el.geminiPreviewImg) el.geminiPreviewImg.src = dataUrl;
             if (el.geminiImagePreviewStrip) el.geminiImagePreviewStrip.style.display = 'flex';
-            showToast('File attached. Ready to send to Gemini.');
+            showToast('File attached. Ready to send to the AI assistant.');
           };
           reader.readAsDataURL(file);
         } else {
-          showToast(`Attached ${file.name}. Ask Gemini about this file.`);
+          showToast(`Attached ${file.name}. Ask the AI assistant about this file.`);
           if (el.geminiQueryInput && !el.geminiQueryInput.value) {
             el.geminiQueryInput.value = `Questions on ${file.name.replace(/\.[^/.]+$/, '')}: `;
             el.geminiQueryInput.focus();
@@ -1909,50 +1949,74 @@
   // -------------------------------------------------------------
   const TOUR_STORAGE_KEY = 'mgit_tour_seen_v2';
 
-  function initOnboardingTourCheck() {
-    if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
-      setTimeout(() => {
-        // Trigger only on the clean category home screen with no modal open.
-        if (state.currentView === 'home' &&
-            !state.currentSubject &&
-            el.examCardsGrid &&
-            el.examCardsGrid.offsetParent !== null &&
-            (!el.geminiModal || el.geminiModal.style.display === 'none')) {
-          startOnboardingTour();
-        }
-      }, 2000);
-    }
+  function maybeStartTourAfterCategoryPick() {
+    if (localStorage.getItem(TOUR_STORAGE_KEY)) return;
+    if (state.currentView !== 'exam' || state.currentSubject) return;
+    if (document.body.classList.contains('tour-active')) return;
+    if (el.geminiModal && el.geminiModal.style.display !== 'none') return;
+    if (el.questionModal && el.questionModal.style.display !== 'none') return;
+    const sessionScreen = document.getElementById('practiceSessionScreen');
+    if (sessionScreen && sessionScreen.style.display === 'block') return;
+    startOnboardingTour();
   }
 
   const TOUR_STEPS = [
     {
       targetKey: 'topDriveBtn',
-      badge: 'Step 1 of 3',
-      title: 'Master Google Drive Folder',
-      desc: 'Click here to view the complete Google Drive repository with all 101 authentic past papers and unit-wise notes sorted by subject.',
-      isLast: false,
-      scrollAction: () => window.scrollTo({ top: 0, behavior: 'smooth' })
-    },
-    {
-      targetKey: 'examCardsGrid',
-      badge: 'Step 2 of 3',
-      title: 'Category-Based Learning',
-      desc: 'Pick your learning category — Mid-1, Mid-2, or Semester End — to unlock the exact units, notes, PYQs, and practice for that scope.',
+      badge: 'Step 1 of 5',
+      title: 'Your full Drive folder',
+      desc: 'Tap here to open the complete Google Drive repository with the original past-paper PDFs and unit-wise notes.',
       isLast: false,
       scrollAction: () => window.scrollTo({ top: 0, behavior: 'auto' })
     },
     {
+      targetKey: 'examActiveBanner',
+      badge: 'Step 2 of 5',
+      title: 'Your exam scope is set',
+      desc: 'Everything below is filtered to this scope. Tap Change Exam whenever you want to switch to Mid-1, Mid-2 or Semester End.',
+      isLast: false,
+      scrollAction: () => window.scrollTo({ top: 0, behavior: 'auto' })
+    },
+    {
+      targetKey: 'subjectsSection',
+      badge: 'Step 3 of 5',
+      title: 'Seven subjects, one hub',
+      desc: 'Tap any subject to see its unit-wise notes and past questions. Counts always match what is inside.',
+      isLast: false,
+      scrollAction: () => {
+        const target = el.subjectsSection;
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + (window.scrollY || 0) - 150;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+      }
+    },
+    {
+      targetKey: 'practiceFunCard',
+      badge: 'Step 4 of 5',
+      title: 'Quiz Time and Revision',
+      desc: 'Practise with MCQs or revise with flash cards. Both are scoped to the units in your selected exam.',
+      isLast: false,
+      scrollAction: () => scrollTourTargetIntoView('practiceFunCard')
+    },
+    {
       targetKey: 'floatingGeminiBtn',
-      badge: 'Step 3 of 3',
-      title: 'Integrated Gemini AI Assistant',
-      desc: 'Ask questions to integrated Gemini AI and get your work done easier! Upload question paper photos, speak with your mic, or practice exam questions.',
+      badge: 'Step 5 of 5',
+      title: 'AI Study Assistant',
+      desc: 'Ask a doubt, attach a question-paper photo, or solve a PYQ. The key stays on the server, never in your browser.',
       isLast: true,
-      scrollAction: null // Never scroll for fixed floating button!
+      scrollAction: null // Never scroll for the fixed floating button.
     }
   ];
 
+  function scrollTourTargetIntoView(key) {
+    const target = el[key];
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'auto', block: 'center' });
+  }
+
   function startOnboardingTour() {
     state.currentTourStep = 0;
+    document.body.classList.add('tour-active');
     if (el.tourOverlay) el.tourOverlay.style.display = 'block';
     if (el.tourSpotlight) el.tourSpotlight.style.display = 'block';
     if (el.tourTooltip) el.tourTooltip.style.display = 'block';
@@ -1977,6 +2041,9 @@
     if (el.tourStepBadge) el.tourStepBadge.textContent = step.badge;
     if (el.tourTitle) el.tourTitle.textContent = step.title;
     if (el.tourDesc) el.tourDesc.textContent = step.desc;
+    if (el.tourTooltip) {
+      el.tourTooltip.classList.toggle('tour-step-ai', step.targetKey === 'floatingGeminiBtn');
+    }
 
     if (el.tourPrevBtn) {
       el.tourPrevBtn.disabled = (stepIdx === 0);
@@ -2001,6 +2068,7 @@
 
     const rect = targetEl.getBoundingClientRect();
     const isCategoryStep = targetEl === el.examCardsGrid;
+    const isWideSectionStep = targetEl === el.subjectsSection || targetEl === el.practiceFunCard;
     const pad = isCategoryStep ? 12 : ((targetEl === el.subjectsSection) ? 10 : 6);
     const r = isCategoryStep ? 20 : ((targetEl === el.floatingGeminiBtn) ? 26 : (targetEl === el.topDriveBtn ? 22 : 16));
 
@@ -2047,6 +2115,11 @@
         top = window.innerHeight - actualTooltipHeight - 16;
       }
       left = (window.innerWidth - tooltipWidth) / 2;
+    } else if (isWideSectionStep) {
+      // Tall sections (subject grid, Quiz Time): keep the card near the
+      // bottom of the viewport so the spotlight stays readable.
+      top = window.innerHeight - actualTooltipHeight - 24;
+      left = (window.innerWidth - tooltipWidth) / 2;
     } else {
       // Fallback: top center of the target.
       top = Math.max(80, rect.top + 20);
@@ -2076,7 +2149,7 @@
   }
 
   function nextTourStep() {
-    if (state.currentTourStep >= 2) {
+    if (state.currentTourStep >= TOUR_STEPS.length - 1) {
       endTour();
     } else {
       renderTourStep(state.currentTourStep + 1);
@@ -2090,6 +2163,7 @@
   }
 
   function endTour() {
+    document.body.classList.remove('tour-active');
     if (el.tourOverlay) el.tourOverlay.style.display = 'none';
     if (el.tourSpotlight) el.tourSpotlight.style.display = 'none';
     if (el.tourTooltip) el.tourTooltip.style.display = 'none';
@@ -2101,18 +2175,50 @@
   // Floating Gemini AI Study Assistant
   // -------------------------------------------------------------
   function openGeminiModal() {
+    if (!el.geminiModal) return;
     el.geminiModal.style.display = 'flex';
+    document.body.classList.add('ai-modal-open');
     if (!state.activeChatId || !state.geminiChats.find(c => c.id === state.activeChatId)) {
       loadGeminiChats();
     } else {
       renderActiveChat();
     }
+    updateAiModelLabel();
     if (el.geminiQueryInput && window.innerWidth > 768) {
       el.geminiQueryInput.focus();
     }
   }
 
+  function closeGeminiModal() {
+    if (!el.geminiModal) return;
+    el.geminiModal.style.display = 'none';
+    document.body.classList.remove('ai-modal-open');
+    closeGeminiSidebar();
+  }
+
+  function updateAiModelLabel() {
+    if (!el.geminiModelLabel) return;
+    el.geminiModelLabel.textContent = 'AI Assistant';
+    if (el.geminiLivePill) {
+      el.geminiLivePill.title = 'Answers are generated by a secure server-side AI assistant.';
+    }
+  }
+
+  function setAiBusy(busy) {
+    state.aiBusy = Boolean(busy);
+    if (el.geminiSendBtn) {
+      el.geminiSendBtn.disabled = state.aiBusy;
+      el.geminiSendBtn.setAttribute('aria-busy', state.aiBusy ? 'true' : 'false');
+      el.geminiSendBtn.classList.toggle('is-busy', state.aiBusy);
+    }
+    if (el.geminiQueryInput) {
+      el.geminiQueryInput.disabled = state.aiBusy;
+    }
+    if (el.geminiQueryForm) el.geminiQueryForm.classList.toggle('ai-busy', state.aiBusy);
+  }
+
   async function handleGeminiQuery(queryText) {
+    if (state.aiBusy) return;
     const q = (queryText || (el.geminiQueryInput ? el.geminiQueryInput.value : '')).trim();
     const attachedImg = state.pendingGeminiImage;
     if (!q && !attachedImg) return;
@@ -2158,7 +2264,7 @@
     clearImagePreview();
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
 
-    // Thinking state with Gemini badge
+    // Thinking state
     const thinkingMsg = document.createElement('div');
     thinkingMsg.className = 'ai-msg';
     thinkingMsg.innerHTML = `
@@ -2167,18 +2273,19 @@
           <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="16" height="16" fill="#2563eb">
             <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
           </svg>
-          <span class="ai-sender-name">Gemini Study Assistant</span>
+          <span class="ai-sender-name">AI Study Assistant</span>
         </div>
-        <span class="ai-model-tag">Thinking...</span>
+        <span class="ai-model-tag">Thinking…</span>
       </div>
       <div class="ai-msg-body" style="color: var(--text-muted); font-style: italic; display: flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-circle-notch fa-spin"></i> Generating structured academic answer...
+        <i class="fa-solid fa-circle-notch fa-spin"></i> Generating a structured academic answer…
       </div>
     `;
     el.geminiChatOutput.appendChild(thinkingMsg);
     el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
+    setAiBusy(true);
 
-    // Server-side Gemini proxy only. The API key never reaches the browser.
+    // Server-side AI proxy only. The API key never reaches the browser.
     try {
       const serverRes = await fetch('/api/gemini', {
         method: 'POST',
@@ -2199,17 +2306,23 @@
         chat.messages.push({ role: 'model', text: data.text, timestamp: Date.now() });
         saveGeminiChats();
         renderGeminiHistoryList();
+        if (data.model && el.geminiModelLabel) {
+          el.geminiModelLabel.textContent = 'AI Assistant';
+        }
         el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
         return;
       }
 
       const reason = data.message || (serverRes.status === 429
-        ? 'The AI assistant has reached its request limit for now. Please try again later.'
+        ? 'The AI assistant has reached its request limit for now. Please try again in a minute.'
         : 'The AI assistant could not answer right now. Please try again.');
       updateAiMessageContent(thinkingMsg, `**Unable to generate an answer**\n\n${reason}\n\nYou can still use the original paper link on the question card, or ask again in a moment.`, true, q);
     } catch (e) {
       console.warn('AI request failed:', e);
       updateAiMessageContent(thinkingMsg, '**Unable to reach the AI assistant**\n\nPlease check your connection and try again. The question bank and Drive links still work normally.', true, q);
+    } finally {
+      setAiBusy(false);
+      if (el.geminiChatOutput) el.geminiChatOutput.scrollTop = el.geminiChatOutput.scrollHeight;
     }
   }
 
@@ -2220,7 +2333,7 @@
       const escapedQuestionAttr = userQuery ? escapeHtml(userQuery).replace(/"/g, '&quot;') : '';
       fallbackHtml = `
         <div class="ai-error-fallback">
-          <p class="ai-fallback-msg">We couldn't generate a response this time. How would you like to continue?</p>
+          <p class="ai-fallback-msg">We couldn’t generate a response this time. How would you like to continue?</p>
           ${userQuery ? `<button type="button" class="ai-fallback-copy-btn" data-query="${escapedQuestionAttr}" onclick="copyOriginalUserQuestion(this)" title="Copy your question to clipboard">
             <i class="fa-regular fa-copy"></i> Copy my question
           </button>` : ''}
@@ -2248,7 +2361,7 @@
           </svg>
           <span class="ai-sender-name">AI Study Assistant</span>
         </div>
-        <span class="ai-model-tag">${isError ? 'Not available' : 'Gemini'}</span>
+        <span class="ai-model-tag">${isError ? 'Not available' : 'AI'}</span>
       </div>
       <div class="ai-msg-body">
         ${formattedHtml}
@@ -2521,315 +2634,6 @@
     });
   };
 
-  function generateGeminiResponse(query) {
-    const q = query.toLowerCase();
-
-    // -------------------------------------------------------------
-    // DM (Discrete Mathematics) — 2 Marks & High-Yield Questions
-    // -------------------------------------------------------------
-    if ((q.includes('2 mark') || q.includes('short') || q.includes('part a') || q.includes('prepare') || q.includes('all')) && (q.includes('dm') || q.includes('discrete') || q.includes('math'))) {
-      return `### Discrete Mathematics (DM) — High-Yield 2-Marks PYQ Bank & Model Answers
-
-In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and consists of Question 1 with 5 compulsory sub-questions: 1(a), 1(b), 1(c), 1(d), and 1(e) of 2 marks each (one from each of Units 1 to 5; Total = 10 Marks)**. Here is your unit-wise preparation guide for the most repeated 2-mark questions:
-
-#### Unit 1: Mathematical Logic & Predicates
-1. **Define Tautology, Contradiction, and Contingency:**
-   - **Tautology:** A compound proposition that is True for all possible truth values of its proposition variables (e.g., $P \\vee \\neg P$).
-   - **Contradiction (Fallacy):** A compound proposition that is False for all possible truth values (e.g., $P \\wedge \\neg P$).
-   - **Contingency:** A proposition that is neither a tautology nor a contradiction.
-2. **What are Principal Normal Forms (PDNF and PCNF)?**
-   - **PDNF (Principal Disjunctive Normal Form):** An equivalent sum-of-products formula consisting of the disjunction of all *Minterms* corresponding to True rows in the truth table.
-   - **PCNF (Principal Conjunctive Normal Form):** An equivalent product-of-sums formula consisting of the conjunction of all *Maxterms* corresponding to False rows.
-3. **State De Morgan's Laws in Propositional Logic:**
-   - $\\neg(P \\wedge Q) \\equiv \\neg P \\vee \\neg Q$
-   - $\\neg(P \\vee Q) \\equiv \\neg P \\wedge \\neg Q$
-
-#### Unit 2: Set Theory, Relations, POSETs & Lattices
-4. **Define a Partially Ordered Set (POSET):**
-   - A set $S$ together with a binary relation $R$ is a POSET $(S, \\le)$ if $R$ satisfies three axioms:
-     1. **Reflexive:** $a R a$ for all $a \\in S$
-     2. **Antisymmetric:** If $a R b$ and $b R a$, then $a = b$
-     3. **Transitive:** If $a R b$ and $b R c$, then $a R c$
-5. **Define a Lattice:**
-   - A POSET $(L, \\le)$ is called a **Lattice** if every pair of elements $\\{a, b\\} \\subseteq L$ has both:
-     - A unique **Least Upper Bound (LUB / Join)**: $a \\vee b = \\sup\\{a, b\\}$
-     - A unique **Greatest Lower Bound (GLB / Meet)**: $a \\wedge b = \\inf\\{a, b\\}$
-6. **State the condition for a Relation to be an Equivalence Relation:**
-   - A relation $R$ is an equivalence relation if it is Reflexive, Symmetric ($a R b \\implies b R a$), and Transitive.
-
-#### Unit 3: Algebraic Structures & Groups
-7. **Differentiate Semigroup, Monoid, and Group:**
-   - **Semigroup $(S, *)$:** Closed ($a * b \\in S$) and Associative ($a*(b*c) = (a*b)*c$).
-   - **Monoid $(M, *)$:** A Semigroup that has an Identity element $e$ ($a * e = e * a = a$).
-   - **Group $(G, *)$:** A Monoid where every element $a$ has an Inverse $a^{-1}$ ($a * a^{-1} = e$).
-8. **State Lagrange's Theorem for Finite Groups:**
-   - The order of every subgroup $H$ of a finite group $G$ divides the order of the group: $|H| \\mid |G|$. Consequently, $\\frac{|G|}{|H|} = [G:H]$ (the index of $H$ in $G$).
-
-#### Unit 4: Combinatorics & Recurrence Relations
-9. **State the Pigeonhole Principle (PHP):**
-   - If $k+1$ or more pigeons are placed into $k$ pigeonholes, then at least one pigeonhole must contain two or more pigeons.
-   - *Generalized PHP:* If $N$ objects are placed into $k$ boxes, at least one box contains at least $\\lceil N/k \\rceil$ objects.
-10. **Write the General Form of a Linear Homogeneous Recurrence Relation:**
-    - $a_n + c_1 a_{n-1} + c_2 a_{n-2} + \\dots + c_k a_{n-k} = 0$, where $c_i$ are constants and $c_k \\neq 0$.
-
-#### Unit 5: Graph Theory
-11. **State the Handshaking Theorem (Degree Sum Formula):**
-    - In any undirected graph $G = (V, E)$, the sum of the degrees of all vertices equals twice the number of edges:
-      $$\\sum_{v \\in V} \\deg(v) = 2|E|$$
-    - *Corollary:* The number of vertices with odd degree in an undirected graph is always **even**.
-12. **Differentiate Eulerian Circuit vs Hamiltonian Cycle:**
-    - **Eulerian Circuit:** A closed trail that visits every **edge** of the graph exactly once. (Exists iff all vertices have even degrees).
-    - **Hamiltonian Cycle:** A closed loop that visits every **vertex** of the graph exactly once.`;
-    }
-
-    // -------------------------------------------------------------
-    // COA (Computer Organization & Architecture)
-    // -------------------------------------------------------------
-    if (q.includes('addressing mode')) {
-      return `<strong>COA Unit 1 — Addressing Modes Comprehensive Guide:</strong><br><br>
-      • <strong>Immediate Mode:</strong> Operand is specified explicitly in the instruction (e.g., <code>MOV R1, #25</code>). Effective Address (EA) does not exist.<br>
-      • <strong>Direct (Absolute) Mode:</strong> Instruction contains the direct memory address of the operand. <code>EA = A</code>. Requires one memory reference.<br>
-      • <strong>Indirect Mode:</strong> Address field refers to a memory location containing the actual operand address. <code>EA = [A]</code>. Useful for pointers.<br>
-      • <strong>Register Mode:</strong> Operand resides inside a CPU register (e.g., <code>ADD R1, R2</code>). Fastest execution.<br>
-      • <strong>Register Indirect Mode:</strong> Register holds the memory address of the operand. <code>EA = [R]</code>.<br>
-      • <strong>Indexed Mode:</strong> <code>EA = A + [R_index]</code>. Critical for traversing 1D/2D arrays.<br>
-      • <strong>Relative (PC-Relative) Mode:</strong> <code>EA = PC + Offset</code>. Crucial for position-independent jump/branch instructions.<br><br>
-      <em>MGIT Exam Tip: Always draw the 1-box pointer diagram for Direct vs Indirect mode for full 5/10 marks.</em>`;
-    }
-
-    if (q.includes('booth') || (q.includes('multiplication') && (q.includes('coa') || q.includes('computer')))) {
-      return `<strong>COA Unit 3 — Booth's Multiplication Algorithm:</strong><br><br>
-      Booth's algorithm multiplies signed binary numbers in 2's complement notation by treating consecutive strings of 1s as a single subtraction and addition.<br><br>
-      <strong>Hardware Registers:</strong><br>
-      • <strong>A:</strong> Accumulator (initialized to 0, size n)<br>
-      • <strong>M:</strong> Multiplicand (size n)<br>
-      • <strong>Q:</strong> Multiplier (size n)<br>
-      • <strong>Q<sub>-1</sub>:</strong> 1-bit flip-flop initialized to 0<br>
-      • <strong>Count:</strong> Initialized to n (number of bits)<br><br>
-      <strong>Bit Inspection Rules (Q₀, Q₋₁):</strong><br>
-      • <code>1 0</code> &rarr; <code>A = A - M</code>, then Arithmetic Right Shift (ASHRA) (A, Q, Q₋₁)<br>
-      • <code>0 1</code> &rarr; <code>A = A + M</code>, then Arithmetic Right Shift (ASHRA)<br>
-      • <code>0 0</code> or <code>1 1</code> &rarr; Only Arithmetic Right Shift (ASHRA)<br><br>
-      <em>MGIT Exam Tip: Remember in ASHRA, the sign bit of A (most significant bit) is copied into itself to preserve signed magnitude!</em>`;
-    }
-
-    if (q.includes('cache') || q.includes('mapping')) {
-      return `<strong>COA Unit 4 — Cache Memory Mapping Techniques:</strong><br><br>
-      • <strong>1. Direct Mapping:</strong> Each main memory block maps to exactly one specific cache line: <code>Line Number = (Block Address) mod (Total Cache Lines)</code>. Simplest hardware, but prone to conflict misses.<br>
-      • <strong>2. Fully Associative Mapping:</strong> A block can reside in any cache line. Memory address is divided into Tag and Word offset. Eliminates conflict misses, but requires expensive parallel comparator circuits.<br>
-      • <strong>3. Set-Associative Mapping (k-way):</strong> Cache is partitioned into sets, each with k lines: <code>Set Number = (Block Address) mod (Number of Sets)</code>. Optimal balance between cost and hit ratio used in modern CPUs.<br><br>
-      <em>Formula:</em> Hit Ratio <code>H = (Hits) / (Hits + Misses)</code>. Average Access Time <code>T_avg = H × T_c + (1 - H) × T_m</code>.`;
-    }
-
-    if (q.includes('pipeline') || q.includes('hazard')) {
-      return `<strong>COA Unit 5 — Pipelining & Pipeline Hazards:</strong><br><br>
-      Pipelining overlaps the execution of multiple instructions across stages: <strong>IF (Fetch), ID (Decode), EX (Execute), MEM (Memory), WB (Write Back)</strong>.<br><br>
-      <strong>The 3 Major Hazards:</strong><br>
-      • <strong>1. Structural Hazard:</strong> Hardware resource conflict when two instructions need the same hardware unit simultaneously (e.g. single-port memory for instruction and data). Resolved by separate Harvard I/D caches.<br>
-      • <strong>2. Data Hazard:</strong> Instruction depends on the result of a previous incomplete instruction. Types: RAW (Read After Write), WAR, WAW. Resolved using Operand Forwarding (Bypassing) or NOP stalls.<br>
-      • <strong>3. Control (Branch) Hazard:</strong> Caused by conditional branches altering the PC. Resolved by Branch Prediction, Delayed Branching, or Prefetching branch targets.`;
-    }
-
-    if (q.includes('dma') || q.includes('interrupt')) {
-      return `<strong>COA Unit 5 — DMA (Direct Memory Access) vs Interrupt-driven I/O:</strong><br><br>
-      • <strong>Interrupt-Driven I/O:</strong> CPU issues read/write command, proceeds with other tasks, and receives an interrupt when device is ready. CPU still mediates every byte transfer through registers.<br>
-      • <strong>DMA (Direct Memory Access):</strong> A specialized DMA Controller takes control of the system bus to transfer entire blocks of data directly between I/O device and RAM without CPU intervention.<br><br>
-      <strong>DMA Transfer Modes:</strong><br>
-      • <strong>Burst Transfer:</strong> DMA takes control of bus and transfers the whole block continuously. Fastest, but holds CPU idle.<br>
-      • <strong>Cycle Stealing:</strong> DMA steals one bus cycle per word transfer between CPU cycles. Minimum CPU stoppage.<br>
-      <em>Signals involved: HOLD (Bus Request) and HLDA (Hold Acknowledge).</em>`;
-    }
-
-    // -------------------------------------------------------------
-    // DBMS (Database Management Systems)
-    // -------------------------------------------------------------
-    if (q.includes('normalization') || q.includes('1nf') || q.includes('2nf') || q.includes('3nf') || q.includes('bcnf')) {
-      return `<strong>DBMS Unit 3 — Schema Refinement & Normalization:</strong><br><br>
-      Normalization decomposes relations to minimize data redundancy and prevent insertion, deletion, and update anomalies.<br><br>
-      • <strong>1NF (First Normal Form):</strong> All attribute values must be atomic (no multi-valued or composite attributes allowed).<br>
-      • <strong>2NF:</strong> Must be in 1NF, and <em>no Partial Dependency</em> exists (every non-prime attribute must be fully functionally dependent on candidate key, not a proper subset).<br>
-      • <strong>3NF:</strong> Must be in 2NF, and <em>no Transitive Dependency</em> exists. For every functional dependency <code>X &rarr; Y</code>, either X is a Super Key or Y is a Prime Attribute.<br>
-      • <strong>BCNF (Boyce-Codd Normal Form):</strong> Stricter version of 3NF. For every non-trivial functional dependency <code>X &rarr; Y</code>, <strong>X must be a Super Key</strong>.<br><br>
-      <em>MGIT Exam Tip: When given a relation R(A,B,C,D,E), compute the attribute closures (X⁺) first to find candidate keys before classifying normal forms.</em>`;
-    }
-
-    if (q.includes('acid') || q.includes('transaction')) {
-      return `<strong>DBMS Unit 4 — Transaction Management & ACID Properties:</strong><br><br>
-      A transaction is a logical unit of work that accesses and updates database items.<br><br>
-      <strong>ACID Properties:</strong><br>
-      • <strong>A — Atomicity:</strong> "All or Nothing". Either all operations in the transaction succeed and commit, or the entire transaction is rolled back. Maintained by Recovery Manager (WAL - Write-Ahead Logging).<br>
-      • <strong>C — Consistency:</strong> Preserves database integrity constraints before and after execution (e.g., total account balances remain invariant).<br>
-      • <strong>I — Isolation:</strong> Concurrent execution of transactions produces the same state as if they were executed serially. Maintained by Concurrency Control (Locking/Timestamping).<br>
-      • <strong>D — Durability:</strong> Once committed, updates persist permanently in secondary storage even during catastrophic system crash.<br><br>
-      <strong>Transaction States:</strong> Active &rarr; Partially Committed &rarr; Committed (or Failed &rarr; Aborted).`;
-    }
-
-    if (q.includes('2pl') || q.includes('concurrency') || q.includes('serializ')) {
-      return `<strong>DBMS Unit 4 — Concurrency Control & Two-Phase Locking (2PL):</strong><br><br>
-      • <strong>Conflict Serializability:</strong> A schedule is conflict serializable if it can be transformed into a serial schedule by swapping non-conflicting operations (Read-Write, Write-Read, Write-Write on the same data item are conflicts). Verified using a <strong>Precedence Graph</strong> (cycle-free means serializable).<br><br>
-      <strong>Two-Phase Locking (2PL) Protocol:</strong><br>
-      1. <strong>Growing Phase:</strong> Transaction may obtain locks (Shared 'S' or Exclusive 'X'), but cannot release any lock.<br>
-      2. <strong>Shrinking Phase:</strong> Transaction may release locks, but cannot acquire any new lock.<br>
-      • <strong>Strict 2PL:</strong> Holds all Exclusive locks until commit/abort (prevents cascading rollbacks).<br>
-      • <strong>Rigorous 2PL:</strong> Holds ALL (Shared and Exclusive) locks until commit/abort.`;
-    }
-
-    if (q.includes('b+ tree') || q.includes('btree') || q.includes('indexing')) {
-      return `<strong>DBMS Unit 5 — B-Trees vs B+ Trees Indexing:</strong><br><br>
-      • <strong>B-Tree:</strong> Keys and actual record pointers are stored in both internal nodes and leaf nodes. Search can terminate early at internal nodes, but range queries are slower.<br>
-      • <strong>B+ Tree:</strong> Internal nodes store <em>only guide keys</em> for routing; <strong>all actual data records/pointers reside in leaf nodes</strong>. Leaf nodes are linked as a doubly linked list.<br><br>
-      <strong>Why B+ Trees are preferred in Database Engines:</strong><br>
-      1. Higher fan-out (internal nodes store more keys per block since no record pointers).<br>
-      2. Extremely efficient range scans: once the starting leaf is found, simply traverse the linked list.<br>
-      3. Guaranteed uniform search time: all leaves are at the exact same depth (balanced tree).`;
-    }
-
-    // -------------------------------------------------------------
-    // DM (Discrete Mathematics)
-    // -------------------------------------------------------------
-    if (q.includes('recurrence') || (q.includes('relation') && q.includes('dm'))) {
-      return `<strong>DM Unit 4 — Solving Homogeneous Recurrence Relations:</strong><br><br>
-      For a linear homogeneous recurrence relation: <code>a_n + c₁ a_{n-1} + c₂ a_{n-2} = 0</code><br><br>
-      <strong>Step-by-Step Procedure:</strong><br>
-      1. Write the <strong>Characteristic Equation</strong>: <code>r² + c₁ r + c₂ = 0</code>.<br>
-      2. Solve for roots <code>r₁, r₂</code>:<br>
-      • <em>Case 1: Distinct Real Roots (r₁ ≠ r₂):</em><br>
-      <code>a_n = C₁(r₁)ⁿ + C₂(r₂)ⁿ</code><br>
-      • <em>Case 2: Repeated Real Roots (r₁ = r₂ = r):</em><br>
-      <code>a_n = (C₁ + C₂·n) rⁿ</code><br>
-      • <em>Case 3: Complex Conjugate Roots:</em> Convert to polar/trigonometric form.<br>
-      3. Use given initial conditions (e.g. <code>a₀ = 1, a₁ = 2</code>) to solve system of linear equations for constants <code>C₁</code> and <code>C₂</code>.`;
-    }
-
-    if (q.includes('hasse') || q.includes('poset') || q.includes('lattice')) {
-      return `<strong>DM Unit 2 — POSETs, Hasse Diagrams & Lattices:</strong><br><br>
-      • <strong>POSET (Partially Ordered Set):</strong> A set S with relation R that is <strong>Reflexive, Antisymmetric, and Transitive</strong>. Denoted <code>(S, ≤)</code>.<br>
-      • <strong>Hasse Diagram:</strong> A simplified visual representation of a finite POSET where loops (reflexivity) and transitive edges are omitted, and elements are arranged vertically from lower to higher.<br>
-      • <strong>Lattice:</strong> A POSET in which <em>every pair of elements {a, b} has a unique Least Upper Bound (LUB / Join ∨) and Greatest Lower Bound (GLB / Meet ∧)</em>.<br><br>
-      <em>Important Properties:</em> Distributive lattice satisfies <code>a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)</code>. Complemented lattice has 0 and 1 elements where every element has a complement.`;
-    }
-
-    if (q.includes('euler') || q.includes('hamilton') || (q.includes('graph') && q.includes('circuit'))) {
-      return `<strong>DM Unit 5 — Euler vs Hamiltonian Graphs:</strong><br><br>
-      • <strong>Eulerian Trail / Circuit:</strong> A closed trail that visits <em>every edge of the graph exactly once</em>.<br>
-      &rarr; <em>Euler's Theorem:</em> A connected undirected graph has an Eulerian circuit <strong>if and only if every vertex has an even degree</strong>.<br>
-      &rarr; Has an Eulerian path if exactly 2 vertices have odd degrees.<br><br>
-      • <strong>Hamiltonian Cycle:</strong> A closed path that visits <em>every vertex of the graph exactly once</em> (except start/end).<br>
-      &rarr; <em>Dirac's Theorem:</em> If a simple graph has n ≥ 3 vertices and <code>deg(v) ≥ n/2</code> for all v, then G is Hamiltonian.<br>
-      &rarr; <em>Ore's Theorem:</em> If <code>deg(u) + deg(v) ≥ n</code> for every non-adjacent pair (u, v), G is Hamiltonian.`;
-    }
-
-    // -------------------------------------------------------------
-    // OOPJ (Object Oriented Programming through Java)
-    // -------------------------------------------------------------
-    if (q.includes('overload') || q.includes('override') || (q.includes('polymorph') && q.includes('java'))) {
-      return `<strong>OOPJ Unit 2 — Method Overloading vs Method Overriding:</strong><br><br>
-      <table style="width:100%; border-collapse:collapse; margin-bottom:10px; font-size:13px;">
-        <tr style="background:#f1f5f9;"><th style="padding:6px; border:1px solid #cbd5e1;">Feature</th><th style="padding:6px; border:1px solid #cbd5e1;">Overloading</th><th style="padding:6px; border:1px solid #cbd5e1;">Overriding</th></tr>
-        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Scope</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Within the same class</td><td style="padding:6px; border:1px solid #cbd5e1;">Between superclass & subclass</td></tr>
-        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Parameters</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Must be different (count/type)</td><td style="padding:6px; border:1px solid #cbd5e1;">Must be exact same signature</td></tr>
-        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Binding Time</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Compile time (Static)</td><td style="padding:6px; border:1px solid #cbd5e1;">Runtime (Dynamic Dispatch)</td></tr>
-        <tr><td style="padding:6px; border:1px solid #cbd5e1;"><strong>Return Type</strong></td><td style="padding:6px; border:1px solid #cbd5e1;">Can be different</td><td style="padding:6px; border:1px solid #cbd5e1;">Must be same or covariant</td></tr>
-      </table>
-      <em>Code Example:</em><br>
-      <code>class MathUtil { int add(int a, int b) { return a+b; } double add(double a, double b) { return a+b; } } // Overloading</code><br>
-      <code>class Animal { void sound() { System.out.println("Bark"); } } class Dog extends Animal { @Override void sound() { System.out.println("Woof"); } } // Overriding</code>`;
-    }
-
-    if (q.includes('thread') || q.includes('multithread') || q.includes('synchroniz')) {
-      return `<strong>OOPJ Unit 3 — Multithreading & Synchronization in Java:</strong><br><br>
-      • <strong>Thread Creation:</strong><br>
-      1. Extending <code>Thread</code> class: <code>class MyThread extends Thread { public void run() { ... } }</code><br>
-      2. Implementing <code>Runnable</code> interface (preferred): <code>class MyTask implements Runnable { public void run() { ... } }</code><br><br>
-      • <strong>Thread Life Cycle States:</strong> New &rarr; Runnable &rarr; Running &rarr; Blocked/Waiting &rarr; Terminated.<br>
-      • <strong>Thread Synchronization:</strong> Prevents thread interference and consistency problems (race conditions) using the <code>synchronized</code> keyword on methods or critical blocks.<br>
-      • <strong>Inter-thread Communication:</strong> Done using <code>wait()</code>, <code>notify()</code>, and <code>notifyAll()</code> defined in <code>java.lang.Object</code> within synchronized contexts.`;
-    }
-
-    if (q.includes('exception') || q.includes('try') || q.includes('catch')) {
-      return `<strong>OOPJ Unit 3 — Exception Handling Hierarchy:</strong><br><br>
-      Java exceptions inherit from <code>Throwable</code> &rarr; <code>Exception</code> and <code>Error</code>.<br><br>
-      • <strong>Checked Exceptions:</strong> Verified at compile-time (e.g., <code>IOException</code>, <code>SQLException</code>). Must be handled via <code>try-catch</code> or declared with <code>throws</code>.<br>
-      • <strong>Unchecked Exceptions:</strong> Subclasses of <code>RuntimeException</code> (e.g., <code>NullPointerException</code>, <code>ArithmeticException</code>, <code>ArrayIndexOutOfBoundsException</code>). Occur at runtime.<br><br>
-      <strong>The 5 Keywords:</strong><br>
-      • <code>try</code>: Encloses risky code.<br>
-      • <code>catch</code>: Catches and handles specific exception.<br>
-      • <code>finally</code>: Block that always executes (used for resource cleanup), regardless of exception occurrence.<br>
-      • <code>throw</code>: Explicitly throws an exception instance (<code>throw new MyCustomException("Msg");</code>).<br>
-      • <code>throws</code>: Method signature declaration specifying exceptions propagated to caller.`;
-    }
-
-    // -------------------------------------------------------------
-    // SE (Software Engineering)
-    // -------------------------------------------------------------
-    if (q.includes('waterfall') || q.includes('agile') || q.includes('sdlc') || q.includes('spiral')) {
-      return `<strong>SE Unit 1 — Software Process Models Comparison:</strong><br><br>
-      • <strong>Waterfall Model:</strong> Sequential linear flow: Requirements &rarr; Design &rarr; Implementation &rarr; Testing &rarr; Deployment &rarr; Maintenance. Best when requirements are well-understood and stable. Disadvantage: high risk, working software delivered late.<br>
-      • <strong>Prototyping Model:</strong> Builds a throw-away or evolutionary prototype to clarify customer requirements. Excellent for unknown or volatile user needs.<br>
-      • <strong>Spiral Model (Boehm):</strong> Risk-driven model structured in 4 quadrants (Determine objectives, Risk analysis, Develop & Test, Plan next phase). Best for large, high-risk, expensive projects.<br>
-      • <strong>Agile (Scrum):</strong> Iterative and incremental development in short sprints (2–4 weeks). Embraces changing requirements, daily standups, sprint backlog, and continuous customer feedback.`;
-    }
-
-    if (q.includes('cohesion') || q.includes('coupling')) {
-      return `<strong>SE Unit 3 — Cohesion vs Coupling (Architectural Design):</strong><br><br>
-      The core engineering objective is: <strong>High Cohesion, Low Coupling</strong>.<br><br>
-      • <strong>Cohesion:</strong> Measures the internal strength and single-purposeness of elements within a module.<br>
-      &rarr; <em>Order (Best to Worst):</em> Functional (Best) &gt; Sequential &gt; Communicational &gt; Procedural &gt; Temporal &gt; Logical &gt; Coincidental (Worst).<br><br>
-      • <strong>Coupling:</strong> Measures the degree of interdependence between different modules.<br>
-      &rarr; <em>Order (Best/Lowest to Worst/Highest):</em> No Direct Coupling &gt; Data Coupling (Best) &gt; Stamp Coupling &gt; Control Coupling &gt; Common Coupling &gt; Content Coupling (Worst, direct memory access).`;
-    }
-
-    if (q.includes('testing') || q.includes('white box') || q.includes('black box')) {
-      return `<strong>SE Unit 5 — Software Testing Methodologies:</strong><br><br>
-      • <strong>Black-Box Testing (Functional):</strong> Tests functionality without knowing internal source code structure.<br>
-      &rarr; <em>Techniques:</em> Equivalence Class Partitioning, Boundary Value Analysis (BVA), Cause-Effect Graphing.<br><br>
-      • <strong>White-Box Testing (Structural):</strong> Tests internal code logic, paths, conditions, and loops.<br>
-      &rarr; <em>Techniques:</em> Statement Coverage, Branch Coverage, Basis Path Testing using McCabe's Cyclomatic Complexity: <code>V(G) = E - N + 2P</code> (where E = edges, N = nodes, P = connected components).<br><br>
-      <strong>Levels of Testing:</strong> Unit Testing &rarr; Integration Testing &rarr; System Testing &rarr; Acceptance Testing (Alpha/Beta).`;
-    }
-
-    // -------------------------------------------------------------
-    // ES (Environmental Studies)
-    // -------------------------------------------------------------
-    if (q.includes('ecosystem') || q.includes('biodiversity') || q.includes('environmental') || q.includes('pollution')) {
-      return `<strong>ES (Environmental Studies) — Core Examination Essentials:</strong><br><br>
-      • <strong>Ecosystem:</strong> Dynamic complex of plant, animal, and microorganism communities interacting with non-living environment. Energy flow is unidirectional (10% Law of Lindeman).<br>
-      • <strong>Ecological Pyramids:</strong> Pyramid of Numbers, Biomass, and Energy (Pyramid of Energy is <em>always upright</em>).<br>
-      • <strong>Biodiversity Hotspots:</strong> Regions with high species richness and high endemism under severe threat. India hosts 4 hotspots: Western Ghats, Eastern Himalayas, Indo-Burma, Sundaland.<br>
-      • <strong>Conservation:</strong> In-situ (National parks, Sanctuaries, Biosphere reserves) vs Ex-situ (Botanical gardens, Gene banks, Zoos).<br>
-      • <strong>Pollution Control:</strong> Air (Particulate matter, scrubbers, electrostatic precipitators), Water (BOD/COD testing, Sewage Treatment Plants), Solid Waste (3Rs: Reduce, Reuse, Recycle).`;
-    }
-
-    // -------------------------------------------------------------
-    // I&E (Innovation & Entrepreneurship)
-    // -------------------------------------------------------------
-    if (q.includes('entrepreneur') || q.includes('canvas') || q.includes('patent') || q.includes('ipr') || q.includes('design thinking')) {
-      return `<strong>I&E (Innovation & Entrepreneurship) — Core Examination Essentials:</strong><br><br>
-      • <strong>Design Thinking Process:</strong> 5 iterative stages: <em>Empathize</em> (understand user needs) &rarr; <em>Define</em> (problem statement) &rarr; <em>Ideate</em> (generate solutions) &rarr; <em>Prototype</em> (quick experimental models) &rarr; <em>Test</em> (user validation).<br>
-      • <strong>Business Model Canvas (Alexander Osterwalder):</strong> 9 building blocks: Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, Cost Structure.<br>
-      • <strong>Intellectual Property Rights (IPR):</strong><br>
-      &rarr; <em>Patent:</em> Protects novel inventions (valid 20 years; must satisfy Novelty, Inventive Step, Industrial Applicability).<br>
-      &rarr; <em>Copyright:</em> Protects literary, musical, and artistic works.<br>
-      &rarr; <em>Trademark:</em> Protects brand names, logos, symbols.<br>
-      • <strong>Funding Stages:</strong> Bootstrapping &rarr; Seed Funding (Friends & Family, Grants) &rarr; Angel Investors &rarr; Venture Capital (Series A, B, C) &rarr; IPO (Initial Public Offering).`;
-    }
-
-    // -------------------------------------------------------------
-    // Smart General Technical Fallback
-    // -------------------------------------------------------------
-    return `<strong>Academic Guidance on "${escapeHtml(query)}":</strong><br><br>
-    In MGIT CSE Semester III examinations, answer this topic following the structured blueprint:<br>
-    • <strong>1. Standard Technical Definition:</strong> State the formal definition and domain classification.<br>
-    • <strong>2. Core Working Principles:</strong> Explain the mechanism step-by-step with clear numbered points.<br>
-    • <strong>3. Block Diagrams / Code / Equations:</strong> Always support explanations with labeled schematics or algorithms.<br>
-    • <strong>4. University Scoring Advice:</strong> In 5/10 marks questions, write comparative tables or step-by-step proofs rather than unformatted paragraphs.<br><br>
-    <em>Tip: Switch to the relevant subject card to view all authentic past year questions on this topic with direct Google Drive PDF links.</em>`;
-  }
-
-
-  // -------------------------------------------------------------
-  // Event Listeners Setup
-  // -------------------------------------------------------------
   function setupEventListeners() {
     // Header and mobile page navigation (use the app's own history)
     const handleAppBack = (e) => {
@@ -2936,6 +2740,11 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
+    if (el.pyqFilterPanel) {
+      el.pyqFilterPanel.addEventListener('change', updateApplyFilterCount);
+      el.pyqFilterPanel.addEventListener('input', updateApplyFilterCount);
+    }
+
     if (el.applyFiltersBtn) {
       el.applyFiltersBtn.addEventListener('click', applyFiltersFromPanel);
     }
@@ -2995,6 +2804,14 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     if (el.questionModal) {
       el.questionModal.addEventListener('click', (e) => {
         if (e.target === el.questionModal) closeQuestionModal();
+      });
+    }
+    if (el.modalSolveAiBtn) {
+      el.modalSolveAiBtn.addEventListener('click', () => {
+        if (state.currentQuestion) {
+          closeQuestionModal();
+          solveQuestionWithGemini(state.currentQuestion);
+        }
       });
     }
 
@@ -3061,29 +2878,16 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
       });
     }
 
-    // Admin Modal triggers
-    if (el.adminLoginBtn) {
-      el.adminLoginBtn.addEventListener('click', openAdminModal);
-    }
-    if (el.closeAdminModalBtn) {
-      el.closeAdminModalBtn.addEventListener('click', () => {
-        el.adminModal.style.display = 'none';
-      });
-    }
-    if (el.adminLoginForm) {
-      el.adminLoginForm.addEventListener('submit', handleAdminLogin);
-    }
-    if (el.adminLogoutBtn) {
-      el.adminLogoutBtn.addEventListener('click', handleAdminLogout);
-    }
-
-    // Floating Gemini Button & Modal
+    // Floating AI Assistant Button & Modal
     if (el.floatingGeminiBtn) {
       el.floatingGeminiBtn.addEventListener('click', openGeminiModal);
     }
     if (el.closeGeminiModalBtn) {
-      el.closeGeminiModalBtn.addEventListener('click', () => {
-        el.geminiModal.style.display = 'none';
+      el.closeGeminiModalBtn.addEventListener('click', closeGeminiModal);
+    }
+    if (el.geminiModal) {
+      el.geminiModal.addEventListener('click', (e) => {
+        if (e.target === el.geminiModal) closeGeminiModal();
       });
     }
 
@@ -3144,6 +2948,13 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
     if (el.restartTourBtn) {
       el.restartTourBtn.addEventListener('click', startOnboardingTour);
     }
+    if (el.tourOverlay) {
+      // Stop wheel scrolling over the dimmed page, but let the sheet itself scroll.
+      el.tourOverlay.addEventListener('wheel', (e) => {
+        if (e.target.closest && e.target.closest('.tour-tooltip')) return;
+        e.preventDefault();
+      }, { passive: false });
+    }
 
     // Reposition tour spotlight, tooltip & update responsive labels on window resize
     window.addEventListener('resize', () => {
@@ -3162,8 +2973,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
         if (el.questionModal && el.questionModal.style.display === 'flex') closeQuestionModal();
         if (el.contribWarningModal && el.contribWarningModal.style.display === 'flex') el.contribWarningModal.style.display = 'none';
         if (el.contribUploadModal && el.contribUploadModal.style.display === 'flex') el.contribUploadModal.style.display = 'none';
-        if (el.adminModal && el.adminModal.style.display === 'flex') el.adminModal.style.display = 'none';
-        if (el.geminiModal && el.geminiModal.style.display === 'flex') el.geminiModal.style.display = 'none';
+        if (el.geminiModal && el.geminiModal.style.display === 'flex') closeGeminiModal();
       }
     });
   }
@@ -3171,19 +2981,65 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
   // -------------------------------------------------------------
   // Helpers
   // -------------------------------------------------------------
-  function showToast(message) {
+  function showToast(message, options) {
     if (!el.toastContainer) return;
-    const toast = document.createElement('div');
-    toast.className = 'toast-msg';
-    toast.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${escapeHtml(message)}</span>`;
-    el.toastContainer.appendChild(toast);
+    const opts = options || {};
+    const duration = Number(opts.duration) > 0 ? Number(opts.duration) : 3500;
+    const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateY(8px)';
-      toast.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
-      setTimeout(() => toast.remove(), 250);
-    }, 3500);
+    const toast = document.createElement('div');
+    toast.className = 'toast-msg' + (opts.actionLabel ? ' toast-has-action' : '');
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    toast.style.setProperty('--toast-duration', duration + 'ms');
+    toast.innerHTML = `<i class="fa-solid fa-circle-info" aria-hidden="true"></i> <span class="toast-text">${escapeHtml(message)}</span>`;
+    if (!reducedMotion) {
+      const drain = document.createElement('span');
+      drain.className = 'toast-progress';
+      drain.setAttribute('aria-hidden', 'true');
+      toast.appendChild(drain);
+    }
+
+    let closed = false;
+    function closeToast() {
+      if (closed) return;
+      closed = true;
+      toast.classList.add('toast-leaving');
+      setTimeout(() => toast.remove(), reducedMotion ? 0 : 250);
+    }
+
+    if (opts.actionLabel) {
+      const action = document.createElement('button');
+      action.type = 'button';
+      action.className = 'toast-action';
+      action.textContent = opts.actionLabel;
+      action.addEventListener('click', () => {
+        if (typeof opts.onAction === 'function') opts.onAction();
+        closeToast();
+      });
+      toast.appendChild(action);
+    }
+
+    el.toastContainer.appendChild(toast);
+    toast.timerId = setTimeout(closeToast, duration);
+  }
+
+  function showRevisionHintToast() {
+    showToast('Scroll down for Revision', {
+      duration: 5000,
+      actionLabel: '↓ See now',
+      onAction: () => {
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const behavior = reduce ? 'auto' : 'smooth';
+        const revision = document.getElementById('practiceFunDivision');
+        if (revision && revision.style.display !== 'none') {
+          revision.scrollIntoView({ behavior, block: 'center' });
+        } else {
+          const subjects = document.getElementById('subjectsSection');
+          if (subjects) subjects.scrollIntoView({ behavior, block: 'start' });
+        }
+      }
+    });
   }
 
   function escapeHtml(str) {
@@ -3237,6 +3093,7 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
         popup.style.transform = 'translateY(12px) scale(0.95)';
         setTimeout(() => popup.remove(), 350);
       }
+      if (window.MGITPopups) window.MGITPopups.closed('rating');
     }
 
     function recordRated() {
@@ -3247,14 +3104,22 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
 
     function showPopup() {
       if (isShowing || localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') return;
+      if (document.getElementById('ratingPopup')) return;
+
+      // Never interrupt the tour, a modal, the AI chat or practice.
+      const opened = window.MGITPopups
+        ? window.MGITPopups.request('rating', renderRatingPopup)
+        : (renderRatingPopup(), true);
+      if (!opened) return; // The 1-second timer will retry when the screen is free.
+
       isShowing = true;
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
       }
+    }
 
-      if (document.getElementById('ratingPopup')) return;
-
+    function renderRatingPopup() {
       const popup = document.createElement('div');
       popup.id = 'ratingPopup';
       popup.setAttribute('role', 'dialog');
@@ -3268,8 +3133,8 @@ In MGIT autonomous end-semester examinations, **Part-A carries 10 marks and cons
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <h4 class="rating-popup-headline">Help Amaan make this 10x better! ⭐</h4>
-          <p class="rating-popup-msg">Taking just <strong>10 seconds</strong> to drop a quick rating would genuinely help me a lot in updating papers and improving this for everyone.</p>
+          <h4 class="rating-popup-headline">Help make this hub better for everyone ⭐</h4>
+          <p class="rating-popup-msg">Taking just <strong>10 seconds</strong> to drop a quick rating helps improve paper coverage and the study experience for every student.</p>
           <div class="rating-popup-actions">
             <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="rating-btn-primary" id="rateNowBtn">
               <i class="fa-solid fa-star" style="font-size:11px; margin-right:4px;"></i> Rate now
