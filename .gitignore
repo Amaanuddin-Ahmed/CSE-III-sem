@@ -79,3 +79,13 @@ __pycache__/
 
 __pycache__/
 *.pyc
+
+# Local QA artefacts and OCR working files
+docs/_qa/
+docs/_work/
+
+
+# Local handover notes
+OBSERVATIONS.md
+TASKS.md
+
