@@ -8297,3 +8297,912 @@ body {
     animation: none;
   }
 }
+
+/* ==========================================================================
+   Mobile UX overhaul overrides (appended)
+   ========================================================================== */
+
+:root {
+  --header-deep: #1e3a8a;
+  --header-deep-2: #1d4ed8;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+}
+
+.main-container {
+  padding-bottom: calc(84px + var(--safe-bottom));
+}
+
+/* --- Deep-blue header -------------------------------------------------- */
+.site-header {
+  background: linear-gradient(180deg, var(--header-deep) 0%, var(--header-deep-2) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+}
+
+.site-header .brand-name,
+.site-header .brand-sub,
+.site-header .brand-group {
+  color: #ffffff;
+}
+
+.site-header .brand-sub {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.site-header .brand-seal {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.top-a2hs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.top-a2hs-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.site-header .top-drive-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+.site-header .top-drive-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.site-header .mobile-header-history {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.header-arrow-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 12px;
+}
+
+.mobile-header-history .header-arrow-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #ffffff;
+}
+
+.mobile-header-history .header-arrow-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.app-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.app-breadcrumb .crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-breadcrumb .crumb-current {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.app-breadcrumb .crumb-sep {
+  opacity: 0.55;
+  font-size: 10px;
+}
+
+/* --- Floating AI button ------------------------------------------------ */
+@media (max-width: 640px) {
+  .floating-gemini-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    bottom: calc(16px + var(--safe-bottom));
+    right: 14px;
+  }
+
+  .floating-gemini-btn .gemini-btn-text {
+    display: none;
+  }
+}
+
+/* --- Quiz Time (purple) ------------------------------------------------ */
+.practice-fun-division {
+  margin: 30px 0 12px;
+}
+
+.practice-fun-card {
+  background: linear-gradient(135deg, #5b21b6 0%, #6d28d9 48%, #4f46e5 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(76, 29, 149, 0.28);
+}
+
+.practice-fun-title,
+.practice-fun-hook,
+.practice-fun-sub {
+  color: #ffffff;
+}
+
+.practice-fun-hook {
+  color: #ede9fe;
+}
+
+.practice-fun-sub {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.practice-hint-tag {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.practice-fun-shine {
+  background: linear-gradient(110deg, transparent 28%, rgba(255, 255, 255, 0.2) 48%, transparent 68%);
+}
+
+.quiz-time-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-time-choice {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 62px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: transform 0.16s ease, background-color 0.16s ease;
+}
+
+.quiz-time-choice:hover,
+.quiz-time-choice:focus-visible {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.quiz-time-choice:active {
+  transform: scale(0.99);
+}
+
+.quiz-choice-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 16px;
+}
+
+.quiz-choice-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.quiz-choice-text strong {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.quiz-choice-text small {
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.quiz-choice-arrow {
+  font-size: 12px;
+  opacity: 0.7;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 680px) {
+  .practice-fun-card {
+    grid-template-areas:
+      "hint cat"
+      "title title"
+      "hook hook"
+      "sub sub"
+      "choices choices";
+  }
+
+  .quiz-time-choices {
+    grid-area: choices;
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+  }
+
+  .quiz-choice-text strong {
+    font-size: 12.8px;
+  }
+}
+
+/* --- Practice selector: unit step ------------------------------------- */
+.practice-units-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0 14px;
+}
+
+.practice-unit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-height: 62px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #dbe3ee;
+  background: #ffffff;
+  color: #0f172a;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: border-color 0.16s ease, background-color 0.16s ease, transform 0.16s ease;
+}
+
+.practice-unit-card:hover:not(:disabled) {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+  transform: translateY(-1px);
+}
+
+.practice-unit-card:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.practice-unit-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.practice-unit-count {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+@media (max-width: 380px) {
+  .practice-units-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.practice-change-mode {
+  margin-top: 4px;
+}
+
+/* --- Toasts with action + drain --------------------------------------- */
+.toast-container {
+  left: 50%;
+  right: auto;
+  bottom: calc(18px + var(--safe-bottom));
+  transform: translateX(-50%);
+  width: min(420px, calc(100vw - 24px));
+  align-items: stretch;
+  pointer-events: none;
+}
+
+.toast-msg {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  pointer-events: auto;
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.34);
+}
+
+.toast-msg .toast-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.toast-action {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-radius: 9px;
+  min-height: 34px;
+  padding: 6px 10px;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.toast-action:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: left center;
+  background: #93c5fd;
+  animation: toastDrain var(--toast-duration, 3500ms) linear forwards;
+}
+
+.toast-leaving {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@keyframes toastDrain {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-progress { animation: none; }
+  .toast-msg,
+  .toast-leaving { transition: none; }
+}
+
+/* --- Tour bottom sheet + lock ----------------------------------------- */
+body.tour-active {
+  /* Keep the page scrollable programmatically so each step can reveal its
+     target; the overlay blocks gestures instead of freezing the document. */
+  overscroll-behavior: contain;
+}
+
+.progress-empty-state {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12.5px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.tour-overlay {
+  touch-action: none;
+}
+
+.tour-tooltip {
+  touch-action: pan-y;
+}
+
+@media (max-width: 640px) {
+  .tour-tooltip {
+    top: auto !important;
+    left: 12px !important;
+    right: 12px !important;
+    bottom: calc(12px + var(--safe-bottom)) !important;
+    width: auto !important;
+    max-width: none !important;
+    border-radius: 18px 18px 16px 16px;
+    padding: 18px 18px calc(16px + var(--safe-bottom));
+    max-height: 56dvh;
+    overflow-y: auto;
+    animation: none;
+  }
+
+  .tour-title { font-size: 16.5px; }
+  .tour-desc { font-size: 13.5px; margin-bottom: 14px; }
+  .tour-footer .btn-tour-primary,
+  .tour-footer .btn-tour-secondary {
+    min-height: 44px;
+    font-size: 13px;
+  }
+}
+
+/* --- AI modal hardening ------------------------------------------------ */
+#geminiModal .gemini-workspace-title,
+#geminiModal #geminiModelLabel,
+.gemini-model-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#geminiModal .gemini-workspace-header {
+  padding: 10px 12px;
+  gap: 8px;
+}
+
+#geminiModal .gemini-live-pill {
+  white-space: nowrap;
+  max-width: 46vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  #geminiModal .gemini-workspace-title { max-width: 48vw; font-size: 13.5px; }
+  #geminiModal .gemini-live-pill { font-size: 10.5px; padding: 2px 6px; }
+  #geminiModal .gemini-icon-btn,
+  #geminiModal .modal-close-btn { width: 44px; height: 44px; }
+}
+
+body.ai-modal-open {
+  overflow: hidden;
+}
+
+/* --- Question cards & chapter controls -------------------------------- */
+.question-text-preview {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.chapter-collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 44px;
+  margin: 10px 0 4px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #475569;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chapter-collapse-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* --- Filter panel: sticky actions + live count ------------------------ */
+.pyq-filter-panel {
+  max-height: min(70dvh, 560px);
+  overflow-y: auto;
+}
+
+.filter-panel-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 6px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 32%);
+}
+
+.filter-panel-actions .btn-action-primary,
+.filter-panel-actions .btn-secondary-flat {
+  min-height: 44px;
+}
+
+/* --- Footer: single tidy row ------------------------------------------ */
+.bottom-footer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 18px;
+}
+
+.bottom-footer .footer-division {
+  width: auto;
+  text-align: left;
+}
+
+.bottom-footer .feedback-division {
+  flex: 1 1 320px;
+}
+
+.bottom-footer .whatsapp-link {
+  width: 100%;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.bottom-footer .attribution-division {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.footer-rate-link {
+  min-height: 44px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 640px) {
+  .bottom-footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: calc(18px + var(--safe-bottom));
+  }
+
+  .bottom-footer .attribution-division {
+    justify-content: space-between;
+  }
+
+  .bottom-footer .footer-division {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- Feedback / rating popups ----------------------------------------- */
+.rating-popup-card {
+  max-width: min(420px, calc(100vw - 28px));
+}
+
+#ratingPopup {
+  z-index: 100010;
+}
+
+/* --- Empty states ------------------------------------------------------ */
+.empty-state-box,
+.empty-notes-card {
+  border-radius: 14px;
+}
+
+/* --- Touch targets ----------------------------------------------------- */
+@media (max-width: 640px) {
+  .modal-close-btn,
+  .btn-tour-primary,
+  .btn-tour-secondary,
+  .header-arrow-btn,
+  .top-a2hs-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .top-a2hs-btn .a2hs-label {
+    display: none;
+  }
+
+  .top-a2hs-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
+  }
+
+  .mobile-header-history {
+    padding: 0 12px 8px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-name { font-size: 13.5px; }
+  .brand-sub { display: none; }
+  .header-inner { padding: 8px 10px; }
+  .main-container { padding-left: 12px; padding-right: 12px; }
+}
+
+/* ==========================================================================
+   QA pass — breadcrumb, header targets, practice session bar, unit picker
+   ========================================================================== */
+
+/* Breadcrumb links must read as text crumbs, not default white buttons. */
+.app-breadcrumb .crumb-link {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1;
+  padding: 6px 6px;
+  min-height: 30px;
+  max-width: 96px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.app-breadcrumb .crumb-link:hover,
+.app-breadcrumb .crumb-link:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  outline: none;
+}
+
+.app-breadcrumb .crumb-link:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.55);
+}
+
+/* 44 px minimum touch targets for the two header actions. */
+@media (max-width: 640px) {
+  .site-header .top-drive-btn,
+  .site-header .top-a2hs-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border-radius: 11px;
+    font-size: 16px;
+  }
+
+  .site-header .header-actions {
+    gap: 8px;
+  }
+}
+
+/* Tap-height pass for the smaller controls found in the audit. */
+.app-breadcrumb .crumb-link {
+  min-height: 40px;
+  padding: 10px 6px;
+}
+
+.btn-back,
+.btn-switch-exam,
+.session-btn-exit,
+.btn-quiz-nav,
+.btn-quiz-skip,
+.btn-session-next,
+.toast-action {
+  min-height: 40px;
+}
+
+.btn-back {
+  min-height: 44px;
+}
+
+/* Keep the primary session action comfortably tappable on phones. */
+@media (max-width: 640px) {
+  .btn-quiz-nav,
+  .btn-quiz-skip,
+  .btn-session-next {
+    min-height: 44px;
+  }
+}
+
+/* The floating AI shortcut sits at the bottom edge; toasts layer above it. */
+.floating-gemini-btn {
+  bottom: calc(20px + var(--safe-bottom)) !important;
+  right: 16px !important;
+  z-index: 950 !important;
+}
+
+@media (max-width: 640px) {
+  .floating-gemini-btn {
+    bottom: calc(18px + var(--safe-bottom)) !important;
+    right: 14px !important;
+  }
+}
+
+/* Session bar: two comfortable rows on phones instead of squeezing the title. */
+@media (max-width: 640px) {
+  .session-bar-inner {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding: 8px 12px 9px;
+  }
+
+  .session-btn-exit {
+    order: 1;
+    min-height: 40px;
+    padding: 6px 12px;
+  }
+
+  .session-stats-group {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .session-title-wrap {
+    order: 3;
+    flex: 1 0 100%;
+    gap: 8px;
+  }
+
+  .session-title {
+    font-size: 12.5px;
+    line-height: 1.3;
+  }
+
+  .session-subject-badge,
+  .session-streak-pill,
+  .session-counter-pill {
+    font-size: 11.5px;
+  }
+
+  .session-counter-pill {
+    padding: 4px 9px;
+  }
+}
+
+/* Inline text nodes inside the counter must keep their spaces (flex strips them). */
+.session-counter-pill {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.35;
+}
+
+/* Back / change-mode controls in the practice selector need real tap height. */
+.btn-change-mode {
+  min-height: 40px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+}
+
+@media (max-width: 640px) {
+  .btn-change-mode {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+
+  #practiceStepUnit .practice-step-title {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+}
+
+/* Small screens: keep the mascot from stealing the whole question viewport. */
+@media (max-height: 620px) {
+  .session-mascot-container {
+    min-height: 62px;
+    height: 62px;
+    margin: 4px auto 0;
+  }
+
+  .session-mascot-container svg,
+  .session-mascot-container img {
+    max-height: 62px;
+  }
+}
+
+/* Exam scope banner: stack the tag, scope and action on narrow phones. */
+@media (max-width: 420px) {
+  .exam-active-banner {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .active-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .active-banner-divider {
+    display: none;
+  }
+
+  .active-banner-sub {
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  .btn-switch-exam {
+    min-height: 40px;
+    padding: 8px 12px;
+  }
+}
+
+/* --- Final mobile polish ------------------------------------------------ */
+
+/* At 320 px four crumbs cannot stay readable. Drop the exam segment, which
+   is already shown in the scope banner directly below the header. */
+@media (max-width: 340px) {
+  .app-breadcrumb.has-mode-crumb .crumb-exam,
+  .app-breadcrumb.has-mode-crumb .crumb-exam + .crumb-sep {
+    display: none;
+  }
+}
+
+/* Step 5 points at the fixed AI button, so its bottom sheet must sit above
+   that button instead of covering it. */
+@media (max-width: 640px) {
+  .tour-tooltip.tour-step-ai {
+    bottom: calc(86px + var(--safe-bottom)) !important;
+  }
+}
+
+/* The spotlight should track scrolling without animating layout properties. */
+.tour-spotlight {
+  transition: none;
+}
+
+/* Touch devices should not advertise a keyboard shortcut they do not have. */
+@media (hover: none), (pointer: coarse) {
+  .fc-keyboard-hint {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-spotlight,
+  .tour-tooltip {
+    transition: none;
+    animation: none;
+  }
+}

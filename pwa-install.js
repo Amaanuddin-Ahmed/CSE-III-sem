@@ -73,6 +73,7 @@
 
     installPromptShown = true;
     if (timerInterval) clearInterval(timerInterval);
+    if (window.MGITPopups) window.MGITPopups.closed('a2hs');
   }
 
   function showInstallPrompt(force) {
@@ -80,20 +81,26 @@
     if (isInstalled() || isStandalone()) return;
     if (!force && (installPromptShown || isDismissed())) return;
 
-    // Do NOT interrupt active practice session / quiz
-    const sessionScreen = document.getElementById('practiceSessionScreen');
-    if (sessionScreen && sessionScreen.style.display !== 'none') {
-      return; // Postpone
+    // Do NOT interrupt the tour, modals, AI chat or an active practice session.
+    if (window.MGITPopups && !window.MGITPopups.canShow('a2hs')) {
+      return; // The 1-second tracker will retry once the screen is free.
     }
+
+    const opened = window.MGITPopups
+      ? window.MGITPopups.request('a2hs', renderInstallPrompt)
+      : (renderInstallPrompt(), true);
+    if (!opened) return;
 
     installPromptShown = true;
     if (timerInterval) clearInterval(timerInterval);
+  }
 
+  function renderInstallPrompt() {
     const promptCard = document.createElement('div');
     promptCard.id = 'pwaInstallPrompt';
     promptCard.className = 'pwa-install-prompt glass-panel';
     promptCard.setAttribute('role', 'dialog');
-    promptCard.setAttribute('aria-label', 'Install MGIT PYQ Hub');
+    promptCard.setAttribute('aria-label', 'Add MGIT PYQ Hub to your Home Screen');
     promptCard.innerHTML = `
       <div class="pwa-prompt-icon-wrap">
         <svg viewBox="0 0 100 100" width="46" height="46" class="pwa-prompt-svg">
@@ -107,11 +114,11 @@
         </svg>
       </div>
       <div class="pwa-prompt-content">
-        <h4 class="pwa-prompt-title">Install MGIT PYQ Hub</h4>
-        <p class="pwa-prompt-desc">Add to home screen for instant 1-tap offline access, practice games &amp; revision!</p>
+        <h4 class="pwa-prompt-title">Add MGIT PYQ Hub to your Home Screen</h4>
+        <p class="pwa-prompt-desc">Open it in one tap and keep revision, papers and practice games close by.</p>
         <div class="pwa-prompt-actions">
           <button type="button" class="btn-pwa-install" id="pwaInstallNowBtn">
-            <i class="fa-solid fa-download"></i> <span>Install Now</span>
+            <i class="fa-solid fa-mobile-screen-button"></i> <span>Add to Home Screen</span>
           </button>
           <button type="button" class="btn-pwa-later" id="pwaInstallLaterBtn">
             Later
@@ -158,6 +165,7 @@
             promptCard.classList.remove('visible');
             setTimeout(() => promptCard.remove(), 300);
             updateInstallEntry();
+            if (window.MGITPopups) window.MGITPopups.closed('a2hs');
             return;
           }
           // Dismissed in the browser: treat it as "Later" (3-day rule).
@@ -179,7 +187,7 @@
     if (!contentEl) return;
     const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
     contentEl.innerHTML = `
-      <h4 class="pwa-prompt-title" style="color: #4338ca;">Add MGIT Hub to your device</h4>
+      <h4 class="pwa-prompt-title" style="color: #4338ca;">Add MGIT PYQ Hub to your device</h4>
       <p class="pwa-prompt-desc" style="font-size: 13px; line-height: 1.55; color: #1e293b; margin: 8px 0 12px;">
         ${isIos
           ? '1. Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket"></i> at the bottom of Safari.<br>2. Scroll and tap <strong>Add to Home Screen</strong>.<br>3. Tap <strong>Add</strong> to finish.'

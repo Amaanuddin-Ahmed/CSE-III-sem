@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MGIT PYQ Hub — Mahatma Gandhi Institute of Technology CSE Semester III</title>
-  <meta name="description" content="MGIT PYQ Hub — Previous Year Questions, Notes and Study Resources for MGIT CSE Semester III.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MGIT PYQ Hub — CSE Semester III Notes, PYQs & Practice</title>
+  <meta name="description" content="Scoped notes, previous year questions, flashcards and interactive practice for MGIT CSE Semester III (MR-25).">
   <meta name="keywords" content="MGIT, PYQ Hub, CSE Semester 3, Previous Year Questions, DM, COA, OOPJ, DBMS, SE, ES, IE">
   <link rel="canonical" href="https://mgit-pyq-hub.vercel.app/">
 
@@ -12,15 +12,16 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MGIT PYQ Hub">
   <meta property="og:title" content="MGIT PYQ Hub — CSE Semester III">
-  <meta property="og:description" content="Scoped PYQs, notes, flashcards and interactive practice for MGIT CSE Semester III (MR-25).">
+  <meta property="og:description" content="Scoped notes, PYQs, flashcards and interactive practice for MGIT CSE Semester III (MR-25).">
   <meta property="og:url" content="https://mgit-pyq-hub.vercel.app/">
-  <meta property="og:image" content="https://mgit-pyq-hub.vercel.app/assets/icons/icon-512.png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mgit-pyq-hub.vercel.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MGIT PYQ Hub — CSE Semester III study resources">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MGIT PYQ Hub — CSE Semester III">
-  <meta name="twitter:description" content="Scoped PYQs, notes, flashcards and interactive practice for MGIT CSE Semester III (MR-25).">
-  <meta name="twitter:image" content="https://mgit-pyq-hub.vercel.app/assets/icons/icon-512.png">
+  <meta name="twitter:description" content="Scoped notes, PYQs, flashcards and interactive practice for MGIT CSE Semester III (MR-25).">
+  <meta name="twitter:image" content="https://mgit-pyq-hub.vercel.app/assets/og-image.png">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
@@ -56,7 +57,7 @@
   <meta name="theme-color" content="#1e3a8a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="MGIT Hub">
+  <meta name="apple-mobile-web-app-title" content="MGIT PYQ Hub">
   <link rel="apple-touch-icon" sizes="192x192" href="assets/icons/icon-192.png">
 
   <!-- KaTeX for crisp mathematical formulas & LaTeX rendering -->
@@ -66,17 +67,27 @@
   <!-- Marked.js for GitHub Flavored Markdown rendering -->
   <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
 
-  <!-- Vercel Web Analytics -->
+  <!-- Vercel Web Analytics (production only; avoids 404s on local static servers) -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    if (!/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])$/.test(location.hostname)) {
+      var vaScript = document.createElement('script');
+      vaScript.defer = true;
+      vaScript.src = '/_vercel/insights/script.js';
+      document.head.appendChild(vaScript);
+    }
   </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 
-  <!-- Vercel Speed Insights -->
+  <!-- Vercel Speed Insights (production only) -->
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    if (!/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])$/.test(location.hostname)) {
+      var siScript = document.createElement('script');
+      siScript.defer = true;
+      siScript.src = '/_vercel/speed-insights/script.js';
+      document.head.appendChild(siScript);
+    }
   </script>
-  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
   <!-- Ambient Dynamic Drifting Gradient Background (Feature 10) -->
@@ -95,52 +106,39 @@
         </div>
         <div class="brand-info">
           <h1 class="brand-name">MGIT PYQ Hub</h1>
-          <div class="header-nav-sub-row">
-            <div class="header-browser-arrows" aria-label="Page navigation">
-              <button type="button" class="header-arrow-btn" id="headerNavBackBtn" title="Go back (Previous page)" aria-label="Go back">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <button type="button" class="header-arrow-btn" id="headerNavForwardBtn" title="Go forward" aria-label="Go forward">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-            <p class="brand-sub">CSE Semester III</p>
-          </div>
+          <p class="brand-sub">CSE Semester III &bull; MR-25</p>
         </div>
       </div>
 
       <div class="header-actions">
         <!-- Top dynamic Drive button -->
-        <a id="topDriveBtn" 
-           href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="top-drive-btn" 
+        <a id="topDriveBtn"
+           href="https://drive.google.com/drive/folders/1v_S2vjhz1mAkgfUk1WHkxIcyEMS_RlNr?usp=sharing"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="top-drive-btn"
            title="Open Google Drive Folder"
            aria-label="Open Google Drive Folder">
           <i class="fa-brands fa-google-drive"></i>
           <span id="topDriveBtnText" class="top-drive-btn-text">View entire folder</span>
         </a>
 
-        <!-- Install app fallback entry (hidden until the browser allows install) -->
-        <button id="headerInstallBtn" class="top-admin-btn top-admin-icon-btn" type="button" title="Install app" aria-label="Install app" hidden>
-          <i class="fa-solid fa-download"></i>
-        </button>
-
-        <!-- Admin Login Button (Discrete small icon button) -->
-        <button id="adminLoginBtn" class="top-admin-btn top-admin-icon-btn" type="button" title="Admin Portal Login" aria-label="Admin Portal Login">
-          <i class="fa-solid fa-lock"></i>
+        <!-- Add to Home Screen: always available, with an iOS/Android steps sheet fallback. -->
+        <button id="headerInstallBtn" class="top-a2hs-btn" type="button" title="Add to Home Screen" aria-label="Add to Home Screen">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span class="a2hs-label">Add to Home Screen</span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile-only page navigation: placed below the main header row -->
+    <!-- Breadcrumb + page navigation (one compact row on every screen size) -->
     <div class="mobile-header-history" aria-label="Page navigation">
       <button type="button" class="header-arrow-btn" id="mobileNavBackBtn" title="Go back (Previous page)" aria-label="Go back">
-        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
       </button>
+      <nav class="app-breadcrumb" id="appBreadcrumb" aria-label="Breadcrumb"></nav>
       <button type="button" class="header-arrow-btn" id="mobileNavForwardBtn" title="Go forward" aria-label="Go forward">
-        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </button>
     </div>
   </header>
@@ -159,7 +157,7 @@
         
         <div id="continueExamChipWrap" class="continue-chip-wrap" style="display: none;">
           <button type="button" class="continue-exam-chip" id="continueExamChip">
-            <i class="fa-solid fa-bolt"></i> <span id="continueChipText">Continue with Mid-2</span> <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-bolt"></i> <span id="continueChipText">Resume Mid-2</span> <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
@@ -168,7 +166,7 @@
         <!-- Mid-1 -->
         <div class="exam-card glass-panel" data-exam-id="mid1" role="button" tabindex="0">
           <div class="exam-card-header">
-            <span class="exam-units-pill">Units 1 – 2.5</span>
+            <span class="exam-units-pill">Units 1–2 + 3 (1st half)</span>
           </div>
           <div class="exam-card-icon-wrap exam-icon-mid1">
             <i class="fa-solid fa-book-bookmark"></i>
@@ -184,7 +182,7 @@
         <!-- Mid-2 (Upcoming Highlight) -->
         <div class="exam-card glass-panel exam-card-upcoming" data-exam-id="mid2" role="button" tabindex="0">
           <div class="exam-card-header">
-            <span class="exam-units-pill">Units 2.5 – 5</span>
+            <span class="exam-units-pill">Unit 3 (2nd half) + Units 4–5</span>
             <span class="exam-upcoming-badge"><i class="fa-solid fa-fire"></i> Upcoming</span>
           </div>
           <div class="exam-card-icon-wrap exam-icon-mid2">
@@ -214,6 +212,7 @@
           </div>
         </div>
       </div>
+      <p class="exam-split-helper"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Unit 3 is split between Mid-1 and Mid-2 as per the syllabus.</p>
     </section>
 
     <!-- Active Exam Banner (Shown when an exam is active) -->
@@ -221,71 +220,12 @@
       <div class="active-banner-content">
         <span class="active-banner-tag" id="bannerExamTag">Mid-2</span>
         <span class="active-banner-divider">•</span>
-        <span class="active-banner-sub" id="bannerExamSubtitle">Units 2.5 – 5 · Only what's in your syllabus</span>
+        <span class="active-banner-sub" id="bannerExamSubtitle">Unit 3 (2nd half) + Units 4–5 · Only what&rsquo;s in your syllabus</span>
       </div>
       <button type="button" class="btn-switch-exam" id="bannerChangeExamBtn" title="Switch Examination Target">
         <i class="fa-solid fa-repeat"></i>
         <span>Change Exam</span>
       </button>
-    </div>
-
-    <!-- Division 1 of 8: Practice with Fun Card (Feature 3) -->
-    <div class="practice-fun-division" id="practiceFunDivision" style="display: none;">
-      <div class="practice-fun-card" id="practiceFunCard" role="button" tabindex="0">
-        <div class="practice-fun-shine"></div>
-        <div class="practice-fun-content">
-          <div class="practice-hint-tag">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Practice with interactive quiz games to memorize your fundamentals</span>
-          </div>
-          <h3 class="practice-fun-title">Practice with Fun</h3>
-          <p class="practice-fun-hook">Learn it. Play it. Remember it.</p>
-          <p class="practice-fun-sub">Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.</p>
-          <div class="practice-fun-btn">
-            <span>Choose Mode &amp; Subject</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-        </div>
-        <div class="practice-fun-mascot-peek">
-          <svg class="cat-peek-svg" viewBox="0 0 100 100" width="85" height="85" aria-hidden="true" focusable="false">
-            <ellipse cx="50" cy="58" rx="34" ry="28" fill="#ea580c" />
-            <ellipse cx="50" cy="65" rx="20" ry="16" fill="#fef3c7" />
-            <!-- Pointed Ears -->
-            <polygon points="26,42 16,14 42,32" fill="#c2410c" />
-            <polygon points="28,39 20,20 40,32" fill="#f472b6" />
-            <polygon points="74,42 84,14 58,32" fill="#c2410c" />
-            <polygon points="72,39 80,20 60,32" fill="#f472b6" />
-            <!-- Blinking eyes looking at the viewer -->
-            <g class="cat-eye">
-              <ellipse cx="38" cy="52" rx="4.5" ry="6" fill="#1e293b" />
-              <circle cx="36.5" cy="50" r="1.8" fill="#ffffff" />
-            </g>
-            <g class="cat-eye">
-              <ellipse cx="62" cy="52" rx="4.5" ry="6" fill="#1e293b" />
-              <circle cx="60.5" cy="50" r="1.8" fill="#ffffff" />
-            </g>
-            <!-- Pink Nose & Cute Mouth -->
-            <polygon points="50,60 47,56 53,56" fill="#f43f5e" />
-            <path d="M45 62 Q47.5 65 50 62.5 Q52.5 65 55 62" stroke="#78350f" stroke-width="1.8" fill="none" stroke-linecap="round" />
-            <!-- Whiskers -->
-            <line x1="28" y1="58" x2="12" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
-            <line x1="27" y1="62" x2="11" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
-            <line x1="72" y1="58" x2="88" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
-            <line x1="73" y1="62" x2="89" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
-            <!-- Left paw rests on the edge; the right paw waves hello -->
-            <ellipse cx="36" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
-            <g class="cat-wave-arm">
-              <path d="M72 81 Q82 78 87 69" stroke="#ea580c" stroke-width="7" stroke-linecap="round" fill="none" />
-              <ellipse cx="88" cy="66" rx="6" ry="5.2" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
-            </g>
-          </svg>
-        </div>
-      </div>
-  <div class="practice-fun-footer-row" style="max-width: 960px; margin: 8px auto 0; display: flex; justify-content: flex-end;">
-        <button type="button" class="btn-progress-shortcut" id="viewProgressBtn" title="View your study streaks and mastery">
-          <i class="fa-solid fa-chart-line"></i>
-          <span>My Progress &amp; Streaks</span>
-        </button>
-      </div>
     </div>
 
     <!-- Subjects Section (2 Columns Grid) -->
@@ -299,6 +239,62 @@
         <!-- Dynamically populated 7 subjects via JavaScript -->
       </div>
     </section>
+
+    <!-- Quiz Time (single practice entry point, after all 7 subjects) -->
+    <div class="practice-fun-division" id="practiceFunDivision" style="display: none;">
+      <div class="practice-fun-card" id="practiceFunCard">
+        <div class="practice-fun-shine"></div>
+        <div class="practice-fun-content">
+          <div class="practice-hint-tag">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Practice with interactive quiz games to memorize your fundamentals</span>
+          </div>
+          <h3 class="practice-fun-title">Quiz Time</h3>
+          <p class="practice-fun-hook">Learn it. Play it. Remember it.</p>
+          <p class="practice-fun-sub">Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.</p>
+          <div class="quiz-time-choices">
+            <button type="button" class="quiz-time-choice" id="quizTimeQuizBtn">
+              <span class="quiz-choice-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <span class="quiz-choice-text"><strong>Quiz Mode</strong><small>MCQs, fill in the blanks &amp; instant feedback</small></span>
+              <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="quiz-time-choice" id="quizTimeFlashBtn">
+              <span class="quiz-choice-icon"><i class="fa-solid fa-layer-group"></i></span>
+              <span class="quiz-choice-text"><strong>Revise with Flash Cards</strong><small>Definitions, formulas &amp; high-yield recall</small></span>
+              <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="practice-fun-mascot-peek">
+          <svg class="cat-peek-svg" viewBox="0 0 100 100" width="85" height="85" aria-hidden="true" focusable="false">
+            <ellipse cx="50" cy="58" rx="34" ry="28" fill="#ea580c" />
+            <ellipse cx="50" cy="65" rx="20" ry="16" fill="#fef3c7" />
+            <polygon points="26,42 16,14 42,32" fill="#c2410c" />
+            <polygon points="28,39 20,20 40,32" fill="#f472b6" />
+            <polygon points="74,42 84,14 58,32" fill="#c2410c" />
+            <polygon points="72,39 80,20 60,32" fill="#f472b6" />
+            <g class="cat-eye"><ellipse cx="38" cy="52" rx="4.5" ry="6" fill="#1e293b" /><circle cx="36.5" cy="50" r="1.8" fill="#ffffff" /></g>
+            <g class="cat-eye"><ellipse cx="62" cy="52" rx="4.5" ry="6" fill="#1e293b" /><circle cx="60.5" cy="50" r="1.8" fill="#ffffff" /></g>
+            <polygon points="50,60 47,56 53,56" fill="#f43f5e" />
+            <path d="M45 62 Q47.5 65 50 62.5 Q52.5 65 55 62" stroke="#78350f" stroke-width="1.8" fill="none" stroke-linecap="round" />
+            <line x1="28" y1="58" x2="12" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="27" y1="62" x2="11" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="72" y1="58" x2="88" y2="55" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="73" y1="62" x2="89" y2="62" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" />
+            <ellipse cx="36" cy="85" rx="8" ry="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
+            <g class="cat-wave-arm">
+              <path d="M72 81 Q82 78 87 69" stroke="#ea580c" stroke-width="7" stroke-linecap="round" fill="none" />
+              <ellipse cx="88" cy="66" rx="6" ry="5.2" fill="#fef3c7" stroke="#ea580c" stroke-width="1.5" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="practice-fun-footer-row">
+        <button type="button" class="btn-progress-shortcut" id="viewProgressBtn" title="View your study streaks and mastery">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>My Progress &amp; Streaks</span>
+        </button>
+      </div>
+    </div>
 
     <!-- Subject Detail Section (Two-Step Navigation: Mode Selector -> Notes or PYQs) -->
     <section class="subject-detail-section" id="subjectDetailSection" style="display: none;">
@@ -333,7 +329,7 @@
               <p class="mode-card-desc">Unit-wise lecture notes, question bank answers, and faculty study materials.</p>
               <div class="mode-card-badge" id="modeNotesCountBadge">
                 <i class="fa-solid fa-folder-open"></i>
-                <span id="modeNotesCountText">0 Notes</span>
+                <span id="modeNotesCountText">— Notes</span>
               </div>
             </div>
             <div class="mode-card-action">
@@ -352,7 +348,7 @@
               <p class="mode-card-desc">Authentic semester exam questions filtered by academic year, unit, and exam marks.</p>
               <div class="mode-card-badge" id="modePyqsCountBadge">
                 <i class="fa-solid fa-file-lines"></i>
-                <span id="modePyqsCountText">0 Papers</span>
+                <span id="modePyqsCountText">— Papers</span>
               </div>
             </div>
             <div class="mode-card-action">
@@ -365,11 +361,7 @@
 
       <!-- Mode Switcher Bar (Shown when viewing either Notes or PYQs) -->
       <div class="mode-switcher-bar" id="modeSwitcherBar" style="display: none;">
-        <button type="button" class="mode-switch-btn" id="switchModeToSelectorBtn" title="Back to Category Selection">
-          <i class="fa-solid fa-shapes"></i>
-          <span>Change Category</span>
-        </button>
-        <div class="mode-switch-tabs">
+        <div class="mode-switch-tabs" role="tablist" aria-label="Study material">
           <button type="button" class="mode-tab-btn" id="tabSwitchToNotes">
             <i class="fa-regular fa-file-lines"></i>
             <span>Notes &amp; Resources</span>
@@ -393,7 +385,7 @@
         <div class="division-controls">
           <label for="notesChapterSelect" class="control-label">Select Chapter / Unit:</label>
           <select id="notesChapterSelect" class="form-select">
-            <option value="all">All Units / Chapters</option>
+            <option value="all">All units</option>
             <option value="1">Unit 1</option>
             <option value="2">Unit 2</option>
             <option value="3">Unit 3</option>
@@ -474,13 +466,13 @@
             </div>
             <div class="filter-panel-actions">
               <button type="button" id="resetFiltersBtn" class="btn-secondary-flat">Reset filters</button>
-              <button type="button" id="applyFiltersBtn" class="btn-action-primary">Apply</button>
+              <button type="button" id="applyFiltersBtn" class="btn-action-primary"><span id="applyFilterCountText">Show questions</span></button>
             </div>
           </div>
 
           <!-- Dynamic Question Count Summary -->
           <div class="pyq-count-banner" id="pyqCountBanner">
-            Showing questions across all 5 units
+            Loading questions…
           </div>
         </div>
 
@@ -510,14 +502,14 @@
            rel="noopener noreferrer" 
            class="whatsapp-link">
           <i class="fa-brands fa-whatsapp"></i>
-          <span>Got an Idea to Improve ? Let me know</span>
+          <span>Got an idea to improve it? Let me know</span>
         </a>
       </div>
 
       <!-- Division 2: Attribution -->
       <div class="footer-division attribution-division" id="attributionDivision">
         <div class="attribution-box">
-          <a href="https://www.linkedin.com/in/amaanuddin-ahmed-725617340?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+          <a href="https://www.linkedin.com/in/amaanuddin-ahmed-725617340"
              target="_blank" 
              rel="noopener noreferrer" 
              class="attribution-link"
@@ -535,51 +527,63 @@
     </footer>
 
   
+  <!-- MODAL: Quiz Time mode / subject / unit selector -->
   <!-- ============================================================== -->
-  <!-- MODAL: Practice with Fun Mode & Subject Selector (Feature 3) -->
-  <!-- ============================================================== -->
-  <div class="modal-backdrop" id="practiceSelectorModal" style="display: none;" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="practiceSelectorModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="practiceModalTitle">
     <div class="modal-dialog practice-modal-dialog">
       <div class="modal-header">
-        <h4 class="modal-dialog-title"><i class="fa-solid fa-gamepad"></i> Practice with Fun</h4>
+        <h4 class="modal-dialog-title" id="practiceModalTitle"><i class="fa-solid fa-gamepad"></i> Quiz Time</h4>
         <button type="button" class="modal-close-btn" id="closePracticeModalBtn" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
         <!-- Step 1: Mode Selection -->
         <div id="practiceStepMode">
-          <h5 class="practice-step-title">Choose your practice mode</h5>
-          <p class="practice-step-sub">Select how you want to revise today's syllabus.</p>
+          <h5 class="practice-step-title">Choose how you want to revise</h5>
+          <p class="practice-step-sub">You&rsquo;ll pick a subject and a unit next.</p>
 
           <div class="practice-modes-grid" id="practiceModesGrid">
-            <!-- Mode 1: MCQs or Quick Test -->
             <div class="practice-mode-card" id="modeCardQuiz" role="button" tabindex="0">
               <div class="practice-mode-icon"><i class="fa-solid fa-circle-question"></i></div>
-              <h6 class="practice-mode-name" id="modeCardQuizTitle">Practice MCQs &amp; Quick Questions</h6>
-              <p class="practice-mode-desc" id="modeCardQuizDesc">Test your speed with objective questions, fill in the blanks, and instant feedback.</p>
+              <h6 class="practice-mode-name" id="modeCardQuizTitle">Quiz Mode</h6>
+              <p class="practice-mode-desc" id="modeCardQuizDesc">MCQs, fill in the blanks and instant feedback to test your recall.</p>
             </div>
 
-            <!-- Mode 2: Flashcards -->
             <div class="practice-mode-card" id="modeCardFlashcards" role="button" tabindex="0">
               <div class="practice-mode-icon"><i class="fa-solid fa-layer-group"></i></div>
-              <h6 class="practice-mode-name">View Flashcards</h6>
+              <h6 class="practice-mode-name">Revise with Flash Cards</h6>
               <p class="practice-mode-desc">High-yield revision cards covering definitions, formulas, and recurring exam patterns.</p>
             </div>
           </div>
         </div>
 
-        <!-- Step 2: Subject Selection (Shown after picking mode) -->
+        <!-- Step 2: Subject Selection -->
         <div id="practiceStepSubject" style="display: none;">
           <div class="practice-subject-picker-header">
-            <h5 class="practice-step-title">Please select the subject you want to master</h5>
+            <h5 class="practice-step-title">Pick a subject</h5>
             <button type="button" class="btn-change-mode" id="backToModeBtn">
-              <i class="fa-solid fa-arrow-left"></i> <span>Change Mode</span>
+              <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
             </button>
           </div>
-          <p class="practice-step-sub" id="practiceSelectedModeLabel">Mode: MCQs &amp; Quick Questions</p>
+          <p class="practice-step-sub" id="practiceSelectedModeLabel">Mode: Quiz Mode</p>
 
-          <div class="practice-subjects-list" id="practiceSubjectsList">
-            <!-- Dynamically populated: 7 subjects + Mixed -->
+          <div class="practice-subjects-list" id="practiceSubjectsList"></div>
+        </div>
+
+        <!-- Step 3: Unit Selection -->
+        <div id="practiceStepUnit" style="display: none;">
+          <div class="practice-subject-picker-header">
+            <h5 class="practice-step-title" id="practiceUnitStepTitle">Choose a unit</h5>
+            <button type="button" class="btn-change-mode" id="backToSubjectBtn">
+              <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+            </button>
           </div>
+          <p class="practice-step-sub" id="practiceSelectedSubjectLabel"></p>
+
+          <div class="practice-units-list" id="practiceUnitsList" role="radiogroup" aria-label="Choose a unit"></div>
+
+          <button type="button" class="btn-change-mode practice-change-mode" id="changeModeFromUnitsBtn">
+            <i class="fa-solid fa-repeat"></i> <span>Change Mode</span>
+          </button>
         </div>
       </div>
     </div>
@@ -588,7 +592,7 @@
   </main>
 
   <!-- Floating Gemini AI Button -->
-  <button id="floatingGeminiBtn" class="floating-gemini-btn" type="button" title="Ask Gemini AI Assistant" aria-label="Open Gemini AI Assistant">
+  <button id="floatingGeminiBtn" class="floating-gemini-btn" type="button" title="Open AI Study Assistant" aria-label="Open AI Study Assistant">
     <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
       <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
     </svg>
@@ -603,9 +607,8 @@
       <div class="modal-header">
         <div class="modal-header-info">
           <span class="modal-badge" id="modalSubjectBadge">COA</span>
-          <span class="modal-badge secondary" id="modalPartBadge">Part A &bull; 2 Marks</span>
+          <span class="modal-badge secondary" id="modalPartBadge">2 Marks</span>
           <span class="modal-badge tertiary" id="modalUnitBadge">Unit 1</span>
-          <span class="modal-badge quaternary" id="modalSemesterBadge" style="display:none;">Printed: Sem IV paper</span>
         </div>
         <button type="button" class="modal-close-btn" id="closeQuestionModalBtn" aria-label="Close">&times;</button>
       </div>
@@ -613,31 +616,35 @@
       <div class="modal-body">
         <h3 class="modal-question-text" id="modalQuestionTitle">Question Text</h3>
 
-        <div class="modal-details-grid">
-          <div class="detail-card">
-            <span class="detail-title">Years Appeared</span>
-            <div class="detail-val" id="modalYearsAppeared">2024, 2022, 2020</div>
+        <div class="modal-info-panel">
+          <h4 class="modal-info-heading"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Info</h4>
+          <div class="modal-details-grid">
+            <div class="detail-card">
+              <span class="detail-title">Years Appeared</span>
+              <div class="detail-val" id="modalYearsAppeared"></div>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Recurrence Record</span>
+              <div class="detail-val" id="modalRecurrence"></div>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Original Paper</span>
+              <div class="detail-val" id="modalPaperName"></div>
+              <a id="modalPaperInlineLink" href="#" target="_blank" rel="noopener noreferrer" class="detail-link">Open paper in Drive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="detail-card">
+              <span class="detail-title">Course Outcome (if mapped)</span>
+              <div class="detail-val" id="modalOutcome"></div>
+            </div>
           </div>
-          <div class="detail-card">
-            <span class="detail-title">Recurrence Record</span>
-            <div class="detail-val" id="modalRecurrence">Repeated 3 times</div>
-          </div>
-          <div class="detail-card">
-            <span class="detail-title">Original Paper in Drive</span>
-            <div class="detail-val" id="modalPaperName">Jan 2024 reg.pdf (Page 1)</div>
-          </div>
-          <div class="detail-card">
-            <span class="detail-title">Exam Outcome</span>
-            <div class="detail-val" id="modalOutcome">Course Outcome 1</div>
-          </div>
-        </div>
 
-        <div class="modal-tip-box" id="modalTipContainer">
-          <div class="tip-header">
-            <i class="fa-solid fa-lightbulb"></i>
-            <span class="tip-label">Exam Tip</span>
+          <div class="modal-tip-box" id="modalTipContainer">
+            <div class="tip-header">
+              <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+              <span class="tip-label">What to write</span>
+            </div>
+            <p class="tip-content" id="modalTipText"></p>
           </div>
-          <p class="tip-content" id="modalTipText">Tip: Provide the memory lookup equation EA = A vs EA = [A] for full marks.</p>
         </div>
 
         <div class="modal-actions-bar">
@@ -645,6 +652,10 @@
             <i class="fa-brands fa-google-drive"></i>
             <span>Open Original Paper in Google Drive</span>
           </a>
+          <button type="button" class="btn-action-secondary" id="modalSolveAiBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Solve with AI</span>
+          </button>
         </div>
       </div>
     </div>
@@ -662,13 +673,13 @@
       <div class="modal-body">
         <div class="guideline-soft-banner">
           <p class="guideline-soft-lead">
-            Please click "Continue" to proceed — don't step back!
+            Next, we’ll open WhatsApp so you can send your file to Amaan.
           </p>
           <p class="guideline-soft-sub">
             This connects you directly with Amaan on WhatsApp so you can easily send your question papers or notes. There are no complicated forms or file uploads on the site.
           </p>
           <p class="guideline-soft-note">
-            <i class="fa-brands fa-whatsapp"></i> Click <strong>Continue</strong> to select your subject and chapter, and send directly on WhatsApp!
+            <i class="fa-brands fa-whatsapp"></i> Tap <strong>Continue</strong> to select your subject and chapter, then send directly on WhatsApp.
           </p>
         </div>
       </div>
@@ -719,12 +730,12 @@
             <div class="form-group">
               <label for="uploadChapterSelect" class="form-label">Chapter / Unit *</label>
               <select id="uploadChapterSelect" class="form-select" required>
+                <option value="All">All Units</option>
                 <option value="1">Unit 1</option>
                 <option value="2">Unit 2</option>
                 <option value="3">Unit 3</option>
                 <option value="4">Unit 4</option>
                 <option value="5">Unit 5</option>
-                <option value="All">All Units</option>
               </select>
             </div>
           </div>
@@ -756,67 +767,9 @@
   </div>
 
   <!-- ============================================================== -->
-  <!-- MODAL: Admin Portal Modal -->
+  <!-- MODAL: Full-screen AI Study Assistant -->
   <!-- ============================================================== -->
-  <div class="modal-backdrop" id="adminModal" style="display: none;" role="dialog" aria-modal="true">
-    <div class="modal-dialog large-dialog">
-      <div class="modal-header">
-        <h4 class="modal-dialog-title"><i class="fa-solid fa-shield-halved"></i> Editor View</h4>
-        <button type="button" class="modal-close-btn" id="closeAdminModalBtn" aria-label="Close">&times;</button>
-      </div>
-
-      <!-- Admin Login Form (Shown when locked) -->
-      <div id="adminLoginFormContainer" class="modal-body">
-        <p class="admin-login-notice">This section contains administrative controls and backend management processes, strictly restricted to the admin.</p>
-        <form id="adminLoginForm" class="admin-form">
-          <div class="form-group">
-            <label for="adminPassword" class="form-label">Password</label>
-            <input type="password" id="adminPassword" class="form-input" required autocomplete="current-password" placeholder="Enter Password">
-          </div>
-          <div class="admin-form-actions">
-            <button type="submit" class="btn-action-primary">Unlock Editor View</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Admin Dashboard View (Shown when unlocked) -->
-      <div id="adminDashboardContainer" class="modal-body" style="display: none;">
-        <div class="admin-top-stats">
-          <div class="admin-stat-card">
-            <span class="stat-num" id="adminBankQuestions">0</span>
-            <span class="stat-lbl">Questions in Bank</span>
-          </div>
-          <div class="admin-stat-card">
-            <span class="stat-num" id="adminBankPapers">0</span>
-            <span class="stat-lbl">Unique Papers Parsed</span>
-          </div>
-          <div class="admin-stat-card">
-            <span class="stat-num" id="adminBankFlagged">0</span>
-            <span class="stat-lbl">Papers Needing a Check</span>
-          </div>
-        </div>
-
-        <div class="moderation-section">
-          <h5 class="moderation-title">Editor Notes</h5>
-          <div class="moderation-table-wrapper" id="moderationTableWrapper">
-            <p class="empty-queue-msg">Open the full editor view for the paper-by-paper audit.</p>
-          </div>
-        </div>
-
-        <div class="admin-footer-bar">
-          <a href="admin.html" class="btn-action-primary">
-            <i class="fa-solid fa-table-list"></i> Open Full Editor View
-          </a>
-          <button type="button" id="adminLogoutBtn" class="btn-secondary-flat">Log Out</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================== -->
-  <!-- MODAL: Full Gemini AI Assistant App -->
-  <!-- ============================================================== -->
-  <div class="modal-backdrop" id="geminiModal" style="display: none;" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="geminiModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="geminiCurrentChatTitle">
     <div class="modal-dialog gemini-dialog gemini-app-layout">
       
       <!-- Left Sidebar: Chat History & New Chat -->
@@ -863,13 +816,16 @@
               <svg class="gemini-title-icon" viewBox="0 0 24 24" width="20" height="20" fill="#2563eb">
                 <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
               </svg>
-              <span id="geminiCurrentChatTitle">Gemini Study Assistant</span>
+              <span id="geminiCurrentChatTitle">AI Study Assistant</span>
             </h4>
-            <span class="gemini-live-pill"><i class="fa-solid fa-circle"></i> Gemini 2.5 Flash</span>
+            <span class="gemini-live-pill" id="geminiLivePill" title="Answers are generated by a server-side AI model">
+              <i class="fa-solid fa-circle" aria-hidden="true"></i>
+              <span id="geminiModelLabel">AI Assistant</span>
+            </span>
           </div>
           <div class="modal-header-actions">
             <!-- Dedicated Clean Prominent Close Button -->
-            <button type="button" class="modal-close-btn btn-gemini-close" id="closeGeminiModalBtn" aria-label="Close Gemini Assistant" title="Close AI Assistant">&times;</button>
+            <button type="button" class="modal-close-btn btn-gemini-close" id="closeGeminiModalBtn" aria-label="Close AI Study Assistant" title="Close AI Assistant">&times;</button>
           </div>
         </div>
 
@@ -891,14 +847,14 @@
               </svg>
             </div>
             <h2 class="gemini-greet-title">
-              <span class="gemini-shimmer-text">Hello, Engineer</span>
+              <span class="gemini-shimmer-text">Where do you want to solve this?</span>
             </h2>
-            <p class="gemini-greet-sub">What concept, PYQ problem, or exam strategy would you like to explore today?</p>
+            <p class="gemini-greet-sub">Ask about a concept, a PYQ, or an exam strategy. Attach a question paper photo with <strong>+</strong> if you want me to read it.</p>
             
             <!-- Suggestions Dropdown & Small Rectangular Scroll Window -->
             <div class="gemini-suggestions-container" id="geminiSuggestionsContainer">
-              <button type="button" class="btn-toggle-suggestions" id="toggleSuggestionsBtn" aria-expanded="true" title="Toggle prompt suggestions">
-                <span class="suggestions-btn-text"><i class="fa-regular fa-lightbulb"></i> <span>View Suggestions</span></span>
+              <button type="button" class="btn-toggle-suggestions" id="toggleSuggestionsBtn" aria-expanded="true" title="Show or hide prompt suggestions">
+                <span class="suggestions-btn-text"><i class="fa-regular fa-lightbulb"></i> <span>View suggestions</span></span>
                 <i class="fa-solid fa-chevron-down toggle-chevron" id="suggestionsChevron"></i>
               </button>
               
@@ -935,7 +891,7 @@
                   <button type="button" class="gemini-prompt-card" data-query="Booth's Signed Binary Multiplication Algorithm flowchart and step-by-step example in COA">
                     <div class="card-icon coa"><i class="fa-solid fa-sitemap"></i></div>
                     <div class="card-text">
-                      <strong>Booth's Algorithm</strong>
+                      <strong>Booth&rsquo;s Algorithm</strong>
                       <span>Signed binary multiplication tables</span>
                     </div>
                   </button>
@@ -964,34 +920,34 @@
                 <img id="geminiPreviewImg" src="" alt="Uploaded question paper or diagram">
                 <button type="button" id="removeGeminiImgBtn" class="btn-remove-preview" title="Remove image">&times;</button>
               </div>
-              <span class="preview-note">Image attached for Gemini analysis</span>
+              <span class="preview-note">Image attached for AI analysis</span>
             </div>
 
             <form id="geminiQueryForm" class="gemini-modern-input-bar">
               <!-- Hidden File Input for Local Files / Photo -->
               <input type="file" id="geminiCameraInput" accept="image/*,.pdf,.doc,.docx,.txt" style="display: none;">
               
-              <button type="button" class="gemini-tool-btn" id="geminiCameraBtn" title="Upload question paper, notes, or photo from files">
+              <button type="button" class="gemini-tool-btn" id="geminiCameraBtn" title="Attach a question paper, notes or photo" aria-label="Attach a file">
                 <i class="fa-solid fa-plus"></i>
               </button>
               
-              <button type="button" class="gemini-tool-btn" id="geminiMicBtn" title="Live Voice Input (Speak your question)">
+              <button type="button" class="gemini-tool-btn" id="geminiMicBtn" title="Speak your question" aria-label="Speak your question">
                 <i class="fa-solid fa-microphone"></i>
               </button>
 
               <!-- Animated Rotating Input Field Wrap -->
               <div class="gemini-input-field-wrap">
-                <input type="text" id="geminiQueryInput" class="gemini-text-field" required autocomplete="off" autocorrect="off">
+                <input type="text" id="geminiQueryInput" class="gemini-text-field" required autocomplete="off" autocorrect="off" aria-label="Ask the AI Study Assistant">
                 <div class="animated-placeholder-track" id="animatedPlaceholderTrack">
                   <span class="animated-placeholder-text" id="animatedPlaceholderText">Ask anything about DM...</span>
                 </div>
               </div>
 
-              <button type="submit" class="gemini-submit-btn" id="geminiSendBtn" title="Send Question">
+              <button type="submit" class="gemini-submit-btn" id="geminiSendBtn" title="Send question" aria-label="Send question">
                 <i class="fa-solid fa-arrow-up"></i>
               </button>
             </form>
-            <p class="gemini-legal-caption">Gemini Study Assistant &bull; Comprehensive exam preparation for MGIT CSE Semester III</p>
+            <p class="gemini-legal-caption">AI answers can be wrong or incomplete. Verify important details with your syllabus and class notes.</p>
           </div>
         </div>
       </section>
@@ -1005,11 +961,11 @@
   <div id="tourSpotlight" class="tour-spotlight" style="display: none;"></div>
   <div id="tourTooltip" class="tour-tooltip" style="display: none;" role="dialog" aria-live="polite">
     <div class="tour-tooltip-header">
-      <span class="tour-step-badge" id="tourStepBadge">Step 1 of 3</span>
-      <button type="button" class="tour-close-btn" id="tourSkipBtn" title="Skip Tour">&times;</button>
+      <span class="tour-step-badge" id="tourStepBadge">Step 1 of 5</span>
+      <button type="button" class="tour-close-btn" id="tourSkipBtn" title="Skip tour" aria-label="Skip tour">&times;</button>
     </div>
-    <h4 class="tour-title" id="tourTitle">Google Drive Master Folder</h4>
-    <p class="tour-desc" id="tourDesc">Click here to view the complete Google Drive repository...</p>
+    <h4 class="tour-title" id="tourTitle">Your full Drive folder</h4>
+    <p class="tour-desc" id="tourDesc">Tap here to open every verified paper and note folder in Google Drive.</p>
     <div class="tour-footer">
       <button type="button" class="btn-tour-secondary" id="tourPrevBtn" disabled>
         <i class="fa-solid fa-chevron-left"></i> <span>Previous</span>
@@ -1044,7 +1000,7 @@
             <i class="fa-solid fa-fire"></i> <span id="sessionStreakCount">1</span>
           </span>
           <span class="session-counter-pill" id="sessionCounterPill">
-            <span id="sessionCurrentCount">0</span> / <span id="sessionTotalCount">32</span>
+            Question <span id="sessionCurrentCount">1</span> of <span id="sessionTotalCount">32</span>
           </span>
         </div>
       </div>
@@ -1102,7 +1058,7 @@
           <div class="q-feedback-banner" id="sessionFeedbackBanner" style="display: none;">
             <div class="feedback-status-row">
               <span class="feedback-icon" id="feedbackIcon"><i class="fa-solid fa-check"></i></span>
-              <strong class="feedback-title" id="feedbackTitle">Brilliant! That's correct.</strong>
+              <strong class="feedback-title" id="feedbackTitle">Brilliant! That&rsquo;s correct.</strong>
             </div>
             <div class="feedback-explanation" id="feedbackExplanation">
               Explanation text explaining why the answer is correct...
@@ -1117,7 +1073,7 @@
       <!-- VIEW B: 3D FLASHCARD VIEW -->
       <div id="sessionFlashcardView" class="session-flashcard-view" style="display: none;">
         <div class="flashcard-scene">
-          <div class="flashcard-card" id="sessionFlashcardCard" role="button" tabindex="0" aria-pressed="false" aria-label="Flashcard. Tap or press Space to flip." title="Click or press Space to flip">
+          <div class="flashcard-card" id="sessionFlashcardCard" role="button" tabindex="0" aria-pressed="false" aria-label="Flashcard. Tap or press Space to flip." title="Tap or press Space to flip">
             <!-- Front Face -->
             <div class="flashcard-face flashcard-front">
               <div class="fc-card-header">
@@ -1130,7 +1086,7 @@
                 <h4 class="fc-prompt-text" id="fcFrontText">What four fundamental axioms define a mathematical Group?</h4>
               </div>
               <div class="fc-card-footer">
-                <span class="fc-click-cue"><i class="fa-solid fa-hand-pointer"></i> Tap card or press <strong>Space</strong> to reveal answer</span>
+                <span class="fc-click-cue"><i class="fa-solid fa-hand-pointer"></i> Tap card to reveal answer<span class="fc-keyboard-hint"> or press <strong>Space</strong></span></span>
               </div>
             </div>
 
@@ -1144,7 +1100,7 @@
                 <div class="fc-answer-text" id="fcBackText">Answer explanation appears here...</div>
               </div>
               <div class="fc-card-footer">
-                <span class="fc-click-cue"><i class="fa-solid fa-rotate"></i> Tap card to flip back</span>
+                <span class="fc-click-cue fc-swipe-cue"><i class="fa-solid fa-arrows-left-right"></i> Swipe left or right to move between cards</span>
               </div>
             </div>
           </div>
@@ -1180,7 +1136,7 @@
           <div class="results-celebrate-header">
             <div class="results-trophy-icon"><i class="fa-solid fa-trophy"></i></div>
             <h3 class="results-title" id="resultsTitle">Session Mastered!</h3>
-            <p class="results-sub" id="resultsSub">You've successfully conquered all questions in this session.</p>
+            <p class="results-sub" id="resultsSub">You&rsquo;ve successfully conquered all questions in this session.</p>
           </div>
 
           <div class="results-stats-grid">
@@ -1264,6 +1220,9 @@
         <div id="progressSubjectBars" style="display: flex; flex-direction: column; gap: 12px;">
           <!-- Subject progress bars rendered dynamically -->
         </div>
+        <p id="progressEmptyState" class="progress-empty-state">
+          No practice yet — finish a quiz or flip a card to start tracking.
+        </p>
       </div>
     </div>
   </div>
@@ -1279,6 +1238,7 @@
   <script src="data/mid2-practice.js"></script>
   <script src="data/sem-practice.js"></script>
   <script src="data/mid1-practice.js"></script>
+  <script src="popup-manager.js"></script>
   <script src="practice-runner.js"></script>
   <script src="pwa-install.js"></script>
   <script src="app.js"></script>
