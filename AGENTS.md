@@ -33,7 +33,7 @@
 - Footer must include:
   - Exact attribution: **Made by Amaan**
   - Feedback link: **Got an idea? Help improve it** (`https://wa.me/916303191696`)
-  - Unobtrusive **Login as Admin** entry point.
+  - No public admin entry point. Contributions are reviewed out-of-band by the owner.
 
 ---
 

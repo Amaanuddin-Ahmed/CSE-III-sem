@@ -63,13 +63,31 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const apiKey = process.env.GEMINI_API_KEY || Buffer.from('QVEuQWI4Uk42Smtaa1Y5NnhVZ1FoMzd5RGFUb01tSnBsTG1DRWUwV245ZWZldEtlNnM2T1E=', 'base64').toString('utf8');
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return res.status(503).json({
       error: 'AI_NOT_CONFIGURED',
-      message: 'The AI assistant is not configured on this deployment.',
+      message: 'The AI assistant is not configured on this deployment. Ask the owner to set GEMINI_API_KEY.',
     });
   }
+
+  // Small best-effort rate limit; serverless instances keep their own counter.
+  const ip = String(req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown')
+    .split(',')[0]
+    .trim();
+  const now = Date.now();
+  const WINDOW_MS = 60_000;
+  const MAX_REQUESTS = 12;
+  if (!globalThis.__mgitAiHits) globalThis.__mgitAiHits = new Map();
+  const hits = (globalThis.__mgitAiHits.get(ip) || []).filter(t => now - t < WINDOW_MS);
+  if (hits.length >= MAX_REQUESTS) {
+    return res.status(429).json({
+      error: 'AI_RATE_LIMITED',
+      message: 'You are asking very fast. Please wait a minute and try again.',
+    });
+  }
+  hits.push(now);
+  globalThis.__mgitAiHits.set(ip, hits);
 
   let body = req.body;
   if (typeof body === 'string') {
@@ -115,42 +133,62 @@ export default async function handler(req, res) {
   const context = subject ? `The student selected this context: ${subject}.\n` : '';
   const systemInstruction = `${SYSTEM_INSTRUCTION}\n\n${context}`;
 
-  const models = ['gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
+  // Current, publicly available Gemini text models. Earlier ids in this file
+  // did not exist, which is why every request failed.
+  const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-flash-lite', 'gemini-flash-latest'];
   let lastStatus = 502;
 
   for (const model of models) {
-    try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-goog-api-key': apiKey,
-          },
-          body: JSON.stringify({
-            contents,
-            systemInstruction: { parts: [{ text: systemInstruction }] },
-            generationConfig: { temperature: 0.15, maxOutputTokens: 8192, topP: 0.8 },
-          }),
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-goog-api-key': apiKey,
+            },
+            body: JSON.stringify({
+              contents,
+              systemInstruction: { parts: [{ text: systemInstruction }] },
+              generationConfig: { temperature: 0.15, maxOutputTokens: 8192, topP: 0.8 },
+            }),
+          }
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          const text = data.candidates?.[0]?.content?.parts
+            ?.map((p) => p.text || '')
+            .join('')
+            .trim();
+          if (text) return res.status(200).json({ success: true, text, model });
+          break; // Empty/safety-blocked answer: try the next model.
         }
-      );
 
-      if (response.ok) {
-        const data = await response.json();
-        const text = data.candidates?.[0]?.content?.parts
-          ?.map((p) => p.text || '')
-          .join('')
-          .trim();
-        if (text) return res.status(200).json({ success: true, text, model });
-        continue;
+        lastStatus = response.status;
+        // Bad API key / permission errors will not improve with another model.
+        if (response.status === 401 || response.status === 403) {
+          return res.status(503).json({
+            error: 'AI_AUTH_ERROR',
+            message: 'The AI assistant is temporarily unavailable. The owner needs to check the server key.',
+          });
+        }
+        // Retry once on an upstream 5xx before moving to the next model.
+        if (response.status >= 500 && attempt === 0) {
+          await new Promise((resolve) => setTimeout(resolve, 350));
+          continue;
+        }
+        break;
+      } catch (err) {
+        console.error('Gemini upstream request failed', err?.name || 'Unknown error');
+        if (attempt === 0) {
+          await new Promise((resolve) => setTimeout(resolve, 350));
+          continue;
+        }
+        break;
       }
-
-      lastStatus = response.status;
-      // Bad API key / permission errors will not improve with another model.
-      if (response.status === 401 || response.status === 403) break;
-    } catch (err) {
-      console.error('Gemini upstream request failed', err?.name || 'Unknown error');
     }
   }
 
@@ -158,7 +196,7 @@ export default async function handler(req, res) {
   return res.status(quota ? 429 : 502).json({
     error: quota ? 'AI_QUOTA_EXCEEDED' : 'AI_UPSTREAM_ERROR',
     message: quota
-      ? 'The AI assistant has reached its request limit for now. Please try again later.'
+      ? 'The AI assistant has reached its request limit for now. Please try again in a minute.'
       : 'The AI assistant could not generate an answer right now. Please try again.',
   });
 }

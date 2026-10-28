@@ -52,7 +52,7 @@ The platform strictly covers all **7 syllabus subjects**, each organized with de
 
 ### 5. Flexible Multi-Format Contributions
 - Students can contribute study notes, question papers, and assignment solutions supporting **PDF, Word (.docx), PowerPoint (.pptx), and Images**.
-- Removed roll number requirement to ensure privacy and frictionless contribution. All submissions enter a secure moderation queue.
+- No roll number is collected, keeping contributions private and frictionless. Every submission is reviewed by the maintainer before it is added to the shared Drive folders.
 
 ### 7. Direct Feedback & Attribution
 - Dedicated feedback division connecting directly to WhatsApp: [Got an Idea to Improve ? Let me know](https://wa.me/916303191696).
@@ -66,7 +66,7 @@ The platform strictly covers all **7 syllabus subjects**, each organized with de
 CSE-III-sem/
 ├── index.html                   # Main single-page application interface
 ├── style.css                    # Formal academic light stylesheet
-├── app.js                       # Interactive UI, filters, modal logic & admin queue
+├── app.js                       # Interactive UI, filters, modal logic & practice engine
 ├── pyq-data.js                  # Authentic questions database, notes & Drive metadata
 ├── MGIT_PYQ_HUB_MASTER_SPEC.md  # Master product & technical specification
 ├── README.md                    # Project documentation
@@ -81,7 +81,6 @@ CSE-III-sem/
 │   ├── DRIVE_SYNC.md
 │   ├── GEMINI_AI.md
 │   ├── SECURITY.md
-│   ├── ADMIN_GUIDE.md
 │   ├── BACKUP_RESTORE.md
 │   ├── DEPLOYMENT.md
 │   ├── ANALYTICS.md
@@ -112,8 +111,8 @@ CSE-III-sem/
 ---
 
 ## 🔒 Security & Privacy Notice
-- Never commit private API keys, administrator credentials, or `.env` secrets into Git.
-- Student file uploads and database exports are held in private storage and strictly quarantined prior to administrative approval.
+- Never commit private API keys or `.env` secrets into Git. The AI key lives only in the server environment.
+- Contributions are reviewed privately before publication; the public site has no sign-in, no admin dashboard and no visitor accounts.
 
 ---
 
