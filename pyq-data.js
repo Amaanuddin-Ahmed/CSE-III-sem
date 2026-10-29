@@ -20,7 +20,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "pyqsUrl": "https://drive.google.com/drive/folders/1R2m69P_aU-IM6wEwIsbwGjKisdk5_xwY",
     "paperCount": 18,
-    "notesCount": 0,
+    "notesCount": 5,
     "chapters": {
       "1": "Mathematical Logic, Truth Tables, Normal Forms (PCNF, PDNF) & Predicates",
       "2": "Set Theory, Relations, Equivalence, Hasse Diagrams & Lattices",
@@ -44,7 +44,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "pyqsUrl": "https://drive.google.com/drive/folders/1r6_ozXzyg84zHCji99-cAujgoie1S7IS",
     "paperCount": 17,
-    "notesCount": 2,
+    "notesCount": 5,
     "chapters": {
       "1": "Basic Structure of Computers, Machine Instructions & Addressing Modes",
       "2": "Central Processing Unit, ALU Design & Microprogrammed Control Unit",
@@ -140,7 +140,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
     "pyqsUrl": "https://drive.google.com/drive/folders/1FCUxrLxzXfxVwUAoVCZyERUemeR46S15",
     "paperCount": 3,
-    "notesCount": 4,
+    "notesCount": 5,
     "chapters": {
       "1": "Ecosystems, Ecological Pyramids, Food Chains & Biodiversity",
       "2": "Natural Resources: Water, Mineral, Forest & Energy Resources",
@@ -164,7 +164,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1Ac3gEX38khTx85EGXGqoXxUPjwkJKcOx",
     "pyqsUrl": "https://drive.google.com/drive/folders/1hP_hR8JKoRgJDOuDXcZne5PAzME5QDji",
     "paperCount": 0,
-    "notesCount": 0,
+    "notesCount": 1,
     "chapters": {
       "1": "Introduction to Innovation, Design Thinking & Creative Problem Solving",
       "2": "Entrepreneurial Opportunity Recognition & Market Feasibility",
@@ -246,6 +246,7 @@ const NOTES_DATA = [
     "id": "NOTE-DBMS-01",
     "subjectId": "DBMS",
     "chapter": 1,
+    "chapters": [1, 2, 3],
     "title": "DBMS Comprehensive Lecture Notes: Units 1, 2 & 3",
     "fileName": "DBMS NOTES-Unit1,2,3.pdf",
     "fileSize": "27.4 MB",
@@ -406,6 +407,117 @@ const NOTES_DATA = [
     "driveFileId": "1EgqCprgpm3I7MvxB8v_77VjIJspxKuWJ",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
     "description": "Visual classroom presentation slides summarizing fundamental OOP principles, classes, and object models."
+  },
+  {
+    "id": "NOTE-DM-01",
+    "subjectId": "DM",
+    "chapter": 1,
+    "title": "DM Unit 1: Handouts",
+    "fileName": "Abhi DM Unit 1 - Handouts.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "1bdOUCiC4yUapvsd4fBqGJusKUl4M2n-Z",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 1 handout shared in the DM Drive folder."
+  },
+  {
+    "id": "NOTE-DM-02",
+    "subjectId": "DM",
+    "chapter": 2,
+    "title": "DM Unit 2: Handouts",
+    "fileName": "Abhi DM Unit 2 - Handouts.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "1ZHdbUgDqifPgwPmm6iE-5nlY8iOFmAu2",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 2 handout shared in the DM Drive folder."
+  },
+  {
+    "id": "NOTE-DM-03",
+    "subjectId": "DM",
+    "chapter": 3,
+    "title": "DM Unit 3: Algebraic Structures - Handouts",
+    "fileName": "Abhi DM Unit 3 - Algebraic structures - Handouts.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "1usUxP8p0-4Y0EAHhnEyUK6idzrPqgrah",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Algebraic structures handout shared in the DM Drive folder."
+  },
+  {
+    "id": "NOTE-DM-04",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Handouts (MFCS - PC)",
+    "fileName": "Abhi MFCS Unit 4 - PC - Handouts.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "1SAxxdWw1MQFYQC31ashtVmnLogszdznX",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 4 handout shared in the DM Drive folder."
+  },
+  {
+    "id": "NOTE-DM-05",
+    "subjectId": "DM",
+    "chapter": 1,
+    "chapters": [1, 2, 3, 4, 5],
+    "title": "DM Complete Notes (M3)",
+    "fileName": "M3 Entire notes.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "1C1em9BsBBi9HFJ5aoPel1IFc_LUgjwMp",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Complete notes file shared in the DM Drive folder."
+  },
+  {
+    "id": "NOTE-COA-03",
+    "subjectId": "COA",
+    "chapter": 4,
+    "title": "COA Computer Arithmetic (PPT)",
+    "fileName": "3 Chapter-10-Computer Arithmetic.ppt",
+    "fileSize": "PPT",
+    "driveFileId": "1MOwPBczKzLVCuTqwaobf5P_L7B34_Uow",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Computer arithmetic presentation shared in the COA Drive folder."
+  },
+  {
+    "id": "NOTE-COA-04",
+    "subjectId": "COA",
+    "chapter": 5,
+    "title": "COA Memory Organization (PPT)",
+    "fileName": "1 Memory Organization.ppt",
+    "fileSize": "PPT",
+    "driveFileId": "1CyCCwjfftiIr6tXtQcrLL_RDzFC6OZjU",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Memory organization presentation shared in the COA Drive folder."
+  },
+  {
+    "id": "NOTE-COA-05",
+    "subjectId": "COA",
+    "chapter": 5,
+    "title": "COA I/O Organization (PPT)",
+    "fileName": "2 IV-IO-Organization.ppt",
+    "fileSize": "PPT",
+    "driveFileId": "1PqxyhjlyybwgmKsQC3PKp2JcOMpuYnwH",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Input-output organization presentation shared in the COA Drive folder."
+  },
+  {
+    "id": "NOTE-ES-05",
+    "subjectId": "ES",
+    "chapter": 5,
+    "title": "ES Unit 5: Notes",
+    "fileName": "Unit-5 ES notes.pdf",
+    "fileSize": "PDF",
+    "driveFileId": "11eCeXOn-sCT0maQlUL824fU2h3CUUB1v",
+    "folderUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
+    "description": "Unit 5 notes shared in the ES Drive folder."
+  },
+  {
+    "id": "NOTE-IE-01",
+    "subjectId": "IE",
+    "chapter": 5,
+    "title": "I&E Unit 5: Notes",
+    "fileName": "Unit 5.docx",
+    "fileSize": "DOCX",
+    "driveFileId": "1pO5fXmb2X983Bb_eOtThPVe37iIb2594",
+    "folderUrl": "https://drive.google.com/drive/folders/1Ac3gEX38khTx85EGXGqoXxUPjwkJKcOx",
+    "description": "Unit 5 notes shared in the I&E Drive folder."
   }
 ];
 

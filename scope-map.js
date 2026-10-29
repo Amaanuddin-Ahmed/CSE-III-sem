@@ -122,6 +122,7 @@ if (typeof window !== 'undefined') {
   window.SCOPE_MAP = SCOPE_MAP.unit3Splits;
   window.EXAM_CONFIG_FULL = EXAM_CONFIG;
   window.SCOPE_MAP_FULL = SCOPE_MAP;
+  window.getNoteUnits = getNoteUnits;
   window.isNoteInScope = isNoteInScope;
 }
 
@@ -201,13 +202,21 @@ function matchUnit3Mid2(item) {
  * covers both halves of the syllabus, so it must stay visible in Mid-1 and
  * Mid-2 instead of being pushed through the Unit 3 keyword split.
  */
+function getNoteUnits(note) {
+  if (!note) return [];
+  const raw = Array.isArray(note.chapters) && note.chapters.length
+    ? note.chapters
+    : [note.chapter !== undefined ? note.chapter : note.unit];
+  return Array.from(new Set(raw.map(Number).filter(n => Number.isFinite(n) && n > 0))).sort((a, b) => a - b);
+}
+
 function isNoteInScope(note, examId) {
   if (!note || !examId || examId === 'sem') return true;
-  const unit = Number(note.chapter !== undefined ? note.chapter : note.unit);
-  if (isNaN(unit) || unit <= 0) return true;
+  const units = getNoteUnits(note);
+  if (units.length === 0) return true;
   const exam = EXAM_CONFIG.exams[examId];
   if (!exam || !Array.isArray(exam.units)) return true;
-  return exam.units.includes(unit);
+  return units.some(unit => exam.units.includes(unit));
 }
 
 /**

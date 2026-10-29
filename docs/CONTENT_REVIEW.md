@@ -1,8 +1,8 @@
 # CONTENT REVIEW — scope, gaps and data flags
 
-**Status:** review only. No question, note, paper or Drive link in `pyq-data.js` or
-`data/*-practice.js` was changed. This file records what the app can and cannot claim
-honestly for **MR-25, CSE Semester III**.
+**Status:** updated after the correction pass. No question, paper or practice row was
+changed; the verified Drive notes for DM, COA, ES, DBMS and I&E were added or re-scoped.
+This file records what the app can and cannot claim honestly for **MR-25, CSE Semester III**.
 
 Scope rules used by the app:
 
@@ -23,26 +23,31 @@ Counts below are from the shipped data, filtered with `isItemInScope` and
 
 | Subject | Mid-1 PYQs | Mid-2 PYQs | Semester End PYQs | Mid-1 notes | Mid-2 notes | Sem notes |
 |---|---:|---:|---:|---:|---:|---:|
-| DM | 209 | 198 | 471 | 0 | 0 | 0 |
-| COA | 193 | 195 | 477 | 2 | 0 | 2 |
+| DM | 209 | 198 | 471 | 4 | 3 | 5 |
+| COA | 193 | 195 | 477 | 2 | 3 | 5 |
 | OOPJ | 250 | 274 | 574 | 8 | 9 | 14 |
-| DBMS | 159 | 197 | 363 | 1 | 0 | 1 |
+| DBMS | 159 | 197 | 363 | 1 | 1 | 1 |
 | SE | 191 | 181 | 379 | 0 | 0 | 0 |
-| ES | 24 | 0 | 24 | 3 | 2 | 4 |
-| IE | 0 | 0 | 0 | 0 | 0 | 0 |
-| **Total** | **1,026** | **1,045** | **2,288** | **14** | **11** | **21** |
+| ES | 24 | 0 | 24 | 3 | 3 | 5 |
+| IE | 0 | 0 | 0 | 0 | 1 | 1 |
+| **Total** | **1,026** | **1,045** | **2,288** | **18** | **20** | **31** |
 
 Known gaps:
 
-- **IE** has no PYQ rows and no notes in the current bank. Its subject screen must keep
-  showing the honest empty states; practice content is the only IE material available.
-- **ES** has 24 PYQs, all in Units 1–2. Mid-2 is empty by scope, not because of a UI bug.
-- **DM, SE and IE** have no notes. **COA** has two notes, both Unit 1. **DBMS** has one
-  note, tagged Unit 1 although its title says “Units 1, 2 & 3”; Mid-2 therefore hides it.
-- **ES notes** are tagged Units 1–4, but the data labels describe ecosystems, natural
-  resources, pollution and global challenges. The MR-25 Unit 3 is biodiversity and
-  biotic resources. The notes are not relabelled because their content has not been
+- **IE** has no PYQ rows. It now has one verified note, `Unit 5.docx`, scoped to Mid-2 and
+  Semester End. Its subject screen must keep showing the honest empty states for Units
+  1–4 and for PYQs; practice content is still the main IE material.
+- **ES** has 24 PYQs, all in Units 1–2. Mid-2 and Semester End now have notes, but there
+  are no additional genuine ES PYQs to add.
+- **DM** now has five notes (Units 1–4 plus a complete-notes file); **COA** has five
+  (Units 1, 4 and 5); **DBMS** has one note covering Units 1–3; **SE** still has no notes.
+- **ES notes** are tagged Units 1–5, but the older data labels describe ecosystems,
+  natural resources, pollution and global challenges. The MR-25 Unit 3 is biodiversity
+  and biotic resources. The notes are not relabelled because their content has not been
   re-verified against MR-25.
+- **COA note mapping** uses the actual MR-25 homes for the three uploaded PPTs:
+  Computer Arithmetic → Unit 4, Memory Organization → Unit 5, I/O Organization → Unit 5.
+  The PYQ chapter tags still follow the older order described in Section 3.
 
 ---
 
@@ -174,8 +179,8 @@ has 38 in the Semester End bank.
    the Unit 3 split.
 2. Manually review the 217 Unit 3 items listed by `classifyUnit3() === null` and add
    `scope: 'mid1'` or `scope: 'mid2'` where known.
-3. Upload the missing notes (DM, SE, IE, COA Units 2–5, DBMS Units 2–5, ES Unit 5) and
-   verify the existing ES/DBMS note labels.
+3. Upload the remaining missing notes (SE Units 1–5, COA Units 2–3, DBMS Units 4–5,
+   IE Units 1–4) and verify the existing ES/DBMS note labels.
 4. Add verified ES Unit 3–5 and IE questions only from real papers.
 5. Expand flashcard decks to 20 per unit only with sourced content.
 6. Confirm whether the DM “groups/subgroups” material is examinable in MR-25 Unit 3.
