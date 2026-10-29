@@ -66,6 +66,7 @@
 
     subjectsSection: document.getElementById('subjectsSection'),
     subjectsGrid: document.getElementById('subjectsGrid'),
+    mobileHeaderHistory: document.getElementById('mobileHeaderHistory'),
     attributionDivision: document.getElementById('attributionDivision'),
 
     // Exam Selector & Scoping Elements
@@ -256,12 +257,8 @@
       // subject view, where they are labelled and scoped by the active exam.
       const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isNoteInScope || window.isNoteInScope(n, examKey))).length;
 
-      // Exam-level unit scope label (same for every subject in this exam).
-      const subjectUnits = examConfig.unitsLabel || 'Units 1 – 5';
-
       card.innerHTML = `
         <div class="subject-card-header-bar">
-          <span class="subject-scope-units-badge"><i class="fa-solid fa-book-bookmark"></i> ${escapeHtml(subjectUnits)}</span>
           <span class="subject-exam-tag">${escapeHtml(examConfig.name)}</span>
         </div>
         <div class="subject-icon-box" style="background-color: ${sub.bgColor}; color: ${sub.accentColor};">
@@ -356,9 +353,7 @@
     el.subjectsSection.style.display = 'none';
     el.subjectDetailSection.style.display = 'block';
     if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'none';
-    if (el.attributionDivision) {
-      el.attributionDivision.style.display = 'none';
-    }
+    updateFooterAttribution();
 
     updateBreadcrumb();
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
@@ -444,6 +439,12 @@
   // and the current view is stored in history.state.
   function appBasePath() {
     return window.location.pathname || '/';
+  }
+
+  function updateFooterAttribution() {
+    if (!el.attributionDivision) return;
+    el.attributionDivision.style.display = 'block';
+    el.attributionDivision.classList.toggle('attribution-compact', state.currentView !== 'home');
   }
 
   function pushAppState(view, extra) {
@@ -638,6 +639,7 @@
     }
 
     applyExamSelection(examId, navigateToSubjects);
+    updateFooterAttribution();
     syncHistoryUi();
   }
 
@@ -676,6 +678,7 @@
       el.topDriveBtn.title = 'Open entire SEM 3 Google Drive folder';
       updateTopDriveBtnLabel();
     }
+    updateFooterAttribution();
     updateBreadcrumb();
     syncHistoryUi();
   }
@@ -749,9 +752,7 @@
     el.subjectsSection.style.display = 'block';
     if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'block';
     if (el.examActiveBanner) el.examActiveBanner.style.display = 'flex';
-    if (el.attributionDivision) {
-      el.attributionDivision.style.display = 'block';
-    }
+    updateFooterAttribution();
 
     updateBreadcrumb();
     requestAnimationFrame(() => {
@@ -776,11 +777,7 @@
       const examConfig = getExamConfig(examKey);
       let opts = `<option value="all">All Units (${escapeHtml(examConfig.name)})</option>`;
       inScopeChapters.forEach(ch => {
-        // Notes cover a complete unit, so the dropdown uses the full unit
-        // title rather than the Mid-1/Mid-2 half-title used by questions.
-        const subject = SUBJECTS_DATA[subId];
-        const title = (subject && subject.chapters && subject.chapters[ch]) || `Unit ${ch}`;
-        opts += `<option value="${ch}">Unit ${ch}: ${escapeHtml(title)}</option>`;
+        opts += `<option value="${ch}">Unit ${ch}</option>`;
       });
       el.notesChapterSelect.innerHTML = opts;
       el.notesChapterSelect.value = state.notesChapterFilter;
@@ -793,7 +790,10 @@
 
     if (state.notesChapterFilter !== 'all') {
       const chNum = parseInt(state.notesChapterFilter, 10);
-      notes = notes.filter(n => n.chapter === chNum);
+      notes = notes.filter(n => {
+        const units = window.getNoteUnits ? window.getNoteUnits(n) : [Number(n.chapter)];
+        return units.includes(chNum);
+      });
     }
 
     if (notes.length === 0) {
@@ -816,6 +816,12 @@
         ? `https://drive.google.com/file/d/${note.driveFileId}/view?usp=sharing`
         : (note.folderUrl || (state.currentSubject ? state.currentSubject.notesUrl : DRIVE_ROOT_URL));
 
+      const units = window.getNoteUnits ? window.getNoteUnits(note) : [Number(note.chapter)];
+      const contiguous = units.length > 1 && units.every((u, i) => u === units[0] + i);
+      const unitLabel = units.length > 1
+        ? (contiguous ? `Units ${units[0]}–${units[units.length - 1]}` : `Units ${units.join(', ')}`)
+        : `Unit ${units[0] || note.chapter}`;
+
       const fn = (note.fileName || '').toLowerCase();
       let iconClass = 'fa-solid fa-file-pdf';
       let iconColor = '#dc2626';
@@ -834,7 +840,7 @@
           <div class="note-meta">
             <span><i class="${iconClass}" style="color: ${iconColor};"></i> ${escapeHtml(note.fileName)}</span> &bull; 
             <span>${escapeHtml(note.fileSize)}</span> &bull; 
-            <span>Unit ${note.chapter}</span>
+            <span>${escapeHtml(unitLabel)}</span>
           </div>
         </div>
         <a href="${fileLink}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
@@ -1144,8 +1150,6 @@
         isExpanded = true;
       }
 
-      const chapterTitle = window.getScopedChapterTitle ? window.getScopedChapterTitle(subId, ch, examKey) : ((sub.chapters && sub.chapters[ch]) ? sub.chapters[ch] : 'Unit ' + ch + ' Syllabus Content');
-
       const card = document.createElement('div');
       card.className = 'chapter-accordion-card' + (isExpanded ? ' open' : '');
       card.id = 'chapterAccordion-' + ch;
@@ -1153,10 +1157,7 @@
       card.innerHTML = `
         <div class="chapter-accordion-header" role="button" tabindex="0" data-chapter="${ch}" aria-expanded="${isExpanded}">
           <div class="ch-header-left">
-            <span class="ch-badge">CH ${ch}</span>
-            <div class="ch-titles">
-              <h5 class="ch-unit-title">Unit ${ch}: ${escapeHtml(chapterTitle)}</h5>
-            </div>
+            <span class="ch-badge">Unit ${ch}</span>
           </div>
           <div class="ch-header-right">
             <span class="ch-count-badge">${chQuestions.length} Question${chQuestions.length === 1 ? '' : 's'}</span>
@@ -1971,7 +1972,7 @@
   const TOUR_STEPS = [
     {
       targetKey: 'topDriveBtn',
-      badge: 'Step 1 of 5',
+      badge: 'Step 1 of 6',
       title: 'Your full Drive folder',
       desc: 'Tap here to open the complete Google Drive repository with the original past-paper PDFs and unit-wise notes.',
       isLast: false,
@@ -1979,7 +1980,7 @@
     },
     {
       targetKey: 'examActiveBanner',
-      badge: 'Step 2 of 5',
+      badge: 'Step 2 of 6',
       title: 'Your exam scope is set',
       desc: 'Everything below is filtered to this scope. Tap Change Exam whenever you want to switch to Mid-1, Mid-2 or Semester End.',
       isLast: false,
@@ -1987,7 +1988,7 @@
     },
     {
       targetKey: 'subjectsSection',
-      badge: 'Step 3 of 5',
+      badge: 'Step 3 of 6',
       title: 'Seven subjects, one hub',
       desc: 'Tap any subject to see its unit-wise notes and past questions. Counts always match what is inside.',
       isLast: false,
@@ -2000,7 +2001,7 @@
     },
     {
       targetKey: 'practiceFunCard',
-      badge: 'Step 4 of 5',
+      badge: 'Step 4 of 6',
       title: 'Quiz Time and Revision',
       desc: 'Practise with MCQs or revise with flash cards. Both are scoped to the units in your selected exam.',
       isLast: false,
@@ -2008,11 +2009,19 @@
     },
     {
       targetKey: 'floatingGeminiBtn',
-      badge: 'Step 5 of 5',
+      badge: 'Step 5 of 6',
       title: 'AI Study Assistant',
       desc: 'Ask a doubt, attach a question-paper photo, or solve a PYQ. The key stays on the server, never in your browser.',
-      isLast: true,
+      isLast: false,
       scrollAction: null // Never scroll for the fixed floating button.
+    },
+    {
+      targetKey: 'mobileHeaderHistory',
+      badge: 'Step 6 of 6',
+      title: 'Back and forward, anytime',
+      desc: 'Use the left and right arrows to move between pages without losing where you were. They work just like the browser buttons.',
+      isLast: true,
+      scrollAction: () => window.scrollTo({ top: 0, behavior: 'auto' })
     }
   ];
 
@@ -2109,6 +2118,10 @@
       // Step 1: Place directly BELOW top drive button
       top = rect.bottom + margin;
       left = rect.right - tooltipWidth;
+    } else if (targetEl === el.mobileHeaderHistory) {
+      // Step 6: Keep the page-navigation row visible above the explanation.
+      top = rect.bottom + margin;
+      left = (window.innerWidth - tooltipWidth) / 2;
     } else if (isCategoryStep) {
       // Step 2: Keep the three category cards unobstructed. Prefer the space
       // above the grid, then below it, and only fall back to the viewport

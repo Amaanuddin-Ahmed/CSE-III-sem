@@ -132,7 +132,7 @@
     </div>
 
     <!-- Breadcrumb + page navigation (one compact row on every screen size) -->
-    <div class="mobile-header-history" aria-label="Page navigation">
+    <div class="mobile-header-history" id="mobileHeaderHistory" aria-label="Page navigation">
       <button type="button" class="header-arrow-btn" id="mobileNavBackBtn" title="Go back (Previous page)" aria-label="Go back">
         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
       </button>
@@ -165,9 +165,6 @@
       <div class="exam-cards-grid" id="examCardsGrid">
         <!-- Mid-1 -->
         <div class="exam-card glass-panel" data-exam-id="mid1" role="button" tabindex="0">
-          <div class="exam-card-header">
-            <span class="exam-units-pill">Units 1–2 + 3 (1st half)</span>
-          </div>
           <div class="exam-card-icon-wrap exam-icon-mid1">
             <i class="fa-solid fa-book-bookmark"></i>
           </div>
@@ -182,7 +179,6 @@
         <!-- Mid-2 (Upcoming Highlight) -->
         <div class="exam-card glass-panel exam-card-upcoming" data-exam-id="mid2" role="button" tabindex="0">
           <div class="exam-card-header">
-            <span class="exam-units-pill">Unit 3 (2nd half) + Units 4–5</span>
             <span class="exam-upcoming-badge"><i class="fa-solid fa-fire"></i> Upcoming</span>
           </div>
           <div class="exam-card-icon-wrap exam-icon-mid2">
@@ -198,9 +194,6 @@
 
         <!-- Semester End -->
         <div class="exam-card glass-panel" data-exam-id="sem" role="button" tabindex="0">
-          <div class="exam-card-header">
-            <span class="exam-units-pill">All 5 Units</span>
-          </div>
           <div class="exam-card-icon-wrap exam-icon-sem">
             <i class="fa-solid fa-award"></i>
           </div>
@@ -212,7 +205,6 @@
           </div>
         </div>
       </div>
-      <p class="exam-split-helper"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Unit 3 is split between Mid-1 and Mid-2 as per the syllabus.</p>
     </section>
 
     <!-- Active Exam Banner (Shown when an exam is active) -->
@@ -1165,6 +1157,28 @@
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- End-of-chapter Flashcard Prompt -->
+  <div class="modal-backdrop practice-exit-backdrop" id="flashcardContinueModal" style="display: none; z-index: 100005;" role="dialog" aria-modal="true" aria-labelledby="flashContinueTitle">
+    <div class="modal-dialog small-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title" id="flashContinueTitle"><i class="fa-solid fa-layer-group"></i> Chapter complete</h4>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 20px 24px;">
+        <p id="flashContinueText" style="font-size: 14.5px; color: var(--text-main); margin-bottom: 8px; font-weight: 600;"></p>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+          Keep the momentum going, or leave and come back later.
+        </p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="btn-secondary-flat" id="flashContinueExitBtn">Exit</button>
+          <button type="button" class="btn-action-primary" id="flashContinueNextBtn">
+            <span>Continue</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Exit Confirmation Modal -->

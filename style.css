@@ -8899,6 +8899,10 @@ body.ai-modal-open {
     padding-bottom: calc(18px + var(--safe-bottom));
   }
 
+  .bottom-footer .feedback-division {
+    flex: 0 0 auto;
+  }
+
   .bottom-footer .attribution-division {
     justify-content: space-between;
   }
@@ -9205,4 +9209,145 @@ body.ai-modal-open {
     transition: none;
     animation: none;
   }
+}
+
+/* ==========================================================================
+   Soft header + always-visible page navigation (correction pass)
+   ========================================================================== */
+
+.site-header {
+  background: linear-gradient(135deg, #fff9fc 0%, #f7f2ff 48%, #eef7ff 100%);
+  border-bottom: 1px solid rgba(129, 140, 248, 0.2);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.09);
+}
+
+.site-header .brand-name,
+.site-header .brand-sub,
+.site-header .brand-group {
+  color: #1e293b;
+}
+
+.site-header .brand-sub {
+  color: #64748b;
+}
+
+.site-header .brand-seal {
+  background: linear-gradient(135deg, #c7d2fe 0%, #ddd6fe 100%);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  color: #3730a3;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.14);
+}
+
+.site-header .top-drive-btn,
+.site-header .top-a2hs-btn {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(129, 140, 248, 0.28);
+  color: #334155;
+}
+
+.site-header .top-drive-btn:hover,
+.site-header .top-a2hs-btn:hover {
+  background: #ffffff;
+  border-color: rgba(99, 102, 241, 0.42);
+  color: #3730a3;
+}
+
+.site-header .mobile-header-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px 10px;
+  border-top: 1px solid rgba(129, 140, 248, 0.16);
+}
+
+.header-arrow-btn,
+.mobile-header-history .header-arrow-btn {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  color: #475569;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.header-arrow-btn:hover:not(:disabled),
+.mobile-header-history .header-arrow-btn:hover:not(:disabled) {
+  background: #eef2ff;
+  color: #3730a3;
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.header-arrow-btn:disabled,
+.mobile-header-history .header-arrow-btn:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.22);
+  opacity: 0.6;
+}
+
+.header-arrow-btn:disabled:hover,
+.mobile-header-history .header-arrow-btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+.app-breadcrumb {
+  color: #64748b;
+}
+
+.app-breadcrumb .crumb-current {
+  color: #1e293b;
+}
+
+.app-breadcrumb .crumb-sep {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.app-breadcrumb .crumb-link {
+  color: #475569;
+  background: transparent;
+}
+
+.app-breadcrumb .crumb-link:hover,
+.app-breadcrumb .crumb-link:focus-visible {
+  background: rgba(99, 102, 241, 0.1);
+  color: #3730a3;
+}
+
+.app-breadcrumb .crumb-link:focus-visible {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.35);
+}
+
+@media (max-width: 640px) {
+  .site-header .mobile-header-history {
+    padding: 0 12px 8px;
+  }
+}
+
+/* Keep the Upcoming badge aligned without the removed unit text. */
+.exam-card-header {
+  justify-content: flex-end;
+}
+
+/* The exam is already named in the banner; do not repeat unit ranges on
+   every subject card. */
+.subject-card-header-bar {
+  justify-content: flex-end;
+}
+
+/* Compact unit headers and softer chapter badge. */
+.ch-badge {
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  color: #4338ca;
+  font-size: 12.5px;
+  padding: 5px 12px;
+}
+
+/* Home shows all three footer actions; inner pages keep feedback + rate. */
+.attribution-division.attribution-compact .attribution-box {
+  display: none;
 }

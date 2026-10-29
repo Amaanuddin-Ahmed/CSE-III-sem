@@ -140,6 +140,16 @@
         });
       }
 
+      // Flashcard end-of-chapter prompt
+      const flashContinueNextBtn = document.getElementById('flashContinueNextBtn');
+      const flashContinueExitBtn = document.getElementById('flashContinueExitBtn');
+      if (flashContinueNextBtn) {
+        flashContinueNextBtn.addEventListener('click', () => this.continueToNextFlashcardUnit());
+      }
+      if (flashContinueExitBtn) {
+        flashContinueExitBtn.addEventListener('click', () => this.exitFromFlashcardPrompt());
+      }
+
       // 6. Next Question Button
       const nextBtn = document.getElementById('sessionNextBtn');
       if (nextBtn) {
@@ -487,6 +497,7 @@
       this.subjectId = subjectId;
       this.mode = mode;
       this.unit = unit === undefined || unit === null ? 'all' : unit;
+      this._pendingNextUnit = null;
       if (this._autoAdvanceTimer) {
         clearTimeout(this._autoAdvanceTimer);
         this._autoAdvanceTimer = null;
@@ -566,6 +577,9 @@
       if (sessionScreen) sessionScreen.style.display = 'none';
       const exitModal = document.getElementById('practiceExitModal');
       if (exitModal) exitModal.style.display = 'none';
+      const continueModal = document.getElementById('flashcardContinueModal');
+      if (continueModal) continueModal.style.display = 'none';
+      this._pendingNextUnit = null;
       document.body.style.overflow = '';
       if (this.mascot) this.mascot = null;
       this.restoreFocus();
@@ -1185,9 +1199,75 @@
       if (this.currentCardIndex < this.activeDeck.length - 1) {
         this.currentCardIndex++;
         this.renderFlashcard();
+        return;
+      }
+
+      const nextUnit = this.getNextFlashcardUnit();
+      if (nextUnit !== null) {
+        this.promptNextFlashcardUnit(nextUnit);
       } else {
         this.showResults();
       }
+    },
+
+    getNextFlashcardUnit() {
+      if (this.mode !== 'flashcards' || this.unit === 'all') return null;
+      const dataBank = this.getActiveDataSource();
+      if (!dataBank || !dataBank.flashcards) return null;
+
+      const units = new Set();
+      const addUnits = (cards) => {
+        (cards || []).forEach(card => {
+          const unit = Number(card.unit);
+          if (Number.isFinite(unit) && unit > 0) units.add(unit);
+        });
+      };
+
+      if (this.subjectId === 'MIXED') {
+        Object.values(dataBank.flashcards).forEach(addUnits);
+      } else {
+        addUnits(dataBank.flashcards[this.subjectId]);
+      }
+
+      const currentUnit = Number(this.unit);
+      return Array.from(units).sort((a, b) => a - b).find(unit => unit > currentUnit) || null;
+    },
+
+    promptNextFlashcardUnit(nextUnit) {
+      this._pendingNextUnit = nextUnit;
+      const modal = document.getElementById('flashcardContinueModal');
+      const text = document.getElementById('flashContinueText');
+      const nextBtn = document.getElementById('flashContinueNextBtn');
+      if (text) {
+        text.textContent = `You finished Unit ${this.unit}. Continue with Unit ${nextUnit}?`;
+      }
+      if (nextBtn) {
+        nextBtn.innerHTML = `<span>Continue to Unit ${nextUnit}</span> <i class="fa-solid fa-arrow-right"></i>`;
+      }
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.style.zIndex = '100005';
+        if (nextBtn) nextBtn.focus();
+      }
+      if (this.mascot) {
+        this.mascot.setState('happy', `Unit ${this.unit} complete! Ready for the next one?`);
+      }
+    },
+
+    continueToNextFlashcardUnit() {
+      const nextUnit = this._pendingNextUnit;
+      const modal = document.getElementById('flashcardContinueModal');
+      if (modal) modal.style.display = 'none';
+      this._pendingNextUnit = null;
+      if (nextUnit === null || nextUnit === undefined) return;
+      this.startSession(this.subjectId, 'flashcards', nextUnit);
+    },
+
+    exitFromFlashcardPrompt() {
+      const modal = document.getElementById('flashcardContinueModal');
+      if (modal) modal.style.display = 'none';
+      this._pendingNextUnit = null;
+      this.exitSession();
     },
 
     markFlashcard(gotIt) {
