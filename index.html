@@ -38,8 +38,14 @@
   <!-- Capture the install event before any bundle runs (Chrome fires it early). -->
   <script>
     window.__deferredInstall = null;
-    window.__pwaInstalled = false;
+    window.__pwaInstalled = (function () {
+      try {
+        return localStorage.getItem('mgit_pwa_installed') === '1' ||
+               localStorage.getItem('mgit_pwa_added') === '1';
+      } catch (e) { return false; }
+    })();
     window.addEventListener('beforeinstallprompt', function (event) {
+      if (window.__pwaInstalled) return;
       event.preventDefault();
       window.__deferredInstall = event;
       window.dispatchEvent(new Event('mgit-installable'));

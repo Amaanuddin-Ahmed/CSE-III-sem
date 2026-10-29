@@ -42,7 +42,8 @@
   function isInstalled() {
     if (window.__pwaInstalled) return true;
     try {
-      return localStorage.getItem('mgit_pwa_installed') === '1';
+      return localStorage.getItem('mgit_pwa_installed') === '1' ||
+             localStorage.getItem('mgit_pwa_added') === '1';
     } catch (e) {
       return false;
     }
@@ -200,7 +201,17 @@
       </div>
     `;
     const doneBtn = document.getElementById('pwaDoneBtn');
-    if (doneBtn) doneBtn.addEventListener('click', dismissPrompt);
+    if (doneBtn) {
+      doneBtn.addEventListener('click', () => {
+        window.__pwaInstalled = true;
+        try {
+          localStorage.setItem('mgit_pwa_installed', '1');
+          localStorage.setItem('mgit_pwa_added', '1');
+        } catch (e) {}
+        dismissPrompt();
+        updateInstallEntry();
+      });
+    }
   }
 
   // The inline head script captures the event; this listener keeps the UI in sync.
