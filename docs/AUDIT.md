@@ -55,8 +55,8 @@ non-localhost hosts, so the final console log is clean (0 errors, 0 page errors)
 
 | # | Status | What changed / evidence |
 |---|---|---|
-| A1 | Fixed | Deep-blue header (`#1e3a8a` family) across home, exam, subject and notes. |
-| A2 | Fixed | Compact two-row mobile header; header actions are 44×44 px. |
+| A1 | Fixed | Soft pastel header matching the centre background; the deep-blue band was removed in the correction pass. |
+| A2 | Fixed | Page-navigation arrows are now visible at every width and remain 44×44 px. |
 | A3 | Fixed | Category pick stays at `scrollY = 0`; “Scroll down for Revision” toast with “↓ See now” and 5 s drain. |
 | A4 | Fixed | Quiz Time card moved below Subjects and split into Quiz / Flashcards choices. |
 | A5 | Fixed | Quiz card and progress block removed from the subject screen; “Change Category” replaced by breadcrumb/back. |
@@ -74,14 +74,14 @@ non-localhost hosts, so the final console log is clean (0 errors, 0 page errors)
 | A17 | Fixed | Session bar shows “Question 1 of N” and a counter; practice starts with subject → unit; auto-advance and exit cleanup work. |
 | A18 | Fixed | Keyboard hint hidden on touch; swipe works; the flipped face gives one clear next action. |
 | A19 | Fixed | Percentage text is visible on every row, the card total follows the active exam deck, and an empty-state line appears until something is mastered. |
-| A20 | Fixed | Five-card tour (Drive, exam scope, subjects, Quiz Time, AI), no “Click”, static spotlight, gesture-blocking overlay. Programmatic scrolling stays enabled so each step can reveal its target. |
+| A20 | Fixed | Six-card tour (Drive, exam scope, subjects, Quiz Time, AI, page arrows), no “Click”, static spotlight, gesture-blocking overlay. Programmatic scrolling stays enabled so each step can reveal its target. |
 | A21 | Fixed | `admin.html`, the lock button, admin modal/JS, `gemini.js`, `docs/ADMIN_GUIDE.md` and README/admin references removed. |
 | A22 | Fixed | “Add to Home Screen” button/sheet with the native prompt when available and iOS Share instructions otherwise. |
 | A23 | Fixed | Breadcrumb (`Home › Exam › Subject › Mode`), History API integration and scroll restoration on Back. |
 | A24 | Fixed | Single-popup coordinator (3.5 s gap, suppressed during tour/modal/practice/AI) and a generic rating prompt. |
 | A25 | Fixed | 54-character title, `summary_large_image`, 1200×630 `assets/og-image.png`, `viewport-fit=cover`, updated Apple title. |
 | A26 | Fixed | Empty quiz/deck states replace the template placeholders before any session is shown. |
-| A27 | **Content gap** | IE has 0 PYQs; ES has 24 (Units 1–2 only); notes exist only for COA, OOPJ, DBMS and ES. Reported in `docs/CONTENT_REVIEW.md`; no rows invented. |
+| A27 | **Content gap** | IE has 0 PYQs but one verified Unit 5 note; ES has 24 PYQs (Units 1–2 only) and notes for Units 1–5; DM and COA now have five notes each. SE still has no notes. Reported in `docs/CONTENT_REVIEW.md`; no question rows invented. |
 | A28 | **Content gap** | Decks are 16 / 140 / 154 cards, not 20 per unit. Reported with the per-exam distribution; no cards invented. |
 
 ## Final verification
@@ -91,8 +91,9 @@ non-localhost hosts, so the final console log is clean (0 errors, 0 page errors)
   console errors, no page errors, no interactive target below 40 px in the audited
   home/subject/session controls, and the toast/unit-picker assertions pass.
 - `docs/_qa/scope-check.js` — Mid-1 DM 209 PYQs / COA 193; Mid-2 DM 198 / COA 195;
-  Semester End DM 471 / COA 477. Mid-2’s unit picker shows Units 3–5. Mid-1 and Mid-2
-  Unit 3 cards show the split titles and empty states.
+  Semester End DM 471 / COA 477. Note counts now resolve to DM 4 / 3 / 5 and COA 2 / 3 / 5;
+  Mid-2’s unit picker shows Units 3–5. Mid-1 and Mid-2 Unit 3 cards show the split titles
+  and empty states.
 - `docs/_qa/check-polish.js` — breadcrumb fit at 320/390/768, tour step 5 geometry above
   the fixed AI button at 320, flashcard back face and touch-only hint.
 - `docs/_qa/copy-audit.js` — no straight quotes and no “Click” in UI chrome (question-bank
@@ -100,3 +101,19 @@ non-localhost hosts, so the final console log is clean (0 errors, 0 page errors)
 - `node --check` passes for every edited JavaScript file.
 - Not verified here: a real iOS/Android device, Lighthouse scores, and live Gemini
   replies (owner key required).
+
+## Correction pass (current build)
+
+- Header returned to a soft pastel gradient; the browser-style back/forward arrows are
+  now in a page-navigation row at every width, with disabled states and 44 px targets.
+- Exam-card unit pills and the Unit 3 split alert were removed. Subject cards no longer
+  repeat the exam's unit range, and chapter headings are compact `Unit N` labels.
+- Footer rules: **Made by Amaan** is visible on the home screen only; every inner page
+  keeps feedback and Rate now, with the rating target still 44 px.
+- Verified Drive notes added: DM Units 1–4 + complete notes, COA Units 1/4/5, ES Unit 5,
+  I&E Unit 5. DBMS notes now cover Units 1–3. Note counts are 18 / 20 / 31 for
+  Mid-1 / Mid-2 / Semester End.
+- Flashcards now ask whether to continue to the next unit with cards or exit when a
+  unit deck finishes. The prompt was verified for Unit 3 → 4 → 5.
+- Final custom Chromium run: 35/35 correction checks passed with 0 console errors;
+  the eight-viewport QA run passed with 0 page errors and no horizontal overflow.
