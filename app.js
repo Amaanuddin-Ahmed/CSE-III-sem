@@ -229,6 +229,7 @@
     setupSpeechRecognition();
     initAnimatedPlaceholder();
     initRatingPopup();
+    setupRevisionHintObserver();
   }
 
   // -------------------------------------------------------------
@@ -291,6 +292,9 @@
   // -------------------------------------------------------------
   function selectSubject(sub, options) {
     const opts = options || {};
+    // Leaving the subject list pauses the revision hint instead of letting its
+    // countdown continue behind the subject page.
+    pauseRevisionHint();
     if (!opts.fromHistory && (!state.currentSubject || state.currentSubject.id !== sub.id)) {
       state.homeScrollY = window.scrollY || 0;
       pushAppState('subject', { exam: state.activeExam, subject: sub.id });
@@ -554,7 +558,8 @@
     });
   }
 
-  function applyExamSelection(examId, navigateToSubjects) {
+  function applyExamSelection(examId, navigateToSubjects, options) {
+    const opts = options || {};
     const cfg = getExamConfig(examId);
 
     // Update Active Banner (the header badge has been removed deliberately)
@@ -597,12 +602,14 @@
     if (navigateToSubjects) {
       if (el.examSelectorSection) el.examSelectorSection.style.display = 'none';
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-      if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
-        // First visit: the tour itself introduces Quiz Time, so skip the
-        // "scroll down" toast and let the tour guide the screen.
-        window.setTimeout(() => maybeStartTourAfterCategoryPick(), 900);
-      } else {
-        window.setTimeout(() => showRevisionHintToast(), 450);
+      if (!opts.fromHistory) {
+        if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
+          // First visit: the tour itself introduces Quiz Time, so skip the
+          // "scroll down" toast and let the tour guide the screen.
+          window.setTimeout(() => maybeStartTourAfterCategoryPick(), 900);
+        } else {
+          window.setTimeout(() => showRevisionHintToast(), 450);
+        }
       }
     }
 
@@ -638,7 +645,7 @@
       pushAppState('exam', { exam: examId });
     }
 
-    applyExamSelection(examId, navigateToSubjects);
+    applyExamSelection(examId, navigateToSubjects, opts);
     updateFooterAttribution();
     syncHistoryUi();
   }
@@ -652,6 +659,7 @@
       pushAppState('home');
     }
     state.currentView = 'home';
+    pauseRevisionHint();
 
     if (el.examSelectorSection) {
       el.examSelectorSection.style.display = 'block';
@@ -752,6 +760,7 @@
     el.subjectsSection.style.display = 'block';
     if (el.practiceFunDivision) el.practiceFunDivision.style.display = 'block';
     if (el.examActiveBanner) el.examActiveBanner.style.display = 'flex';
+    resumeRevisionHint();
     updateFooterAttribution();
 
     updateBreadcrumb();
@@ -3003,7 +3012,7 @@
   // Helpers
   // -------------------------------------------------------------
   function showToast(message, options) {
-    if (!el.toastContainer) return;
+    if (!el.toastContainer) return null;
     const opts = options || {};
     const duration = Number(opts.duration) > 0 ? Number(opts.duration) : 3500;
     const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -3018,15 +3027,23 @@
       const drain = document.createElement('span');
       drain.className = 'toast-progress';
       drain.setAttribute('aria-hidden', 'true');
+      if (Number(opts.drainOffset) > 0) {
+        drain.style.animationDelay = `-${Number(opts.drainOffset)}ms`;
+      }
       toast.appendChild(drain);
     }
 
     let closed = false;
-    function closeToast() {
+    let timerId = null;
+    function closeToast(immediate) {
       if (closed) return;
       closed = true;
+      if (timerId) {
+        clearTimeout(timerId);
+        timerId = null;
+      }
       toast.classList.add('toast-leaving');
-      setTimeout(() => toast.remove(), reducedMotion ? 0 : 250);
+      setTimeout(() => toast.remove(), immediate || reducedMotion ? 0 : 250);
     }
 
     if (opts.actionLabel) {
@@ -3042,14 +3059,88 @@
     }
 
     el.toastContainer.appendChild(toast);
-    toast.timerId = setTimeout(closeToast, duration);
+    if (!opts.managed) {
+      timerId = setTimeout(() => closeToast(), duration);
+    }
+    return { close: closeToast, element: toast };
   }
 
-  function showRevisionHintToast() {
-    showToast('Scroll down for Revision', {
-      duration: 5000,
+  // The revision hint is deliberately rate-limited: it may appear at most
+  // twice per browser session. Leaving the subject list pauses its remaining
+  // time; returning to the list resumes it. Reaching Quiz Time ends it.
+  const REVISION_HINT_MS = 5000;
+  const REVISION_HINT_LIMIT = 2;
+  const REVISION_HINT_COUNT_KEY = 'mgit_revision_hint_count';
+  const revisionHintState = {
+    active: false,
+    remaining: 0,
+    deadline: 0,
+    handle: null,
+    timerId: null
+  };
+
+  function getRevisionHintCount() {
+    try {
+      return Number(sessionStorage.getItem(REVISION_HINT_COUNT_KEY)) || 0;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  function setRevisionHintCount(count) {
+    try {
+      sessionStorage.setItem(REVISION_HINT_COUNT_KEY, String(count));
+    } catch (e) {}
+  }
+
+  function canShowRevisionHint() {
+    return state.currentView === 'exam'
+      && !state.currentSubject
+      && el.practiceFunDivision
+      && el.practiceFunDivision.style.display !== 'none';
+  }
+
+  function clearRevisionHintTimer() {
+    if (revisionHintState.timerId) {
+      clearTimeout(revisionHintState.timerId);
+      revisionHintState.timerId = null;
+    }
+  }
+
+  function closeRevisionHintToast(immediate) {
+    if (revisionHintState.handle) {
+      revisionHintState.handle.close(immediate);
+      revisionHintState.handle = null;
+    }
+  }
+
+  function pauseRevisionHint() {
+    if (!revisionHintState.active) return;
+    revisionHintState.remaining = Math.max(0, revisionHintState.deadline - Date.now());
+    clearRevisionHintTimer();
+    revisionHintState.active = false;
+    closeRevisionHintToast(true);
+  }
+
+  function dismissRevisionHint() {
+    clearRevisionHintTimer();
+    revisionHintState.active = false;
+    revisionHintState.remaining = 0;
+    closeRevisionHintToast(true);
+  }
+
+  function renderRevisionHint() {
+    if (!canShowRevisionHint()) return;
+    const remaining = Math.max(250, revisionHintState.remaining);
+    revisionHintState.active = true;
+    revisionHintState.deadline = Date.now() + remaining;
+    revisionHintState.handle = showToast('Scroll down for Revision', {
+      duration: REVISION_HINT_MS,
+      managed: true,
+      drainOffset: Math.max(0, REVISION_HINT_MS - remaining),
       actionLabel: '↓ See now',
       onAction: () => {
+        dismissRevisionHint();
         const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const behavior = reduce ? 'auto' : 'smooth';
         const revision = document.getElementById('practiceFunDivision');
@@ -3061,6 +3152,59 @@
         }
       }
     });
+
+    if (!revisionHintState.handle) {
+      revisionHintState.active = false;
+      return;
+    }
+
+    revisionHintState.timerId = setTimeout(() => {
+      revisionHintState.active = false;
+      revisionHintState.remaining = 0;
+      revisionHintState.timerId = null;
+      closeRevisionHintToast(true);
+    }, remaining);
+  }
+
+  function showRevisionHintToast() {
+    if (!canShowRevisionHint() || revisionHintState.active) return;
+    if (revisionHintState.remaining > 0) {
+      renderRevisionHint();
+      return;
+    }
+    const count = getRevisionHintCount();
+    if (count >= REVISION_HINT_LIMIT) return;
+    setRevisionHintCount(count + 1);
+    revisionHintState.remaining = REVISION_HINT_MS;
+    renderRevisionHint();
+  }
+
+  function resumeRevisionHint() {
+    if (!canShowRevisionHint() || revisionHintState.active) return;
+    if (revisionHintState.remaining > 0) renderRevisionHint();
+  }
+
+  function setupRevisionHintObserver() {
+    const target = el.practiceFunDivision;
+    if (!target) return;
+
+    // The observer catches normal scrolling; the scroll listener is a cheap
+    // fallback for browsers that deliver observer callbacks late.
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        if (!revisionHintState.active) return;
+        if (entries.some(entry => entry.isIntersecting)) dismissRevisionHint();
+      }, { threshold: 0.18 });
+      observer.observe(target);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!revisionHintState.active) return;
+      const rect = target.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.78 && rect.bottom > 0) {
+        dismissRevisionHint();
+      }
+    }, { passive: true });
   }
 
   function escapeHtml(str) {
