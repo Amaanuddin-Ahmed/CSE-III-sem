@@ -43,6 +43,8 @@
 
     // Onboarding Walkthrough Tour State
     currentTourStep: 0,
+    tourActive: false,
+    tourTimers: [],
 
     // AI Chat & Sessions State
     activeChatId: null,
@@ -105,6 +107,20 @@
 
     notesChapterSelect: document.getElementById('notesChapterSelect'),
     notesListContainer: document.getElementById('notesListContainer'),
+
+    // In-site Notes Reader
+    notesReaderModal: document.getElementById('notesReaderModal'),
+    notesReaderBadge: document.getElementById('notesReaderBadge'),
+    notesReaderTitle: document.getElementById('notesReaderTitle'),
+    notesReaderMeta: document.getElementById('notesReaderMeta'),
+    notesReaderDriveLink: document.getElementById('notesReaderDriveLink'),
+    notesReaderSearch: document.getElementById('notesReaderSearch'),
+    notesReaderSearchCount: document.getElementById('notesReaderSearchCount'),
+    notesReaderWarning: document.getElementById('notesReaderWarning'),
+    notesReaderBody: document.getElementById('notesReaderBody'),
+    notesReaderFooterMeta: document.getElementById('notesReaderFooterMeta'),
+    notesReaderTopBtn: document.getElementById('notesReaderTopBtn'),
+    closeNotesReaderBtn: document.getElementById('closeNotesReaderBtn'),
 
     toggleAllChaptersBtn: document.getElementById('toggleAllChaptersBtn'),
     toggleAllChaptersText: document.getElementById('toggleAllChaptersText'),
@@ -254,9 +270,9 @@
       card.style.setProperty('--sub-accent', sub.accentColor);
       card.style.setProperty('--sub-bg', sub.bgColor);
 
-      // Count in-scope notes in the database. Question totals stay inside the
-      // subject view, where they are labelled and scoped by the active exam.
-      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isNoteInScope || window.isNoteInScope(n, examKey))).length;
+      // Notes are reference material, so every uploaded note is counted here
+      // regardless of the active exam. PYQs stay exam-scoped in the subject view.
+      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id).length;
 
       card.innerHTML = `
         <div class="subject-card-header-bar">
@@ -333,12 +349,13 @@
     // Update Header in Detail Section (Zero Course Codes!)
     el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title}`;
 
-    // Update counts on the Mode Choice Cards (scoped to active exam)
+    // Update counts on the Mode Choice Cards. Notes are reference material and
+    // are always shown in full; only PYQs are scoped to the active exam.
     const examKey = state.activeExam || 'mid2';
-    const scopedNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (!window.isNoteInScope || window.isNoteInScope(n, examKey)));
+    const allNotes = NOTES_DATA.filter(n => n.subjectId === sub.id);
     const scopedQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey)));
     if (el.modeNotesCountText) {
-      el.modeNotesCountText.textContent = `${scopedNotes.length} Note${scopedNotes.length === 1 ? '' : 's'}`;
+      el.modeNotesCountText.textContent = `${allNotes.length} Note${allNotes.length === 1 ? '' : 's'}`;
     }
     if (el.modePyqsCountText) {
       el.modePyqsCountText.textContent = `${scopedQuestions.length} PYQ${scopedQuestions.length === 1 ? '' : 's'}`;
@@ -778,23 +795,31 @@
     el.notesListContainer.innerHTML = '';
 
     const subId = state.currentSubject.id;
-    const examKey = state.activeExam || 'mid2';
 
-    // Populate notes chapter dropdown with in-scope units
+    // Notes are reference material: every uploaded unit is always listed, even
+    // when the active exam only covers some units. This prevents notes for
+    // Units 1-2 from disappearing while Mid-2 is selected.
+    let notes = NOTES_DATA.filter(n => n.subjectId === subId);
+
     if (el.notesChapterSelect) {
-      const inScopeChapters = window.getInScopeChapters ? window.getInScopeChapters(examKey) : [1, 2, 3, 4, 5];
-      const examConfig = getExamConfig(examKey);
-      let opts = `<option value="all">All Units (${escapeHtml(examConfig.name)})</option>`;
-      inScopeChapters.forEach(ch => {
+      const availableUnits = new Set();
+      notes.forEach(n => {
+        const units = window.getNoteUnits ? window.getNoteUnits(n) : [Number(n.chapter)];
+        units.forEach(u => {
+          const num = Number(u);
+          if (num >= 1 && num <= 5) availableUnits.add(num);
+        });
+      });
+      const unitList = Array.from(availableUnits).sort((a, b) => a - b);
+      let opts = `<option value="all">All Units (All Notes)</option>`;
+      unitList.forEach(ch => {
         opts += `<option value="${ch}">Unit ${ch}</option>`;
       });
       el.notesChapterSelect.innerHTML = opts;
+      if (state.notesChapterFilter !== 'all' && !availableUnits.has(Number(state.notesChapterFilter))) {
+        state.notesChapterFilter = 'all';
+      }
       el.notesChapterSelect.value = state.notesChapterFilter;
-    }
-
-    let notes = NOTES_DATA.filter(n => n.subjectId === subId);
-    if (window.isNoteInScope) {
-      notes = notes.filter(n => window.isNoteInScope(n, examKey));
     }
 
     if (state.notesChapterFilter !== 'all') {
@@ -842,6 +867,18 @@
         iconColor = '#ea580c';
       }
 
+      const contentIndex = window.NOTES_CONTENT_INDEX || {};
+      const contentInfo = contentIndex[note.id];
+      const qualityTag = contentInfo && contentInfo.quality === 'limited'
+        ? `<span class="note-quality-tag" title="Handwritten/scanned pages may have incomplete OCR text"><i class="fa-solid fa-triangle-exclamation"></i> OCR limited</span>`
+        : '';
+      const readButton = contentInfo
+        ? `<button type="button" class="note-read-btn" data-note-id="${escapeHtml(note.id)}">
+             <i class="fa-solid fa-book-open"></i>
+             <span>Read</span>
+           </button>`
+        : '';
+
       item.innerHTML = `
         <div class="note-info">
           <div class="note-title">${escapeHtml(note.title)}</div>
@@ -850,16 +887,241 @@
             <span><i class="${iconClass}" style="color: ${iconColor};"></i> ${escapeHtml(note.fileName)}</span> &bull; 
             <span>${escapeHtml(note.fileSize)}</span> &bull; 
             <span>${escapeHtml(unitLabel)}</span>
+            ${qualityTag}
           </div>
         </div>
-        <a href="${fileLink}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <span>Open Drive</span>
-        </a>
+        <div class="note-actions">
+          ${readButton}
+          <a href="${fileLink}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>Open Drive</span>
+          </a>
+        </div>
       `;
 
       el.notesListContainer.appendChild(item);
     });
+  }
+
+  // -------------------------------------------------------------
+  // In-site Notes Reader (extracted text + OCR)
+  // -------------------------------------------------------------
+  const notesReaderState = {
+    promise: null,
+    currentId: null,
+    searchTimer: null
+  };
+
+  function loadNotesContentScript() {
+    if (window.NOTES_CONTENT) return Promise.resolve(window.NOTES_CONTENT);
+    if (notesReaderState.promise) return notesReaderState.promise;
+
+    notesReaderState.promise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'notes-content.js';
+      script.async = true;
+      script.onload = () => {
+        if (window.NOTES_CONTENT) {
+          resolve(window.NOTES_CONTENT);
+        } else {
+          notesReaderState.promise = null;
+          reject(new Error('Notes content did not initialise'));
+        }
+      };
+      script.onerror = () => {
+        notesReaderState.promise = null;
+        reject(new Error('Could not load notes content'));
+      };
+      document.head.appendChild(script);
+    });
+
+    return notesReaderState.promise;
+  }
+
+  function escapeRegExp(str) {
+    return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function openNotesReader(noteId) {
+    const note = NOTES_DATA.find(n => n.id === noteId);
+    if (!note || !el.notesReaderModal) return;
+
+    const index = (window.NOTES_CONTENT_INDEX || {})[noteId] || null;
+    const sub = SUBJECTS_DATA[note.subjectId] || {};
+    const units = window.getNoteUnits ? window.getNoteUnits(note) : [Number(note.chapter)];
+    const unitLabel = units.length > 1 ? `Units ${units.join(', ')}` : `Unit ${units[0] || note.chapter}`;
+    const driveLink = note.driveFileId
+      ? `https://drive.google.com/file/d/${note.driveFileId}/view?usp=sharing`
+      : (note.folderUrl || DRIVE_ROOT_URL);
+
+    el.notesReaderBadge.textContent = `${sub.shortName || note.subjectId} · ${unitLabel}`;
+    el.notesReaderTitle.textContent = note.title;
+    el.notesReaderMeta.textContent = `${note.fileName} · ${note.fileSize}${index ? ` · ${index.pages} page${index.pages === 1 ? '' : 's'}` : ''}`;
+    el.notesReaderDriveLink.href = driveLink;
+    el.notesReaderWarning.hidden = !index || index.quality !== 'limited';
+    el.notesReaderSearch.value = '';
+    el.notesReaderSearchCount.textContent = '';
+    el.notesReaderFooterMeta.textContent = index
+      ? `${index.pages} page${index.pages === 1 ? '' : 's'} · ${index.quality === 'limited' ? 'OCR text may be incomplete' : 'Extracted text'}`
+      : '';
+    el.notesReaderBody.innerHTML = `
+      <div class="notes-reader-loading">
+        <i class="fa-solid fa-circle-notch fa-spin"></i>
+        <span>Loading extracted notes...</span>
+      </div>`;
+    el.notesReaderBody.scrollTop = 0;
+    el.notesReaderModal.style.display = 'flex';
+    document.body.classList.add('notes-reader-open');
+    document.documentElement.classList.add('notes-reader-open');
+    notesReaderState.currentId = noteId;
+
+    loadNotesContentScript()
+      .then(content => {
+        if (notesReaderState.currentId !== noteId) return;
+        const entry = content && content[noteId];
+        if (!entry || !Array.isArray(entry.pages) || entry.pages.length === 0) {
+          el.notesReaderBody.innerHTML = `
+            <div class="notes-reader-loading">
+              <i class="fa-regular fa-file-lines"></i>
+              <span>No extracted text is available for this note yet.</span>
+              <a href="${driveLink}" target="_blank" rel="noopener noreferrer" class="notes-reader-drive">Open original</a>
+            </div>`;
+          return;
+        }
+        renderNotesReaderEntry(entry);
+      })
+      .catch(() => {
+        if (notesReaderState.currentId !== noteId) return;
+        el.notesReaderBody.innerHTML = `
+          <div class="notes-reader-loading">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Could not load the extracted notes. Check your connection and try again.</span>
+            <a href="${driveLink}" target="_blank" rel="noopener noreferrer" class="notes-reader-drive">Open original</a>
+          </div>`;
+      });
+  }
+
+  function renderNotesReaderEntry(entry) {
+    const frag = document.createDocumentFragment();
+
+    entry.pages.forEach(page => {
+      const section = document.createElement('section');
+      section.className = 'notes-page';
+      section.dataset.page = page.p;
+
+      const label = document.createElement('div');
+      label.className = 'notes-page-label';
+      label.innerHTML = `<span>Page ${page.p}</span>${page.ocr ? '<span class="notes-page-ocr">OCR</span>' : ''}`;
+      section.appendChild(label);
+
+      const text = (page.t || '').trim();
+      if (text) {
+        const pre = document.createElement('pre');
+        pre.className = 'notes-page-text';
+        pre.textContent = text;
+        section.appendChild(pre);
+      } else {
+        const empty = document.createElement('p');
+        empty.className = 'notes-page-empty';
+        empty.textContent = 'No readable text was extracted from this page. Use "Open original" to view it.';
+        section.appendChild(empty);
+      }
+
+      frag.appendChild(section);
+    });
+
+    el.notesReaderBody.innerHTML = '';
+    el.notesReaderBody.appendChild(frag);
+    el.notesReaderBody.scrollTop = 0;
+    if (el.notesReaderSearch) el.notesReaderSearch.value = '';
+    if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
+  }
+
+  function clearNotesHighlights() {
+    if (!el.notesReaderBody) return;
+    el.notesReaderBody.querySelectorAll('mark.notes-hit').forEach(mark => {
+      const parent = mark.parentNode;
+      if (!parent) return;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+  }
+
+  function runNotesSearch(query) {
+    if (!el.notesReaderBody) return 0;
+    clearNotesHighlights();
+
+    const term = query.trim();
+    if (term.length < 2) {
+      if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
+      return 0;
+    }
+
+    const regex = new RegExp(escapeRegExp(term), 'gi');
+    let total = 0;
+
+    el.notesReaderBody.querySelectorAll('.notes-page-text').forEach(pre => {
+      const walker = document.createTreeWalker(pre, NodeFilter.SHOW_TEXT, null);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      nodes.forEach(node => {
+        const value = node.nodeValue || '';
+        if (!value) return;
+
+        regex.lastIndex = 0;
+        let match;
+        let lastIndex = 0;
+        let frag = null;
+
+        while ((match = regex.exec(value)) !== null) {
+          if (!frag) frag = document.createDocumentFragment();
+          if (match.index > lastIndex) {
+            frag.appendChild(document.createTextNode(value.slice(lastIndex, match.index)));
+          }
+          const mark = document.createElement('mark');
+          mark.className = 'notes-hit';
+          mark.textContent = match[0];
+          frag.appendChild(mark);
+          lastIndex = match.index + match[0].length;
+          total++;
+          if (match[0].length === 0) regex.lastIndex++;
+        }
+
+        if (frag) {
+          if (lastIndex < value.length) {
+            frag.appendChild(document.createTextNode(value.slice(lastIndex)));
+          }
+          node.parentNode.replaceChild(frag, node);
+        }
+      });
+    });
+
+    if (el.notesReaderSearchCount) {
+      el.notesReaderSearchCount.textContent = total === 0
+        ? 'No matches'
+        : `${total} match${total === 1 ? '' : 'es'}`;
+    }
+
+    const first = el.notesReaderBody.querySelector('mark.notes-hit');
+    if (first) {
+      first.classList.add('notes-hit-active');
+      if (typeof first.scrollIntoView === 'function') {
+        first.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+    }
+
+    return total;
+  }
+
+  function closeNotesReader() {
+    if (!el.notesReaderModal) return;
+    notesReaderState.currentId = null;
+    el.notesReaderModal.style.display = 'none';
+    document.body.classList.remove('notes-reader-open');
+    document.documentElement.classList.remove('notes-reader-open');
+    if (el.notesReaderSearch) el.notesReaderSearch.value = '';
+    if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
   }
 
   // -------------------------------------------------------------
@@ -2042,6 +2304,9 @@
 
   function startOnboardingTour() {
     state.currentTourStep = 0;
+    state.tourActive = true;
+    state.tourTimers.forEach(clearTimeout);
+    state.tourTimers = [];
     document.body.classList.add('tour-active');
     if (el.tourOverlay) el.tourOverlay.style.display = 'block';
     if (el.tourSpotlight) el.tourSpotlight.style.display = 'block';
@@ -2083,13 +2348,18 @@
       }
     }
 
-    // Update spotlight & tooltip immediately and after smooth scroll settles
+    // Update spotlight & tooltip immediately and after smooth scroll settles.
+    // Track the timers so skipping the tour cannot re-show the spotlight later.
     updateTourSpotlightAndTooltip(targetEl);
-    setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 120);
-    setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 380);
+    state.tourTimers.forEach(clearTimeout);
+    state.tourTimers = [
+      setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 120),
+      setTimeout(() => { updateTourSpotlightAndTooltip(targetEl); }, 380)
+    ];
   }
 
   function updateTourSpotlightAndTooltip(targetEl) {
+    if (!state.tourActive) return;
     if (!targetEl || !el.tourSpotlight || !el.tourTooltip) return;
 
     const rect = targetEl.getBoundingClientRect();
@@ -2193,6 +2463,9 @@
   }
 
   function endTour() {
+    state.tourActive = false;
+    state.tourTimers.forEach(clearTimeout);
+    state.tourTimers = [];
     document.body.classList.remove('tour-active');
     if (el.tourOverlay) el.tourOverlay.style.display = 'none';
     if (el.tourSpotlight) el.tourSpotlight.style.display = 'none';
@@ -2832,6 +3105,43 @@
         renderNotesDivision();
       });
     }
+
+    // Notes Reader: delegate "Read" clicks from the notes list
+    if (el.notesListContainer) {
+      el.notesListContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.note-read-btn');
+        if (!btn) return;
+        const noteId = btn.getAttribute('data-note-id');
+        if (noteId) openNotesReader(noteId);
+      });
+    }
+    if (el.closeNotesReaderBtn) {
+      el.closeNotesReaderBtn.addEventListener('click', closeNotesReader);
+    }
+    if (el.notesReaderModal) {
+      el.notesReaderModal.addEventListener('click', (e) => {
+        if (e.target === el.notesReaderModal) closeNotesReader();
+      });
+    }
+    if (el.notesReaderSearch) {
+      el.notesReaderSearch.addEventListener('input', (e) => {
+        const value = e.target.value;
+        clearTimeout(notesReaderState.searchTimer);
+        notesReaderState.searchTimer = setTimeout(() => runNotesSearch(value), 160);
+      });
+    }
+    if (el.notesReaderTopBtn) {
+      el.notesReaderTopBtn.addEventListener('click', () => {
+        if (el.notesReaderBody) {
+          el.notesReaderBody.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && el.notesReaderModal && el.notesReaderModal.style.display !== 'none') {
+        closeNotesReader();
+      }
+    });
 
 
 

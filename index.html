@@ -380,6 +380,11 @@
           </div>
         </div>
 
+        <p class="notes-scope-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          Every unit is shown here. Notes are reference material, so they stay available even when a Mid-1 or Mid-2 exam filter is active.
+        </p>
+
         <div class="division-controls">
           <label for="notesChapterSelect" class="control-label">Select Chapter / Unit:</label>
           <select id="notesChapterSelect" class="form-select">
@@ -1247,10 +1252,49 @@
     </div>
   </div>
 
+  <!-- ============================================================== -->
+  <!-- MODAL: In-site Notes Reader (extracted text / OCR) -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop notes-reader-backdrop" id="notesReaderModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="notesReaderTitle">
+    <div class="notes-reader-dialog">
+      <header class="notes-reader-header">
+        <div class="notes-reader-heading">
+          <span class="notes-reader-badge" id="notesReaderBadge">Note</span>
+          <h2 class="notes-reader-title" id="notesReaderTitle">Note title</h2>
+          <p class="notes-reader-meta" id="notesReaderMeta"></p>
+        </div>
+        <div class="notes-reader-actions">
+          <a class="notes-reader-drive" id="notesReaderDriveLink" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span>Open original</span>
+          </a>
+          <button type="button" class="modal-close-btn" id="closeNotesReaderBtn" aria-label="Close notes reader">&times;</button>
+        </div>
+      </header>
+      <div class="notes-reader-toolbar">
+        <div class="notes-reader-search-wrap">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" id="notesReaderSearch" class="notes-reader-search" placeholder="Search inside this note..." autocomplete="off" aria-label="Search inside this note">
+        </div>
+        <span class="notes-reader-count" id="notesReaderSearchCount"></span>
+      </div>
+      <div class="notes-reader-warning" id="notesReaderWarning" hidden>
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <span>This note is handwritten or scanned. The OCR text may be incomplete — use “Open original” to read the source page.</span>
+      </div>
+      <div class="notes-reader-body" id="notesReaderBody"></div>
+      <div class="notes-reader-footer">
+        <span id="notesReaderFooterMeta"></span>
+        <button type="button" class="notes-reader-top" id="notesReaderTopBtn">Back to top</button>
+      </div>
+    </div>
+  </div>
+
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- Application Scripts -->
   <script src="pyq-data.js"></script>
+  <script src="notes-content-index.js"></script>
   <script src="scope-map.js"></script>
   <script src="rich-text.js"></script>
   <script src="mascot.js"></script>

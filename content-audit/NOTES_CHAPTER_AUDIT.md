@@ -110,3 +110,27 @@ traceable.
 - `node tools/verify/audit_content.js` — 0 errors, 0 warnings.
 - Playwright at 1440×900, 390×844 and 844×390: every COA unit filter returns the
   expected files; DM shows 16 notes (6 in Unit 5); no console errors.
+
+---
+
+## 5. In-site OCR / extracted text (cache v7)
+
+Every COA and DM file in the verified Drive notes folders was downloaded and
+processed so the notes can be read inside the hub, not only opened on Drive.
+
+- **PDFs:** text layer extracted with PyMuPDF. Pages with no usable text layer
+  were rendered at 200 DPI and OCR'd with Tesseract 5.4 (`eng`).
+- **Legacy `.ppt` files (10):** converted to PDF with PowerPoint COM, then
+  processed with the same PDF pipeline.
+- **Output:** `notes-content.js` contains all 35 notes (~853k characters of
+  readable text). `notes-content-index.js` contains the lightweight page counts
+  and quality flags used to render the **Read** buttons.
+- **Loading:** the index is loaded eagerly; the full text is lazy-loaded the
+  first time a reader is opened, so the home page stays fast.
+- **Quality flags:** 26 notes are marked `good`; 9 are marked `limited` because
+  they are handwritten/scanned and Tesseract cannot transcribe them reliably:
+  `NOTE-COA-03`, `NOTE-COA-14`, `NOTE-COA-18`, `NOTE-DM-05`, `NOTE-DM-06`,
+  `NOTE-DM-11`, `NOTE-DM-12`, `NOTE-DM-13`, `NOTE-DM-14`.
+  The reader shows a visible warning and an **Open original** link for these.
+- **Scope:** notes are reference material and are no longer filtered by the
+  Mid-1/Mid-2 exam selector. All units remain visible; PYQs stay exam-scoped.

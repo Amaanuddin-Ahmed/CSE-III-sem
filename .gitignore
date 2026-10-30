@@ -89,3 +89,8 @@ docs/_work/
 OBSERVATIONS.md
 TASKS.md
 
+
+# Local QA scripts and screenshots (never deployed)
+qa-*.js
+qa-*.png
+qa-*.html

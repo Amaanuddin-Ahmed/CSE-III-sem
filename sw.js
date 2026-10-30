@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v6';
+const CACHE_NAME = 'mgit-hub-v7';
 
 const STATIC_ASSETS = [
   './',
@@ -22,6 +22,7 @@ const STATIC_ASSETS = [
   'practice-runner.js',
   'pwa-install.js',
   'pyq-data.js',
+  'notes-content-index.js',
   'data/mid2-practice.js',
   'data/sem-practice.js',
   'data/mid1-practice.js',
