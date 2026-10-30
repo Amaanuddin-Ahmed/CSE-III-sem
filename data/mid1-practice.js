@@ -556,165 +556,615 @@ const MID1_PRACTICE = {
     ]
   },
   "flashcards": {
-    "DM": [
-      {
-        "id": "FC-M1-DM-01",
-        "subjectId": "DM",
-        "unit": 1,
-        "topic": "Tautology vs Contradiction",
-        "highYield": true,
-        "front": "What is the difference between a Tautology and a Contradiction?",
-        "back": "• Tautology: Always TRUE under every truth assignment ($p \\lor \\neg p$).\n• Contradiction: Always FALSE under every truth assignment ($p \\land \\neg p$)."
-      },
-      {
-        "id": "FC-M1-DM-02",
-        "subjectId": "DM",
-        "unit": 1,
-        "topic": "Modus Ponens vs Modus Tollens",
-        "highYield": true,
-        "front": "State the premises and conclusions of Modus Ponens and Modus Tollens.",
-        "back": "• Modus Ponens: $p$, $p \\to q \\vdash q$\n• Modus Tollens: $\\neg q$, $p \\to q \\vdash \\neg p$"
-      },
-      {
-        "id": "FC-M1-DM-03",
-        "subjectId": "DM",
-        "unit": 2,
-        "topic": "Equivalence vs POSET",
-        "highYield": true,
-        "front": "Compare Equivalence Relations and Partial Orders (POSETs).",
-        "back": "• Equivalence: Reflexive + Symmetric + Transitive.\n• POSET: Reflexive + Antisymmetric + Transitive."
-      },
-      {
-        "id": "FC-M1-DM-04",
-        "subjectId": "DM",
-        "unit": 3,
-        "topic": "Semigroup and Monoid",
-        "highYield": true,
-        "front": "Define Semigroup and Monoid.",
-        "back": "• Semigroup $(S, *)$: Closure + Associativity.\n• Monoid $(M, *, e)$: Semigroup + Identity element ($a * e = e * a = a$)."
-      }
-    ],
-    "COA": [
-      {
-        "id": "FC-M1-COA-01",
-        "subjectId": "COA",
-        "unit": 1,
-        "topic": "Booth's Bit-Pairs",
-        "highYield": true,
-        "front": "State Booth's Algorithm bit-pair operations for $(Q_0, Q_{-1})$.",
-        "back": "• 00: Arithmetic Shift Right only.\n• 01: $A \\leftarrow A + M$, then Arithmetic Shift Right.\n• 10: $A \\leftarrow A - M$, then Arithmetic Shift Right.\n• 11: Arithmetic Shift Right only."
-      },
-      {
-        "id": "FC-M1-COA-02",
-        "subjectId": "COA",
-        "unit": 2,
-        "topic": "Hardwired vs Microprogrammed",
-        "highYield": true,
-        "front": "Compare Hardwired and Microprogrammed Control.",
-        "back": "• Hardwired: Combinational logic gates, fastest speed, rigid.\n• Microprogrammed: Microcode in Control ROM, slower memory lookups, highly flexible/reprogrammable."
-      }
-    ],
-    "OOPJ": [
-      {
-        "id": "FC-M1-OOPJ-01",
-        "subjectId": "OOPJ",
-        "unit": 1,
-        "topic": "4 Pillars of OOP",
-        "highYield": true,
-        "front": "Name and define the 4 core pillars of OOP.",
-        "back": "1. Encapsulation: Bundling data and methods with private access.\n2. Abstraction: Hiding internal complexity behind clean interfaces.\n3. Inheritance: Reusing code from superclasses.\n4. Polymorphism: Single interface, multiple implementations (overloading/overriding)."
-      },
-      {
-        "id": "FC-M1-OOPJ-02",
-        "subjectId": "OOPJ",
-        "unit": 3,
-        "topic": "Checked vs Unchecked Exceptions",
-        "highYield": true,
-        "front": "Compare Checked and Unchecked Exceptions in Java.",
-        "back": "• Checked: Subclasses of Exception (excluding RuntimeException); checked at compile-time (e.g. IOException, SQLException).\n• Unchecked: Subclasses of RuntimeException and Error; happen at runtime (e.g. NullPointerException, ArrayIndexOutOfBoundsException)."
-      }
-    ],
-    "DBMS": [
-      {
-        "id": "FC-M1-DBMS-01",
-        "subjectId": "DBMS",
-        "unit": 1,
-        "topic": "DBA Responsibilities",
-        "highYield": true,
-        "front": "List 4 primary duties of a Database Administrator (DBA).",
-        "back": "1. Schema definition and physical storage organization.\n2. Granting user authorizations and role privileges.\n3. Routine backup and disaster recovery management.\n4. Performance monitoring and index tuning."
-      },
-      {
-        "id": "FC-M1-DBMS-02",
-        "subjectId": "DBMS",
-        "unit": 3,
-        "topic": "Armstrong's Axioms",
-        "highYield": true,
-        "front": "State Armstrong's 3 primary Axioms for Functional Dependencies.",
-        "back": "1. Reflexivity: If $Y \\subseteq X$, then $X \\to Y$.\n2. Augmentation: If $X \\to Y$, then $XZ \\to YZ$.\n3. Transitivity: If $X \\to Y$ and $Y \\to Z$, then $X \\to Z$."
-      }
-    ],
-    "SE": [
-      {
-        "id": "FC-M1-SE-01",
-        "subjectId": "SE",
-        "unit": 1,
-        "topic": "Agile Manifesto 4 Values",
-        "highYield": true,
-        "front": "State the 4 Core Values of the Agile Manifesto.",
-        "back": "1. Individuals and interactions over processes and tools.\n2. Working software over comprehensive documentation.\n3. Customer collaboration over contract negotiation.\n4. Responding to change over following a plan."
-      },
-      {
-        "id": "FC-M1-SE-02",
-        "subjectId": "SE",
-        "unit": 2,
-        "topic": "Functional vs Non-Functional Requirements",
-        "highYield": true,
-        "front": "Contrast Functional and Non-Functional Requirements.",
-        "back": "• Functional: What the system does (features, calculations, user workflows).\n• Non-Functional: How well the system performs (latency, throughput, security, availability, compliance)."
-      }
-    ],
-    "ES": [
-      {
-        "id": "FC-M1-ES-01",
-        "subjectId": "ES",
-        "unit": 1,
-        "topic": "Food Chain vs Food Web",
-        "highYield": true,
-        "front": "Compare Food Chain with Food Web.",
-        "back": "• Food Chain: Linear single pathway of energy transfer (Grass $\\to$ Deer $\\to$ Tiger).\n• Food Web: Interconnected network of multiple overlapping food chains; provides ecological resilience and stability."
-      },
-      {
-        "id": "FC-M1-ES-02",
-        "subjectId": "ES",
-        "unit": 2,
-        "topic": "In-situ vs Ex-situ Conservation",
-        "highYield": true,
-        "front": "Distinguish between In-situ and Ex-situ Biodiversity Conservation.",
-        "back": "• In-situ: Conserving species in their natural wild habitats (National Parks, Sanctuaries, Biosphere Reserves).\n• Ex-situ: Conserving outside natural habitat in artificial human-managed facilities (Zoos, Botanical Gardens, Seed Banks)."
-      }
-    ],
-    "IE": [
-      {
-        "id": "FC-M1-IE-01",
-        "subjectId": "IE",
-        "unit": 1,
-        "topic": "Intrapreneur vs Entrepreneur",
-        "highYield": true,
-        "front": "Differentiate Entrepreneur from Intrapreneur.",
-        "back": "• Entrepreneur: Founds and finances an independent new venture, assumes full personal financial risk.\n• Intrapreneur: Innovates and champions new ventures inside an established corporation using corporate capital with mitigated personal financial risk."
-      },
-      {
-        "id": "FC-M1-IE-02",
-        "subjectId": "IE",
-        "unit": 3,
-        "topic": "Product-Market Fit (PMF)",
-        "highYield": true,
-        "front": "What is Product-Market Fit (Marc Andreessen)?",
-        "back": "The stage where a startup has developed a product that satisfies a strong market demand, verified by organic customer pull, high retention, and accelerating referral loops."
-      }
-    ]
-  }
+  "DM": [
+    {
+      "id": "FC-M1-DM-01",
+      "subjectId": "DM",
+      "unit": 1,
+      "topic": "Tautology vs Contradiction",
+      "highYield": true,
+      "front": "What is the difference between a Tautology and a Contradiction?",
+      "back": "• Tautology: Always TRUE under every truth assignment (e.g., $p \\lor \\neg p$).\n• Contradiction: Always FALSE under every truth assignment (e.g., $p \\land \\neg p$)."
+    },
+    {
+      "id": "FC-M1-DM-02",
+      "subjectId": "DM",
+      "unit": 1,
+      "topic": "Modus Ponens vs Modus Tollens",
+      "highYield": true,
+      "front": "State the inference rules for Modus Ponens and Modus Tollens.",
+      "back": "• Modus Ponens: From $p$ and $p \\to q$, conclude $q$.\n• Modus Tollens: From $\\neg q$ and $p \\to q$, conclude $\\neg p$."
+    },
+    {
+      "id": "FC-M1-DM-03",
+      "subjectId": "DM",
+      "unit": 1,
+      "topic": "Principal Normal Forms (PCNF & PDNF)",
+      "highYield": true,
+      "front": "What are PDNF and PCNF in propositional logic?",
+      "back": "• PDNF (Disjunctive): Sum of minterms where formula evaluates to TRUE.\n• PCNF (Conjunctive): Product of maxterms where formula evaluates to FALSE."
+    },
+    {
+      "id": "FC-M1-DM-04",
+      "subjectId": "DM",
+      "unit": 1,
+      "topic": "De Morgan's Laws",
+      "highYield": true,
+      "front": "State De Morgan's Laws for logic and sets.",
+      "back": "• $\\neg (p \\land q) \\equiv \\neg p \\lor \\neg q$\n• $\\neg (p \\lor q) \\equiv \\neg p \\land \\neg q$\n• Sets: $(A \\cap B)' = A' \\cup B'$ and $(A \\cup B)' = A' \\cap B'$."
+    },
+    {
+      "id": "FC-M1-DM-05",
+      "subjectId": "DM",
+      "unit": 1,
+      "topic": "Universal vs Existential Quantifiers",
+      "highYield": true,
+      "front": "How do negations of quantifiers work?",
+      "back": "• $\\neg(\\forall x P(x)) \\equiv \\exists x \\neg P(x)$\n• $\\neg(\\exists x P(x)) \\equiv \\forall x \\neg P(x)$"
+    },
+    {
+      "id": "FC-M1-DM-06",
+      "subjectId": "DM",
+      "unit": 2,
+      "topic": "Equivalence Relation Properties",
+      "highYield": true,
+      "front": "What three properties define an Equivalence Relation?",
+      "back": "1. Reflexive: $(a, a) \\in R$ for all $a \\in A$.\n2. Symmetric: $(a, b) \\in R \\implies (b, a) \\in R$.\n3. Transitive: $(a, b), (b, c) \\in R \\implies (a, c) \\in R$."
+    },
+    {
+      "id": "FC-M1-DM-07",
+      "subjectId": "DM",
+      "unit": 2,
+      "topic": "Partial Order (Poset)",
+      "highYield": true,
+      "front": "What three properties define a Partial Order Relation (Poset)?",
+      "back": "1. Reflexive: $(a, a) \\in R$.\n2. Anti-symmetric: $(a, b) \\in R$ and $(b, a) \\in R \\implies a = b$.\n3. Transitive: $(a, b), (b, c) \\in R \\implies (a, c) \\in R$."
+    },
+    {
+      "id": "FC-M1-DM-08",
+      "subjectId": "DM",
+      "unit": 2,
+      "topic": "Hasse Diagram Rules",
+      "highYield": true,
+      "front": "How is a Hasse Diagram constructed from a Poset?",
+      "back": "• Omit all self-loops (reflexivity implied).\n• Omit all transitive edges (transitivity implied).\n• Draw edges pointing upwards so direction is implicit."
+    },
+    {
+      "id": "FC-M1-DM-09",
+      "subjectId": "DM",
+      "unit": 2,
+      "topic": "Lattice Definition",
+      "highYield": true,
+      "front": "What is a Lattice in discrete mathematics?",
+      "back": "A Poset $(L, \\le)$ where every pair of elements $a, b \\in L$ has:\n• Least Upper Bound: $a \\lor b$ (LUB / Join)\n• Greatest Lower Bound: $a \\land b$ (GLB / Meet)."
+    },
+    {
+      "id": "FC-M1-DM-10",
+      "subjectId": "DM",
+      "unit": 2,
+      "topic": "Principle of Inclusion-Exclusion",
+      "highYield": true,
+      "front": "State the Principle of Inclusion-Exclusion for 2 and 3 sets.",
+      "back": "• $|A \\cup B| = |A| + |B| - |A \\cap B|$\n• $|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |B \\cap C| + |A \\cap C|) + |A \\cap B \\cap C|$."
+    },
+    {
+      "id": "FC-M1-DM-11",
+      "subjectId": "DM",
+      "unit": 3,
+      "topic": "Semigroup vs Monoid",
+      "highYield": true,
+      "front": "What distinguishes a Semigroup from a Monoid?",
+      "back": "• Semigroup $(S, *)$: Closed and Associative: $(a * b) * c = a * (b * c)$.\n• Monoid $(M, *)$: A Semigroup with an Identity element $e$ such that $a * e = e * a = a$."
+    },
+    {
+      "id": "FC-M1-DM-12",
+      "subjectId": "DM",
+      "unit": 3,
+      "topic": "Group Axioms",
+      "highYield": true,
+      "front": "What four axioms must an algebraic system $(G, *)$ satisfy to be a Group?",
+      "back": "1. Closure: $a * b \\in G$.\n2. Associativity: $(a * b) * c = a * (b * c)$.\n3. Identity: $\\exists e \\in G$ such that $a * e = e * a = a$.\n4. Inverse: $\\forall a \\in G, \\exists a^{-1} \\in G$ such that $a * a^{-1} = e$."
+    },
+    {
+      "id": "FC-M1-DM-13",
+      "subjectId": "DM",
+      "unit": 3,
+      "topic": "Abelian Group",
+      "highYield": true,
+      "front": "What additional condition makes a Group an Abelian Group?",
+      "back": "Commutativity: $a * b = b * a$ for all $a, b \\in G$."
+    },
+    {
+      "id": "FC-M1-DM-14",
+      "subjectId": "DM",
+      "unit": 3,
+      "topic": "Lagrange's Theorem",
+      "highYield": true,
+      "front": "State Lagrange's Theorem for finite groups.",
+      "back": "The order of any subgroup $H$ of a finite group $G$ divides the order of $G$:\n$|G| = [G:H] \\times |H|$, where $[G:H]$ is the index of $H$ in $G$."
+    },
+    {
+      "id": "FC-M1-DM-15",
+      "subjectId": "DM",
+      "unit": 3,
+      "topic": "Cosets & Subgroups",
+      "highYield": true,
+      "front": "What is a Left Coset of subgroup $H$ in $G$?",
+      "back": "For $a \\in G$, the left coset $aH = \\{a * h \\mid h \\in H\\}$. Any two cosets are either identical or disjoint."
+    }
+  ],
+  "COA": [
+    {
+      "id": "FC-M1-COA-01",
+      "subjectId": "COA",
+      "unit": 1,
+      "topic": "Von Neumann Architecture vs Harvard",
+      "highYield": true,
+      "front": "Differentiate between Von Neumann and Harvard architecture.",
+      "back": "• Von Neumann: Single shared memory & bus for both data and instructions (Von Neumann bottleneck).\n• Harvard: Separate physical memories and buses for instructions and data (simultaneous fetch & access)."
+    },
+    {
+      "id": "FC-M1-COA-02",
+      "subjectId": "COA",
+      "unit": 1,
+      "topic": "Addressing Modes: Immediate vs Direct vs Indirect",
+      "highYield": true,
+      "front": "Compare Immediate, Direct, and Indirect addressing modes.",
+      "back": "• Immediate: Operand is part of instruction (`ADD #5`).\n• Direct: Address field gives memory address of operand (`ADD 1000`).\n• Indirect: Address field points to memory containing effective address (`ADD @1000`)."
+    },
+    {
+      "id": "FC-M1-COA-03",
+      "subjectId": "COA",
+      "unit": 1,
+      "topic": "Relative & Indexed Addressing Modes",
+      "highYield": true,
+      "front": "How are Effective Addresses calculated in Relative and Indexed addressing?",
+      "back": "• Relative: $EA = PC + \\text{Address Field}$ (used in branch instructions).\n• Indexed: $EA = XR + \\text{Address Field}$ (used for array indexing)."
+    },
+    {
+      "id": "FC-M1-COA-04",
+      "subjectId": "COA",
+      "unit": 1,
+      "topic": "Instruction Formats (3 vs 2 vs 1 vs 0 Address)",
+      "highYield": true,
+      "front": "How do 3, 2, 1, and 0-address machines execute arithmetic?",
+      "back": "• 3-Address: `ADD R1, R2, R3` ($R1 \\leftarrow R2 + R3$)\n• 2-Address: `ADD R1, R2` ($R1 \\leftarrow R1 + R2$)\n• 1-Address: `ADD X` ($AC \\leftarrow AC + M[X]$)\n• 0-Address: `ADD` (Pops top two stack elements, pushes sum)."
+    },
+    {
+      "id": "FC-M1-COA-05",
+      "subjectId": "COA",
+      "unit": 1,
+      "topic": "Big-Endian vs Little-Endian",
+      "highYield": true,
+      "front": "What is the difference between Big-Endian and Little-Endian byte ordering?",
+      "back": "• Big-Endian: Most Significant Byte (MSB) stored at lowest memory address.\n• Little-Endian: Least Significant Byte (LSB) stored at lowest memory address."
+    },
+    {
+      "id": "FC-M1-COA-06",
+      "subjectId": "COA",
+      "unit": 2,
+      "topic": "Hardwired vs Microprogrammed Control Unit",
+      "highYield": true,
+      "front": "Compare Hardwired and Microprogrammed Control Units.",
+      "back": "• Hardwired: Combinational logic gates, faster speed, rigid and difficult to modify.\n• Microprogrammed: Microinstructions stored in Control ROM, slower due to memory access, flexible and easy to update."
+    },
+    {
+      "id": "FC-M1-COA-07",
+      "subjectId": "COA",
+      "unit": 2,
+      "topic": "Control Word in Register Organization",
+      "highYield": true,
+      "front": "What are the components of a CPU Control Word?",
+      "back": "• SELA (3 bits): Selects Source Register A.\n• SELB (3 bits): Selects Source Register B.\n• SELD (3 bits): Selects Destination Register.\n• OPR (5 bits): Selects ALU operation."
+    },
+    {
+      "id": "FC-M1-COA-08",
+      "subjectId": "COA",
+      "unit": 2,
+      "topic": "Stack Organization (Push/Pop)",
+      "highYield": true,
+      "front": "How do Push and Pop operations update the Stack Pointer (SP)?",
+      "back": "• Push: $SP \\leftarrow SP - 1$; $M[SP] \\leftarrow DR$ (for descending stack).\n• Pop: $DR \\leftarrow M[SP]$; $SP \\leftarrow SP + 1$."
+    },
+    {
+      "id": "FC-M1-COA-09",
+      "subjectId": "COA",
+      "unit": 3,
+      "topic": "Register Transfer Language (RTL)",
+      "highYield": true,
+      "front": "Explain the RTL notation: $P: R2 \\leftarrow R1$.",
+      "back": "If control signal $P = 1$, the contents of register $R1$ are transferred into register $R2$ synchronized by the next clock edge."
+    },
+    {
+      "id": "FC-M1-COA-10",
+      "subjectId": "COA",
+      "unit": 3,
+      "topic": "Common Bus System using Multiplexers",
+      "highYield": true,
+      "front": "How many multiplexers and select lines are needed to construct a common bus for 4 registers of 8 bits each?",
+      "back": "• Multiplexers needed: 8 (one per bit position).\n• MUX size: $4 \\times 1$ MUX.\n• Select lines: $\\log_2(4) = 2$ lines ($S_1, S_0$)."
+    },
+    {
+      "id": "FC-M1-COA-11",
+      "subjectId": "COA",
+      "unit": 3,
+      "topic": "Three-State Bus Buffers",
+      "highYield": true,
+      "front": "What are the three states of a Tri-State Buffer?",
+      "back": "1. Logic 0 (low impedance).\n2. Logic 1 (low impedance).\n3. High-Impedance State (Hi-Z): open circuit, effectively disconnected from the shared bus."
+    },
+    {
+      "id": "FC-M1-COA-12",
+      "subjectId": "COA",
+      "unit": 3,
+      "topic": "Shift Micro-operations: Logical vs Circular vs Arithmetic",
+      "highYield": true,
+      "front": "Differentiate between Logical, Circular, and Arithmetic Shifts.",
+      "back": "• Logical Shift: Transfers 0 into serial input (shl/shr).\n• Circular Shift (Rotate): Bit shifted out enters opposite end (cil/cir).\n• Arithmetic Shift: Shifts signed binary number; left shift checks overflow ($V$), right shift preserves sign bit."
+    },
+    {
+      "id": "FC-M1-COA-13",
+      "subjectId": "COA",
+      "unit": 3,
+      "topic": "Arithmetic Logic Shift Unit (ALSU)",
+      "highYield": true,
+      "front": "What operations are integrated into a single ALSU stage?",
+      "back": "Arithmetic operations (Add, Sub, Inc, Dec), Logic operations (AND, OR, XOR, NOT), and Shift operations (shl, shr) selected via common function select lines ($S_3, S_2, S_1, S_0$)."
+    }
+  ],
+  "OOPJ": [
+    {
+      "id": "FC-M1-OOPJ-01",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topic": "Four Core OOP Pillars",
+      "highYield": true,
+      "front": "Name and define the four fundamental OOP principles in Java.",
+      "back": "1. Encapsulation: Binding data & methods into a class; data hiding via `private`.\n2. Inheritance: Reusability of parent attributes & methods via `extends`.\n3. Polymorphism: Same interface, different behavior (Overloading & Overriding).\n4. Abstraction: Hiding internal complexity, showing essential features (`abstract` class, `interface`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-02",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topic": "JVM vs JRE vs JDK",
+      "highYield": true,
+      "front": "Distinguish between JVM, JRE, and JDK.",
+      "back": "• JVM: Abstract engine that interprets/JIT-compiles bytecode into native machine code.\n• JRE: JVM + core Java class libraries (runs Java programs).\n• JDK: JRE + development tools (`javac`, `javadoc`, debugger)."
+    },
+    {
+      "id": "FC-M1-OOPJ-03",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topic": "Type Casting (Widening vs Narrowing)",
+      "highYield": true,
+      "front": "What is the difference between Widening and Narrowing conversion in Java?",
+      "back": "• Widening (Implicit): Smaller type to larger type (`int` to `double`); safe, no data loss.\n• Narrowing (Explicit): Larger type to smaller type (`double` to `int`); requires explicit cast `(int)d`, potential precision loss."
+    },
+    {
+      "id": "FC-M1-OOPJ-04",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topic": "Method Overloading vs Overriding",
+      "highYield": true,
+      "front": "Compare Method Overloading and Method Overriding in Java.",
+      "back": "• Overloading: Same class, same name, different parameter signature; Compile-time polymorphism.\n• Overriding: Parent & Child classes, same name and identical signature; Runtime polymorphism (`@Override`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-05",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topic": "The `this` and `super` Keywords",
+      "highYield": true,
+      "front": "What are the primary uses of `this` and `super` in Java?",
+      "back": "• `this`: Refers to current object instance; resolves variable shadowing (`this.x = x`) and constructor chaining (`this()`).\n• `super`: Refers to direct superclass; calls parent constructor (`super()`) and parent overridden methods (`super.show()`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-06",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topic": "Abstract Class vs Interface",
+      "highYield": true,
+      "front": "Key differences between Abstract Classes and Interfaces in Java (Java 8+).",
+      "back": "• Abstract Class: Can have state (instance variables) and constructors; single inheritance (`extends`).\n• Interface: Variables are `public static final`; multiple inheritance (`implements`); can have `default` & `static` methods."
+    },
+    {
+      "id": "FC-M1-OOPJ-07",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topic": "The `final` Keyword",
+      "highYield": true,
+      "front": "What happens when `final` is applied to a Variable, Method, or Class?",
+      "back": "• `final` Variable: Constant value, cannot be reassigned.\n• `final` Method: Cannot be overridden in subclasses.\n• `final` Class: Cannot be inherited (e.g., `java.lang.String`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-08",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topic": "Checked vs Unchecked Exceptions",
+      "highYield": true,
+      "front": "Distinguish between Checked and Unchecked Exceptions in Java.",
+      "back": "• Checked: Subclasses of `Exception` (excluding `RuntimeException`); verified at compile time (`IOException`, `SQLException`); must be handled or declared.\n• Unchecked: Subclasses of `RuntimeException` and `Error`; occur at runtime (`NullPointerException`, `ArrayIndexOutOfBoundsException`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-09",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topic": "`throw` vs `throws`",
+      "highYield": true,
+      "front": "Compare the `throw` and `throws` keywords in Java.",
+      "back": "• `throw`: Explicitly triggers an exception instance inside a method body (`throw new ArithmeticException(\"Divide by zero\");`).\n• `throws`: Declared in method signature to indicate exceptions the method may pass to its caller (`void read() throws IOException`)."
+    },
+    {
+      "id": "FC-M1-OOPJ-10",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topic": "The `finally` Block Guarantee",
+      "highYield": true,
+      "front": "When does the `finally` block execute in Java?",
+      "back": "Always executes whether an exception is thrown, caught, or unhandled, even after a `return` statement. Only bypassed if `System.exit(0)` is invoked or JVM crashes."
+    },
+    {
+      "id": "FC-M1-OOPJ-11",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topic": "Custom User-Defined Exception",
+      "highYield": true,
+      "front": "How do you create a custom exception class in Java?",
+      "back": "Extend `Exception` (for checked) or `RuntimeException` (for unchecked) and pass message to `super(message)`:\n```java\nclass InvalidAgeException extends Exception {\n  public InvalidAgeException(String msg) { super(msg); }\n}\n```"
+    }
+  ],
+  "DBMS": [
+    {
+      "id": "FC-M1-DBMS-01",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topic": "Three-Schema Architecture & Data Independence",
+      "highYield": true,
+      "front": "What are the three levels of database architecture and types of data independence?",
+      "back": "• Levels: External (Views) $\\to$ Conceptual (Logical schema) $\\to$ Internal (Physical storage).\n• Logical Independence: Conceptual schema changed without modifying user views.\n• Physical Independence: Internal storage changed without modifying conceptual schema."
+    },
+    {
+      "id": "FC-M1-DBMS-02",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topic": "Primary Key vs Unique Key vs Super Key",
+      "highYield": true,
+      "front": "Differentiate between Super Key, Candidate Key, and Primary Key.",
+      "back": "• Super Key: Any set of attributes uniquely identifying a tuple.\n• Candidate Key: Minimal Super Key (no redundant attributes).\n• Primary Key: Candidate key chosen by DBA; MUST be unique and NOT NULL."
+    },
+    {
+      "id": "FC-M1-DBMS-03",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topic": "ER Model: Cardinality & Participation",
+      "highYield": true,
+      "front": "Explain Mapping Cardinality and Participation Constraints in ER diagrams.",
+      "back": "• Cardinality: 1:1, 1:N, N:1, M:N relationships.\n• Participation: Total (double line, every entity participates) vs Partial (single line, optional participation)."
+    },
+    {
+      "id": "FC-M1-DBMS-04",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topic": "Relational Integrity Constraints",
+      "highYield": true,
+      "front": "What are the three core integrity constraints in relational databases?",
+      "back": "1. Domain Constraint: Values must belong to the valid attribute domain.\n2. Entity Integrity: Primary key attributes cannot contain NULL values.\n3. Referential Integrity: Foreign key value must match an existing primary key value or be NULL."
+    },
+    {
+      "id": "FC-M1-DBMS-05",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topic": "Fundamental Relational Algebra Operations",
+      "highYield": true,
+      "front": "List the 5 basic operations of Relational Algebra.",
+      "back": "1. Selection ($\\sigma$): Filters rows meeting condition.\n2. Projection ($\\pi$): Filters columns.\n3. Union ($\\cup$): Combines tuples from two union-compatible relations.\n4. Set Difference ($-$).\n5. Cartesian Product ($\\times$)."
+    },
+    {
+      "id": "FC-M1-DBMS-06",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topic": "Natural Join vs Theta Join",
+      "highYield": true,
+      "front": "What is the difference between Natural Join and Theta Join?",
+      "back": "• Natural Join ($R \\bowtie S$): Equi-join on all common attributes, eliminating duplicate attribute columns.\n• Theta Join ($R \\bowtie_\\theta S$): Join based on arbitrary comparison condition ($\\theta \\in \\{<, \\le, =, \\ne, >, \\ge\\}$); keeps both columns."
+    },
+    {
+      "id": "FC-M1-DBMS-07",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topic": "SQL Joins: Inner vs Outer (Left, Right, Full)",
+      "highYield": true,
+      "front": "Distinguish between Inner Join and Outer Joins in SQL.",
+      "back": "• Inner Join: Returns only rows with matching values in both tables.\n• Left Outer Join: Returns all rows from left table + matched rows from right (unmatched right filled with NULLs).\n• Right Outer Join: Returns all from right table.\n• Full Outer Join: Returns all rows from both tables."
+    },
+    {
+      "id": "FC-M1-DBMS-08",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topic": "WHERE vs HAVING Clause",
+      "highYield": true,
+      "front": "What is the difference between WHERE and HAVING in SQL?",
+      "back": "• WHERE: Filters individual rows BEFORE aggregation (`GROUP BY`); cannot use aggregate functions.\n• HAVING: Filters grouped sets AFTER aggregation; can use aggregate functions (`HAVING COUNT(*) > 5`)."
+    },
+    {
+      "id": "FC-M1-DBMS-09",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topic": "SQL Triggers (ECA Architecture)",
+      "highYield": true,
+      "front": "Explain the Event-Condition-Action (ECA) rule in SQL Triggers.",
+      "back": "• Event: Database operation (INSERT, UPDATE, DELETE).\n• Condition: Boolean check evaluated when event occurs.\n• Action: Procedural SQL block executed if condition holds (BEFORE or AFTER event, FOR EACH ROW)."
+    }
+  ],
+  "SE": [
+    {
+      "id": "FC-M1-SE-01",
+      "subjectId": "SE",
+      "unit": 1,
+      "topic": "Waterfall vs Agile Scrum",
+      "highYield": true,
+      "front": "Compare the Waterfall model with Agile Scrum.",
+      "back": "• Waterfall: Linear, sequential phases; rigid; working software delivered late; high documentation.\n• Agile Scrum: Iterative, sprint-based (2–4 weeks); welcomes changing requirements; working software delivered continuously."
+    },
+    {
+      "id": "FC-M1-SE-02",
+      "subjectId": "SE",
+      "unit": 1,
+      "topic": "Spiral Model Risk Driven Engineering",
+      "highYield": true,
+      "front": "What are the four quadrants of Boehm's Spiral Model?",
+      "back": "1. Determine objectives, alternatives, and constraints.\n2. Risk analysis and evaluation of alternatives.\n3. Engineering, development, and testing of current prototype.\n4. Planning the next phase with customer review."
+    },
+    {
+      "id": "FC-M1-SE-03",
+      "subjectId": "SE",
+      "unit": 1,
+      "topic": "Functional vs Non-Functional Requirements",
+      "highYield": true,
+      "front": "Differentiate Functional and Non-Functional Requirements.",
+      "back": "• Functional: Specific services/behaviors system must perform (e.g., 'System shall process credit card payments').\n• Non-Functional: Quality attributes & constraints (Performance, Security, Reliability, Usability)."
+    },
+    {
+      "id": "FC-M1-SE-04",
+      "subjectId": "SE",
+      "unit": 2,
+      "topic": "Characteristics of a Good SRS Document (IEEE 830)",
+      "highYield": true,
+      "front": "List five essential quality criteria of an IEEE 830 SRS document.",
+      "back": "1. Correct: Accurately reflects stakeholder needs.\n2. Unambiguous: Exactly one interpretation per requirement.\n3. Complete: Covers all functional & quality specs.\n4. Consistent: No contradictory requirements.\n5. Verifiable / Testable: Quantifiable acceptance tests exist."
+    },
+    {
+      "id": "FC-M1-SE-05",
+      "subjectId": "SE",
+      "unit": 2,
+      "topic": "Use Case Relationships: <<include>> vs <<extend>>",
+      "highYield": true,
+      "front": "Explain <<include>> and <<extend>> relationships in UML Use Case diagrams.",
+      "back": "• <<include>>: Mandatory sub-flow; base use case cannot complete without it (e.g., 'Make Payment' <<include>> 'Authenticate User').\n• <<extend>>: Optional or conditional behavior added at an extension point (e.g., 'Checkout' <<extend>> 'Apply Promo Coupon')."
+    },
+    {
+      "id": "FC-M1-SE-06",
+      "subjectId": "SE",
+      "unit": 3,
+      "topic": "Cohesion vs Coupling",
+      "highYield": true,
+      "front": "Define Cohesion and Coupling. What is ideal in software design?",
+      "back": "• Cohesion: Degree of functional relatedness among elements within a module (High Cohesion is desired).\n• Coupling: Degree of interdependence between different modules (Low Coupling is desired).\n• Golden Rule: High Cohesion and Low Coupling."
+    },
+    {
+      "id": "FC-M1-SE-07",
+      "subjectId": "SE",
+      "unit": 3,
+      "topic": "Architectural Styles (Layered vs Pipe-and-Filter)",
+      "highYield": true,
+      "front": "Compare Layered and Pipe-and-Filter architectural styles.",
+      "back": "• Layered: Modules organized hierarchically; each layer provides services only to the layer above it (e.g., Presentation, Business, Data layers).\n• Pipe-and-Filter: Data streams through successive transformation filters via pipes (e.g., Unix compilers, image processing pipelines)."
+    }
+  ],
+  "ES": [
+    {
+      "id": "FC-M1-ES-01",
+      "subjectId": "ES",
+      "unit": 1,
+      "topic": "Structure of an Ecosystem",
+      "highYield": true,
+      "front": "What are the biotic and abiotic components of an ecosystem?",
+      "back": "• Biotic: Producers (Autotrophs), Consumers (Herbivores, Carnivores, Omnivores), Decomposers (Saprotrophs).\n• Abiotic: Climatic factors (light, temperature, moisture), Edaphic factors (soil, minerals), inorganic substances."
+    },
+    {
+      "id": "FC-M1-ES-02",
+      "subjectId": "ES",
+      "unit": 1,
+      "topic": "10% Law of Energy Transfer",
+      "highYield": true,
+      "front": "State Lindeman's 10% Law in ecological energy flow.",
+      "back": "Only approximately 10% of energy transferred from one trophic level is stored as biomass in the next trophic level; the remaining 90% is dissipated as metabolic heat."
+    },
+    {
+      "id": "FC-M1-ES-03",
+      "subjectId": "ES",
+      "unit": 1,
+      "topic": "Ecological Pyramids (Energy Pyramid Inversion?)",
+      "highYield": true,
+      "front": "Can a Pyramid of Energy ever be inverted? Explain.",
+      "back": "NO. A Pyramid of Energy is ALWAYS upright, because energy is continuously lost as heat at each successive trophic level according to the Second Law of Thermodynamics."
+    },
+    {
+      "id": "FC-M1-ES-04",
+      "subjectId": "ES",
+      "unit": 2,
+      "topic": "Renewable vs Non-Renewable Energy Resources",
+      "highYield": true,
+      "front": "Compare Renewable and Non-Renewable Energy Resources with examples.",
+      "back": "• Renewable: Replenished naturally in short cycles; eco-friendly (Solar, Wind, Hydroelectric, Geothermal, Biomass).\n• Non-Renewable: Finite geological reserves; emit greenhouse gases upon combustion (Coal, Petroleum, Natural Gas, Nuclear Uranium)."
+    },
+    {
+      "id": "FC-M1-ES-05",
+      "subjectId": "ES",
+      "unit": 3,
+      "topic": "Three Levels of Biodiversity",
+      "highYield": true,
+      "front": "Define Genetic, Species, and Ecosystem diversity.",
+      "back": "1. Genetic: Variation of genes within a single species (e.g., 50,000+ strains of rice in India).\n2. Species: Variety of distinct species within a habitat (Species richness).\n3. Ecosystem: Variety of habitats, biotic communities, and ecological niches (e.g., forests, coral reefs, deserts)."
+    },
+    {
+      "id": "FC-M1-ES-06",
+      "subjectId": "ES",
+      "unit": 3,
+      "topic": "Consumptive vs Productive Use Value of Biodiversity",
+      "highYield": true,
+      "front": "Distinguish between Consumptive and Productive use values of biodiversity.",
+      "back": "• Consumptive Use: Direct local consumption without commercial market sale (fuelwood, fodder, wild fruits).\n• Productive Use: Commercial exploitation for national/international markets (timber, pharmaceuticals, paper pulp, ivory, silk)."
+    }
+  ],
+  "IE": [
+    {
+      "id": "FC-M1-IE-01",
+      "subjectId": "IE",
+      "unit": 1,
+      "topic": "Types of Innovation",
+      "highYield": true,
+      "front": "Differentiate between Incremental and Disruptive Innovation.",
+      "back": "• Incremental: Small continuous improvements to existing products/technologies (e.g., iPhone camera upgrades).\n• Disruptive: Creates entirely new markets and value networks, eventually displacing established leaders (e.g., Netflix streaming displacing Blockbuster)."
+    },
+    {
+      "id": "FC-M1-IE-02",
+      "subjectId": "IE",
+      "unit": 1,
+      "topic": "Five Stages of Design Thinking",
+      "highYield": true,
+      "front": "List the 5 sequential phases of Stanford's Design Thinking methodology.",
+      "back": "1. Empathize: Understand user needs through observation & interviews.\n2. Define: Synthesize insights into a user-centric problem statement.\n3. Ideate: Brainstorm creative solutions.\n4. Prototype: Build low-cost physical/digital representations.\n5. Test: Validate with real users."
+    },
+    {
+      "id": "FC-M1-IE-03",
+      "subjectId": "IE",
+      "unit": 2,
+      "topic": "Business Model Canvas (BMC) Core Blocks",
+      "highYield": true,
+      "front": "What are the 9 building blocks of Alexander Osterwalder's Business Model Canvas?",
+      "back": "1. Customer Segments, 2. Value Propositions, 3. Channels, 4. Customer Relationships, 5. Revenue Streams, 6. Key Resources, 7. Key Activities, 8. Key Partnerships, 9. Cost Structure."
+    },
+    {
+      "id": "FC-M1-IE-04",
+      "subjectId": "IE",
+      "unit": 3,
+      "topic": "Market Sizing: TAM vs SAM vs SOM",
+      "highYield": true,
+      "front": "Explain TAM, SAM, and SOM in startup market opportunity sizing.",
+      "back": "• TAM (Total Addressable Market): Total global market demand for the product/service category.\n• SAM (Serviceable Available Market): Portion of TAM targeted within reach of geographical & business model scope.\n• SOM (Serviceable Obtainable Market): Realistic market share captured in the near term (3–5 years)."
+    },
+    {
+      "id": "FC-M1-IE-05",
+      "subjectId": "IE",
+      "unit": 3,
+      "topic": "Minimum Viable Product (MVP)",
+      "highYield": true,
+      "front": "What is an MVP according to Eric Ries' Lean Startup?",
+      "back": "The version of a new product that allows a team to collect the maximum amount of validated learning about customers with the least effort and resource expenditure."
+    }
+  ]
+}
 };
 
 if (typeof window !== 'undefined') {

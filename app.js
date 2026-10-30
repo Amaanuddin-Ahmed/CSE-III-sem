@@ -488,9 +488,9 @@
     const map = (typeof window !== 'undefined' && window.EXAM_CONFIG) ? window.EXAM_CONFIG : null;
     if (map && map[examId]) return map[examId];
     const fallbackLabels = {
-      mid1: { name: 'Mid-1', unitsLabel: 'Units 1–2 + Unit 3 (1st half)' },
-      mid2: { name: 'Mid-2', unitsLabel: 'Unit 3 (2nd half) + Units 4–5' },
-      sem: { name: 'Semester End', unitsLabel: 'All 5 Units' }
+      mid1: { name: 'Mid-1', bannerSubtitle: "Only what’s in your Mid-1 syllabus", unitsLabel: 'Units 1–2 + Unit 3 (1st half)' },
+      mid2: { name: 'Mid-2', bannerSubtitle: "Only what’s in your Mid-2 syllabus", unitsLabel: 'Unit 3 (2nd half) + Units 4–5' },
+      sem: { name: 'Semester End', bannerSubtitle: "Complete semester-end syllabus", unitsLabel: 'All 5 Units' }
     };
     return Object.assign({ id: examId, bannerSubtitle: "Only what’s in your syllabus" }, fallbackLabels[examId] || fallbackLabels.mid2);
   }
@@ -2206,8 +2206,10 @@
   // -------------------------------------------------------------
   function openGeminiModal() {
     if (!el.geminiModal) return;
+    state.preAiScrollY = window.scrollY || 0;
     el.geminiModal.style.display = 'flex';
     document.body.classList.add('ai-modal-open');
+    document.documentElement.classList.add('ai-modal-open');
     if (!state.activeChatId || !state.geminiChats.find(c => c.id === state.activeChatId)) {
       loadGeminiChats();
     } else {
@@ -2223,7 +2225,11 @@
     if (!el.geminiModal) return;
     el.geminiModal.style.display = 'none';
     document.body.classList.remove('ai-modal-open');
+    document.documentElement.classList.remove('ai-modal-open');
     closeGeminiSidebar();
+    if (typeof state.preAiScrollY === 'number') {
+      window.scrollTo({ top: state.preAiScrollY, left: 0, behavior: 'auto' });
+    }
   }
 
   function updateAiModelLabel() {
@@ -2236,6 +2242,8 @@
 
   function setAiBusy(busy) {
     state.aiBusy = Boolean(busy);
+    document.body.classList.toggle('ai-running', state.aiBusy);
+    document.documentElement.classList.toggle('ai-running', state.aiBusy);
     if (el.geminiSendBtn) {
       el.geminiSendBtn.disabled = state.aiBusy;
       el.geminiSendBtn.setAttribute('aria-busy', state.aiBusy ? 'true' : 'false');

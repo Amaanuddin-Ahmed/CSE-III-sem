@@ -8807,8 +8807,38 @@ body.tour-active {
   #geminiModal .modal-close-btn { width: 44px; height: 44px; }
 }
 
+html.ai-modal-open,
 body.ai-modal-open {
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100% !important;
+  overscroll-behavior: contain !important;
+  touch-action: none !important;
+}
+
+body.ai-modal-open .main-container,
+body.ai-modal-open .site-header,
+body.ai-modal-open .site-footer,
+body.ai-modal-open .exam-active-banner,
+body.ai-modal-open .practice-fun-division {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+body.ai-running {
+  cursor: wait !important;
+}
+
+#geminiModal {
+  touch-action: auto !important;
+  overscroll-behavior: contain !important;
+}
+
+#geminiModal .gemini-app-layout,
+#geminiModal .gemini-chat-area,
+#geminiModal .gemini-chat-output,
+#geminiModal .gemini-history-sidebar {
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 /* --- Question cards & chapter controls -------------------------------- */

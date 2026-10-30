@@ -17,7 +17,7 @@ const EXAM_CONFIG = {
       unitsLabel: 'Units 1–2 + Unit 3 (1st half)',
       badge: null,
       description: 'Revise your first internal examination syllabus.',
-      bannerSubtitle: "Units 1–2 + Unit 3 (1st half) · Only what’s in your Mid-1 syllabus",
+      bannerSubtitle: "Only what’s in your Mid-1 syllabus",
       units: [1, 2, 3],
       unit3Scope: 'mid1',
       unit3Label: 'Unit 3 (1st half)'
@@ -29,7 +29,7 @@ const EXAM_CONFIG = {
       unitsLabel: 'Unit 3 (2nd half) + Units 4–5',
       badge: 'Upcoming',
       description: 'Focus on the upcoming internal examination.',
-      bannerSubtitle: "Unit 3 (2nd half) + Units 4–5 · Only what’s in your Mid-2 syllabus",
+      bannerSubtitle: "Only what’s in your Mid-2 syllabus",
       units: [3, 4, 5],
       unit3Scope: 'mid2',
       unit3Label: 'Unit 3 (2nd half)'
@@ -41,7 +41,7 @@ const EXAM_CONFIG = {
       unitsLabel: 'All 5 Units',
       badge: null,
       description: 'Prepare across the complete semester syllabus.',
-      bannerSubtitle: 'Units 1–5 · Complete semester-end syllabus',
+      bannerSubtitle: "Complete semester-end syllabus",
       units: [1, 2, 3, 4, 5],
       unit3Scope: 'both',
       unit3Label: 'Unit 3'

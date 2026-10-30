@@ -6,29 +6,17 @@
  * It is never sent to, or stored in, the browser bundle.
  */
 
-const SYSTEM_INSTRUCTION = `You are the MGIT PYQ Hub AI Study Assistant, dedicated to providing thorough, accurate, and deeply structured academic answers for MGIT CSE students following the MR-25 regulation.
+const SYSTEM_INSTRUCTION = `You are a helpful, fast, and structured academic study assistant for university students studying computer science and engineering (MR-25 regulation).
 
-Subjects in this hub:
-1. Discrete Mathematics (DM)
-2. Computer Organization & Architecture (COA)
-3. Object-Oriented Programming through Java (OOPJ)
-4. Database Management Systems (DBMS)
-5. Software Engineering (SE)
-6. Environmental Studies (ES)
-7. Innovation and Entrepreneurship (I&E)
-
-Answering Standards:
-- Answer the student's question comprehensively, accurately, and with full academic depth. Do NOT artificially truncate explanations.
-- Structure answers clearly with Markdown headings (###), bold key terms, numbered steps, comparison tables, and bullet points.
-- For 5-mark and 10-mark university questions, provide complete long-form answers:
-  1. Formal definition and domain context.
-  2. Core architecture, mechanism, or lifecycle breakdown.
-  3. Formatted tables, complete code snippets (with explanations of critical lines), or textual block diagram walkthroughs.
-  4. Real-world application example or university exam key takeaway.
-- For mathematical and algorithmic subjects (DM, COA, DBMS algorithms): show the complete step-by-step intermediate calculations and state the final result explicitly.
-- Provide clean, compile-ready, commented Java or SQL code without placeholders.
-- Do NOT add disclaimers telling the user to "verify against your notes" or "check with your notes". Provide authoritative, verified answers directly.
-- Answer as a patient expert professor/tutor: professional, encouraging, clear, and focused.`;
+Key Principles:
+- Provide clear, direct, and well-structured medium-length academic explanations without unnecessary repetitive self-identifying phrases (do not repeatedly announce yourself as an AI or mention hub names).
+- Organize responses with concise Markdown headings (###), bold key terms, clean bullet points, or step-by-step procedures.
+- When an exam question specifies marks (e.g. 2 Marks vs 5/10 Marks):
+  * For 2-mark questions: Provide concise, high-yield definitions or core formulas in 2-4 lines.
+  * For 5-mark and 10-mark questions: Provide a well-structured medium-length response with formal definitions, key points, short illustrative examples or code snippets, and essential takeaways.
+- For mathematical or algorithmic problems (DM, COA, DBMS): Show clear step-by-step calculations and state the final result explicitly.
+- Provide clean, commented Java, C, or SQL snippets where relevant.
+- Keep the tone polite, knowledgeable, direct, and encouraging like the official Gemini application.`;
 
 function buildContents(history, query) {
   const turns = [];
@@ -71,19 +59,19 @@ export default async function handler(req, res) {
     });
   }
 
-  // Small best-effort rate limit; serverless instances keep their own counter.
+  // Small best-effort rate limit: 5 requests per minute per IP to protect quota
   const ip = String(req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown')
     .split(',')[0]
     .trim();
   const now = Date.now();
   const WINDOW_MS = 60_000;
-  const MAX_REQUESTS = 12;
+  const MAX_REQUESTS = 5;
   if (!globalThis.__mgitAiHits) globalThis.__mgitAiHits = new Map();
   const hits = (globalThis.__mgitAiHits.get(ip) || []).filter(t => now - t < WINDOW_MS);
   if (hits.length >= MAX_REQUESTS) {
     return res.status(429).json({
       error: 'AI_RATE_LIMITED',
-      message: 'You are asking very fast. Please wait a minute and try again.',
+      message: 'You have reached the limit of 5 requests per minute. You can continue using your own Gemini or ChatGPT.',
     });
   }
   hits.push(now);
@@ -130,12 +118,11 @@ export default async function handler(req, res) {
     });
   }
 
-  const context = subject ? `The student selected this context: ${subject}.\n` : '';
+  const context = subject ? `Context: Academic subject ${subject}.\n` : '';
   const systemInstruction = `${SYSTEM_INSTRUCTION}\n\n${context}`;
 
-  // Current, publicly available Gemini text models. Earlier ids in this file
-  // did not exist, which is why every request failed.
-  const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-flash-lite', 'gemini-flash-latest'];
+  // Current, publicly available Gemini models (Gemini 3.8 Flash primary)
+  const models = ['gemini-3.8-flash', 'gemini-3.8-flash-lite', 'gemini-2.5-flash', 'gemini-flash-latest'];
   let lastStatus = 502;
 
   for (const model of models) {
@@ -152,7 +139,7 @@ export default async function handler(req, res) {
             body: JSON.stringify({
               contents,
               systemInstruction: { parts: [{ text: systemInstruction }] },
-              generationConfig: { temperature: 0.15, maxOutputTokens: 8192, topP: 0.8 },
+              generationConfig: { temperature: 0.2, maxOutputTokens: 2048, topP: 0.8 },
             }),
           }
         );
@@ -196,7 +183,7 @@ export default async function handler(req, res) {
   return res.status(quota ? 429 : 502).json({
     error: quota ? 'AI_QUOTA_EXCEEDED' : 'AI_UPSTREAM_ERROR',
     message: quota
-      ? 'The AI assistant has reached its request limit for now. Please try again in a minute.'
+      ? 'The AI assistant has reached its request limit for now. Please wait a minute or continue with your own Gemini / ChatGPT.'
       : 'The AI assistant could not generate an answer right now. Please try again.',
   });
 }

@@ -116,7 +116,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
     "pyqsUrl": "https://drive.google.com/drive/folders/1Z10FnEOqw_lIvkt3XtAyhurcP0aWerKv",
     "paperCount": 15,
-    "notesCount": 0,
+    "notesCount": 5,
     "chapters": {
       "1": "Software Process Models, Waterfall, Agile Scrum & Requirements Engineering",
       "2": "System Analysis, Use Case Modeling & SRS Documentation",
@@ -518,6 +518,61 @@ const NOTES_DATA = [
     "driveFileId": "1pO5fXmb2X983Bb_eOtThPVe37iIb2594",
     "folderUrl": "https://drive.google.com/drive/folders/1Ac3gEX38khTx85EGXGqoXxUPjwkJKcOx",
     "description": "Unit 5 notes shared in the I&E Drive folder."
+  },
+  {
+    "id": "NOTE-SE-01",
+    "subjectId": "SE",
+    "chapter": 1,
+    "title": "SE Unit 1: Software Process & Agile Engineering",
+    "fileName": "Unit 1.pdf",
+    "fileSize": "1.2 MB",
+    "driveFileId": "16NMgNgNn5xSDjO-bmsWwyz8X8j_lqsaS",
+    "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
+    "description": "Comprehensive lecture notes on Software Process Models, Waterfall, Agile Scrum, Sprint lifecycles, and Requirements Engineering."
+  },
+  {
+    "id": "NOTE-SE-02",
+    "subjectId": "SE",
+    "chapter": 2,
+    "title": "SE Unit 2: Requirements Analysis & Specification",
+    "fileName": "Unit 2.pdf",
+    "fileSize": "880 KB",
+    "driveFileId": "1HVylHb8VrcYuaN1L_0ZusEtYrirospW_",
+    "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
+    "description": "Requirements engineering lifecycle, elicitation, functional & non-functional requirements, use-case models, and SRS documentation standards."
+  },
+  {
+    "id": "NOTE-SE-03",
+    "subjectId": "SE",
+    "chapter": 3,
+    "title": "SE Unit 3: Software Design Engineering & Architecture",
+    "fileName": "Unit 3.pdf",
+    "fileSize": "1.1 MB",
+    "driveFileId": "197AalP7BQPnoIA8MsJsN70J8SQO3S7rL",
+    "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
+    "description": "Design concepts, modular decomposition, coupling & cohesion analysis, architectural patterns, and structural UML modeling."
+  },
+  {
+    "id": "NOTE-SE-04",
+    "subjectId": "SE",
+    "chapter": 4,
+    "title": "SE Unit 4: Software Testing Strategies & Metrics",
+    "fileName": "Unit 4.pdf",
+    "fileSize": "629 KB",
+    "driveFileId": "128-l9SFP98l4VoHkyMQfi8KkdpKDEDRe",
+    "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
+    "description": "Software testing techniques, White-box basis path testing, cyclomatic complexity calculations, Black-box equivalence partitioning, and boundary value analysis."
+  },
+  {
+    "id": "NOTE-SE-05",
+    "subjectId": "SE",
+    "chapter": 5,
+    "title": "SE Unit 5: Quality Assurance, COCOMO & Maintenance",
+    "fileName": "Unit 5.pdf",
+    "fileSize": "272 KB",
+    "driveFileId": "1RmxjuX5Yv4b9LPSZXWyfstSmEkGAgl-9",
+    "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
+    "description": "Software quality assurance (SQA), ISO 9000 & CMMI frameworks, COCOMO effort estimation formulas, risk management, and software maintenance."
   }
 ];
 
