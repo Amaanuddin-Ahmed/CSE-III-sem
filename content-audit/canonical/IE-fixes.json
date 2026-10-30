@@ -1,0 +1,525 @@
+{
+  "IE-SEM-001": {
+    "unit": 2,
+    "topicId": "IE.U2.T07",
+    "topic": "Design thinking stages",
+    "question": "What are the five stages of the design thinking process?",
+    "options": [
+      "Plan, Code, Test, Deploy, Maintain",
+      "Attract, Engage, Convert, Retain, Delight",
+      "Discover, Fund, File, Sell, Exit",
+      "Empathize, Define, Ideate, Prototype, Test"
+    ],
+    "answerIndex": 3,
+    "difficulty": "easy",
+    "explanation": "Design thinking moves from empathising with users to defining the problem, ideating solutions, prototyping and testing them."
+  },
+  "IE-SEM-002": {
+    "unit": 3,
+    "scope": "mid2",
+    "topicId": "IE.U3.T05",
+    "topic": "Minimum viable product",
+    "question": "A version of a product that allows a team to collect the maximum validated learning with the least effort is called a minimum _______ product.",
+    "accepted": ["viable", "viable product"],
+    "difficulty": "easy",
+    "explanation": "An MVP tests the core value hypothesis with real users before the team invests in a full product."
+  },
+  "IE-SEM-003": {
+    "topicId": "IE.U2.T03",
+    "topic": "Problem-customer fit",
+    "question": "Which activity is the most direct way to validate problem-customer fit?",
+    "options": [
+      "Interviewing target customers about the problem and current alternatives",
+      "Writing more code before talking to users",
+      "Designing a logo and choosing office space",
+      "Registering the company before testing demand"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "Direct customer interviews reveal whether the problem is real, urgent and currently solved poorly, which is the core evidence for problem-customer fit."
+  },
+  "IE-SEM-004": {
+    "topicId": "IE.U2.T03",
+    "topic": "Iterating problem-customer fit",
+    "question": "After customer interviews show that the original pain point is not urgent, the team should revise the problem _______ and target segment.",
+    "accepted": ["statement", "definition"],
+    "difficulty": "medium",
+    "explanation": "Iteration means updating the problem statement and segment until the evidence shows a real, prioritised customer need."
+  },
+  "IE-M2-001": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas blocks",
+    "question": "How many blocks does the Lean Canvas use to summarise a startup?",
+    "options": ["9", "5", "7", "12"],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "The Lean Canvas uses nine blocks, including Problem, Solution, Key Metrics, Cost Structure and Unfair Advantage."
+  },
+  "IE-M2-002": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Unique value proposition",
+    "question": "In the Lean Canvas, the block that states why the product is different and worth buying is the Unique _______ Proposition.",
+    "accepted": ["Value", "value"],
+    "difficulty": "easy",
+    "explanation": "The Unique Value Proposition states the single clear reason a customer should choose this product over alternatives."
+  },
+  "IE-M2-003": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas customer segments",
+    "question": "Which Lean Canvas block defines the groups of people the venture aims to serve?",
+    "options": [
+      "Customer Segments",
+      "Key Metrics",
+      "Cost Structure",
+      "Unfair Advantage"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "Customer Segments identifies the target users and buyers, which anchors the rest of the canvas."
+  },
+  "IE-M2-004": {
+    "unit": 3,
+    "scope": "mid1",
+    "topicId": "IE.U3.T02",
+    "topic": "SOM",
+    "question": "The portion of the serviceable market that a startup can realistically win is called the _______.",
+    "accepted": ["SOM", "serviceable obtainable market"],
+    "difficulty": "medium",
+    "explanation": "SOM is the serviceable obtainable market: the share the venture can realistically capture given competition and resources."
+  },
+  "IE-M2-005": {
+    "unit": 4,
+    "topicId": "IE.U4.T01",
+    "topic": "Subscription business model",
+    "question": "A business model in which customers pay a recurring fee for continuing access to a product is called a:",
+    "options": [
+      "subscription model",
+      "one-time sale model",
+      "barter model",
+      "franchise model"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "Subscription models generate recurring revenue, such as monthly software or streaming fees, instead of a single purchase."
+  },
+  "IE-M2-006": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas revenue streams",
+    "question": "In the Lean Canvas, the block that lists how the venture earns money is called Revenue _______.",
+    "accepted": ["Streams", "streams"],
+    "difficulty": "easy",
+    "explanation": "Revenue Streams lists the sources and pricing models through which the venture earns money."
+  },
+  "IE-M2-007": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas channels",
+    "question": "In the Lean Canvas, the Channels block describes:",
+    "options": [
+      "how the venture reaches and delivers value to customers",
+      "the cost of raw materials",
+      "the key metrics used to measure growth",
+      "the unfair advantage of the founder"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "Channels covers the routes used to reach customers, from awareness and evaluation to purchase and delivery."
+  },
+  "IE-M2-008": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Non-dilutive funding",
+    "question": "Which funding source usually supports a startup without diluting founder ownership?",
+    "options": [
+      "Government grant or subsidy",
+      "Angel equity investment",
+      "Venture capital round",
+      "Initial public offering"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "Grants and subsidies provide funds without taking equity, unlike angel, venture capital or public-market investors."
+  },
+  "IE-M2-009": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Government grant",
+    "question": "A government scheme that gives eligible startups financial support without taking equity is called a _______.",
+    "accepted": ["grant", "subsidy", "government grant"],
+    "difficulty": "medium",
+    "explanation": "A grant or subsidy supports eligible ventures financially while leaving ownership with the founders."
+  },
+  "IE-M2-010": {
+    "unit": 4,
+    "topicId": "IE.U4.T04",
+    "topic": "Fixed cost",
+    "question": "Which cost remains unchanged when output rises in the short run?",
+    "options": [
+      "Fixed cost",
+      "Variable cost",
+      "Raw material cost",
+      "Packaging cost"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "Fixed costs, such as rent, do not vary with output over the relevant short-run range; variable costs do."
+  },
+  "IE-M2-011": {
+    "unit": 4,
+    "topicId": "IE.U4.T05",
+    "topic": "Contribution margin",
+    "question": "Revenue from one customer minus the cost of serving that customer is called the _______ margin.",
+    "accepted": ["contribution", "contribution margin"],
+    "difficulty": "medium",
+    "explanation": "Contribution margin shows how much each sale contributes towards fixed costs and profit."
+  },
+  "IE-M2-012": {
+    "unit": 4,
+    "topicId": "IE.U4.T04",
+    "topic": "Break-even formula",
+    "question": "Break-even quantity is calculated by dividing fixed costs by:",
+    "options": [
+      "contribution per unit",
+      "selling price per unit",
+      "variable cost per unit",
+      "total cost per unit"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "Break-even quantity = fixed costs ÷ (selling price − variable cost per unit), where the denominator is contribution per unit."
+  },
+  "IE-M2-013": {
+    "unit": 4,
+    "topicId": "IE.U4.T03",
+    "topic": "Business plan",
+    "question": "A document that forecasts sales, people and finances for a new venture is called a business _______.",
+    "accepted": ["plan"],
+    "difficulty": "easy",
+    "explanation": "A business plan sets out the venture's strategy and includes sales, people and financial plans."
+  },
+  "IE-M2-014": {
+    "unit": 4,
+    "topicId": "IE.U4.T03",
+    "topic": "People plan",
+    "question": "Which part of a business plan describes the roles, skills and hiring needed by the venture?",
+    "options": [
+      "People plan",
+      "Sales plan",
+      "Financial plan",
+      "Patent plan"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "The people plan covers organisation structure, roles, skills, hiring and the cost of the team."
+  },
+  "IE-M2-015": {
+    "unit": 4,
+    "topicId": "IE.U4.T04",
+    "topic": "Financial plan",
+    "question": "A financial plan projects revenue, costs and expected _______ for the venture.",
+    "accepted": ["profit", "profitability"],
+    "difficulty": "medium",
+    "explanation": "The financial plan converts the business model into forecasts of revenue, costs and profit."
+  },
+  "IE-M2-016": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Crowdfunding",
+    "question": "Which funding method pools small contributions from many people, usually through an online platform?",
+    "options": [
+      "Crowdfunding",
+      "Venture capital",
+      "Bank term loan",
+      "Trade credit"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "Crowdfunding raises small amounts from many backers, often in reward-, donation-, debt- or equity-based forms."
+  },
+  "IE-M2-017": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Startup India Seed Fund",
+    "question": "The Startup India Seed Fund Scheme primarily supports early-stage startups by:",
+    "options": [
+      "providing financial assistance for proof of concept, prototyping and product trials",
+      "collecting corporate taxes in advance",
+      "mandating government employment quotas",
+      "buying controlling equity in unicorns"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "SISFS provides seed funding for early-stage validation, prototyping and market entry, not for buying controlling stakes."
+  },
+  "IE-M2-023": {
+    "unit": 5,
+    "topicId": "IE.U5.T06",
+    "topic": "Design registration",
+    "question": "A registered design protects the visual _______ of an article, not its technical function.",
+    "accepted": ["appearance", "shape", "ornamentation"],
+    "difficulty": "medium",
+    "explanation": "Design law protects the outward appearance, shape, pattern or ornamentation of a product; functional features belong to patent law."
+  },
+  "IE-M2-026": {
+    "unit": 5,
+    "topicId": "IE.U5.T09",
+    "topic": "Licensing",
+    "question": "A licence agreement typically allows the licensee to use intellectual property in exchange for a _______.",
+    "options": ["royalty", "patent", "trademark", "copyright"],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "The licensor permits use of the IP and usually receives a fee or royalty, while ownership stays with the licensor."
+  },
+  "IE-M2-027": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Startup lifecycle",
+    "question": "In a typical startup lifecycle, which stage normally follows problem validation?",
+    "options": [
+      "Prototype and MVP development",
+      "Idea generation",
+      "Company registration",
+      "Public listing"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "After validating the problem, the team builds a prototype or MVP to test the solution with users."
+  },
+  "IE-M2-028": {
+    "unit": 4,
+    "topicId": "IE.U4.T06",
+    "topic": "Go-to-market strategy",
+    "question": "The plan for reaching target customers through selected channels is called the go-to-_______ strategy.",
+    "accepted": ["market"],
+    "difficulty": "easy",
+    "explanation": "A go-to-market strategy defines target segments, channels, messaging and acquisition tactics."
+  },
+  "IE-M2-029": {
+    "unit": 4,
+    "topicId": "IE.U4.T06",
+    "topic": "Direct channel",
+    "question": "Which is an example of a direct channel for reaching customers?",
+    "options": [
+      "The company's own website",
+      "A wholesaler",
+      "A retailer",
+      "A distributor"
+    ],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "A direct channel connects the venture straight to the customer, such as its own website or store, without intermediaries."
+  },
+  "IE-M2-030": {
+    "unit": 5,
+    "topicId": "IE.U5.T03",
+    "topic": "Incorporation",
+    "question": "The legal process of forming a company is called _______.",
+    "accepted": ["incorporation", "registration"],
+    "difficulty": "easy",
+    "explanation": "Incorporation creates the company as a separate legal entity and is a core step in startup registration."
+  },
+  "IE-M2-031": {
+    "unit": 5,
+    "topicId": "IE.U5.T05",
+    "topic": "NISP",
+    "question": "The National Innovation and Startup Policy primarily encourages innovation in:",
+    "options": [
+      "higher-education institutions",
+      "foreign embassies",
+      "stock exchanges",
+      "civil courts"
+    ],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "NISP gives universities and colleges a framework for student and faculty innovation, incubation and startup support."
+  },
+  "IE-M1-003": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas problem block",
+    "question": "Which Lean Canvas block lists the top customer problems and existing alternatives?",
+    "options": ["Problem", "Solution", "Channels", "Key Metrics"],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "The Problem block captures the main customer pains and the alternatives they currently use."
+  },
+  "IE-M2-TF-01": {
+    "type": "tf",
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas structure",
+    "question": "The Lean Canvas is structured around nine core blocks.",
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "The Lean Canvas uses nine blocks, including Problem, Solution, Key Metrics and Unfair Advantage."
+  },
+  "IE-M2-TF-02": {
+    "type": "tf",
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Unfair advantage",
+    "question": "In the Lean Canvas, an unfair advantage is something that cannot easily be copied or bought by competitors.",
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "explanation": "An unfair advantage is a durable edge, such as proprietary data or network effects, that rivals cannot easily replicate."
+  },
+  "IE-M2-TF-03": {
+    "type": "tf",
+    "unit": 3,
+    "scope": "mid2",
+    "topicId": "IE.U3.T04",
+    "topic": "Prototype",
+    "question": "A prototype is an early model used to test and communicate a product concept.",
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "explanation": "A prototype makes the concept tangible so the team can gather feedback before full development."
+  },
+  "IE-M2-TF-04": {
+    "type": "tf",
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Grant funding",
+    "question": "A government grant usually dilutes the founder's ownership of the startup.",
+    "answerIndex": 1,
+    "difficulty": "medium",
+    "explanation": "Grants normally provide funds without taking equity, so they do not dilute founder ownership."
+  },
+  "FC-SEM-IE-U1": {
+    "unit": 2,
+    "topicId": "IE.U2.T07",
+    "topic": "Design thinking stages",
+    "front": "List the five stages of design thinking in order.",
+    "back": "1. Empathise with users.\n2. Define the problem.\n3. Ideate solutions.\n4. Prototype the best ideas.\n5. Test with users and iterate.\nKeywords: empathise, define, ideate, prototype, test"
+  },
+  "FC-SEM-IE-U2": {
+    "topicId": "IE.U2.T03",
+    "topic": "Iterating problem-customer fit",
+    "front": "How do you iterate problem-customer fit?",
+    "back": "Compare interview and prototype evidence with the current problem statement. Revise the segment, pain point or value proposition, then test again until customers consistently confirm the problem and show willingness to adopt a solution.\nKeywords: iterate, evidence, segment, value proposition"
+  },
+  "FC-IE-01": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas blocks",
+    "front": "List the nine Lean Canvas blocks.",
+    "back": "1. Problem.\n2. Customer segments.\n3. Unique value proposition.\n4. Solution.\n5. Channels.\n6. Revenue streams.\n7. Cost structure.\n8. Key metrics.\n9. Unfair advantage.\nKeywords: Lean Canvas, problem, solution, metrics, advantage"
+  },
+  "FC-IE-02": {
+    "unit": 3,
+    "scope": "mid1",
+    "topicId": "IE.U3.T02",
+    "topic": "TAM SAM SOM",
+    "front": "Define TAM, SAM and SOM.",
+    "back": "TAM is the total addressable market for the category. SAM is the serviceable available market the venture can reach. SOM is the serviceable obtainable market it can realistically win.\nKeywords: TAM, SAM, SOM, market sizing"
+  },
+  "FC-IE-03": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Startup funding sources",
+    "front": "Name common startup funding sources.",
+    "back": "Founder savings, friends and family, government grants and schemes, angel investors, venture capital, incubators and accelerators, bank loans and crowdfunding.\nKeywords: funding, grant, angel, venture capital, incubator"
+  },
+  "FC-IE-04": {
+    "unit": 4,
+    "topicId": "IE.U4.T04",
+    "topic": "Fixed and variable costs",
+    "front": "Distinguish fixed and variable costs.",
+    "back": "Fixed costs do not change with output in the short run, such as rent. Variable costs change with output, such as raw materials. Total cost is their sum at a given volume.\nKeywords: fixed cost, variable cost, total cost, output"
+  },
+  "FC-IE-05": {
+    "unit": 4,
+    "topicId": "IE.U4.T05",
+    "topic": "Unit economics",
+    "front": "What is unit economics?",
+    "back": "Unit economics compares revenue and cost per unit, such as per customer or order. It shows whether each sale is profitable before fixed costs and whether growth creates value.\nKeywords: unit economics, revenue, cost, contribution, profitability"
+  },
+  "FC-IE-06": {
+    "unit": 4,
+    "topicId": "IE.U4.T04",
+    "topic": "Break-even analysis",
+    "front": "State the break-even quantity formula.",
+    "back": "Break-even quantity = fixed costs ÷ (selling price per unit − variable cost per unit). The denominator is the contribution per unit.\nKeywords: break-even, fixed cost, contribution, selling price"
+  },
+  "FC-IE-07": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Grants versus equity",
+    "front": "Compare grant funding with equity funding.",
+    "back": "A grant provides money without giving up ownership, but it is limited and often tied to eligibility or milestones. Equity funding gives investors a share of the company and usually brings mentoring and networks.\nKeywords: grant, equity, dilution, ownership"
+  },
+  "FC-IE-08": {
+    "unit": 4,
+    "topicId": "IE.U4.T03",
+    "topic": "Business plan components",
+    "front": "Name the main components of a business plan.",
+    "back": "Opportunity, market and competition, product or service, sales plan, people plan, financial plan, risks and milestones. The MR25 syllabus highlights sales, people and financial plans.\nKeywords: business plan, sales plan, people plan, financial plan"
+  },
+  "FC-IE-09": {
+    "unit": 4,
+    "topicId": "IE.U4.T03",
+    "topic": "Sales and people plans",
+    "front": "What do the sales and people plans cover?",
+    "back": "The sales plan covers target customers, pricing, channels, targets and sales process. The people plan covers roles, skills, organisation structure, hiring, compensation and team cost.\nKeywords: sales plan, people plan, pricing, hiring"
+  },
+  "FC-IE-10": {
+    "unit": 4,
+    "topicId": "IE.U4.T06",
+    "topic": "Go-to-market channels",
+    "front": "What does a go-to-market plan decide?",
+    "back": "Target segment, positioning, channels, pricing, sales approach, digital presence and customer-acquisition tactics, with metrics for reach, conversion and cost.\nKeywords: go-to-market, channel, positioning, acquisition"
+  },
+  "FC-IE-11": {
+    "unit": 5,
+    "topicId": "IE.U5.T08",
+    "topic": "Forms of IPR",
+    "front": "Compare patents, copyright, trademarks and GI.",
+    "back": "A patent protects an invention. Copyright protects original creative and software works. A trademark identifies the source of goods or services. A Geographical Indication protects a product name linked to a place.\nKeywords: patent, copyright, trademark, GI"
+  },
+  "FC-IE-18": {
+    "unit": 5,
+    "topicId": "IE.U5.T04",
+    "topic": "Startup lifecycle",
+    "front": "Describe the typical startup lifecycle.",
+    "back": "Idea, problem validation, prototype and MVP, early customers, product-market fit, growth and scaling, maturity, and finally exit, acquisition or long-term operation.\nKeywords: lifecycle, idea, validation, growth, exit"
+  },
+  "FC-IE-19": {
+    "unit": 5,
+    "topicId": "IE.U5.T05",
+    "topic": "NISP",
+    "front": "What is the National Innovation and Startup Policy?",
+    "back": "NISP is a framework for higher-education institutions to promote student and faculty innovation through incubation, flexible academic policies, mentoring, funding support and industry linkages.\nKeywords: NISP, higher education, incubation, innovation, policy"
+  },
+  "FC-IE-20": {
+    "unit": 5,
+    "topicId": "IE.U5.T09",
+    "topic": "Licensing and technology transfer",
+    "front": "What is licensing and technology transfer?",
+    "back": "Licensing lets another party use intellectual property on agreed terms, often for a fee or royalty. Technology transfer moves knowledge, skills and rights from a developer to a user for commercial application.\nKeywords: licensing, royalty, technology transfer, commercialisation"
+  },
+  "FC-M1-IE-02": {
+    "unit": 2,
+    "topicId": "IE.U2.T07",
+    "topic": "Design thinking stages",
+    "front": "List the five stages of design thinking.",
+    "back": "1. Empathise.\n2. Define.\n3. Ideate.\n4. Prototype.\n5. Test.\nKeywords: design thinking, empathise, define, ideate, prototype, test"
+  },
+  "FC-M1-IE-03": {
+    "unit": 4,
+    "topicId": "IE.U4.T02",
+    "topic": "Lean Canvas blocks",
+    "front": "What are the nine Lean Canvas blocks?",
+    "back": "1. Problem.\n2. Customer segments.\n3. Unique value proposition.\n4. Solution.\n5. Channels.\n6. Revenue streams.\n7. Cost structure.\n8. Key metrics.\n9. Unfair advantage.\nKeywords: Lean Canvas, problem, solution, metrics, advantage"
+  },
+  "FC-M1-IE-05": {
+    "unit": 3,
+    "scope": "mid2",
+    "topicId": "IE.U3.T05",
+    "topic": "Minimum viable product",
+    "front": "What is a Minimum Viable Product?",
+    "back": "An MVP is the smallest version of a product that delivers enough value to test the core hypothesis with real users and generate validated learning without building every planned feature.\nKeywords: MVP, minimum, viable, validated learning"
+  }
+}

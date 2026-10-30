@@ -1,0 +1,1311 @@
+{
+  "subject": "COA",
+  "name": "Computer Organization and Architecture",
+  "fixes": {
+    "COA-M2-018": {
+      "topic": "Cache write policy",
+      "question": "In a write-through cache, a write operation updates:",
+      "options": [
+        "Only the cache line",
+        "Both the cache line and main memory",
+        "Only main memory",
+        "Neither the cache nor main memory"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Write-through writes to both cache and main memory, so memory is always current but every write costs a memory access."
+    },
+    "COA-M2-020": {
+      "topic": "Associative memory",
+      "question": "Associative memory is searched by:",
+      "options": [
+        "Its physical address",
+        "Its content",
+        "A stack pointer",
+        "A page table"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Associative memory compares the search key against all stored words in parallel, so it is content-addressable rather than address-addressed."
+    },
+    "COA-M2-025": {
+      "topic": "Control memory",
+      "question": "Control memory in a microprogrammed control unit stores:",
+      "options": [
+        "Program data",
+        "Microinstructions",
+        "Interrupt vectors",
+        "Cache lines"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Control memory holds the microinstruction sequence that generates control signals for each machine instruction."
+    },
+    "COA-M2-026": {
+      "topic": "Microinstruction sequencing",
+      "question": "The register that holds the address of the next microinstruction is the:",
+      "options": [
+        "Instruction register",
+        "Control address register",
+        "Memory address register",
+        "Accumulator"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The control address register supplies the control-memory address; the sequencing logic updates it after each microinstruction."
+    },
+    "COA-M2-027": {
+      "topic": "DMA transfer",
+      "question": "In DMA, the transfer of a data block between an I/O device and memory is initiated by the device sending a _______ request to the CPU.",
+      "accepted": [
+        "bus",
+        "DMA",
+        "hold",
+        "bus request"
+      ],
+      "difficulty": "medium",
+      "explanation": "The DMA controller asserts a bus-request (hold) signal; the CPU grants the bus and the controller moves the block directly."
+    },
+    "COA-M2-028": {
+      "topic": "Modes of transfer",
+      "question": "In programmed I/O, the CPU:",
+      "options": [
+        "Continues executing other programs while the device works",
+        "Repeatedly checks the device status and waits",
+        "Uses DMA to move each word",
+        "Uses an interrupt for every word"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Programmed I/O busy-waits: the CPU polls the status flag and cannot do useful work until the device is ready."
+    },
+    "COA-M2-032": {
+      "topic": "Cache hit ratio",
+      "question": "A cache has 90% hits and 10% misses. If a hit costs 1 cycle and a miss costs 21 cycles, the average access time is _______ cycles.",
+      "accepted": [
+        "3",
+        "3 cycles"
+      ],
+      "difficulty": "medium",
+      "explanation": "Average = 0.9 x 1 + 0.1 x 21 = 0.9 + 2.1 = 3 cycles."
+    },
+    "FC-COA-10": {
+      "topic": "Write-through vs write-back",
+      "front": "Compare write-through and write-back cache policies.",
+      "back": "Write-through updates cache and memory on every write. Write-back updates only the cache and writes the dirty line later, saving memory traffic but needing a dirty bit.\nKeywords: write-through, write-back, dirty bit"
+    },
+    "FC-COA-14": {
+      "topic": "Memory hierarchy",
+      "front": "Why does a memory hierarchy improve performance?",
+      "back": "Small fast memories sit near the CPU and large slow memories sit farther away. Locality of reference makes most accesses hit the fast levels.\nKeywords: memory hierarchy, locality, cache, cost"
+    },
+    "FC-COA-15": {
+      "topic": "Associative memory",
+      "front": "What is associative memory and where is it used?",
+      "back": "Memory searched by content rather than address. It is used in cache tag directories and TLBs, where a tag must be matched in parallel.\nKeywords: associative memory, content addressable, tag, TLB"
+    },
+    "FC-COA-19": {
+      "topic": "DMA",
+      "front": "How does DMA improve I/O performance?",
+      "back": "A DMA controller moves a block directly between device and memory, so the CPU is interrupted once per block instead of once per word.\nKeywords: DMA, block transfer, bus request, interrupt"
+    },
+    "FC-SEM-COA-U2": {
+      "front": "When is hardwired control preferred over microprogrammed control?",
+      "back": "Hardwired control is preferred when speed and high volume matter and the instruction set is stable. Microprogrammed control is preferred when the instruction set must be flexible or complex.\nKeywords: hardwired, microprogrammed, speed, flexibility"
+    }
+  },
+  "mcq": [
+    {
+      "id": "COA-SEM-037",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T04",
+      "topic": "2's complement range",
+      "question": "The range of integers representable in 8-bit two's complement is:",
+      "options": [
+        "$-127$ to $+127$",
+        "$-128$ to $+127$",
+        "$0$ to $255$",
+        "$-128$ to $+128$"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "With 8 bits, one pattern is needed for zero, so the range is $-2^{7}$ to $2^{7}-1$, that is $-128$ to $+127$."
+    },
+    {
+      "id": "COA-SEM-038",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T06",
+      "topic": "IEEE 754 bias",
+      "question": "The exponent bias used in IEEE 754 single-precision floating point is:",
+      "options": [
+        "64",
+        "127",
+        "128",
+        "1023"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Single precision uses 8 exponent bits with bias 127; double precision uses 11 bits with bias 1023."
+    },
+    {
+      "id": "COA-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T01",
+      "topic": "BCD representation",
+      "question": "The BCD representation 0111 1001 stands for the decimal number:",
+      "options": [
+        "57",
+        "69",
+        "79",
+        "121"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Each nibble is a decimal digit: 0111 is 7 and 1001 is 9, so the value is 79."
+    },
+    {
+      "id": "COA-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T01",
+      "topic": "Gray code",
+      "question": "The Gray code equivalent of the binary number 1011 is:",
+      "options": [
+        "1110",
+        "1101",
+        "1010",
+        "1001"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Gray bits are $g_3=b_3$, then each next bit is the XOR of adjacent binary bits: 1, 1, 1, 0 gives 1110."
+    },
+    {
+      "id": "COA-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T03",
+      "topic": "Universal gates",
+      "question": "Which gate is called a universal gate because any Boolean function can be built from it alone?",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "NAND"
+      ],
+      "answerIndex": 3,
+      "difficulty": "easy",
+      "explanation": "NAND (and NOR) can implement NOT, AND and OR, so either one alone is functionally complete."
+    },
+    {
+      "id": "COA-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T01",
+      "topic": "Parity",
+      "question": "A parity bit is added to a binary code mainly to:",
+      "options": [
+        "Increase storage capacity",
+        "Detect single-bit errors",
+        "Correct all multi-bit errors",
+        "Compress the data"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Parity makes the number of 1s even or odd, so a single-bit error changes parity and is detected. It cannot correct errors."
+    },
+    {
+      "id": "COA-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T02",
+      "topic": "Address space",
+      "question": "A memory has a 12-bit address. How many addressable words does it have?",
+      "options": [
+        "512",
+        "1024",
+        "4096",
+        "8192"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A 12-bit address selects one of $2^{12}=4096$ locations."
+    },
+    {
+      "id": "COA-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T02",
+      "topic": "Register transfer",
+      "question": "The register transfer statement $R2 \\leftarrow R1$ means:",
+      "options": [
+        "Copy the contents of R1 into R2",
+        "Exchange R1 and R2",
+        "Add R1 to R2",
+        "Clear both registers"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The arrow denotes a transfer; the source R1 is copied into the destination R2, and R1 keeps its value."
+    },
+    {
+      "id": "COA-SEM-045",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T07",
+      "topic": "Functional units",
+      "question": "Which set lists the three basic functional units of a digital computer?",
+      "options": [
+        "CPU, main memory, I/O",
+        "ALU, cache, register",
+        "Control unit, bus, clock",
+        "RAM, ROM, disk"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A digital computer is organised around the processor, main memory and input/output units, connected by buses."
+    },
+    {
+      "id": "COA-SEM-046",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T01",
+      "topic": "Karnaugh map",
+      "question": "A Karnaugh map for 4 variables has how many cells?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A K-map has one cell per input combination, so 4 variables give $2^4=16$ cells."
+    },
+    {
+      "id": "COA-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T02",
+      "topic": "Half adder",
+      "question": "For a half adder with inputs A and B, the sum and carry are:",
+      "options": [
+        "$A \\oplus B$ and $AB$",
+        "$A+B$ and $AB$",
+        "$AB$ and $A \\oplus B$",
+        "$A \\oplus B$ and $A+B$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The sum bit is XOR and the carry bit is AND. A half adder cannot accept an incoming carry."
+    },
+    {
+      "id": "COA-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T02",
+      "topic": "Full adder",
+      "question": "A full adder has how many inputs and outputs?",
+      "options": [
+        "2 inputs, 2 outputs",
+        "3 inputs, 2 outputs",
+        "3 inputs, 3 outputs",
+        "4 inputs, 2 outputs"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A full adder takes A, B and carry-in, and produces sum and carry-out."
+    },
+    {
+      "id": "COA-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T06",
+      "topic": "Multiplexer",
+      "question": "An 8-to-1 multiplexer requires how many select lines?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "With $n$ select lines a multiplexer can choose among $2^n$ inputs, and $2^3=8$."
+    },
+    {
+      "id": "COA-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T06",
+      "topic": "Decoder",
+      "question": "A 3-to-8 decoder has how many output lines?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A decoder asserts exactly one of $2^3=8$ outputs for each input combination."
+    },
+    {
+      "id": "COA-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T08",
+      "topic": "D flip-flop",
+      "question": "The next-state equation of a D flip-flop is:",
+      "options": [
+        "$Q^+=D$",
+        "$Q^+=\\bar{D}$",
+        "$Q^+=J\\bar{Q}+\\bar{K}Q$",
+        "$Q^+=T \\oplus Q$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A D flip-flop simply captures the input: the next state equals D. The other equations describe JK and T flip-flops."
+    },
+    {
+      "id": "COA-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T11",
+      "topic": "Counter design",
+      "question": "What is the minimum number of flip-flops needed for a modulo-10 counter?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A modulo-10 counter needs 10 states, and $2^3=8$ is too few while $2^4=16$ is enough, so 4 flip-flops are required."
+    },
+    {
+      "id": "COA-SEM-053",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T03",
+      "topic": "BCD adder",
+      "question": "In a BCD adder, correction is needed when the 4-bit sum is:",
+      "options": [
+        "Less than 9",
+        "Greater than 9 or a carry is produced",
+        "Exactly 5",
+        "Always even"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "If the binary sum exceeds 9 or produces a carry, 6 is added to skip the six invalid BCD codes."
+    },
+    {
+      "id": "COA-SEM-054",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T05",
+      "topic": "Magnitude comparator",
+      "question": "A 4-bit magnitude comparator typically provides how many comparison outputs?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "It reports $A>B$, $A=B$ and $A<B$, so three outputs are needed."
+    },
+    {
+      "id": "COA-SEM-055",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T10",
+      "topic": "Shift register",
+      "question": "A 4-bit serial-in shift register needs how many clock pulses to load 4 bits?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "One bit enters per clock, so four bits require four clock pulses."
+    },
+    {
+      "id": "COA-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "COA.U3.T02",
+      "topic": "Bus transfer",
+      "question": "Multiple registers can share a common bus using:",
+      "options": [
+        "Only AND gates",
+        "Multiplexers or tri-state buffers",
+        "Flip-flops",
+        "Decoders only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A multiplexer selects one source, or tri-state buffers let one register drive the bus while the others are disabled."
+    },
+    {
+      "id": "COA-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "COA.U3.T03",
+      "topic": "Arithmetic micro-operation",
+      "question": "The micro-operation $R3 \\leftarrow R1 + R2$ is classified as:",
+      "options": [
+        "A logic micro-operation",
+        "A shift micro-operation",
+        "An arithmetic micro-operation",
+        "A transfer micro-operation"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Addition is an arithmetic micro-operation; it changes the numerical value rather than individual bits or position."
+    },
+    {
+      "id": "COA-SEM-058",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "COA.U3.T04",
+      "topic": "Logic micro-operation",
+      "question": "Which operation selectively complements the bits of a register where a mask has 1s?",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "Shift"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "XOR with a mask of 1s inverts the selected bits and leaves the 0 positions unchanged."
+    },
+    {
+      "id": "COA-SEM-059",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "COA.U3.T05",
+      "topic": "Arithmetic shift",
+      "question": "An arithmetic right shift of a signed binary number:",
+      "options": [
+        "Fills the leftmost bit with 0",
+        "Preserves the sign bit",
+        "Reverses the bit order",
+        "Always doubles the value"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Arithmetic right shift copies the sign bit into the vacated position, which divides a signed number by 2 while keeping its sign."
+    },
+    {
+      "id": "COA-SEM-060",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "COA.U3.T06",
+      "topic": "ALSU",
+      "question": "The arithmetic logic shift unit selects its operation using:",
+      "options": [
+        "The clock only",
+        "A set of select inputs",
+        "The accumulator sign",
+        "The program counter"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Select inputs choose among arithmetic, logic and shift functions, and the result is steered to the output."
+    },
+    {
+      "id": "COA-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T01",
+      "topic": "Control word",
+      "question": "A control word in microprogrammed control is:",
+      "options": [
+        "A machine instruction",
+        "A group of control bits for one micro-operation",
+        "A memory address",
+        "An interrupt vector"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The control word is the set of bits that enables the datapath signals for one microinstruction."
+    },
+    {
+      "id": "COA-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T02",
+      "topic": "Address sequencing",
+      "question": "Address sequencing in a microprogrammed control unit determines:",
+      "options": [
+        "The next microinstruction address",
+        "The ALU result",
+        "The cache index",
+        "The I/O device number"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Sequencing logic chooses the next control-memory address, using the control address register, mapping bits and branch conditions."
+    },
+    {
+      "id": "COA-SEM-063",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T05",
+      "topic": "Instruction format",
+      "question": "An instruction format typically contains:",
+      "options": [
+        "Only an opcode",
+        "An opcode and one or more address fields",
+        "Only data",
+        "Only a parity bit"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The opcode selects the operation, and address fields identify registers, memory or immediate operands."
+    },
+    {
+      "id": "COA-SEM-064",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T06",
+      "topic": "Addressing modes",
+      "question": "In immediate addressing, the operand is:",
+      "options": [
+        "Stored at a memory address given in the instruction",
+        "Part of the instruction itself",
+        "Held in the program counter",
+        "Always in the stack"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Immediate addressing embeds the operand in the instruction, so no extra memory fetch is needed for the value."
+    },
+    {
+      "id": "COA-SEM-065",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T09",
+      "topic": "Booth algorithm",
+      "question": "Booth's multiplication algorithm is preferred because it:",
+      "options": [
+        "Works only for unsigned numbers",
+        "Handles signed numbers in two's complement",
+        "Needs no registers",
+        "Always performs one addition per bit"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Booth recodes the multiplier so signed two's complement operands can be multiplied directly, skipping runs of 1s."
+    },
+    {
+      "id": "COA-SEM-066",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "COA.U4.T10",
+      "topic": "Restoring division",
+      "question": "In restoring division, when the partial remainder becomes negative, the next step is to:",
+      "options": [
+        "Set the quotient bit to 1 and continue",
+        "Add the divisor back and set the quotient bit to 0",
+        "Stop the algorithm",
+        "Shift the divisor left"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A negative remainder means the divisor was too large, so it is restored by adding the divisor back and the quotient bit is 0."
+    },
+    {
+      "id": "COA-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T01",
+      "topic": "I/O interface",
+      "question": "The main purpose of an I/O interface is to:",
+      "options": [
+        "Execute arithmetic instructions",
+        "Match speed and format between the CPU bus and a device",
+        "Store the program",
+        "Generate the clock"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The interface buffers data and converts between CPU bus signals and device-specific formats and timing."
+    },
+    {
+      "id": "COA-SEM-068",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T02",
+      "topic": "Asynchronous transfer",
+      "question": "Asynchronous data transfer between two independent units commonly uses:",
+      "options": [
+        "A common clock",
+        "Handshaking signals",
+        "A parity bit only",
+        "DMA only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Handshake signals such as request and acknowledge let a sender and receiver coordinate without a shared clock."
+    },
+    {
+      "id": "COA-SEM-069",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T03",
+      "topic": "Programmed I/O",
+      "question": "The main disadvantage of programmed I/O is that the CPU:",
+      "options": [
+        "Cannot access memory",
+        "Busy-waits and wastes time",
+        "Cannot use interrupts",
+        "Needs a DMA controller"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The CPU repeatedly polls the device status and cannot execute other work while waiting."
+    },
+    {
+      "id": "COA-SEM-070",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T04",
+      "topic": "Priority interrupt",
+      "question": "A priority interrupt system is needed to:",
+      "options": [
+        "Ignore all interrupts",
+        "Decide which interrupt is serviced first",
+        "Increase clock speed",
+        "Replace main memory"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "When several devices request service, priority logic selects the most urgent request and masks lower-priority ones."
+    },
+    {
+      "id": "COA-SEM-071",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T05",
+      "topic": "DMA",
+      "question": "During a DMA block transfer, the CPU is:",
+      "options": [
+        "Involved in every word transfer",
+        "Freed after granting the bus",
+        "Stopped permanently",
+        "Required to execute an interrupt per word"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The DMA controller moves the block itself; the CPU grants the bus and is interrupted once at the end of the block."
+    },
+    {
+      "id": "COA-SEM-072",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T10",
+      "topic": "Direct-mapped cache",
+      "question": "A direct-mapped cache has 8 lines. How many index bits are needed?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The index selects one of 8 lines, so $\\log_2 8 = 3$ index bits are required."
+    },
+    {
+      "id": "COA-SEM-073",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T01",
+      "topic": "Hexadecimal conversion",
+      "question": "The hexadecimal number $2F$ is equal to which decimal value?",
+      "options": [
+        "31",
+        "47",
+        "63",
+        "95"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "$2F_{16}=2\\times16+15=32+15=47$."
+    },
+    {
+      "id": "COA-SEM-074",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T06",
+      "topic": "Multiplexer tree",
+      "question": "How many 2-to-1 multiplexers are required to build an 8-to-1 multiplexer using a tree structure?",
+      "options": [
+        "7",
+        "8",
+        "15",
+        "16"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "An 8-to-1 tree needs four 2-to-1 multiplexers for the first stage, two for the second and one for the final stage: $4+2+1=7$."
+    },
+    {
+      "id": "COA-SEM-075",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "COA.U3.T10",
+      "topic": "Direct addressing",
+      "question": "In a basic computer, the program counter holds 100 and a memory-reference instruction contains address 105. With direct addressing, the effective address is:",
+      "options": [
+        "5",
+        "100",
+        "105",
+        "205"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "In direct addressing the address field itself is the effective address, so the operand is read from location 105."
+    },
+    {
+      "id": "COA-SEM-076",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T05",
+      "topic": "DMA transfer time",
+      "question": "A DMA controller transfers a 512-byte block by cycle stealing, using one memory cycle per byte. If each memory cycle takes 0.5 μs, the total transfer time is:",
+      "options": [
+        "128 μs",
+        "256 μs",
+        "512 μs",
+        "1024 μs"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "$512 \\times 0.5\\,\\mu s = 256\\,\\mu s$."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-COA-23",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T01",
+      "topic": "Number systems",
+      "highYield": true,
+      "front": "Convert binary 1101 to decimal and hexadecimal.",
+      "back": "1101 in decimal is $8+4+1=13$; in hexadecimal it is D.\nKeywords: binary, decimal, hexadecimal, conversion"
+    },
+    {
+      "id": "FC-SEM-COA-24",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T04",
+      "topic": "Complements",
+      "highYield": true,
+      "front": "How do you form the 2's complement of a binary number?",
+      "back": "Invert every bit (1's complement), then add 1. It represents the negative of the original number.\nKeywords: 2's complement, 1's complement, negative"
+    },
+    {
+      "id": "FC-SEM-COA-25",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T05",
+      "topic": "Fixed-point representation",
+      "highYield": true,
+      "front": "What is fixed-point representation?",
+      "back": "The radix point is assumed at a fixed position. Integers and fractions use separate conventions, and the range is limited by the word size.\nKeywords: fixed point, radix point, range, precision"
+    },
+    {
+      "id": "FC-SEM-COA-26",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T06",
+      "topic": "IEEE 754 format",
+      "highYield": true,
+      "front": "What are the three fields of an IEEE 754 single-precision number?",
+      "back": "1 sign bit, 8 exponent bits with bias 127, and 23 fraction bits. The leading 1 of the significand is implicit.\nKeywords: IEEE 754, sign, exponent, mantissa, bias"
+    },
+    {
+      "id": "FC-SEM-COA-27",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T01",
+      "topic": "BCD and Gray code",
+      "highYield": true,
+      "front": "Why are BCD and Gray code used?",
+      "back": "BCD maps each decimal digit to four bits for display arithmetic. Gray code changes one bit between adjacent values, reducing transition errors.\nKeywords: BCD, Gray code, decimal, adjacent"
+    },
+    {
+      "id": "FC-SEM-COA-28",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T01",
+      "topic": "Error detection",
+      "highYield": false,
+      "front": "How does a parity bit detect an error?",
+      "back": "The parity bit makes the total number of 1s even or odd. A single-bit error flips the parity, so the receiver detects it.\nKeywords: parity, error detection, single bit"
+    },
+    {
+      "id": "FC-SEM-COA-29",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T03",
+      "topic": "Logic gates",
+      "highYield": true,
+      "front": "Why are NAND and NOR called universal gates?",
+      "back": "Each can implement NOT, AND and OR, so any Boolean circuit can be built using only NAND gates or only NOR gates.\nKeywords: NAND, NOR, universal gate, functional completeness"
+    },
+    {
+      "id": "FC-SEM-COA-30",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T02",
+      "topic": "Binary storage",
+      "highYield": false,
+      "front": "What is a register and how does it store a bit?",
+      "back": "A register is a group of flip-flops that holds a binary word. Each flip-flop stores one bit until the next clock updates it.\nKeywords: register, flip-flop, binary word, clock"
+    },
+    {
+      "id": "FC-SEM-COA-31",
+      "subjectId": "COA",
+      "unit": 1,
+      "topicId": "COA.U1.T07",
+      "topic": "Computer organization",
+      "highYield": true,
+      "front": "Distinguish computer organization from computer architecture.",
+      "back": "Architecture is the programmer-visible instruction set and behaviour. Organization is how the hardware implements it: buses, control, memory and timing.\nKeywords: architecture, organization, instruction set, implementation"
+    },
+    {
+      "id": "FC-SEM-COA-32",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T01",
+      "topic": "Combinational vs sequential",
+      "highYield": true,
+      "front": "Distinguish combinational and sequential circuits.",
+      "back": "Combinational output depends only on present inputs. Sequential output depends on present inputs and stored state, so it uses flip-flops and a clock.\nKeywords: combinational, sequential, state, clock"
+    },
+    {
+      "id": "FC-SEM-COA-33",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T02",
+      "topic": "Adder circuits",
+      "highYield": true,
+      "front": "Compare a half adder and a full adder.",
+      "back": "Half adder: two inputs, no carry-in, outputs sum and carry. Full adder: three inputs including carry-in, used to chain bits into a ripple-carry adder.\nKeywords: half adder, full adder, carry, ripple"
+    },
+    {
+      "id": "FC-SEM-COA-34",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T06",
+      "topic": "Multiplexer and decoder",
+      "highYield": true,
+      "front": "What is the difference between a multiplexer and a decoder?",
+      "back": "A multiplexer selects one of many inputs onto one output. A decoder takes a binary code and activates one of many outputs.\nKeywords: multiplexer, decoder, select, output"
+    },
+    {
+      "id": "FC-SEM-COA-35",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T08",
+      "topic": "Flip-flops",
+      "highYield": true,
+      "front": "Compare SR, JK, D and T flip-flops.",
+      "back": "SR has set/reset but an invalid state. JK removes that invalid state. D stores the input. T toggles when T=1.\nKeywords: SR, JK, D, T, flip-flop, toggle"
+    },
+    {
+      "id": "FC-SEM-COA-36",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T09",
+      "topic": "Sequential design",
+      "highYield": true,
+      "front": "List the steps in sequential circuit design.",
+      "back": "Derive the state diagram, build the state table, reduce states, assign binary codes, choose flip-flops, derive excitation and output equations, then draw the circuit.\nKeywords: state diagram, state table, reduction, assignment, excitation"
+    },
+    {
+      "id": "FC-SEM-COA-37",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T10",
+      "topic": "Shift registers",
+      "highYield": true,
+      "front": "What are the four modes of a bidirectional shift register?",
+      "back": "Hold, shift left, shift right and load. Mode select inputs choose the path through the register.\nKeywords: shift register, hold, left, right, load"
+    },
+    {
+      "id": "FC-SEM-COA-38",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T11",
+      "topic": "Counters",
+      "highYield": true,
+      "front": "Distinguish ripple and synchronous counters.",
+      "back": "Ripple counters clock each flip-flop from the previous output, so delays accumulate. Synchronous counters clock all flip-flops together, giving faster and glitch-free operation.\nKeywords: ripple, synchronous, clock, propagation delay"
+    },
+    {
+      "id": "FC-SEM-COA-39",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T03",
+      "topic": "BCD adder",
+      "highYield": false,
+      "front": "When and why does a BCD adder add 6?",
+      "back": "When the 4-bit sum exceeds 9 or a carry appears, adding 6 skips the six invalid BCD codes 1010 to 1111.\nKeywords: BCD adder, correction, invalid codes"
+    },
+    {
+      "id": "FC-SEM-COA-40",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T05",
+      "topic": "Comparator",
+      "highYield": false,
+      "front": "What does a magnitude comparator output?",
+      "back": "Three signals: $A>B$, $A=B$ and $A<B$. Comparators can be cascaded for words wider than four bits.\nKeywords: comparator, greater, equal, less"
+    },
+    {
+      "id": "FC-SEM-COA-41",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T01",
+      "topic": "Register transfer language",
+      "highYield": true,
+      "front": "What is register transfer language?",
+      "back": "A notation for describing data movement and operations between registers, using statements such as $R2 \\leftarrow R1$ and conditional transfers.\nKeywords: RTL, register transfer, notation, conditional"
+    },
+    {
+      "id": "FC-SEM-COA-42",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T02",
+      "topic": "Bus construction",
+      "highYield": true,
+      "front": "How is a common bus built from registers?",
+      "back": "Use multiplexers to select a source, or tri-state buffers so only one register drives the bus at a time.\nKeywords: common bus, multiplexer, tri-state, source"
+    },
+    {
+      "id": "FC-SEM-COA-43",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T03",
+      "topic": "Arithmetic micro-operations",
+      "highYield": true,
+      "front": "List four arithmetic micro-operations.",
+      "back": "Add, subtract, increment and decrement. Subtraction is usually implemented as addition of the 2's complement.\nKeywords: arithmetic, add, subtract, increment, decrement"
+    },
+    {
+      "id": "FC-SEM-COA-44",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T04",
+      "topic": "Logic micro-operations",
+      "highYield": true,
+      "front": "What do AND, OR and XOR masks do to a register?",
+      "back": "AND clears bits where the mask is 0. OR sets bits where the mask is 1. XOR complements bits where the mask is 1.\nKeywords: logic micro-operation, mask, AND, OR, XOR"
+    },
+    {
+      "id": "FC-SEM-COA-45",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T05",
+      "topic": "Shift micro-operations",
+      "highYield": true,
+      "front": "Distinguish logical and arithmetic shifts.",
+      "back": "Logical shift inserts 0. Arithmetic right shift copies the sign bit, preserving the sign; arithmetic left shift behaves like logical left shift.\nKeywords: logical shift, arithmetic shift, sign bit"
+    },
+    {
+      "id": "FC-SEM-COA-46",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T06",
+      "topic": "ALSU",
+      "highYield": true,
+      "front": "What does the arithmetic logic shift unit do?",
+      "back": "It performs arithmetic, logic and shift operations on two operands, selected by control inputs, and produces the result plus status flags.\nKeywords: ALSU, arithmetic, logic, shift, select"
+    },
+    {
+      "id": "FC-SEM-COA-47",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T01",
+      "topic": "Control memory",
+      "highYield": true,
+      "front": "What is stored in control memory?",
+      "back": "Microinstructions, each containing a control word and sequencing information. The control unit reads them in sequence to generate datapath signals.\nKeywords: control memory, microinstruction, control word, sequencing"
+    },
+    {
+      "id": "FC-SEM-COA-48",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T02",
+      "topic": "Address sequencing",
+      "highYield": true,
+      "front": "What are the four sources of the next microinstruction address?",
+      "back": "Increment the control address register, branch on a condition, jump to a mapping address for an opcode, or return from a subroutine.\nKeywords: address sequencing, increment, branch, mapping, subroutine"
+    },
+    {
+      "id": "FC-SEM-COA-49",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T05",
+      "topic": "Instruction formats",
+      "highYield": true,
+      "front": "Compare zero-, one- and two-address instruction formats.",
+      "back": "Zero-address uses a stack. One-address uses an implicit accumulator. Two-address names two operands, usually destination and source.\nKeywords: instruction format, zero address, one address, two address"
+    },
+    {
+      "id": "FC-SEM-COA-50",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T06",
+      "topic": "Addressing modes",
+      "highYield": true,
+      "front": "List five common addressing modes.",
+      "back": "Immediate, direct, indirect, register and indexed. Each trades instruction bits against the number of memory accesses needed.\nKeywords: addressing mode, immediate, direct, indirect, indexed"
+    },
+    {
+      "id": "FC-SEM-COA-51",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T07",
+      "topic": "Data transfer and manipulation",
+      "highYield": true,
+      "front": "Distinguish data transfer from data manipulation instructions.",
+      "back": "Transfer instructions move data between registers and memory. Manipulation instructions perform arithmetic, logic or shift operations on data.\nKeywords: data transfer, data manipulation, arithmetic, logic"
+    },
+    {
+      "id": "FC-SEM-COA-52",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T09",
+      "topic": "Booth's algorithm",
+      "highYield": true,
+      "front": "Why does Booth's algorithm skip runs of 1s?",
+      "back": "It recodes the multiplier into +1, 0 and -1 transitions, so a run of 1s becomes one subtraction and one addition instead of many additions.\nKeywords: Booth, recoding, signed, run of ones"
+    },
+    {
+      "id": "FC-SEM-COA-53",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T10",
+      "topic": "Division algorithms",
+      "highYield": true,
+      "front": "Compare restoring and non-restoring division.",
+      "back": "Restoring division adds the divisor back after a negative remainder. Non-restoring division keeps the negative remainder and corrects at the end, saving operations.\nKeywords: restoring, non-restoring, remainder, quotient"
+    },
+    {
+      "id": "FC-SEM-COA-54",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T01",
+      "topic": "I/O interface",
+      "highYield": true,
+      "front": "What functions does an I/O interface perform?",
+      "back": "It buffers data, converts between serial and parallel or between word sizes, synchronises timing, and presents status and control registers to the CPU.\nKeywords: I/O interface, buffer, conversion, status, control"
+    },
+    {
+      "id": "FC-SEM-COA-55",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T02",
+      "topic": "Asynchronous transfer",
+      "highYield": true,
+      "front": "Explain strobe and handshake asynchronous transfer.",
+      "back": "Strobe: one unit pulses a strobe when data is ready. Handshake: request and acknowledge signals confirm that both sides have seen the data.\nKeywords: asynchronous, strobe, handshake, request, acknowledge"
+    },
+    {
+      "id": "FC-SEM-COA-56",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T03",
+      "topic": "Modes of transfer",
+      "highYield": true,
+      "front": "Compare programmed I/O, interrupt-driven I/O and DMA.",
+      "back": "Programmed I/O busy-waits. Interrupt-driven I/O lets the CPU work until the device interrupts. DMA moves a whole block without per-word CPU work.\nKeywords: programmed I/O, interrupt, DMA, transfer"
+    },
+    {
+      "id": "FC-SEM-COA-57",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T04",
+      "topic": "Priority interrupt",
+      "highYield": true,
+      "front": "How does a priority interrupt system resolve simultaneous requests?",
+      "back": "A priority encoder or daisy chain selects the highest-priority request. Lower-priority requests are masked until the current service routine finishes.\nKeywords: priority interrupt, encoder, daisy chain, mask"
+    },
+    {
+      "id": "FC-SEM-COA-58",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T05",
+      "topic": "DMA",
+      "highYield": true,
+      "front": "What are the three DMA transfer modes?",
+      "back": "Burst mode holds the bus for a whole block. Cycle stealing takes one cycle at a time. Transparent DMA uses idle CPU cycles.\nKeywords: DMA, burst, cycle stealing, transparent"
+    },
+    {
+      "id": "FC-SEM-COA-59",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T06",
+      "topic": "Memory hierarchy",
+      "highYield": true,
+      "front": "Order the memory hierarchy from fastest to slowest.",
+      "back": "Registers, cache, main memory, auxiliary storage. Speed and cost per bit fall as capacity rises.\nKeywords: memory hierarchy, registers, cache, main memory, auxiliary"
+    },
+    {
+      "id": "FC-SEM-COA-60",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T10",
+      "topic": "Cache mapping",
+      "highYield": true,
+      "front": "Compare direct, associative and set-associative cache mapping.",
+      "back": "Direct maps each block to one line. Fully associative allows any line. Set-associative restricts a block to one set but allows any line in that set.\nKeywords: direct mapped, associative, set associative, cache"
+    },
+    {
+      "id": "FC-SEM-COA-61",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T04",
+      "topic": "Binary multiplier",
+      "highYield": false,
+      "front": "How does a basic binary multiplier form partial products?",
+      "back": "1. Each multiplier bit ANDs the multiplicand to form one partial product.\n2. Partial products are shifted left by the bit position.\n3. Shifted partial products are added to give the product.\n4. An n-bit multiply needs up to 2n product bits.\nKeywords: multiplicand, multiplier, partial product, shift, add"
+    },
+    {
+      "id": "FC-SEM-COA-62",
+      "subjectId": "COA",
+      "unit": 2,
+      "topicId": "COA.U2.T07",
+      "topic": "HDL for combinational circuits",
+      "highYield": false,
+      "front": "How is a combinational circuit described in Verilog?",
+      "back": "1. Declare inputs and outputs in a module header.\n2. Use assign for continuous dataflow expressions.\n3. Use always @(*) with blocking assignments for behavioral code.\n4. Gate primitives such as and, or, not model structural designs.\nKeywords: Verilog, module, assign, always, gate-level"
+    },
+    {
+      "id": "FC-SEM-COA-63",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T08",
+      "topic": "Timing and control",
+      "highYield": false,
+      "front": "What generates control signals in a basic computer?",
+      "back": "1. A sequence counter and decoder produce timing signals T0, T1, ...\n2. The control unit combines timing with instruction bits and flags.\n3. Control signals activate registers, memory, and ALU operations.\n4. Hardwired control uses gates; microprogrammed control uses a control store.\nKeywords: timing, control unit, sequence counter, microprogram"
+    },
+    {
+      "id": "FC-SEM-COA-64",
+      "subjectId": "COA",
+      "unit": 3,
+      "topicId": "COA.U3.T09",
+      "topic": "Instruction cycle",
+      "highYield": true,
+      "front": "List the phases of the instruction cycle.",
+      "back": "1. Fetch: read the instruction from memory into IR.\n2. Decode: determine the operation and addressing mode.\n3. Execute: perform the operation, possibly reading or writing memory.\n4. Interrupt: service a pending interrupt before the next fetch.\nKeywords: fetch, decode, execute, interrupt, instruction cycle"
+    },
+    {
+      "id": "FC-SEM-COA-65",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T04",
+      "topic": "General register organization",
+      "highYield": false,
+      "front": "What does a general register organization with seven registers use?",
+      "back": "1. Seven registers feed two multiplexers selected by SELA and SELB.\n2. An ALU combines them; SELD chooses the destination register.\n3. A 3-bit selection code addresses one of eight inputs.\n4. Control signals load the selected destination on the clock edge.\nKeywords: general register, SELA, SELB, SELD, multiplexer"
+    },
+    {
+      "id": "FC-SEM-COA-66",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T08",
+      "topic": "Addition and subtraction",
+      "highYield": false,
+      "front": "How is subtraction performed with two's-complement addition?",
+      "back": "1. Take the two's complement of the subtrahend.\n2. Add it to the minuend using the same binary adder.\n3. Discard the final carry out of the sign bit.\n4. Overflow occurs when same-sign operands give an opposite-sign result.\nKeywords: two's complement, subtraction, adder, overflow, carry"
+    },
+    {
+      "id": "FC-SEM-COA-67",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T11",
+      "topic": "Floating-point arithmetic",
+      "highYield": true,
+      "front": "Outline floating-point addition.",
+      "back": "1. Compare exponents and align the smaller mantissa by shifting right.\n2. Add or subtract the aligned mantissas.\n3. Normalize the result and round it.\n4. Adjust the exponent for any normalization shift.\nKeywords: align exponent, mantissa, normalize, round, floating point"
+    },
+    {
+      "id": "FC-SEM-COA-68",
+      "subjectId": "COA",
+      "unit": 4,
+      "topicId": "COA.U4.T12",
+      "topic": "Decimal arithmetic unit and operations",
+      "highYield": false,
+      "front": "Why is BCD addition corrected with a +6 adjustment?",
+      "back": "1. Adding two BCD digits can produce a sum above 9.\n2. Adding 0110 skips the six invalid BCD codes 1010-1111.\n3. A carry out propagates to the next BCD digit.\n4. Nine's and ten's complements support BCD subtraction.\nKeywords: BCD, correction, +6, nine's complement, decimal adder"
+    },
+    {
+      "id": "FC-SEM-COA-69",
+      "subjectId": "COA",
+      "unit": 5,
+      "topicId": "COA.U5.T08",
+      "topic": "Auxiliary memory",
+      "highYield": false,
+      "front": "Define seek time, rotational latency, and access time for a disk.",
+      "back": "1. Seek time: moving the head to the required track.\n2. Rotational latency: waiting for the sector to reach the head.\n3. Access time = seek + rotational latency + transfer time.\n4. A cylinder is all tracks at one arm position.\nKeywords: auxiliary memory, track, sector, cylinder, access time"
+    }
+  ]
+}

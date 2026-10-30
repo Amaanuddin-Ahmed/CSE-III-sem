@@ -1,0 +1,86 @@
+{
+  "DM": {
+    "FC-M1-DM-14": {
+      "front": "What is the index of a subgroup?",
+      "back": "The index $[G:H]$ is the number of distinct left cosets of $H$ in $G$. For a finite group, $|G| = [G:H]\\times|H|$.\nKeywords: index, coset, Lagrange, subgroup"
+    },
+    "FC-M1-DM-12": {
+      "back": "1. Closure: $a * b \\in G$.\n2. Associativity: $(a * b) * c = a * (b * c)$.\n3. Identity: $a * e = e * a = a$.\n4. Inverse: every $a$ has $a^{-1}$ with $a * a^{-1} = e$.\nKeywords: closure, associativity, identity, inverse"
+    }
+  },
+  "COA": {
+    "FC-SEM-COA-U2": {
+      "front": "When is hardwired control preferred over microprogrammed control?",
+      "back": "Hardwired control is preferred when speed and high volume matter and the instruction set is stable. Microprogrammed control is preferred when the instruction set must be flexible or complex.\nKeywords: hardwired, microprogrammed, speed, flexibility"
+    }
+  },
+  "DBMS": {
+    "FC-M1-DBMS-04": {
+      "back": "1. Domain: values must belong to the attribute domain.\n2. Entity integrity: primary key cannot be NULL.\n3. Referential integrity: foreign key must match a key or be NULL.\nKeywords: domain, entity integrity, referential integrity"
+    },
+    "FC-DBMS-12": {
+      "back": "1. Undo rule: flush undo log before writing a dirty page.\n2. Redo rule: flush all log records before commit.\nKeywords: WAL, undo, redo, flush"
+    },
+    "FC-DBMS-20": {
+      "back": "1. Analysis: find active transactions and dirty pages from the checkpoint.\n2. Redo: repeat history from the oldest unwritten page.\n3. Undo: roll back uncommitted transactions in reverse order.\nKeywords: ARIES, analysis, redo, undo"
+    }
+  },
+  "ES": {
+    "FC-SEM-ES-55": {
+      "front": "What is the net effect of chlorine atoms on stratospheric ozone?",
+      "back": "A chlorine atom reacts with ozone to form chlorine monoxide and oxygen. The chlorine is regenerated, so one atom can destroy many ozone molecules in a catalytic cycle.\nKeywords: chlorine, catalytic, ozone, CFC"
+    },
+    "FC-SEM-ES-62": {
+      "front": "Why is baseline data collected before an EIA?",
+      "back": "Baseline data records pre-project air, water, soil, noise, ecological and socio-economic conditions. It gives a reference against which predicted and actual impacts can be measured.\nKeywords: baseline, EIA, reference, impact"
+    },
+    "FC-SEM-ES-63": {
+      "front": "What are the two key ideas in the Brundtland definition?",
+      "back": "The definition combines meeting present needs with not compromising the ability of future generations to meet theirs. It balances intra-generational and inter-generational equity.\nKeywords: Brundtland, present needs, future generations, equity"
+    },
+    "FC-M1-ES-05": {
+      "back": "1. Genetic: gene variation within a species.\n2. Species: variety of species in a habitat.\n3. Ecosystem: variety of habitats and ecological niches.\nKeywords: genetic, species, ecosystem, biodiversity"
+    },
+    "FC-ES-06": {
+      "back": "1. Storage for direct use: collect rooftop runoff in tanks.\n2. Groundwater recharge: divert runoff into pits and trenches.\nKeywords: rainwater harvesting, storage, recharge, runoff"
+    }
+  },
+  "IE": {
+    "FC-SEM-IE-19": {
+      "front": "How do TAM, SAM and SOM narrow a market estimate?",
+      "back": "Start with total category demand (TAM), restrict it to the segment the venture can serve (SAM), then estimate the share it can realistically win (SOM).\nKeywords: TAM, SAM, SOM, funnel"
+    },
+    "FC-SEM-IE-22": {
+      "front": "What should an MVP include and exclude?",
+      "back": "Include the smallest feature set that delivers core value and lets real users complete the main task. Exclude nice-to-have features, polish and scale work until the hypothesis is validated.\nKeywords: MVP, core value, scope, hypothesis"
+    },
+    "FC-SEM-IE-26": {
+      "front": "Which Lean Canvas blocks cover customers and money?",
+      "back": "Customer Segments and Channels describe who is served and how they are reached. Revenue Streams, Cost Structure and Key Metrics describe how money is earned, spent and tracked.\nKeywords: customer segments, channels, revenue, cost, metrics"
+    },
+    "FC-SEM-IE-31": {
+      "front": "Why can positive unit economics still produce a loss?",
+      "back": "Unit economics ignores fixed overheads, founder salaries, one-off development costs and poor capacity utilisation. A venture can profit on each sale yet lose money overall until volume covers fixed costs.\nKeywords: unit economics, fixed cost, overhead, volume"
+    },
+    "FC-SEM-IE-33": {
+      "front": "Distinguish a channel from an acquisition tactic.",
+      "back": "A channel is the route used to reach customers, such as a website, retailer or marketplace. An acquisition tactic is a specific action within that channel, such as an ad campaign or referral offer.\nKeywords: channel, tactic, acquisition, route"
+    },
+    "FC-SEM-IE-38": {
+      "front": "Which funding source suits validation, and which suits scaling?",
+      "back": "Grants, incubators and angel rounds usually suit validation and early prototypes. Venture capital and larger institutional rounds usually suit proven unit economics and scaling.\nKeywords: grant, angel, venture capital, validation, scaling"
+    },
+    "FC-SEM-IE-40": {
+      "front": "What are the main risks at each startup stage?",
+      "back": "Idea stage: is the problem real? Validation: will customers adopt? Early growth: can the model acquire customers profitably? Scaling: can operations and cash flow keep pace?\nKeywords: idea, validation, growth, scaling, risk"
+    },
+    "FC-SEM-IE-41": {
+      "front": "What does NISP expect a college to provide?",
+      "back": "An incubation cell, flexible academic credit or leave for founders, mentoring, access to labs and industry, IP support and a clear startup policy.\nKeywords: NISP, incubation, credit, mentoring, IP"
+    },
+    "FC-SEM-IE-46": {
+      "front": "Distinguish licensing from assigning intellectual property.",
+      "back": "A licence lets another party use the IP on agreed terms while the owner keeps ownership. An assignment transfers ownership of the IP to the other party.\nKeywords: licence, assignment, ownership, IP"
+    }
+  }
+}

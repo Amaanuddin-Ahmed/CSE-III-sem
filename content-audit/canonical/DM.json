@@ -1,0 +1,1021 @@
+{
+  "subject": "DM",
+  "name": "Discrete Mathematics",
+  "mcq": [
+    {
+      "id": "DM-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T01",
+      "topic": "Propositions",
+      "question": "Which of the following is **not** a proposition?",
+      "options": [
+        "$2+2=4$",
+        "Delhi is the capital of India",
+        "What time is it?",
+        "5 is an odd number"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A proposition must have a definite truth value. A question has no truth value, so it is not a proposition."
+    },
+    {
+      "id": "DM-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T02",
+      "topic": "Truth table size",
+      "question": "How many rows are needed in the truth table of a compound proposition with 4 distinct propositional variables?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Each variable has two truth values, so 4 variables produce $2^4=16$ distinct assignments."
+    },
+    {
+      "id": "DM-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T01",
+      "topic": "Conditional truth condition",
+      "question": "The conditional $p \\to q$ is false only when:",
+      "options": [
+        "$p$ is false and $q$ is false",
+        "$p$ is false and $q$ is true",
+        "$p$ is true and $q$ is false",
+        "$p$ is true and $q$ is true"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "An implication is false only when the antecedent is true and the consequent is false; all other cases are true."
+    },
+    {
+      "id": "DM-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T02",
+      "topic": "Tautology",
+      "question": "Which compound proposition is a tautology?",
+      "options": [
+        "$(p \\land q) \\to p$",
+        "$(p \\lor q) \\to p$",
+        "$p \\to (p \\land q)$",
+        "$(p \\to q) \\land p$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "If $p \\land q$ is true, then $p$ is true, so the implication is always true. The other forms fail for some assignment."
+    },
+    {
+      "id": "DM-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T04",
+      "topic": "PDNF",
+      "question": "The principal disjunctive normal form of $p \\to q$ is:",
+      "options": [
+        "$\\Sigma m(0,1,3)$",
+        "$\\Sigma m(1,2,3)$",
+        "$\\Sigma m(0,2,3)$",
+        "$\\Sigma m(0,1,2)$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "$p \\to q \\equiv \\neg p \\lor q$ is true for assignments 00, 01 and 11, that is minterms 0, 1 and 3."
+    },
+    {
+      "id": "DM-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T05",
+      "topic": "Modus tollens",
+      "question": "From the premises $p \\to q$ and $\\neg q$, which conclusion follows by modus tollens?",
+      "options": [
+        "$q$",
+        "$\\neg p$",
+        "$p$",
+        "$\\neg q \\to p$"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Modus tollens has the form $p \\to q$, $\\neg q$ therefore $\\neg p$. It is the contrapositive of modus ponens."
+    },
+    {
+      "id": "DM-SEM-045",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T06",
+      "topic": "Quantifier negation",
+      "question": "The negation of $\\forall x\\, P(x)$ is:",
+      "options": [
+        "$\\forall x\\, \\neg P(x)$",
+        "$\\exists x\\, \\neg P(x)$",
+        "$\\exists x\\, P(x)$",
+        "$\\neg\\exists x\\, P(x)$"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Negating a universal statement produces an existential statement with the predicate negated: $\\neg\\forall x P(x) \\equiv \\exists x \\neg P(x)$."
+    },
+    {
+      "id": "DM-SEM-046",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T05",
+      "topic": "Inference rule",
+      "question": "The argument form $p \\to q$, $p$, therefore $q$ is called:",
+      "options": [
+        "Modus tollens",
+        "Hypothetical syllogism",
+        "Modus ponens",
+        "Disjunctive syllogism"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Affirming the antecedent is modus ponens. Hypothetical syllogism chains two implications; disjunctive syllogism uses a disjunction."
+    },
+    {
+      "id": "DM-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T01",
+      "topic": "Cartesian product",
+      "question": "If $|A|=3$ and $|B|=4$, then $|A \\times B|$ equals:",
+      "options": [
+        "7",
+        "12",
+        "64",
+        "81"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The Cartesian product contains one ordered pair for each choice of an element from $A$ and an element from $B$, so $3 \\times 4 = 12$."
+    },
+    {
+      "id": "DM-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T01",
+      "topic": "Power set",
+      "question": "How many subsets does a set with 5 elements have?",
+      "options": [
+        "5",
+        "10",
+        "25",
+        "32"
+      ],
+      "answerIndex": 3,
+      "difficulty": "easy",
+      "explanation": "Each element is either included or excluded, giving $2^5=32$ subsets, including the empty set and the whole set."
+    },
+    {
+      "id": "DM-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T04",
+      "topic": "Equivalence relation",
+      "question": "A relation that is reflexive, symmetric and transitive is called:",
+      "options": [
+        "A partial order",
+        "An equivalence relation",
+        "A function",
+        "A closure"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Those three properties define an equivalence relation, which partitions the set into disjoint equivalence classes."
+    },
+    {
+      "id": "DM-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T05",
+      "topic": "Hasse diagram",
+      "question": "In the divisibility POSET on $\\{1,2,3,6\\}$, the least element is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "1 divides every element, so it is below all of them in the divisibility order. 6 is the greatest element."
+    },
+    {
+      "id": "DM-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T06",
+      "topic": "Bijection",
+      "question": "The function $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=2x+1$, is:",
+      "options": [
+        "Injective but not surjective",
+        "Surjective but not injective",
+        "Bijective",
+        "Neither injective nor surjective"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "The function is linear with non-zero slope, so it is one-to-one; for every $y$ the value $x=(y-1)/2$ is real, so it is onto."
+    },
+    {
+      "id": "DM-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T07",
+      "topic": "Warshall algorithm",
+      "question": "Warshall's algorithm is used to compute the:",
+      "options": [
+        "Reflexive closure only",
+        "Symmetric closure only",
+        "Transitive closure of a relation",
+        "Inverse of a relation"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Warshall's algorithm builds the transitive closure in $O(n^3)$ time by allowing intermediate vertices one at a time."
+    },
+    {
+      "id": "DM-SEM-053",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T04",
+      "topic": "Counting partitions",
+      "question": "How many equivalence relations exist on the set $\\{a,b\\}$?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The partitions are $\\{\\{a\\},\\{b\\}\\}$ and $\\{\\{a,b\\}\\}$, so there are two equivalence relations."
+    },
+    {
+      "id": "DM-SEM-054",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DM.U3.T02",
+      "topic": "Semigroup",
+      "question": "A semigroup is a non-empty set together with a binary operation that is:",
+      "options": [
+        "Commutative",
+        "Associative",
+        "Idempotent",
+        "Invertible"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A semigroup requires only closure and associativity. Commutativity, identity and inverses are additional properties."
+    },
+    {
+      "id": "DM-SEM-055",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DM.U3.T03",
+      "topic": "Monoid",
+      "question": "A monoid is a semigroup that also has:",
+      "options": [
+        "An identity element",
+        "An inverse for every element",
+        "A commutative operation",
+        "A finite number of elements"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A monoid adds a two-sided identity to an associative binary operation. Inverses are required only for a group."
+    },
+    {
+      "id": "DM-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DM.U3.T05",
+      "topic": "Group inverse",
+      "question": "In a group $(G,*)$, the inverse of an element $a$ is:",
+      "options": [
+        "Always equal to $a$",
+        "Unique",
+        "Equal to the identity",
+        "Not necessarily in $G$"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "If $b$ and $c$ are both inverses of $a$, then $b=b*(a*c)=(b*a)*c=c$, so the inverse is unique."
+    },
+    {
+      "id": "DM-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "DM.U3.T06",
+      "topic": "Lattice meet",
+      "question": "In a lattice, the meet $a \\land b$ of two elements is:",
+      "options": [
+        "Their greatest lower bound",
+        "Their least upper bound",
+        "Their sum",
+        "Their complement"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Meet is the greatest lower bound (GLB); join is the least upper bound (LUB). Both must exist for every pair in a lattice."
+    },
+    {
+      "id": "DM-SEM-058",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T02",
+      "topic": "Distinct permutations",
+      "question": "How many distinct arrangements can be formed from the letters of the word LEVEL?",
+      "options": [
+        "20",
+        "30",
+        "60",
+        "120"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "LEVEL has 5 letters with L repeated twice and E repeated twice, so the count is $5!/(2!\\,2!)=30$."
+    },
+    {
+      "id": "DM-SEM-059",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T03",
+      "topic": "Combinations",
+      "question": "The value of $\\binom{7}{3}$ is:",
+      "options": [
+        "21",
+        "35",
+        "42",
+        "210"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "$\\binom{7}{3}=7!/(3!\\,4!)=(7 \\times 6 \\times 5)/(3 \\times 2 \\times 1)=35$."
+    },
+    {
+      "id": "DM-SEM-060",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T06",
+      "topic": "Binomial coefficient",
+      "question": "The coefficient of $x^3$ in the expansion of $(1+x)^6$ is:",
+      "options": [
+        "6",
+        "15",
+        "20",
+        "120"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "By the binomial theorem the coefficient is $\\binom{6}{3}=20$."
+    },
+    {
+      "id": "DM-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T01",
+      "topic": "Counting functions",
+      "question": "How many functions can be defined from a set with 3 elements to a set with 2 elements?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Each of the 3 domain elements independently chooses one of 2 codomain elements, giving $2^3=8$ functions."
+    },
+    {
+      "id": "DM-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T10",
+      "topic": "Recurrence solution",
+      "question": "The recurrence $a_n=2a_{n-1}+1$ with $a_0=0$ has the closed form:",
+      "options": [
+        "$a_n=2^n$",
+        "$a_n=2^n-1$",
+        "$a_n=2^{n+1}-1$",
+        "$a_n=n^2$"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The first values are 0, 1, 3, 7, 15, which are one less than powers of two, so $a_n=2^n-1$."
+    },
+    {
+      "id": "DM-SEM-063",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DM.U5.T01",
+      "topic": "Handshaking lemma",
+      "question": "In any undirected graph, the sum of all vertex degrees equals:",
+      "options": [
+        "The number of vertices",
+        "Twice the number of edges",
+        "The number of edges",
+        "Twice the number of vertices"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Each edge contributes one to the degree of each endpoint, so the degree sum counts every edge twice."
+    },
+    {
+      "id": "DM-SEM-064",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DM.U5.T03",
+      "topic": "Tree edges",
+      "question": "A tree with $n$ vertices has exactly:",
+      "options": [
+        "$n$ edges",
+        "$n-1$ edges",
+        "$n+1$ edges",
+        "$2n$ edges"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A tree is connected and acyclic, and every connected acyclic graph on $n$ vertices has $n-1$ edges."
+    },
+    {
+      "id": "DM-SEM-065",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DM.U5.T07",
+      "topic": "Planarity",
+      "question": "Which of the following graphs is non-planar?",
+      "options": [
+        "$C_4$",
+        "$K_4$",
+        "$K_5$",
+        "A tree with 10 vertices"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "$K_5$ cannot be drawn in the plane without crossing edges. $K_4$ is planar, and every tree is planar."
+    },
+    {
+      "id": "DM-SEM-066",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DM.U5.T08",
+      "topic": "Euler circuit",
+      "question": "A connected undirected graph has an Euler circuit if and only if:",
+      "options": [
+        "Every vertex has even degree",
+        "Exactly two vertices have odd degree",
+        "It is a tree",
+        "It is bipartite"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "An Euler circuit uses every edge once and returns to the start, which requires every vertex to have even degree."
+    },
+    {
+      "id": "DM-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DM.U5.T10",
+      "topic": "Chromatic number",
+      "question": "The chromatic number of a cycle graph $C_5$ is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "An odd cycle cannot be coloured with two colours, and three colours suffice, so $\\chi(C_5)=3$."
+    },
+    {
+      "id": "DM-SEM-068",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T03",
+      "topic": "Logical equivalence",
+      "question": "The compound proposition $(p \\to q) \\land (q \\to p)$ is logically equivalent to:",
+      "options": [
+        "$p \\leftrightarrow q$",
+        "$p \\lor q$",
+        "$p \\land q$",
+        "$\\neg p \\lor q$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "The conjunction of a conditional and its converse is true exactly when p and q have the same truth value, which is the biconditional."
+    },
+    {
+      "id": "DM-SEM-069",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T04",
+      "topic": "Counting equivalence relations",
+      "question": "How many equivalence relations are there on the set $\\{1,2,3\\}$?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Equivalence relations correspond to partitions. The five partitions are one block, three two-block partitions and three singleton blocks."
+    },
+    {
+      "id": "DM-SEM-070",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DM.U3.T05",
+      "topic": "Order of a group element",
+      "question": "In the group $(\\mathbb{Z}_7 \\setminus \\{0\\}, \\times_7)$, the order of the element $2$ is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Compute powers modulo 7: $2^1=2$, $2^2=4$, $2^3=8\\equiv1$. The smallest positive exponent giving the identity is 3."
+    },
+    {
+      "id": "DM-SEM-071",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T08",
+      "topic": "Derangements",
+      "question": "The number of derangements of 4 distinct objects is:",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "24"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "By inclusion-exclusion, $!4 = 24(1-1+1/2-1/6+1/24)=24-24+12-4+1=9$."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-DM-23",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T01",
+      "topic": "Proposition",
+      "highYield": true,
+      "front": "What makes a sentence a proposition?",
+      "back": "It declares a statement that is either true or false, but not both. Questions, commands and exclamations are not propositions.\nKeywords: statement, truth value, declarative"
+    },
+    {
+      "id": "FC-SEM-DM-24",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T01",
+      "topic": "Connectives",
+      "highYield": true,
+      "front": "When is a conjunction true, and when is a disjunction false?",
+      "back": "Conjunction $p \\land q$ is true only when both parts are true. Disjunction $p \\lor q$ is false only when both parts are false.\nKeywords: conjunction, disjunction, truth conditions"
+    },
+    {
+      "id": "FC-SEM-DM-25",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T02",
+      "topic": "Tautology and contradiction",
+      "highYield": true,
+      "front": "Define tautology, contradiction and contingency.",
+      "back": "Tautology: true under every assignment. Contradiction: false under every assignment. Contingency: true for some assignments and false for others.\nKeywords: tautology, contradiction, contingency"
+    },
+    {
+      "id": "FC-SEM-DM-26",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T03",
+      "topic": "Logical equivalence laws",
+      "highYield": true,
+      "front": "State De Morgan's laws and the distributive laws.",
+      "back": "$\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q$ and $\\neg(p \\lor q) \\equiv \\neg p \\land \\neg q$.\n$p \\land (q \\lor r) \\equiv (p \\land q) \\lor (p \\land r)$; the dual holds for $\\lor$ over $\\land$.\nKeywords: De Morgan, distributive, equivalence"
+    },
+    {
+      "id": "FC-SEM-DM-27",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T04",
+      "topic": "PDNF and PCNF",
+      "highYield": true,
+      "front": "How do you obtain PDNF and PCNF from a truth table?",
+      "back": "PDNF: OR the minterms whose rows have value 1. PCNF: AND the maxterms whose rows have value 0.\nKeywords: PDNF, PCNF, minterm, maxterm"
+    },
+    {
+      "id": "FC-SEM-DM-28",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T05",
+      "topic": "Modus ponens and tollens",
+      "highYield": true,
+      "front": "State modus ponens and modus tollens.",
+      "back": "Modus ponens: $p \\to q$, $p$ therefore $q$. Modus tollens: $p \\to q$, $\\neg q$ therefore $\\neg p$.\nKeywords: modus ponens, modus tollens, inference"
+    },
+    {
+      "id": "FC-SEM-DM-29",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T06",
+      "topic": "Quantifiers",
+      "highYield": false,
+      "front": "How do you negate a universally quantified statement?",
+      "back": "$\\neg\\forall x\\, P(x) \\equiv \\exists x\\, \\neg P(x)$. Likewise $\\neg\\exists x\\, P(x) \\equiv \\forall x\\, \\neg P(x)$.\nKeywords: universal, existential, negation, quantifier"
+    },
+    {
+      "id": "FC-SEM-DM-30",
+      "subjectId": "DM",
+      "unit": 1,
+      "topicId": "DM.U1.T07",
+      "topic": "Validity of arguments",
+      "highYield": true,
+      "front": "What does it mean for an argument to be valid?",
+      "back": "The conclusion must be true whenever all premises are true. Validity concerns form, not the actual truth of the premises.\nKeywords: validity, premises, conclusion, inference"
+    },
+    {
+      "id": "FC-SEM-DM-31",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T01",
+      "topic": "Set operations",
+      "highYield": true,
+      "front": "Define union, intersection, difference and complement.",
+      "back": "$A \\cup B$: elements in either set. $A \\cap B$: elements in both. $A-B$: in $A$ but not $B$. $A^c$: in the universal set but not $A$.\nKeywords: union, intersection, difference, complement"
+    },
+    {
+      "id": "FC-SEM-DM-32",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T01",
+      "topic": "Power set",
+      "highYield": true,
+      "front": "How many subsets does an $n$-element set have?",
+      "back": "A set with $n$ elements has $2^n$ subsets, including the empty set and the set itself. The power set is $P(A)$.\nKeywords: power set, subsets, cardinality"
+    },
+    {
+      "id": "FC-SEM-DM-33",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T03",
+      "topic": "Relation properties",
+      "highYield": true,
+      "front": "Define reflexive, symmetric and transitive relations.",
+      "back": "Reflexive: $(a,a) \\in R$ for every $a$. Symmetric: $(a,b) \\in R \\Rightarrow (b,a) \\in R$. Transitive: $(a,b),(b,c) \\in R \\Rightarrow (a,c) \\in R$.\nKeywords: reflexive, symmetric, transitive, relation"
+    },
+    {
+      "id": "FC-SEM-DM-34",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T04",
+      "topic": "Equivalence classes",
+      "highYield": true,
+      "front": "How does an equivalence relation partition a set?",
+      "back": "The equivalence classes are disjoint, non-empty, and their union is the whole set. Every partition defines an equivalence relation.\nKeywords: equivalence class, partition, disjoint"
+    },
+    {
+      "id": "FC-SEM-DM-35",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T05",
+      "topic": "POSet and Hasse diagram",
+      "highYield": true,
+      "front": "What is a Hasse diagram and what does it omit?",
+      "back": "A Hasse diagram draws a finite POSet with larger elements above smaller ones. It omits self-loops and edges implied by transitivity.\nKeywords: POSet, Hasse, partial order, transitive reduction"
+    },
+    {
+      "id": "FC-SEM-DM-36",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T06",
+      "topic": "Function types",
+      "highYield": true,
+      "front": "Distinguish injective, surjective and bijective functions.",
+      "back": "Injective: distinct inputs give distinct outputs. Surjective: every codomain element is hit. Bijective: both, so an inverse function exists.\nKeywords: injective, surjective, bijective, inverse"
+    },
+    {
+      "id": "FC-SEM-DM-37",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T07",
+      "topic": "Warshall algorithm",
+      "highYield": false,
+      "front": "What does Warshall's algorithm compute and in what time?",
+      "back": "It computes the transitive closure of a relation on $n$ elements in $O(n^3)$ time, using a matrix and one intermediate vertex per pass.\nKeywords: Warshall, transitive closure, matrix"
+    },
+    {
+      "id": "FC-SEM-DM-38",
+      "subjectId": "DM",
+      "unit": 2,
+      "topicId": "DM.U2.T08",
+      "topic": "Composition of relations",
+      "highYield": false,
+      "front": "How is the composition $R \\circ S$ of two relations defined?",
+      "back": "$(a,c) \\in R \\circ S$ when there exists $b$ with $(a,b) \\in R$ and $(b,c) \\in S$. Composition is associative but not generally commutative.\nKeywords: composition, relation, associative"
+    },
+    {
+      "id": "FC-SEM-DM-39",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T01",
+      "topic": "Algebraic system",
+      "highYield": true,
+      "front": "What is an algebraic system?",
+      "back": "A non-empty set with one or more finitary operations closed on that set. The operations may be binary, unary or nullary.\nKeywords: algebraic system, closure, operation"
+    },
+    {
+      "id": "FC-SEM-DM-40",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T02",
+      "topic": "Semigroup",
+      "highYield": true,
+      "front": "What is the difference between a semigroup and a monoid?",
+      "back": "A semigroup needs closure and associativity. A monoid is a semigroup with a two-sided identity element.\nKeywords: semigroup, monoid, identity, associative"
+    },
+    {
+      "id": "FC-SEM-DM-41",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T05",
+      "topic": "Group axioms",
+      "highYield": true,
+      "front": "State the four group axioms.",
+      "back": "Closure, associativity, existence of an identity, and an inverse for every element. A group is abelian when the operation is commutative.\nKeywords: group, closure, identity, inverse, abelian"
+    },
+    {
+      "id": "FC-SEM-DM-42",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T04",
+      "topic": "Homomorphism",
+      "highYield": true,
+      "front": "What is a homomorphism between two algebraic systems?",
+      "back": "A map $f$ that preserves the operation: $f(a*b)=f(a)\\,f(b)$. A bijective homomorphism is an isomorphism.\nKeywords: homomorphism, isomorphism, operation preserving"
+    },
+    {
+      "id": "FC-SEM-DM-43",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T06",
+      "topic": "Lattice",
+      "highYield": true,
+      "front": "When is a POSet a lattice?",
+      "back": "Every pair of elements must have a greatest lower bound (meet) and a least upper bound (join) inside the set.\nKeywords: lattice, meet, join, GLB, LUB"
+    },
+    {
+      "id": "FC-SEM-DM-44",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T08",
+      "topic": "Boolean algebra",
+      "highYield": true,
+      "front": "What is a Boolean algebra?",
+      "back": "A complemented distributive lattice with least element 0 and greatest element 1. It obeys commutative, associative, distributive, identity and complement laws.\nKeywords: Boolean algebra, complemented, distributive, complement"
+    },
+    {
+      "id": "FC-SEM-DM-45",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T01",
+      "topic": "Sum and product rules",
+      "highYield": true,
+      "front": "State the sum rule and the product rule of counting.",
+      "back": "Sum rule: if tasks are mutually exclusive, add the counts. Product rule: if a task has independent stages, multiply the counts.\nKeywords: sum rule, product rule, counting"
+    },
+    {
+      "id": "FC-SEM-DM-46",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T02",
+      "topic": "Permutation formula",
+      "highYield": true,
+      "front": "How many permutations of $n$ distinct objects are there?",
+      "back": "$n!$ arrangements. For $r$ positions chosen from $n$ distinct objects, the count is $P(n,r)=n!/(n-r)!$.\nKeywords: permutation, factorial, arrangement"
+    },
+    {
+      "id": "FC-SEM-DM-47",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T03",
+      "topic": "Combination formula",
+      "highYield": true,
+      "front": "How many ways can you choose $r$ objects from $n$ distinct objects?",
+      "back": "$\\binom{n}{r}=n!/[r!(n-r)!]$. Order does not matter; choosing $r$ is the same as leaving out $n-r$.\nKeywords: combination, choose, binomial coefficient"
+    },
+    {
+      "id": "FC-SEM-DM-48",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T04",
+      "topic": "Stars and bars",
+      "highYield": true,
+      "front": "How many non-negative integer solutions does $x_1+\\cdots+x_k=n$ have?",
+      "back": "$\\binom{n+k-1}{k-1}$. Place $n$ identical items into $k$ boxes separated by $k-1$ bars.\nKeywords: stars and bars, non-negative solutions, distribution"
+    },
+    {
+      "id": "FC-SEM-DM-49",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T06",
+      "topic": "Binomial theorem",
+      "highYield": true,
+      "front": "State the binomial theorem and its general term.",
+      "back": "$(x+y)^n=\\sum_{r=0}^{n}\\binom{n}{r}x^{n-r}y^r$. The general term is $\\binom{n}{r}x^{n-r}y^r$.\nKeywords: binomial theorem, general term, coefficient"
+    },
+    {
+      "id": "FC-SEM-DM-50",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T08",
+      "topic": "Inclusion-exclusion",
+      "highYield": true,
+      "front": "State the inclusion-exclusion principle for two and three sets.",
+      "back": "$|A \\cup B|=|A|+|B|-|A \\cap B|$. For three sets, subtract the three pairwise intersections and add back the triple intersection.\nKeywords: inclusion-exclusion, union, intersection"
+    },
+    {
+      "id": "FC-SEM-DM-51",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T10",
+      "topic": "Recurrence relations",
+      "highYield": true,
+      "front": "How do you solve a linear homogeneous recurrence with constant coefficients?",
+      "back": "Write the characteristic equation, find its roots, and combine powers of the roots. Repeated roots need an extra factor of $n$.\nKeywords: recurrence, characteristic equation, homogeneous"
+    },
+    {
+      "id": "FC-SEM-DM-52",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T01",
+      "topic": "Handshaking lemma",
+      "highYield": true,
+      "front": "State the handshaking lemma and one consequence.",
+      "back": "$\\sum_v \\deg(v)=2|E|$. Therefore the number of odd-degree vertices in any graph is even.\nKeywords: handshaking, degree sum, odd vertices"
+    },
+    {
+      "id": "FC-SEM-DM-53",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T02",
+      "topic": "Graph isomorphism",
+      "highYield": true,
+      "front": "What must two isomorphic graphs share?",
+      "back": "The same number of vertices and edges, the same degree sequence, and the same cycle structure. These are necessary, not sufficient.\nKeywords: isomorphism, degree sequence, invariant"
+    },
+    {
+      "id": "FC-SEM-DM-54",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T03",
+      "topic": "Tree properties",
+      "highYield": true,
+      "front": "List three equivalent definitions of a tree.",
+      "back": "A connected acyclic graph; a connected graph with $n-1$ edges; a graph with a unique simple path between every pair of vertices.\nKeywords: tree, acyclic, connected, unique path"
+    },
+    {
+      "id": "FC-SEM-DM-55",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T04",
+      "topic": "Kruskal and Prim",
+      "highYield": true,
+      "front": "Compare Kruskal's and Prim's minimum spanning tree algorithms.",
+      "back": "Kruskal sorts all edges and adds the cheapest edge that avoids a cycle. Prim grows one tree from a start vertex, always adding the cheapest crossing edge.\nKeywords: Kruskal, Prim, MST, greedy"
+    },
+    {
+      "id": "FC-SEM-DM-56",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T08",
+      "topic": "Euler and Hamiltonian",
+      "highYield": true,
+      "front": "Distinguish an Euler circuit from a Hamiltonian cycle.",
+      "back": "Euler circuit uses every edge exactly once and returns to the start. Hamiltonian cycle visits every vertex exactly once and returns to the start.\nKeywords: Euler, Hamiltonian, circuit, cycle"
+    },
+    {
+      "id": "FC-SEM-DM-57",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T07",
+      "topic": "Euler formula",
+      "highYield": true,
+      "front": "State Euler's formula for a connected planar graph.",
+      "back": "$V-E+F=2$, where $F$ counts the outer face. For a planar graph with $V \\ge 3$, $E \\le 3V-6$.\nKeywords: Euler formula, planar, faces, vertices, edges"
+    },
+    {
+      "id": "FC-SEM-DM-58",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T10",
+      "topic": "Chromatic number",
+      "highYield": true,
+      "front": "What is the chromatic number of a graph, and of $K_n$?",
+      "back": "The minimum number of colours needed so adjacent vertices differ. $\\chi(K_n)=n$, and a graph is bipartite exactly when $\\chi \\le 2$.\nKeywords: chromatic number, colouring, bipartite, clique"
+    },
+    {
+      "id": "FC-SEM-DM-59",
+      "subjectId": "DM",
+      "unit": 3,
+      "topicId": "DM.U3.T07",
+      "topic": "Lattice properties and special lattices",
+      "highYield": false,
+      "front": "Define a bounded, complemented, and distributive lattice.",
+      "back": "1. Bounded: has least element 0 and greatest element 1.\n2. Complemented: every a has b with a∨b=1 and a∧b=0.\n3. Distributive: a∧(b∨c)=(a∧b)∨(a∧c).\n4. A non-distributive lattice contains the pentagon N5 or diamond M3.\nKeywords: bounded, complemented, distributive, pentagon, diamond"
+    },
+    {
+      "id": "FC-SEM-DM-60",
+      "subjectId": "DM",
+      "unit": 4,
+      "topicId": "DM.U4.T07",
+      "topic": "Multinomial theorem",
+      "highYield": false,
+      "front": "State the multinomial theorem for (x1 + x2 + ... + xk)^n.",
+      "back": "1. Expand as the sum over n1+...+nk=n of n!/(n1!...nk!) x1^n1...xk^nk.\n2. The coefficient n!/(n1!...nk!) is the multinomial coefficient.\n3. For k=2 it reduces to the binomial theorem.\nKeywords: multinomial, coefficient, binomial"
+    },
+    {
+      "id": "FC-SEM-DM-61",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T05",
+      "topic": "Directed trees",
+      "highYield": false,
+      "front": "What is a directed tree (arborescence)?",
+      "back": "1. A directed tree has one root with in-degree 0.\n2. Every other vertex has in-degree exactly 1.\n3. Its underlying undirected graph is a tree.\n4. An out-tree directs edges away from the root; an in-tree directs them toward it.\nKeywords: arborescence, root, in-degree, out-tree, in-tree"
+    },
+    {
+      "id": "FC-SEM-DM-62",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T06",
+      "topic": "Binary trees and traversals",
+      "highYield": true,
+      "front": "List preorder, inorder, and postorder binary tree traversals.",
+      "back": "1. Preorder: visit root, then left subtree, then right subtree.\n2. Inorder: visit left subtree, root, then right subtree.\n3. Postorder: visit left subtree, right subtree, then root.\n4. In a full binary tree every node has 0 or 2 children.\nKeywords: preorder, inorder, postorder, full binary tree"
+    },
+    {
+      "id": "FC-SEM-DM-63",
+      "subjectId": "DM",
+      "unit": 5,
+      "topicId": "DM.U5.T09",
+      "topic": "Hamiltonian graphs",
+      "highYield": true,
+      "front": "What is a Hamiltonian cycle, and state Dirac's theorem.",
+      "back": "1. A Hamiltonian cycle visits every vertex once and returns to start.\n2. Dirac: if n≥3 and every vertex degree ≥ n/2, a Hamiltonian cycle exists.\n3. Ore: if deg(u)+deg(v) ≥ n for every non-adjacent pair, one exists.\nKeywords: Hamiltonian, Dirac, Ore, cycle"
+    }
+  ],
+  "fixes": {
+    "FC-M1-DM-14": {
+      "front": "What is the index of a subgroup?",
+      "back": "The index $[G:H]$ is the number of distinct left cosets of $H$ in $G$. For a finite group, $|G| = [G:H]\\times|H|$.\nKeywords: index, coset, Lagrange, subgroup"
+    },
+    "FC-M1-DM-12": {
+      "back": "1. Closure: $a * b \\in G$.\n2. Associativity: $(a * b) * c = a * (b * c)$.\n3. Identity: $a * e = e * a = a$.\n4. Inverse: every $a$ has $a^{-1}$ with $a * a^{-1} = e$.\nKeywords: closure, associativity, identity, inverse"
+    }
+  }
+}

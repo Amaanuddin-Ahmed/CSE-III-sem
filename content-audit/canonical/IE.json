@@ -1,0 +1,1764 @@
+{
+  "subject": "IE",
+  "name": "Innovation and Entrepreneurship",
+  "fixes": {
+    "IE-SEM-001": {
+      "unit": 2,
+      "topicId": "IE.U2.T07",
+      "topic": "Design thinking stages",
+      "question": "What are the five stages of the design thinking process?",
+      "options": [
+        "Plan, Code, Test, Deploy, Maintain",
+        "Attract, Engage, Convert, Retain, Delight",
+        "Discover, Fund, File, Sell, Exit",
+        "Empathize, Define, Ideate, Prototype, Test"
+      ],
+      "answerIndex": 3,
+      "difficulty": "easy",
+      "explanation": "Design thinking moves from empathising with users to defining the problem, ideating solutions, prototyping and testing them."
+    },
+    "IE-SEM-002": {
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T05",
+      "topic": "Minimum viable product",
+      "question": "A version of a product that allows a team to collect the maximum validated learning with the least effort is called a minimum _______ product.",
+      "accepted": [
+        "viable",
+        "viable product"
+      ],
+      "difficulty": "easy",
+      "explanation": "An MVP tests the core value hypothesis with real users before the team invests in a full product."
+    },
+    "IE-SEM-003": {
+      "topicId": "IE.U2.T03",
+      "topic": "Problem-customer fit",
+      "question": "Which activity is the most direct way to validate problem-customer fit?",
+      "options": [
+        "Interviewing target customers about the problem and current alternatives",
+        "Writing more code before talking to users",
+        "Designing a logo and choosing office space",
+        "Registering the company before testing demand"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Direct customer interviews reveal whether the problem is real, urgent and currently solved poorly, which is the core evidence for problem-customer fit."
+    },
+    "IE-SEM-004": {
+      "topicId": "IE.U2.T03",
+      "topic": "Iterating problem-customer fit",
+      "question": "After customer interviews show that the original pain point is not urgent, the team should revise the problem _______ and target segment.",
+      "accepted": [
+        "statement",
+        "definition"
+      ],
+      "difficulty": "medium",
+      "explanation": "Iteration means updating the problem statement and segment until the evidence shows a real, prioritised customer need."
+    },
+    "IE-M2-001": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas blocks",
+      "question": "How many blocks does the Lean Canvas use to summarise a startup?",
+      "options": [
+        "9",
+        "5",
+        "7",
+        "12"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The Lean Canvas uses nine blocks, including Problem, Solution, Key Metrics, Cost Structure and Unfair Advantage."
+    },
+    "IE-M2-002": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Unique value proposition",
+      "question": "In the Lean Canvas, the block that states why the product is different and worth buying is the Unique _______ Proposition.",
+      "accepted": [
+        "Value",
+        "value"
+      ],
+      "difficulty": "easy",
+      "explanation": "The Unique Value Proposition states the single clear reason a customer should choose this product over alternatives."
+    },
+    "IE-M2-003": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas customer segments",
+      "question": "Which Lean Canvas block defines the groups of people the venture aims to serve?",
+      "options": [
+        "Customer Segments",
+        "Key Metrics",
+        "Cost Structure",
+        "Unfair Advantage"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Customer Segments identifies the target users and buyers, which anchors the rest of the canvas."
+    },
+    "IE-M2-004": {
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T02",
+      "topic": "SOM",
+      "question": "The portion of the serviceable market that a startup can realistically win is called the _______.",
+      "accepted": [
+        "SOM",
+        "serviceable obtainable market"
+      ],
+      "difficulty": "medium",
+      "explanation": "SOM is the serviceable obtainable market: the share the venture can realistically capture given competition and resources."
+    },
+    "IE-M2-005": {
+      "unit": 4,
+      "topicId": "IE.U4.T01",
+      "topic": "Subscription business model",
+      "question": "A business model in which customers pay a recurring fee for continuing access to a product is called a:",
+      "options": [
+        "subscription model",
+        "one-time sale model",
+        "barter model",
+        "franchise model"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Subscription models generate recurring revenue, such as monthly software or streaming fees, instead of a single purchase."
+    },
+    "IE-M2-006": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas revenue streams",
+      "question": "In the Lean Canvas, the block that lists how the venture earns money is called Revenue _______.",
+      "accepted": [
+        "Streams",
+        "streams"
+      ],
+      "difficulty": "easy",
+      "explanation": "Revenue Streams lists the sources and pricing models through which the venture earns money."
+    },
+    "IE-M2-007": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas channels",
+      "question": "In the Lean Canvas, the Channels block describes:",
+      "options": [
+        "how the venture reaches and delivers value to customers",
+        "the cost of raw materials",
+        "the key metrics used to measure growth",
+        "the unfair advantage of the founder"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Channels covers the routes used to reach customers, from awareness and evaluation to purchase and delivery."
+    },
+    "IE-M2-008": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Non-dilutive funding",
+      "question": "Which funding source usually supports a startup without diluting founder ownership?",
+      "options": [
+        "Government grant or subsidy",
+        "Angel equity investment",
+        "Venture capital round",
+        "Initial public offering"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Grants and subsidies provide funds without taking equity, unlike angel, venture capital or public-market investors."
+    },
+    "IE-M2-009": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Government grant",
+      "question": "A government scheme that gives eligible startups financial support without taking equity is called a _______.",
+      "accepted": [
+        "grant",
+        "subsidy",
+        "government grant"
+      ],
+      "difficulty": "medium",
+      "explanation": "A grant or subsidy supports eligible ventures financially while leaving ownership with the founders."
+    },
+    "IE-M2-010": {
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Fixed cost",
+      "question": "Which cost remains unchanged when output rises in the short run?",
+      "options": [
+        "Fixed cost",
+        "Variable cost",
+        "Raw material cost",
+        "Packaging cost"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Fixed costs, such as rent, do not vary with output over the relevant short-run range; variable costs do."
+    },
+    "IE-M2-011": {
+      "unit": 4,
+      "topicId": "IE.U4.T05",
+      "topic": "Contribution margin",
+      "question": "Revenue from one customer minus the cost of serving that customer is called the _______ margin.",
+      "accepted": [
+        "contribution",
+        "contribution margin"
+      ],
+      "difficulty": "medium",
+      "explanation": "Contribution margin shows how much each sale contributes towards fixed costs and profit."
+    },
+    "IE-M2-012": {
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Break-even formula",
+      "question": "Break-even quantity is calculated by dividing fixed costs by:",
+      "options": [
+        "contribution per unit",
+        "selling price per unit",
+        "variable cost per unit",
+        "total cost per unit"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Break-even quantity = fixed costs ÷ (selling price − variable cost per unit), where the denominator is contribution per unit."
+    },
+    "IE-M2-013": {
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "Business plan",
+      "question": "A document that forecasts sales, people and finances for a new venture is called a business _______.",
+      "accepted": [
+        "plan"
+      ],
+      "difficulty": "easy",
+      "explanation": "A business plan sets out the venture's strategy and includes sales, people and financial plans."
+    },
+    "IE-M2-014": {
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "People plan",
+      "question": "Which part of a business plan describes the roles, skills and hiring needed by the venture?",
+      "options": [
+        "People plan",
+        "Sales plan",
+        "Financial plan",
+        "Patent plan"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The people plan covers organisation structure, roles, skills, hiring and the cost of the team."
+    },
+    "IE-M2-015": {
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Financial plan",
+      "question": "A financial plan projects revenue, costs and expected _______ for the venture.",
+      "accepted": [
+        "profit",
+        "profitability"
+      ],
+      "difficulty": "medium",
+      "explanation": "The financial plan converts the business model into forecasts of revenue, costs and profit."
+    },
+    "IE-M2-016": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Crowdfunding",
+      "question": "Which funding method pools small contributions from many people, usually through an online platform?",
+      "options": [
+        "Crowdfunding",
+        "Venture capital",
+        "Bank term loan",
+        "Trade credit"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Crowdfunding raises small amounts from many backers, often in reward-, donation-, debt- or equity-based forms."
+    },
+    "IE-M2-017": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Startup India Seed Fund",
+      "question": "The Startup India Seed Fund Scheme primarily supports early-stage startups by:",
+      "options": [
+        "providing financial assistance for proof of concept, prototyping and product trials",
+        "collecting corporate taxes in advance",
+        "mandating government employment quotas",
+        "buying controlling equity in unicorns"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "SISFS provides seed funding for early-stage validation, prototyping and market entry, not for buying controlling stakes."
+    },
+    "IE-M2-023": {
+      "unit": 5,
+      "topicId": "IE.U5.T06",
+      "topic": "Design registration",
+      "question": "A registered design protects the visual _______ of an article, not its technical function.",
+      "accepted": [
+        "appearance",
+        "shape",
+        "ornamentation"
+      ],
+      "difficulty": "medium",
+      "explanation": "Design law protects the outward appearance, shape, pattern or ornamentation of a product; functional features belong to patent law."
+    },
+    "IE-M2-026": {
+      "unit": 5,
+      "topicId": "IE.U5.T09",
+      "topic": "Licensing",
+      "question": "A licence agreement typically allows the licensee to use intellectual property in exchange for a _______.",
+      "options": [
+        "royalty",
+        "patent",
+        "trademark",
+        "copyright"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "The licensor permits use of the IP and usually receives a fee or royalty, while ownership stays with the licensor."
+    },
+    "IE-M2-027": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Startup lifecycle",
+      "question": "In a typical startup lifecycle, which stage normally follows problem validation?",
+      "options": [
+        "Prototype and MVP development",
+        "Idea generation",
+        "Company registration",
+        "Public listing"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "After validating the problem, the team builds a prototype or MVP to test the solution with users."
+    },
+    "IE-M2-028": {
+      "unit": 4,
+      "topicId": "IE.U4.T06",
+      "topic": "Go-to-market strategy",
+      "question": "The plan for reaching target customers through selected channels is called the go-to-_______ strategy.",
+      "accepted": [
+        "market"
+      ],
+      "difficulty": "easy",
+      "explanation": "A go-to-market strategy defines target segments, channels, messaging and acquisition tactics."
+    },
+    "IE-M2-029": {
+      "unit": 4,
+      "topicId": "IE.U4.T06",
+      "topic": "Direct channel",
+      "question": "Which is an example of a direct channel for reaching customers?",
+      "options": [
+        "The company's own website",
+        "A wholesaler",
+        "A retailer",
+        "A distributor"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A direct channel connects the venture straight to the customer, such as its own website or store, without intermediaries."
+    },
+    "IE-M2-030": {
+      "unit": 5,
+      "topicId": "IE.U5.T03",
+      "topic": "Incorporation",
+      "question": "The legal process of forming a company is called _______.",
+      "accepted": [
+        "incorporation",
+        "registration"
+      ],
+      "difficulty": "easy",
+      "explanation": "Incorporation creates the company as a separate legal entity and is a core step in startup registration."
+    },
+    "IE-M2-031": {
+      "unit": 5,
+      "topicId": "IE.U5.T05",
+      "topic": "NISP",
+      "question": "The National Innovation and Startup Policy primarily encourages innovation in:",
+      "options": [
+        "higher-education institutions",
+        "foreign embassies",
+        "stock exchanges",
+        "civil courts"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "NISP gives universities and colleges a framework for student and faculty innovation, incubation and startup support."
+    },
+    "IE-M1-003": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas problem block",
+      "question": "Which Lean Canvas block lists the top customer problems and existing alternatives?",
+      "options": [
+        "Problem",
+        "Solution",
+        "Channels",
+        "Key Metrics"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The Problem block captures the main customer pains and the alternatives they currently use."
+    },
+    "IE-M2-TF-01": {
+      "type": "tf",
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas structure",
+      "question": "The Lean Canvas is structured around nine core blocks.",
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The Lean Canvas uses nine blocks, including Problem, Solution, Key Metrics and Unfair Advantage."
+    },
+    "IE-M2-TF-02": {
+      "type": "tf",
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Unfair advantage",
+      "question": "In the Lean Canvas, an unfair advantage is something that cannot easily be copied or bought by competitors.",
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "An unfair advantage is a durable edge, such as proprietary data or network effects, that rivals cannot easily replicate."
+    },
+    "IE-M2-TF-03": {
+      "type": "tf",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T04",
+      "topic": "Prototype",
+      "question": "A prototype is an early model used to test and communicate a product concept.",
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A prototype makes the concept tangible so the team can gather feedback before full development."
+    },
+    "IE-M2-TF-04": {
+      "type": "tf",
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Grant funding",
+      "question": "A government grant usually dilutes the founder's ownership of the startup.",
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Grants normally provide funds without taking equity, so they do not dilute founder ownership."
+    },
+    "FC-SEM-IE-U1": {
+      "unit": 2,
+      "topicId": "IE.U2.T07",
+      "topic": "Design thinking stages",
+      "front": "List the five stages of design thinking in order.",
+      "back": "1. Empathise with users.\n2. Define the problem.\n3. Ideate solutions.\n4. Prototype the best ideas.\n5. Test with users and iterate.\nKeywords: empathise, define, ideate, prototype, test"
+    },
+    "FC-SEM-IE-U2": {
+      "topicId": "IE.U2.T03",
+      "topic": "Iterating problem-customer fit",
+      "front": "How do you iterate problem-customer fit?",
+      "back": "Compare interview and prototype evidence with the current problem statement. Revise the segment, pain point or value proposition, then test again until customers consistently confirm the problem and show willingness to adopt a solution.\nKeywords: iterate, evidence, segment, value proposition"
+    },
+    "FC-IE-01": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas blocks",
+      "front": "List the nine Lean Canvas blocks.",
+      "back": "1. Problem.\n2. Customer segments.\n3. Unique value proposition.\n4. Solution.\n5. Channels.\n6. Revenue streams.\n7. Cost structure.\n8. Key metrics.\n9. Unfair advantage.\nKeywords: Lean Canvas, problem, solution, metrics, advantage"
+    },
+    "FC-IE-02": {
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T02",
+      "topic": "TAM SAM SOM",
+      "front": "Define TAM, SAM and SOM.",
+      "back": "TAM is the total addressable market for the category. SAM is the serviceable available market the venture can reach. SOM is the serviceable obtainable market it can realistically win.\nKeywords: TAM, SAM, SOM, market sizing"
+    },
+    "FC-IE-03": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Startup funding sources",
+      "front": "Name common startup funding sources.",
+      "back": "Founder savings, friends and family, government grants and schemes, angel investors, venture capital, incubators and accelerators, bank loans and crowdfunding.\nKeywords: funding, grant, angel, venture capital, incubator"
+    },
+    "FC-IE-04": {
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Fixed and variable costs",
+      "front": "Distinguish fixed and variable costs.",
+      "back": "Fixed costs do not change with output in the short run, such as rent. Variable costs change with output, such as raw materials. Total cost is their sum at a given volume.\nKeywords: fixed cost, variable cost, total cost, output"
+    },
+    "FC-IE-05": {
+      "unit": 4,
+      "topicId": "IE.U4.T05",
+      "topic": "Unit economics",
+      "front": "What is unit economics?",
+      "back": "Unit economics compares revenue and cost per unit, such as per customer or order. It shows whether each sale is profitable before fixed costs and whether growth creates value.\nKeywords: unit economics, revenue, cost, contribution, profitability"
+    },
+    "FC-IE-06": {
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Break-even analysis",
+      "front": "State the break-even quantity formula.",
+      "back": "Break-even quantity = fixed costs ÷ (selling price per unit − variable cost per unit). The denominator is the contribution per unit.\nKeywords: break-even, fixed cost, contribution, selling price"
+    },
+    "FC-IE-07": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Grants versus equity",
+      "front": "Compare grant funding with equity funding.",
+      "back": "A grant provides money without giving up ownership, but it is limited and often tied to eligibility or milestones. Equity funding gives investors a share of the company and usually brings mentoring and networks.\nKeywords: grant, equity, dilution, ownership"
+    },
+    "FC-IE-08": {
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "Business plan components",
+      "front": "Name the main components of a business plan.",
+      "back": "Opportunity, market and competition, product or service, sales plan, people plan, financial plan, risks and milestones. The MR25 syllabus highlights sales, people and financial plans.\nKeywords: business plan, sales plan, people plan, financial plan"
+    },
+    "FC-IE-09": {
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "Sales and people plans",
+      "front": "What do the sales and people plans cover?",
+      "back": "The sales plan covers target customers, pricing, channels, targets and sales process. The people plan covers roles, skills, organisation structure, hiring, compensation and team cost.\nKeywords: sales plan, people plan, pricing, hiring"
+    },
+    "FC-IE-10": {
+      "unit": 4,
+      "topicId": "IE.U4.T06",
+      "topic": "Go-to-market channels",
+      "front": "What does a go-to-market plan decide?",
+      "back": "Target segment, positioning, channels, pricing, sales approach, digital presence and customer-acquisition tactics, with metrics for reach, conversion and cost.\nKeywords: go-to-market, channel, positioning, acquisition"
+    },
+    "FC-IE-11": {
+      "unit": 5,
+      "topicId": "IE.U5.T08",
+      "topic": "Forms of IPR",
+      "front": "Compare patents, copyright, trademarks and GI.",
+      "back": "A patent protects an invention. Copyright protects original creative and software works. A trademark identifies the source of goods or services. A Geographical Indication protects a product name linked to a place.\nKeywords: patent, copyright, trademark, GI"
+    },
+    "FC-IE-18": {
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Startup lifecycle",
+      "front": "Describe the typical startup lifecycle.",
+      "back": "Idea, problem validation, prototype and MVP, early customers, product-market fit, growth and scaling, maturity, and finally exit, acquisition or long-term operation.\nKeywords: lifecycle, idea, validation, growth, exit"
+    },
+    "FC-IE-19": {
+      "unit": 5,
+      "topicId": "IE.U5.T05",
+      "topic": "NISP",
+      "front": "What is the National Innovation and Startup Policy?",
+      "back": "NISP is a framework for higher-education institutions to promote student and faculty innovation through incubation, flexible academic policies, mentoring, funding support and industry linkages.\nKeywords: NISP, higher education, incubation, innovation, policy"
+    },
+    "FC-IE-20": {
+      "unit": 5,
+      "topicId": "IE.U5.T09",
+      "topic": "Licensing and technology transfer",
+      "front": "What is licensing and technology transfer?",
+      "back": "Licensing lets another party use intellectual property on agreed terms, often for a fee or royalty. Technology transfer moves knowledge, skills and rights from a developer to a user for commercial application.\nKeywords: licensing, royalty, technology transfer, commercialisation"
+    },
+    "FC-M1-IE-02": {
+      "unit": 2,
+      "topicId": "IE.U2.T07",
+      "topic": "Design thinking stages",
+      "front": "List the five stages of design thinking.",
+      "back": "1. Empathise.\n2. Define.\n3. Ideate.\n4. Prototype.\n5. Test.\nKeywords: design thinking, empathise, define, ideate, prototype, test"
+    },
+    "FC-M1-IE-03": {
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas blocks",
+      "front": "What are the nine Lean Canvas blocks?",
+      "back": "1. Problem.\n2. Customer segments.\n3. Unique value proposition.\n4. Solution.\n5. Channels.\n6. Revenue streams.\n7. Cost structure.\n8. Key metrics.\n9. Unfair advantage.\nKeywords: Lean Canvas, problem, solution, metrics, advantage"
+    },
+    "FC-M1-IE-05": {
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T05",
+      "topic": "Minimum viable product",
+      "front": "What is a Minimum Viable Product?",
+      "back": "An MVP is the smallest version of a product that delivers enough value to test the core hypothesis with real users and generate validated learning without building every planned feature.\nKeywords: MVP, minimum, viable, validated learning"
+    },
+    "FC-SEM-IE-19": {
+      "front": "How do TAM, SAM and SOM narrow a market estimate?",
+      "back": "Start with total category demand (TAM), restrict it to the segment the venture can serve (SAM), then estimate the share it can realistically win (SOM).\nKeywords: TAM, SAM, SOM, funnel"
+    },
+    "FC-SEM-IE-22": {
+      "front": "What should an MVP include and exclude?",
+      "back": "Include the smallest feature set that delivers core value and lets real users complete the main task. Exclude nice-to-have features, polish and scale work until the hypothesis is validated.\nKeywords: MVP, core value, scope, hypothesis"
+    },
+    "FC-SEM-IE-26": {
+      "front": "Which Lean Canvas blocks cover customers and money?",
+      "back": "Customer Segments and Channels describe who is served and how they are reached. Revenue Streams, Cost Structure and Key Metrics describe how money is earned, spent and tracked.\nKeywords: customer segments, channels, revenue, cost, metrics"
+    },
+    "FC-SEM-IE-31": {
+      "front": "Why can positive unit economics still produce a loss?",
+      "back": "Unit economics ignores fixed overheads, founder salaries, one-off development costs and poor capacity utilisation. A venture can profit on each sale yet lose money overall until volume covers fixed costs.\nKeywords: unit economics, fixed cost, overhead, volume"
+    },
+    "FC-SEM-IE-33": {
+      "front": "Distinguish a channel from an acquisition tactic.",
+      "back": "A channel is the route used to reach customers, such as a website, retailer or marketplace. An acquisition tactic is a specific action within that channel, such as an ad campaign or referral offer.\nKeywords: channel, tactic, acquisition, route"
+    },
+    "FC-SEM-IE-38": {
+      "front": "Which funding source suits validation, and which suits scaling?",
+      "back": "Grants, incubators and angel rounds usually suit validation and early prototypes. Venture capital and larger institutional rounds usually suit proven unit economics and scaling.\nKeywords: grant, angel, venture capital, validation, scaling"
+    },
+    "FC-SEM-IE-40": {
+      "front": "What are the main risks at each startup stage?",
+      "back": "Idea stage: is the problem real? Validation: will customers adopt? Early growth: can the model acquire customers profitably? Scaling: can operations and cash flow keep pace?\nKeywords: idea, validation, growth, scaling, risk"
+    },
+    "FC-SEM-IE-41": {
+      "front": "What does NISP expect a college to provide?",
+      "back": "An incubation cell, flexible academic credit or leave for founders, mentoring, access to labs and industry, IP support and a clear startup policy.\nKeywords: NISP, incubation, credit, mentoring, IP"
+    },
+    "FC-SEM-IE-46": {
+      "front": "Distinguish licensing from assigning intellectual property.",
+      "back": "A licence lets another party use the IP on agreed terms while the owner keeps ownership. An assignment transfers ownership of the IP to the other party.\nKeywords: licence, assignment, ownership, IP"
+    }
+  },
+  "mcq": [
+    {
+      "id": "IE-SEM-005",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T01",
+      "topic": "Innovation versus invention",
+      "question": "Innovation is best distinguished from invention because innovation:",
+      "options": [
+        "creates a new idea or device for the first time",
+        "applies a new idea to create value in the market",
+        "is limited to scientific laboratories",
+        "always requires a patent"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Invention is the first creation of an idea or device; innovation turns that idea into a useful product, process or service that creates value."
+    },
+    {
+      "id": "IE-SEM-006",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T02",
+      "topic": "Incremental innovation",
+      "question": "A company improves an existing smartphone by adding a better camera and a faster processor. This is an example of:",
+      "options": [
+        "incremental innovation",
+        "radical innovation",
+        "disruptive innovation",
+        "architectural innovation"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Incremental innovation improves existing products along established performance dimensions; it does not create a new market or technology trajectory."
+    },
+    {
+      "id": "IE-SEM-007",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T02",
+      "topic": "Disruptive innovation",
+      "question": "Disruptive innovation typically begins by:",
+      "options": [
+        "serving the most demanding customers with premium features",
+        "targeting overlooked or low-end customers with a simpler, cheaper offer",
+        "replacing all existing products in a single launch",
+        "focusing only on government contracts"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Disruptive innovations start in overlooked or low-end segments, then improve until they challenge established firms from below."
+    },
+    {
+      "id": "IE-SEM-008",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T02",
+      "topic": "Service innovation",
+      "question": "Which characteristic is more typical of service innovation than manufacturing innovation?",
+      "options": [
+        "Large inventories of finished goods",
+        "Close customer participation in delivery",
+        "Mass production on an assembly line",
+        "Long physical distribution chains"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Services are often produced and consumed together, so customers participate in delivery; manufacturing innovation usually focuses on physical products and processes."
+    },
+    {
+      "id": "IE-SEM-009",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T03",
+      "topic": "Culture of innovation",
+      "question": "Which practice best helps an organisation build a culture of innovation?",
+      "options": [
+        "Punishing every failed experiment",
+        "Rewarding only routine compliance",
+        "Encouraging experimentation and tolerating well-reasoned failure",
+        "Centralising all decisions with one manager"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A culture of innovation supports experimentation, psychological safety and learning from failure, rather than punishing every unsuccessful attempt."
+    },
+    {
+      "id": "IE-SEM-010",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T04",
+      "topic": "Intrapreneur",
+      "question": "An employee who develops and champions a new venture inside an existing company is called an:",
+      "options": [
+        "intrapreneur",
+        "angel investor",
+        "franchisee",
+        "auditor"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "An intrapreneur acts like an entrepreneur within an organisation, using its resources to develop new products or ventures."
+    },
+    {
+      "id": "IE-SEM-011",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "IE.U1.T05",
+      "topic": "On-campus startups",
+      "question": "Which statement best describes the importance of on-campus startups?",
+      "options": [
+        "They replace all classroom learning",
+        "They let students test entrepreneurial ideas with low initial risk and mentorship",
+        "They guarantee immediate venture funding",
+        "They are restricted to engineering students"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "On-campus startups give students a low-risk setting to validate ideas, build teams and access mentors before entering the market."
+    },
+    {
+      "id": "IE-SEM-012",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T01",
+      "topic": "Problem gap",
+      "question": "In opportunity identification, a gap refers to:",
+      "options": [
+        "a legal defect in a company's registration",
+        "an unmet customer need or inefficient way of serving a market",
+        "the difference between two financial statements",
+        "a missing section in a business plan"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A gap is an unmet need, underserved segment or inefficient solution that creates room for a new product or service."
+    },
+    {
+      "id": "IE-SEM-013",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T02",
+      "topic": "Demographic segmentation",
+      "question": "Dividing a market by age, income and occupation is called:",
+      "options": [
+        "geographic segmentation",
+        "demographic segmentation",
+        "psychographic segmentation",
+        "behavioural segmentation"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Demographic segmentation uses measurable population characteristics such as age, income, gender and occupation."
+    },
+    {
+      "id": "IE-SEM-014",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T03",
+      "topic": "Problem-customer fit",
+      "question": "Problem-customer fit is validated when:",
+      "options": [
+        "the founders finish writing code",
+        "customers confirm that the problem is important and the proposed solution addresses it",
+        "the startup registers a company",
+        "the product has the most features in the market"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Problem-customer fit exists when real customers recognise the problem as significant and accept that the proposed solution addresses it."
+    },
+    {
+      "id": "IE-SEM-015",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T04",
+      "topic": "Competitor and trend mapping",
+      "question": "Mapping competitors and industry trends helps an entrepreneur to:",
+      "options": [
+        "avoid talking to customers",
+        "identify gaps, benchmark offerings and anticipate market shifts",
+        "guarantee that no competitor will enter",
+        "set product prices without cost data"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Competitor and trend mapping reveals gaps, relative strengths and likely market changes, informing the opportunity assessment."
+    },
+    {
+      "id": "IE-SEM-016",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T05",
+      "topic": "Porter five forces",
+      "question": "In Porter's Five Forces model, the threat of substitutes refers to:",
+      "options": [
+        "new firms entering the same industry",
+        "alternative products that can satisfy the same customer need",
+        "the bargaining power of suppliers",
+        "rivalry among existing firms"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Substitutes are different products or services that meet the same need, limiting the price a firm can charge."
+    },
+    {
+      "id": "IE-SEM-017",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T06",
+      "topic": "Brainstorming",
+      "question": "Which rule is most important in a brainstorming session?",
+      "options": [
+        "Criticise ideas immediately",
+        "Encourage many ideas and defer judgement",
+        "Allow only senior managers to speak",
+        "Record only fully developed plans"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Brainstorming separates idea generation from evaluation, encouraging quantity and free association before ideas are screened."
+    },
+    {
+      "id": "IE-SEM-018",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "IE.U2.T06",
+      "topic": "SCAMPER",
+      "question": "SCAMPER is an ideation technique that prompts users to:",
+      "options": [
+        "substitute, combine, adapt, modify, put to other use, eliminate and reverse",
+        "survey, calculate, analyse, measure, predict, evaluate and report",
+        "select, compare, assess, monitor, plan, execute and review",
+        "start, communicate, automate, manage, produce, evaluate and recycle"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "SCAMPER uses seven prompts - Substitute, Combine, Adapt, Modify, Put to another use, Eliminate and Reverse - to generate variations."
+    },
+    {
+      "id": "IE-SEM-019",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T01",
+      "topic": "Global competitor mapping",
+      "question": "Global competitor mapping primarily helps a startup to:",
+      "options": [
+        "ignore local customer needs",
+        "understand worldwide players, their offerings and competitive gaps",
+        "avoid product differentiation",
+        "reduce its legal registration work"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Mapping global competitors shows who else solves the problem, how they position themselves and where a new venture can differentiate."
+    },
+    {
+      "id": "IE-SEM-020",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T02",
+      "topic": "SAM",
+      "question": "In market sizing, SAM stands for:",
+      "options": [
+        "Serviceable Available Market",
+        "Strategic Addressable Market",
+        "Sales and Marketing",
+        "Segment Analysis Matrix"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "SAM is the Serviceable Available Market: the part of the total market that fits the startup's offer and reach."
+    },
+    {
+      "id": "IE-SEM-021",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T02",
+      "topic": "TAM SAM SOM calculation",
+      "question": "A city has 500,000 households. If 40% own pets and the startup's service can reach 25% of pet-owning households, the SAM is:",
+      "options": [
+        "50,000 households",
+        "125,000 households",
+        "200,000 households",
+        "500,000 households"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "Pet-owning households = 500,000 × 0.40 = 200,000. The serviceable share is 200,000 × 0.25 = 50,000."
+    },
+    {
+      "id": "IE-SEM-022",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "IE.U3.T03",
+      "topic": "Opportunity scale",
+      "question": "Assessing the potential scale of an opportunity mainly means estimating:",
+      "options": [
+        "the founder's personal savings",
+        "how large the venture can grow if the model succeeds",
+        "the number of employees in the first week",
+        "the legal fees for registration"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Scale assessment estimates the size and reach the venture could achieve, helping decide whether the opportunity is worth pursuing."
+    },
+    {
+      "id": "IE-SEM-023",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T04",
+      "topic": "Prototyping",
+      "question": "A prototype is best described as:",
+      "options": [
+        "the final commercial product",
+        "an early model used to test and communicate a concept",
+        "a legal document for patent filing",
+        "a complete business plan"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A prototype is an early, often simplified model that lets the team test assumptions, gather feedback and communicate the concept."
+    },
+    {
+      "id": "IE-SEM-024",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T05",
+      "topic": "Minimum viable product",
+      "question": "The main purpose of a Minimum Viable Product (MVP) is to:",
+      "options": [
+        "maximise features before launch",
+        "test core value hypotheses with minimum effort and maximum validated learning",
+        "replace all customer research",
+        "raise the largest possible funding round"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "An MVP delivers just enough functionality to test the core value proposition and learn from real users before scaling."
+    },
+    {
+      "id": "IE-SEM-025",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "IE.U3.T06",
+      "topic": "Prototype validation",
+      "question": "Prototype testing and validation should mainly focus on:",
+      "options": [
+        "confirming the founder's assumptions without user input",
+        "observing real users and checking whether the solution solves their problem",
+        "adding every requested feature immediately",
+        "finalising the legal structure"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Testing with real users shows whether the prototype solves the problem and which assumptions need revision."
+    },
+    {
+      "id": "IE-SEM-026",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T01",
+      "topic": "Business model",
+      "question": "A business model describes:",
+      "options": [
+        "only the company's office layout",
+        "how a venture creates, delivers and captures value",
+        "the personal hobbies of the founders",
+        "the list of all competitors"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A business model explains how an organisation creates value for customers, delivers it and captures revenue at a sustainable cost."
+    },
+    {
+      "id": "IE-SEM-027",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas",
+      "question": "The Lean Canvas replaces lengthy business plans with a one-page model built around:",
+      "options": [
+        "nine problem-solution blocks",
+        "five financial statements",
+        "three legal contracts",
+        "seven marketing channels only"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The Lean Canvas summarises a startup on one page using nine blocks, including Problem, Solution, Key Metrics and Unfair Advantage."
+    },
+    {
+      "id": "IE-SEM-028",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T03",
+      "topic": "Business plan components",
+      "question": "Which set lists typical components of a business plan?",
+      "options": [
+        "Sales plan, people plan and financial plan",
+        "Patent, trademark and copyright",
+        "Empathy, define and ideate",
+        "TAM, SAM and SOM"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The MR25 syllabus names sales, people and financial plans as core business-plan components, supported by the overall strategy."
+    },
+    {
+      "id": "IE-SEM-029",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T04",
+      "topic": "Variable cost",
+      "question": "A cost that changes in direct proportion to the number of units produced is a:",
+      "options": [
+        "fixed cost",
+        "variable cost",
+        "sunk cost",
+        "opportunity cost"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Variable costs rise and fall with output, such as raw materials, while fixed costs remain constant over a relevant range."
+    },
+    {
+      "id": "IE-SEM-030",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T04",
+      "topic": "Break-even analysis",
+      "question": "A product sells for ₹500, variable cost is ₹300 per unit and fixed costs are ₹40,000. The break-even quantity is:",
+      "options": [
+        "80 units",
+        "133 units",
+        "200 units",
+        "400 units"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "Contribution per unit = ₹500 − ₹300 = ₹200. Break-even = ₹40,000 ÷ ₹200 = 200 units."
+    },
+    {
+      "id": "IE-SEM-031",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T05",
+      "topic": "Unit economics",
+      "question": "Unit economics is concerned with:",
+      "options": [
+        "the total size of the national economy",
+        "revenue and cost associated with one customer or unit of sale",
+        "the number of units in a warehouse",
+        "the salary of the CEO only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Unit economics compares the revenue earned from one customer or unit with the costs of acquiring and serving it."
+    },
+    {
+      "id": "IE-SEM-032",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T05",
+      "topic": "Economies of scale",
+      "question": "Economies of scale occur when:",
+      "options": [
+        "average cost per unit falls as output increases",
+        "fixed costs disappear completely",
+        "every additional unit costs more than the previous one",
+        "a firm reduces its customer base"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Economies of scale arise when spreading fixed costs and improving efficiency lower the average cost per unit as volume grows."
+    },
+    {
+      "id": "IE-SEM-033",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "IE.U4.T06",
+      "topic": "Go-to-market strategy",
+      "question": "A go-to-market strategy mainly decides:",
+      "options": [
+        "which channels to use and how to reach and acquire customers",
+        "which programming language to use",
+        "how to register a patent",
+        "how to conduct employee appraisals"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "A GTM strategy selects channels, messaging and acquisition tactics to reach target customers and convert them into buyers."
+    },
+    {
+      "id": "IE-SEM-034",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T03",
+      "topic": "Startup registration",
+      "question": "Which is a basic legal requirement for formally registering a startup in India?",
+      "options": [
+        "A patent granted before incorporation",
+        "Incorporation with the appropriate registrar and a unique business name",
+        "A minimum of 100 employees",
+        "A public listing on a stock exchange"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Formal registration begins with incorporating the venture and securing a unique name with the registrar; patents and listings are not prerequisites."
+    },
+    {
+      "id": "IE-SEM-035",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T02",
+      "topic": "Pitch preparation",
+      "question": "A startup pitch should primarily communicate:",
+      "options": [
+        "every technical detail of the codebase",
+        "the problem, solution, market opportunity, traction and team",
+        "the founder's school marks",
+        "the complete employee handbook"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Investors look for a clear problem, credible solution, market size, evidence of traction and a capable team."
+    },
+    {
+      "id": "IE-SEM-036",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T04",
+      "topic": "Startup funding",
+      "question": "Which source provides early-stage financial support to a startup without taking equity?",
+      "options": [
+        "Government grant or subsidy scheme",
+        "Angel equity investment",
+        "Venture capital round",
+        "Initial public offering"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Grants and subsidies support eligible startups without diluting founder ownership, unlike equity investors."
+    },
+    {
+      "id": "IE-SEM-037",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T05",
+      "topic": "NISP",
+      "question": "The National Innovation and Startup Policy (NISP) is mainly intended to:",
+      "options": [
+        "ban student startups",
+        "promote innovation and entrepreneurship in higher-education institutions",
+        "replace all government funding",
+        "regulate foreign trade"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "NISP provides a framework for universities and colleges to support student and faculty innovation, incubation and startup creation."
+    },
+    {
+      "id": "IE-SEM-038",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T06",
+      "topic": "Patentability",
+      "question": "Which set lists the three main patentability requirements in India?",
+      "options": [
+        "Novelty, inventive step and industrial application",
+        "Novelty, beauty and popularity",
+        "Profit, publicity and patent fee",
+        "Copyright, trademark and design"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "An invention must be new, involve an inventive step and be capable of industrial application; it must also fall within patentable subject matter."
+    },
+    {
+      "id": "IE-SEM-039",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T07",
+      "topic": "Patent term",
+      "question": "The term of a granted Indian patent is generally:",
+      "options": [
+        "5 years from filing",
+        "10 years from filing",
+        "20 years from filing",
+        "the life of the inventor plus 60 years"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Indian patents are granted for 20 years from the date of filing, subject to renewal fees."
+    },
+    {
+      "id": "IE-SEM-040",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T08",
+      "topic": "Geographical indication",
+      "question": "Which form of intellectual property identifies the geographical origin of a product?",
+      "options": [
+        "Copyright",
+        "Trademark",
+        "Geographical Indication",
+        "Patent"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A Geographical Indication protects a product name linked to a specific place and its traditional quality or reputation."
+    },
+    {
+      "id": "IE-SEM-041",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T09",
+      "topic": "Licensing",
+      "question": "Licensing a technology allows the owner to:",
+      "options": [
+        "give up all rights permanently",
+        "permit another party to use the technology under agreed conditions",
+        "avoid all legal documentation",
+        "prevent any future innovation"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A licence grants permission to use intellectual property on defined terms, while ownership remains with the licensor."
+    },
+    {
+      "id": "IE-SEM-042",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "IE.U5.T04",
+      "topic": "Startup lifecycle",
+      "question": "Which sequence best represents a typical startup lifecycle?",
+      "options": [
+        "Idea → validation → growth → maturity or exit",
+        "Patent → retirement → idea → launch",
+        "IPO → idea → validation → incorporation",
+        "Maturity → idea → prototype → exit"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A startup typically moves from idea and validation through growth to maturity, with exit or scale as possible later outcomes."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-IE-01",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T01",
+      "topic": "Innovation versus invention",
+      "highYield": true,
+      "front": "Distinguish innovation from invention.",
+      "back": "Invention is the first creation of a new idea, device or process. Innovation applies that idea to create value in the market through a product, service or process.\nKeywords: invention, innovation, value creation, commercialisation"
+    },
+    {
+      "id": "FC-SEM-IE-02",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T02",
+      "topic": "Types of innovation",
+      "highYield": true,
+      "front": "Name four common types of innovation.",
+      "back": "1. Incremental innovation improves existing offerings.\n2. Radical innovation creates new-to-the-world solutions.\n3. Disruptive innovation starts in low-end or new markets.\n4. Architectural innovation reconfigures existing components.\nKeywords: incremental, radical, disruptive, architectural"
+    },
+    {
+      "id": "FC-SEM-IE-03",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T02",
+      "topic": "Incremental versus radical",
+      "highYield": false,
+      "front": "Compare incremental and radical innovation.",
+      "back": "Incremental innovation makes small improvements to existing products and markets. Radical innovation introduces a fundamentally new product, process or business model that changes how value is created.\nKeywords: incremental, radical, improvement, new-to-world"
+    },
+    {
+      "id": "FC-SEM-IE-04",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T02",
+      "topic": "Disruptive innovation",
+      "highYield": true,
+      "front": "Why is disruptive innovation a threat to established firms?",
+      "back": "It starts with a simpler, cheaper offer for overlooked or low-end customers. Established firms often ignore it because it seems unattractive, then the entrant improves and captures the mainstream market.\nKeywords: disruptive, low-end, overlooked, mainstream"
+    },
+    {
+      "id": "FC-SEM-IE-05",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T02",
+      "topic": "Manufacturing versus service innovation",
+      "highYield": false,
+      "front": "How does service innovation differ from manufacturing innovation?",
+      "back": "Service innovation often changes the customer experience, delivery process or business model, with customers participating in production. Manufacturing innovation usually focuses on physical products, materials and production processes.\nKeywords: service, manufacturing, customer participation, process"
+    },
+    {
+      "id": "FC-SEM-IE-06",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T03",
+      "topic": "Culture of innovation",
+      "highYield": true,
+      "front": "What supports a culture of innovation?",
+      "back": "Psychological safety, experimentation, tolerance of well-reasoned failure, cross-functional collaboration, time for exploration and rewards for new ideas.\nKeywords: culture, experimentation, safety, collaboration"
+    },
+    {
+      "id": "FC-SEM-IE-07",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T04",
+      "topic": "Entrepreneur versus intrapreneur",
+      "highYield": true,
+      "front": "Compare an entrepreneur and an intrapreneur.",
+      "back": "An entrepreneur starts and owns a new venture, bearing its risk and reward. An intrapreneur develops a new venture inside an existing organisation using its resources, with the employer sharing risk and reward.\nKeywords: entrepreneur, intrapreneur, venture, risk"
+    },
+    {
+      "id": "FC-SEM-IE-08",
+      "subjectId": "IE",
+      "unit": 1,
+      "topicId": "IE.U1.T05",
+      "topic": "Women and campus entrepreneurship",
+      "highYield": false,
+      "front": "Why are women and on-campus startups promoted?",
+      "back": "They widen the pool of founders and bring diverse perspectives. Campus startups let students test ideas with low initial risk, access mentors and labs, and learn before committing to a full venture.\nKeywords: women entrepreneurship, campus startup, mentorship, inclusion"
+    },
+    {
+      "id": "FC-SEM-IE-09",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T01",
+      "topic": "Gap identification",
+      "highYield": true,
+      "front": "How do you identify a real problem gap?",
+      "back": "Observe customers in their actual context, interview them about pain points, study workarounds and complaints, and check whether the problem is frequent, urgent and valuable enough to pay for.\nKeywords: gap, pain point, observation, interview"
+    },
+    {
+      "id": "FC-SEM-IE-10",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T01",
+      "topic": "Industry perspective",
+      "highYield": false,
+      "front": "Why analyse a problem from an industry perspective?",
+      "back": "It shows whether the pain is widespread, how value chains work, who controls access to customers, and which constraints or regulations shape a viable solution.\nKeywords: industry, value chain, constraints, regulation"
+    },
+    {
+      "id": "FC-SEM-IE-11",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T02",
+      "topic": "Market segmentation",
+      "highYield": true,
+      "front": "Name the main bases for market segmentation.",
+      "back": "1. Geographic: region, city, climate.\n2. Demographic: age, income, occupation.\n3. Psychographic: lifestyle, values, personality.\n4. Behavioural: usage, benefits sought, loyalty.\nKeywords: geographic, demographic, psychographic, behavioural"
+    },
+    {
+      "id": "FC-SEM-IE-12",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T03",
+      "topic": "Problem-customer fit",
+      "highYield": true,
+      "front": "How do you validate problem-customer fit?",
+      "back": "Talk to target customers, confirm the problem is real and important, observe current alternatives, and check whether they would adopt or pay for a solution. Evidence matters more than founder opinion.\nKeywords: validation, customer interview, evidence, problem fit"
+    },
+    {
+      "id": "FC-SEM-IE-13",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T03",
+      "topic": "Iterating fit",
+      "highYield": false,
+      "front": "Why must problem-customer fit be iterated?",
+      "back": "Early assumptions are often wrong. Each customer conversation or prototype test refines the problem definition, target segment and value proposition until the solution matches a real, prioritised need.\nKeywords: iterate, assumption, refine, feedback"
+    },
+    {
+      "id": "FC-SEM-IE-14",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T04",
+      "topic": "Competition and trends",
+      "highYield": false,
+      "front": "What should a competitor and trend map capture?",
+      "back": "Direct and indirect competitors, their offerings and pricing, strengths and gaps, plus technological, regulatory, social and economic trends that could change the opportunity.\nKeywords: competitor, trend, gap, regulation"
+    },
+    {
+      "id": "FC-SEM-IE-15",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T05",
+      "topic": "Porter five forces",
+      "highYield": true,
+      "front": "Name Porter's five competitive forces.",
+      "back": "1. Threat of new entrants.\n2. Bargaining power of suppliers.\n3. Bargaining power of buyers.\n4. Threat of substitutes.\n5. Rivalry among existing competitors.\nKeywords: Porter, entrants, suppliers, buyers, substitutes, rivalry"
+    },
+    {
+      "id": "FC-SEM-IE-16",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T06",
+      "topic": "Ideation techniques",
+      "highYield": true,
+      "front": "Describe brainstorming, brainwriting and SCAMPER.",
+      "back": "Brainstorming generates many ideas orally with deferred judgement. Brainwriting lets participants write ideas before sharing. SCAMPER prompts substitution, combination, adaptation, modification, other uses, elimination and reversal.\nKeywords: brainstorming, brainwriting, SCAMPER, ideation"
+    },
+    {
+      "id": "FC-SEM-IE-17",
+      "subjectId": "IE",
+      "unit": 2,
+      "topicId": "IE.U2.T07",
+      "topic": "Design thinking",
+      "highYield": true,
+      "front": "Name the five stages of design thinking.",
+      "back": "1. Empathise with users.\n2. Define the problem.\n3. Ideate possible solutions.\n4. Prototype selected ideas.\n5. Test with users and iterate.\nKeywords: empathise, define, ideate, prototype, test"
+    },
+    {
+      "id": "FC-SEM-IE-18",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T01",
+      "topic": "Global competitor mapping",
+      "highYield": false,
+      "front": "What is global competitor mapping?",
+      "back": "It identifies major competitors worldwide, compares their products, pricing and positioning, and reveals gaps or differentiation opportunities for a new venture.\nKeywords: global, competitor, positioning, differentiation"
+    },
+    {
+      "id": "FC-SEM-IE-19",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T02",
+      "topic": "TAM SAM SOM",
+      "highYield": true,
+      "front": "Define TAM, SAM and SOM.",
+      "back": "TAM is the total addressable market for the product category. SAM is the serviceable available market the venture can reach. SOM is the serviceable obtainable market it can realistically win.\nKeywords: TAM, SAM, SOM, market sizing"
+    },
+    {
+      "id": "FC-SEM-IE-20",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T03",
+      "topic": "Opportunity scope and scale",
+      "highYield": false,
+      "front": "How do you assess an opportunity's scope and scale?",
+      "back": "Estimate market size, growth rate, customer reach, unit economics, competition and operational constraints. Check whether the model can expand without proportional cost increases.\nKeywords: scope, scale, market size, unit economics"
+    },
+    {
+      "id": "FC-SEM-IE-21",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T04",
+      "topic": "Prototyping",
+      "highYield": true,
+      "front": "Why build a prototype?",
+      "back": "A prototype makes an idea tangible so the team can test assumptions, gather user feedback, communicate the concept and reduce the cost of changes before full development.\nKeywords: prototype, assumption, feedback, iteration"
+    },
+    {
+      "id": "FC-SEM-IE-22",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T05",
+      "topic": "Minimum viable product",
+      "highYield": true,
+      "front": "What is a Minimum Viable Product?",
+      "back": "An MVP is the smallest version of a product that delivers enough value to test the core hypothesis with real users and generate validated learning, without building every planned feature.\nKeywords: MVP, minimum, viable, validated learning"
+    },
+    {
+      "id": "FC-SEM-IE-23",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T06",
+      "topic": "Prototype testing",
+      "highYield": false,
+      "front": "How should a prototype be tested?",
+      "back": "Define the hypothesis, select representative users, give them realistic tasks, observe behaviour, record problems and compare results with success criteria. Avoid leading questions.\nKeywords: prototype, test, hypothesis, user, observation"
+    },
+    {
+      "id": "FC-SEM-IE-24",
+      "subjectId": "IE",
+      "unit": 3,
+      "topicId": "IE.U3.T06",
+      "topic": "Validation",
+      "highYield": true,
+      "front": "What counts as validation of a prototype?",
+      "back": "Evidence that users can use the solution and that it solves the target problem: completed tasks, positive usability feedback, willingness to adopt or pay, and measurable improvement over the current alternative.\nKeywords: validation, evidence, usability, adoption"
+    },
+    {
+      "id": "FC-SEM-IE-25",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T01",
+      "topic": "Business model",
+      "highYield": true,
+      "front": "What does a business model describe?",
+      "back": "How a venture creates value for a customer segment, delivers that value through channels and relationships, and captures revenue while covering its costs.\nKeywords: business model, value, delivery, revenue, cost"
+    },
+    {
+      "id": "FC-SEM-IE-26",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T02",
+      "topic": "Lean Canvas",
+      "highYield": true,
+      "front": "List the nine Lean Canvas blocks.",
+      "back": "1. Problem.\n2. Customer segments.\n3. Unique value proposition.\n4. Solution.\n5. Channels.\n6. Revenue streams.\n7. Cost structure.\n8. Key metrics.\n9. Unfair advantage.\nKeywords: Lean Canvas, problem, solution, metrics, advantage"
+    },
+    {
+      "id": "FC-SEM-IE-27",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "Business plan",
+      "highYield": true,
+      "front": "What are the main components of a business plan?",
+      "back": "The plan usually covers the opportunity, market and competition, product or service, sales plan, people plan, financial plan, risks and milestones. The MR25 syllabus highlights sales, people and financial plans.\nKeywords: business plan, sales plan, people plan, financial plan"
+    },
+    {
+      "id": "FC-SEM-IE-28",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "Sales plan",
+      "highYield": false,
+      "front": "What does a sales plan contain?",
+      "back": "Target customers and segments, value proposition, pricing, sales channels, sales targets, sales process, team and budget, and the metrics used to track performance.\nKeywords: sales plan, target, pricing, channel, target"
+    },
+    {
+      "id": "FC-SEM-IE-29",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T03",
+      "topic": "People plan",
+      "highYield": false,
+      "front": "What does a people plan cover?",
+      "back": "The roles and skills needed, organisation structure, hiring timeline, compensation, training, retention and the cost of the team required to execute the business plan.\nKeywords: people plan, roles, hiring, compensation, team"
+    },
+    {
+      "id": "FC-SEM-IE-30",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T04",
+      "topic": "Financial plan and costs",
+      "highYield": true,
+      "front": "Distinguish fixed, variable and total cost.",
+      "back": "Fixed costs do not change with output in the short run, such as rent. Variable costs change with output, such as materials. Total cost is fixed cost plus variable cost at a given volume.\nKeywords: fixed cost, variable cost, total cost, output"
+    },
+    {
+      "id": "FC-SEM-IE-31",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T05",
+      "topic": "Unit economics",
+      "highYield": true,
+      "front": "What is unit economics?",
+      "back": "Unit economics measures revenue and cost per unit, such as per customer, order or subscription. It shows whether each sale is profitable before fixed costs and whether growth creates or destroys value.\nKeywords: unit economics, revenue, cost, contribution, profitability"
+    },
+    {
+      "id": "FC-SEM-IE-32",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T05",
+      "topic": "Economies of scale",
+      "highYield": false,
+      "front": "What causes economies of scale?",
+      "back": "Spreading fixed costs over more units, bulk purchasing, specialisation, learning effects and better capacity utilisation all lower average cost as output rises.\nKeywords: economies of scale, fixed cost, average cost, output"
+    },
+    {
+      "id": "FC-SEM-IE-33",
+      "subjectId": "IE",
+      "unit": 4,
+      "topicId": "IE.U4.T06",
+      "topic": "Go-to-market",
+      "highYield": true,
+      "front": "What does a go-to-market plan decide?",
+      "back": "Target segment, positioning, channels, pricing, sales approach, digital presence and customer-acquisition tactics, with metrics to measure reach, conversion and cost.\nKeywords: go-to-market, channel, positioning, acquisition"
+    },
+    {
+      "id": "FC-SEM-IE-34",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T01",
+      "topic": "Startup requirements",
+      "highYield": false,
+      "front": "What are basic requirements to start a venture?",
+      "back": "A validated problem, a viable solution, a founding team with complementary skills, a business model, legal registration and access to initial resources or funding.\nKeywords: startup, problem, team, business model, registration"
+    },
+    {
+      "id": "FC-SEM-IE-35",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T01",
+      "topic": "Founding team and mentors",
+      "highYield": true,
+      "front": "Why are the founding team and mentors important?",
+      "back": "A balanced team brings technical, commercial and operational skills. Mentors provide experience, networks and challenge assumptions, helping founders avoid common mistakes.\nKeywords: founding team, skills, mentor, network"
+    },
+    {
+      "id": "FC-SEM-IE-36",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T02",
+      "topic": "Pitch preparation",
+      "highYield": true,
+      "front": "What should a venture pitch cover?",
+      "back": "Problem, solution, target market, business model, traction, competition, team, financial projections and the ask. Keep it clear, evidence-based and focused on why the venture can win.\nKeywords: pitch, problem, traction, team, ask"
+    },
+    {
+      "id": "FC-SEM-IE-37",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T03",
+      "topic": "Registration and legal aspects",
+      "highYield": false,
+      "front": "What legal steps does startup registration involve?",
+      "back": "Choose a business structure, obtain name approval, incorporate with the registrar, obtain tax registrations, open a bank account and comply with sector-specific licences and employment laws.\nKeywords: registration, incorporation, tax, licence, compliance"
+    },
+    {
+      "id": "FC-SEM-IE-38",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Funding opportunities",
+      "highYield": true,
+      "front": "Name common startup funding sources.",
+      "back": "Founder savings, friends and family, grants and government schemes, angel investors, venture capital, incubators and accelerators, bank loans and crowdfunding.\nKeywords: funding, grant, angel, venture capital, incubator"
+    },
+    {
+      "id": "FC-SEM-IE-39",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Institutional support",
+      "highYield": false,
+      "front": "What institutional support is available to startups?",
+      "back": "Incubators, accelerators, technology parks, government agencies, industry associations and university cells provide workspace, mentoring, funding access, training and networking.\nKeywords: incubator, accelerator, government, mentoring, network"
+    },
+    {
+      "id": "FC-SEM-IE-40",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T04",
+      "topic": "Startup lifecycle",
+      "highYield": false,
+      "front": "Describe the typical startup lifecycle.",
+      "back": "Idea, problem validation, prototype and MVP, early customers, product-market fit, growth and scaling, maturity, and finally exit, acquisition or long-term operation.\nKeywords: lifecycle, idea, validation, growth, exit"
+    },
+    {
+      "id": "FC-SEM-IE-41",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T05",
+      "topic": "NISP",
+      "highYield": true,
+      "front": "What is the National Innovation and Startup Policy?",
+      "back": "NISP is a framework for higher-education institutions to promote student and faculty innovation through incubation, flexible academic policies, mentoring, funding support and industry linkages.\nKeywords: NISP, higher education, incubation, innovation, policy"
+    },
+    {
+      "id": "FC-SEM-IE-42",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T06",
+      "topic": "Patents and designs",
+      "highYield": true,
+      "front": "What is patentable, and what does a design protect?",
+      "back": "A patent protects a new, inventive and industrially applicable invention. A design registration protects the visual shape, configuration, pattern or ornament of an article, not its technical function.\nKeywords: patent, novelty, inventive step, industrial application, design"
+    },
+    {
+      "id": "FC-SEM-IE-43",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T06",
+      "topic": "Patent grant procedure",
+      "highYield": false,
+      "front": "Outline the Indian patent grant procedure.",
+      "back": "File an application, publish it after 18 months, request examination, respond to objections, attend the hearing if needed, and receive grant if the application is accepted. Opposition is possible.\nKeywords: patent, filing, publication, examination, grant"
+    },
+    {
+      "id": "FC-SEM-IE-44",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T07",
+      "topic": "Patent rights",
+      "highYield": true,
+      "front": "What rights does a patent grant, and how long?",
+      "back": "A patent gives the owner the right to exclude others from making, using, selling or importing the claimed invention for 20 years from filing, subject to renewal fees and national law.\nKeywords: patent rights, exclude, 20 years, renewal"
+    },
+    {
+      "id": "FC-SEM-IE-45",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T08",
+      "topic": "Copyright, trademark and GI",
+      "highYield": true,
+      "front": "Distinguish copyright, trademark and GI.",
+      "back": "Copyright protects original literary, artistic and software works. A trademark identifies the source of goods or services. A Geographical Indication protects a product name tied to a place and its traditional quality.\nKeywords: copyright, trademark, GI, origin, protection"
+    },
+    {
+      "id": "FC-SEM-IE-46",
+      "subjectId": "IE",
+      "unit": 5,
+      "topicId": "IE.U5.T09",
+      "topic": "Licensing and technology transfer",
+      "highYield": false,
+      "front": "What is licensing and technology transfer?",
+      "back": "Licensing lets another party use intellectual property on agreed terms, often for a fee or royalty. Technology transfer moves knowledge, skills and rights from a developer to a user for commercial application.\nKeywords: licensing, royalty, technology transfer, commercialisation"
+    }
+  ]
+}

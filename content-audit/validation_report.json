@@ -1,0 +1,1035 @@
+{
+  "generatedAt": "2026-10-30T19:47:38.050Z",
+  "totals": {
+    "mcq": 431,
+    "flashcards": 539,
+    "quiz": 580,
+    "tf": 28,
+    "fib": 121
+  },
+  "answerPositions": {
+    "A": 108,
+    "B": 108,
+    "C": 108,
+    "D": 107
+  },
+  "difficulty": {
+    "easy": 238,
+    "medium": 166,
+    "hard": 27
+  },
+  "difficultyPct": {
+    "easy": 55.2,
+    "medium": 38.5,
+    "hard": 6.3
+  },
+  "banks": {
+    "sem": {
+      "quiz": 580,
+      "mcq": 431,
+      "tf": 28,
+      "fib": 121,
+      "flashcards": 539,
+      "subjects": {
+        "DM": {
+          "quiz": 87,
+          "mcq": 62,
+          "tf": 4,
+          "fib": 21,
+          "flashcards": 78,
+          "units": {
+            "1": {
+              "quiz": 17,
+              "mcq": 14,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 15,
+              "mcq": 11,
+              "flash": 14
+            },
+            "3": {
+              "quiz": 20,
+              "mcq": 13,
+              "flash": 18
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 14
+            },
+            "5": {
+              "quiz": 18,
+              "mcq": 12,
+              "flash": 18
+            }
+          },
+          "notCount": 2
+        },
+        "COA": {
+          "quiz": 84,
+          "mcq": 62,
+          "tf": 4,
+          "fib": 18,
+          "flashcards": 82,
+          "units": {
+            "1": {
+              "quiz": 14,
+              "mcq": 12,
+              "flash": 15
+            },
+            "2": {
+              "quiz": 14,
+              "mcq": 13,
+              "flash": 15
+            },
+            "3": {
+              "quiz": 19,
+              "mcq": 11,
+              "flash": 16
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 18
+            },
+            "5": {
+              "quiz": 20,
+              "mcq": 14,
+              "flash": 18
+            }
+          }
+        },
+        "OOPJ": {
+          "quiz": 83,
+          "mcq": 63,
+          "tf": 4,
+          "fib": 16,
+          "flashcards": 77,
+          "units": {
+            "1": {
+              "quiz": 13,
+              "mcq": 12,
+              "flash": 15
+            },
+            "2": {
+              "quiz": 13,
+              "mcq": 11,
+              "flash": 13
+            },
+            "3": {
+              "quiz": 19,
+              "mcq": 13,
+              "flash": 18
+            },
+            "4": {
+              "quiz": 19,
+              "mcq": 14,
+              "flash": 16
+            },
+            "5": {
+              "quiz": 19,
+              "mcq": 13,
+              "flash": 15
+            }
+          },
+          "notCount": 3
+        },
+        "DBMS": {
+          "quiz": 82,
+          "mcq": 62,
+          "tf": 4,
+          "fib": 16,
+          "flashcards": 79,
+          "units": {
+            "1": {
+              "quiz": 12,
+              "mcq": 11,
+              "flash": 13
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 14
+            },
+            "3": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 18
+            },
+            "4": {
+              "quiz": 19,
+              "mcq": 14,
+              "flash": 17
+            },
+            "5": {
+              "quiz": 22,
+              "mcq": 15,
+              "flash": 17
+            }
+          }
+        },
+        "SE": {
+          "quiz": 82,
+          "mcq": 62,
+          "tf": 4,
+          "fib": 16,
+          "flashcards": 78,
+          "units": {
+            "1": {
+              "quiz": 13,
+              "mcq": 12,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 12
+            },
+            "3": {
+              "quiz": 16,
+              "mcq": 11,
+              "flash": 16
+            },
+            "4": {
+              "quiz": 20,
+              "mcq": 15,
+              "flash": 18
+            },
+            "5": {
+              "quiz": 21,
+              "mcq": 14,
+              "flash": 18
+            }
+          },
+          "notCount": 1
+        },
+        "ES": {
+          "quiz": 81,
+          "mcq": 60,
+          "tf": 4,
+          "fib": 17,
+          "flashcards": 72,
+          "units": {
+            "1": {
+              "quiz": 12,
+              "mcq": 11,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 11
+            },
+            "3": {
+              "quiz": 18,
+              "mcq": 13,
+              "flash": 14
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 16
+            },
+            "5": {
+              "quiz": 22,
+              "mcq": 14,
+              "flash": 17
+            }
+          },
+          "notCount": 1
+        },
+        "IE": {
+          "quiz": 81,
+          "mcq": 60,
+          "tf": 4,
+          "fib": 17,
+          "flashcards": 73,
+          "units": {
+            "1": {
+              "quiz": 8,
+              "mcq": 8,
+              "flash": 9
+            },
+            "2": {
+              "quiz": 11,
+              "mcq": 9,
+              "flash": 12
+            },
+            "3": {
+              "quiz": 10,
+              "mcq": 7,
+              "flash": 10
+            },
+            "4": {
+              "quiz": 25,
+              "mcq": 17,
+              "flash": 17
+            },
+            "5": {
+              "quiz": 27,
+              "mcq": 19,
+              "flash": 25
+            }
+          }
+        }
+      }
+    },
+    "mid1": {
+      "quiz": 216,
+      "mcq": 189,
+      "tf": 0,
+      "fib": 27,
+      "flashcards": 244,
+      "subjects": {
+        "DM": {
+          "quiz": 39,
+          "mcq": 31,
+          "tf": 0,
+          "fib": 8,
+          "flashcards": 37,
+          "units": {
+            "1": {
+              "quiz": 17,
+              "mcq": 14,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 15,
+              "mcq": 11,
+              "flash": 14
+            },
+            "3": {
+              "quiz": 7,
+              "mcq": 6,
+              "flash": 9
+            }
+          },
+          "notCount": 2
+        },
+        "COA": {
+          "quiz": 34,
+          "mcq": 30,
+          "tf": 0,
+          "fib": 4,
+          "flashcards": 41,
+          "units": {
+            "1": {
+              "quiz": 14,
+              "mcq": 12,
+              "flash": 15
+            },
+            "2": {
+              "quiz": 14,
+              "mcq": 13,
+              "flash": 15
+            },
+            "3": {
+              "quiz": 6,
+              "mcq": 5,
+              "flash": 11
+            }
+          }
+        },
+        "OOPJ": {
+          "quiz": 31,
+          "mcq": 28,
+          "tf": 0,
+          "fib": 3,
+          "flashcards": 37,
+          "units": {
+            "1": {
+              "quiz": 13,
+              "mcq": 12,
+              "flash": 15
+            },
+            "2": {
+              "quiz": 13,
+              "mcq": 11,
+              "flash": 13
+            },
+            "3": {
+              "quiz": 5,
+              "mcq": 5,
+              "flash": 9
+            }
+          },
+          "notCount": 2
+        },
+        "DBMS": {
+          "quiz": 30,
+          "mcq": 27,
+          "tf": 0,
+          "fib": 3,
+          "flashcards": 37,
+          "units": {
+            "1": {
+              "quiz": 12,
+              "mcq": 11,
+              "flash": 13
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 14
+            },
+            "3": {
+              "quiz": 6,
+              "mcq": 6,
+              "flash": 10
+            }
+          }
+        },
+        "SE": {
+          "quiz": 30,
+          "mcq": 27,
+          "tf": 0,
+          "fib": 3,
+          "flashcards": 35,
+          "units": {
+            "1": {
+              "quiz": 13,
+              "mcq": 12,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 12
+            },
+            "3": {
+              "quiz": 5,
+              "mcq": 5,
+              "flash": 9
+            }
+          }
+        },
+        "ES": {
+          "quiz": 28,
+          "mcq": 25,
+          "tf": 0,
+          "fib": 3,
+          "flashcards": 31,
+          "units": {
+            "1": {
+              "quiz": 12,
+              "mcq": 11,
+              "flash": 14
+            },
+            "2": {
+              "quiz": 12,
+              "mcq": 10,
+              "flash": 11
+            },
+            "3": {
+              "quiz": 4,
+              "mcq": 4,
+              "flash": 6
+            }
+          }
+        },
+        "IE": {
+          "quiz": 24,
+          "mcq": 21,
+          "tf": 0,
+          "fib": 3,
+          "flashcards": 26,
+          "units": {
+            "1": {
+              "quiz": 8,
+              "mcq": 8,
+              "flash": 9
+            },
+            "2": {
+              "quiz": 11,
+              "mcq": 9,
+              "flash": 12
+            },
+            "3": {
+              "quiz": 5,
+              "mcq": 4,
+              "flash": 5
+            }
+          }
+        }
+      }
+    },
+    "mid2": {
+      "quiz": 364,
+      "mcq": 242,
+      "tf": 28,
+      "fib": 94,
+      "flashcards": 295,
+      "subjects": {
+        "DM": {
+          "quiz": 48,
+          "mcq": 31,
+          "tf": 4,
+          "fib": 13,
+          "flashcards": 41,
+          "units": {
+            "3": {
+              "quiz": 13,
+              "mcq": 7,
+              "flash": 9
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 14
+            },
+            "5": {
+              "quiz": 18,
+              "mcq": 12,
+              "flash": 18
+            }
+          }
+        },
+        "COA": {
+          "quiz": 50,
+          "mcq": 32,
+          "tf": 4,
+          "fib": 14,
+          "flashcards": 41,
+          "units": {
+            "3": {
+              "quiz": 13,
+              "mcq": 6,
+              "flash": 5
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 18
+            },
+            "5": {
+              "quiz": 20,
+              "mcq": 14,
+              "flash": 18
+            }
+          }
+        },
+        "OOPJ": {
+          "quiz": 52,
+          "mcq": 35,
+          "tf": 4,
+          "fib": 13,
+          "flashcards": 40,
+          "units": {
+            "3": {
+              "quiz": 14,
+              "mcq": 8,
+              "flash": 9
+            },
+            "4": {
+              "quiz": 19,
+              "mcq": 14,
+              "flash": 16
+            },
+            "5": {
+              "quiz": 19,
+              "mcq": 13,
+              "flash": 15
+            }
+          },
+          "notCount": 1
+        },
+        "DBMS": {
+          "quiz": 52,
+          "mcq": 35,
+          "tf": 4,
+          "fib": 13,
+          "flashcards": 42,
+          "units": {
+            "3": {
+              "quiz": 11,
+              "mcq": 6,
+              "flash": 8
+            },
+            "4": {
+              "quiz": 19,
+              "mcq": 14,
+              "flash": 17
+            },
+            "5": {
+              "quiz": 22,
+              "mcq": 15,
+              "flash": 17
+            }
+          }
+        },
+        "SE": {
+          "quiz": 52,
+          "mcq": 35,
+          "tf": 4,
+          "fib": 13,
+          "flashcards": 43,
+          "units": {
+            "3": {
+              "quiz": 11,
+              "mcq": 6,
+              "flash": 7
+            },
+            "4": {
+              "quiz": 20,
+              "mcq": 15,
+              "flash": 18
+            },
+            "5": {
+              "quiz": 21,
+              "mcq": 14,
+              "flash": 18
+            }
+          },
+          "notCount": 1
+        },
+        "ES": {
+          "quiz": 53,
+          "mcq": 35,
+          "tf": 4,
+          "fib": 14,
+          "flashcards": 41,
+          "units": {
+            "3": {
+              "quiz": 14,
+              "mcq": 9,
+              "flash": 8
+            },
+            "4": {
+              "quiz": 17,
+              "mcq": 12,
+              "flash": 16
+            },
+            "5": {
+              "quiz": 22,
+              "mcq": 14,
+              "flash": 17
+            }
+          },
+          "notCount": 1
+        },
+        "IE": {
+          "quiz": 57,
+          "mcq": 39,
+          "tf": 4,
+          "fib": 14,
+          "flashcards": 47,
+          "units": {
+            "3": {
+              "quiz": 5,
+              "mcq": 3,
+              "flash": 5
+            },
+            "4": {
+              "quiz": 25,
+              "mcq": 17,
+              "flash": 17
+            },
+            "5": {
+              "quiz": 27,
+              "mcq": 19,
+              "flash": 25
+            }
+          }
+        }
+      }
+    }
+  },
+  "legacyIds": 533,
+  "newIds": 1119,
+  "addedIds": 586,
+  "deletedIds": [],
+  "errors": [],
+  "warnings": [
+    "sem: easy 55.2% (target ~30%)",
+    "sem: medium 38.5% (target ~45%)",
+    "sem: hard 6.3% (target ~25%)"
+  ],
+  "coverage": [
+    {
+      "subject": "DM",
+      "unit": 1,
+      "mcq": 14,
+      "tf": 0,
+      "fib": 3,
+      "flashcards": 14,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DM",
+      "unit": 2,
+      "mcq": 11,
+      "tf": 0,
+      "fib": 4,
+      "flashcards": 14,
+      "topics_in_unit": 8,
+      "topics_covered": 8,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DM",
+      "unit": 3,
+      "mcq": 13,
+      "tf": 2,
+      "fib": 5,
+      "flashcards": 18,
+      "topics_in_unit": 8,
+      "topics_covered": 8,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DM",
+      "unit": 4,
+      "mcq": 12,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 14,
+      "topics_in_unit": 10,
+      "topics_covered": 10,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DM",
+      "unit": 5,
+      "mcq": 12,
+      "tf": 1,
+      "fib": 5,
+      "flashcards": 18,
+      "topics_in_unit": 10,
+      "topics_covered": 10,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "COA",
+      "unit": 1,
+      "mcq": 12,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 15,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "COA",
+      "unit": 2,
+      "mcq": 13,
+      "tf": 0,
+      "fib": 1,
+      "flashcards": 15,
+      "topics_in_unit": 11,
+      "topics_covered": 11,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "COA",
+      "unit": 3,
+      "mcq": 11,
+      "tf": 2,
+      "fib": 6,
+      "flashcards": 16,
+      "topics_in_unit": 11,
+      "topics_covered": 11,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "COA",
+      "unit": 4,
+      "mcq": 12,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 18,
+      "topics_in_unit": 12,
+      "topics_covered": 12,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "COA",
+      "unit": 5,
+      "mcq": 14,
+      "tf": 1,
+      "fib": 5,
+      "flashcards": 18,
+      "topics_in_unit": 10,
+      "topics_covered": 10,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "OOPJ",
+      "unit": 1,
+      "mcq": 12,
+      "tf": 0,
+      "fib": 1,
+      "flashcards": 15,
+      "topics_in_unit": 9,
+      "topics_covered": 9,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "OOPJ",
+      "unit": 2,
+      "mcq": 11,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 13,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "OOPJ",
+      "unit": 3,
+      "mcq": 13,
+      "tf": 2,
+      "fib": 4,
+      "flashcards": 18,
+      "topics_in_unit": 12,
+      "topics_covered": 12,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "OOPJ",
+      "unit": 4,
+      "mcq": 14,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 16,
+      "topics_in_unit": 8,
+      "topics_covered": 8,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "OOPJ",
+      "unit": 5,
+      "mcq": 13,
+      "tf": 1,
+      "fib": 5,
+      "flashcards": 15,
+      "topics_in_unit": 5,
+      "topics_covered": 5,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DBMS",
+      "unit": 1,
+      "mcq": 11,
+      "tf": 0,
+      "fib": 1,
+      "flashcards": 13,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DBMS",
+      "unit": 2,
+      "mcq": 10,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 14,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DBMS",
+      "unit": 3,
+      "mcq": 12,
+      "tf": 2,
+      "fib": 3,
+      "flashcards": 18,
+      "topics_in_unit": 15,
+      "topics_covered": 15,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DBMS",
+      "unit": 4,
+      "mcq": 14,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 17,
+      "topics_in_unit": 11,
+      "topics_covered": 11,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "DBMS",
+      "unit": 5,
+      "mcq": 15,
+      "tf": 1,
+      "fib": 6,
+      "flashcards": 17,
+      "topics_in_unit": 8,
+      "topics_covered": 8,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "SE",
+      "unit": 1,
+      "mcq": 12,
+      "tf": 0,
+      "fib": 1,
+      "flashcards": 14,
+      "topics_in_unit": 5,
+      "topics_covered": 5,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "SE",
+      "unit": 2,
+      "mcq": 10,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 12,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "SE",
+      "unit": 3,
+      "mcq": 11,
+      "tf": 2,
+      "fib": 3,
+      "flashcards": 16,
+      "topics_in_unit": 12,
+      "topics_covered": 12,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "SE",
+      "unit": 4,
+      "mcq": 15,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 18,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "SE",
+      "unit": 5,
+      "mcq": 14,
+      "tf": 1,
+      "fib": 6,
+      "flashcards": 18,
+      "topics_in_unit": 8,
+      "topics_covered": 8,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "ES",
+      "unit": 1,
+      "mcq": 11,
+      "tf": 0,
+      "fib": 1,
+      "flashcards": 14,
+      "topics_in_unit": 6,
+      "topics_covered": 6,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "ES",
+      "unit": 2,
+      "mcq": 10,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 11,
+      "topics_in_unit": 5,
+      "topics_covered": 5,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "ES",
+      "unit": 3,
+      "mcq": 13,
+      "tf": 2,
+      "fib": 3,
+      "flashcards": 14,
+      "topics_in_unit": 4,
+      "topics_covered": 4,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "ES",
+      "unit": 4,
+      "mcq": 12,
+      "tf": 1,
+      "fib": 4,
+      "flashcards": 16,
+      "topics_in_unit": 5,
+      "topics_covered": 5,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "ES",
+      "unit": 5,
+      "mcq": 14,
+      "tf": 1,
+      "fib": 7,
+      "flashcards": 17,
+      "topics_in_unit": 4,
+      "topics_covered": 4,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "IE",
+      "unit": 1,
+      "mcq": 8,
+      "tf": 0,
+      "fib": 0,
+      "flashcards": 9,
+      "topics_in_unit": 5,
+      "topics_covered": 5,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "IE",
+      "unit": 2,
+      "mcq": 9,
+      "tf": 0,
+      "fib": 2,
+      "flashcards": 12,
+      "topics_in_unit": 7,
+      "topics_covered": 7,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "IE",
+      "unit": 3,
+      "mcq": 7,
+      "tf": 1,
+      "fib": 2,
+      "flashcards": 10,
+      "topics_in_unit": 6,
+      "topics_covered": 6,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "IE",
+      "unit": 4,
+      "mcq": 17,
+      "tf": 2,
+      "fib": 6,
+      "flashcards": 17,
+      "topics_in_unit": 6,
+      "topics_covered": 6,
+      "coverage_pct": 100
+    },
+    {
+      "subject": "IE",
+      "unit": 5,
+      "mcq": 19,
+      "tf": 1,
+      "fib": 7,
+      "flashcards": 25,
+      "topics_in_unit": 9,
+      "topics_covered": 9,
+      "coverage_pct": 100
+    }
+  ]
+}

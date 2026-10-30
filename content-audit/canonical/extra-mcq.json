@@ -1,0 +1,446 @@
+{
+  "DM": [
+    {
+      "id": "DM-SEM-068",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DM.U1.T03",
+      "topic": "Logical equivalence",
+      "question": "The compound proposition $(p \\to q) \\land (q \\to p)$ is logically equivalent to:",
+      "options": [
+        "$p \\leftrightarrow q$",
+        "$p \\lor q$",
+        "$p \\land q$",
+        "$\\neg p \\lor q$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "The conjunction of a conditional and its converse is true exactly when p and q have the same truth value, which is the biconditional."
+    },
+    {
+      "id": "DM-SEM-069",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DM.U2.T04",
+      "topic": "Counting equivalence relations",
+      "question": "How many equivalence relations are there on the set $\\{1,2,3\\}$?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Equivalence relations correspond to partitions. The five partitions are one block, three two-block partitions and three singleton blocks."
+    },
+    {
+      "id": "DM-SEM-070",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DM.U3.T05",
+      "topic": "Order of a group element",
+      "question": "In the group $(\\mathbb{Z}_7 \\setminus \\{0\\}, \\times_7)$, the order of the element $2$ is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Compute powers modulo 7: $2^1=2$, $2^2=4$, $2^3=8\\equiv1$. The smallest positive exponent giving the identity is 3."
+    },
+    {
+      "id": "DM-SEM-071",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DM.U4.T08",
+      "topic": "Derangements",
+      "question": "The number of derangements of 4 distinct objects is:",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "24"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "By inclusion-exclusion, $!4 = 24(1-1+1/2-1/6+1/24)=24-24+12-4+1=9$."
+    }
+  ],
+  "COA": [
+    {
+      "id": "COA-SEM-073",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "COA.U1.T01",
+      "topic": "Hexadecimal conversion",
+      "question": "The hexadecimal number $2F$ is equal to which decimal value?",
+      "options": [
+        "31",
+        "47",
+        "63",
+        "95"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "$2F_{16}=2\\times16+15=32+15=47$."
+    },
+    {
+      "id": "COA-SEM-074",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "COA.U2.T06",
+      "topic": "Multiplexer tree",
+      "question": "How many 2-to-1 multiplexers are required to build an 8-to-1 multiplexer using a tree structure?",
+      "options": [
+        "7",
+        "8",
+        "15",
+        "16"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "An 8-to-1 tree needs four 2-to-1 multiplexers for the first stage, two for the second and one for the final stage: $4+2+1=7$."
+    },
+    {
+      "id": "COA-SEM-075",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "COA.U3.T10",
+      "topic": "Direct addressing",
+      "question": "In a basic computer, the program counter holds 100 and a memory-reference instruction contains address 105. With direct addressing, the effective address is:",
+      "options": [
+        "5",
+        "100",
+        "105",
+        "205"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "In direct addressing the address field itself is the effective address, so the operand is read from location 105."
+    },
+    {
+      "id": "COA-SEM-076",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "COA.U5.T05",
+      "topic": "DMA transfer time",
+      "question": "A DMA controller transfers a 512-byte block by cycle stealing, using one memory cycle per byte. If each memory cycle takes 0.5 μs, the total transfer time is:",
+      "options": [
+        "128 μs",
+        "256 μs",
+        "512 μs",
+        "1024 μs"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "$512 \\times 0.5\\,\\mu s = 256\\,\\mu s$."
+    }
+  ],
+  "OOPJ": [
+    {
+      "id": "OOPJ-SEM-073",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Increment operators",
+      "question": "What is printed by `int x = 5; System.out.println(x++ + ++x);`?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "`x++` yields 5 and leaves x as 6; `++x` then increments x to 7 and yields 7. The sum is $5+7=12$."
+    },
+    {
+      "id": "OOPJ-SEM-074",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Runtime polymorphism",
+      "question": "If `A a = new B();` and both A and B define `show()`, which method runs when `a.show()` is called?",
+      "options": [
+        "A's show()",
+        "B's show()",
+        "A compile-time error occurs",
+        "Neither method runs"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "The reference type is A but the object is B. Method overriding is resolved at runtime from the actual object type, so B's show() runs."
+    },
+    {
+      "id": "OOPJ-SEM-075",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "OOPJ.U3.T11",
+      "topic": "Thread wait state",
+      "question": "A thread calls `wait()` on an object. It releases the object's monitor and enters which state?",
+      "options": [
+        "RUNNABLE",
+        "BLOCKED",
+        "WAITING",
+        "TERMINATED"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "A call to wait() releases the monitor and places the thread in the WAITING state until another thread calls notify() or notifyAll()."
+    },
+    {
+      "id": "OOPJ-SEM-076",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T03",
+      "topic": "ArrayList subList",
+      "question": "What is the result of `new ArrayList<>(Arrays.asList(1,2,3)).subList(0,2).size()`?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "An exception is thrown"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "subList(0,2) returns the elements at indices 0 and 1, so the sublist contains two elements."
+    }
+  ],
+  "DBMS": [
+    {
+      "id": "DBMS-SEM-072",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T07",
+      "topic": "Mapping many-to-many relationships",
+      "question": "A many-to-many relationship between entity sets A and B is mapped to relations by creating:",
+      "options": [
+        "a foreign key in A only",
+        "a foreign key in B only",
+        "a separate relation containing the keys of A and B",
+        "no relation at all"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "A many-to-many relationship cannot be represented by a foreign key on either side, so a junction relation stores both participating keys."
+    },
+    {
+      "id": "DBMS-SEM-073",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Natural join cardinality",
+      "question": "Relation R has 4 tuples and relation S has 3 tuples. What is the maximum possible number of tuples in $R \\bowtie S$ on a common attribute?",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "12"
+      ],
+      "answerIndex": 3,
+      "difficulty": "hard",
+      "explanation": "If every R tuple matches every S tuple on the join attribute, the natural join contains $4\\times3=12$ tuples."
+    },
+    {
+      "id": "DBMS-SEM-074",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "DBMS.U3.T11",
+      "topic": "Normal form identification",
+      "question": "Relation $R(A,B,C)$ has functional dependencies $A \\to B$ and $B \\to C$. Which is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A is the only candidate key. B and C are non-prime, and the transitive dependency $A\\to B\\to C$ violates 3NF, so R is in 2NF."
+    },
+    {
+      "id": "DBMS-SEM-075",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T03",
+      "topic": "Precedence graph",
+      "question": "A precedence graph for a schedule contains edges $T_1 \\to T_2$ and $T_2 \\to T_1$. The schedule is:",
+      "options": [
+        "conflict serializable",
+        "not conflict serializable",
+        "recoverable",
+        "strict"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A cycle in the precedence graph means the schedule is not conflict serializable, because no serial order can preserve both conflicting orders."
+    }
+  ],
+  "SE": [
+    {
+      "id": "SE-SEM-072",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T03",
+      "topic": "CMMI level 5",
+      "question": "In CMMI, an organisation at maturity Level 5 is described as:",
+      "options": [
+        "Initial",
+        "Managed",
+        "Defined",
+        "Optimising"
+      ],
+      "answerIndex": 3,
+      "difficulty": "medium",
+      "explanation": "Level 5 is the Optimising level, where the organisation continuously improves its processes using quantitative feedback and innovation."
+    },
+    {
+      "id": "SE-SEM-073",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T07",
+      "topic": "Requirements traceability",
+      "question": "A requirements traceability matrix is used mainly to:",
+      "options": [
+        "link requirements to design, code and tests",
+        "estimate the project budget",
+        "schedule staff holidays",
+        "design the user interface"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "A traceability matrix records links from each requirement to design elements, implementation and test cases, supporting impact analysis and coverage checks."
+    },
+    {
+      "id": "SE-SEM-074",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "SE.U3.T09",
+      "topic": "Sequence diagram",
+      "question": "Which UML diagram best shows time-ordered messages exchanged between objects?",
+      "options": [
+        "Class diagram",
+        "Sequence diagram",
+        "Component diagram",
+        "Use case diagram"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A sequence diagram arranges objects horizontally and messages vertically in time order, showing the interaction sequence."
+    },
+    {
+      "id": "SE-SEM-075",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T03",
+      "topic": "Cyclomatic complexity",
+      "question": "A flow graph has 12 edges, 9 nodes and 2 connected components. Its cyclomatic complexity is:",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "$V(G)=E-N+2P=12-9+2(2)=7$."
+    }
+  ],
+  "ES": [
+    {
+      "id": "ES-SEM-071",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T04",
+      "topic": "Energy transfer",
+      "question": "Producers capture 10,000 kcal. If each trophic level transfers 10% of its energy, how much reaches the secondary consumers?",
+      "options": [
+        "1,000 kcal",
+        "100 kcal",
+        "10 kcal",
+        "1 kcal"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Primary consumers receive $10,000\\times0.10=1,000$ kcal; secondary consumers receive $1,000\\times0.10=100$ kcal."
+    },
+    {
+      "id": "ES-SEM-072",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T02",
+      "topic": "Groundwater conservation",
+      "question": "Which agricultural practice most directly reduces groundwater depletion?",
+      "options": [
+        "Flood irrigation",
+        "Drip irrigation",
+        "Clearing forests for farmland",
+        "Drilling more deep borewells"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Drip irrigation delivers water directly to plant roots and reduces evaporation and seepage losses compared with flood irrigation."
+    },
+    {
+      "id": "ES-SEM-073",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "ES.U3.T03",
+      "topic": "Species-area relationship",
+      "question": "The species-area relationship is commonly expressed as:",
+      "options": [
+        "$S = cA^z$",
+        "$S = c + A$",
+        "$S = c/A$",
+        "$S = A^2$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Species richness S rises with area A according to $S=cA^z$, where c is a constant and z is the slope in log-log space."
+    },
+    {
+      "id": "ES-SEM-074",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T03",
+      "topic": "EIA sequence",
+      "question": "Which sequence gives the correct order of environmental impact assessment steps?",
+      "options": [
+        "Screening → scoping → baseline study → impact prediction → mitigation → reporting → review",
+        "Scoping → screening → reporting → baseline study → review → mitigation → impact prediction",
+        "Baseline study → screening → review → scoping → mitigation → reporting → impact prediction",
+        "Impact prediction → review → screening → scoping → reporting → baseline study → mitigation"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "EIA first decides whether assessment is needed (screening), defines its scope, collects baseline data, predicts impacts, plans mitigation, reports and then undergoes review."
+    }
+  ]
+}

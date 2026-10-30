@@ -1,0 +1,110 @@
+1m | List the features of OOPS concepts?
+1m | Write four major differences between C and Java.
+1m | Name two key features of Java.
+5m | Discuss access modifiers in Java with examples.
+5m | Write a Java program to simulate the operations of numerical calculator to perform the functions Addition (+), subtraction (-), Multiplication (*), Division (/).
+5m | Describe in detail about the control flow statements in Java with suitable examples.
+5m | Analyse and Develop a simple Java program to sort the given numbers in increasing order.
+5m | Explain the Features of Java with examples.
+5m | Explain various Access specifiers supported by Java with an example.
+5m | Discuss at least five key features of Java and how they contribute to its popularity.
+5m | Describe the significance of access modifiers in Java and provide examples of their usage.
+5m | Explain the role of variables in Java and illustrate with examples.
+5m | Explain the steps involved in creating and executing a Java program.
+5m | Write Java Program to find Transpose of Matrix.
+5m | Explain the features of Java in detail.
+1m | What is autoboxing in Java?
+2m | What h appe ns when th ere is no suitable tr y blo ck to handl e except ion?
+2m | How are exceptions handled in Java?
+2m | Compare thread based and process based multi-tasking.
+1m | Draw the table which describes between various access specifiers present in Java.
+5m | Write a Java program to define user-defined exceptions.
+5m | Explain different types of exceptions in Java.
+5m | How to create it and app ly it? explain with examp le.
+5m | Wh at are the various types of except i ons available in Java?
+5m | What is Exception? Demonstrate how you can handle different types of exception separately.
+5m | Write a Java program to illustrate user-defined Exception.
+5m | List any three built-in exceptions in Java with examples.
+1m | What is autoboxing in Java?
+1m | What is interthread communication?
+1m | Define dacmon thread with an example?
+2m | What is li g ht weight proc ess? Discuss.
+2m | Draw the thread li fe cy cle.
+1m | List the Common Java Exceptions.
+1m | How do we start a thread?
+2m | Compare thread based and process based multi-tasking.
+2m | Define Enumerations with cxample.
+2m | Specify different thread priorities.
+2m | Define generics.
+2m | Explain Enumerations in Java.
+2m | Define Serialization and Enumerations.
+2m | What is the difference between a thread and a process in Java?
+2m | Write down the advantages of Java Serialization.
+5m | Explain the life cycle of a thread with examples.
+5m | Explain thread priorities and their role in Java thread scheduling.
+5m | Write a Java program to create two threads and run them concurrently.
+5m | Develop a Java program to count the number of words in a text file.
+5m | Explain the life cycle of a thread in Java with a neat diagram.
+5m | Explain with example, suspending and resuming threads in Java.
+5m | explain the sy nchroni zation of multiple threads in Java with an examp le.
+5m | Demonstrate Auto boxing and Auto unboxing with an example program.
+5m | Explain the concept of user defined exception with suitable example.
+5m | Write a program to create threads where one thread prints 1 to 100 and another thread prints 1 to 200.
+5m | Write a program to copy the contents of one file into another file.
+5m | Write a program to create 2 threads and set the priorities of the threads.
+5m | Develop a Java program to create and run multiple threads.
+5m | Explain how to use annotations in Java with a program example.
+5m | Discuss about inter thread communication in Java.
+5m | Describe the usage of generics in Java.
+5m | Write a Java program that copies the content of one file to another file.
+5m | Explain the following (i)thread priorities. (ii)Explain how threads are created in Java.
+5m | Differentiate between thread and process? How is a thread created? Discuss.
+5m | Explain how to handle user defined exception with an example
+5m | Describe the complete life cycle of a thread?
+5m | Write a Java program to copy one file to another file.
+1m | i.h) (describe how a scroitbar ts different from a scrolipanc.
+2m | Ex pl ain Sca nn er cla ss with an examp le.
+1m | Provide an example of a process in a computer system.
+1m | Explain the purpose of JDBC drivers in Java Database Connectivity.
+1m | What are the different types of Drivers in JDBC?
+1m | Define Multi-Processing.
+2m | List the operations on Stack.
+5m | Write a Java program to sort a list of names using a Comparator.
+5m | Wh at IS Java Co ll ect ions Framewo rk? List out some benefits of Co ll ec tions framework an d explain.
+5m | Explain the steps involved in creation and handling of menus.
+5m | Develop a Java program to create a menu bar with menus and menu items.
+5m | Explain about Dictionary properties and Hash table.
+5m | Explain different types of layout manger.
+5m | Write a Java program which has 2 panels. Left panel lists the different programme of the college (CSE, ECE.) in a specific location and the right panel will display the list of faculty details when the user selects one of the programme names.
+5m | Compare and contrast the different types of JDBC drivers. Discuss their advantages, disadvantages, and suitable use cases.
+5m | Compare Process and Thread in details.
+5m | Explain the Type-1 and Type-II drivers in JDBC.
+5m | Contrast between Thread Based Multi-tasking and Process based Multi-Tasking.
+1m | State the difference between applets and applications?
+2m | Draw the life cycle of an applet.
+1m | Define the life cycle of an applet.
+2m | Define LayoutManager and mention any two of its types.
+1m | How many arguments can be passed to an applet using <PARAM> tags?
+2m | Compare and contrast applets and applications.
+2m | Explain in brief about Flow Layout.
+1m | Explain types of applets?
+1m | How do applets differ from application programs?
+1m | Define applet.
+5m | Explain the life cycle of an applet with an example program that demonstrates each phase.
+5m | How can parameters be passed to an applet using the <param> tag? Give a code example.
+5m | How are parameters passed to an applet? Illustrate with a simple program.
+5m | What is applet? Discuss about applet structure.
+5m | Write an applet to display the mouse cursor position in that applet window.
+5m | Explain the life cycle of an applet.
+5m | Discuss the steps involved in developing and running a local applet.
+5m | Develop a Java applet to accept and display user input through parameters.
+5m | Describe the differences between applets and applications in Java with examples.
+5m | Write a Java program that illustrates passing parameters through applets.
+5m | Examine the following in detail (i)Handling a TextField. (ii)Using a TexArea.
+5m | Write a Java program by passing parameters to applets.
+5m | Explain the concept of Applet-to-Applet communication with suitable program.
+5m | What are the differences between Applets and Applications?
+5m | Write a program to construct a calculator using an applet.
+5m | Explain about the Card Layout and Grid Bag Layout.
+5m | Write a simple Applet program to display welcome message.
+5m | Explain how parameter is passed to Applet.

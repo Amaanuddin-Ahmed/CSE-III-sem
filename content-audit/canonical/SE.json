@@ -1,0 +1,1200 @@
+{
+  "subject": "SE",
+  "name": "Software Engineering",
+  "mcq": [
+    {
+      "id": "SE-SEM-037",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T01",
+      "topic": "Software characteristics",
+      "question": "Which property distinguishes software from hardware?",
+      "options": [
+        "Software wears out physically",
+        "Software is engineered, not manufactured",
+        "Software cannot be modified",
+        "Software has no lifecycle"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Software is developed and maintained rather than manufactured; it does not wear out physically, though it deteriorates as changes accumulate."
+    },
+    {
+      "id": "SE-SEM-038",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T01",
+      "topic": "Software myths",
+      "question": "Which statement is a management myth about software?",
+      "options": [
+        "Requirements change",
+        "Adding people to a late project always speeds it up",
+        "Testing takes time",
+        "Maintenance costs money"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Brooks's law says adding people to a late project can slow it further because of communication and ramp-up overhead."
+    },
+    {
+      "id": "SE-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T02",
+      "topic": "Layered technology",
+      "question": "The four layers of software engineering are:",
+      "options": [
+        "Tools, methods, process, quality focus",
+        "Requirements, design, code, test",
+        "People, product, process, project",
+        "Plan, do, check, act"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Software engineering is layered on a quality focus, with process, methods and tools above it."
+    },
+    {
+      "id": "SE-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T02",
+      "topic": "Umbrella activities",
+      "question": "Which of the following is an umbrella activity in a software process?",
+      "options": [
+        "Coding",
+        "Software configuration management",
+        "Unit testing",
+        "Requirements gathering"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Umbrella activities such as configuration management, quality assurance and risk management run across the whole process."
+    },
+    {
+      "id": "SE-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T03",
+      "topic": "CMMI",
+      "question": "How many maturity levels does CMMI define?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "CMMI has five levels: initial, managed, defined, quantitatively managed and optimizing."
+    },
+    {
+      "id": "SE-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T04",
+      "topic": "Waterfall model",
+      "question": "The main weakness of the waterfall model is that it:",
+      "options": [
+        "Has no documentation",
+        "Makes late changes expensive",
+        "Cannot handle small projects",
+        "Requires no customer input"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Waterfall freezes requirements early, so a change discovered late forces rework of completed phases."
+    },
+    {
+      "id": "SE-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T04",
+      "topic": "Spiral model",
+      "question": "The spiral model is particularly suitable when:",
+      "options": [
+        "Requirements are stable and complete",
+        "Risk is high and requirements evolve",
+        "The project is very small",
+        "No prototyping is allowed"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Each spiral loop includes risk analysis and a prototype, so the model suits large, risky projects with changing requirements."
+    },
+    {
+      "id": "SE-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T04",
+      "topic": "Incremental model",
+      "question": "In incremental development, the system is:",
+      "options": [
+        "Delivered once at the end",
+        "Built and delivered in usable increments",
+        "Never tested",
+        "Documented only after release"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Each increment adds usable functionality, so the customer gets working software earlier and feedback shapes later increments."
+    },
+    {
+      "id": "SE-SEM-045",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T05",
+      "topic": "Agile",
+      "question": "Which value is central to the Agile Manifesto?",
+      "options": [
+        "Comprehensive documentation over working software",
+        "Responding to change over following a plan",
+        "Contract negotiation over customer collaboration",
+        "Processes over individuals"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Agile values working software, customer collaboration and response to change over their heavier-weight counterparts."
+    },
+    {
+      "id": "SE-SEM-046",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T01",
+      "topic": "Functional requirements",
+      "question": "A functional requirement describes:",
+      "options": [
+        "A quality attribute such as response time",
+        "A service or behaviour the system must provide",
+        "A hardware constraint",
+        "A project budget"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Functional requirements state what the system does; non-functional requirements constrain qualities such as performance or security."
+    },
+    {
+      "id": "SE-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T01",
+      "topic": "Non-functional requirements",
+      "question": "Which is a non-functional requirement?",
+      "options": [
+        "The system shall print a receipt",
+        "The system shall respond within 2 seconds",
+        "The system shall store student records",
+        "The system shall allow login"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Response time is a quality constraint, so it is non-functional; the other options describe services."
+    },
+    {
+      "id": "SE-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T03",
+      "topic": "SRS characteristics",
+      "question": "Which property is essential in a good SRS?",
+      "options": [
+        "Ambiguity",
+        "Verifiability",
+        "Redundancy",
+        "Informality"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Each requirement must be testable, so verifiability is essential; ambiguity and redundancy are defects."
+    },
+    {
+      "id": "SE-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T05",
+      "topic": "Requirements elicitation",
+      "question": "Which technique is used to understand how users actually perform their work?",
+      "options": [
+        "Ethnography",
+        "Cyclomatic analysis",
+        "Regression testing",
+        "Configuration audit"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Ethnography observes users in their real environment, revealing tacit work practices that interviews may miss."
+    },
+    {
+      "id": "SE-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T06",
+      "topic": "Requirements validation",
+      "question": "Requirements validation asks:",
+      "options": [
+        "Are we building the product right?",
+        "Are we building the right product?",
+        "Is the code efficient?",
+        "Is the team large enough?"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Validation checks that the requirements reflect what the customer needs; verification checks conformance to specification."
+    },
+    {
+      "id": "SE-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T07",
+      "topic": "Requirements management",
+      "question": "Requirements traceability helps to:",
+      "options": [
+        "Compile the code",
+        "Link requirements to design, code and tests",
+        "Measure CPU usage",
+        "Replace version control"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Traceability shows where each requirement is realised and tested, which supports impact analysis when it changes."
+    },
+    {
+      "id": "SE-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T04",
+      "topic": "Feasibility study",
+      "question": "Which feasibility is concerned with whether the project can be built with current technology?",
+      "options": [
+        "Economic feasibility",
+        "Technical feasibility",
+        "Legal feasibility",
+        "Schedule feasibility"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Technical feasibility checks available technology and skills; economic feasibility checks cost versus benefit."
+    },
+    {
+      "id": "SE-SEM-053",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T02",
+      "topic": "User vs system requirements",
+      "question": "System requirements are:",
+      "options": [
+        "Written for end users in plain language",
+        "Detailed descriptions of what the system must do",
+        "The same as user requirements",
+        "Only non-functional"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "User requirements are high-level statements for customers; system requirements expand them into detailed, precise specifications."
+    },
+    {
+      "id": "SE-SEM-054",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "SE.U3.T02",
+      "topic": "Cohesion",
+      "question": "Which type of cohesion is the most desirable?",
+      "options": [
+        "Coincidental",
+        "Logical",
+        "Functional",
+        "Temporal"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Functional cohesion means every part of a module contributes to one well-defined task, the strongest form."
+    },
+    {
+      "id": "SE-SEM-055",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "SE.U3.T02",
+      "topic": "Coupling",
+      "question": "Which type of coupling is the least desirable?",
+      "options": [
+        "Data coupling",
+        "Stamp coupling",
+        "Control coupling",
+        "Content coupling"
+      ],
+      "answerIndex": 3,
+      "difficulty": "medium",
+      "explanation": "Content coupling lets one module modify another's internals, the tightest and most fragile form."
+    },
+    {
+      "id": "SE-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "SE.U3.T03",
+      "topic": "Design model",
+      "question": "The design model typically includes:",
+      "options": [
+        "Only the source code",
+        "Data, architectural, interface and component designs",
+        "Only test cases",
+        "Only the project schedule"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The design model covers data design, architectural design, interface design and component-level design."
+    },
+    {
+      "id": "SE-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "SE.U3.T05",
+      "topic": "Architectural styles",
+      "question": "A layered architecture organises a system as:",
+      "options": [
+        "Independent peer modules",
+        "A hierarchy where each layer uses the one below",
+        "A single monolithic module",
+        "A shared global state"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Each layer provides services to the layer above and consumes services from the layer below, hiding lower-level details."
+    },
+    {
+      "id": "SE-SEM-058",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "SE.U3.T07",
+      "topic": "Use case diagram",
+      "question": "A use case diagram shows:",
+      "options": [
+        "The internal flow of a method",
+        "Actors and the use cases they interact with",
+        "Database indexes",
+        "The project budget"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Use case diagrams model system boundaries, actors and the services (use cases) each actor can invoke."
+    },
+    {
+      "id": "SE-SEM-059",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T02",
+      "topic": "Black-box testing",
+      "question": "Black-box testing derives test cases from:",
+      "options": [
+        "The source code structure",
+        "The specification and expected behaviour",
+        "The compiler output",
+        "The database schema only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Black-box tests use inputs and expected outputs without inspecting internal code, so they can be written from requirements."
+    },
+    {
+      "id": "SE-SEM-060",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T02",
+      "topic": "Boundary value analysis",
+      "question": "For an input range of 1 to 100, boundary value analysis tests:",
+      "options": [
+        "Only 50",
+        "0, 1, 100 and 101",
+        "1 and 100 only",
+        "All values from 1 to 100"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Boundary value analysis tests just inside and just outside each boundary, so 0, 1, 100 and 101 are the key values."
+    },
+    {
+      "id": "SE-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T03",
+      "topic": "White-box testing",
+      "question": "White-box testing is also called:",
+      "options": [
+        "Behavioural testing",
+        "Structural testing",
+        "Acceptance testing",
+        "Regression testing"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "White-box testing examines internal paths and structure, so it is structural testing."
+    },
+    {
+      "id": "SE-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T03",
+      "topic": "Cyclomatic complexity",
+      "question": "A flow graph has 9 edges and 7 nodes. Its cyclomatic complexity is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "$V(G)=E-N+2=9-7+2=4$, the number of linearly independent paths."
+    },
+    {
+      "id": "SE-SEM-063",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T04",
+      "topic": "Integration testing",
+      "question": "Top-down integration testing starts with:",
+      "options": [
+        "The lowest-level modules",
+        "The main control module and stubs",
+        "The database",
+        "The user interface only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Top-down integration begins at the main module and uses stubs for lower-level modules not yet integrated."
+    },
+    {
+      "id": "SE-SEM-064",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T01",
+      "topic": "Verification vs validation",
+      "question": "Verification asks:",
+      "options": [
+        "Are we building the right product?",
+        "Are we building the product right?",
+        "Will the customer pay?",
+        "Is the team productive?"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Verification checks conformance to specification; validation checks that the specification meets the user's need."
+    },
+    {
+      "id": "SE-SEM-065",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T05",
+      "topic": "Debugging",
+      "question": "Debugging differs from testing because debugging:",
+      "options": [
+        "Finds the defect",
+        "Removes the defect after it is found",
+        "Replaces requirements",
+        "Measures performance"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Testing reveals failures; debugging locates and corrects the underlying defect."
+    },
+    {
+      "id": "SE-SEM-066",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T01",
+      "topic": "Risk exposure",
+      "question": "Risk exposure is computed as:",
+      "options": [
+        "Probability x impact",
+        "Probability + impact",
+        "Cost / schedule",
+        "Effort x people"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Risk exposure multiplies the probability of an occurrence by the loss if it occurs, giving a expected loss."
+    },
+    {
+      "id": "SE-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T01",
+      "topic": "Reactive vs proactive risk",
+      "question": "A proactive risk strategy:",
+      "options": [
+        "Waits for the risk to occur",
+        "Identifies and mitigates risk before it occurs",
+        "Ignores all risks",
+        "Transfers every risk to the customer"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Proactive risk management plans mitigation in advance; reactive management responds only after the risk becomes a problem."
+    },
+    {
+      "id": "SE-SEM-068",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T03",
+      "topic": "RMMM",
+      "question": "RMMM stands for:",
+      "options": [
+        "Risk Mitigation, Monitoring and Management",
+        "Requirements Modeling and Management",
+        "Reliability Measurement and Maintenance",
+        "Review, Measure, Modify, Maintain"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The RMMM plan documents how each risk will be mitigated, monitored and managed if it occurs."
+    },
+    {
+      "id": "SE-SEM-069",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T04",
+      "topic": "SQA",
+      "question": "Software quality assurance is primarily:",
+      "options": [
+        "A testing phase at the end",
+        "A set of planned activities across the process",
+        "A tool for compiling code",
+        "A replacement for project management"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "SQA is process-wide: it plans reviews, audits, standards and measurements rather than acting only at the end."
+    },
+    {
+      "id": "SE-SEM-070",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T05",
+      "topic": "Formal technical review",
+      "question": "Which review is the most formal and uses a trained moderator?",
+      "options": [
+        "Desk check",
+        "Walkthrough",
+        "Inspection",
+        "Pair programming"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "An inspection follows a defined process with roles, checklists and a moderator, and records defects formally."
+    },
+    {
+      "id": "SE-SEM-071",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "SE.U5.T07",
+      "topic": "Reliability",
+      "question": "Mean time to failure (MTTF) measures:",
+      "options": [
+        "How long a system runs before failing",
+        "How long a repair takes",
+        "The number of developers",
+        "The size of the code"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "MTTF is the average operating time between failures; MTTR measures repair time."
+    },
+    {
+      "id": "SE-SEM-072",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "SE.U1.T03",
+      "topic": "CMMI level 5",
+      "question": "In CMMI, an organisation at maturity Level 5 is described as:",
+      "options": [
+        "Initial",
+        "Managed",
+        "Defined",
+        "Optimising"
+      ],
+      "answerIndex": 3,
+      "difficulty": "medium",
+      "explanation": "Level 5 is the Optimising level, where the organisation continuously improves its processes using quantitative feedback and innovation."
+    },
+    {
+      "id": "SE-SEM-073",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "SE.U2.T07",
+      "topic": "Requirements traceability",
+      "question": "A requirements traceability matrix is used mainly to:",
+      "options": [
+        "link requirements to design, code and tests",
+        "estimate the project budget",
+        "schedule staff holidays",
+        "design the user interface"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "A traceability matrix records links from each requirement to design elements, implementation and test cases, supporting impact analysis and coverage checks."
+    },
+    {
+      "id": "SE-SEM-074",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "SE.U3.T09",
+      "topic": "Sequence diagram",
+      "question": "Which UML diagram best shows time-ordered messages exchanged between objects?",
+      "options": [
+        "Class diagram",
+        "Sequence diagram",
+        "Component diagram",
+        "Use case diagram"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A sequence diagram arranges objects horizontally and messages vertically in time order, showing the interaction sequence."
+    },
+    {
+      "id": "SE-SEM-075",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "SE.U4.T03",
+      "topic": "Cyclomatic complexity",
+      "question": "A flow graph has 12 edges, 9 nodes and 2 connected components. Its cyclomatic complexity is:",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "$V(G)=E-N+2P=12-9+2(2)=7$."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-SE-23",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T01",
+      "topic": "Software characteristics",
+      "highYield": true,
+      "front": "List four characteristics that distinguish software from hardware.",
+      "back": "Software is engineered, not manufactured; it is intangible; it does not wear out but deteriorates; and it is custom-built rather than assembled from standard parts.\nKeywords: engineered, intangible, wear out, custom"
+    },
+    {
+      "id": "FC-SEM-SE-24",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T01",
+      "topic": "Software myths",
+      "highYield": true,
+      "front": "Give one management myth and one practitioner myth about software.",
+      "back": "Management myth: adding people to a late project fixes the schedule. Practitioner myth: the job is done once the program runs.\nKeywords: myth, Brooks law, done, schedule"
+    },
+    {
+      "id": "FC-SEM-SE-25",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T02",
+      "topic": "Layered technology",
+      "highYield": true,
+      "front": "Name the four layers of software engineering.",
+      "back": "Quality focus at the base, then process, methods and tools. The process holds the layers together.\nKeywords: quality focus, process, methods, tools"
+    },
+    {
+      "id": "FC-SEM-SE-26",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T02",
+      "topic": "Umbrella activities",
+      "highYield": true,
+      "front": "Name five umbrella activities.",
+      "back": "Project tracking, risk management, quality assurance, configuration management and technical reviews. They run across the process.\nKeywords: tracking, risk, quality, configuration, reviews"
+    },
+    {
+      "id": "FC-SEM-SE-27",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T03",
+      "topic": "CMMI levels",
+      "highYield": true,
+      "front": "List the five CMMI maturity levels.",
+      "back": "Initial, managed, defined, quantitatively managed and optimizing. Each level adds process discipline and measurement.\nKeywords: CMMI, initial, managed, defined, optimizing"
+    },
+    {
+      "id": "FC-SEM-SE-28",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T04",
+      "topic": "Waterfall model",
+      "highYield": true,
+      "front": "When is the waterfall model appropriate?",
+      "back": "When requirements are stable and well understood, the technology is familiar, and late change is unlikely or inexpensive.\nKeywords: waterfall, stable requirements, sequential, change"
+    },
+    {
+      "id": "FC-SEM-SE-29",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T04",
+      "topic": "Spiral model",
+      "highYield": true,
+      "front": "What are the four quadrants of the spiral model?",
+      "back": "Determine objectives, identify and resolve risks, develop and validate, then plan the next iteration. Risk analysis drives each loop.\nKeywords: spiral, objectives, risk, develop, plan"
+    },
+    {
+      "id": "FC-SEM-SE-30",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T04",
+      "topic": "Incremental vs iterative",
+      "highYield": true,
+      "front": "Distinguish incremental and iterative development.",
+      "back": "Incremental adds features in usable slices. Iterative refines the same system through repeated passes. Most agile methods combine both.\nKeywords: incremental, iterative, slice, refinement"
+    },
+    {
+      "id": "FC-SEM-SE-31",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T05",
+      "topic": "Agile principles",
+      "highYield": true,
+      "front": "State three Agile principles.",
+      "back": "Deliver working software frequently, welcome changing requirements, and build projects around motivated individuals. Customer collaboration matters more than contract negotiation.\nKeywords: agile, frequent delivery, change, collaboration"
+    },
+    {
+      "id": "FC-SEM-SE-32",
+      "subjectId": "SE",
+      "unit": 1,
+      "topicId": "SE.U1.T04",
+      "topic": "Concurrent model",
+      "highYield": false,
+      "front": "What is the concurrent development model?",
+      "back": "It represents software work as overlapping activities in different states (inactive, awaiting change, under development, under review, done) rather than a strict sequence.\nKeywords: concurrent, activity states, overlapping, event"
+    },
+    {
+      "id": "FC-SEM-SE-33",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T01",
+      "topic": "Functional requirements",
+      "highYield": true,
+      "front": "Give two examples of functional requirements for a library system.",
+      "back": "The system shall let a member borrow a book. The system shall calculate a fine for each overdue day. Both describe a service.\nKeywords: functional, service, borrow, fine"
+    },
+    {
+      "id": "FC-SEM-SE-34",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T01",
+      "topic": "Non-functional requirements",
+      "highYield": true,
+      "front": "Name four categories of non-functional requirements.",
+      "back": "Performance, security, usability and reliability. Others include maintainability, portability and scalability.\nKeywords: performance, security, usability, reliability"
+    },
+    {
+      "id": "FC-SEM-SE-35",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T03",
+      "topic": "SRS",
+      "highYield": true,
+      "front": "What should a software requirements specification contain?",
+      "back": "Scope, functional and non-functional requirements, external interfaces, constraints and acceptance criteria, written unambiguously and traceably.\nKeywords: SRS, scope, interface, constraint, acceptance"
+    },
+    {
+      "id": "FC-SEM-SE-36",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T03",
+      "topic": "SRS quality",
+      "highYield": true,
+      "front": "List four desirable properties of an SRS.",
+      "back": "Correct, unambiguous, complete and consistent. It should also be verifiable, modifiable and traceable.\nKeywords: correct, unambiguous, complete, consistent, verifiable"
+    },
+    {
+      "id": "FC-SEM-SE-37",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T05",
+      "topic": "Elicitation techniques",
+      "highYield": true,
+      "front": "Name four requirements elicitation techniques.",
+      "back": "Interviews, workshops or focus groups, observation (ethnography) and prototyping. Questionnaires and document analysis also help.\nKeywords: interview, workshop, observation, prototype"
+    },
+    {
+      "id": "FC-SEM-SE-38",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T06",
+      "topic": "Requirements validation",
+      "highYield": true,
+      "front": "Name three requirements validation techniques.",
+      "back": "Requirements reviews, prototyping and test-case generation. Reviews check completeness; prototypes expose misunderstandings.\nKeywords: review, prototype, test case, validation"
+    },
+    {
+      "id": "FC-SEM-SE-39",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T07",
+      "topic": "Requirements management",
+      "highYield": true,
+      "front": "Why is requirements traceability important?",
+      "back": "It links each requirement to its source, design, code and tests, so change impact can be assessed and completeness checked.\nKeywords: traceability, impact analysis, source, test"
+    },
+    {
+      "id": "FC-SEM-SE-40",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T04",
+      "topic": "Feasibility study",
+      "highYield": true,
+      "front": "Name four types of feasibility.",
+      "back": "Technical, economic, legal and schedule feasibility. Operational feasibility is sometimes added.\nKeywords: technical, economic, legal, schedule, operational"
+    },
+    {
+      "id": "FC-SEM-SE-41",
+      "subjectId": "SE",
+      "unit": 2,
+      "topicId": "SE.U2.T02",
+      "topic": "User vs system requirements",
+      "highYield": true,
+      "front": "Distinguish user requirements from system requirements.",
+      "back": "User requirements are high-level statements in natural language for customers. System requirements are detailed, precise specifications for developers.\nKeywords: user requirements, system requirements, high level, detailed"
+    },
+    {
+      "id": "FC-SEM-SE-42",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T01",
+      "topic": "Design process",
+      "highYield": true,
+      "front": "List the stages of the software design process.",
+      "back": "Architectural design, interface design, component-level design and data design, followed by design review and refinement.\nKeywords: architectural, interface, component, data, review"
+    },
+    {
+      "id": "FC-SEM-SE-43",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T02",
+      "topic": "Design concepts",
+      "highYield": true,
+      "front": "Define abstraction, refinement and modularity.",
+      "back": "Abstraction hides detail behind a simpler model. Refinement adds detail step by step. Modularity splits a system into independently understandable parts.\nKeywords: abstraction, refinement, modularity, detail"
+    },
+    {
+      "id": "FC-SEM-SE-44",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T02",
+      "topic": "Cohesion",
+      "highYield": true,
+      "front": "Order the cohesion types from best to worst.",
+      "back": "Functional, sequential, communicational, procedural, temporal, logical, coincidental. Functional is best; coincidental is worst.\nKeywords: cohesion, functional, sequential, coincidental"
+    },
+    {
+      "id": "FC-SEM-SE-45",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T02",
+      "topic": "Coupling",
+      "highYield": true,
+      "front": "Order the coupling types from best to worst.",
+      "back": "Data, stamp, control, external, common, content. Data coupling is loosest; content coupling is tightest.\nKeywords: coupling, data, stamp, control, content"
+    },
+    {
+      "id": "FC-SEM-SE-46",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T03",
+      "topic": "Design model",
+      "highYield": true,
+      "front": "Name the four elements of the design model.",
+      "back": "Data design, architectural design, interface design and component-level design. Each refines the analysis model toward code.\nKeywords: data design, architecture, interface, component"
+    },
+    {
+      "id": "FC-SEM-SE-47",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T05",
+      "topic": "Architectural styles",
+      "highYield": true,
+      "front": "Name four architectural styles.",
+      "back": "Layered, client-server, pipe-and-filter and repository. Others include MVC and service-oriented architecture.\nKeywords: layered, client-server, pipe-and-filter, repository"
+    },
+    {
+      "id": "FC-SEM-SE-48",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T06",
+      "topic": "UML diagrams",
+      "highYield": true,
+      "front": "Name the six UML diagram types in the MR25 unit.",
+      "back": "Use case, class, sequence, collaboration, activity and component diagrams. Structural diagrams show static structure; behavioural diagrams show interaction.\nKeywords: use case, class, sequence, collaboration, activity, component"
+    },
+    {
+      "id": "FC-SEM-SE-49",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T08",
+      "topic": "Class diagram",
+      "highYield": true,
+      "front": "What does a class diagram show?",
+      "back": "Classes, their attributes and operations, and the relationships among them: association, aggregation, composition, generalization and dependency.\nKeywords: class diagram, attributes, association, generalization"
+    },
+    {
+      "id": "FC-SEM-SE-50",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T01",
+      "topic": "Testing strategy",
+      "highYield": true,
+      "front": "List the four levels of software testing.",
+      "back": "Unit, integration, system and acceptance testing. Each level verifies a different scope, from one module to the whole product.\nKeywords: unit, integration, system, acceptance"
+    },
+    {
+      "id": "FC-SEM-SE-51",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T02",
+      "topic": "Black-box techniques",
+      "highYield": true,
+      "front": "Name three black-box test design techniques.",
+      "back": "Equivalence partitioning, boundary value analysis and decision table testing. Each derives cases from the specification.\nKeywords: equivalence partitioning, boundary value, decision table"
+    },
+    {
+      "id": "FC-SEM-SE-52",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T02",
+      "topic": "Boundary value analysis",
+      "highYield": true,
+      "front": "Why is boundary value analysis effective?",
+      "back": "Defects cluster at the edges of input domains. Testing just below, on and just above each boundary catches off-by-one errors.\nKeywords: boundary, off-by-one, edge, input domain"
+    },
+    {
+      "id": "FC-SEM-SE-53",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T03",
+      "topic": "White-box techniques",
+      "highYield": true,
+      "front": "Name three white-box coverage criteria.",
+      "back": "Statement coverage, branch or decision coverage, and path coverage. Basis path testing uses cyclomatic complexity to bound the paths.\nKeywords: statement, branch, path, basis path"
+    },
+    {
+      "id": "FC-SEM-SE-54",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T03",
+      "topic": "Cyclomatic complexity",
+      "highYield": true,
+      "front": "State two formulas for cyclomatic complexity.",
+      "back": "$V(G)=E-N+2$ for a connected flow graph, or $V(G)=P+1$ where $P$ is the number of predicate nodes.\nKeywords: cyclomatic, edges, nodes, predicate, independent paths"
+    },
+    {
+      "id": "FC-SEM-SE-55",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T04",
+      "topic": "Integration testing",
+      "highYield": true,
+      "front": "Compare top-down and bottom-up integration.",
+      "back": "Top-down starts at the main module and uses stubs. Bottom-up starts at low-level modules and uses drivers. Sandwich combines both.\nKeywords: top-down, bottom-up, stub, driver, sandwich"
+    },
+    {
+      "id": "FC-SEM-SE-56",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T04",
+      "topic": "Validation testing",
+      "highYield": true,
+      "front": "What is the difference between validation and system testing?",
+      "back": "System testing checks the whole product against requirements. Validation testing checks that the product meets the customer's expectations in their environment.\nKeywords: system testing, validation, customer, requirements"
+    },
+    {
+      "id": "FC-SEM-SE-57",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T05",
+      "topic": "Debugging",
+      "highYield": true,
+      "front": "Name three debugging approaches.",
+      "back": "Brute force (print statements), backtracking (trace backward) and cause elimination (binary search or induction). Debugging follows a failing test.\nKeywords: brute force, backtracking, cause elimination"
+    },
+    {
+      "id": "FC-SEM-SE-58",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T06",
+      "topic": "Software metrics",
+      "highYield": true,
+      "front": "Distinguish process, product and project metrics.",
+      "back": "Process metrics measure the development process. Product metrics measure the software artefact. Project metrics measure schedule, effort and cost.\nKeywords: process, product, project, effort, cost"
+    },
+    {
+      "id": "FC-SEM-SE-59",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T01",
+      "topic": "Software risk",
+      "highYield": true,
+      "front": "What is a software risk?",
+      "back": "A possible future event that would harm the project's schedule, cost, quality or scope. It has a probability and an impact.\nKeywords: risk, probability, impact, schedule, quality"
+    },
+    {
+      "id": "FC-SEM-SE-60",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T01",
+      "topic": "Reactive vs proactive",
+      "highYield": true,
+      "front": "Compare reactive and proactive risk strategies.",
+      "back": "Reactive waits for the risk to become a problem and then responds. Proactive identifies risks early and plans mitigation before they occur.\nKeywords: reactive, proactive, mitigation, early"
+    },
+    {
+      "id": "FC-SEM-SE-61",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T02",
+      "topic": "Risk identification",
+      "highYield": true,
+      "front": "Name four categories of software risk.",
+      "back": "Technical, schedule, cost and people risks. Product and process risks are also common categories.\nKeywords: technical, schedule, cost, people"
+    },
+    {
+      "id": "FC-SEM-SE-62",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T03",
+      "topic": "RMMM plan",
+      "highYield": true,
+      "front": "What does an RMMM plan contain?",
+      "back": "For each risk: a mitigation action, monitoring indicators and a management/contingency plan if the risk occurs.\nKeywords: RMMM, mitigation, monitoring, contingency"
+    },
+    {
+      "id": "FC-SEM-SE-63",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T04",
+      "topic": "SQA",
+      "highYield": true,
+      "front": "What does software quality assurance do?",
+      "back": "It plans and audits the process: standards, reviews, measurements and corrective action, so quality is built in rather than tested at the end.\nKeywords: SQA, process, audit, standard, review"
+    },
+    {
+      "id": "FC-SEM-SE-64",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T05",
+      "topic": "Formal technical reviews",
+      "highYield": true,
+      "front": "Compare a walkthrough and an inspection.",
+      "back": "A walkthrough is informal: the author presents the work to peers. An inspection is formal, with defined roles, checklists and recorded defects.\nKeywords: walkthrough, inspection, informal, formal, checklist"
+    },
+    {
+      "id": "FC-SEM-SE-65",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T07",
+      "topic": "Reliability",
+      "highYield": true,
+      "front": "Define MTTF and MTTR.",
+      "back": "MTTF is the mean operating time before a failure. MTTR is the mean time to repair. Availability is MTTF / (MTTF + MTTR).\nKeywords: MTTF, MTTR, availability, failure, repair"
+    },
+    {
+      "id": "FC-SEM-SE-66",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T08",
+      "topic": "ISO 9000",
+      "highYield": false,
+      "front": "What does ISO 9000 certify?",
+      "back": "It certifies that an organisation follows a documented quality management process, not that a particular product is defect-free.\nKeywords: ISO 9000, quality management, process, certification"
+    },
+    {
+      "id": "FC-SEM-SE-67",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T04",
+      "topic": "Software architecture and data design",
+      "highYield": false,
+      "front": "What do software architecture and data design specify?",
+      "back": "1. Architecture defines components, their interfaces, and interactions.\n2. It captures structural properties and major design decisions.\n3. Data design specifies data structures, files, and database schemas.\n4. Both refine the requirements model into an implementation blueprint.\nKeywords: software architecture, component, interface, data design, schema"
+    },
+    {
+      "id": "FC-SEM-SE-68",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T10",
+      "topic": "Collaboration diagrams",
+      "highYield": false,
+      "front": "What does a UML collaboration diagram show?",
+      "back": "1. Objects are drawn as rectangles connected by links.\n2. Numbered messages show the order of interaction.\n3. It emphasizes structural organization over time.\n4. UML 2 renamed it the communication diagram.\nKeywords: collaboration diagram, communication diagram, object, link, message"
+    },
+    {
+      "id": "FC-SEM-SE-69",
+      "subjectId": "SE",
+      "unit": 3,
+      "topicId": "SE.U3.T11",
+      "topic": "Activity diagrams",
+      "highYield": false,
+      "front": "Which elements make up a UML activity diagram?",
+      "back": "1. Initial and final states mark start and end.\n2. Action states represent individual activities.\n3. Decision and merge nodes branch and rejoin flows.\n4. Fork and join nodes model concurrent flows; swimlanes assign responsibility.\nKeywords: activity diagram, action state, decision, fork, join, swimlane"
+    },
+    {
+      "id": "FC-SEM-SE-70",
+      "subjectId": "SE",
+      "unit": 4,
+      "topicId": "SE.U4.T07",
+      "topic": "Metrics for software quality",
+      "highYield": false,
+      "front": "Which metrics indicate software quality?",
+      "back": "1. Defect density: defects per thousand lines of code.\n2. Defect removal efficiency: defects found before delivery divided by total defects.\n3. Reliability metrics use failure intensity and mean time between failures.\n4. McCall and ISO 9126 group quality into characteristics.\nKeywords: defect density, DRE, reliability, McCall, ISO 9126"
+    },
+    {
+      "id": "FC-SEM-SE-71",
+      "subjectId": "SE",
+      "unit": 5,
+      "topicId": "SE.U5.T06",
+      "topic": "Statistical software quality assurance",
+      "highYield": false,
+      "front": "How does statistical SQA use Pareto analysis?",
+      "back": "1. Collect defect data and classify defects by cause.\n2. Plot causes by frequency in descending order.\n3. The vital few causes account for most defects.\n4. Fix those causes first to maximize quality improvement.\nKeywords: statistical SQA, Pareto, vital few, defect cause"
+    }
+  ]
+}

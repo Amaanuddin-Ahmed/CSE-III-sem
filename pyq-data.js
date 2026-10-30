@@ -20,13 +20,13 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "pyqsUrl": "https://drive.google.com/drive/folders/1R2m69P_aU-IM6wEwIsbwGjKisdk5_xwY",
     "paperCount": 18,
-    "notesCount": 5,
+    "notesCount": 16,
     "chapters": {
-      "1": "Mathematical Logic, Truth Tables, Normal Forms (PCNF, PDNF) & Predicates",
-      "2": "Set Theory, Relations, Equivalence, Hasse Diagrams & Lattices",
-      "3": "Algebraic Structures, Semigroups, Monoids, Groups & Subgroups",
-      "4": "Combinatorics, Permutations, Combinations & Recurrence Relations",
-      "5": "Graph Theory, Paths, Euler & Hamiltonian Circuits, Isomorphism"
+      "1": "Mathematical Logic: Statements, Connectives, Truth Tables & Normal Forms (PDNF/PCNF)",
+      "2": "Set Theory: Relations, Functions, Equivalence Relations & Partial Ordering",
+      "3": "Algebraic Structures: Semigroups, Monoids, Lattices & Boolean Algebra",
+      "4": "Elementary Combinatorics: Permutations, Combinations & the Principle of Inclusion–Exclusion",
+      "5": "Graph Theory: Paths, Connectivity, Euler & Hamiltonian Graphs, Trees & Isomorphism"
     }
   },
   "COA": {
@@ -44,13 +44,13 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "pyqsUrl": "https://drive.google.com/drive/folders/1r6_ozXzyg84zHCji99-cAujgoie1S7IS",
     "paperCount": 17,
-    "notesCount": 5,
+    "notesCount": 19,
     "chapters": {
-      "1": "Basic Structure of Computers, Machine Instructions & Addressing Modes",
-      "2": "Central Processing Unit, ALU Design & Microprogrammed Control Unit",
-      "3": "Computer Arithmetic, Fixed & Floating Point, Booth's Algorithm",
-      "4": "Memory Organization, Memory Hierarchy, Cache Mapping & Virtual Memory",
-      "5": "Input-Output Organization, DMA, Interrupts & Instruction Pipelining"
+      "1": "Boolean Algebra, Logic Gates, Data Representation & Digital Computers",
+      "2": "Combinational & Sequential Logic Design",
+      "3": "Register Transfer Language, Micro-operations & Basic Computer Organization",
+      "4": "Microprogrammed Control, CPU Organization & Computer Arithmetic",
+      "5": "Input-Output Organization & Memory Organization"
     }
   },
   "OOPJ": {
@@ -70,11 +70,11 @@ const SUBJECTS_DATA = {
     "paperCount": 20,
     "notesCount": 14,
     "chapters": {
-      "1": "OOP Concepts, Java Virtual Machine (JVM), Bytecode & Primitive Types",
-      "2": "Classes, Objects, Inheritance, Polymorphism & Interfaces",
-      "3": "Exception Handling, Custom Exceptions & Multithreading",
-      "4": "Java Collections Framework, Lists, Sets, Maps & Generics",
-      "5": "File I/O Streams, Byte Streams, Character Streams & GUI Swing"
+      "1": "Object-Oriented Thinking & Java Basics",
+      "2": "Inheritance, Packages & Interfaces",
+      "3": "Exception Handling & Multithreading",
+      "4": "String, Object, java.util, java.io, Event Handling, Graphics & Layouts",
+      "5": "Swing GUI Components & Menu Systems"
     }
   },
   "DBMS": {
@@ -94,11 +94,11 @@ const SUBJECTS_DATA = {
     "paperCount": 14,
     "notesCount": 1,
     "chapters": {
-      "1": "Database System Concepts, 3-Schema Architecture & ER Modeling",
-      "2": "Relational Data Model, Relational Algebra & SQL Operations",
-      "3": "Schema Refinement, Functional Dependencies & Normalization (1NF to BCNF)",
-      "4": "Transaction Management, ACID Properties & Concurrency Control (2PL)",
-      "5": "Indexing, B+ Trees, Hashing Techniques & Crash Recovery"
+      "1": "Introduction to DBMS & ER Design",
+      "2": "Relational Model, Relational Algebra & Relational Calculus",
+      "3": "SQL, Constraints, Triggers & Schema Refinement (Normalization)",
+      "4": "Transactions, Concurrency Control & Recovery",
+      "5": "Storage, File Organization & Indexing (B & B+ Trees)"
     }
   },
   "SE": {
@@ -118,11 +118,11 @@ const SUBJECTS_DATA = {
     "paperCount": 15,
     "notesCount": 5,
     "chapters": {
-      "1": "Software Process Models, Waterfall, Agile Scrum & Requirements Engineering",
-      "2": "System Analysis, Use Case Modeling & SRS Documentation",
-      "3": "Software Architectural Design, Modular Decomposition & Coupling/Cohesion",
-      "4": "Software Testing, Black Box, White Box & Basis Path Testing",
-      "5": "Software Quality Assurance, Metrics, COCOMO Model & Maintenance"
+      "1": "Introduction to Software Engineering & Process Models",
+      "2": "Software Requirements Engineering & SRS",
+      "3": "Design Engineering, Software Architecture & UML",
+      "4": "Testing Strategies & Software Metrics",
+      "5": "Risk Management & Quality Management"
     }
   },
   "ES": {
@@ -142,11 +142,11 @@ const SUBJECTS_DATA = {
     "paperCount": 3,
     "notesCount": 5,
     "chapters": {
-      "1": "Ecosystems, Ecological Pyramids, Food Chains & Biodiversity",
-      "2": "Natural Resources: Water, Mineral, Forest & Energy Resources",
-      "3": "Environmental Pollution (Air, Water, Soil, Noise) & Solid Waste",
-      "4": "Global Environmental Challenges, Climate Change & Ozone Depletion",
-      "5": "Environmental Protection Legislation, Fieldwork & Sustainable Goals"
+      "1": "Ecosystems: Structure, Function, Food Chains & Energy Flow",
+      "2": "Natural Resources: Water, Mineral, Forest & Energy",
+      "3": "Biodiversity & Biotic Resources: Levels, Values, Threats & Conservation",
+      "4": "Environmental Pollution & Control Technologies",
+      "5": "Environmental Policy, Legislation & EIA"
     }
   },
   "IE": {
@@ -166,11 +166,11 @@ const SUBJECTS_DATA = {
     "paperCount": 0,
     "notesCount": 1,
     "chapters": {
-      "1": "Introduction to Innovation, Design Thinking & Creative Problem Solving",
-      "2": "Entrepreneurial Opportunity Recognition & Market Feasibility",
-      "3": "Business Model Generation, Lean Canvas & Value Proposition",
-      "4": "Venture Financing, Seed Capital, Angels, Venture Capital & Pitching",
-      "5": "Intellectual Property Rights (IPR), Patenting, Trademarks & Scaling"
+      "1": "Fundamentals of Innovation & Entrepreneurship",
+      "2": "Problem & Customer Identification",
+      "3": "Opportunity Assessment & Prototype Development",
+      "4": "Business & Financial Models",
+      "5": "Startups & Intellectual Property Rights (IPR)"
     }
   }
 };
@@ -179,35 +179,35 @@ const NOTES_DATA = [
   {
     "id": "NOTE-COA-01",
     "subjectId": "COA",
-    "chapter": 1,
-    "title": "COA Unit 1: Basic Structure & Machine Instructions",
+    "chapter": 2,
+    "title": "COA Unit 2: Combinational & Sequential Logic",
     "fileName": "Unit 1.pdf",
     "fileSize": "3.1 MB",
     "driveFileId": "1qQQpGKrjNC30plE7BIG-8gNmPg5U9dgn",
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
-    "description": "Detailed handwritten and typed lecture notes on Machine Instructions, Addressing Modes and CPU register formats."
+    "description": "Combinational circuits (adders, subtractors, comparators, decoders, encoders, multiplexers, HDL), latches and flip-flops, clocked sequential circuit analysis and design, registers, shift registers and counters. The Drive file is named Unit 1.pdf but its content is Unit 2."
   },
   {
     "id": "NOTE-COA-02",
     "subjectId": "COA",
     "chapter": 1,
-    "title": "COA Unit 1: Addressing Modes & Architecture",
+    "title": "COA Unit 1: Boolean Algebra, Logic Gates & Data Representation",
     "fileName": "Unit 1 Actual.pdf",
     "fileSize": "727 KB",
     "driveFileId": "1Ccju2Q81WPLiycZF58lCyvh7qN4tlufQ",
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
-    "description": "Formulas for Effective Address (EA) calculation with step-by-step memory pointer diagrams."
+    "description": "Boolean algebra and logic gates, binary codes, binary storage and registers, binary logic, data representation and types, complements, fixed-point and floating-point representation, and the digital computer block diagram."
   },
   {
     "id": "NOTE-ES-01",
     "subjectId": "ES",
     "chapter": 1,
-    "title": "ES Unit 1: Ecosystems & Biodiversity Comprehensive Guide",
+    "title": "ES Unit 1: Ecosystems - Complete Guide",
     "fileName": "Unit 1.pdf",
     "fileSize": "22.9 MB",
     "driveFileId": "1Fy6lmAAa5frGzeL30Fgg9gjcl009aV6K",
     "folderUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
-    "description": "Complete lecture guide covering structure and function of ecosystems, ecological pyramids, food chains, energy flow, and biodiversity hotspots."
+    "description": "Complete lecture guide covering the definition, scope, classification, structure and function of ecosystems, food chains and food webs, energy flow, and the nitrogen cycle."
   },
   {
     "id": "NOTE-ES-02",
@@ -224,23 +224,23 @@ const NOTES_DATA = [
     "id": "NOTE-ES-03",
     "subjectId": "ES",
     "chapter": 3,
-    "title": "ES Unit 3: Environmental Pollution & Waste Management",
+    "title": "ES Unit 3: Biodiversity & Biotic Resources",
     "fileName": "Unit-3.pdf",
     "fileSize": "3.3 MB",
     "driveFileId": "1SZfLggJ2rLVaRG6poB80BszbfpypBZna",
     "folderUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
-    "description": "Air, water, soil and noise pollution control mechanisms, sewage treatment, solid waste management and 3R principles."
+    "description": "Definition and levels of biodiversity (genetic, species, ecosystem), values of biodiversity, India as a mega-diversity nation, hotspots, threats (habitat loss, poaching, man-wildlife conflict), in-situ/ex-situ conservation and the National Biodiversity Act."
   },
   {
     "id": "NOTE-ES-04",
     "subjectId": "ES",
     "chapter": 4,
-    "title": "ES Unit 4: Global Environmental Challenges & Treaties",
+    "title": "ES Unit 4: Environmental Pollution & Control Technologies",
     "fileName": "Unit-4.pdf",
     "fileSize": "3.9 MB",
     "driveFileId": "1Og6W5C_YuUGklPjeNZRq_yNwFDaYAHkG",
     "folderUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
-    "description": "Climate change, global warming, acid rain, ozone layer depletion, and international protocols/agreements."
+    "description": "Classification of pollution and pollutants, soil pollution and impacts of modern agriculture, wastewater treatment (primary, secondary, tertiary), climate change, ozone depletion/ODS, and the Kyoto and Montreal Protocols."
   },
   {
     "id": "NOTE-DBMS-01",
@@ -346,7 +346,7 @@ const NOTES_DATA = [
     "id": "NOTE-OOPJ-09",
     "subjectId": "OOPJ",
     "chapter": 4,
-    "title": "Java Unit 4: Collections & Generics Guide",
+    "title": "Java Unit 4: Collections Framework Guide",
     "fileName": "junit_4.pdf",
     "fileSize": "831 KB",
     "driveFileId": "1PaxcAA8nVJY8hHXulsHRZsgEpldV7tYu",
@@ -414,7 +414,7 @@ const NOTES_DATA = [
     "chapter": 1,
     "title": "DM Unit 1: Handouts",
     "fileName": "Abhi DM Unit 1 - Handouts.pdf",
-    "fileSize": "PDF",
+    "fileSize": "4.2 MB",
     "driveFileId": "1bdOUCiC4yUapvsd4fBqGJusKUl4M2n-Z",
     "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "description": "Unit 1 handout shared in the DM Drive folder."
@@ -425,7 +425,7 @@ const NOTES_DATA = [
     "chapter": 2,
     "title": "DM Unit 2: Handouts",
     "fileName": "Abhi DM Unit 2 - Handouts.pdf",
-    "fileSize": "PDF",
+    "fileSize": "5.9 MB",
     "driveFileId": "1ZHdbUgDqifPgwPmm6iE-5nlY8iOFmAu2",
     "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "description": "Unit 2 handout shared in the DM Drive folder."
@@ -436,7 +436,7 @@ const NOTES_DATA = [
     "chapter": 3,
     "title": "DM Unit 3: Algebraic Structures - Handouts",
     "fileName": "Abhi DM Unit 3 - Algebraic structures - Handouts.pdf",
-    "fileSize": "PDF",
+    "fileSize": "5.5 MB",
     "driveFileId": "1usUxP8p0-4Y0EAHhnEyUK6idzrPqgrah",
     "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "description": "Algebraic structures handout shared in the DM Drive folder."
@@ -447,7 +447,7 @@ const NOTES_DATA = [
     "chapter": 4,
     "title": "DM Unit 4: Handouts (MFCS - PC)",
     "fileName": "Abhi MFCS Unit 4 - PC - Handouts.pdf",
-    "fileSize": "PDF",
+    "fileSize": "4 MB",
     "driveFileId": "1SAxxdWw1MQFYQC31ashtVmnLogszdznX",
     "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "description": "Unit 4 handout shared in the DM Drive folder."
@@ -459,7 +459,7 @@ const NOTES_DATA = [
     "chapters": [1, 2, 3, 4, 5],
     "title": "DM Complete Notes (M3)",
     "fileName": "M3 Entire notes.pdf",
-    "fileSize": "PDF",
+    "fileSize": "92 MB",
     "driveFileId": "1C1em9BsBBi9HFJ5aoPel1IFc_LUgjwMp",
     "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "description": "Complete notes file shared in the DM Drive folder."
@@ -470,7 +470,7 @@ const NOTES_DATA = [
     "chapter": 4,
     "title": "COA Computer Arithmetic (PPT)",
     "fileName": "3 Chapter-10-Computer Arithmetic.ppt",
-    "fileSize": "PPT",
+    "fileSize": "1.7 MB",
     "driveFileId": "1MOwPBczKzLVCuTqwaobf5P_L7B34_Uow",
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "description": "Computer arithmetic presentation shared in the COA Drive folder."
@@ -481,7 +481,7 @@ const NOTES_DATA = [
     "chapter": 5,
     "title": "COA Memory Organization (PPT)",
     "fileName": "1 Memory Organization.ppt",
-    "fileSize": "PPT",
+    "fileSize": "258 KB",
     "driveFileId": "1CyCCwjfftiIr6tXtQcrLL_RDzFC6OZjU",
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "description": "Memory organization presentation shared in the COA Drive folder."
@@ -492,7 +492,7 @@ const NOTES_DATA = [
     "chapter": 5,
     "title": "COA I/O Organization (PPT)",
     "fileName": "2 IV-IO-Organization.ppt",
-    "fileSize": "PPT",
+    "fileSize": "1.4 MB",
     "driveFileId": "1PqxyhjlyybwgmKsQC3PKp2JcOMpuYnwH",
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "description": "Input-output organization presentation shared in the COA Drive folder."
@@ -501,23 +501,23 @@ const NOTES_DATA = [
     "id": "NOTE-ES-05",
     "subjectId": "ES",
     "chapter": 5,
-    "title": "ES Unit 5: Notes",
+    "title": "ES Unit 5: Environmental Policy, Legislation & EIA",
     "fileName": "Unit-5 ES notes.pdf",
     "fileSize": "PDF",
     "driveFileId": "11eCeXOn-sCT0maQlUL824fU2h3CUUB1v",
     "folderUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
-    "description": "Unit 5 notes shared in the ES Drive folder."
+    "description": "Environmental Protection Act, Air Act 1981, Water Act, EIA structure and baseline-data methods, sustainable development, green chemistry, green building and low-carbon lifestyle."
   },
   {
     "id": "NOTE-IE-01",
     "subjectId": "IE",
     "chapter": 5,
-    "title": "I&E Unit 5: Notes",
+    "title": "I&E Unit 5: Startups & Intellectual Property Rights",
     "fileName": "Unit 5.docx",
     "fileSize": "DOCX",
     "driveFileId": "1pO5fXmb2X983Bb_eOtThPVe37iIb2594",
     "folderUrl": "https://drive.google.com/drive/folders/1Ac3gEX38khTx85EGXGqoXxUPjwkJKcOx",
-    "description": "Unit 5 notes shared in the I&E Drive folder."
+    "description": "Startup lifecycle, funding stages, patents, designs, copyright, trademarks, geographical indications and IPR strategy."
   },
   {
     "id": "NOTE-SE-01",
@@ -573,6 +573,281 @@ const NOTES_DATA = [
     "driveFileId": "1RmxjuX5Yv4b9LPSZXWyfstSmEkGAgl-9",
     "folderUrl": "https://drive.google.com/drive/folders/1kovfVmnjEm5_lF_OzAJXGB04netXHIMT",
     "description": "Software quality assurance (SQA), ISO 9000 & CMMI frameworks, COCOMO effort estimation formulas, risk management, and software maintenance."
+  },
+  {
+    "id": "NOTE-DM-06",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: BFS & DFS Graph Traversals",
+    "fileName": "BFS-DFS-Unit-V.pdf",
+    "fileSize": "1.4 MB",
+    "driveFileId": "1c79Wm22hBN1QxXMozrBB0BnKwtMkpr27",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Breadth-first and depth-first traversal algorithms with worked examples, queue/stack simulation, and spanning-tree construction."
+  },
+  {
+    "id": "NOTE-DM-07",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: Graphs - Complete Notes",
+    "fileName": "DM - Graphs - Notes.pdf",
+    "fileSize": "5.5 MB",
+    "driveFileId": "1U0a7cT61WMGBasHd2-Pb9kr4BiScT9cK",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Full graph-theory unit covering paths, connectivity, Euler and Hamiltonian graphs, trees, isomorphism, and planar graphs."
+  },
+  {
+    "id": "NOTE-DM-08",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: Graph Theory Notes",
+    "fileName": "DM-Unit-V.pdf",
+    "fileSize": "4.4 MB",
+    "driveFileId": "1tMLNR3ZlRGKE_Su_-ICTiwD2ED2oXx7E",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 5 lecture notes on graph representations, walks, circuits, connectedness, and graph isomorphism."
+  },
+  {
+    "id": "NOTE-DM-09",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Elementary Combinatorics (Part A)",
+    "fileName": "Elementary combinatorics-Unit-IV-Part-A.pdf",
+    "fileSize": "2.2 MB",
+    "driveFileId": "1xky503KnkvSlbMaP9OmBtQsS2aEbPGBX",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Permutations, combinations, binomial coefficients, and counting arguments for Unit 4 (Part A)."
+  },
+  {
+    "id": "NOTE-DM-10",
+    "subjectId": "DM",
+    "chapter": 3,
+    "title": "DM Unit 3: Lattices & Partial Orders",
+    "fileName": "Lattices - Notes.pdf",
+    "fileSize": "1.7 MB",
+    "driveFileId": "1pRLaNeaeltoGeIvAZBVV1gAgFzrxhXDa",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Posets, Hasse diagrams, lattices as partially ordered sets, sublattices, bounded/distributive lattices, and Boolean algebra."
+  },
+  {
+    "id": "NOTE-DM-11",
+    "subjectId": "DM",
+    "chapter": 1,
+    "title": "DM Unit 1: Mathematical Logic (MFCS)",
+    "fileName": "MFCS Unit 1.pdf",
+    "fileSize": "12.8 MB",
+    "driveFileId": "1JZuYgVZu0-tkS5WMNrGSqT2P-W3TKWtB",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Statements and connectives, truth tables, tautologies, logical equivalence, PDNF/PCNF, and predicate logic."
+  },
+  {
+    "id": "NOTE-DM-12",
+    "subjectId": "DM",
+    "chapter": 2,
+    "title": "DM Unit 2: Set Theory (MFCS)",
+    "fileName": "MFCS UNIT-2.pdf",
+    "fileSize": "15.3 MB",
+    "driveFileId": "1GLR0V8Kw5t94QO0axRMFg9RBV_hWuFwY",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Sets and operations, relations, functions, equivalence relations, partitions, and partial ordering."
+  },
+  {
+    "id": "NOTE-DM-13",
+    "subjectId": "DM",
+    "chapter": 3,
+    "title": "DM Unit 3: Algebraic Structures (MFCS)",
+    "fileName": "MFCS UNIT-3.pdf",
+    "fileSize": "6.3 MB",
+    "driveFileId": "1unCQ6q4mkbjBwNSa8Sjx-TxI3RTdRyVV",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Algebraic systems, semigroups, monoids, groups, subgroups, homomorphisms, and lattices."
+  },
+  {
+    "id": "NOTE-DM-14",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: Graph Theory (MFCS)",
+    "fileName": "MFCS Unit-5.pdf",
+    "fileSize": "16.9 MB",
+    "driveFileId": "1HaZmwbt15u843g5wq_2xfLGIRj9xVCby",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Graph terminology, representations, connectivity, Euler/Hamiltonian circuits, trees, and spanning trees."
+  },
+  {
+    "id": "NOTE-DM-15",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: MFCS Graphs",
+    "fileName": "MFCS-Graphs.pdf",
+    "fileSize": "642 KB",
+    "driveFileId": "1mt_TIgSOhDDKSj0RoRA2ocx3CX8mVAsU",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Concise graph-theory revision notes with definitions, theorems, and solved traversal examples."
+  },
+  {
+    "id": "NOTE-DM-16",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Combinations & Counting",
+    "fileName": "Unit-IV-Combinations1.pdf",
+    "fileSize": "1.1 MB",
+    "driveFileId": "1WJspYaa-zAHayTiV-HghaQt-E_Fz8jgi",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Combination formulas, repeated combinations, multinomial coefficients, and inclusion-exclusion worked problems."
+  },
+  {
+    "id": "NOTE-COA-06",
+    "subjectId": "COA",
+    "chapter": 4,
+    "title": "COA Unit 4: Computer Arithmetic (PDF)",
+    "fileName": "CH-10ComputerArithmetic.pdf",
+    "fileSize": "1.1 MB",
+    "driveFileId": "1i4qNdUY4CEpT0U5gIbroSOSQl6JJYub1",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Fixed-point and floating-point arithmetic, addition/subtraction, Booth multiplication, and division algorithms."
+  },
+  {
+    "id": "NOTE-COA-07",
+    "subjectId": "COA",
+    "chapter": 4,
+    "title": "COA Unit 4: Microprogrammed Control (PPT)",
+    "fileName": "Ch7-Micro Programmed Controle.ppt",
+    "fileSize": "396 KB",
+    "driveFileId": "1OGP6NyCTBFk8s1zHE5XEiOV0UTKdyh85",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Control memory, address sequencing, microinstruction formats, and microprogrammed control organization."
+  },
+  {
+    "id": "NOTE-COA-08",
+    "subjectId": "COA",
+    "chapter": 5,
+    "title": "COA Unit 5: Memory Organization (PPT)",
+    "fileName": "CO-unit-5-Memory org.ppt",
+    "fileSize": "734 KB",
+    "driveFileId": "1exeqpmoyMdH-6QB-QPDvQFEu9MpTa8Qu",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Memory hierarchy, main memory, auxiliary memory, associative memory, cache mapping, and virtual memory."
+  },
+  {
+    "id": "NOTE-COA-09",
+    "subjectId": "COA",
+    "chapter": 2,
+    "title": "COA Unit 2: Combinational Circuits",
+    "fileName": "Combinatorial Ckts.pdf",
+    "fileSize": "2.7 MB",
+    "driveFileId": "1WDaCJF3MGIllqECzfhltH6v9YpflwNAK",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Adders, subtractors, decoders, encoders, multiplexers, and combinational design procedures."
+  },
+  {
+    "id": "NOTE-COA-10",
+    "subjectId": "COA",
+    "chapter": 5,
+    "title": "COA Unit 5: I/O Organization (PPT)",
+    "fileName": "IV-IO-Organization.ppt",
+    "fileSize": "1.4 MB",
+    "driveFileId": "18yY0ONuxuCTNSynjeKwtsr1vbNlj8jLx",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "I/O interface, asynchronous data transfer, modes of transfer, priority interrupts, and DMA."
+  },
+  {
+    "id": "NOTE-COA-11",
+    "subjectId": "COA",
+    "chapter": 2,
+    "title": "COA Unit 2: K-Maps, SOP & POS",
+    "fileName": "K Maps-SOP and POS.pdf",
+    "fileSize": "1.8 MB",
+    "driveFileId": "1QlRI1TxsqtKdnqDf03yqIkZHteAdegje",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Karnaugh-map simplification, sum-of-products and product-of-sums forms, and don't-care conditions."
+  },
+  {
+    "id": "NOTE-COA-12",
+    "subjectId": "COA",
+    "chapter": 5,
+    "title": "COA Unit 5: Memory Organization Notes",
+    "fileName": "Memory Organization.ppt",
+    "fileSize": "258 KB",
+    "driveFileId": "1Ihbz9KTH1_YtGYte0Cg8FQ2c639pxZcH",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Cache organization, hit/miss ratio, replacement policies, and interleaved memory."
+  },
+  {
+    "id": "NOTE-COA-13",
+    "subjectId": "COA",
+    "chapter": 2,
+    "title": "COA Unit 2: Sequential Circuits",
+    "fileName": "Sequential Ckts.pdf",
+    "fileSize": "2.6 MB",
+    "driveFileId": "1esS3jhbLDZDJoJRRm_G_mF5TGpKJVwjT",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Flip-flops, registers, counters, state diagrams, and sequential circuit analysis and design."
+  },
+  {
+    "id": "NOTE-COA-14",
+    "subjectId": "COA",
+    "chapter": 2,
+    "title": "COA Unit 2: Combinational Circuits (U3)",
+    "fileName": "U3-Combi Ckts.pdf",
+    "fileSize": "2.7 MB",
+    "driveFileId": "1-FOIBo-u021t6-3UeY7gek_0W6iOYqYt",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Combinational logic design with multiplexers, decoders, adders, and arithmetic circuits."
+  },
+  {
+    "id": "NOTE-COA-15",
+    "subjectId": "COA",
+    "chapter": 3,
+    "title": "COA Unit 3: Register Transfer & Micro-operations",
+    "fileName": "UNIT I -II Reg Transfer&Micro Ops.ppt",
+    "fileSize": "526 KB",
+    "driveFileId": "10aX_0aPVBBj5UCzIUo7nH3GLr4G5nPzB",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Register transfer language, bus and memory transfers, arithmetic/logic/shift micro-operations, and the ALSU."
+  },
+  {
+    "id": "NOTE-COA-16",
+    "subjectId": "COA",
+    "chapter": 3,
+    "title": "COA Unit 3: Basic Computer Organization & Design",
+    "fileName": "UNIT I -III Basic CO&Design.ppt",
+    "fileSize": "572 KB",
+    "driveFileId": "1GMi3yf0E6Lrs5-gP_dQLmAMfvwchCUJh",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Instruction codes, computer registers, instruction cycle, timing and control, and memory-reference instructions."
+  },
+  {
+    "id": "NOTE-COA-17",
+    "subjectId": "COA",
+    "chapter": 4,
+    "title": "COA Unit 4: CPU Organization",
+    "fileName": "UNIT I -IV CPU.ppt",
+    "fileSize": "764 KB",
+    "driveFileId": "1rWOT24VLqFz3Mr0lC09eDralZurmRfnA",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "General register organization, stack organization, instruction formats, addressing modes, and RISC/CISC."
+  },
+  {
+    "id": "NOTE-COA-18",
+    "subjectId": "COA",
+    "chapter": 1,
+    "title": "COA Unit 1: Number Systems Introduction",
+    "fileName": "UNIT-1-Introduction Numbar System.pdf",
+    "fileSize": "6.7 MB",
+    "driveFileId": "1LrwjYr48QE3fsHR9q0EHCaQmLKRon2ZM",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Binary, octal, decimal and hexadecimal number systems, base conversion, binary codes, and signed representations."
+  },
+  {
+    "id": "NOTE-COA-19",
+    "subjectId": "COA",
+    "chapter": 1,
+    "title": "COA Unit 1: Introduction & Digital Computers",
+    "fileName": "UNIT-1.COA.pdf",
+    "fileSize": "15.6 MB",
+    "driveFileId": "1aFMHrPxZTOrc8grHjqA53NlPBYo2zAZH",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Boolean algebra, logic gates, data representation, binary storage and registers, and the basic digital computer."
   }
 ];
 

@@ -1,0 +1,73 @@
+1m | Define software engineering and explain.
+1m | What are software engineering layers?
+1m | What is process assessment?
+2m | Differentiate the characteristics of Software and Hardware.
+2m | What is a prototype?
+2m | What is Software and Software Engineering?
+1m | Explain is legacy software.
+2m | Enumerate different layers in requirements.
+2m | List the characteristics of Software contrasting the characteristics of hardware.
+1m | Write about characteristics of software?
+2m | What is meant by software engineering?
+2m | Write the nature of software.
+2m | What is software engineering? What are its applications?
+2m | Differentiate between software process and project.
+5m | Explain "Evolutionary Process Flow" with a neat sketch.
+5m | Explain about evaluation of software engineering methodologies.
+5m | Explain process frame work activities.
+5m | Lxplain about the Umbrella Activities which support the software developtnent process and discuss about their recessity in maintaining. 2c) Assume that you are the technical manager of a software development organization. A Client approached you for a software solution the problems stated by the client have uncertainties which lead to loss if it not planned and solved which software development modcl you will suggest for this project -justify. Explain that model with its pros and cons and neat sketch 2d) VNseuss Manager's myths about software development and their effect on the practitioner's performance as well as on the overall outcome.
+5m | Assume that you are the technical manager of a software development organization. A Client approached you for a software solution the problems stated by the client have uncertainties which lead to loss if it not planned and solved which software development model you will suggest for this project -justify. Explain that model with its pros and cons and neat sketch
+5m | Discuss Manager's myths about software development and their effect on the practitioner's performance as well as on the overall outcome.
+5m | List and explain various characteristics of software.
+5m | Explain unified process and elaborate on the unified process work products.
+1m | What is meant by requirement management?
+2m | What is a model for a given software?
+1m | Discuss data flow model.
+1m | Summarize requirement clicitation and analysis?
+2m | Define data model.
+2m | Define context models in system modeling.
+5m | What are the desirable characteristics of a good software requirement specification document? Discuss.
+5m | How requirements are classified? List them with an example for} each.
+5m | What is the importance of data modelling of a system? Explain.
+5m | Explain how the behaviour of a system can be modelled with an example.
+5m | Explain about various system models.
+5m | Explain state machine model with a suitable example.
+10m | List the activities of Requirements clicitation and analysis? Explain in detail.
+5m | Illustrate how context modelling helps to model a system.
+5m | Give an in-depth overview of the dynamic systems development method and feature-driven development method.
+5m | Discuss the Context models and behavioral models.
+5m | Write the difficulty process for Eliciting and understanding requirements from system stakeholders.
+5m | Explain how behavioral models help in understanding system functionality.
+1m | List out the design concepts?
+2m | How do we assess the quality of a software design?
+5m | Analyze briefly the structural system analysis in detail.
+5m | Develop an online railway reservation system, which allows the; user to select book/cancel tickets using net banking/credit/debit cards.
+5m | Lc) Explain various strategies of design.Which design strategy is most} popular and practical?
+5m | List out any 4 design concepts and briefly explain them.
+5m | What are the design principles of a good software design?
+5m | Explain the design concepts in software engineering?
+5m | Explain the design concepts?
+1m | What is software testing?
+2m | Define quality for a given software.
+2m | Define Testing.
+1m | Why do we need to test software?
+5m | Describe strategic approach to software testing.
+5m | Generalize your view about different varicties of testing.
+5m | Explain about the importance of test strategies for conventional software.
+5m | Explain Software Testing? Discuss role of software testing during software lifecycle?
+5m | What are the various testing strategies used for testing conventional software?
+5m | Demonstrate art of debugeine, 5?
+5m | How would you evaluate different test strategies for conventional software? Provide examples of when to apply each strategy.
+1m | What is software risk?
+2m | How software is measured?
+2m | Identify the different categories of risks.
+1m | . 1) Determine few Software risks?
+2m | List out different types of risks.
+2m | Define Quality. How can quality be quantified.
+1m | Write about the two characteristics of software 7risks?
+5m | What types of risk occur during software development? Discuss.
+5m | Write short notes.
+5m | Explain how to identify and project a risk.
+5m | Explain about software risks? Che
+5m | Not one 1 " thd nota 4 1 ves "4 an wees ors aN, Pvt, UVRAEIKGS.
+5m | Examine the activities associated with project process planning.

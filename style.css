@@ -9393,3 +9393,59 @@ body.ai-running {
 .attribution-division.attribution-compact .attribution-box {
   display: none;
 }
+
+/* ==========================================================================
+   Full-screen AI assistant modal + horizontal scrolling for wide answers
+   (final cascade override)
+   ========================================================================== */
+
+#geminiModal.modal-backdrop {
+  padding: 0 !important;
+  align-items: stretch !important;
+  justify-content: stretch !important;
+}
+
+#geminiModal .gemini-app-layout {
+  width: 100vw !important;
+  max-width: none !important;
+  height: 100dvh !important;
+  max-height: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+@supports not (height: 100dvh) {
+  #geminiModal .gemini-app-layout {
+    height: 100vh !important;
+  }
+}
+
+/* Let wide tables, code and math scroll sideways instead of clipping. */
+#geminiModal .gemini-chat-output {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  max-height: none !important;
+  overscroll-behavior: contain;
+}
+
+#geminiModal .gemini-stream-body {
+  overflow-x: hidden !important;
+}
+
+#geminiModal .ai-msg,
+#geminiModal .ai-msg-body {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#geminiModal .ai-msg-body table,
+#geminiModal .ai-msg-body pre,
+#geminiModal .ai-msg-body .gemini-math,
+#geminiModal .ai-msg-body .gemini-math-block,
+#geminiModal .ai-msg-body .katex-display {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}

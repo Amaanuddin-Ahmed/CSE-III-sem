@@ -1,0 +1,1267 @@
+{
+  "subject": "OOPJ",
+  "name": "Object Oriented Programming through Java",
+  "fixes": {
+    "OOPJ-M2-013": {
+      "topic": "Character streams",
+      "question": "Which class is commonly used to read characters from a text file?",
+      "options": [
+        "FileInputStream",
+        "FileReader",
+        "DataOutputStream",
+        "RandomAccessFile"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "FileReader is a character stream for text; FileInputStream reads raw bytes and would need explicit decoding."
+    },
+    "OOPJ-M2-014": {
+      "topic": "Buffered streams",
+      "question": "Wrapping a FileReader in a _______ reduces the number of disk reads by buffering characters.",
+      "accepted": [
+        "BufferedReader",
+        "buffered reader"
+      ],
+      "difficulty": "medium",
+      "explanation": "BufferedReader adds an in-memory buffer and useful methods such as readLine()."
+    },
+    "OOPJ-M2-016": {
+      "topic": "ArrayList",
+      "question": "Which java.util class implements a resizable array?",
+      "options": [
+        "HashMap",
+        "ArrayList",
+        "HashSet",
+        "TreeMap"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "ArrayList stores elements in a resizable array and provides index-based access."
+    },
+    "OOPJ-M2-017": {
+      "topic": "HashMap",
+      "question": "A java.util.HashMap stores data as _______ pairs and allows one null key.",
+      "accepted": [
+        "key-value",
+        "key value",
+        "key/value"
+      ],
+      "difficulty": "medium",
+      "explanation": "HashMap maps unique keys to values; it permits one null key and multiple null values."
+    },
+    "OOPJ-M2-018": {
+      "topic": "JTable",
+      "question": "Which Swing component displays data in rows and columns?",
+      "options": [
+        "JList",
+        "JTable",
+        "JComboBox",
+        "JTextArea"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "JTable renders a table model as rows and columns; JList shows a one-dimensional list."
+    },
+    "OOPJ-M2-019": {
+      "topic": "Comparator",
+      "question": "The java.util interface used to define a custom ordering for objects is _______.",
+      "accepted": [
+        "Comparator",
+        "comparator"
+      ],
+      "difficulty": "medium",
+      "explanation": "Comparator supplies a compare method for an ordering that is external to the class, unlike Comparable."
+    },
+    "FC-OOPJ-08": {
+      "topic": "BufferedReader",
+      "front": "What is BufferedReader used for?",
+      "back": "It wraps a character stream and buffers input, making reads efficient and providing readLine() for line-by-line text input.\nKeywords: BufferedReader, buffer, readLine, character stream"
+    },
+    "FC-OOPJ-09": {
+      "topic": "FileWriter",
+      "front": "How do you write text to a file in Java?",
+      "back": "Create a FileWriter (optionally wrapped in BufferedWriter or PrintWriter) and call write() or println(), then close it in a finally block or try-with-resources.\nKeywords: FileWriter, BufferedWriter, write, close"
+    },
+    "FC-OOPJ-10": {
+      "topic": "Collections utility",
+      "front": "What does java.util.Collections provide?",
+      "back": "Static helpers for collections: sort, reverse, shuffle, binarySearch, max, min and unmodifiable wrappers.\nKeywords: Collections, sort, reverse, binarySearch, utility"
+    },
+    "FC-OOPJ-11": {
+      "topic": "Iterator",
+      "front": "What is an Iterator and why use it?",
+      "back": "An object that walks a collection one element at a time with hasNext() and next(). It lets you traverse without exposing the collection's internal structure.\nKeywords: Iterator, hasNext, next, traverse"
+    },
+    "FC-SEM-OOPJ-40": {
+      "unit": 4,
+      "topicId": "OOPJ.U4.T02",
+      "topic": "Exploring the Object class",
+      "highYield": true,
+      "back": "1. toString, equals, and hashCode describe and compare objects.\n2. getClass returns the runtime Class object.\n3. clone creates a copy; finalize was historically called before collection.\n4. wait, notify, and notifyAll support monitor coordination.\nKeywords: Object class, toString, equals, hashCode, getClass, clone"
+    }
+  },
+  "mcq": [
+    {
+      "id": "OOPJ-SEM-037",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T02",
+      "topic": "JVM",
+      "question": "Java source code is compiled into:",
+      "options": [
+        "Native machine code",
+        "Bytecode",
+        "Assembly language",
+        "Microcode"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "javac produces platform-independent bytecode, which the JVM interprets or compiles for the host machine."
+    },
+    {
+      "id": "OOPJ-SEM-038",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T02",
+      "topic": "JDK and JRE",
+      "question": "Which statement about JDK and JRE is correct?",
+      "options": [
+        "JRE includes the JDK",
+        "JDK includes the JRE plus development tools",
+        "They are unrelated",
+        "JDK runs only applets"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The JDK bundles the JRE with compilers and tools such as javac and javadoc."
+    },
+    {
+      "id": "OOPJ-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T03",
+      "topic": "Primitive sizes",
+      "question": "How many bytes does a Java int occupy?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "It depends on the platform"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Java fixes primitive sizes: int is 4 bytes, short is 2, long is 8, and char is 2."
+    },
+    {
+      "id": "OOPJ-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Narrowing conversion",
+      "question": "Assigning a double to an int without a cast is:",
+      "options": [
+        "Allowed automatically",
+        "A compile-time error because it is a narrowing conversion",
+        "Allowed only at runtime",
+        "Allowed if the value is positive"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A double may lose its fractional part, so Java requires an explicit cast for narrowing conversions."
+    },
+    {
+      "id": "OOPJ-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Switch statement",
+      "question": "Which types are allowed in a classic Java switch selector?",
+      "options": [
+        "Only int",
+        "int, char, byte, short, String and enum",
+        "Any object",
+        "Only boolean"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Classic switch accepts integral types, char, String and enum constants; boolean and arbitrary objects are not allowed."
+    },
+    {
+      "id": "OOPJ-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Loop control",
+      "question": "Which loop is guaranteed to execute its body at least once?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "enhanced for"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A do-while checks its condition after the body, so the body runs once even if the condition is false."
+    },
+    {
+      "id": "OOPJ-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T05",
+      "topic": "Constructor",
+      "question": "A Java constructor has:",
+      "options": [
+        "A return type of void",
+        "No return type",
+        "A return type of int",
+        "The same name as the class but must return this"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A constructor has the class name and no return type; adding void turns it into an ordinary method."
+    },
+    {
+      "id": "OOPJ-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T05",
+      "topic": "static members",
+      "question": "A static method can directly access:",
+      "options": [
+        "Only instance variables",
+        "Only static variables and static methods",
+        "Both instance and static members",
+        "Only local variables"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A static method has no this reference, so it cannot directly use instance fields; it can use static members."
+    },
+    {
+      "id": "OOPJ-SEM-045",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T05",
+      "topic": "this reference",
+      "question": "The this keyword refers to:",
+      "options": [
+        "The superclass object",
+        "The current object",
+        "The class itself",
+        "A static instance"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "this is a reference to the object on which the current method was invoked; it is used to disambiguate fields from parameters."
+    },
+    {
+      "id": "OOPJ-SEM-046",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T02",
+      "topic": "Inheritance",
+      "question": "Which keyword is used by a subclass to call its superclass constructor?",
+      "options": [
+        "this",
+        "super",
+        "extends",
+        "implements"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "super(...) invokes the parent constructor and must be the first statement in the subclass constructor."
+    },
+    {
+      "id": "OOPJ-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T04",
+      "topic": "final keyword",
+      "question": "A final method in Java:",
+      "options": [
+        "Cannot be overridden",
+        "Cannot be called",
+        "Must be static",
+        "Can be overridden only once"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "final prevents overriding; a final class cannot be extended, and a final variable cannot be reassigned."
+    },
+    {
+      "id": "OOPJ-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Overriding",
+      "question": "Method overriding requires:",
+      "options": [
+        "Same name and same parameter list in a subclass",
+        "Same name but different parameters",
+        "A static method",
+        "A private superclass method"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Overriding replaces an inherited method with the same signature; different parameters would be overloading."
+    },
+    {
+      "id": "OOPJ-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Abstract class",
+      "question": "Which statement about an abstract class is correct?",
+      "options": [
+        "It cannot have constructors",
+        "It can have both abstract and concrete methods",
+        "It must have only abstract methods",
+        "It can be instantiated directly"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "An abstract class may mix abstract and concrete members and can declare constructors, but it cannot be instantiated."
+    },
+    {
+      "id": "OOPJ-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T07",
+      "topic": "Interface fields",
+      "question": "Fields declared in a Java interface are implicitly:",
+      "options": [
+        "private and final",
+        "public, static and final",
+        "protected and static",
+        "instance variables"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Interface fields are constants: public, static and final, even when those modifiers are omitted."
+    },
+    {
+      "id": "OOPJ-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T06",
+      "topic": "Packages",
+      "question": "The statement package com.example; must appear:",
+      "options": [
+        "Anywhere in the file",
+        "As the first non-comment statement",
+        "Inside the class",
+        "After the imports"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A package declaration must be the first non-comment statement, before any import."
+    },
+    {
+      "id": "OOPJ-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T03",
+      "topic": "Access modifiers",
+      "question": "Which access modifier makes a member visible only within its own class?",
+      "options": [
+        "public",
+        "protected",
+        "private",
+        "default"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "private restricts access to the declaring class; default (package-private) also allows the same package."
+    },
+    {
+      "id": "OOPJ-SEM-053",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Polymorphism",
+      "question": "Runtime polymorphism in Java is achieved through:",
+      "options": [
+        "Method overloading",
+        "Method overriding with a superclass reference",
+        "Static methods",
+        "Constructors"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A superclass reference can point to a subclass object, and the overridden method is chosen at runtime."
+    },
+    {
+      "id": "OOPJ-SEM-054",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T01",
+      "topic": "Substitutability",
+      "question": "The principle that a subclass object can be used wherever a superclass object is expected is called:",
+      "options": [
+        "Encapsulation",
+        "Substitutability",
+        "Abstraction",
+        "Modularity"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Liskov substitutability lets client code depend on the supertype without knowing the concrete subtype."
+    },
+    {
+      "id": "OOPJ-SEM-055",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "OOPJ.U3.T02",
+      "topic": "Exception hierarchy",
+      "question": "All Java exceptions ultimately extend:",
+      "options": [
+        "Exception",
+        "Throwable",
+        "Error",
+        "RuntimeException"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Throwable is the root; Exception and Error are its two main branches."
+    },
+    {
+      "id": "OOPJ-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "OOPJ.U3.T02",
+      "topic": "Checked exceptions",
+      "question": "A checked exception must be:",
+      "options": [
+        "Ignored at compile time",
+        "Caught or declared with throws",
+        "Always a RuntimeException",
+        "Thrown only by the JVM"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The compiler requires checked exceptions to be handled in a try-catch or listed in the method's throws clause."
+    },
+    {
+      "id": "OOPJ-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "OOPJ.U3.T03",
+      "topic": "finally block",
+      "question": "A finally block executes:",
+      "options": [
+        "Only when no exception occurs",
+        "Only when an exception occurs",
+        "Whether or not an exception occurs",
+        "Only if System.exit is called"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "finally is used for cleanup and runs even when an exception is thrown or a return is executed, except on a JVM exit."
+    },
+    {
+      "id": "OOPJ-SEM-058",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "OOPJ.U3.T03",
+      "topic": "throw vs throws",
+      "question": "The difference between throw and throws is that:",
+      "options": [
+        "throw declares, throws raises",
+        "throw raises an exception object, throws declares it",
+        "Both raise exceptions",
+        "Both declare exceptions"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "throw is a statement that raises an exception; throws is a method-clause declaration of possible exceptions."
+    },
+    {
+      "id": "OOPJ-SEM-059",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "OOPJ.U3.T08",
+      "topic": "Thread creation",
+      "question": "Which two ways can create a thread in Java?",
+      "options": [
+        "Extend Thread or implement Runnable",
+        "Extend Runnable or implement Thread",
+        "Implement Callable only",
+        "Use the main method only"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "A class can extend Thread and override run(), or implement Runnable and pass it to a Thread."
+    },
+    {
+      "id": "OOPJ-SEM-060",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T01",
+      "topic": "String immutability",
+      "question": "Java String objects are immutable, which means:",
+      "options": [
+        "They cannot be printed",
+        "Their value cannot be changed after creation",
+        "They cannot be shared",
+        "They can hold only characters"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "String methods return a new object; the original string's characters never change, which makes sharing and caching safe."
+    },
+    {
+      "id": "OOPJ-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T01",
+      "topic": "StringBuilder",
+      "question": "StringBuilder is preferred over String for heavy concatenation because it:",
+      "options": [
+        "Is immutable",
+        "Modifies the same buffer without creating many objects",
+        "Is thread-safe",
+        "Uses less memory than a char array"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "StringBuilder appends in place, avoiding the many temporary String objects that repeated concatenation creates."
+    },
+    {
+      "id": "OOPJ-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T03",
+      "topic": "ArrayList vs LinkedList",
+      "question": "Which operation is faster on an ArrayList than on a LinkedList?",
+      "options": [
+        "Insertion at the front",
+        "Random access by index",
+        "Removal from the middle",
+        "Iteration with an iterator"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "ArrayList stores elements contiguously, so get(i) is constant time; LinkedList must walk from an end."
+    },
+    {
+      "id": "OOPJ-SEM-063",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T03",
+      "topic": "HashMap",
+      "question": "In a HashMap, duplicate keys:",
+      "options": [
+        "Cause a compile error",
+        "Replace the previous value",
+        "Are stored twice",
+        "Are silently ignored"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Keys are unique; put() with an existing key overwrites its value and returns the old value."
+    },
+    {
+      "id": "OOPJ-SEM-064",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T04",
+      "topic": "java.io",
+      "question": "Which stream class is used to read raw bytes from a file?",
+      "options": [
+        "FileReader",
+        "FileInputStream",
+        "BufferedWriter",
+        "PrintWriter"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "FileInputStream is a byte stream; FileReader is its character-stream counterpart."
+    },
+    {
+      "id": "OOPJ-SEM-065",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T05",
+      "topic": "Delegation event model",
+      "question": "In the delegation event model, an event source:",
+      "options": [
+        "Handles its own events",
+        "Registers listeners and sends events to them",
+        "Polls the listener",
+        "Creates a new thread per event"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "The source registers listener objects and delegates event handling by calling their methods."
+    },
+    {
+      "id": "OOPJ-SEM-066",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T08",
+      "topic": "Layout managers",
+      "question": "Which layout manager arranges components in five regions: north, south, east, west and centre?",
+      "options": [
+        "FlowLayout",
+        "BorderLayout",
+        "GridLayout",
+        "CardLayout"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "BorderLayout uses the five named regions; FlowLayout lays components left to right in a row."
+    },
+    {
+      "id": "OOPJ-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T01",
+      "topic": "Swing vs AWT",
+      "question": "Swing components are called lightweight because they:",
+      "options": [
+        "Use native peer windows for every component",
+        "Are drawn by Java without a native peer per component",
+        "Cannot be displayed",
+        "Require no event handling"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Swing paints most components itself, so they do not each need an operating-system peer, unlike heavyweight AWT components."
+    },
+    {
+      "id": "OOPJ-SEM-068",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T02",
+      "topic": "JFrame",
+      "question": "JFrame is a:",
+      "options": [
+        "Top-level container with a title bar",
+        "Lightweight button",
+        "Layout manager",
+        "Event listener"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "JFrame is a top-level window with a title bar and border, used as the main container of a Swing application."
+    },
+    {
+      "id": "OOPJ-SEM-069",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T03",
+      "topic": "JButton",
+      "question": "Which listener interface handles a JButton click?",
+      "options": [
+        "MouseListener",
+        "ActionListener",
+        "KeyListener",
+        "WindowListener"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A button fires an ActionEvent, handled by ActionListener's actionPerformed method."
+    },
+    {
+      "id": "OOPJ-SEM-070",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T03",
+      "topic": "JLabel",
+      "question": "A JLabel is used to:",
+      "options": [
+        "Accept text input",
+        "Display a short text or icon",
+        "Hold a menu",
+        "Start a thread"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "JLabel shows read-only text or an icon; JTextField is used when the user must type input."
+    },
+    {
+      "id": "OOPJ-SEM-071",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T04",
+      "topic": "JList and JComboBox",
+      "question": "Which component shows a drop-down list of choices?",
+      "options": [
+        "JList",
+        "JComboBox",
+        "JTable",
+        "JSlider"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "JComboBox is a drop-down selector; JList shows the choices as a visible list."
+    },
+    {
+      "id": "OOPJ-SEM-072",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "OOPJ.U5.T05",
+      "topic": "Menus",
+      "question": "Which class represents a menu bar in Swing?",
+      "options": [
+        "JMenu",
+        "JMenuItem",
+        "JMenuBar",
+        "JPopupMenu"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "JMenuBar is attached to a frame; it contains JMenu objects, which contain JMenuItem objects."
+    },
+    {
+      "id": "OOPJ-SEM-073",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Increment operators",
+      "question": "What is printed by `int x = 5; System.out.println(x++ + ++x);`?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "`x++` yields 5 and leaves x as 6; `++x` then increments x to 7 and yields 7. The sum is $5+7=12$."
+    },
+    {
+      "id": "OOPJ-SEM-074",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Runtime polymorphism",
+      "question": "If `A a = new B();` and both A and B define `show()`, which method runs when `a.show()` is called?",
+      "options": [
+        "A's show()",
+        "B's show()",
+        "A compile-time error occurs",
+        "Neither method runs"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "The reference type is A but the object is B. Method overriding is resolved at runtime from the actual object type, so B's show() runs."
+    },
+    {
+      "id": "OOPJ-SEM-075",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "OOPJ.U3.T11",
+      "topic": "Thread wait state",
+      "question": "A thread calls `wait()` on an object. It releases the object's monitor and enters which state?",
+      "options": [
+        "RUNNABLE",
+        "BLOCKED",
+        "WAITING",
+        "TERMINATED"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "A call to wait() releases the monitor and places the thread in the WAITING state until another thread calls notify() or notifyAll()."
+    },
+    {
+      "id": "OOPJ-SEM-076",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "OOPJ.U4.T03",
+      "topic": "ArrayList subList",
+      "question": "What is the result of `new ArrayList<>(Arrays.asList(1,2,3)).subList(0,2).size()`?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "An exception is thrown"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "subList(0,2) returns the elements at indices 0 and 1, so the sublist contains two elements."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-OOPJ-23",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T01",
+      "topic": "OOP principles",
+      "highYield": true,
+      "front": "Name the four core principles of object-oriented programming.",
+      "back": "Encapsulation, abstraction, inheritance and polymorphism. Together they support modular, reusable and maintainable code.\nKeywords: encapsulation, abstraction, inheritance, polymorphism"
+    },
+    {
+      "id": "FC-SEM-OOPJ-24",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T02",
+      "topic": "Java buzzwords",
+      "highYield": true,
+      "front": "List five Java buzzwords and what each means.",
+      "back": "Simple, object-oriented, platform-independent, secure, robust. Bytecode plus the JVM gives write-once-run-anywhere portability.\nKeywords: simple, object-oriented, platform independent, secure, robust"
+    },
+    {
+      "id": "FC-SEM-OOPJ-25",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T02",
+      "topic": "JVM, JRE and JDK",
+      "highYield": true,
+      "front": "Distinguish JVM, JRE and JDK.",
+      "back": "JVM executes bytecode. JRE adds the class libraries needed to run programs. JDK adds the compiler and development tools.\nKeywords: JVM, JRE, JDK, bytecode"
+    },
+    {
+      "id": "FC-SEM-OOPJ-26",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T03",
+      "topic": "Primitive types",
+      "highYield": true,
+      "front": "List the eight Java primitive types and their sizes.",
+      "back": "byte 1, short 2, int 4, long 8, float 4, double 8, char 2, boolean JVM-dependent. Sizes are fixed across platforms.\nKeywords: byte, short, int, long, float, double, char, boolean"
+    },
+    {
+      "id": "FC-SEM-OOPJ-27",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T04",
+      "topic": "Type casting",
+      "highYield": true,
+      "front": "Distinguish widening and narrowing conversion.",
+      "back": "Widening goes to a larger type and is automatic. Narrowing goes to a smaller type and needs an explicit cast because data may be lost.\nKeywords: widening, narrowing, cast, conversion"
+    },
+    {
+      "id": "FC-SEM-OOPJ-28",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T05",
+      "topic": "Constructors",
+      "highYield": true,
+      "front": "What is constructor overloading?",
+      "back": "Declaring several constructors with different parameter lists in the same class, so objects can be created in different ways.\nKeywords: constructor, overloading, parameter list"
+    },
+    {
+      "id": "FC-SEM-OOPJ-29",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T05",
+      "topic": "static",
+      "highYield": true,
+      "front": "What does the static keyword mean?",
+      "back": "The member belongs to the class rather than to an instance. Static methods have no this reference and are shared by all objects.\nKeywords: static, class member, shared, no this"
+    },
+    {
+      "id": "FC-SEM-OOPJ-30",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T06",
+      "topic": "Garbage collection",
+      "highYield": false,
+      "front": "How does Java garbage collection work?",
+      "back": "The JVM automatically reclaims objects that are no longer reachable. Programmers can suggest collection with System.gc(), but cannot force it.\nKeywords: garbage collection, reachable, JVM, System.gc"
+    },
+    {
+      "id": "FC-SEM-OOPJ-31",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T07",
+      "topic": "Recursion",
+      "highYield": false,
+      "front": "What two parts must every recursive method have?",
+      "back": "A base case that stops the recursion and a recursive case that moves toward the base case. Missing either causes a stack overflow.\nKeywords: recursion, base case, recursive case, stack overflow"
+    },
+    {
+      "id": "FC-SEM-OOPJ-32",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T01",
+      "topic": "Inheritance",
+      "highYield": true,
+      "front": "What is inheritance and what is its main benefit?",
+      "back": "A subclass acquires the accessible members of a superclass. It promotes reuse and substitutability but can create tight coupling.\nKeywords: inheritance, subclass, reuse, coupling"
+    },
+    {
+      "id": "FC-SEM-OOPJ-33",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T04",
+      "topic": "super and final",
+      "highYield": true,
+      "front": "What do super and final do?",
+      "back": "super calls the parent constructor or member. final prevents overriding a method, extending a class or reassigning a variable.\nKeywords: super, final, override, extend"
+    },
+    {
+      "id": "FC-SEM-OOPJ-34",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Overloading vs overriding",
+      "highYield": true,
+      "front": "Compare method overloading and method overriding.",
+      "back": "Overloading: same name, different parameters, compile-time choice. Overriding: same signature in a subclass, runtime choice through a superclass reference.\nKeywords: overloading, overriding, compile time, runtime"
+    },
+    {
+      "id": "FC-SEM-OOPJ-35",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Abstract class vs interface",
+      "highYield": true,
+      "front": "Compare an abstract class and an interface.",
+      "back": "An abstract class can hold state and concrete methods and allows single inheritance. An interface declares a contract and a class can implement several.\nKeywords: abstract class, interface, state, multiple inheritance"
+    },
+    {
+      "id": "FC-SEM-OOPJ-36",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T03",
+      "topic": "Access modifiers",
+      "highYield": true,
+      "front": "Order the four access levels from most to least open.",
+      "back": "public, protected, default (package-private), private. protected also allows subclasses in other packages.\nKeywords: public, protected, default, private, access"
+    },
+    {
+      "id": "FC-SEM-OOPJ-37",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T06",
+      "topic": "Packages",
+      "highYield": true,
+      "front": "What is a package and why use one?",
+      "back": "A namespace that groups related classes. It prevents name clashes, controls access and supports modular deployment.\nKeywords: package, namespace, access, modularity"
+    },
+    {
+      "id": "FC-SEM-OOPJ-38",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T07",
+      "topic": "Interface",
+      "highYield": true,
+      "front": "How does a class implement an interface?",
+      "back": "Use implements in the class declaration and provide bodies for all abstract methods, or declare the class abstract.\nKeywords: interface, implements, abstract method, contract"
+    },
+    {
+      "id": "FC-SEM-OOPJ-39",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T02",
+      "topic": "Forms of inheritance",
+      "highYield": false,
+      "front": "Name three forms of inheritance.",
+      "back": "Single, multilevel and hierarchical. Java also allows multiple interface inheritance but not multiple class inheritance.\nKeywords: single, multilevel, hierarchical, multiple"
+    },
+    {
+      "id": "FC-SEM-OOPJ-40",
+      "subjectId": "OOPJ",
+      "unit": 2,
+      "topicId": "OOPJ.U2.T05",
+      "topic": "Object class",
+      "highYield": false,
+      "front": "Which methods does every Java class inherit from Object?",
+      "back": "toString(), equals(), hashCode(), getClass(), clone() and finalize(). Overriding equals() usually requires overriding hashCode() too.\nKeywords: Object, toString, equals, hashCode"
+    },
+    {
+      "id": "FC-SEM-OOPJ-41",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T01",
+      "topic": "Exception handling",
+      "highYield": true,
+      "front": "What is an exception and why handle it?",
+      "back": "An exception is an event that disrupts normal flow. Handling separates error recovery from the main logic and prevents abrupt termination.\nKeywords: exception, error, recovery, termination"
+    },
+    {
+      "id": "FC-SEM-OOPJ-42",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T02",
+      "topic": "Checked vs unchecked",
+      "highYield": true,
+      "front": "Distinguish checked and unchecked exceptions.",
+      "back": "Checked exceptions are enforced by the compiler and must be caught or declared. Unchecked exceptions extend RuntimeException and are not enforced.\nKeywords: checked, unchecked, RuntimeException, compiler"
+    },
+    {
+      "id": "FC-SEM-OOPJ-43",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T03",
+      "topic": "try-catch-finally",
+      "highYield": true,
+      "front": "Explain the order of try, catch and finally.",
+      "back": "try runs the risky code. The first matching catch handles an exception. finally runs afterward for cleanup, whether or not an exception occurred.\nKeywords: try, catch, finally, cleanup"
+    },
+    {
+      "id": "FC-SEM-OOPJ-44",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T05",
+      "topic": "Custom exceptions",
+      "highYield": true,
+      "front": "How do you create a custom exception?",
+      "back": "Extend Exception for a checked exception or RuntimeException for an unchecked one, provide constructors, then throw it where the error occurs.\nKeywords: custom exception, extend Exception, throw"
+    },
+    {
+      "id": "FC-SEM-OOPJ-45",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T06",
+      "topic": "Thread vs process",
+      "highYield": true,
+      "front": "Compare a thread and a process.",
+      "back": "A process has its own memory space. Threads share the process memory, so they are lighter to create but need synchronisation.\nKeywords: thread, process, shared memory, synchronisation"
+    },
+    {
+      "id": "FC-SEM-OOPJ-46",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T07",
+      "topic": "Thread life cycle",
+      "highYield": true,
+      "front": "List the states in the Java thread life cycle.",
+      "back": "New, runnable, running, blocked/waiting, and terminated. A thread moves to runnable when start() is called.\nKeywords: new, runnable, running, blocked, terminated"
+    },
+    {
+      "id": "FC-SEM-OOPJ-47",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T10",
+      "topic": "Synchronization",
+      "highYield": true,
+      "front": "What does the synchronized keyword guarantee?",
+      "back": "Only one thread at a time executes a synchronized method or block on the same monitor, preventing race conditions on shared data.\nKeywords: synchronized, monitor, race condition, mutual exclusion"
+    },
+    {
+      "id": "FC-SEM-OOPJ-48",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T01",
+      "topic": "String methods",
+      "highYield": true,
+      "front": "Name five commonly used String methods.",
+      "back": "length(), charAt(), substring(), indexOf(), equals(). Remember that equals() compares content while == compares references.\nKeywords: String, length, charAt, substring, equals"
+    },
+    {
+      "id": "FC-SEM-OOPJ-49",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T01",
+      "topic": "String vs StringBuffer",
+      "highYield": true,
+      "front": "Compare String, StringBuffer and StringBuilder.",
+      "back": "String is immutable. StringBuffer is mutable and synchronized. StringBuilder is mutable and faster but not thread-safe.\nKeywords: String, StringBuffer, StringBuilder, mutable, synchronized"
+    },
+    {
+      "id": "FC-SEM-OOPJ-50",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T03",
+      "topic": "Collections framework",
+      "highYield": true,
+      "front": "Name the main interfaces of the Java Collections framework.",
+      "back": "Collection, List, Set, Queue, Deque and Map. List keeps order, Set forbids duplicates, Map stores key-value pairs.\nKeywords: Collection, List, Set, Queue, Map"
+    },
+    {
+      "id": "FC-SEM-OOPJ-51",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T03",
+      "topic": "ArrayList vs LinkedList",
+      "highYield": true,
+      "front": "When would you choose a LinkedList over an ArrayList?",
+      "back": "When you frequently insert or remove at the ends or middle and rarely need random access. ArrayList wins for index-based reads.\nKeywords: ArrayList, LinkedList, random access, insertion"
+    },
+    {
+      "id": "FC-SEM-OOPJ-52",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T03",
+      "topic": "HashMap",
+      "highYield": true,
+      "front": "How does a HashMap locate a key?",
+      "back": "It computes the key's hashCode(), maps it to a bucket, then uses equals() to find the exact entry. Collisions are chained or treeified.\nKeywords: HashMap, hashCode, equals, bucket, collision"
+    },
+    {
+      "id": "FC-SEM-OOPJ-53",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T04",
+      "topic": "Byte vs character streams",
+      "highYield": true,
+      "front": "Distinguish byte streams and character streams.",
+      "back": "Byte streams move 8-bit bytes and suit binary data. Character streams move 16-bit Unicode characters and handle text encoding.\nKeywords: byte stream, character stream, binary, Unicode"
+    },
+    {
+      "id": "FC-SEM-OOPJ-54",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T05",
+      "topic": "Delegation event model",
+      "highYield": true,
+      "front": "Explain the delegation event model.",
+      "back": "An event source registers listener objects. When an event occurs, the source calls the listener's handler method with an event object.\nKeywords: delegation, source, listener, event object"
+    },
+    {
+      "id": "FC-SEM-OOPJ-55",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T06",
+      "topic": "Adapter classes",
+      "highYield": true,
+      "front": "Why use an adapter class for events?",
+      "back": "An adapter implements all methods of a listener interface with empty bodies, so you override only the event you need instead of every method.\nKeywords: adapter, listener, empty methods, override"
+    },
+    {
+      "id": "FC-SEM-OOPJ-56",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T08",
+      "topic": "Layout managers",
+      "highYield": true,
+      "front": "Name the five standard layout managers and one use of each.",
+      "back": "Flow arranges in a row, Border uses five regions, Grid makes equal cells, Card stacks pages, GridBag allows constraints.\nKeywords: FlowLayout, BorderLayout, GridLayout, CardLayout, GridBagLayout"
+    },
+    {
+      "id": "FC-SEM-OOPJ-57",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T01",
+      "topic": "Swing and MVC",
+      "highYield": true,
+      "front": "Why does Swing use an MVC architecture?",
+      "back": "The model holds data, the view renders it and the controller handles input. Separating them lets one model drive several views.\nKeywords: Swing, MVC, model, view, controller"
+    },
+    {
+      "id": "FC-SEM-OOPJ-58",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T02",
+      "topic": "Containers",
+      "highYield": true,
+      "front": "Distinguish a top-level container from an intermediate container.",
+      "back": "A top-level container such as JFrame is a window managed by the OS. Intermediate containers such as JPanel group components inside another container.\nKeywords: top-level container, JFrame, JPanel, intermediate"
+    },
+    {
+      "id": "FC-SEM-OOPJ-59",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T03",
+      "topic": "Swing components",
+      "highYield": true,
+      "front": "Match JTextField, JTextArea and JPasswordField to their use.",
+      "back": "JTextField: one line of input. JTextArea: multiple lines. JPasswordField: masked input that hides characters.\nKeywords: JTextField, JTextArea, JPasswordField, input"
+    },
+    {
+      "id": "FC-SEM-OOPJ-60",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T04",
+      "topic": "Lists and tables",
+      "highYield": true,
+      "front": "When use JList, JComboBox or JTable?",
+      "back": "JList for a visible list of choices, JComboBox for a compact drop-down, JTable for rows and columns of data.\nKeywords: JList, JComboBox, JTable, selection"
+    },
+    {
+      "id": "FC-SEM-OOPJ-61",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T05",
+      "topic": "Menus",
+      "highYield": true,
+      "front": "How are JMenuBar, JMenu and JMenuItem related?",
+      "back": "JMenuBar is the bar attached to a frame. It contains JMenu objects, and each JMenu contains JMenuItem entries.\nKeywords: JMenuBar, JMenu, JMenuItem, menu"
+    },
+    {
+      "id": "FC-SEM-OOPJ-62",
+      "subjectId": "OOPJ",
+      "unit": 5,
+      "topicId": "OOPJ.U5.T02",
+      "topic": "JFrame lifecycle",
+      "highYield": false,
+      "front": "What does setVisible(true) do to a JFrame?",
+      "back": "It makes the frame display on screen. Before that, setSize() and setDefaultCloseOperation() are normally called.\nKeywords: JFrame, setVisible, setSize, close operation"
+    },
+    {
+      "id": "FC-SEM-OOPJ-63",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T08",
+      "topic": "Nested and inner classes",
+      "highYield": false,
+      "front": "Distinguish static nested, inner, local, and anonymous classes.",
+      "back": "1. Static nested: declared static; no outer instance needed.\n2. Inner: non-static member class; holds an outer instance.\n3. Local: declared inside a method; scope limited to that block.\n4. Anonymous: unnamed class defined and instantiated in one expression.\nKeywords: nested class, inner class, static nested, local, anonymous"
+    },
+    {
+      "id": "FC-SEM-OOPJ-64",
+      "subjectId": "OOPJ",
+      "unit": 1,
+      "topicId": "OOPJ.U1.T09",
+      "topic": "String class basics",
+      "highYield": true,
+      "front": "Why is a Java String immutable, and what is the string pool?",
+      "back": "1. A String's character data cannot change after construction.\n2. Methods such as concat and substring return new String objects.\n3. String literals are interned in a shared pool.\n4. equals compares content; == compares references.\nKeywords: String, immutable, string pool, literal, equals"
+    },
+    {
+      "id": "FC-SEM-OOPJ-65",
+      "subjectId": "OOPJ",
+      "unit": 3,
+      "topicId": "OOPJ.U3.T04",
+      "topic": "Built-in exceptions",
+      "highYield": false,
+      "front": "Name four common built-in Java runtime exceptions.",
+      "back": "1. ArithmeticException: integer division by zero.\n2. ArrayIndexOutOfBoundsException: index outside the array bounds.\n3. NullPointerException: using a null reference.\n4. NumberFormatException: invalid numeric string conversion.\nKeywords: ArithmeticException, ArrayIndexOutOfBoundsException, NullPointerException, NumberFormatException"
+    },
+    {
+      "id": "FC-SEM-OOPJ-67",
+      "subjectId": "OOPJ",
+      "unit": 4,
+      "topicId": "OOPJ.U4.T07",
+      "topic": "Graphics",
+      "highYield": false,
+      "front": "Which Graphics methods draw shapes and text in Java AWT?",
+      "back": "1. drawLine, drawRect, and drawOval outline shapes.\n2. fillRect and fillOval draw filled shapes.\n3. drawString renders text at a baseline point.\n4. setColor and setFont change the current drawing state.\nKeywords: Graphics, drawLine, drawRect, drawOval, drawString, setColor"
+    }
+  ]
+}

@@ -1,0 +1,1289 @@
+{
+  "subject": "ES",
+  "name": "Environmental Science",
+  "fixes": {
+    "ES-M1-003": {
+      "topic": "Value of biodiversity",
+      "question": "The value of biodiversity that reflects the willingness to preserve species for future generations is called:",
+      "options": [
+        "Consumptive value",
+        "Productive value",
+        "Option value",
+        "Aesthetic value"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Option value is the potential future use or existence value kept open for later generations."
+    },
+    "FC-M1-ES-03": {
+      "topic": "Energy flow",
+      "front": "What is the universal energy flow model?",
+      "back": "Energy enters an ecosystem as sunlight, passes through producers and consumers, and leaves as heat. Only about 10% moves to the next trophic level.\nKeywords: energy flow, sunlight, trophic level, 10 percent"
+    },
+    "ES-M2-001": {
+      "topic": "Soil pollution",
+      "question": "Which practice is a major cause of soil salinity in irrigated fields?",
+      "options": [
+        "Crop rotation",
+        "Excess irrigation without drainage",
+        "Organic mulching",
+        "Contour ploughing"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Excess irrigation raises the water table; evaporation then leaves dissolved salts in the root zone."
+    },
+    "ES-M2-003": {
+      "topic": "Wastewater treatment",
+      "question": "Primary wastewater treatment mainly removes:",
+      "options": [
+        "Dissolved nutrients",
+        "Suspended solids by physical settling",
+        "Pathogens by chlorination",
+        "Heavy metals by ion exchange"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Primary treatment is physical: screening, grit removal and sedimentation remove suspended solids."
+    },
+    "ES-M2-004": {
+      "topic": "Soil pollution",
+      "question": "The buildup of soluble salts in soil due to poor irrigation is called _______.",
+      "accepted": [
+        "salinization",
+        "salination",
+        "salinisation"
+      ],
+      "difficulty": "medium",
+      "explanation": "Salinization occurs when irrigation water evaporates and leaves salts behind in the root zone."
+    },
+    "ES-M2-005": {
+      "topic": "Climate change",
+      "question": "The greenhouse gas with the greatest long-term contribution to human-driven warming is:",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nitrogen",
+        "Argon"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Carbon dioxide from fossil fuel combustion is the largest cumulative contributor to anthropogenic warming."
+    },
+    "ES-M2-006": {
+      "topic": "Ozone depletion",
+      "question": "Ozone in the stratosphere is destroyed mainly by _______ released from CFCs.",
+      "accepted": [
+        "chlorine",
+        "chlorine atoms",
+        "free chlorine"
+      ],
+      "difficulty": "medium",
+      "explanation": "UV light breaks CFCs apart, releasing chlorine atoms that catalytically destroy ozone molecules."
+    },
+    "ES-M2-031": {
+      "topic": "Kyoto and Montreal",
+      "question": "The Montreal Protocol is an international agreement to:",
+      "options": [
+        "Reduce greenhouse gases",
+        "Phase out ozone-depleting substances",
+        "Protect wetlands",
+        "Ban nuclear testing"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The Montreal Protocol (1987) phases out CFCs and other ozone-depleting substances; Kyoto targets greenhouse gases."
+    },
+    "ES-M2-TF-01": {
+      "topic": "Soil pollution",
+      "question": "Excessive use of chemical fertilizers can cause eutrophication of nearby water bodies.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Runoff carrying nitrates and phosphates feeds algal blooms, which deplete oxygen when they decompose."
+    },
+    "ES-M2-TF-02": {
+      "topic": "Wastewater treatment",
+      "question": "Secondary wastewater treatment is primarily a biological process.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Secondary treatment uses microorganisms to break down dissolved organic matter, often in an activated-sludge tank."
+    },
+    "FC-ES-02": {
+      "topic": "Wastewater treatment",
+      "front": "Compare primary, secondary and tertiary wastewater treatment.",
+      "back": "Primary: physical settling of solids. Secondary: biological removal of dissolved organics. Tertiary: advanced nutrient, pathogen or metal removal.\nKeywords: primary, secondary, tertiary, biological, nutrient"
+    },
+    "FC-ES-18": {
+      "topic": "EIA baseline data",
+      "front": "What baseline data does an EIA need?",
+      "back": "Pre-project data on air, water, soil, noise, ecology and socio-economic conditions, so later impacts can be measured against a known state.\nKeywords: EIA, baseline, air, water, ecology, socio-economic"
+    },
+    "ES-SEM-001": {
+      "topic": "Energy flow",
+      "question": "In a food chain, the amount of energy transferred from one trophic level to the next is roughly:",
+      "options": [
+        "1%",
+        "10%",
+        "50%",
+        "90%"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "About 90% of energy is lost as heat and in waste, so roughly 10% passes to the next trophic level."
+    },
+    "FC-SEM-ES-55": {
+      "front": "What is the net effect of chlorine atoms on stratospheric ozone?",
+      "back": "A chlorine atom reacts with ozone to form chlorine monoxide and oxygen. The chlorine is regenerated, so one atom can destroy many ozone molecules in a catalytic cycle.\nKeywords: chlorine, catalytic, ozone, CFC"
+    },
+    "FC-SEM-ES-62": {
+      "front": "Why is baseline data collected before an EIA?",
+      "back": "Baseline data records pre-project air, water, soil, noise, ecological and socio-economic conditions. It gives a reference against which predicted and actual impacts can be measured.\nKeywords: baseline, EIA, reference, impact"
+    },
+    "FC-SEM-ES-63": {
+      "front": "What are the two key ideas in the Brundtland definition?",
+      "back": "The definition combines meeting present needs with not compromising the ability of future generations to meet theirs. It balances intra-generational and inter-generational equity.\nKeywords: Brundtland, present needs, future generations, equity"
+    },
+    "FC-M1-ES-05": {
+      "back": "1. Genetic: gene variation within a species.\n2. Species: variety of species in a habitat.\n3. Ecosystem: variety of habitats and ecological niches.\nKeywords: genetic, species, ecosystem, biodiversity"
+    },
+    "FC-ES-06": {
+      "back": "1. Storage for direct use: collect rooftop runoff in tanks.\n2. Groundwater recharge: divert runoff into pits and trenches.\nKeywords: rainwater harvesting, storage, recharge, runoff"
+    }
+  },
+  "mcq": [
+    {
+      "id": "ES-SEM-037",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T01",
+      "topic": "Ecosystem definition",
+      "question": "An ecosystem is best defined as:",
+      "options": [
+        "A group of organisms of one species",
+        "A community of organisms interacting with their physical environment",
+        "Only the non-living part of an environment",
+        "A single food chain"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "An ecosystem includes the biotic community and the abiotic environment interacting as a functional unit."
+    },
+    {
+      "id": "ES-SEM-038",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T02",
+      "topic": "Biotic and abiotic components",
+      "question": "Which of the following is an abiotic component of an ecosystem?",
+      "options": [
+        "Bacteria",
+        "Fungi",
+        "Soil minerals",
+        "Grass"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Soil minerals are non-living; bacteria, fungi and grass are biotic components."
+    },
+    {
+      "id": "ES-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T03",
+      "topic": "Food chain",
+      "question": "In a grazing food chain, the producer is:",
+      "options": [
+        "A herbivore",
+        "A green plant",
+        "A carnivore",
+        "A decomposer"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Green plants fix sunlight by photosynthesis and form the first trophic level of a grazing food chain."
+    },
+    {
+      "id": "ES-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T04",
+      "topic": "Energy flow",
+      "question": "Energy flow in an ecosystem is:",
+      "options": [
+        "Cyclic",
+        "Unidirectional",
+        "Reversible",
+        "Random"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Energy enters as sunlight and is lost as heat at each step, so it flows one way rather than cycling."
+    },
+    {
+      "id": "ES-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T05",
+      "topic": "Nitrogen cycle",
+      "question": "The conversion of atmospheric nitrogen into ammonia by bacteria is called:",
+      "options": [
+        "Nitrification",
+        "Nitrogen fixation",
+        "Denitrification",
+        "Ammonification"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Nitrogen fixation converts inert N2 into usable ammonia; nitrification then converts ammonia to nitrite and nitrate."
+    },
+    {
+      "id": "ES-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T06",
+      "topic": "Bioaccumulation",
+      "question": "Bioaccumulation refers to:",
+      "options": [
+        "The increase of a pollutant along a food chain",
+        "The buildup of a pollutant within a single organism",
+        "The breakdown of a pollutant by microbes",
+        "The movement of a pollutant through soil"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Bioaccumulation is buildup within one organism; biomagnification is the increase in concentration at higher trophic levels."
+    },
+    {
+      "id": "ES-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T06",
+      "topic": "Biomagnification",
+      "question": "Biomagnification is most likely for a pollutant that is:",
+      "options": [
+        "Water-soluble and easily excreted",
+        "Fat-soluble and slowly metabolised",
+        "Rapidly biodegradable",
+        "A harmless nutrient"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Fat-soluble, persistent substances such as DDT and mercury accumulate in tissue and concentrate up the food chain."
+    },
+    {
+      "id": "ES-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T02",
+      "topic": "Ecosystem function",
+      "question": "Which process returns nitrogen to the atmosphere?",
+      "options": [
+        "Nitrification",
+        "Denitrification",
+        "Nitrogen fixation",
+        "Assimilation"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Denitrifying bacteria convert nitrates back to N2 gas, closing the nitrogen cycle."
+    },
+    {
+      "id": "ES-SEM-045",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T01",
+      "topic": "Resource classification",
+      "question": "Which is a non-renewable resource?",
+      "options": [
+        "Solar energy",
+        "Wind energy",
+        "Coal",
+        "Biomass"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "Coal forms over millions of years and is consumed faster than it is replenished, so it is non-renewable."
+    },
+    {
+      "id": "ES-SEM-046",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T05",
+      "topic": "Renewable energy",
+      "question": "Which renewable source still releases soot and carbon dioxide when burned?",
+      "options": [
+        "Solar",
+        "Wind",
+        "Biomass",
+        "Geothermal"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Biomass regrows, but burning it releases particulate matter and carbon dioxide."
+    },
+    {
+      "id": "ES-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T02",
+      "topic": "Dams",
+      "question": "A major social problem caused by large dams is:",
+      "options": [
+        "Increased rainfall",
+        "Displacement of local communities",
+        "Reduced siltation",
+        "Lower water tables"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Large reservoirs submerge land and displace people, alongside ecological and siltation problems."
+    },
+    {
+      "id": "ES-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T03",
+      "topic": "Mining impacts",
+      "question": "Acid mine drainage is caused by:",
+      "options": [
+        "Rainwater reacting with exposed sulphide minerals",
+        "Excess organic farming",
+        "Volcanic ash",
+        "Ocean currents"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Water and oxygen react with sulphide minerals such as pyrite to form sulphuric acid, which acidifies streams."
+    },
+    {
+      "id": "ES-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T04",
+      "topic": "Deforestation",
+      "question": "Deforestation commonly leads to:",
+      "options": [
+        "Increased soil erosion",
+        "Higher groundwater recharge",
+        "Lower atmospheric carbon",
+        "Greater biodiversity"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Tree roots bind soil; removing them increases runoff and erosion and reduces infiltration."
+    },
+    {
+      "id": "ES-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T02",
+      "topic": "Water resources",
+      "question": "Over-extraction of groundwater can cause:",
+      "options": [
+        "Land subsidence",
+        "Increased aquifer recharge",
+        "Higher rainfall",
+        "Reduced salinity"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Removing water from pore spaces compacts the aquifer, causing the land surface to sink."
+    },
+    {
+      "id": "ES-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T05",
+      "topic": "Energy resources",
+      "question": "Which is a secondary energy source?",
+      "options": [
+        "Coal",
+        "Sunlight",
+        "Electricity",
+        "Wind"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Electricity is produced by converting primary sources such as coal, wind or sunlight."
+    },
+    {
+      "id": "ES-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T04",
+      "topic": "Forest resources",
+      "question": "Which forest function is lost first when a watershed is deforested?",
+      "options": [
+        "Timber production",
+        "Soil and water retention",
+        "Tourism",
+        "Carbon storage"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Without vegetation cover, the watershed loses its ability to intercept rain and hold soil, increasing floods and erosion."
+    },
+    {
+      "id": "ES-SEM-053",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "ES.U3.T01",
+      "topic": "Biodiversity levels",
+      "question": "The three levels of biodiversity are:",
+      "options": [
+        "Genetic, species and ecosystem",
+        "Local, regional and global",
+        "Plant, animal and microbial",
+        "Terrestrial, aquatic and aerial"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Biodiversity is studied at genetic, species and ecosystem levels, from variation within a species to whole habitats."
+    },
+    {
+      "id": "ES-SEM-054",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "ES.U3.T01",
+      "topic": "Genetic diversity",
+      "question": "Genetic diversity is important because it:",
+      "options": [
+        "Makes all individuals identical",
+        "Helps populations adapt to changing conditions",
+        "Reduces reproduction",
+        "Eliminates rare alleles"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Variation in alleles gives a population the raw material to adapt to disease, climate and other changes."
+    },
+    {
+      "id": "ES-SEM-055",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "ES.U3.T02",
+      "topic": "Value of biodiversity",
+      "question": "The value assigned to a species because people simply value its existence is:",
+      "options": [
+        "Consumptive use value",
+        "Productive use value",
+        "Existence value",
+        "Option value"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Existence value is the benefit people derive from knowing a species exists, independent of any use."
+    },
+    {
+      "id": "ES-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "ES.U3.T03",
+      "topic": "Threats to biodiversity",
+      "question": "The greatest cause of current biodiversity loss is:",
+      "options": [
+        "Habitat loss and fragmentation",
+        "Volcanic eruptions",
+        "Earthquakes",
+        "Solar radiation"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "Land conversion and fragmentation destroy habitats and isolate populations, the leading driver of extinction."
+    },
+    {
+      "id": "ES-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "ES.U3.T04",
+      "topic": "Conservation",
+      "question": "A biosphere reserve is an example of:",
+      "options": [
+        "Ex-situ conservation",
+        "In-situ conservation",
+        "Captive breeding",
+        "Seed banking"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "In-situ conservation protects species in their natural habitat; zoos and seed banks are ex-situ."
+    },
+    {
+      "id": "ES-SEM-058",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "ES.U3.T04",
+      "topic": "Ex-situ conservation",
+      "question": "Which is an ex-situ conservation method?",
+      "options": [
+        "National park",
+        "Wildlife sanctuary",
+        "Botanical garden",
+        "Biosphere reserve"
+      ],
+      "answerIndex": 2,
+      "difficulty": "easy",
+      "explanation": "A botanical garden maintains plants outside their natural habitat, which is ex-situ conservation."
+    },
+    {
+      "id": "ES-SEM-059",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T01",
+      "topic": "Soil pollution",
+      "question": "Which agricultural practice most directly causes soil pollution?",
+      "options": [
+        "Crop rotation",
+        "Excessive pesticide use",
+        "Contour ploughing",
+        "Organic composting"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Pesticides and fertilizers accumulate in soil, harming soil organisms and leaching into water."
+    },
+    {
+      "id": "ES-SEM-060",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T02",
+      "topic": "Wastewater treatment",
+      "question": "Activated sludge treatment is a:",
+      "options": [
+        "Primary physical process",
+        "Secondary biological process",
+        "Tertiary chemical process",
+        "Disinfection process"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Air and microorganisms in the aeration tank break down dissolved organic matter, a secondary biological process."
+    },
+    {
+      "id": "ES-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T02",
+      "topic": "Tertiary treatment",
+      "question": "Tertiary treatment is used mainly to:",
+      "options": [
+        "Remove large debris",
+        "Remove nutrients, pathogens or specific pollutants",
+        "Settle grit",
+        "Reduce biological oxygen demand only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Tertiary treatment polishes secondary effluent by removing nutrients, pathogens or trace pollutants."
+    },
+    {
+      "id": "ES-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T03",
+      "topic": "Climate change",
+      "question": "The enhanced greenhouse effect is caused by:",
+      "options": [
+        "A thinning ozone layer",
+        "Increasing greenhouse gas concentrations",
+        "Volcanic dust alone",
+        "Changes in Earth's orbit only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Human emissions of CO2, methane and other gases trap more outgoing infrared radiation, warming the surface."
+    },
+    {
+      "id": "ES-SEM-063",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T04",
+      "topic": "Ozone depletion",
+      "question": "Ozone depletion is most severe over:",
+      "options": [
+        "The tropics",
+        "Antarctica",
+        "The equator",
+        "Deserts"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Polar stratospheric clouds in the extremely cold Antarctic winter make chlorine-catalysed ozone destruction especially severe."
+    },
+    {
+      "id": "ES-SEM-064",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "ES.U4.T05",
+      "topic": "Kyoto Protocol",
+      "question": "The Kyoto Protocol primarily targets:",
+      "options": [
+        "Ozone-depleting substances",
+        "Greenhouse gas emissions",
+        "Hazardous waste trade",
+        "Marine pollution"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Kyoto sets binding greenhouse-gas reduction targets for developed countries; Montreal handles ozone-depleting substances."
+    },
+    {
+      "id": "ES-SEM-065",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T01",
+      "topic": "Environmental Protection Act",
+      "question": "The Environment (Protection) Act in India was enacted in:",
+      "options": [
+        "1972",
+        "1974",
+        "1981",
+        "1986"
+      ],
+      "answerIndex": 3,
+      "difficulty": "easy",
+      "explanation": "The EPA 1986 followed the Bhopal gas tragedy and gives the central government broad powers to protect the environment."
+    },
+    {
+      "id": "ES-SEM-066",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T02",
+      "topic": "Air Act",
+      "question": "The Air (Prevention and Control of Pollution) Act was enacted in:",
+      "options": [
+        "1974",
+        "1981",
+        "1986",
+        "1991"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The Air Act 1981 created pollution control boards and powers to regulate industrial emissions."
+    },
+    {
+      "id": "ES-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T02",
+      "topic": "Water Act",
+      "question": "The Water (Prevention and Control of Pollution) Act was enacted in:",
+      "options": [
+        "1974",
+        "1981",
+        "1986",
+        "2000"
+      ],
+      "answerIndex": 0,
+      "difficulty": "easy",
+      "explanation": "The Water Act 1974 established the Central and State Pollution Control Boards."
+    },
+    {
+      "id": "ES-SEM-068",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T03",
+      "topic": "EIA",
+      "question": "The first step in an environmental impact assessment is:",
+      "options": [
+        "Public hearing",
+        "Screening to decide whether an EIA is needed",
+        "Monitoring",
+        "Mitigation"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Screening determines whether a project requires a full EIA; scoping then defines the issues to study."
+    },
+    {
+      "id": "ES-SEM-069",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T04",
+      "topic": "Sustainable development",
+      "question": "Sustainable development is defined as development that:",
+      "options": [
+        "Maximises present consumption",
+        "Meets present needs without compromising future generations",
+        "Stops all industrial growth",
+        "Depends only on technology"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The Brundtland definition balances present needs with the ability of future generations to meet theirs."
+    },
+    {
+      "id": "ES-SEM-070",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T04",
+      "topic": "Green chemistry",
+      "question": "Green chemistry aims to:",
+      "options": [
+        "Increase hazardous waste",
+        "Design chemical products and processes that reduce or eliminate hazards",
+        "Replace all chemicals with plastics",
+        "Increase energy use"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Green chemistry applies principles such as waste prevention, safer solvents and energy efficiency at the design stage."
+    },
+    {
+      "id": "ES-SEM-071",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "ES.U1.T04",
+      "topic": "Energy transfer",
+      "question": "Producers capture 10,000 kcal. If each trophic level transfers 10% of its energy, how much reaches the secondary consumers?",
+      "options": [
+        "1,000 kcal",
+        "100 kcal",
+        "10 kcal",
+        "1 kcal"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "Primary consumers receive $10,000\\times0.10=1,000$ kcal; secondary consumers receive $1,000\\times0.10=100$ kcal."
+    },
+    {
+      "id": "ES-SEM-072",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "ES.U2.T02",
+      "topic": "Groundwater conservation",
+      "question": "Which agricultural practice most directly reduces groundwater depletion?",
+      "options": [
+        "Flood irrigation",
+        "Drip irrigation",
+        "Clearing forests for farmland",
+        "Drilling more deep borewells"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Drip irrigation delivers water directly to plant roots and reduces evaporation and seepage losses compared with flood irrigation."
+    },
+    {
+      "id": "ES-SEM-073",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "ES.U3.T03",
+      "topic": "Species-area relationship",
+      "question": "The species-area relationship is commonly expressed as:",
+      "options": [
+        "$S = cA^z$",
+        "$S = c + A$",
+        "$S = c/A$",
+        "$S = A^2$"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "Species richness S rises with area A according to $S=cA^z$, where c is a constant and z is the slope in log-log space."
+    },
+    {
+      "id": "ES-SEM-074",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "ES.U5.T03",
+      "topic": "EIA sequence",
+      "question": "Which sequence gives the correct order of environmental impact assessment steps?",
+      "options": [
+        "Screening → scoping → baseline study → impact prediction → mitigation → reporting → review",
+        "Scoping → screening → reporting → baseline study → review → mitigation → impact prediction",
+        "Baseline study → screening → review → scoping → mitigation → reporting → impact prediction",
+        "Impact prediction → review → screening → scoping → reporting → baseline study → mitigation"
+      ],
+      "answerIndex": 0,
+      "difficulty": "hard",
+      "explanation": "EIA first decides whether assessment is needed (screening), defines its scope, collects baseline data, predicts impacts, plans mitigation, reports and then undergoes review."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-ES-23",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T01",
+      "topic": "Ecosystem",
+      "highYield": true,
+      "front": "Define ecosystem and name its two components.",
+      "back": "A functional unit of interacting organisms and their physical environment. Components: biotic (producers, consumers, decomposers) and abiotic (light, water, soil, air).\nKeywords: ecosystem, biotic, abiotic, interaction"
+    },
+    {
+      "id": "FC-SEM-ES-24",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T02",
+      "topic": "Ecosystem structure",
+      "highYield": true,
+      "front": "What are the structural components of an ecosystem?",
+      "back": "Abiotic factors, producers, consumers and decomposers. Their arrangement determines the ecosystem's trophic structure.\nKeywords: structure, abiotic, producer, consumer, decomposer"
+    },
+    {
+      "id": "FC-SEM-ES-25",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T03",
+      "topic": "Food chain",
+      "highYield": true,
+      "front": "Distinguish a grazing food chain from a detritus food chain.",
+      "back": "Grazing starts with living plants eaten by herbivores. Detritus starts with dead organic matter broken down by decomposers.\nKeywords: grazing, detritus, herbivore, decomposer"
+    },
+    {
+      "id": "FC-SEM-ES-26",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T03",
+      "topic": "Food web",
+      "highYield": true,
+      "front": "What is a food web?",
+      "back": "A network of interconnected food chains showing all feeding relationships in a community. It is more realistic than a single chain.\nKeywords: food web, network, feeding, community"
+    },
+    {
+      "id": "FC-SEM-ES-27",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T04",
+      "topic": "Energy flow",
+      "highYield": true,
+      "front": "State the 10% law of energy transfer.",
+      "back": "Only about 10% of the energy at one trophic level is transferred to the next; the rest is lost as heat and waste. This limits food chains to 4-5 levels.\nKeywords: 10 percent law, trophic level, heat, food chain"
+    },
+    {
+      "id": "FC-SEM-ES-28",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T05",
+      "topic": "Nitrogen cycle",
+      "highYield": true,
+      "front": "List the five steps of the nitrogen cycle.",
+      "back": "Nitrogen fixation, nitrification, assimilation, ammonification and denitrification. Bacteria drive every step.\nKeywords: fixation, nitrification, assimilation, ammonification, denitrification"
+    },
+    {
+      "id": "FC-SEM-ES-29",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T06",
+      "topic": "Bioaccumulation",
+      "highYield": true,
+      "front": "Distinguish bioaccumulation and biomagnification.",
+      "back": "Bioaccumulation: pollutant builds up inside one organism. Biomagnification: its concentration rises at each higher trophic level.\nKeywords: bioaccumulation, biomagnification, trophic level, concentration"
+    },
+    {
+      "id": "FC-SEM-ES-30",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T02",
+      "topic": "Ecological succession",
+      "highYield": false,
+      "front": "What is ecological succession?",
+      "back": "The gradual replacement of one community by another until a stable climax community forms. Primary succession starts on bare rock; secondary follows a disturbance.\nKeywords: succession, primary, secondary, climax"
+    },
+    {
+      "id": "FC-SEM-ES-31",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T04",
+      "topic": "Trophic levels",
+      "highYield": true,
+      "front": "Name the trophic levels of a simple food chain.",
+      "back": "Producers, primary consumers (herbivores), secondary consumers (carnivores) and tertiary consumers. Decomposers act at every level.\nKeywords: producer, primary consumer, secondary consumer, tertiary"
+    },
+    {
+      "id": "FC-SEM-ES-32",
+      "subjectId": "ES",
+      "unit": 1,
+      "topicId": "ES.U1.T05",
+      "topic": "Nitrogen fixation",
+      "highYield": false,
+      "front": "Which organisms fix atmospheric nitrogen?",
+      "back": "Free-living bacteria such as Azotobacter and symbiotic Rhizobium in legume root nodules, plus some cyanobacteria.\nKeywords: Azotobacter, Rhizobium, legume, cyanobacteria"
+    },
+    {
+      "id": "FC-SEM-ES-33",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T01",
+      "topic": "Resource classification",
+      "highYield": true,
+      "front": "Classify natural resources by renewability.",
+      "back": "Renewable: solar, wind, water, biomass, geothermal. Non-renewable: coal, petroleum, natural gas, minerals and nuclear fuels.\nKeywords: renewable, non-renewable, solar, coal, minerals"
+    },
+    {
+      "id": "FC-SEM-ES-34",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T02",
+      "topic": "Dams",
+      "highYield": true,
+      "front": "List three benefits and three problems of large dams.",
+      "back": "Benefits: irrigation, hydropower, flood control. Problems: displacement, siltation, habitat loss and downstream flow changes.\nKeywords: dam, irrigation, hydropower, displacement, siltation"
+    },
+    {
+      "id": "FC-SEM-ES-35",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T02",
+      "topic": "Water scarcity",
+      "highYield": true,
+      "front": "What causes water scarcity in India?",
+      "back": "Uneven rainfall, over-extraction of groundwater, pollution, inefficient irrigation and growing demand from agriculture and cities.\nKeywords: water scarcity, groundwater, pollution, irrigation, demand"
+    },
+    {
+      "id": "FC-SEM-ES-36",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T03",
+      "topic": "Mining impacts",
+      "highYield": true,
+      "front": "Name four environmental impacts of mining.",
+      "back": "Land degradation, acid mine drainage, dust and air pollution, and contamination of nearby water bodies.\nKeywords: mining, land degradation, acid drainage, dust, water"
+    },
+    {
+      "id": "FC-SEM-ES-37",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T04",
+      "topic": "Deforestation",
+      "highYield": true,
+      "front": "List four consequences of deforestation.",
+      "back": "Soil erosion, loss of biodiversity, reduced rainfall and carbon release. It also disrupts watersheds and local livelihoods.\nKeywords: deforestation, erosion, biodiversity, carbon, watershed"
+    },
+    {
+      "id": "FC-SEM-ES-38",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T05",
+      "topic": "Renewable energy",
+      "highYield": true,
+      "front": "Name four renewable energy sources and one limitation of each.",
+      "back": "Solar: intermittent. Wind: variable. Hydro: needs dams. Biomass: emits particulates when burned.\nKeywords: solar, wind, hydro, biomass, intermittent"
+    },
+    {
+      "id": "FC-SEM-ES-39",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T03",
+      "topic": "Mineral resources",
+      "highYield": false,
+      "front": "Why are mineral resources considered non-renewable?",
+      "back": "They form by geological processes over millions of years, far slower than human consumption, so reserves can be exhausted.\nKeywords: mineral, non-renewable, geological, exhaustion"
+    },
+    {
+      "id": "FC-SEM-ES-40",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T04",
+      "topic": "Forest resources",
+      "highYield": true,
+      "front": "What are the major forest products and services?",
+      "back": "Products: timber, fuelwood, fodder and medicines. Services: carbon storage, watershed protection, soil conservation and biodiversity.\nKeywords: timber, fuelwood, carbon, watershed, biodiversity"
+    },
+    {
+      "id": "FC-SEM-ES-41",
+      "subjectId": "ES",
+      "unit": 2,
+      "topicId": "ES.U2.T01",
+      "topic": "Resource use",
+      "highYield": false,
+      "front": "What is sustainable resource use?",
+      "back": "Using a resource at a rate that allows natural replenishment, so future availability and ecosystem function are not impaired.\nKeywords: sustainable, replenishment, future, ecosystem"
+    },
+    {
+      "id": "FC-SEM-ES-42",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T01",
+      "topic": "Biodiversity levels",
+      "highYield": true,
+      "front": "Name and define the three levels of biodiversity.",
+      "back": "Genetic: variation within a species. Species: variety of species. Ecosystem: variety of habitats and ecological processes.\nKeywords: genetic, species, ecosystem, variation"
+    },
+    {
+      "id": "FC-SEM-ES-43",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T02",
+      "topic": "Biodiversity values",
+      "highYield": true,
+      "front": "Name four values of biodiversity.",
+      "back": "Consumptive, productive, social, aesthetic, ethical and option values. Each describes a different reason to preserve species.\nKeywords: consumptive, productive, aesthetic, ethical, option"
+    },
+    {
+      "id": "FC-SEM-ES-44",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T03",
+      "topic": "Threats to biodiversity",
+      "highYield": true,
+      "front": "Name the four main threats to biodiversity.",
+      "back": "Habitat loss and fragmentation, over-exploitation, invasive species and pollution. Climate change is an increasing fifth threat.\nKeywords: habitat loss, over-exploitation, invasive, pollution, climate"
+    },
+    {
+      "id": "FC-SEM-ES-45",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T03",
+      "topic": "Man-wildlife conflict",
+      "highYield": true,
+      "front": "Why does man-wildlife conflict occur?",
+      "back": "Human settlements and agriculture encroach on habitats, so animals raid crops or attack livestock and people retaliate.\nKeywords: man-wildlife conflict, encroachment, crop raid, retaliation"
+    },
+    {
+      "id": "FC-SEM-ES-46",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T04",
+      "topic": "In-situ conservation",
+      "highYield": true,
+      "front": "Name three in-situ conservation areas.",
+      "back": "National parks, wildlife sanctuaries and biosphere reserves. They protect species within their natural habitat.\nKeywords: in-situ, national park, sanctuary, biosphere reserve"
+    },
+    {
+      "id": "FC-SEM-ES-47",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T04",
+      "topic": "Ex-situ conservation",
+      "highYield": true,
+      "front": "Name three ex-situ conservation methods.",
+      "back": "Zoos and captive breeding, botanical gardens, and seed or gene banks. They maintain organisms outside their habitat.\nKeywords: ex-situ, zoo, botanical garden, seed bank"
+    },
+    {
+      "id": "FC-SEM-ES-48",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T02",
+      "topic": "Hotspots",
+      "highYield": false,
+      "front": "What is a biodiversity hotspot?",
+      "back": "A region with exceptional species richness and endemism that has lost a large share of its original habitat. India has four recognised hotspots.\nKeywords: hotspot, endemism, habitat loss, India"
+    },
+    {
+      "id": "FC-SEM-ES-49",
+      "subjectId": "ES",
+      "unit": 3,
+      "topicId": "ES.U3.T01",
+      "topic": "Species diversity",
+      "highYield": false,
+      "front": "What is the difference between species richness and evenness?",
+      "back": "Richness counts the number of species. Evenness describes how similar their abundances are. Both contribute to diversity.\nKeywords: richness, evenness, abundance, diversity"
+    },
+    {
+      "id": "FC-SEM-ES-50",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T01",
+      "topic": "Soil pollution",
+      "highYield": true,
+      "front": "Name four causes of soil pollution.",
+      "back": "Pesticides, chemical fertilizers, industrial waste and improper disposal of plastics or e-waste. Salinization is another cause.\nKeywords: pesticide, fertilizer, industrial waste, salinization"
+    },
+    {
+      "id": "FC-SEM-ES-51",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T02",
+      "topic": "Wastewater treatment",
+      "highYield": true,
+      "front": "What happens in primary, secondary and tertiary treatment?",
+      "back": "Primary removes solids by settling. Secondary uses microbes to remove dissolved organics. Tertiary removes nutrients, pathogens or specific pollutants.\nKeywords: primary, secondary, tertiary, settling, microbes"
+    },
+    {
+      "id": "FC-SEM-ES-52",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T02",
+      "topic": "BOD and COD",
+      "highYield": true,
+      "front": "Define BOD and COD.",
+      "back": "BOD: oxygen consumed by microbes to decompose organic matter. COD: oxygen needed to oxidise all chemically oxidisable matter. COD is usually higher.\nKeywords: BOD, COD, oxygen, organic matter"
+    },
+    {
+      "id": "FC-SEM-ES-53",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T03",
+      "topic": "Climate change",
+      "highYield": true,
+      "front": "Name four greenhouse gases and their main sources.",
+      "back": "CO2 from fossil fuels, methane from agriculture and landfills, nitrous oxide from fertilizers, and fluorinated gases from industry.\nKeywords: carbon dioxide, methane, nitrous oxide, fluorinated gases"
+    },
+    {
+      "id": "FC-SEM-ES-54",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T03",
+      "topic": "Climate impacts",
+      "highYield": true,
+      "front": "List four impacts of climate change.",
+      "back": "Rising sea level, more extreme weather, shifting crop zones and loss of biodiversity. Water scarcity and health risks also increase.\nKeywords: sea level, extreme weather, crops, biodiversity"
+    },
+    {
+      "id": "FC-SEM-ES-55",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T04",
+      "topic": "Ozone depletion",
+      "highYield": true,
+      "front": "How do CFCs destroy stratospheric ozone?",
+      "back": "UV light releases chlorine from CFCs. Each chlorine atom catalytically breaks ozone into oxygen, and the chlorine is regenerated.\nKeywords: CFC, chlorine, ozone, catalytic, UV"
+    },
+    {
+      "id": "FC-SEM-ES-56",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T04",
+      "topic": "Ozone effects",
+      "highYield": true,
+      "front": "What are the effects of ozone depletion?",
+      "back": "More UV-B reaches the surface, causing skin cancer, cataracts, crop damage and harm to marine plankton.\nKeywords: UV-B, skin cancer, cataract, crop, plankton"
+    },
+    {
+      "id": "FC-SEM-ES-57",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T05",
+      "topic": "Kyoto and Montreal",
+      "highYield": true,
+      "front": "Compare the Kyoto Protocol and the Montreal Protocol.",
+      "back": "Montreal (1987) phases out ozone-depleting substances. Kyoto (1997) sets greenhouse-gas reduction targets for developed countries.\nKeywords: Montreal, Kyoto, ozone, greenhouse gas, targets"
+    },
+    {
+      "id": "FC-SEM-ES-58",
+      "subjectId": "ES",
+      "unit": 4,
+      "topicId": "ES.U4.T01",
+      "topic": "Pollutant classification",
+      "highYield": false,
+      "front": "Distinguish primary and secondary pollutants.",
+      "back": "Primary pollutants are emitted directly, such as SO2 or particulates. Secondary pollutants form in the atmosphere, such as ozone or smog.\nKeywords: primary pollutant, secondary pollutant, emitted, formed"
+    },
+    {
+      "id": "FC-SEM-ES-59",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T01",
+      "topic": "Environmental Protection Act",
+      "highYield": true,
+      "front": "What powers does the Environment (Protection) Act 1986 give?",
+      "back": "It empowers the central government to set standards, restrict industries, inspect premises and punish violations to protect the environment.\nKeywords: EPA 1986, standards, inspection, penalty"
+    },
+    {
+      "id": "FC-SEM-ES-60",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T02",
+      "topic": "Air and Water Acts",
+      "highYield": true,
+      "front": "What do the Air Act 1981 and Water Act 1974 regulate?",
+      "back": "The Air Act regulates industrial emissions and ambient air quality. The Water Act regulates discharge into water bodies and created the pollution control boards.\nKeywords: Air Act 1981, Water Act 1974, emission, discharge, boards"
+    },
+    {
+      "id": "FC-SEM-ES-61",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T03",
+      "topic": "EIA process",
+      "highYield": true,
+      "front": "List the main steps of an EIA.",
+      "back": "Screening, scoping, baseline study, impact prediction, mitigation, environmental management plan, public hearing, appraisal and monitoring.\nKeywords: screening, scoping, baseline, prediction, mitigation, monitoring"
+    },
+    {
+      "id": "FC-SEM-ES-62",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T03",
+      "topic": "EIA baseline data",
+      "highYield": true,
+      "front": "What baseline data does an EIA need?",
+      "back": "Pre-project air, water, soil, noise, ecological and socio-economic data, so later impacts can be compared with a known state.\nKeywords: baseline, air, water, soil, ecology, socio-economic"
+    },
+    {
+      "id": "FC-SEM-ES-63",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T04",
+      "topic": "Sustainable development",
+      "highYield": true,
+      "front": "State the Brundtland definition of sustainable development.",
+      "back": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.\nKeywords: Brundtland, present needs, future generations"
+    },
+    {
+      "id": "FC-SEM-ES-64",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T04",
+      "topic": "Green chemistry",
+      "highYield": true,
+      "front": "Name four principles of green chemistry.",
+      "back": "Prevent waste, use safer chemicals, design energy-efficient processes and prefer renewable feedstocks. Catalysis and safer solvents are also core.\nKeywords: green chemistry, waste prevention, safer chemicals, energy, feedstock"
+    },
+    {
+      "id": "FC-SEM-ES-65",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T04",
+      "topic": "Green building",
+      "highYield": true,
+      "front": "What makes a building green?",
+      "back": "Efficient energy and water use, renewable materials, good indoor air quality, waste reduction and site planning that protects the surroundings.\nKeywords: green building, energy, water, materials, indoor air"
+    },
+    {
+      "id": "FC-SEM-ES-66",
+      "subjectId": "ES",
+      "unit": 5,
+      "topicId": "ES.U5.T04",
+      "topic": "Low-carbon lifestyle",
+      "highYield": false,
+      "front": "Give four examples of a low-carbon lifestyle.",
+      "back": "Use public transport or cycle, save electricity, reduce meat and food waste, and reuse or recycle products.\nKeywords: low carbon, transport, electricity, food waste, recycle"
+    }
+  ]
+}

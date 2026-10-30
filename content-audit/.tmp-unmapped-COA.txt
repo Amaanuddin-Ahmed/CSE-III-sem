@@ -1,0 +1,116 @@
+2m | Define machine instruction what are the elements of machine instruction?
+2m | Explain various types of Shift operations?
+2m | Draw the instruction word format and indicate the number of bits in each part.
+1m | Draw the block diagram to depict P: R2 R1.
+2m | What are the basic functional units of a computer?
+2m | Explain arithmetic, logical and shift operations with examples.
+5m | Identify different types of instructions and describe their formats with their Constituent Fields?
+5m | Explain the basic operational concepts of a computer with the help of a suitable diagram.
+5m | Explain the components of the Computer system.
+5m | List and explain the steps involved in the execution of a complete instruction.
+5m | With a neat diagram explain basic functional units of computers.
+5m | Explain the basic components of Generic Computer system regardless of its internal architecture.
+5m | With the help of examples explain logical micro operations.
+5m | Analyse the Basic Operational concepts of Computers.
+5m | Explain about hardware implementation of 4 bit combinational Arithmetic unit.
+5m | Explain the various types of micro-operations.
+5m | Design a 4 bit Arithmetic Circuit.
+2m | How to map micro operation to a micro instruction address.
+2m | List logical Microoperations.
+1m | Explain basic organization of control unit with diagram.
+1m | What is the role of micro programmed control unit?
+1m | What is the difference between ADD and ADDC instructions?
+2m | Distinguish the differences between micro programmed Control and Hardwired control.
+2m | Distinguish between High level and low level languages.
+1m | Describe ASHL and SHRA operations.
+1m | Draw the flow chart for the add and subtract operations.
+5m | With the diagram explain the basic organization of micro programmed control unit.
+5m | Discuss the elements of micro-programmed control organization.
+5m | Explain the concept of micro programmed control unit.
+5m | Explain the design of Control unit with a neat diagram.
+5m | With a neat flowchart, explain how the control unit determines the instruction after decoding an instruction.
+5m | Illustrate the micro-programmed control unit (MCU) with a neat diagram and how instructions will be processed in MCU?
+5m | Explain about Micro program sequencer for a control unit.
+5m | Explain the working of control unit of basic computer system with a suitable diagram.
+5m | Explain the role of a sequencer in a control unit.
+2m | Give the flow chart of restoring algorithm.
+1m | Convert the following into binary numbers: i.
+2m | Add given signed decimal number +86 and -17.
+1m | Convert the following numbers.
+1m | Draw the flow chart for the add and subtract operations.
+5m | Construct the flowchart for Restore division operation for Signed numbers?
+5m | Illustrate the various representations of the signed numbers.
+5m | Compare signed and unsigned binary numbers with table.
+5m | Explain the difference between micro programmed control and hardwired control.
+5m | Explain the fixed and floating type numbers that are represented in computers with example.
+5m | Draw the flow chart for decimal division and explain division of 23 with 4.
+5m | Apply 2's compliment method to perform subration between two given binary numbers 1010 1110 - 1100 0011. Elaborate the steps involved.
+5m | Perform the following arithmetic operations.
+5m | Divide 13 with 7 using binary division.
+5m | Draw flow chart for decimal division and explain.
+5m | Explain signed and unsigned number representation.
+1m | Explain types of memories.
+2m | An address space is specified by 24bits and the corresponding memory space by 16 bits. How many words are there in the address space?
+2m | Explain switch logic behind the implementation of crossbar switch?
+1m | What is pipelining?
+2m | Explain the types of modes of transfer with an example.
+5m | Analyze the hierarchical memory systems are employed to achieve optimal performance by a computer system.
+5m | How can you enhance the speed and capacity of memories? Explain.
+5m | Explain the Direct Memory Access. How it improves the performance of the system?
+1m | Explain parallel processing.
+2m | Explain the static Inter process arbitration process?
+2m | Illustrate the terms Multiprocessors and Multi Computers?
+2m | Distinguish between loosely coupled and tightly coupled multiprocessors.
+2m | How a vector processor operation is different from conventional scalar processor?
+2m | Differentiate tightly coupled and loosely coupled systems.
+1m | Explain Pipelining.
+2m | What is vector processing, and how does it improve computational performance?
+2m | List and explain the key characteristics of a multiprocessor system.
+2m | Explain processors?
+2m | Explain array processors?
+2m | Explain the principle characteristics of multiprocessors. List its advantages.
+2m | Illustrate the classification of pipelining.
+1m | What is Microprocessor?
+1m | Explain the advantages of pipelining.
+2m | Draw 8x8 omega switching network.
+2m | List the pipeline conflicts.
+2m | Discuss the difference between tightly coupled multiprocessor and loosely coupled multiprocessor.
+5m | Explain the characteristics of multiprocessors.
+10m | Explain inter processor communication and synchronization in a shared multiprocessor environment.
+5m | Explain Matrix multiplication in related with Vector Processing.
+5m | List and explain various types of solutions for handling pipeline Hazards.
+5m | Distinguish between tightly coupled microprocessors and tightly coupled Microprocessors.
+5m | Explain inter-process arbitration? Give various arbitration techniques with neat sketch and explain in detail.
+5m | Explain four segment pipelines with neat sketch and show the pipeline flow of execution through space time diagram.
+5m | What are the various conflicts raised in the pipeline processing and give various solutions to handle conflicts.
+5m | Explain about the arithmetic pipeline.
+5m | Explain vector processing.
+5m | Explain about arithmetic pipeline with an example.
+5m | What is the Inter processor Synchronization? Explain the Synchronization techniques.
+5m | Explain various interconnection structures of a multiprocessor system with neat diagrams.
+5m | Explain Arithmetic pipeline with suitable diagram.
+5m | Explain in-detail about vector processing and array processing.
+5m | Illustrate between Array processor and Vector Processor. State the advantages, disadvantages and applications of vector processors.
+5m | Compare and contrast between parallel processing and pipeline processing with suitable examples.
+5m | What is pipelining? Demonstrate the pipeline organization with an example.
+5m | Explain vector instructions and how it will be helpful for performance point of view?
+5m | Explain about vector processiup,?
+5m | Elucidate array processor in detail
+5m | What are the various forms available for establishing an interconnection network in a multi-processor system?
+5m | Does pipelining get affected by data dependencies among the}
+5m | Explain 8x8 omega switching network for multistage switching networks to control processor-memory communication in a tightly coupled multiprocessor system.
+5m | Explain the functionality of arithmetic pipeline with an example.
+5m | Discuss about the following Interconnection structures i. Multiport memory ii. Hypercube system.
+5m | Explain about instruction pipeline in detail.
+5m | With a neat diagram, explain parallel arbitration circuit.
+5m | What are the different major conflicts arising in pipelined execution.
+5m | In detail describe multiport memory, cross bar switch and switching networks used for interconnecting multiprocessors.
+5m | Define Parallel processing and what are the different types of parallel processing? How parallelism can be achieved in uni-processor system?
+5m | Explain about parallel arbitration logic.
+5m | Explain about memory interleaving concept in vector processing.
+5m | Explain about four segment CPU pipeline with the help of flow chart.
+5m | Explain instruction pipeline and its advantages.
+5m | Explain characteristics of multiprocessor systems.
+5m | Explain vector processing and array processors.
+5m | With the neat diagram explain the concepts of pipelining with an example.
+5m | Illustrate multistage switching network with an example.

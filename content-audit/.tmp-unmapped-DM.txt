@@ -1,0 +1,111 @@
+1m | What are well formed formulas?
+1m | Give the symbolic form of the following: If either Jerry takes calculus or Ken takes sociology then Larry will take English.
+2m | Test the validity of the following argument: (p ∧ r) → (¬q), (¬q) → r, ∴ (p ∧ r) → r.
+2m | What do you mean by well-formed formula, give example?
+5m | Show that r A (pVq) is a valid conclusion from the premises (p Vq), (q→r),(pm) and (~m).
+5m | Show that P → S can be derived from the premises P V Q, Q V R, and R→ S.
+5m | Show that (Vx) {P(x) v Q(x)} ⇒ (Vx) P(x) v (3x) Q(x).
+5m | Show that R→S can be derived from the premises P→(Q→S), IRVP and Q.
+5m | State and explain the rules that can generate a well formed formula.
+5m | Show that (TP A (IQ A R)) V (Q AR) V (PAR) R.
+5m | Show that (x) (P(x) → Q(x)) ^ (x)(Q(x) → R(x))⇒ (x) (P(x) → R(x)).
+5m | Establish the validity of the following argument "All integers are rational numbers.
+5m | Prove that 4x M(x) follows logically from the premises (x) (H(x) - M(x)) and 4x H(x).
+5m | Show that SVR is tautologically implied by (PVQ)A(P-R)A(Q-S).
+5m | Verify the validity of the following arguments. "Every living thing is a plant or an animal. Logu"s dog is alive and it is not a plant. All animals have heart. Therefore Logu's dog has a heart."
+5m | Show that the premises (P A Q) V R and R - S imply the conclusion (P V S).
+5m | Prove that (∀x)(P(x) ∨ Q(x)) ⇒ (∀x)P(x) ∨ (∃x)Q(x).
+5m | Show that R can be derived from the premises P→ Q, Q→ R and P.
+5m | Show that P→(Q→ R) P→ (QVR) (PAQ) →R.
+5m | Verify whether the following premises are consistent or not.
+5m | Determine the validity of the following argument: If two sides of a triangle are equal, then two opposite angles are equal. Two sides of a triangle are not equal. Therefore, the opposite angles are not equal.
+5m | Show that the following premises are inconsistent. i. If jack misses many classes through illness then he fails high school. ii. If jack fails high school, then he is uneducated. iii. If jack reads a lot of books then he is not uneducated. iv. Jack misses many classes through illness and reads a lot of books.
+5m | Prove the following argument, using symbolic logic. All men are fallible. All kings are men. Therefore, all kings are fallible.
+1m | Discuss inclusion and Equality of sets.
+1m | Explain about storage structures.
+2m | Show that the matrix A is cqual (Al yb 2?
+2m | If A={a,B}, B={1,2,3}. Find out (AxB) U (BxA) and (AxB) (BxA).
+2m | A={a, b,c}, B={1, 2} then find AxB and BxA.
+5m | Let R = {(1, 2), (3, 4), (2, 2)} and S = {(4, 2), (2, 5), (3, 1), (1, 3)}. Find R S, S.
+5m | Let X= {1, 2, 3,.
+5m | Let A= {1,2,3,4}, B= {3,4,5,6}, C= {1,3,5} Find: a) AUB, b) ANB, c)(AUB)NC, d)(AUBUC), e) (ANBNC).
+5m | Prove that A-(BNC) =(A-B) U(A-C).
+5m | Let A = {1,2,3,4}, B = {a, b, c}and C= {w, x, y, z} with f: A→B and g: B→C given by f = {(1, a), (2, a), (3, b), (4, c)}, g = {(a, x), (b, y), (c, z)}find gof.
+5m | Let A = {a, b, c, d, e} and B = {a, b, c, d, e, f, g, h}. Find i) AUB. ii) ANB. iii) A-B. iv) B-A.
+5m | Show that for any two sets A and B, A-(ANB) = A-B.
+5m | Given & F123, 4), RB foc yV xo yt, Draw the eraph of R and give s 4 ) its matrix. Also staic the properlics satishied by tf, 4 a) By using mathematical induction prove that the given cquation is truc 5? for all BOGTEVE Hepors POPP a C/G) faa PCat EY for alba N.
+2m | What is the principle of Mathematical induction?
+2m | How many 3-letter words can be formed using the letters from the word "FABLE"?
+2m | Develop a recursive algorithm to find factorial of a number.
+2m | Find the number of 5-letter words which contain three different consonants and two different vowels of the English alphabet.
+2m | Find out how many 5-digit numbers greater than 30,000 can be formed from the digits 1,2,3,4 and 5.
+2m | How many words can be formed by using the letters from the word "DRIVER" such that all the vowels are always together?
+2m | How many words of three distinct letters can be formed from CAKE?
+2m | Write a short note on well-ordering property,
+2m | Define inductive hypothesis?
+2m | How many ways are there to select five players from a 10-member
+2m | What is recursive algorithm?
+2m | What is the co-efficient of xy in (x+y)^5?
+2m | Find the middle term of (x+(1/x))20.
+2m | How many ways are there to distribute 12 different books among 15. people if no person receive more than 1 book?
+2m | How many 5 letter words are there where the first and last letters are vowels? (Repetition is allowed)
+2m | In how many ways can we draw a heart or a king from a pack of cards?
+2m | How many different 3 digit numbers can be formed with 3 four's, 4 two's and 2 three's.
+5m | Using the principle of mathematical induction, prove that 12+23+3 4 +.
+5m | Use mathematical induction to show that 1+2+22+33 +.
+5m | By using mathematical induction prove that the given equation is true for all positive integers.
+5m | Describe the concepts Subalgebra and Direct Product.
+5m | In how many ways can 6 men and 6 women be seated in a row? i) If any person may sit next to any other. ii) If men and women must occupy alternative seats.
+5m | How many four letter words can be formed using the letters a,a, a,b,b,c,c,c,c,d,d?
+5m | Use mathematical induction to show that 1+2+22+.+ 2"=2"+1_1 for all positive integers n.
+5m | Use mathematical induction to prove that 1+2+3 +.
+5m | Compute the number of rows of 6 Americans, 7 Mexicans and 10 Canadians in which an American invariably stands between a Mexican and a Canadian and in which a Mexican and a Canadian never stand side by side.
+5m | Find the mid term of (2x - 1/3x)10.
+5m | Out of 5 consonants and 3 vowels, how many words of 3 consonants and 2 vowels can be formed?
+5m | Construct a recursive version of a binary search algorithm.
+5m | Show that if n is a positive integer, then
+5m | Express the linear search algorithm as a recursive procedure.
+5m | How many solutions does the equation x} + x + x3 = Il have, where X, X 2 and x; are non-negative integers?
+5m | Suppose the postal department prints only 5 and 9 cent stamps. Prove that it is possible to make up any postage of n cents using only 5 and 9 cent stamps for n ≥ 35.
+5m | Explain the principle of strong induction with example.
+5m | How many poker hands of five cards can be dealt from a standard deck of 52 cards?
+5m | Prove that 12+22+32+.
+5m | How many possible telephone numbers are there when there are seven digits, the first two of which are between 2 and 9 inclusive, the third digit between 1 and 9 inclusive, and each of the remaining may be between 0 and 9 inclusive?
+5m | In how many ways can 10 people be seated in a row so that certain pair of them are not next to each other?
+2m | Write the Axioms of Probability.
+2m | A card is drawn from a well shuffled pack of cards. What is the probability that it is either spade or an ace?
+1m | How many 10 digit numbers are there with exactly six 1's?
+2m | Write about expected value and variance.
+2m | What is the probability of getting 3 or 5 on a die?
+2m | List out the applications of Bayes' theorem.
+2m | Find the probability that a hand of five cards in poker contains four cards of one kind.
+2m | State the Bayes' theorem.
+1m | Omit the principle of inclusion and exclusion.
+1m | How many ways are there to distribute 10 different books among 15 people if no person is to receive more than 1 book?
+2m | Solve an-6an-1+9an-2=0.
+2m | Explain Bayes' theorem.
+5m | Two friends Harish and Kalyan appeared for an exam. Let A be the event that Harish is selected and B is the event that Kalyan is selected. The probability of A is 2/5 and that of B is 3/7. Find the probability that both of them are selected.
+5m | State and Prove Baye's Theorem.
+5m | Evaluate the sum (i) 1+2+3 +. + n. (ii) 12+22+3²+. +n².
+5m | In a survey of 800 voters, the following information was found: 300 were college educated, 260 were from high-income families, 325 were registered Democrats, 184 were college educated and from high- income families, 155 were college educated and registered Democrats, 165 were from high-income families and were registered Democrats, 94 were college educated, from high-income families, and were registered Democrats.
+5m | How many different words can be formed with the letters of the word 'SUPER' such that the vowels always come together?
+5m | Let X~ Uniform(a,b). Find E(X).
+5m | A card from a pack of 52 cards is lost. From the remaining cards of the pack, two cards are drawn and are found to be both hearts. Find the probability of the lost card being a heart.
+5m | Prove that C(n, r) C(n -l, r) + C(n -l, r- 1).
+5m | Find the solution for an-3an-1-4an-2=0 for n ≥ 2 and, ao = a = 1.
+5m | A car manufacturing factory has two plants, X and Y. Plant X manufactures 70% of cars and plant Y manufactures 30%. 80% of the cars at plant X and 90% of the cars at plant Y are rated of standard quality. A car is chosen at random and is found to be of standard quality. What is the probability that it has come from plant X?
+5m | In how many ways 4 boys and 4 girls can be seated in a row so that boys and girls are alternate?
+5m | Explain Bayes' theorem with an example.
+5m | What is the variance of the number of times a 6 appears when a fair die is rolled 10 times?
+10m | What is the variance of the random variable X, where X is the number that comes up when a fair die is rolled?
+5m | Explain the practical importance of combinatorial analysis in algorithm design.
+5m | How many integral solutions are there to x₁ + X2 + X3 + X4 + X5 = 20 where x₁>=-3, x2> =0, x3>= 4, x4>=2, and xs>=2?
+5m | In a neighbourhood, 90% children were falling sick due flu and 10% due to measles and no other disease. The probability of observing rashes for measles is 0.95 and for flu is 0.08. If a child develops rashes, find the child's probability of having flu.
+5m | What is the probability that when two dice are rolled, the sum of the numbers on the two dice is 7?
+2m | Define eulers formula.
+2m | Draw K, and K4,4.
+5m | Explain BFS using following algorithm.
+5m | Write short notes on DFS and BFS
+5m | What is Euler's formula? Illustrate with an example.
+5m | State and Prove Euler's Formula.
+5m | Explain Euler's theorem with an example.

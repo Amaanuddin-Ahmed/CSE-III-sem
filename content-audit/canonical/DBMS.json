@@ -1,0 +1,1219 @@
+{
+  "subject": "DBMS",
+  "name": "Database Management Systems",
+  "fixes": {
+    "DBMS-M2-023": {
+      "topic": "Log-based recovery",
+      "question": "In deferred database modification, the log is used to:",
+      "options": [
+        "Undo uncommitted changes",
+        "Redo committed changes after a crash",
+        "Delete the log",
+        "Compress the database"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Deferred modification writes to the database only after commit, so recovery redoes committed transactions and ignores uncommitted ones."
+    },
+    "FC-DBMS-15": {
+      "topic": "Checkpoints",
+      "front": "Why are checkpoints used in recovery?",
+      "back": "A checkpoint records a consistent state and the active transactions, so recovery after a crash need not scan the entire log from the beginning.\nKeywords: checkpoint, recovery, log, consistent state"
+    },
+    "FC-M1-DBMS-04": {
+      "back": "1. Domain: values must belong to the attribute domain.\n2. Entity integrity: primary key cannot be NULL.\n3. Referential integrity: foreign key must match a key or be NULL.\nKeywords: domain, entity integrity, referential integrity"
+    },
+    "FC-DBMS-12": {
+      "back": "1. Undo rule: flush undo log before writing a dirty page.\n2. Redo rule: flush all log records before commit.\nKeywords: WAL, undo, redo, flush"
+    },
+    "FC-DBMS-20": {
+      "back": "1. Analysis: find active transactions and dirty pages from the checkpoint.\n2. Redo: repeat history from the oldest unwritten page.\n3. Undo: roll back uncommitted transactions in reverse order.\nKeywords: ARIES, analysis, redo, undo"
+    }
+  },
+  "mcq": [
+    {
+      "id": "DBMS-SEM-037",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T01",
+      "topic": "DBMS vs file system",
+      "question": "The main advantage of a DBMS over a file-processing system is that a DBMS:",
+      "options": [
+        "Stores data in flat files",
+        "Controls redundancy and enforces integrity",
+        "Needs no users",
+        "Removes the need for backups"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A DBMS centralises data, reduces duplication and enforces constraints, which file systems leave to each application."
+    },
+    {
+      "id": "DBMS-SEM-038",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T02",
+      "topic": "Data independence",
+      "question": "Logical data independence means the ability to change the:",
+      "options": [
+        "Physical storage without changing the conceptual schema",
+        "Conceptual schema without changing external views",
+        "External views without changing the conceptual schema",
+        "Hardware without changing anything"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Logical independence shields external schemas from changes to the conceptual schema; physical independence shields the conceptual schema from storage changes."
+    },
+    {
+      "id": "DBMS-SEM-039",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T03",
+      "topic": "DBA",
+      "question": "Which task belongs to the database administrator?",
+      "options": [
+        "Writing every application program",
+        "Granting user authorisation and tuning performance",
+        "Designing the CPU",
+        "Compiling SQL queries only"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The DBA manages schema, users, authorisation, backups and performance, rather than writing all application code."
+    },
+    {
+      "id": "DBMS-SEM-040",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T04",
+      "topic": "Weak entity",
+      "question": "A weak entity set is one that:",
+      "options": [
+        "Has no attributes",
+        "Cannot be uniquely identified by its own attributes alone",
+        "Has no relationship",
+        "Is always optional"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A weak entity depends on an owner entity and is identified by a partial key plus the owner's key."
+    },
+    {
+      "id": "DBMS-SEM-041",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T05",
+      "topic": "Cardinality",
+      "question": "A many-to-one relationship from A to B means:",
+      "options": [
+        "Many A entities relate to many B entities",
+        "Each A relates to at most one B, but one B may relate to many A",
+        "Each A relates to exactly one B and vice versa",
+        "No A relates to B"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Many A entities may point to the same B entity, while each A has at most one B."
+    },
+    {
+      "id": "DBMS-SEM-042",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T06",
+      "topic": "Specialization",
+      "question": "Specialization in the ER model is the process of:",
+      "options": [
+        "Combining entities into a superclass",
+        "Creating subclasses from a superclass based on distinguishing attributes",
+        "Removing all relationships",
+        "Converting tables to files"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Specialization is top-down: a general entity is divided into subclasses with specialised attributes."
+    },
+    {
+      "id": "DBMS-SEM-043",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T07",
+      "topic": "ER-to-relational mapping",
+      "question": "When mapping a many-to-many relationship to relations, the usual approach is to:",
+      "options": [
+        "Add a foreign key to one side only",
+        "Create a separate relation with the keys of both entities",
+        "Merge both entities into one",
+        "Drop the relationship"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A many-to-many relationship needs its own relation whose key combines the participating entity keys."
+    },
+    {
+      "id": "DBMS-SEM-044",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T04",
+      "topic": "Entity vs attribute",
+      "question": "Which item is best modelled as an entity rather than an attribute?",
+      "options": [
+        "A student's age",
+        "A student's name",
+        "A course with its own code and credits",
+        "A student's marks in one subject"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "A course has its own identity and attributes, so it is an entity; age and name describe a student."
+    },
+    {
+      "id": "DBMS-SEM-045",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T01",
+      "topic": "Relational model terms",
+      "question": "In the relational model, a row of a table is called a:",
+      "options": [
+        "Attribute",
+        "Tuple",
+        "Domain",
+        "Schema"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A relation is a table, a tuple is a row, an attribute is a column and a domain is the set of allowed values."
+    },
+    {
+      "id": "DBMS-SEM-046",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T02",
+      "topic": "Primary key",
+      "question": "A primary key must be:",
+      "options": [
+        "Unique but may be null",
+        "Unique and not null",
+        "Nullable and duplicate",
+        "Always numeric"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The primary key uniquely identifies each tuple and cannot contain NULL, because NULL is not a value."
+    },
+    {
+      "id": "DBMS-SEM-047",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T02",
+      "topic": "Foreign key",
+      "question": "A foreign key enforces:",
+      "options": [
+        "Entity integrity",
+        "Referential integrity",
+        "Domain independence",
+        "Physical independence"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A foreign key value must match a primary key value in the referenced relation, or be NULL, preserving referential integrity."
+    },
+    {
+      "id": "DBMS-SEM-048",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Relational algebra",
+      "question": "The relational algebra operation that selects rows satisfying a condition is:",
+      "options": [
+        "Projection ($\\pi$)",
+        "Selection ($\\sigma$)",
+        "Join ($\\bowtie$)",
+        "Union ($\\cup$)"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Selection filters tuples by a predicate; projection chooses columns."
+    },
+    {
+      "id": "DBMS-SEM-049",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Projection",
+      "question": "The projection operator $\\pi_{name, age}(Student)$ returns:",
+      "options": [
+        "Only rows with those values",
+        "Only the name and age columns",
+        "A Cartesian product",
+        "A grouped table"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "Projection keeps the listed attributes and discards the others; duplicate rows are removed in the formal model."
+    },
+    {
+      "id": "DBMS-SEM-050",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Natural join",
+      "question": "A natural join of two relations:",
+      "options": [
+        "Combines every pair of tuples",
+        "Joins on all common attributes and removes duplicate columns",
+        "Requires no common attributes",
+        "Always produces an empty relation"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Natural join equates common attributes and keeps one copy of each; a Cartesian product pairs every tuple with every tuple."
+    },
+    {
+      "id": "DBMS-SEM-051",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Set operations",
+      "question": "For $R \\cup S$ to be valid in relational algebra, $R$ and $S$ must be:",
+      "options": [
+        "Any two relations",
+        "Union-compatible",
+        "Joined by a foreign key",
+        "Sorted"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Union compatibility means the same number of attributes with compatible domains in the same order."
+    },
+    {
+      "id": "DBMS-SEM-052",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T06",
+      "topic": "Relational calculus",
+      "question": "Relational calculus is:",
+      "options": [
+        "Procedural like relational algebra",
+        "Non-procedural and declarative",
+        "A physical storage model",
+        "A concurrency protocol"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Calculus states what result is wanted rather than how to compute it; algebra gives an explicit sequence of operations."
+    },
+    {
+      "id": "DBMS-SEM-053",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DBMS.U3.T01",
+      "topic": "SQL SELECT",
+      "question": "Which SQL clause filters individual rows before grouping?",
+      "options": [
+        "HAVING",
+        "WHERE",
+        "ORDER BY",
+        "GROUP BY"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "WHERE filters rows before grouping; HAVING filters groups after aggregation."
+    },
+    {
+      "id": "DBMS-SEM-054",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DBMS.U3.T04",
+      "topic": "Aggregation",
+      "question": "Which function returns the number of rows in a group?",
+      "options": [
+        "SUM()",
+        "COUNT()",
+        "AVG()",
+        "MAX()"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "COUNT() counts rows or non-null values; SUM adds numeric values and AVG computes their mean."
+    },
+    {
+      "id": "DBMS-SEM-055",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DBMS.U3.T03",
+      "topic": "Nested queries",
+      "question": "A subquery used with IN must return:",
+      "options": [
+        "Exactly one row",
+        "A single column of values",
+        "A whole table with all columns",
+        "No rows"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "IN compares a value against a set, so the subquery returns one column; a scalar subquery returns one value."
+    },
+    {
+      "id": "DBMS-SEM-056",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DBMS.U3.T07",
+      "topic": "Triggers",
+      "question": "A database trigger is a block of code that:",
+      "options": [
+        "Runs only when called by a user",
+        "Fires automatically on a specified event",
+        "Replaces all constraints",
+        "Stores the query plan"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A trigger is attached to an event such as INSERT or UPDATE and fires automatically, unlike a stored procedure."
+    },
+    {
+      "id": "DBMS-SEM-057",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid1",
+      "topicId": "DBMS.U3.T05",
+      "topic": "NULL semantics",
+      "question": "In SQL, the comparison NULL = NULL evaluates to:",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN",
+        "0"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "NULL means unknown, so equality with NULL yields UNKNOWN; use IS NULL to test for a null value."
+    },
+    {
+      "id": "DBMS-SEM-058",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T01",
+      "topic": "ACID",
+      "question": "Which ACID property guarantees that a committed transaction survives a crash?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability"
+      ],
+      "answerIndex": 3,
+      "difficulty": "easy",
+      "explanation": "Durability means committed changes are permanent, usually because they are written to stable storage or the log."
+    },
+    {
+      "id": "DBMS-SEM-059",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T03",
+      "topic": "Conflict serializability",
+      "question": "A schedule is conflict serializable if and only if its precedence graph is:",
+      "options": [
+        "Complete",
+        "Acyclic",
+        "Bipartite",
+        "Connected"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A cycle in the precedence graph means conflicting operations cannot be ordered, so the schedule is not conflict serializable."
+    },
+    {
+      "id": "DBMS-SEM-060",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T06",
+      "topic": "Two-phase locking",
+      "question": "The two phases of 2PL are:",
+      "options": [
+        "Read phase and write phase",
+        "Growing phase and shrinking phase",
+        "Commit phase and abort phase",
+        "Lock phase and unlock phase"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A transaction acquires locks in the growing phase and releases them in the shrinking phase; no lock is acquired after release."
+    },
+    {
+      "id": "DBMS-SEM-061",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T07",
+      "topic": "Timestamp ordering",
+      "question": "Timestamp ordering resolves conflicts by:",
+      "options": [
+        "Blocking every transaction",
+        "Ordering operations by transaction timestamps",
+        "Using only shared locks",
+        "Ignoring older transactions"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Each transaction gets a timestamp, and conflicting operations must execute in timestamp order; violations abort the transaction."
+    },
+    {
+      "id": "DBMS-SEM-062",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T06",
+      "topic": "Deadlock",
+      "question": "Basic two-phase locking can still suffer from:",
+      "options": [
+        "Dirty reads only",
+        "Deadlock",
+        "Loss of durability",
+        "Syntax errors"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "2PL guarantees conflict serializability but does not prevent cycles of waiting, so deadlock is possible."
+    },
+    {
+      "id": "DBMS-SEM-063",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T10",
+      "topic": "Log-based recovery",
+      "question": "In immediate database modification, which log records are needed for recovery?",
+      "options": [
+        "Only commit records",
+        "Undo records for uncommitted transactions and redo records for committed ones",
+        "Only checkpoint records",
+        "No log records"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Because changes may reach the database before commit, recovery undoes uncommitted work and redoes committed work."
+    },
+    {
+      "id": "DBMS-SEM-064",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T11",
+      "topic": "Checkpoint",
+      "question": "A checkpoint in a DBMS primarily:",
+      "options": [
+        "Deletes the log",
+        "Limits the portion of the log that recovery must scan",
+        "Commits every active transaction",
+        "Creates a new index"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A checkpoint flushes data and records active transactions, so recovery can start from a recent consistent point."
+    },
+    {
+      "id": "DBMS-SEM-065",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T01",
+      "topic": "Buffer pool",
+      "question": "The buffer pool in a DBMS is used to:",
+      "options": [
+        "Store the schema permanently",
+        "Cache disk pages in memory",
+        "Compile SQL",
+        "Encrypt data"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "The buffer pool keeps frequently used pages in RAM and uses a replacement policy when space is needed."
+    },
+    {
+      "id": "DBMS-SEM-066",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T02",
+      "topic": "File organization",
+      "question": "In a heap file organization, records are:",
+      "options": [
+        "Stored in sorted order by key",
+        "Stored in no particular order",
+        "Stored only in a B+ tree",
+        "Stored only in a hash table"
+      ],
+      "answerIndex": 1,
+      "difficulty": "easy",
+      "explanation": "A heap file appends records wherever space is available, so insertion is fast but search may require a scan."
+    },
+    {
+      "id": "DBMS-SEM-067",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T03",
+      "topic": "Clustered index",
+      "question": "A clustered index:",
+      "options": [
+        "Has one entry per row in a separate file",
+        "Determines the physical order of data records",
+        "Can exist many times per table",
+        "Works only on hash values"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "Because the data is stored in the index order, a table can have only one clustered index; secondary indexes are separate."
+    },
+    {
+      "id": "DBMS-SEM-068",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T05",
+      "topic": "Hash indexing",
+      "question": "Hash-based indexing is most efficient for:",
+      "options": [
+        "Range queries",
+        "Equality searches",
+        "Sorted output",
+        "Prefix matching"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "A hash function maps a key directly to a bucket, which is ideal for equality but destroys order for ranges."
+    },
+    {
+      "id": "DBMS-SEM-069",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T06",
+      "topic": "ISAM",
+      "question": "ISAM is:",
+      "options": [
+        "A dynamic B+ tree",
+        "A static index structure with an overflow area",
+        "A hash table",
+        "A concurrency protocol"
+      ],
+      "answerIndex": 1,
+      "difficulty": "medium",
+      "explanation": "ISAM builds a static index over sorted data and sends new records to overflow pages; B+ trees rebalance instead."
+    },
+    {
+      "id": "DBMS-SEM-070",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T08",
+      "topic": "B+ tree",
+      "question": "In a B+ tree, data records are pointed to from:",
+      "options": [
+        "Only the root",
+        "Internal nodes only",
+        "Leaf nodes only",
+        "Every node equally"
+      ],
+      "answerIndex": 2,
+      "difficulty": "medium",
+      "explanation": "Internal nodes hold only keys for routing; all data pointers sit in the leaves, which are linked for range scans."
+    },
+    {
+      "id": "DBMS-SEM-071",
+      "type": "mcq",
+      "unit": 5,
+      "scope": "sem",
+      "topicId": "DBMS.U5.T04",
+      "topic": "Index data structures",
+      "question": "A dense index contains:",
+      "options": [
+        "An entry for every search-key value",
+        "An entry only for the first record of each block",
+        "No keys",
+        "Only hash values"
+      ],
+      "answerIndex": 0,
+      "difficulty": "medium",
+      "explanation": "A dense index has one entry per search-key value; a sparse index has one entry per block."
+    },
+    {
+      "id": "DBMS-SEM-072",
+      "type": "mcq",
+      "unit": 1,
+      "scope": "sem",
+      "topicId": "DBMS.U1.T07",
+      "topic": "Mapping many-to-many relationships",
+      "question": "A many-to-many relationship between entity sets A and B is mapped to relations by creating:",
+      "options": [
+        "a foreign key in A only",
+        "a foreign key in B only",
+        "a separate relation containing the keys of A and B",
+        "no relation at all"
+      ],
+      "answerIndex": 2,
+      "difficulty": "hard",
+      "explanation": "A many-to-many relationship cannot be represented by a foreign key on either side, so a junction relation stores both participating keys."
+    },
+    {
+      "id": "DBMS-SEM-073",
+      "type": "mcq",
+      "unit": 2,
+      "scope": "sem",
+      "topicId": "DBMS.U2.T05",
+      "topic": "Natural join cardinality",
+      "question": "Relation R has 4 tuples and relation S has 3 tuples. What is the maximum possible number of tuples in $R \\bowtie S$ on a common attribute?",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "12"
+      ],
+      "answerIndex": 3,
+      "difficulty": "hard",
+      "explanation": "If every R tuple matches every S tuple on the join attribute, the natural join contains $4\\times3=12$ tuples."
+    },
+    {
+      "id": "DBMS-SEM-074",
+      "type": "mcq",
+      "unit": 3,
+      "scope": "mid2",
+      "topicId": "DBMS.U3.T11",
+      "topic": "Normal form identification",
+      "question": "Relation $R(A,B,C)$ has functional dependencies $A \\to B$ and $B \\to C$. Which is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A is the only candidate key. B and C are non-prime, and the transitive dependency $A\\to B\\to C$ violates 3NF, so R is in 2NF."
+    },
+    {
+      "id": "DBMS-SEM-075",
+      "type": "mcq",
+      "unit": 4,
+      "scope": "sem",
+      "topicId": "DBMS.U4.T03",
+      "topic": "Precedence graph",
+      "question": "A precedence graph for a schedule contains edges $T_1 \\to T_2$ and $T_2 \\to T_1$. The schedule is:",
+      "options": [
+        "conflict serializable",
+        "not conflict serializable",
+        "recoverable",
+        "strict"
+      ],
+      "answerIndex": 1,
+      "difficulty": "hard",
+      "explanation": "A cycle in the precedence graph means the schedule is not conflict serializable, because no serial order can preserve both conflicting orders."
+    }
+  ],
+  "flash": [
+    {
+      "id": "FC-SEM-DBMS-23",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T01",
+      "topic": "DBMS advantages",
+      "highYield": true,
+      "front": "List four advantages of a DBMS over file processing.",
+      "back": "Controlled redundancy, enforced integrity, concurrent access with recovery, and data independence through a schema.\nKeywords: redundancy, integrity, concurrency, data independence"
+    },
+    {
+      "id": "FC-SEM-DBMS-24",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T02",
+      "topic": "Three-level architecture",
+      "highYield": true,
+      "front": "Describe the three levels of database abstraction.",
+      "back": "External level: user views. Conceptual level: logical schema. Internal level: physical storage. Mappings between them give data independence.\nKeywords: external, conceptual, internal, schema, mapping"
+    },
+    {
+      "id": "FC-SEM-DBMS-25",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T02",
+      "topic": "Data independence",
+      "highYield": true,
+      "front": "Distinguish physical and logical data independence.",
+      "back": "Physical independence lets storage change without changing the conceptual schema. Logical independence lets the conceptual schema change without changing user views.\nKeywords: physical, logical, independence, schema"
+    },
+    {
+      "id": "FC-SEM-DBMS-26",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T03",
+      "topic": "DBA duties",
+      "highYield": true,
+      "front": "List four responsibilities of a DBA.",
+      "back": "Schema definition, user authorisation, backup and recovery, and performance tuning. The DBA also monitors storage and integrity.\nKeywords: DBA, schema, authorisation, backup, tuning"
+    },
+    {
+      "id": "FC-SEM-DBMS-27",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T04",
+      "topic": "ER model",
+      "highYield": true,
+      "front": "What is an entity, an attribute and an entity set?",
+      "back": "An entity is a distinguishable object. An attribute describes it. An entity set is a collection of entities of the same type.\nKeywords: entity, attribute, entity set, ER"
+    },
+    {
+      "id": "FC-SEM-DBMS-28",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T06",
+      "topic": "Weak entity",
+      "highYield": true,
+      "front": "How is a weak entity represented and identified?",
+      "back": "It has a double rectangle, a double diamond for its identifying relationship, and a dashed partial key. Its full key includes the owner's key.\nKeywords: weak entity, partial key, owner, identifying relationship"
+    },
+    {
+      "id": "FC-SEM-DBMS-29",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T05",
+      "topic": "Cardinality ratios",
+      "highYield": true,
+      "front": "Explain 1:1, 1:N and M:N relationships.",
+      "back": "1:1 pairs one entity with one. 1:N lets one entity relate to many. M:N lets many relate to many and needs a separate relation.\nKeywords: cardinality, one-to-one, one-to-many, many-to-many"
+    },
+    {
+      "id": "FC-SEM-DBMS-30",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T06",
+      "topic": "Specialization and generalization",
+      "highYield": true,
+      "front": "Compare specialization and generalization.",
+      "back": "Specialization is top-down: split a superclass into subclasses. Generalization is bottom-up: combine common features of subclasses into a superclass.\nKeywords: specialization, generalization, superclass, subclass"
+    },
+    {
+      "id": "FC-SEM-DBMS-31",
+      "subjectId": "DBMS",
+      "unit": 1,
+      "topicId": "DBMS.U1.T07",
+      "topic": "ER-to-relational mapping",
+      "highYield": true,
+      "front": "How do you map a 1:N relationship to relations?",
+      "back": "Put the primary key of the one side as a foreign key in the many side. Do not create a separate relation unless the relationship has its own attributes.\nKeywords: mapping, 1:N, foreign key, relation"
+    },
+    {
+      "id": "FC-SEM-DBMS-32",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T01",
+      "topic": "Relational terms",
+      "highYield": true,
+      "front": "Define relation, tuple, attribute and domain.",
+      "back": "Relation: a table. Tuple: a row. Attribute: a column. Domain: the set of allowed values for an attribute.\nKeywords: relation, tuple, attribute, domain"
+    },
+    {
+      "id": "FC-SEM-DBMS-33",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T02",
+      "topic": "Keys",
+      "highYield": true,
+      "front": "Distinguish super key, candidate key and primary key.",
+      "back": "Super key: any set that uniquely identifies a tuple. Candidate key: a minimal super key. Primary key: the chosen candidate key.\nKeywords: super key, candidate key, primary key, minimal"
+    },
+    {
+      "id": "FC-SEM-DBMS-34",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T02",
+      "topic": "Referential integrity",
+      "highYield": true,
+      "front": "What is referential integrity?",
+      "back": "A foreign key must either match an existing primary key in the referenced relation or be NULL. It prevents dangling references.\nKeywords: referential integrity, foreign key, NULL, dangling"
+    },
+    {
+      "id": "FC-SEM-DBMS-35",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T05",
+      "topic": "Relational algebra operators",
+      "highYield": true,
+      "front": "Name the six basic relational algebra operators.",
+      "back": "Selection, projection, union, set difference, Cartesian product and rename. Join is derived from product plus selection.\nKeywords: selection, projection, union, difference, product, rename"
+    },
+    {
+      "id": "FC-SEM-DBMS-36",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T05",
+      "topic": "Join types",
+      "highYield": true,
+      "front": "Compare theta join, equijoin and natural join.",
+      "back": "Theta join uses any predicate. Equijoin uses equality. Natural join equates all common attributes and keeps one copy of each.\nKeywords: theta join, equijoin, natural join, predicate"
+    },
+    {
+      "id": "FC-SEM-DBMS-37",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T03",
+      "topic": "Views",
+      "highYield": true,
+      "front": "What is a view and why use one?",
+      "back": "A view is a stored query that behaves like a table. It simplifies complex queries, restricts access to columns or rows and gives logical independence.\nKeywords: view, stored query, security, independence"
+    },
+    {
+      "id": "FC-SEM-DBMS-38",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T04",
+      "topic": "ALTER and DROP",
+      "highYield": false,
+      "front": "Distinguish ALTER TABLE and DROP TABLE.",
+      "back": "ALTER changes a table's definition, such as adding a column or constraint. DROP removes the table and its data.\nKeywords: ALTER, DROP, schema change, table"
+    },
+    {
+      "id": "FC-SEM-DBMS-39",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T06",
+      "topic": "Relational calculus",
+      "highYield": false,
+      "front": "Distinguish tuple and domain relational calculus.",
+      "back": "Tuple calculus uses variables that range over tuples. Domain calculus uses variables that range over attribute values. Both are declarative.\nKeywords: tuple calculus, domain calculus, declarative, variable"
+    },
+    {
+      "id": "FC-SEM-DBMS-40",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T02",
+      "topic": "Integrity constraints",
+      "highYield": true,
+      "front": "Name four types of integrity constraints.",
+      "back": "Domain constraints, key constraints, entity integrity (primary key not null) and referential integrity (foreign key).\nKeywords: domain, key, entity integrity, referential integrity"
+    },
+    {
+      "id": "FC-SEM-DBMS-41",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T01",
+      "topic": "SQL query form",
+      "highYield": true,
+      "front": "Write the logical order of a basic SQL query.",
+      "back": "SELECT columns FROM tables WHERE rows GROUP BY groups HAVING group condition ORDER BY order. WHERE runs before grouping, HAVING after.\nKeywords: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY"
+    },
+    {
+      "id": "FC-SEM-DBMS-42",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T02",
+      "topic": "Set operators",
+      "highYield": true,
+      "front": "Compare UNION, UNION ALL, INTERSECT and EXCEPT.",
+      "back": "UNION removes duplicates, UNION ALL keeps them. INTERSECT returns common rows. EXCEPT returns rows in the first query but not the second.\nKeywords: UNION, INTERSECT, EXCEPT, duplicates"
+    },
+    {
+      "id": "FC-SEM-DBMS-43",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T03",
+      "topic": "Nested queries",
+      "highYield": true,
+      "front": "When use IN, EXISTS and a scalar subquery?",
+      "back": "IN for a set of values, EXISTS to test whether the subquery returns any row, scalar subquery when exactly one value is needed.\nKeywords: IN, EXISTS, scalar subquery, nested query"
+    },
+    {
+      "id": "FC-SEM-DBMS-44",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T04",
+      "topic": "Aggregation",
+      "highYield": true,
+      "front": "Name the five SQL aggregate functions.",
+      "back": "COUNT, SUM, AVG, MIN and MAX. They ignore NULL except COUNT(*), which counts rows.\nKeywords: COUNT, SUM, AVG, MIN, MAX, NULL"
+    },
+    {
+      "id": "FC-SEM-DBMS-45",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T05",
+      "topic": "NULL handling",
+      "highYield": true,
+      "front": "Why does NULL = NULL return UNKNOWN?",
+      "back": "NULL means an unknown value, so equality cannot be established. Use IS NULL or IS NOT NULL; aggregates and outer joins also treat NULL specially.\nKeywords: NULL, UNKNOWN, IS NULL, three-valued logic"
+    },
+    {
+      "id": "FC-SEM-DBMS-46",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T06",
+      "topic": "SQL constraints",
+      "highYield": true,
+      "front": "Name five SQL table constraints.",
+      "back": "NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK. They enforce column and row-level integrity at the database.\nKeywords: NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK"
+    },
+    {
+      "id": "FC-SEM-DBMS-47",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T07",
+      "topic": "Triggers",
+      "highYield": true,
+      "front": "What are the parts of a trigger?",
+      "back": "An event (INSERT, UPDATE or DELETE), a timing (BEFORE or AFTER), a row or statement granularity, and the action body.\nKeywords: trigger, event, BEFORE, AFTER, row, action"
+    },
+    {
+      "id": "FC-SEM-DBMS-48",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T09",
+      "topic": "Decomposition",
+      "highYield": true,
+      "front": "What two properties should a decomposition have?",
+      "back": "Lossless join: joining the pieces recovers exactly the original relation. Dependency preservation: all functional dependencies remain enforceable.\nKeywords: decomposition, lossless join, dependency preservation"
+    },
+    {
+      "id": "FC-SEM-DBMS-49",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T01",
+      "topic": "ACID properties",
+      "highYield": true,
+      "front": "Explain the four ACID properties.",
+      "back": "Atomicity: all or nothing. Consistency: valid state to valid state. Isolation: concurrent transactions do not interfere. Durability: committed changes persist.\nKeywords: atomicity, consistency, isolation, durability"
+    },
+    {
+      "id": "FC-SEM-DBMS-50",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T01",
+      "topic": "Transaction states",
+      "highYield": true,
+      "front": "List the states of a transaction.",
+      "back": "Active, partially committed, committed, failed and aborted. A committed transaction cannot be rolled back.\nKeywords: active, partially committed, committed, failed, aborted"
+    },
+    {
+      "id": "FC-SEM-DBMS-51",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T03",
+      "topic": "Serializability",
+      "highYield": true,
+      "front": "Distinguish conflict and view serializability.",
+      "back": "Conflict serializability orders conflicting read/write pairs and is checked by an acyclic precedence graph. View serializability is broader but harder to test.\nKeywords: conflict, view, serializability, precedence graph"
+    },
+    {
+      "id": "FC-SEM-DBMS-52",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T06",
+      "topic": "Two-phase locking",
+      "highYield": true,
+      "front": "Explain the two phases of 2PL.",
+      "back": "Growing phase: acquire locks, release none. Shrinking phase: release locks, acquire none. Strict 2PL holds exclusive locks until commit.\nKeywords: 2PL, growing, shrinking, strict, lock"
+    },
+    {
+      "id": "FC-SEM-DBMS-53",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T07",
+      "topic": "Timestamp ordering",
+      "highYield": true,
+      "front": "How does timestamp ordering decide the order of conflicting operations?",
+      "back": "Each transaction has a timestamp. For a conflicting pair, the older transaction must execute first; otherwise the younger one aborts.\nKeywords: timestamp, older, younger, conflict, abort"
+    },
+    {
+      "id": "FC-SEM-DBMS-54",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T09",
+      "topic": "Multiple granularity",
+      "highYield": true,
+      "front": "What is multiple-granularity locking?",
+      "back": "Locks can be taken at different levels (database, file, page, tuple). Intention locks on ancestors signal that a descendant will be locked.\nKeywords: granularity, intention lock, hierarchy, page, tuple"
+    },
+    {
+      "id": "FC-SEM-DBMS-55",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T10",
+      "topic": "Log-based recovery",
+      "highYield": true,
+      "front": "What do UNDO and REDO do during recovery?",
+      "back": "UNDO reverses the changes of transactions that did not commit. REDO reapplies the changes of committed transactions whose data may not have reached disk.\nKeywords: UNDO, REDO, committed, uncommitted, log"
+    },
+    {
+      "id": "FC-SEM-DBMS-56",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T08",
+      "topic": "Validation-based protocol",
+      "highYield": false,
+      "front": "What are the three phases of validation-based concurrency control?",
+      "back": "Read phase, validation phase and write phase. A transaction proceeds only if its validation succeeds against overlapping transactions.\nKeywords: validation, read phase, write phase, optimistic"
+    },
+    {
+      "id": "FC-SEM-DBMS-57",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T01",
+      "topic": "Storage hierarchy",
+      "highYield": true,
+      "front": "Why does a DBMS use a buffer pool?",
+      "back": "Disk access is far slower than memory. The buffer pool caches pages and a replacement policy decides which page to evict.\nKeywords: buffer pool, page, cache, replacement, disk"
+    },
+    {
+      "id": "FC-SEM-DBMS-58",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T02",
+      "topic": "File organization",
+      "highYield": true,
+      "front": "Compare heap, sorted and hash file organizations.",
+      "back": "Heap: fast insert, slow search. Sorted: fast range search, costly insert. Hash: fast equality, no order.\nKeywords: heap, sorted, hash, insert, search"
+    },
+    {
+      "id": "FC-SEM-DBMS-59",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T03",
+      "topic": "Index types",
+      "highYield": true,
+      "front": "Distinguish clustered, primary and secondary indexes.",
+      "back": "Clustered: data ordered by the index key. Primary: index on the ordering key, often clustered. Secondary: separate index on a non-ordering key.\nKeywords: clustered, primary, secondary, ordering key"
+    },
+    {
+      "id": "FC-SEM-DBMS-60",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T04",
+      "topic": "Dense vs sparse index",
+      "highYield": true,
+      "front": "Compare dense and sparse indexes.",
+      "back": "Dense: one entry per search-key value. Sparse: one entry per block, possible only when data is ordered by the key.\nKeywords: dense, sparse, search key, block"
+    },
+    {
+      "id": "FC-SEM-DBMS-61",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T05",
+      "topic": "Hash indexing",
+      "highYield": true,
+      "front": "When does hash indexing fail to help?",
+      "back": "For range queries, sorted output and prefix searches, because hashing destroys key order. It is best for exact equality.\nKeywords: hash index, range, equality, order"
+    },
+    {
+      "id": "FC-SEM-DBMS-62",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T06",
+      "topic": "ISAM",
+      "highYield": true,
+      "front": "How does ISAM differ from a B+ tree?",
+      "back": "ISAM has a static index and overflow pages, so performance degrades as overflow grows. A B+ tree rebalances and stays height-balanced.\nKeywords: ISAM, static, overflow, B+ tree, balanced"
+    },
+    {
+      "id": "FC-SEM-DBMS-63",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T08",
+      "topic": "B+ tree",
+      "highYield": true,
+      "front": "Why are B+ trees preferred for database indexes?",
+      "back": "They stay balanced, support logarithmic search, and link leaves for efficient range scans. Internal nodes fan out widely, keeping height low.\nKeywords: B+ tree, balanced, range scan, fan-out"
+    },
+    {
+      "id": "FC-SEM-DBMS-64",
+      "subjectId": "DBMS",
+      "unit": 5,
+      "topicId": "DBMS.U5.T07",
+      "topic": "Choosing a file organization",
+      "highYield": false,
+      "front": "What factors guide the choice of file organization?",
+      "back": "Query mix (equality versus range), insert/delete rate, record size, ordering needs and the cost of scanning versus direct access.\nKeywords: file organization, query mix, cost, scan, access"
+    },
+    {
+      "id": "FC-SEM-DBMS-65",
+      "subjectId": "DBMS",
+      "unit": 2,
+      "topicId": "DBMS.U2.T07",
+      "topic": "Domain relational calculus",
+      "highYield": false,
+      "front": "How does domain relational calculus express a query?",
+      "back": "1. Variables range over attribute domains, not whole tuples.\n2. A query is {<x1,...,xn> | P(x1,...,xn)}.\n3. Predicates use comparisons and logical connectives.\n4. Safe expressions restrict results to values in the database.\nKeywords: domain relational calculus, DRC, domain variable, safe expression"
+    },
+    {
+      "id": "FC-SEM-DBMS-66",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T08",
+      "topic": "Problems caused by redundancy",
+      "highYield": true,
+      "front": "Which anomalies does data redundancy cause?",
+      "back": "1. Insertion anomaly: cannot insert a fact without unrelated data.\n2. Deletion anomaly: deleting one fact erases another.\n3. Update anomaly: the same fact must be updated in many rows.\n4. Normalization reduces redundancy by decomposition.\nKeywords: redundancy, insertion anomaly, deletion anomaly, update anomaly"
+    },
+    {
+      "id": "FC-SEM-DBMS-67",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T12",
+      "topic": "BCNF",
+      "highYield": true,
+      "front": "State the condition for Boyce-Codd Normal Form.",
+      "back": "1. For every nontrivial functional dependency X → Y, X must be a superkey.\n2. BCNF is stricter than 3NF.\n3. A relation in 3NF may still violate BCNF.\n4. Decompose on the violating dependency to reach BCNF.\nKeywords: BCNF, functional dependency, superkey, decomposition"
+    },
+    {
+      "id": "FC-SEM-DBMS-68",
+      "subjectId": "DBMS",
+      "unit": 3,
+      "topicId": "DBMS.U3.T13",
+      "topic": "Lossless join decomposition",
+      "highYield": true,
+      "front": "What makes a binary decomposition lossless?",
+      "back": "1. Decompose R into R1 and R2.\n2. Lossless if R1 ∩ R2 contains a key of R1 or R2.\n3. Then projecting and rejoining reconstructs exactly R.\n4. A lossy decomposition creates spurious tuples.\nKeywords: lossless join, binary decomposition, common attribute, superkey"
+    },
+    {
+      "id": "FC-SEM-DBMS-69",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T04",
+      "topic": "Recoverability",
+      "highYield": false,
+      "front": "Distinguish recoverable, cascadeless, and strict schedules.",
+      "back": "1. Recoverable: a transaction commits only after reading uncommitted data commits.\n2. Cascadeless: reads only committed data, preventing cascading rollback.\n3. Strict: neither reads nor writes uncommitted data.\n4. Strict is the strongest of the three.\nKeywords: recoverable, cascadeless, strict, dirty read, rollback"
+    },
+    {
+      "id": "FC-SEM-DBMS-70",
+      "subjectId": "DBMS",
+      "unit": 4,
+      "topicId": "DBMS.U4.T05",
+      "topic": "Implementation of isolation and testing for serializability",
+      "highYield": false,
+      "front": "How is conflict serializability tested?",
+      "back": "1. Build a precedence graph with a node per transaction.\n2. Add edge Ti → Tj for each conflict where Ti precedes Tj.\n3. The schedule is conflict serializable if the graph is acyclic.\n4. Isolation levels trade consistency against concurrency.\nKeywords: precedence graph, conflict serializable, acyclic, isolation level"
+    }
+  ]
+}

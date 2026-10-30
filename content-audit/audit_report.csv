@@ -1,0 +1,1120 @@
+id,banks,subject,unit,kind,card_kind,topic,severity,issues,q_words,back_words,expl_words,options,answer,difficulty,snippet
+DM-M1-001,mid1+sem,DM,1,mcq,,Tautology,ok,,13,,13,4,0,easy,A compound proposition that is true under every truth assignment is called a:
+DM-M1-003,mid1+sem,DM,1,mcq,,Contrapositive,ok,,18,,14,4,1,easy,"What is the contrapositive of the conditional statement 'If it rains, the grass is wet' ($"
+DM-M1-005,mid1+sem,DM,1,mcq,,Predicates & Quantifiers,ok,,9,,21,4,2,medium,Which quantified formula correctly translates 'Every student loves mathematics'?
+DM-SEM-001,mid1+sem,DM,1,mcq,,Tautology,ok,,15,,11,4,2,easy,A compound proposition that evaluates to true under every possible truth assignment is cal
+DM-SEM-003,mid1+sem,DM,1,mcq,,Modus Ponens,ok,,12,,6,4,3,easy,Which rule of inference deduces $q$ from premises $p$ and $p \rightarrow q$?
+DM-SEM-039,mid1+sem,DM,1,mcq,,Propositions,ok,,8,,20,4,1,easy,Which of the following is **not** a proposition?
+DM-SEM-040,mid1+sem,DM,1,mcq,,Truth table size,ok,,18,,13,4,2,easy,How many rows are needed in the truth table of a compound proposition with 4 distinct prop
+DM-SEM-041,mid1+sem,DM,1,mcq,,Conditional truth condition,ok,,7,,20,4,3,easy,The conditional $p \to q$ is false only when:
+DM-SEM-042,mid1+sem,DM,1,mcq,,Tautology,ok,,6,,21,4,0,medium,Which compound proposition is a tautology?
+DM-SEM-043,mid1+sem,DM,1,mcq,,PDNF,ok,,8,,16,4,1,medium,The principal disjunctive normal form of $p \to q$ is:
+DM-SEM-044,mid1+sem,DM,1,mcq,,Modus tollens,ok,,13,,18,4,2,medium,"From the premises $p \to q$ and $\neg q$, which conclusion follows by modus tollens?"
+DM-SEM-045,mid1+sem,DM,1,mcq,,Quantifier negation,ok,,5,,14,4,3,easy,"The negation of $\forall x\, P(x)$ is:"
+DM-SEM-046,mid1+sem,DM,1,mcq,,Inference rule,ok,,11,,16,4,0,easy,"The argument form $p \to q$, $p$, therefore $q$ is called:"
+DM-SEM-068,mid1+sem,DM,1,mcq,,Logical equivalence,ok,,8,,24,4,2,hard,The compound proposition $(p \to q) \land (q \to p)$ is logically equivalent to:
+DM-M1-002,mid1+sem,DM,1,fib,,De Morgan's Laws,ok,,10,,5,0,,easy,The negation of $(p \land q)$ is logically equivalent to $\neg p \lor$ _______.
+DM-M1-004,mid1+sem,DM,1,fib,,Modus Tollens,ok,,9,,17,0,,medium,The inference rule $(\neg q \land (p \rightarrow q)) \implies \neg p$ is known as Modus __
+DM-SEM-002,mid1+sem,DM,1,fib,,De Morgan's Laws,ok,,13,,7,0,,easy,"According to De Morgan's Law, $\neg(p \land q)$ is equivalent to $\neg p$ _______ $\neg q$"
+DM-M1-006,mid1+sem,DM,2,mcq,,Equivalence Relations,ok,info:NOT/EXCEPT question,16,,18,4,3,easy,Which of the following is NOT a requirement for a relation to be an Equivalence Relation?
+DM-M1-008,mid1+sem,DM,2,mcq,,POSET Definition,ok,,11,,12,4,0,easy,"A relation that is reflexive, antisymmetric, and transitive is called a:"
+DM-SEM-005,mid1+sem,DM,2,mcq,,Lattices,ok,,13,,21,4,0,medium,"A POSET $(L, \le)$ is called a Lattice if every pair of elements has:"
+DM-SEM-047,mid1+sem,DM,2,mcq,,Cartesian product,ok,,8,,24,4,1,easy,"If $|A|=3$ and $|B|=4$, then $|A \times B|$ equals:"
+DM-SEM-048,mid1+sem,DM,2,mcq,,Power set,ok,,10,,18,4,2,easy,How many subsets does a set with 5 elements have?
+DM-SEM-049,mid1+sem,DM,2,mcq,,Equivalence relation,ok,,10,,15,4,3,easy,"A relation that is reflexive, symmetric and transitive is called:"
+DM-SEM-050,mid1+sem,DM,2,mcq,,Hasse diagram,ok,,11,,20,4,0,medium,"In the divisibility POSET on $\{1,2,3,6\}$, the least element is:"
+DM-SEM-051,mid1+sem,DM,2,mcq,,Bijection,ok,,7,,23,4,1,easy,"The function $f:\mathbb{R}\to\mathbb{R}$, $f(x)=2x+1$, is:"
+DM-SEM-052,mid1+sem,DM,2,mcq,,Warshall algorithm,ok,,7,,17,4,2,easy,Warshall's algorithm is used to compute the:
+DM-SEM-053,mid1+sem,DM,2,mcq,,Counting partitions,ok,,10,,13,4,3,medium,"How many equivalence relations exist on the set $\{a,b\}$?"
+DM-SEM-069,mid1+sem,DM,2,mcq,,Counting equivalence relations,ok,,11,,18,4,3,hard,"How many equivalence relations are there on the set $\{1,2,3\}$?"
+DM-M1-007,mid1+sem,DM,2,fib,,Partition,ok,,14,,21,0,,easy,An equivalence relation on a set $A$ partitions $A$ into mutually disjoint equivalence ___
+DM-M1-009,mid1+sem,DM,2,fib,,Lattices,ok,,18,,17,0,,medium,"In a lattice, the unique greatest lower bound (GLB) of elements $a$ and $b$ is called the "
+DM-SEM-004,mid1+sem,DM,2,fib,,Equivalence Relations,ok,,12,,8,0,,easy,"An equivalence relation on a set must be reflexive, symmetric, and _______."
+DM-SEM-006,mid1+sem,DM,2,fib,,Bijection,ok,,15,,10,0,,easy,A function that is both injective (one-to-one) and surjective (onto) is called a _______ f
+DM-M1-010,mid1+sem,DM,3,mcq,,Semigroup Definition,ok,,14,,12,4,1,easy,"An algebraic structure $(S, *)$ is called a Semigroup if the binary operation $*$ satisfie"
+DM-M1-012,mid1+sem,DM,3,mcq,,Semigroup Homomorphism,ok,,14,,7,4,2,medium,"A mapping $f: (S, *) \rightarrow (T, \cdot)$ between two semigroups is a Homomorphism if f"
+DM-SEM-054,mid1+sem,DM,3,mcq,,Semigroup,ok,,13,,14,4,0,easy,A semigroup is a non-empty set together with a binary operation that is:
+DM-SEM-055,mid1+sem,DM,3,mcq,,Monoid,ok,,8,,18,4,1,easy,A monoid is a semigroup that also has:
+DM-SEM-056,mid1+sem,DM,3,mcq,,Group inverse,ok,,12,,18,4,2,medium,"In a group $(G,*)$, the inverse of an element $a$ is:"
+DM-SEM-070,mid1+sem,DM,3,mcq,,Order of a group element,ok,,12,,19,4,0,hard,"In the group $(\mathbb{Z}_7 \setminus \{0\}, \times_7)$, the order of the element $2$ is:"
+DM-M1-011,mid1+sem,DM,3,fib,,Monoid Identity,ok,,16,,12,0,,easy,"In the monoid $(\mathbb{N}, +)$ of natural numbers under addition (with 0), the identity e"
+FC-M1-DM-01,mid1+sem,DM,1,flashcard,Compare,Tautology vs Contradiction,ok,info:no Keywords line yet,10,22,,,,,What is the difference between a Tautology and a Contradiction?
+FC-M1-DM-02,mid1+sem,DM,1,flashcard,Compare,Modus Ponens vs Modus Tollens,ok,info:no Keywords line yet,10,22,,,,,State the inference rules for Modus Ponens and Modus Tollens.
+FC-M1-DM-03,mid1+sem,DM,1,flashcard,Concept,Principal Normal Forms (PCNF & PDNF),ok,info:no Keywords line yet,8,22,,,,,What are PDNF and PCNF in propositional logic?
+FC-M1-DM-04,mid1+sem,DM,1,flashcard,Formula,De Morgan's Laws,ok,info:no Keywords line yet,8,10,,,,,State De Morgan's Laws for logic and sets.
+FC-M1-DM-05,mid1+sem,DM,1,flashcard,Compare,Universal vs Existential Quantifiers,ok,info:no Keywords line yet,6,4,,,,,How do negations of quantifiers work?
+FC-SEM-DM-23,mid1+sem,DM,1,flashcard,Concept,Proposition,ok,,6,25,,,,,What makes a sentence a proposition?
+FC-SEM-DM-24,mid1+sem,DM,1,flashcard,Concept,Connectives,ok,,11,25,,,,,"When is a conjunction true, and when is a disjunction false?"
+FC-SEM-DM-25,mid1+sem,DM,1,flashcard,Concept,Tautology and contradiction,ok,,5,23,,,,,"Define tautology, contradiction and contingency."
+FC-SEM-DM-26,mid1+sem,DM,1,flashcard,Formula,Logical equivalence laws,ok,,8,19,,,,,State De Morgan's laws and the distributive laws.
+FC-SEM-DM-27,mid1+sem,DM,1,flashcard,Concept,PDNF and PCNF,ok,,11,23,,,,,How do you obtain PDNF and PCNF from a truth table?
+FC-SEM-DM-28,mid1+sem,DM,1,flashcard,Concept,Modus ponens and tollens,ok,,6,22,,,,,State modus ponens and modus tollens.
+FC-SEM-DM-29,mid1+sem,DM,1,flashcard,Concept,Quantifiers,ok,,8,10,,,,,How do you negate a universally quantified statement?
+FC-SEM-DM-30,mid1+sem,DM,1,flashcard,Concept,Validity of arguments,ok,,10,25,,,,,What does it mean for an argument to be valid?
+FC-SEM-DM-U1,mid1+sem,DM,1,flashcard,Formula,Logical Equivalence Laws,ok,info:no Keywords line yet,6,11,,,,,State De Morgan's and Contrapositive Laws.
+FC-M1-DM-06,mid1+sem,DM,2,flashcard,Concept,Equivalence Relation Properties,ok,info:no Keywords line yet,7,15,,,,,What three properties define an Equivalence Relation?
+FC-M1-DM-07,mid1+sem,DM,2,flashcard,Concept,Partial Order (Poset),ok,info:no Keywords line yet,9,14,,,,,What three properties define a Partial Order Relation (Poset)?
+FC-M1-DM-08,mid1+sem,DM,2,flashcard,Procedure,Hasse Diagram Rules,ok,info:no Keywords line yet,9,22,,,,,How is a Hasse Diagram constructed from a Poset?
+FC-M1-DM-09,mid1+sem,DM,2,flashcard,Concept,Lattice Definition,ok,info:no Keywords line yet,7,26,,,,,What is a Lattice in discrete mathematics?
+FC-M1-DM-10,mid1+sem,DM,2,flashcard,Concept,Principle of Inclusion-Exclusion,ok,info:no Keywords line yet,10,5,,,,,State the Principle of Inclusion-Exclusion for 2 and 3 sets.
+FC-SEM-DM-31,mid1+sem,DM,2,flashcard,Compare,Set operations,ok,,6,34,,,,,"Define union, intersection, difference and complement."
+FC-SEM-DM-32,mid1+sem,DM,2,flashcard,Concept,Power set,ok,,9,27,,,,,How many subsets does an $n$-element set have?
+FC-SEM-DM-33,mid1+sem,DM,2,flashcard,Concept,Relation properties,ok,,6,17,,,,,"Define reflexive, symmetric and transitive relations."
+FC-SEM-DM-34,mid1+sem,DM,2,flashcard,Concept,Equivalence classes,ok,,8,24,,,,,How does an equivalence relation partition a set?
+FC-SEM-DM-35,mid1+sem,DM,2,flashcard,Concept,POSet and Hasse diagram,ok,,10,28,,,,,What is a Hasse diagram and what does it omit?
+FC-SEM-DM-36,mid1+sem,DM,2,flashcard,Compare,Function types,ok,,6,24,,,,,"Distinguish injective, surjective and bijective functions."
+FC-SEM-DM-37,mid1+sem,DM,2,flashcard,Procedure,Warshall algorithm,ok,,9,28,,,,,What does Warshall's algorithm compute and in what time?
+FC-SEM-DM-38,mid1+sem,DM,2,flashcard,Concept,Composition of relations,ok,,9,21,,,,,How is the composition $R \circ S$ of two relations defined?
+FC-SEM-DM-U2,mid1+sem,DM,2,flashcard,Concept,POSET Axioms,ok,info:no Keywords line yet,8,10,,,,,What three properties define a Partial Order (POSET)?
+FC-M1-DM-11,mid1+sem,DM,3,flashcard,Compare,Semigroup vs Monoid,ok,info:no Keywords line yet,7,24,,,,,What distinguishes a Semigroup from a Monoid?
+FC-M1-DM-12,mid1+sem,DM,3,flashcard,Concept,Group Axioms,ok,,13,26,,,,,"What four axioms must an algebraic system $(G, *)$ satisfy to be a Group?"
+FC-M1-DM-13,mid1+sem,DM,3,flashcard,Concept,Abelian Group,ok,,9,36,,,,,What additional condition makes a Group an Abelian Group?
+FC-M1-DM-14,mid1+sem,DM,3,flashcard,Formula,Lagrange's Theorem,ok,,7,26,,,,,What is the index of a subgroup?
+FC-M1-DM-15,mid1+sem,DM,3,flashcard,Concept,Cosets & Subgroups,ok,info:no Keywords line yet,11,16,,,,,What is a Left Coset of subgroup $H$ in $G$?
+FC-SEM-DM-39,mid1+sem,DM,3,flashcard,Concept,Algebraic system,ok,,5,26,,,,,What is an algebraic system?
+FC-SEM-DM-40,mid1+sem,DM,3,flashcard,Compare,Semigroup,ok,,10,21,,,,,What is the difference between a semigroup and a monoid?
+FC-SEM-DM-41,mid1+sem,DM,3,flashcard,Concept,Group axioms,ok,,5,27,,,,,State the four group axioms.
+FC-SEM-DM-42,mid1+sem,DM,3,flashcard,Concept,Homomorphism,ok,,8,20,,,,,What is a homomorphism between two algebraic systems?
+COA-M1-001,mid1+sem,COA,1,mcq,,2's Complement,ok,,10,,13,4,0,easy,What is the 2's complement of the binary number 0101100?
+COA-SEM-001,mid1+sem,COA,1,mcq,,2's Complement Range,ok,,13,,17,4,0,easy,What is the numerical range of an $n$-bit 2's complement signed integer?
+COA-SEM-037,mid1+sem,COA,1,mcq,,2's complement range,ok,,10,,23,4,2,easy,The range of integers representable in 8-bit two's complement is:
+COA-SEM-038,mid1+sem,COA,1,mcq,,IEEE 754 bias,ok,,11,,17,4,3,easy,The exponent bias used in IEEE 754 single-precision floating point is:
+COA-SEM-039,mid1+sem,COA,1,mcq,,BCD representation,ok,,10,,18,4,0,easy,The BCD representation 0111 1001 stands for the decimal number:
+COA-SEM-040,mid1+sem,COA,1,mcq,,Gray code,ok,,10,,22,4,1,medium,The Gray code equivalent of the binary number 1011 is:
+COA-SEM-041,mid1+sem,COA,1,mcq,,Universal gates,ok,,17,,16,4,2,easy,Which gate is called a universal gate because any Boolean function can be built from it al
+COA-SEM-042,mid1+sem,COA,1,mcq,,Parity,ok,,11,,22,4,3,easy,A parity bit is added to a binary code mainly to:
+COA-SEM-043,mid1+sem,COA,1,mcq,,Address space,ok,,13,,8,4,0,easy,A memory has a 12-bit address. How many addressable words does it have?
+COA-SEM-044,mid1+sem,COA,1,mcq,,Register transfer,ok,,6,,19,4,1,easy,The register transfer statement $R2 \leftarrow R1$ means:
+COA-SEM-045,mid1+sem,COA,1,mcq,,Functional units,ok,,12,,16,4,2,easy,Which set lists the three basic functional units of a digital computer?
+COA-SEM-073,mid1+sem,COA,1,mcq,,Hexadecimal conversion,ok,,10,,2,4,2,medium,The hexadecimal number $2F$ is equal to which decimal value?
+COA-M1-002,mid1+sem,COA,1,fib,,Booth's Multiplier,ok,,12,,12,0,,easy,Booth's algorithm performs signed multiplication directly on numbers in _______'s compleme
+COA-SEM-002,mid1+sem,COA,1,fib,,Booth's Algorithm,ok,,20,,12,0,,medium,"In Booth's signed multiplication algorithm, when the bit pair $(Q_0, Q_{-1})$ is $(1, 0)$,"
+COA-M1-003,mid1+sem,COA,2,mcq,,Microinstruction Sequencing,ok,,15,,18,4,1,medium,Which hardware component selects between the incrementer and branch address in a microprog
+COA-SEM-003,mid1+sem,COA,2,mcq,,Hardwired vs Microprogrammed,ok,,15,,22,4,1,easy,Which of the following is an advantage of Hardwired Control units over Microprogrammed Con
+COA-SEM-046,mid1+sem,COA,2,mcq,,Karnaugh map,ok,,10,,14,4,3,easy,A Karnaugh map for 4 variables has how many cells?
+COA-SEM-047,mid1+sem,COA,2,mcq,,Half adder,ok,,14,,19,4,0,easy,"For a half adder with inputs A and B, the sum and carry are:"
+COA-SEM-048,mid1+sem,COA,2,mcq,,Full adder,ok,,9,,13,4,1,easy,A full adder has how many inputs and outputs?
+COA-SEM-049,mid1+sem,COA,2,mcq,,Multiplexer,ok,,8,,14,4,2,easy,An 8-to-1 multiplexer requires how many select lines?
+COA-SEM-050,mid1+sem,COA,2,mcq,,Decoder,ok,,8,,12,4,3,easy,A 3-to-8 decoder has how many output lines?
+COA-SEM-051,mid1+sem,COA,2,mcq,,D flip-flop,ok,,8,,20,4,0,easy,The next-state equation of a D flip-flop is:
+COA-SEM-052,mid1+sem,COA,2,mcq,,Counter design,ok,,12,,20,4,1,medium,What is the minimum number of flip-flops needed for a modulo-10 counter?
+COA-SEM-053,mid1+sem,COA,2,mcq,,BCD adder,ok,,12,,20,4,2,medium,"In a BCD adder, correction is needed when the 4-bit sum is:"
+COA-SEM-054,mid1+sem,COA,2,mcq,,Magnitude comparator,ok,,10,,13,4,3,easy,A 4-bit magnitude comparator typically provides how many comparison outputs?
+COA-SEM-055,mid1+sem,COA,2,mcq,,Shift register,ok,,14,,12,4,0,easy,A 4-bit serial-in shift register needs how many clock pulses to load 4 bits?
+COA-SEM-074,mid1+sem,COA,2,mcq,,Multiplexer tree,ok,,15,,23,4,3,hard,How many 2-to-1 multiplexers are required to build an 8-to-1 multiplexer using a tree stru
+COA-SEM-004,mid1+sem,COA,2,fib,,Control Address Register,ok,,19,,17,0,,easy,"In a microprogrammed control unit, the address of the next microinstruction is held in the"
+COA-SEM-056,mid1+sem,COA,3,mcq,,Bus transfer,ok,,8,,19,4,1,easy,Multiple registers can share a common bus using:
+COA-SEM-057,mid1+sem,COA,3,mcq,,Arithmetic micro-operation,ok,,6,,16,4,2,easy,The micro-operation $R3 \leftarrow R1 + R2$ is classified as:
+COA-SEM-058,mid1+sem,COA,3,mcq,,Logic micro-operation,ok,,14,,16,4,3,medium,Which operation selectively complements the bits of a register where a mask has 1s?
+COA-SEM-059,mid1+sem,COA,3,mcq,,Arithmetic shift,ok,,9,,22,4,0,medium,An arithmetic right shift of a signed binary number:
+COA-SEM-060,mid1+sem,COA,3,mcq,,ALSU,ok,,9,,17,4,1,easy,The arithmetic logic shift unit selects its operation using:
+COA-M1-004,mid1+sem,COA,3,fib,,Fixed Point Addition,ok,,21,,19,0,,easy,"In fixed-point arithmetic, overflow during addition of two positive numbers is detected wh"
+FC-M1-COA-01,mid1+sem,COA,1,flashcard,Compare,Von Neumann Architecture vs Harvard,ok,info:no Keywords line yet,7,31,,,,,Differentiate between Von Neumann and Harvard architecture.
+FC-M1-COA-02,mid1+sem,COA,1,flashcard,Compare,Addressing Modes: Immediate vs Direct vs Indirect,ok,info:no Keywords line yet,7,32,,,,,"Compare Immediate, Direct, and Indirect addressing modes."
+FC-M1-COA-03,mid1+sem,COA,1,flashcard,Procedure,Relative & Indexed Addressing Modes,ok,info:no Keywords line yet,10,14,,,,,How are Effective Addresses calculated in Relative and Indexed addressing?
+FC-M1-COA-04,mid1+sem,COA,1,flashcard,Compare,Instruction Formats (3 vs 2 vs 1 vs 0 Address),ok,info:no Keywords line yet,10,34,,,,,"How do 3, 2, 1, and 0-address machines execute arithmetic?"
+FC-M1-COA-05,mid1+sem,COA,1,flashcard,Compare,Big-Endian vs Little-Endian,ok,info:no Keywords line yet,10,22,,,,,What is the difference between Big-Endian and Little-Endian byte ordering?
+FC-SEM-COA-23,mid1+sem,COA,1,flashcard,Concept,Number systems,ok,,7,16,,,,,Convert binary 1101 to decimal and hexadecimal.
+FC-SEM-COA-24,mid1+sem,COA,1,flashcard,Concept,Complements,ok,,11,22,,,,,How do you form the 2's complement of a binary number?
+FC-SEM-COA-25,mid1+sem,COA,1,flashcard,Concept,Fixed-point representation,ok,,4,31,,,,,What is fixed-point representation?
+FC-SEM-COA-26,mid1+sem,COA,1,flashcard,Concept,IEEE 754 format,ok,,11,28,,,,,What are the three fields of an IEEE 754 single-precision number?
+FC-SEM-COA-27,mid1+sem,COA,1,flashcard,Concept,BCD and Gray code,ok,,7,28,,,,,Why are BCD and Gray code used?
+FC-SEM-COA-28,mid1+sem,COA,1,flashcard,Concept,Error detection,ok,,8,29,,,,,How does a parity bit detect an error?
+FC-SEM-COA-29,mid1+sem,COA,1,flashcard,Concept,Logic gates,ok,,8,29,,,,,Why are NAND and NOR called universal gates?
+FC-SEM-COA-30,mid1+sem,COA,1,flashcard,Concept,Binary storage,ok,,11,29,,,,,What is a register and how does it store a bit?
+FC-SEM-COA-31,mid1+sem,COA,1,flashcard,Compare,Computer organization,ok,,6,26,,,,,Distinguish computer organization from computer architecture.
+FC-SEM-COA-U1,mid1+sem,COA,1,flashcard,Procedure,Booth's Multiplication Rules,ok,info:no Keywords line yet,8,28,,,,,"State Booth's Algorithm bit-pair operations for $(Q_0, Q_{-1})$."
+FC-M1-COA-06,mid1+sem,COA,2,flashcard,Compare,Hardwired vs Microprogrammed Control Unit,ok,info:no Keywords line yet,6,29,,,,,Compare Hardwired and Microprogrammed Control Units.
+FC-M1-COA-07,mid1+sem,COA,2,flashcard,Concept,Control Word in Register Organization,ok,info:no Keywords line yet,9,30,,,,,What are the components of a CPU Control Word?
+FC-M1-COA-08,mid1+sem,COA,2,flashcard,Concept,Stack Organization (Push/Pop),ok,info:no Keywords line yet,11,14,,,,,How do Push and Pop operations update the Stack Pointer (SP)?
+FC-SEM-COA-32,mid1+sem,COA,2,flashcard,Compare,Combinational vs sequential,ok,,5,28,,,,,Distinguish combinational and sequential circuits.
+FC-SEM-COA-33,mid1+sem,COA,2,flashcard,Compare,Adder circuits,ok,,8,31,,,,,Compare a half adder and a full adder.
+FC-SEM-COA-34,mid1+sem,COA,2,flashcard,Compare,Multiplexer and decoder,ok,,10,27,,,,,What is the difference between a multiplexer and a decoder?
+FC-SEM-COA-35,mid1+sem,COA,2,flashcard,Compare,Flip-flops,ok,,7,27,,,,,"Compare SR, JK, D and T flip-flops."
+FC-SEM-COA-36,mid1+sem,COA,2,flashcard,Procedure,Sequential design,ok,,7,32,,,,,List the steps in sequential circuit design.
+FC-SEM-COA-37,mid1+sem,COA,2,flashcard,Concept,Shift registers,ok,,10,23,,,,,What are the four modes of a bidirectional shift register?
+FC-SEM-COA-38,mid1+sem,COA,2,flashcard,Compare,Counters,ok,,5,29,,,,,Distinguish ripple and synchronous counters.
+FC-SEM-COA-39,mid1+sem,COA,2,flashcard,Concept,BCD adder,ok,,9,27,,,,,When and why does a BCD adder add 6?
+FC-SEM-COA-40,mid1+sem,COA,2,flashcard,Concept,Comparator,ok,,6,23,,,,,What does a magnitude comparator output?
+FC-SEM-COA-61,mid1+sem,COA,2,flashcard,Concept,Binary multiplier,ok,,9,49,,,,,How does a basic binary multiplier form partial products?
+FC-SEM-COA-62,mid1+sem,COA,2,flashcard,Concept,HDL for combinational circuits,ok,,8,43,,,,,How is a combinational circuit described in Verilog?
+FC-SEM-COA-U2,mid1+sem,COA,2,flashcard,Compare,Hardwired vs Microprogrammed Control,ok,,8,34,,,,,When is hardwired control preferred over microprogrammed control?
+FC-M1-COA-09,mid1+sem,COA,3,flashcard,Concept,Register Transfer Language (RTL),ok,info:no Keywords line yet,6,21,,,,,Explain the RTL notation: $P: R2 \leftarrow R1$.
+FC-M1-COA-10,mid1+sem,COA,3,flashcard,Procedure,Common Bus System using Multiplexers,ok,info:no Keywords line yet,20,21,,,,,How many multiplexers and select lines are needed to construct a common bus for 4 register
+FC-M1-COA-11,mid1+sem,COA,3,flashcard,Concept,Three-State Bus Buffers,ok,info:no Keywords line yet,9,22,,,,,What are the three states of a Tri-State Buffer?
+FC-M1-COA-12,mid1+sem,COA,3,flashcard,Compare,Shift Micro-operations: Logical vs Circular vs Arithmetic,ok,info:no Keywords line yet,7,39,,,,,"Differentiate between Logical, Circular, and Arithmetic Shifts."
+FC-M1-COA-13,mid1+sem,COA,3,flashcard,Concept,Arithmetic Logic Shift Unit (ALSU),ok,info:no Keywords line yet,9,26,,,,,What operations are integrated into a single ALSU stage?
+FC-SEM-COA-41,mid1+sem,COA,3,flashcard,Concept,Register transfer language,ok,,5,24,,,,,What is register transfer language?
+FC-SEM-COA-42,mid1+sem,COA,3,flashcard,Procedure,Bus construction,ok,,8,25,,,,,How is a common bus built from registers?
+FC-SEM-COA-43,mid1+sem,COA,3,flashcard,Concept,Arithmetic micro-operations,ok,,4,21,,,,,List four arithmetic micro-operations.
+FC-SEM-COA-44,mid1+sem,COA,3,flashcard,Concept,Logic micro-operations,ok,,11,31,,,,,"What do AND, OR and XOR masks do to a register?"
+FC-SEM-COA-45,mid1+sem,COA,3,flashcard,Compare,Shift micro-operations,ok,,5,29,,,,,Distinguish logical and arithmetic shifts.
+FC-SEM-COA-46,mid1+sem,COA,3,flashcard,Concept,ALSU,ok,,8,27,,,,,What does the arithmetic logic shift unit do?
+OOPJ-M1-001,mid1+sem,OOPJ,1,mcq,,Java Platform Independence,ok,,8,,18,4,2,easy,Java achieves platform independence through which architectural mechanism?
+OOPJ-SEM-001,mid1+sem,OOPJ,1,mcq,,JVM Bytecode,ok,,9,,17,4,3,easy,What is Java bytecode and how is it executed?
+OOPJ-SEM-037,mid1+sem,OOPJ,1,mcq,,JVM,ok,,6,,14,4,1,easy,Java source code is compiled into:
+OOPJ-SEM-038,mid1+sem,OOPJ,1,mcq,,JDK and JRE,ok,,8,,14,4,2,easy,Which statement about JDK and JRE is correct?
+OOPJ-SEM-039,mid1+sem,OOPJ,1,mcq,,Primitive sizes,ok,,8,,18,4,3,easy,How many bytes does a Java int occupy?
+OOPJ-SEM-040,mid1+sem,OOPJ,1,mcq,,Narrowing conversion,ok,,10,,16,4,0,medium,Assigning a double to an int without a cast is:
+OOPJ-SEM-041,mid1+sem,OOPJ,1,mcq,,Switch statement,ok,,10,,17,4,1,medium,Which types are allowed in a classic Java switch selector?
+OOPJ-SEM-042,mid1+sem,OOPJ,1,mcq,,Loop control,ok,,11,,19,4,2,easy,Which loop is guaranteed to execute its body at least once?
+OOPJ-SEM-043,mid1+sem,OOPJ,1,mcq,,Constructor,ok,,4,,18,4,3,easy,A Java constructor has:
+OOPJ-SEM-044,mid1+sem,OOPJ,1,mcq,,static members,ok,,6,,19,4,0,medium,A static method can directly access:
+OOPJ-SEM-045,mid1+sem,OOPJ,1,mcq,,this reference,ok,,5,,22,4,1,easy,The this keyword refers to:
+OOPJ-SEM-073,mid1+sem,OOPJ,1,mcq,,Increment operators,ok,,11,,22,4,1,hard,What is printed by `int x = 5; System.out.println(x++ + ++x);`?
+OOPJ-SEM-002,mid1+sem,OOPJ,1,fib,,Polymorphism Types,ok,,12,,17,0,,easy,Method overloading in Java is an example of compile-time (or _______) polymorphism.
+OOPJ-SEM-003,mid1+sem,OOPJ,2,mcq,,Interfaces & Multiple Inheritance,ok,,14,,24,4,0,medium,Why does Java support multiple inheritance of interfaces but not multiple inheritance of c
+OOPJ-SEM-046,mid1+sem,OOPJ,2,mcq,,Inheritance,ok,,12,,15,4,2,easy,Which keyword is used by a subclass to call its superclass constructor?
+OOPJ-SEM-047,mid1+sem,OOPJ,2,mcq,,final keyword,ok,,5,,16,4,3,easy,A final method in Java:
+OOPJ-SEM-048,mid1+sem,OOPJ,2,mcq,,Overriding,ok,,3,,14,4,0,easy,Method overriding requires:
+OOPJ-SEM-049,mid1+sem,OOPJ,2,mcq,,Abstract class,ok,,8,,18,4,1,medium,Which statement about an abstract class is correct?
+OOPJ-SEM-050,mid1+sem,OOPJ,2,mcq,,Interface fields,ok,,8,,14,4,2,medium,Fields declared in a Java interface are implicitly:
+OOPJ-SEM-051,mid1+sem,OOPJ,2,mcq,,Packages,ok,,6,,12,4,3,medium,The statement package com.example; must appear:
+OOPJ-SEM-052,mid1+sem,OOPJ,2,mcq,,Access modifiers,ok,,12,,14,4,0,easy,Which access modifier makes a member visible only within its own class?
+OOPJ-SEM-053,mid1+sem,OOPJ,2,mcq,,Polymorphism,ok,,7,,17,4,1,medium,Runtime polymorphism in Java is achieved through:
+OOPJ-SEM-054,mid1+sem,OOPJ,2,mcq,,Substitutability,ok,,17,,14,4,2,medium,The principle that a subclass object can be used wherever a superclass object is expected 
+OOPJ-SEM-074,mid1+sem,OOPJ,2,mcq,,Runtime polymorphism,ok,,20,,25,4,2,hard,"If `A a = new B();` and both A and B define `show()`, which method runs when `a.show()` is"
+OOPJ-M1-002,mid1+sem,OOPJ,2,fib,,Interface Keyword,ok,,11,,16,0,,easy,A class implements an interface in Java using the _______ keyword.
+OOPJ-SEM-004,mid1+sem,OOPJ,2,fib,,Super Keyword,ok,,17,,17,0,,easy,"To explicitly invoke an immediate superclass constructor, a subclass constructor must call"
+OOPJ-M1-003,mid1+sem,OOPJ,3,mcq,,Exception Handling,ok,,15,,18,4,3,easy,Which block in Java exception handling ALWAYS executes whether an exception is thrown or n
+OOPJ-SEM-055,mid1+sem,OOPJ,3,mcq,,Exception hierarchy,ok,,5,,12,4,3,easy,All Java exceptions ultimately extend:
+OOPJ-SEM-056,mid1+sem,OOPJ,3,mcq,,Checked exceptions,ok,,5,,18,4,0,easy,A checked exception must be:
+OOPJ-SEM-057,mid1+sem,OOPJ,3,mcq,,finally block,ok,,4,,23,4,1,easy,A finally block executes:
+OOPJ-SEM-058,mid1+sem,OOPJ,3,mcq,,throw vs throws,ok,,8,,16,4,2,medium,The difference between throw and throws is that:
+FC-M1-OOPJ-01,mid1+sem,OOPJ,1,flashcard,Concept,Four Core OOP Pillars,ok,info:no Keywords line yet,10,43,,,,,Name and define the four fundamental OOP principles in Java.
+FC-M1-OOPJ-02,mid1+sem,OOPJ,1,flashcard,Compare,JVM vs JRE vs JDK,ok,info:no Keywords line yet,6,31,,,,,"Distinguish between JVM, JRE, and JDK."
+FC-M1-OOPJ-03,mid1+sem,OOPJ,1,flashcard,Compare,Type Casting (Widening vs Narrowing),ok,info:no Keywords line yet,11,33,,,,,What is the difference between Widening and Narrowing conversion in Java?
+FC-SEM-OOPJ-23,mid1+sem,OOPJ,1,flashcard,Concept,OOP principles,ok,,8,18,,,,,Name the four core principles of object-oriented programming.
+FC-SEM-OOPJ-24,mid1+sem,OOPJ,1,flashcard,Concept,Java buzzwords,ok,,8,19,,,,,List five Java buzzwords and what each means.
+FC-SEM-OOPJ-25,mid1+sem,OOPJ,1,flashcard,Compare,"JVM, JRE and JDK",ok,,5,24,,,,,"Distinguish JVM, JRE and JDK."
+FC-SEM-OOPJ-26,mid1+sem,OOPJ,1,flashcard,Concept,Primitive types,ok,,9,30,,,,,List the eight Java primitive types and their sizes.
+FC-SEM-OOPJ-27,mid1+sem,OOPJ,1,flashcard,Compare,Type casting,ok,,5,30,,,,,Distinguish widening and narrowing conversion.
+FC-SEM-OOPJ-28,mid1+sem,OOPJ,1,flashcard,Procedure,Constructors,ok,,4,24,,,,,What is constructor overloading?
+FC-SEM-OOPJ-29,mid1+sem,OOPJ,1,flashcard,Concept,static,ok,,6,30,,,,,What does the static keyword mean?
+FC-SEM-OOPJ-30,mid1+sem,OOPJ,1,flashcard,Concept,Garbage collection,ok,,6,26,,,,,How does Java garbage collection work?
+FC-SEM-OOPJ-31,mid1+sem,OOPJ,1,flashcard,Concept,Recursion,ok,,8,31,,,,,What two parts must every recursive method have?
+FC-SEM-OOPJ-63,mid1+sem,OOPJ,1,flashcard,Compare,Nested and inner classes,ok,,8,48,,,,,"Distinguish static nested, inner, local, and anonymous classes."
+FC-SEM-OOPJ-64,mid1+sem,OOPJ,1,flashcard,Concept,String class basics,ok,,12,43,,,,,"Why is a Java String immutable, and what is the string pool?"
+FC-SEM-OOPJ-U1,mid1+sem,OOPJ,1,flashcard,Compare,Method Overloading vs Overriding,ok,info:no Keywords line yet,6,29,,,,,Differentiate Method Overloading and Method Overriding.
+FC-M1-OOPJ-04,mid1+sem,OOPJ,2,flashcard,Compare,Method Overloading vs Overriding,ok,info:no Keywords line yet,8,25,,,,,Compare Method Overloading and Method Overriding in Java.
+FC-M1-OOPJ-05,mid1+sem,OOPJ,2,flashcard,Concept,The `this` and `super` Keywords,ok,info:no Keywords line yet,11,32,,,,,What are the primary uses of `this` and `super` in Java?
+FC-M1-OOPJ-06,mid1+sem,OOPJ,2,flashcard,Compare,Abstract Class vs Interface,ok,info:no Keywords line yet,11,29,,,,,Key differences between Abstract Classes and Interfaces in Java (Java 8+).
+FC-M1-OOPJ-07,mid1+sem,OOPJ,2,flashcard,Concept,The `final` Keyword,ok,info:no Keywords line yet,12,24,,,,,"What happens when `final` is applied to a Variable, Method, or Class?"
+FC-SEM-OOPJ-32,mid1+sem,OOPJ,2,flashcard,Concept,Inheritance,ok,,9,24,,,,,What is inheritance and what is its main benefit?
+FC-SEM-OOPJ-33,mid1+sem,OOPJ,2,flashcard,Concept,super and final,ok,,6,24,,,,,What do super and final do?
+FC-SEM-OOPJ-34,mid1+sem,OOPJ,2,flashcard,Compare,Overloading vs overriding,ok,,6,25,,,,,Compare method overloading and method overriding.
+FC-SEM-OOPJ-35,mid1+sem,OOPJ,2,flashcard,Compare,Abstract class vs interface,ok,,7,31,,,,,Compare an abstract class and an interface.
+FC-SEM-OOPJ-36,mid1+sem,OOPJ,2,flashcard,Concept,Access modifiers,ok,,10,18,,,,,Order the four access levels from most to least open.
+FC-SEM-OOPJ-37,mid1+sem,OOPJ,2,flashcard,Concept,Packages,ok,,8,21,,,,,What is a package and why use one?
+FC-SEM-OOPJ-38,mid1+sem,OOPJ,2,flashcard,Concept,Interface,ok,,7,24,,,,,How does a class implement an interface?
+FC-SEM-OOPJ-39,mid1+sem,OOPJ,2,flashcard,Concept,Forms of inheritance,ok,,5,20,,,,,Name three forms of inheritance.
+FC-SEM-OOPJ-U2,mid1+sem,OOPJ,2,flashcard,Compare,Abstract Class vs Interface,ok,info:no Keywords line yet,8,25,,,,,Compare Abstract Classes and Interfaces in Java 8+.
+FC-M1-OOPJ-08,mid1+sem,OOPJ,3,flashcard,Compare,Checked vs Unchecked Exceptions,ok,info:no Keywords line yet,8,30,,,,,Distinguish between Checked and Unchecked Exceptions in Java.
+FC-M1-OOPJ-09,mid1+sem,OOPJ,3,flashcard,Compare,`throw` vs `throws`,ok,info:no Keywords line yet,8,36,,,,,Compare the `throw` and `throws` keywords in Java.
+FC-M1-OOPJ-10,mid1+sem,OOPJ,3,flashcard,Concept,The `finally` Block Guarantee,ok,info:no Keywords line yet,8,24,,,,,When does the `finally` block execute in Java?
+FC-M1-OOPJ-11,mid1+sem,OOPJ,3,flashcard,Concept,Custom User-Defined Exception,ok,info:no Keywords line yet,10,27,,,,,How do you create a custom exception class in Java?
+FC-SEM-OOPJ-41,mid1+sem,OOPJ,3,flashcard,Concept,Exception handling,ok,,8,26,,,,,What is an exception and why handle it?
+FC-SEM-OOPJ-42,mid1+sem,OOPJ,3,flashcard,Compare,Checked vs unchecked,ok,,5,26,,,,,Distinguish checked and unchecked exceptions.
+FC-SEM-OOPJ-43,mid1+sem,OOPJ,3,flashcard,Concept,try-catch-finally,ok,,8,28,,,,,"Explain the order of try, catch and finally."
+FC-SEM-OOPJ-44,mid1+sem,OOPJ,3,flashcard,Concept,Custom exceptions,ok,,7,27,,,,,How do you create a custom exception?
+FC-SEM-OOPJ-65,mid1+sem,OOPJ,3,flashcard,Concept,Built-in exceptions,ok,,7,30,,,,,Name four common built-in Java runtime exceptions.
+DBMS-M1-001,mid1+sem,DBMS,1,mcq,,Database Users,ok,,16,,15,4,2,easy,Which database user interacts with the system primarily by invoking pre-written applicatio
+DBMS-SEM-001,mid1+sem,DBMS,1,mcq,,Three-Schema Architecture,ok,,20,,19,4,3,easy,Which level of the ANSI-SPARC three-schema architecture describes what data is stored in t
+DBMS-SEM-037,mid1+sem,DBMS,1,mcq,,DBMS vs file system,ok,,14,,16,4,1,easy,The main advantage of a DBMS over a file-processing system is that a DBMS:
+DBMS-SEM-038,mid1+sem,DBMS,1,mcq,,Data independence,ok,,9,,20,4,2,medium,Logical data independence means the ability to change the:
+DBMS-SEM-039,mid1+sem,DBMS,1,mcq,,DBA,ok,,7,,15,4,3,easy,Which task belongs to the database administrator?
+DBMS-SEM-040,mid1+sem,DBMS,1,mcq,,Weak entity,ok,,7,,19,4,0,easy,A weak entity set is one that:
+DBMS-SEM-041,mid1+sem,DBMS,1,mcq,,Cardinality,ok,,8,,18,4,1,medium,A many-to-one relationship from A to B means:
+DBMS-SEM-042,mid1+sem,DBMS,1,mcq,,Specialization,ok,,9,,13,4,2,medium,Specialization in the ER model is the process of:
+DBMS-SEM-043,mid1+sem,DBMS,1,mcq,,ER-to-relational mapping,ok,,12,,14,4,3,medium,"When mapping a many-to-many relationship to relations, the usual approach is to:"
+DBMS-SEM-044,mid1+sem,DBMS,1,mcq,,Entity vs attribute,ok,,12,,19,4,0,medium,Which item is best modelled as an entity rather than an attribute?
+DBMS-SEM-072,mid1+sem,DBMS,1,mcq,,Mapping many-to-many relationships,ok,,15,,21,4,0,hard,A many-to-many relationship between entity sets A and B is mapped to relations by creating
+DBMS-SEM-002,mid1+sem,DBMS,1,fib,,Physical Data Independence,ok,,21,,18,0,,easy,The capacity to change the internal physical storage schema without having to alter the co
+DBMS-SEM-003,mid1+sem,DBMS,2,mcq,,Relational Algebra Operations,ok,,12,,16,4,0,easy,Which relational algebra operation selects rows that satisfy a specified predicate conditi
+DBMS-SEM-045,mid1+sem,DBMS,2,mcq,,Relational model terms,ok,,12,,24,4,1,easy,"In the relational model, a row of a table is called a:"
+DBMS-SEM-046,mid1+sem,DBMS,2,mcq,,Primary key,ok,,5,,17,4,2,easy,A primary key must be:
+DBMS-SEM-047,mid1+sem,DBMS,2,mcq,,Foreign key,ok,,4,,20,4,3,easy,A foreign key enforces:
+DBMS-SEM-048,mid1+sem,DBMS,2,mcq,,Relational algebra,ok,,11,,9,4,0,easy,The relational algebra operation that selects rows satisfying a condition is:
+DBMS-SEM-049,mid1+sem,DBMS,2,mcq,,Projection,ok,,5,,17,4,1,easy,"The projection operator $\pi_{name, age}(Student)$ returns:"
+DBMS-SEM-050,mid1+sem,DBMS,2,mcq,,Natural join,ok,,6,,20,4,2,medium,A natural join of two relations:
+DBMS-SEM-051,mid1+sem,DBMS,2,mcq,,Set operations,ok,,13,,15,4,3,medium,"For $R \cup S$ to be valid in relational algebra, $R$ and $S$ must be:"
+DBMS-SEM-052,mid1+sem,DBMS,2,mcq,,Relational calculus,ok,,3,,19,4,0,medium,Relational calculus is:
+DBMS-SEM-073,mid1+sem,DBMS,2,mcq,,Natural join cardinality,ok,,25,,18,4,1,hard,Relation R has 4 tuples and relation S has 3 tuples. What is the maximum possible number o
+DBMS-M1-002,mid1+sem,DBMS,2,fib,,Candidate Key,ok,,12,,16,0,,easy,A minimal superkey with no redundant attributes is called a _______ key.
+DBMS-SEM-004,mid1+sem,DBMS,2,fib,,Referential Integrity,ok,,22,,19,0,,easy,A foreign key in a child table enforces referential integrity by pointing to a primary or 
+DBMS-M1-003,mid1+sem,DBMS,3,mcq,,Attribute Closure,ok,,14,,20,4,3,medium,The attribute closure $X^+$ with respect to a set of functional dependencies $F$ is:
+DBMS-SEM-053,mid1+sem,DBMS,3,mcq,,SQL SELECT,ok,,8,,10,4,1,easy,Which SQL clause filters individual rows before grouping?
+DBMS-SEM-054,mid1+sem,DBMS,3,mcq,,Aggregation,ok,,10,,15,4,2,easy,Which function returns the number of rows in a group?
+DBMS-SEM-055,mid1+sem,DBMS,3,mcq,,Nested queries,ok,,7,,19,4,3,medium,A subquery used with IN must return:
+DBMS-SEM-056,mid1+sem,DBMS,3,mcq,,Triggers,ok,,9,,19,4,0,easy,A database trigger is a block of code that:
+DBMS-SEM-057,mid1+sem,DBMS,3,mcq,,NULL semantics,ok,,9,,18,4,1,medium,"In SQL, the comparison NULL = NULL evaluates to:"
+FC-M1-DBMS-01,mid1+sem,DBMS,1,flashcard,Concept,Three-Schema Architecture & Data Independence,ok,info:no Keywords line yet,13,32,,,,,What are the three levels of database architecture and types of data independence?
+FC-M1-DBMS-02,mid1+sem,DBMS,1,flashcard,Compare,Primary Key vs Unique Key vs Super Key,ok,info:no Keywords line yet,9,34,,,,,"Differentiate between Super Key, Candidate Key, and Primary Key."
+FC-M1-DBMS-03,mid1+sem,DBMS,1,flashcard,Concept,ER Model: Cardinality & Participation,ok,info:no Keywords line yet,9,21,,,,,Explain Mapping Cardinality and Participation Constraints in ER diagrams.
+FC-SEM-DBMS-23,mid1+sem,DBMS,1,flashcard,Concept,DBMS advantages,ok,,9,20,,,,,List four advantages of a DBMS over file processing.
+FC-SEM-DBMS-24,mid1+sem,DBMS,1,flashcard,Concept,Three-level architecture,ok,,7,24,,,,,Describe the three levels of database abstraction.
+FC-SEM-DBMS-25,mid1+sem,DBMS,1,flashcard,Compare,Data independence,ok,,6,26,,,,,Distinguish physical and logical data independence.
+FC-SEM-DBMS-26,mid1+sem,DBMS,1,flashcard,Concept,DBA duties,ok,,6,23,,,,,List four responsibilities of a DBA.
+FC-SEM-DBMS-27,mid1+sem,DBMS,1,flashcard,Concept,ER model,ok,,10,28,,,,,"What is an entity, an attribute and an entity set?"
+FC-SEM-DBMS-28,mid1+sem,DBMS,1,flashcard,Concept,Weak entity,ok,,8,32,,,,,How is a weak entity represented and identified?
+FC-SEM-DBMS-29,mid1+sem,DBMS,1,flashcard,Concept,Cardinality ratios,ok,,6,29,,,,,"Explain 1:1, 1:N and M:N relationships."
+FC-SEM-DBMS-30,mid1+sem,DBMS,1,flashcard,Compare,Specialization and generalization,ok,,4,24,,,,,Compare specialization and generalization.
+FC-SEM-DBMS-31,mid1+sem,DBMS,1,flashcard,Concept,ER-to-relational mapping,ok,,9,35,,,,,How do you map a 1:N relationship to relations?
+FC-SEM-DBMS-U1,mid1+sem,DBMS,1,flashcard,Concept,Three-Schema Architecture,ok,info:no Keywords line yet,8,33,,,,,Name the 3 levels of ANSI-SPARC Database Architecture.
+FC-M1-DBMS-04,mid1+sem,DBMS,2,flashcard,Concept,Relational Integrity Constraints,ok,,10,35,,,,,What are the three core integrity constraints in relational databases?
+FC-M1-DBMS-05,mid1+sem,DBMS,2,flashcard,Concept,Fundamental Relational Algebra Operations,ok,info:no Keywords line yet,8,39,,,,,List the 5 basic operations of Relational Algebra.
+FC-M1-DBMS-06,mid1+sem,DBMS,2,flashcard,Compare,Natural Join vs Theta Join,ok,info:no Keywords line yet,10,33,,,,,What is the difference between Natural Join and Theta Join?
+FC-SEM-DBMS-32,mid1+sem,DBMS,2,flashcard,Concept,Relational terms,ok,,6,23,,,,,"Define relation, tuple, attribute and domain."
+FC-SEM-DBMS-33,mid1+sem,DBMS,2,flashcard,Compare,Keys,ok,,8,29,,,,,"Distinguish super key, candidate key and primary key."
+FC-SEM-DBMS-34,mid1+sem,DBMS,2,flashcard,Concept,Referential integrity,ok,,4,28,,,,,What is referential integrity?
+FC-SEM-DBMS-35,mid1+sem,DBMS,2,flashcard,Concept,Relational algebra operators,ok,,7,23,,,,,Name the six basic relational algebra operators.
+FC-SEM-DBMS-36,mid1+sem,DBMS,2,flashcard,Compare,Join types,ok,,7,27,,,,,"Compare theta join, equijoin and natural join."
+FC-SEM-DBMS-37,mid1+sem,DBMS,2,flashcard,Concept,Views,ok,,8,31,,,,,What is a view and why use one?
+FC-SEM-DBMS-38,mid1+sem,DBMS,2,flashcard,Compare,ALTER and DROP,ok,,6,25,,,,,Distinguish ALTER TABLE and DROP TABLE.
+FC-SEM-DBMS-39,mid1+sem,DBMS,2,flashcard,Compare,Relational calculus,ok,,6,27,,,,,Distinguish tuple and domain relational calculus.
+FC-SEM-DBMS-40,mid1+sem,DBMS,2,flashcard,Concept,Integrity constraints,ok,,6,22,,,,,Name four types of integrity constraints.
+FC-SEM-DBMS-65,mid1+sem,DBMS,2,flashcard,Concept,Domain relational calculus,ok,,8,42,,,,,How does domain relational calculus express a query?
+FC-SEM-DBMS-U2,mid1+sem,DBMS,2,flashcard,Concept,Relational Algebra Operators,ok,info:no Keywords line yet,7,36,,,,,List the 5 fundamental Relational Algebra operators.
+FC-M1-DBMS-07,mid1+sem,DBMS,3,flashcard,Compare,"SQL Joins: Inner vs Outer (Left, Right, Full)",ok,info:no Keywords line yet,9,51,,,,,Distinguish between Inner Join and Outer Joins in SQL.
+FC-M1-DBMS-08,mid1+sem,DBMS,3,flashcard,Compare,WHERE vs HAVING Clause,ok,info:no Keywords line yet,10,28,,,,,What is the difference between WHERE and HAVING in SQL?
+FC-M1-DBMS-09,mid1+sem,DBMS,3,flashcard,Concept,SQL Triggers (ECA Architecture),ok,info:no Keywords line yet,8,31,,,,,Explain the Event-Condition-Action (ECA) rule in SQL Triggers.
+FC-SEM-DBMS-41,mid1+sem,DBMS,3,flashcard,Answer-skeleton,SQL query form,ok,,9,30,,,,,Write the logical order of a basic SQL query.
+FC-SEM-DBMS-42,mid1+sem,DBMS,3,flashcard,Compare,Set operators,ok,,7,27,,,,,"Compare UNION, UNION ALL, INTERSECT and EXCEPT."
+FC-SEM-DBMS-43,mid1+sem,DBMS,3,flashcard,Concept,Nested queries,ok,,8,30,,,,,"When use IN, EXISTS and a scalar subquery?"
+FC-SEM-DBMS-44,mid1+sem,DBMS,3,flashcard,Concept,Aggregation,ok,,6,21,,,,,Name the five SQL aggregate functions.
+FC-SEM-DBMS-45,mid1+sem,DBMS,3,flashcard,Concept,NULL handling,ok,,7,32,,,,,Why does NULL = NULL return UNKNOWN?
+FC-SEM-DBMS-46,mid1+sem,DBMS,3,flashcard,Concept,SQL constraints,ok,,5,27,,,,,Name five SQL table constraints.
+FC-SEM-DBMS-47,mid1+sem,DBMS,3,flashcard,Concept,Triggers,ok,,7,27,,,,,What are the parts of a trigger?
+SE-M1-001,mid1+sem,SE,1,mcq,,Waterfall Strengths,ok,,10,,16,4,1,easy,The Classical Waterfall model is best suited for projects where:
+SE-SEM-001,mid1+sem,SE,1,mcq,,Waterfall vs Agile,ok,,16,,14,4,2,easy,"Which software process model is most appropriate when requirements are highly dynamic, amb"
+SE-SEM-037,mid1+sem,SE,1,mcq,,Software characteristics,ok,,6,,20,4,0,easy,Which property distinguishes software from hardware?
+SE-SEM-038,mid1+sem,SE,1,mcq,,Software myths,ok,,8,,19,4,1,easy,Which statement is a management myth about software?
+SE-SEM-039,mid1+sem,SE,1,mcq,,Layered technology,ok,,7,,15,4,2,medium,The four layers of software engineering are:
+SE-SEM-040,mid1+sem,SE,1,mcq,,Umbrella activities,ok,,12,,16,4,3,medium,Which of the following is an umbrella activity in a software process?
+SE-SEM-041,mid1+sem,SE,1,mcq,,CMMI,ok,,7,,11,4,0,easy,How many maturity levels does CMMI define?
+SE-SEM-042,mid1+sem,SE,1,mcq,,Waterfall model,ok,,10,,14,4,1,easy,The main weakness of the waterfall model is that it:
+SE-SEM-043,mid1+sem,SE,1,mcq,,Spiral model,ok,,7,,19,4,2,medium,The spiral model is particularly suitable when:
+SE-SEM-044,mid1+sem,SE,1,mcq,,Incremental model,ok,,6,,17,4,3,easy,"In incremental development, the system is:"
+SE-SEM-045,mid1+sem,SE,1,mcq,,Agile,ok,,8,,14,4,0,easy,Which value is central to the Agile Manifesto?
+SE-SEM-072,mid1+sem,SE,1,mcq,,CMMI level 5,ok,,11,,18,4,3,medium,"In CMMI, an organisation at maturity Level 5 is described as:"
+SE-SEM-002,mid1+sem,SE,1,fib,,Spiral Model Risk,ok,,20,,19,0,,easy,The defining core feature of Boehm's Spiral Model that sets it apart from other lifecycle 
+SE-SEM-003,mid1+sem,SE,2,mcq,,Functional vs Non-Functional,ok,,12,,14,4,3,easy,Which of the following is an example of a Non-Functional Requirement (NFR)?
+SE-SEM-046,mid1+sem,SE,2,mcq,,Functional requirements,ok,,4,,16,4,1,easy,A functional requirement describes:
+SE-SEM-047,mid1+sem,SE,2,mcq,,Non-functional requirements,ok,,5,,15,4,2,easy,Which is a non-functional requirement?
+SE-SEM-048,mid1+sem,SE,2,mcq,,SRS characteristics,ok,,8,,14,4,3,easy,Which property is essential in a good SRS?
+SE-SEM-049,mid1+sem,SE,2,mcq,,Requirements elicitation,ok,,12,,15,4,0,medium,Which technique is used to understand how users actually perform their work?
+SE-SEM-050,mid1+sem,SE,2,mcq,,Requirements validation,ok,,3,,15,4,1,medium,Requirements validation asks:
+SE-SEM-051,mid1+sem,SE,2,mcq,,Requirements management,ok,,4,,16,4,2,medium,Requirements traceability helps to:
+SE-SEM-052,mid1+sem,SE,2,mcq,,Feasibility study,ok,,14,,13,4,3,easy,Which feasibility is concerned with whether the project can be built with current technolo
+SE-SEM-053,mid1+sem,SE,2,mcq,,User vs system requirements,ok,,3,,15,4,0,medium,System requirements are:
+SE-SEM-073,mid1+sem,SE,2,mcq,,Requirements traceability,ok,,8,,21,4,0,hard,A requirements traceability matrix is used mainly to:
+SE-M1-002,mid1+sem,SE,2,fib,,UML Use Case,ok,,16,,14,0,,easy,"In a UML Use Case diagram, external entities that interact with the system are called ____"
+SE-SEM-004,mid1+sem,SE,2,fib,,SRS Document Standard,ok,,13,,14,0,,medium,The Software Requirements Specification (SRS) document standard is defined by IEEE Standar
+SE-M1-003,mid1+sem,SE,3,mcq,,Architectural Styles,ok,,19,,13,4,2,easy,"Which software architectural style organizes subsystems into layers, where each layer prov"
+SE-SEM-054,mid1+sem,SE,3,mcq,,Cohesion,ok,,8,,16,4,1,easy,Which type of cohesion is the most desirable?
+SE-SEM-055,mid1+sem,SE,3,mcq,,Coupling,ok,,8,,14,4,2,medium,Which type of coupling is the least desirable?
+SE-SEM-056,mid1+sem,SE,3,mcq,,Design model,ok,,5,,13,4,3,easy,The design model typically includes:
+SE-SEM-057,mid1+sem,SE,3,mcq,,Architectural styles,ok,,7,,18,4,0,easy,A layered architecture organises a system as:
+FC-M1-SE-01,mid1+sem,SE,1,flashcard,Compare,Waterfall vs Agile Scrum,ok,info:no Keywords line yet,7,26,,,,,Compare the Waterfall model with Agile Scrum.
+FC-M1-SE-02,mid1+sem,SE,1,flashcard,Concept,Spiral Model Risk Driven Engineering,ok,info:no Keywords line yet,9,29,,,,,What are the four quadrants of Boehm's Spiral Model?
+FC-M1-SE-03,mid1+sem,SE,1,flashcard,Compare,Functional vs Non-Functional Requirements,ok,info:no Keywords line yet,5,24,,,,,Differentiate Functional and Non-Functional Requirements.
+FC-SEM-SE-23,mid1+sem,SE,1,flashcard,Compare,Software characteristics,ok,,8,31,,,,,List four characteristics that distinguish software from hardware.
+FC-SEM-SE-24,mid1+sem,SE,1,flashcard,Concept,Software myths,ok,,10,27,,,,,Give one management myth and one practitioner myth about software.
+FC-SEM-SE-25,mid1+sem,SE,1,flashcard,Concept,Layered technology,ok,,7,22,,,,,Name the four layers of software engineering.
+FC-SEM-SE-26,mid1+sem,SE,1,flashcard,Concept,Umbrella activities,ok,,4,22,,,,,Name five umbrella activities.
+FC-SEM-SE-27,mid1+sem,SE,1,flashcard,Concept,CMMI levels,ok,,6,20,,,,,List the five CMMI maturity levels.
+FC-SEM-SE-28,mid1+sem,SE,1,flashcard,Concept,Waterfall model,ok,,6,24,,,,,When is the waterfall model appropriate?
+FC-SEM-SE-29,mid1+sem,SE,1,flashcard,Concept,Spiral model,ok,,9,25,,,,,What are the four quadrants of the spiral model?
+FC-SEM-SE-30,mid1+sem,SE,1,flashcard,Compare,Incremental vs iterative,ok,,5,24,,,,,Distinguish incremental and iterative development.
+FC-SEM-SE-31,mid1+sem,SE,1,flashcard,Concept,Agile principles,ok,,4,26,,,,,State three Agile principles.
+FC-SEM-SE-32,mid1+sem,SE,1,flashcard,Concept,Concurrent model,ok,,6,29,,,,,What is the concurrent development model?
+FC-SEM-SE-U1,mid1+sem,SE,1,flashcard,Compare,SDLC Models Comparison,ok,info:no Keywords line yet,9,22,,,,,When should you choose Waterfall vs Spiral vs Agile?
+FC-M1-SE-04,mid1+sem,SE,2,flashcard,Concept,Characteristics of a Good SRS Document (IEEE 830),ok,info:no Keywords line yet,11,34,,,,,List five essential quality criteria of an IEEE 830 SRS document.
+FC-M1-SE-05,mid1+sem,SE,2,flashcard,Compare,Use Case Relationships: <<include>> vs <<extend>>,ok,info:no Keywords line yet,10,34,,,,,Explain <<include>> and <<extend>> relationships in UML Use Case diagrams.
+FC-SEM-SE-33,mid1+sem,SE,2,flashcard,Concept,Functional requirements,ok,,10,28,,,,,Give two examples of functional requirements for a library system.
+FC-SEM-SE-34,mid1+sem,SE,2,flashcard,Concept,Non-functional requirements,ok,,6,16,,,,,Name four categories of non-functional requirements.
+FC-SEM-SE-35,mid1+sem,SE,2,flashcard,Concept,SRS,ok,,7,21,,,,,What should a software requirements specification contain?
+FC-SEM-SE-36,mid1+sem,SE,2,flashcard,Concept,SRS quality,ok,,7,19,,,,,List four desirable properties of an SRS.
+FC-SEM-SE-37,mid1+sem,SE,2,flashcard,Concept,Elicitation techniques,ok,,5,20,,,,,Name four requirements elicitation techniques.
+FC-SEM-SE-38,mid1+sem,SE,2,flashcard,Concept,Requirements validation,ok,,5,18,,,,,Name three requirements validation techniques.
+FC-SEM-SE-39,mid1+sem,SE,2,flashcard,Concept,Requirements management,ok,,5,26,,,,,Why is requirements traceability important?
+FC-SEM-SE-40,mid1+sem,SE,2,flashcard,Concept,Feasibility study,ok,,5,17,,,,,Name four types of feasibility.
+FC-SEM-SE-41,mid1+sem,SE,2,flashcard,Compare,User vs system requirements,ok,,6,26,,,,,Distinguish user requirements from system requirements.
+FC-SEM-SE-U2,mid1+sem,SE,2,flashcard,Concept,SRS Characteristics,ok,info:no Keywords line yet,9,12,,,,,List 5 essential characteristics of a good SRS document.
+FC-M1-SE-06,mid1+sem,SE,3,flashcard,Compare,Cohesion vs Coupling,ok,info:no Keywords line yet,10,35,,,,,Define Cohesion and Coupling. What is ideal in software design?
+FC-M1-SE-07,mid1+sem,SE,3,flashcard,Compare,Architectural Styles (Layered vs Pipe-and-Filter),ok,info:no Keywords line yet,6,36,,,,,Compare Layered and Pipe-and-Filter architectural styles.
+FC-SEM-SE-42,mid1+sem,SE,3,flashcard,Concept,Design process,ok,,8,21,,,,,List the stages of the software design process.
+FC-SEM-SE-43,mid1+sem,SE,3,flashcard,Concept,Design concepts,ok,,5,26,,,,,"Define abstraction, refinement and modularity."
+FC-SEM-SE-44,mid1+sem,SE,3,flashcard,Concept,Cohesion,ok,,8,18,,,,,Order the cohesion types from best to worst.
+FC-SEM-SE-45,mid1+sem,SE,3,flashcard,Concept,Coupling,ok,,8,20,,,,,Order the coupling types from best to worst.
+FC-SEM-SE-46,mid1+sem,SE,3,flashcard,Concept,Design model,ok,,8,22,,,,,Name the four elements of the design model.
+FC-SEM-SE-47,mid1+sem,SE,3,flashcard,Concept,Architectural styles,ok,,4,16,,,,,Name four architectural styles.
+FC-SEM-SE-67,mid1+sem,SE,3,flashcard,Concept,Software architecture and data design,ok,,8,45,,,,,What do software architecture and data design specify?
+ES-M1-001,mid1+sem,ES,1,mcq,,Ecosystem Trophic Levels,ok,,12,,15,4,2,easy,"In a terrestrial ecosystem, green plants and phytoplankton occupy which trophic level?"
+ES-SEM-001,mid1+sem,ES,1,mcq,,Energy flow,ok,,18,,20,4,2,easy,"In a food chain, the amount of energy transferred from one trophic level to the next is ro"
+ES-SEM-037,mid1+sem,ES,1,mcq,,Ecosystem definition,ok,,6,,15,4,0,easy,An ecosystem is best defined as:
+ES-SEM-038,mid1+sem,ES,1,mcq,,Biotic and abiotic components,ok,,11,,11,4,1,easy,Which of the following is an abiotic component of an ecosystem?
+ES-SEM-039,mid1+sem,ES,1,mcq,,Food chain,ok,,8,,17,4,2,easy,"In a grazing food chain, the producer is:"
+ES-SEM-040,mid1+sem,ES,1,mcq,,Energy flow,ok,,6,,20,4,3,easy,Energy flow in an ecosystem is:
+ES-SEM-041,mid1+sem,ES,1,mcq,,Nitrogen cycle,ok,,11,,16,4,0,easy,The conversion of atmospheric nitrogen into ammonia by bacteria is called:
+ES-SEM-042,mid1+sem,ES,1,mcq,,Bioaccumulation,ok,,3,,16,4,1,medium,Bioaccumulation refers to:
+ES-SEM-043,mid1+sem,ES,1,mcq,,Biomagnification,ok,,9,,17,4,2,medium,Biomagnification is most likely for a pollutant that is:
+ES-SEM-044,mid1+sem,ES,1,mcq,,Ecosystem function,ok,,7,,12,4,3,medium,Which process returns nitrogen to the atmosphere?
+ES-SEM-071,mid1+sem,ES,1,mcq,,Energy transfer,ok,,19,,10,4,2,hard,"Producers capture 10,000 kcal. If each trophic level transfers 10% of its energy, how much"
+ES-SEM-002,mid1+sem,ES,1,fib,,Biodiversity Hotspots,ok,,28,,12,0,,medium,"To qualify as a global Biodiversity Hotspot, an area must contain at least 1,500 endemic v"
+ES-SEM-003,mid1+sem,ES,2,mcq,,BOD in Water Pollution,ok,,12,,24,4,3,easy,A high Biochemical Oxygen Demand (BOD) value in a freshwater stream indicates:
+ES-SEM-045,mid1+sem,ES,2,mcq,,Resource classification,ok,,5,,18,4,0,easy,Which is a non-renewable resource?
+ES-SEM-046,mid1+sem,ES,2,mcq,,Renewable energy,ok,,11,,11,4,1,medium,Which renewable source still releases soot and carbon dioxide when burned?
+ES-SEM-047,mid1+sem,ES,2,mcq,,Dams,ok,,9,,12,4,2,easy,A major social problem caused by large dams is:
+ES-SEM-048,mid1+sem,ES,2,mcq,,Mining impacts,ok,,6,,17,4,3,medium,Acid mine drainage is caused by:
+ES-SEM-049,mid1+sem,ES,2,mcq,,Deforestation,ok,,4,,13,4,0,easy,Deforestation commonly leads to:
+ES-SEM-050,mid1+sem,ES,2,mcq,,Water resources,ok,,5,,14,4,1,medium,Over-extraction of groundwater can cause:
+ES-SEM-051,mid1+sem,ES,2,mcq,,Energy resources,ok,,6,,13,4,2,medium,Which is a secondary energy source?
+ES-SEM-052,mid1+sem,ES,2,mcq,,Forest resources,ok,,11,,18,4,3,medium,Which forest function is lost first when a watershed is deforested?
+ES-SEM-072,mid1+sem,ES,2,mcq,,Groundwater conservation,ok,,8,,18,4,3,medium,Which agricultural practice most directly reduces groundwater depletion?
+ES-M1-002,mid1+sem,ES,2,fib,,Renewable Energy,ok,,12,,9,0,,easy,"Solar, wind, geothermal, and tidal energies are classified as _______ energy resources."
+ES-SEM-004,mid1+sem,ES,2,fib,,Minamata Disease,ok,,17,,16,0,,easy,Minamata disease was a catastrophic neurological illness caused by industrial pollution of
+ES-M1-003,mid1+sem,ES,3,mcq,,Value of biodiversity,ok,,16,,15,4,3,medium,The value of biodiversity that reflects the willingness to preserve species for future gen
+ES-SEM-053,mid1+sem,ES,3,mcq,,Biodiversity levels,ok,,6,,17,4,0,easy,The three levels of biodiversity are:
+ES-SEM-054,mid1+sem,ES,3,mcq,,Genetic diversity,ok,,6,,17,4,1,easy,Genetic diversity is important because it:
+ES-SEM-055,mid1+sem,ES,3,mcq,,Value of biodiversity,ok,,13,,16,4,2,medium,The value assigned to a species because people simply value its existence is:
+FC-M1-ES-01,mid1+sem,ES,1,flashcard,Answer-skeleton,Structure of an Ecosystem,ok,info:no Keywords line yet,10,23,,,,,What are the biotic and abiotic components of an ecosystem?
+FC-M1-ES-02,mid1+sem,ES,1,flashcard,Formula,10% Law of Energy Transfer,ok,info:no Keywords line yet,8,27,,,,,State Lindeman's 10% Law in ecological energy flow.
+FC-M1-ES-03,mid1+sem,ES,1,flashcard,Concept,Energy flow,ok,,7,32,,,,,What is the universal energy flow model?
+FC-SEM-ES-23,mid1+sem,ES,1,flashcard,Concept,Ecosystem,ok,,7,26,,,,,Define ecosystem and name its two components.
+FC-SEM-ES-24,mid1+sem,ES,1,flashcard,Concept,Ecosystem structure,ok,,8,19,,,,,What are the structural components of an ecosystem?
+FC-SEM-ES-25,mid1+sem,ES,1,flashcard,Compare,Food chain,ok,,10,23,,,,,Distinguish a grazing food chain from a detritus food chain.
+FC-SEM-ES-26,mid1+sem,ES,1,flashcard,Concept,Food web,ok,,5,27,,,,,What is a food web?
+FC-SEM-ES-27,mid1+sem,ES,1,flashcard,Formula,Energy flow,ok,,7,39,,,,,State the 10% law of energy transfer.
+FC-SEM-ES-28,mid1+sem,ES,1,flashcard,Procedure,Nitrogen cycle,ok,,8,17,,,,,List the five steps of the nitrogen cycle.
+FC-SEM-ES-29,mid1+sem,ES,1,flashcard,Compare,Bioaccumulation,ok,,4,22,,,,,Distinguish bioaccumulation and biomagnification.
+FC-SEM-ES-30,mid1+sem,ES,1,flashcard,Concept,Ecological succession,ok,,4,29,,,,,What is ecological succession?
+FC-SEM-ES-31,mid1+sem,ES,1,flashcard,Concept,Trophic levels,ok,,9,22,,,,,Name the trophic levels of a simple food chain.
+FC-SEM-ES-32,mid1+sem,ES,1,flashcard,Concept,Nitrogen fixation,ok,,5,20,,,,,Which organisms fix atmospheric nitrogen?
+FC-SEM-ES-U1,mid1+sem,ES,1,flashcard,Formula,Lindeman's 10% Law,ok,info:no Keywords line yet,7,28,,,,,State Lindeman's 10% Law of Energy Transfer.
+FC-M1-ES-04,mid1+sem,ES,2,flashcard,Compare,Renewable vs Non-Renewable Energy Resources,ok,info:no Keywords line yet,8,29,,,,,Compare Renewable and Non-Renewable Energy Resources with examples.
+FC-SEM-ES-33,mid1+sem,ES,2,flashcard,Concept,Resource classification,ok,,5,21,,,,,Classify natural resources by renewability.
+FC-SEM-ES-34,mid1+sem,ES,2,flashcard,Concept,Dams,ok,,9,20,,,,,List three benefits and three problems of large dams.
+FC-SEM-ES-35,mid1+sem,ES,2,flashcard,Concept,Water scarcity,ok,,6,22,,,,,What causes water scarcity in India?
+FC-SEM-ES-36,mid1+sem,ES,2,flashcard,Concept,Mining impacts,ok,,6,23,,,,,Name four environmental impacts of mining.
+FC-SEM-ES-37,mid1+sem,ES,2,flashcard,Concept,Deforestation,ok,,5,23,,,,,List four consequences of deforestation.
+FC-SEM-ES-38,mid1+sem,ES,2,flashcard,Concept,Renewable energy,ok,,10,18,,,,,Name four renewable energy sources and one limitation of each.
+FC-SEM-ES-39,mid1+sem,ES,2,flashcard,Concept,Mineral resources,ok,,6,24,,,,,Why are mineral resources considered non-renewable?
+FC-SEM-ES-40,mid1+sem,ES,2,flashcard,Concept,Forest resources,ok,,8,21,,,,,What are the major forest products and services?
+FC-SEM-ES-41,mid1+sem,ES,2,flashcard,Concept,Resource use,ok,,5,24,,,,,What is sustainable resource use?
+FC-SEM-ES-U2,mid1+sem,ES,2,flashcard,Compare,BOD vs COD,ok,info:no Keywords line yet,4,37,,,,,Compare BOD with COD.
+FC-M1-ES-05,mid1+sem,ES,3,flashcard,Concept,Three Levels of Biodiversity,ok,,6,28,,,,,"Define Genetic, Species, and Ecosystem diversity."
+FC-M1-ES-06,mid1+sem,ES,3,flashcard,Compare,Consumptive vs Productive Use Value of Biodiversity,ok,info:no Keywords line yet,9,28,,,,,Distinguish between Consumptive and Productive use values of biodiversity.
+FC-SEM-ES-42,mid1+sem,ES,3,flashcard,Concept,Biodiversity levels,ok,,8,21,,,,,Name and define the three levels of biodiversity.
+FC-SEM-ES-43,mid1+sem,ES,3,flashcard,Concept,Biodiversity values,ok,,5,22,,,,,Name four values of biodiversity.
+FC-SEM-ES-48,mid1+sem,ES,3,flashcard,Concept,Hotspots,ok,,5,29,,,,,What is a biodiversity hotspot?
+FC-SEM-ES-49,mid1+sem,ES,3,flashcard,Compare,Species diversity,ok,,9,22,,,,,What is the difference between species richness and evenness?
+IE-M1-001,mid1+sem,IE,1,mcq,,Entrepreneurial Traits,ok,,12,,20,4,2,easy,Which psychological characteristic is most strongly associated with successful entrepreneu
+IE-SEM-005,mid1+sem,IE,1,mcq,,Innovation versus invention,ok,,8,,24,4,0,easy,Innovation is best distinguished from invention because innovation:
+IE-SEM-006,mid1+sem,IE,1,mcq,,Incremental innovation,ok,,20,,19,4,1,medium,A company improves an existing smartphone by adding a better camera and a faster processor
+IE-SEM-007,mid1+sem,IE,1,mcq,,Disruptive innovation,ok,,5,,17,4,2,medium,Disruptive innovation typically begins by:
+IE-SEM-008,mid1+sem,IE,1,mcq,,Service innovation,ok,,11,,21,4,3,medium,Which characteristic is more typical of service innovation than manufacturing innovation?
+IE-SEM-009,mid1+sem,IE,1,mcq,,Culture of innovation,ok,,11,,18,4,0,easy,Which practice best helps an organisation build a culture of innovation?
+IE-SEM-010,mid1+sem,IE,1,mcq,,Intrapreneur,ok,,16,,18,4,1,easy,An employee who develops and champions a new venture inside an existing company is called 
+IE-SEM-011,mid1+sem,IE,1,mcq,,On-campus startups,ok,,9,,19,4,2,medium,Which statement best describes the importance of on-campus startups?
+IE-SEM-001,mid1+sem,IE,2,mcq,,Design thinking stages,ok,,10,,17,4,2,easy,What are the five stages of the design thinking process?
+IE-SEM-003,mid1+sem,IE,2,mcq,,Problem-customer fit,ok,,11,,22,4,3,medium,Which activity is the most direct way to validate problem-customer fit?
+IE-SEM-012,mid1+sem,IE,2,mcq,,Problem gap,ok,,7,,20,4,3,easy,"In opportunity identification, a gap refers to:"
+IE-SEM-013,mid1+sem,IE,2,mcq,,Demographic segmentation,ok,,10,,13,4,0,easy,"Dividing a market by age, income and occupation is called:"
+IE-SEM-014,mid1+sem,IE,2,mcq,,Problem-customer fit,ok,,5,,19,4,1,medium,Problem-customer fit is validated when:
+IE-SEM-015,mid1+sem,IE,2,mcq,,Competitor and trend mapping,ok,,9,,16,4,2,medium,Mapping competitors and industry trends helps an entrepreneur to:
+IE-SEM-016,mid1+sem,IE,2,mcq,,Porter five forces,ok,,11,,18,4,3,medium,"In Porter's Five Forces model, the threat of substitutes refers to:"
+IE-SEM-017,mid1+sem,IE,2,mcq,,Brainstorming,ok,,9,,15,4,0,easy,Which rule is most important in a brainstorming session?
+IE-SEM-018,mid1+sem,IE,2,mcq,,SCAMPER,ok,,9,,20,4,1,medium,SCAMPER is an ideation technique that prompts users to:
+IE-M1-002,mid1+sem,IE,2,fib,,Design Thinking Empathy,ok,,18,,14,0,,easy,"The first phase of the Design Thinking process, where founders conduct interviews to under"
+IE-SEM-004,mid1+sem,IE,2,fib,,Iterating problem-customer fit,ok,,22,,17,0,,medium,"After customer interviews show that the original pain point is not urgent, the team should"
+IE-SEM-019,mid1+sem,IE,3,mcq,,Global competitor mapping,ok,,8,,20,4,2,easy,Global competitor mapping primarily helps a startup to:
+IE-SEM-020,mid1+sem,IE,3,mcq,,SAM,ok,,6,,19,4,3,easy,"In market sizing, SAM stands for:"
+IE-SEM-021,mid1+sem,IE,3,mcq,,TAM SAM SOM calculation,ok,,22,,17,4,0,hard,"A city has 500,000 households. If 40% own pets and the startup's service can reach 25% of "
+IE-SEM-022,mid1+sem,IE,3,mcq,,Opportunity scale,ok,,10,,19,4,1,medium,Assessing the potential scale of an opportunity mainly means estimating:
+IE-M2-004,mid1+sem,IE,3,fib,,SOM,ok,,16,,17,0,,medium,The portion of the serviceable market that a startup can realistically win is called the _
+FC-M1-IE-01,mid1+sem,IE,1,flashcard,Concept,Types of Innovation,ok,info:no Keywords line yet,6,30,,,,,Differentiate between Incremental and Disruptive Innovation.
+FC-SEM-IE-01,mid1+sem,IE,1,flashcard,Compare,Innovation versus invention,ok,,4,34,,,,,Distinguish innovation from invention.
+FC-SEM-IE-02,mid1+sem,IE,1,flashcard,Concept,Types of innovation,ok,,6,32,,,,,Name four common types of innovation.
+FC-SEM-IE-03,mid1+sem,IE,1,flashcard,Compare,Incremental versus radical,ok,,5,32,,,,,Compare incremental and radical innovation.
+FC-SEM-IE-04,mid1+sem,IE,1,flashcard,Concept,Disruptive innovation,ok,,9,35,,,,,Why is disruptive innovation a threat to established firms?
+FC-SEM-IE-05,mid1+sem,IE,1,flashcard,Compare,Manufacturing versus service innovation,ok,,8,34,,,,,How does service innovation differ from manufacturing innovation?
+FC-SEM-IE-06,mid1+sem,IE,1,flashcard,Concept,Culture of innovation,ok,,6,22,,,,,What supports a culture of innovation?
+FC-SEM-IE-07,mid1+sem,IE,1,flashcard,Compare,Entrepreneur versus intrapreneur,ok,,6,38,,,,,Compare an entrepreneur and an intrapreneur.
+FC-SEM-IE-08,mid1+sem,IE,1,flashcard,Concept,Women and campus entrepreneurship,ok,,7,39,,,,,Why are women and on-campus startups promoted?
+FC-M1-IE-02,mid1+sem,IE,2,flashcard,Concept,Design thinking stages,ok,,7,18,,,,,List the five stages of design thinking.
+FC-SEM-IE-09,mid1+sem,IE,2,flashcard,Concept,Gap identification,ok,,8,35,,,,,How do you identify a real problem gap?
+FC-SEM-IE-10,mid1+sem,IE,2,flashcard,Concept,Industry perspective,ok,,8,31,,,,,Why analyse a problem from an industry perspective?
+FC-SEM-IE-11,mid1+sem,IE,2,flashcard,Concept,Market segmentation,ok,,7,26,,,,,Name the main bases for market segmentation.
+FC-SEM-IE-12,mid1+sem,IE,2,flashcard,Concept,Problem-customer fit,ok,,6,38,,,,,How do you validate problem-customer fit?
+FC-SEM-IE-13,mid1+sem,IE,2,flashcard,Concept,Iterating fit,ok,,6,33,,,,,Why must problem-customer fit be iterated?
+FC-SEM-IE-14,mid1+sem,IE,2,flashcard,Concept,Competition and trends,ok,,8,28,,,,,What should a competitor and trend map capture?
+FC-SEM-IE-15,mid1+sem,IE,2,flashcard,Concept,Porter five forces,ok,,5,31,,,,,Name Porter's five competitive forces.
+FC-SEM-IE-16,mid1+sem,IE,2,flashcard,Concept,Ideation techniques,ok,,5,31,,,,,"Describe brainstorming, brainwriting and SCAMPER."
+FC-SEM-IE-17,mid1+sem,IE,2,flashcard,Concept,Design thinking,ok,,7,28,,,,,Name the five stages of design thinking.
+FC-SEM-IE-U1,mid1+sem,IE,2,flashcard,Concept,Design thinking stages,ok,,9,28,,,,,List the five stages of design thinking in order.
+FC-SEM-IE-U2,mid1+sem,IE,2,flashcard,Concept,Iterating problem-customer fit,ok,,6,40,,,,,How do you iterate problem-customer fit?
+FC-IE-02,mid1+sem,IE,3,flashcard,Concept,TAM SAM SOM,ok,,5,35,,,,,"Define TAM, SAM and SOM."
+FC-M1-IE-04,mid1+sem,IE,3,flashcard,Compare,Market Sizing: TAM vs SAM vs SOM,ok,info:no Keywords line yet,10,45,,,,,"Explain TAM, SAM, and SOM in startup market opportunity sizing."
+FC-SEM-IE-18,mid1+sem,IE,3,flashcard,Concept,Global competitor mapping,ok,,5,26,,,,,What is global competitor mapping?
+FC-SEM-IE-19,mid1+sem,IE,3,flashcard,Concept,TAM SAM SOM,ok,,10,30,,,,,"How do TAM, SAM and SOM narrow a market estimate?"
+FC-SEM-IE-20,mid1+sem,IE,3,flashcard,Concept,Opportunity scope and scale,ok,,9,30,,,,,How do you assess an opportunity's scope and scale?
+DM-M2-001,mid2+sem,DM,3,mcq,,Groups & Properties,ok,,18,,22,4,3,easy,"An algebraic structure $(G, *)$ is called a group if it satisfies which of the following s"
+DM-M2-002,mid2+sem,DM,3,mcq,,Lagrange's Theorem,ok,,19,,32,4,0,medium,"According to Lagrange's Theorem for finite groups, if $H$ is a subgroup of a finite group "
+DM-M2-004,mid2+sem,DM,3,mcq,,Cyclic Groups,ok,,13,,29,4,1,medium,"Which of the following elements are generators of the cyclic group $(\mathbb{Z}_6, +_6)$?"
+DM-M2-006,mid2+sem,DM,3,mcq,,Normal Subgroups,ok,,19,,25,4,2,medium,A subgroup $H$ of a group $G$ is called a normal subgroup if for all $g \in G$ and $h \in 
+DM-M2-008,mid2+sem,DM,3,mcq,,Subgroup Test,ok,,22,,19,4,3,medium,A non-empty subset $H$ of a group $G$ is a subgroup if and only if for every pair of eleme
+DM-M2-009,mid2+sem,DM,3,mcq,,Prime Order,ok,,11,,26,4,0,easy,Every finite group of prime order $p$ is guaranteed to be:
+DM-SEM-057,mid2+sem,DM,3,mcq,,Lattice meet,ok,,10,,23,4,3,easy,"In a lattice, the meet $a \land b$ of two elements is:"
+DM-M2-TF-01,mid2+sem,DM,3,tf,,Subgroups & Lagrange's Theorem,ok,,19,,22,0,0,easy,"According to Lagrange's Theorem, the order of every subgroup of a finite group G divides t"
+DM-M2-TF-02,mid2+sem,DM,3,tf,,Groups & Identity Uniqueness,ok,,12,,10,0,1,easy,"A group (G, *) can possess more than one distinct identity element."
+DM-M2-003,mid2+sem,DM,3,fib,,Abelian Groups,ok,,19,,23,0,,easy,"A group $(G, *)$ that also satisfies the commutative property for all pairs of elements is"
+DM-M2-005,mid2+sem,DM,3,fib,,Cosets,ok,,27,,29,0,,medium,The total number of distinct left (or right) cosets of a subgroup $H$ in a finite group $G
+DM-M2-007,mid2+sem,DM,3,fib,,Group Inverses,ok,,13,,10,0,,easy,"In any group $(G, *)$, the inverse of $(a * b)$ is equal to _______."
+DM-M2-010,mid2+sem,DM,3,fib,,Identity Uniqueness,ok,,12,,20,0,,easy,"In any mathematical group $(G, *)$, the identity element is always _______."
+DM-M2-011,mid2+sem,DM,4,mcq,,Pigeonhole Principle,ok,,20,,23,4,1,easy,"If $k+1$ objects are distributed into $k$ boxes, then at least one box must contain at lea"
+DM-M2-013,mid2+sem,DM,4,mcq,,Inclusion-Exclusion,ok,,14,,11,4,2,easy,"For two finite sets $A$ and $B$, the cardinality $|A \cup B|$ is given by:"
+DM-M2-014,mid2+sem,DM,4,mcq,,Recurrence Relations,ok,,11,,11,4,3,medium,What is the characteristic equation for the recurrence relation $a_n - 5a_{n-1} + 6a_{n-2}
+DM-M2-016,mid2+sem,DM,4,mcq,,Fibonacci Numbers,ok,,15,,11,4,0,easy,"Given $F_0 = 0$, $F_1 = 1$, and $F_n = F_{n-1} + F_{n-2}$, what is the value of $F_6$?"
+DM-M2-017,mid2+sem,DM,4,mcq,,Generating Functions,ok,,10,,8,4,1,medium,"The ordinary generating function for the constant sequence $1, 1, 1, 1, \dots$ is:"
+DM-M2-019,mid2+sem,DM,4,mcq,,Circular Permutations,ok,,13,,14,4,2,easy,In how many ways can 5 distinct people sit around a circular table?
+DM-SEM-058,mid2+sem,DM,4,mcq,,Distinct permutations,ok,,14,,18,4,0,medium,How many distinct arrangements can be formed from the letters of the word LEVEL?
+DM-SEM-059,mid2+sem,DM,4,mcq,,Combinations,ok,,5,,2,4,1,easy,The value of $\binom{7}{3}$ is:
+DM-SEM-060,mid2+sem,DM,4,mcq,,Binomial coefficient,ok,,10,,9,4,2,medium,The coefficient of $x^3$ in the expansion of $(1+x)^6$ is:
+DM-SEM-061,mid2+sem,DM,4,mcq,,Counting functions,ok,,18,,16,4,3,medium,How many functions can be defined from a set with 3 elements to a set with 2 elements?
+DM-SEM-062,mid2+sem,DM,4,mcq,,Recurrence solution,ok,,9,,20,4,0,medium,The recurrence $a_n=2a_{n-1}+1$ with $a_0=0$ has the closed form:
+DM-SEM-071,mid2+sem,DM,4,mcq,,Derangements,ok,,9,,4,4,1,hard,The number of derangements of 4 distinct objects is:
+DM-M2-TF-03,mid2+sem,DM,4,tf,,Normal Subgroups,ok,,10,,21,0,0,medium,Every subgroup of an abelian group is a normal subgroup.
+DM-M2-012,mid2+sem,DM,4,fib,,Pigeonhole Application,ok,,16,,23,0,,easy,"In a group of 13 people, at least _______ people must share the same birth month."
+DM-M2-015,mid2+sem,DM,4,fib,,Characteristic Roots,ok,,9,,8,0,,easy,The characteristic roots of $r^2 - 5r + 6 = 0$ are 2 and _______.
+DM-M2-018,mid2+sem,DM,4,fib,,Combinations,ok,,16,,7,0,,easy,"The number of combinations of $n$ distinct objects taken $r$ at a time is $C(n,r) = \frac{"
+DM-M2-020,mid2+sem,DM,4,fib,,Derangements,ok,,18,,15,0,,medium,A permutation of $n$ elements in which no element appears in its original position is call
+DM-M2-021,mid2+sem,DM,5,mcq,,Handshaking Theorem,ok,,17,,19,4,3,easy,"The Handshaking Theorem states that in any undirected graph $G=(V, E)$, the sum of vertex "
+DM-M2-023,mid2+sem,DM,5,mcq,,Euler Circuit,ok,,12,,21,4,0,easy,A connected undirected graph contains an Euler circuit if and only if:
+DM-M2-025,mid2+sem,DM,5,mcq,,Hamiltonian Cycle,ok,,12,,19,4,1,easy,A Hamiltonian cycle in a graph is a closed loop that visits:
+DM-M2-026,mid2+sem,DM,5,mcq,,Planar Graphs,ok,,17,,9,4,2,easy,"For any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces), Eule"
+DM-M2-028,mid2+sem,DM,5,mcq,,Complete Graphs,ok,,13,,14,4,3,easy,How many edges are present in a complete graph $K_n$ on $n$ vertices?
+DM-M2-029,mid2+sem,DM,5,mcq,,Bipartite Graphs,ok,,14,,18,4,0,medium,A graph $G$ is bipartite if and only if it contains no cycles of:
+DM-M2-031,mid2+sem,DM,5,mcq,,Four Color Theorem,ok,,16,,20,4,1,easy,"According to the Four Color Theorem, what is the maximum chromatic number for any planar g"
+DM-SEM-063,mid2+sem,DM,5,mcq,,Handshaking lemma,ok,,11,,18,4,1,easy,"In any undirected graph, the sum of all vertex degrees equals:"
+DM-SEM-064,mid2+sem,DM,5,mcq,,Tree edges,ok,,7,,17,4,2,easy,A tree with $n$ vertices has exactly:
+DM-SEM-065,mid2+sem,DM,5,mcq,,Planarity,ok,,7,,18,4,3,medium,Which of the following graphs is non-planar?
+DM-SEM-066,mid2+sem,DM,5,mcq,,Euler circuit,ok,,12,,20,4,0,medium,A connected undirected graph has an Euler circuit if and only if:
+DM-SEM-067,mid2+sem,DM,5,mcq,,Chromatic number,ok,,9,,16,4,1,medium,The chromatic number of a cycle graph $C_5$ is:
+DM-M2-TF-04,mid2+sem,DM,5,tf,,Cyclic Groups,ok,,10,,29,0,0,easy,Every cyclic group is guaranteed to be an abelian group.
+DM-M2-022,mid2+sem,DM,5,fib,,Odd Degree Vertices,ok,,17,,21,0,,medium,"In any undirected graph, the number of vertices with an odd degree is always an _______ in"
+DM-M2-024,mid2+sem,DM,5,fib,,Euler Path,ok,,22,,17,0,,easy,A connected graph has an Euler path (not a circuit) if and only if it has exactly _______ 
+DM-M2-027,mid2+sem,DM,5,fib,,Planar Graph Edges,ok,,13,,18,0,,medium,A simple connected planar graph with $V \ge 3$ vertices satisfies the inequality $E \le 3V
+DM-M2-030,mid2+sem,DM,5,fib,,Graph Coloring,ok,,26,,18,0,,easy,The minimal number of colors needed to color the vertices of a graph so that no two adjace
+DM-M2-032,mid2+sem,DM,5,fib,,Tree Edges,ok,,10,,18,0,,easy,A tree with $n$ vertices always contains exactly _______ edges.
+FC-DM-01,mid2+sem,DM,3,flashcard,Concept,Group Definition,ok,info:no Keywords line yet,8,12,,,,,"What four axioms define a Group $(G, *)$?"
+FC-DM-02,mid2+sem,DM,3,flashcard,Concept,Abelian Group,ok,,9,36,,,,,What extra property makes a group an Abelian Group?
+FC-DM-03,mid2+sem,DM,3,flashcard,Formula,Lagrange's Theorem,ok,info:no Keywords line yet,6,19,,,,,State Lagrange's Theorem for finite groups.
+FC-DM-04,mid2+sem,DM,3,flashcard,Concept,Cyclic Group,ok,info:no Keywords line yet,5,24,,,,,What is a Cyclic Group?
+FC-DM-05,mid2+sem,DM,3,flashcard,Concept,Normal Subgroup,ok,info:no Keywords line yet,5,17,,,,,What is a Normal Subgroup?
+FC-DM-06,mid2+sem,DM,3,flashcard,Concept,Order of an Element,ok,info:no Keywords line yet,9,18,,,,,How is the order of an element $a \in G$ defined?
+FC-SEM-DM-43,mid2+sem,DM,3,flashcard,Concept,Lattice,ok,,6,26,,,,,When is a POSet a lattice?
+FC-SEM-DM-44,mid2+sem,DM,3,flashcard,Concept,Boolean algebra,ok,,5,27,,,,,What is a Boolean algebra?
+FC-SEM-DM-59,mid2+sem,DM,3,flashcard,Concept,Lattice properties and special lattices,ok,,7,40,,,,,"Define a bounded, complemented, and distributive lattice."
+FC-DM-07,mid2+sem,DM,4,flashcard,Concept,Pigeonhole Principle,ok,info:no Keywords line yet,5,17,,,,,State the Generalized Pigeonhole Principle.
+FC-DM-08,mid2+sem,DM,4,flashcard,Formula,Inclusion-Exclusion Formula,ok,info:no Keywords line yet,8,1,,,,,Write the Principle of Inclusion-Exclusion for 3 sets.
+FC-DM-09,mid2+sem,DM,4,flashcard,Procedure,Homogeneous Recurrence,ok,info:no Keywords line yet,10,12,,,,,How is a linear homogeneous recurrence with roots $r_1 \ne r_2$ solved?
+FC-DM-10,mid2+sem,DM,4,flashcard,Concept,Repeated Characteristic Roots,ok,info:no Keywords line yet,12,31,,,,,What is the solution form when characteristic root $r$ has multiplicity 2?
+FC-DM-11,mid2+sem,DM,4,flashcard,Concept,Generating Function of $a^n$,ok,info:no Keywords line yet,10,28,,,,,"What is the generating function for the sequence $1, a, a^2, a^3, \dots$?"
+FC-DM-12,mid2+sem,DM,4,flashcard,Formula,Derangement Formula,ok,info:no Keywords line yet,11,1,,,,,What is the formula for the number of derangements $D_n$?
+FC-SEM-DM-45,mid2+sem,DM,4,flashcard,Concept,Sum and product rules,ok,,10,27,,,,,State the sum rule and the product rule of counting.
+FC-SEM-DM-46,mid2+sem,DM,4,flashcard,Formula,Permutation formula,ok,,9,19,,,,,How many permutations of $n$ distinct objects are there?
+FC-SEM-DM-47,mid2+sem,DM,4,flashcard,Formula,Combination formula,ok,,12,21,,,,,How many ways can you choose $r$ objects from $n$ distinct objects?
+FC-SEM-DM-48,mid2+sem,DM,4,flashcard,Concept,Stars and bars,ok,,8,20,,,,,How many non-negative integer solutions does $x_1+\cdots+x_k=n$ have?
+FC-SEM-DM-49,mid2+sem,DM,4,flashcard,Formula,Binomial theorem,ok,,8,14,,,,,State the binomial theorem and its general term.
+FC-SEM-DM-50,mid2+sem,DM,4,flashcard,Concept,Inclusion-exclusion,ok,,9,20,,,,,State the inclusion-exclusion principle for two and three sets.
+FC-SEM-DM-51,mid2+sem,DM,4,flashcard,Procedure,Recurrence relations,ok,,11,27,,,,,How do you solve a linear homogeneous recurrence with constant coefficients?
+FC-SEM-DM-60,mid2+sem,DM,4,flashcard,Formula,Multinomial theorem,ok,,12,31,,,,,State the multinomial theorem for (x1 + x2 + ... + xk)^n.
+FC-DM-13,mid2+sem,DM,5,flashcard,Formula,Handshaking Theorem,ok,info:no Keywords line yet,4,13,,,,,State the Handshaking Theorem.
+FC-DM-14,mid2+sem,DM,5,flashcard,Compare,Euler Circuit Condition,ok,info:no Keywords line yet,12,17,,,,,When does a connected graph have an Euler Circuit vs Euler Path?
+FC-DM-15,mid2+sem,DM,5,flashcard,Concept,Hamiltonian Graph,ok,info:no Keywords line yet,5,17,,,,,What is a Hamiltonian Cycle?
+FC-DM-16,mid2+sem,DM,5,flashcard,Formula,Euler's Planar Formula,ok,info:no Keywords line yet,7,13,,,,,State Euler's Formula for connected planar graphs.
+FC-DM-17,mid2+sem,DM,5,flashcard,Concept,Planar Edge Bound,ok,info:no Keywords line yet,13,37,,,,,What is the edge bound for a simple planar graph with $V \ge 3$?
+FC-DM-18,mid2+sem,DM,5,flashcard,Concept,Chromatic Number,ok,info:no Keywords line yet,6,19,,,,,What is Chromatic Number $\chi(G)$?
+FC-DM-19,mid2+sem,DM,5,flashcard,Formula,Four Color Theorem,ok,info:no Keywords line yet,6,14,,,,,What is the Four Color Theorem?
+FC-DM-20,mid2+sem,DM,5,flashcard,Concept,Bipartite Characterization,ok,info:no Keywords line yet,6,15,,,,,When is a graph bipartite (2-colorable)?
+FC-SEM-DM-52,mid2+sem,DM,5,flashcard,Concept,Handshaking lemma,ok,,7,19,,,,,State the handshaking lemma and one consequence.
+FC-SEM-DM-53,mid2+sem,DM,5,flashcard,Concept,Graph isomorphism,ok,,6,26,,,,,What must two isomorphic graphs share?
+FC-SEM-DM-54,mid2+sem,DM,5,flashcard,Concept,Tree properties,ok,,7,28,,,,,List three equivalent definitions of a tree.
+FC-SEM-DM-55,mid2+sem,DM,5,flashcard,Compare,Kruskal and Prim,ok,,8,32,,,,,Compare Kruskal's and Prim's minimum spanning tree algorithms.
+FC-SEM-DM-56,mid2+sem,DM,5,flashcard,Compare,Euler and Hamiltonian,ok,,8,29,,,,,Distinguish an Euler circuit from a Hamiltonian cycle.
+FC-SEM-DM-57,mid2+sem,DM,5,flashcard,Formula,Euler formula,ok,,8,24,,,,,State Euler's formula for a connected planar graph.
+FC-SEM-DM-58,mid2+sem,DM,5,flashcard,Concept,Chromatic number,ok,,12,27,,,,,"What is the chromatic number of a graph, and of $K_n$?"
+FC-SEM-DM-61,mid2+sem,DM,5,flashcard,Concept,Directed trees,ok,,6,47,,,,,What is a directed tree (arborescence)?
+FC-SEM-DM-62,mid2+sem,DM,5,flashcard,Concept,Binary trees and traversals,ok,,8,48,,,,,"List preorder, inorder, and postorder binary tree traversals."
+FC-SEM-DM-63,mid2+sem,DM,5,flashcard,Formula,Hamiltonian graphs,ok,,9,43,,,,,"What is a Hamiltonian cycle, and state Dirac's theorem."
+COA-M2-001,mid2+sem,COA,3,mcq,,Division Algorithms,ok,,18,,28,4,2,medium,"In the restoring division algorithm, what operation is performed if the trial subtraction "
+COA-M2-003,mid2+sem,COA,3,mcq,,IEEE 754 Format,ok,,20,,20,4,3,easy,"In the standard IEEE 754 32-bit single-precision floating-point format, how many bits are "
+COA-M2-005,mid2+sem,COA,3,mcq,,Floating-Point Normalization,ok,,14,,22,4,0,easy,"In normalized IEEE 754 representation, what is the implicit leading bit of the mantissa?"
+COA-M2-007,mid2+sem,COA,3,mcq,,Floating-Point Multiplication,ok,,14,,23,4,1,medium,"When multiplying two floating-point numbers in IEEE 754, what is done with the exponents?"
+COA-M2-009,mid2+sem,COA,3,mcq,,Floating-Point Zero,ok,,8,,20,4,2,medium,"In IEEE 754 standard, zero is represented when:"
+COA-SEM-075,mid2+sem,COA,3,mcq,,Direct addressing,ok,,23,,19,4,0,hard,"In a basic computer, the program counter holds 100 and a memory-reference instruction cont"
+COA-M2-TF-01,mid2+sem,COA,3,tf,,Restoring Division Algorithm,ok,,23,,23,0,0,easy,"In the restoring division algorithm, if the remainder after subtraction is negative, the o"
+COA-M2-TF-02,mid2+sem,COA,3,tf,,IEEE 754 Floating Point,ok,,14,,13,0,0,easy,"In the IEEE 754 32-bit single-precision floating point standard, the exponent bias is 127."
+COA-M2-002,mid2+sem,COA,3,fib,,Non-Restoring Division,ok,,18,,23,0,,medium,"In non-restoring division, if register $A$ is negative, the next cycle performs an _______"
+COA-M2-004,mid2+sem,COA,3,fib,,IEEE 754 Bias,ok,,16,,18,0,,easy,The exponent bias added to the true exponent in IEEE 754 single-precision 32-bit format is
+COA-M2-006,mid2+sem,COA,3,fib,,BCD Adder,ok,,20,,24,0,,medium,"When the sum of two BCD digits exceeds 9, a binary correction factor of _______ (binary 01"
+COA-M2-008,mid2+sem,COA,3,fib,,Double Precision,ok,,15,,16,0,,easy,The total bit width of an IEEE 754 double-precision floating point number is _______ bits.
+COA-M2-010,mid2+sem,COA,3,fib,,Arithmetic Overflow,ok,,21,,20,0,,easy,"In 2's complement addition, an overflow occurs if two operands with the same sign produce "
+COA-M2-011,mid2+sem,COA,4,mcq,,Memory Hierarchy,ok,,16,,23,4,3,easy,Which of the following memories is fastest in access time but has the smallest storage cap
+COA-M2-013,mid2+sem,COA,4,mcq,,Cache Mapping,ok,,16,,23,4,0,medium,"In direct-mapped cache, a memory block $j$ is mapped to cache line $i$ using the formula:"
+COA-M2-015,mid2+sem,COA,4,mcq,,Cache Write Policies,ok,,15,,21,4,1,easy,Which cache write policy writes updated data simultaneously to both the cache and main mem
+COA-M2-017,mid2+sem,COA,4,mcq,,SRAM vs DRAM,ok,,10,,22,4,2,medium,Why is Dynamic RAM (DRAM) slower than Static RAM (SRAM)?
+COA-M2-018,mid2+sem,COA,4,mcq,,Cache write policy,ok,,8,,20,4,3,easy,"In a write-through cache, a write operation updates:"
+COA-M2-020,mid2+sem,COA,4,mcq,,Associative memory,ok,,5,,19,4,0,easy,Associative memory is searched by:
+COA-SEM-061,mid2+sem,COA,4,mcq,,Control word,ok,,7,,16,4,2,easy,A control word in microprogrammed control is:
+COA-SEM-062,mid2+sem,COA,4,mcq,,Address sequencing,ok,,8,,17,4,3,medium,Address sequencing in a microprogrammed control unit determines:
+COA-SEM-063,mid2+sem,COA,4,mcq,,Instruction format,ok,,5,,14,4,0,easy,An instruction format typically contains:
+COA-SEM-064,mid2+sem,COA,4,mcq,,Addressing modes,ok,,6,,18,4,1,easy,"In immediate addressing, the operand is:"
+COA-SEM-065,mid2+sem,COA,4,mcq,,Booth algorithm,ok,,7,,17,4,2,medium,Booth's multiplication algorithm is preferred because it:
+COA-SEM-066,mid2+sem,COA,4,mcq,,Restoring division,ok,,14,,24,4,3,medium,"In restoring division, when the partial remainder becomes negative, the next step is to:"
+COA-M2-TF-03,mid2+sem,COA,4,tf,,Non-Restoring Division,ok,,15,,19,0,1,medium,Non-restoring division performs a restoring addition step in every clock cycle where remai
+COA-M2-012,mid2+sem,COA,4,fib,,Hit Ratio,ok,,19,,4,0,,easy,"If 90 memory references hit in cache out of 100 total references, the cache hit ratio is _"
+COA-M2-014,mid2+sem,COA,4,fib,,Associative Cache,ok,,18,,17,0,,medium,"In a fully _______ cache, any memory block can be placed in any available line of the cach"
+COA-M2-016,mid2+sem,COA,4,fib,,Dirty Bit,ok,,16,,22,0,,medium,"In write-back cache, a _______ bit is set to 1 whenever a cache block is modified."
+COA-M2-019,mid2+sem,COA,4,fib,,TLB,ok,,19,,17,0,,medium,The special high-speed hardware cache used to translate virtual page numbers to physical f
+COA-M2-021,mid2+sem,COA,5,mcq,,DMA Transfer,ok,,15,,19,4,1,easy,Direct Memory Access (DMA) allows high-speed I/O devices to transfer data directly to/from
+COA-M2-023,mid2+sem,COA,5,mcq,,Interrupts,ok,,16,,18,4,2,medium,"In vectored interrupts, how does the CPU determine the address of the Interrupt Service Ro"
+COA-M2-025,mid2+sem,COA,5,mcq,,Control memory,ok,,8,,14,4,3,easy,Control memory in a microprogrammed control unit stores:
+COA-M2-026,mid2+sem,COA,5,mcq,,Microinstruction sequencing,ok,,12,,16,4,0,medium,The register that holds the address of the next microinstruction is the:
+COA-M2-028,mid2+sem,COA,5,mcq,,Modes of transfer,ok,,5,,19,4,1,easy,"In programmed I/O, the CPU:"
+COA-M2-030,mid2+sem,COA,5,mcq,,Programmed I/O,ok,,8,,22,4,2,easy,The primary disadvantage of Programmed I/O is that:
+COA-M2-031,mid2+sem,COA,5,mcq,,Daisy Chaining,ok,,14,,18,4,3,medium,"In interrupt priority management, daisy chaining is a hardware technique that establishes "
+COA-SEM-067,mid2+sem,COA,5,mcq,,I/O interface,ok,,9,,15,4,0,easy,The main purpose of an I/O interface is to:
+COA-SEM-068,mid2+sem,COA,5,mcq,,Asynchronous transfer,ok,,9,,17,4,1,easy,Asynchronous data transfer between two independent units commonly uses:
+COA-SEM-069,mid2+sem,COA,5,mcq,,Programmed I/O,ok,,10,,14,4,2,easy,The main disadvantage of programmed I/O is that the CPU:
+COA-SEM-070,mid2+sem,COA,5,mcq,,Priority interrupt,ok,,7,,16,4,3,easy,A priority interrupt system is needed to:
+COA-SEM-071,mid2+sem,COA,5,mcq,,DMA,ok,,8,,22,4,0,medium,"During a DMA block transfer, the CPU is:"
+COA-SEM-072,mid2+sem,COA,5,mcq,,Direct-mapped cache,ok,,12,,13,4,1,medium,A direct-mapped cache has 8 lines. How many index bits are needed?
+COA-SEM-076,mid2+sem,COA,5,mcq,,DMA transfer time,ok,,28,,2,4,1,hard,"A DMA controller transfers a 512-byte block by cycle stealing, using one memory cycle per "
+COA-M2-TF-04,mid2+sem,COA,5,tf,,DMA Direct Memory Access,ok,,17,,18,0,0,easy,DMA controllers transfer blocks of data directly between I/O devices and main memory witho
+COA-M2-022,mid2+sem,COA,5,fib,,DMA Stealing,ok,,21,,25,0,,medium,"In cycle _______ mode, the DMA controller temporarily takes control of the memory bus for "
+COA-M2-024,mid2+sem,COA,5,fib,,DMA Mode,ok,,21,,20,0,,medium,The DMA transfer mode where an entire block of data is transferred continuously before rel
+COA-M2-027,mid2+sem,COA,5,fib,,DMA transfer,ok,,26,,20,0,,medium,"In DMA, the transfer of a data block between an I/O device and memory is initiated by the "
+COA-M2-029,mid2+sem,COA,5,fib,,Structural Hazards,ok,,24,,19,0,,medium,When two instructions attempt to access the same physical resource (such as a single memor
+COA-M2-032,mid2+sem,COA,5,fib,,Cache hit ratio,ok,,27,,16,0,,medium,"A cache has 90% hits and 10% misses. If a hit costs 1 cycle and a miss costs 21 cycles, th"
+FC-COA-01,mid2+sem,COA,3,flashcard,Concept,IEEE 754 Single Precision,ok,info:no Keywords line yet,12,30,,,,,What is the 32-bit layout of IEEE 754 Single Precision Floating Point?
+FC-COA-02,mid2+sem,COA,3,flashcard,Compare,Restoring vs Non-Restoring Division,ok,info:no Keywords line yet,10,25,,,,,What is the key difference between Restoring and Non-Restoring Division?
+FC-COA-03,mid2+sem,COA,3,flashcard,Concept,BCD Addition Rule,ok,info:no Keywords line yet,13,23,,,,,When and why do we add 6 ($0110_2$) in BCD addition?
+FC-SEM-COA-63,mid2+sem,COA,3,flashcard,Concept,Timing and control,ok,,8,50,,,,,What generates control signals in a basic computer?
+FC-SEM-COA-64,mid2+sem,COA,3,flashcard,Concept,Instruction cycle,ok,,7,44,,,,,List the phases of the instruction cycle.
+FC-COA-04,mid2+sem,COA,4,flashcard,Concept,Memory Hierarchy Levels,ok,info:no Keywords line yet,8,25,,,,,Order memory hierarchy levels from fastest to slowest.
+FC-COA-05,mid2+sem,COA,4,flashcard,Formula,Cache Hit Ratio & Average Memory Access Time (AMAT),ok,info:no Keywords line yet,9,7,,,,,Write the formula for Average Memory Access Time (AMAT).
+FC-COA-06,mid2+sem,COA,4,flashcard,Concept,Cache Mapping Techniques,ok,info:no Keywords line yet,10,29,,,,,Name the 3 cache mapping techniques and their main trade-off.
+FC-COA-07,mid2+sem,COA,4,flashcard,Compare,Write-Through vs Write-Back,ok,info:no Keywords line yet,5,26,,,,,Differentiate Write-Through from Write-Back cache.
+FC-COA-08,mid2+sem,COA,4,flashcard,Compare,SRAM vs DRAM,ok,info:no Keywords line yet,11,23,,,,,Why is SRAM used for Cache and DRAM for Main Memory?
+FC-COA-09,mid2+sem,COA,4,flashcard,Procedure,Translation Lookaside Buffer (TLB),ok,info:no Keywords line yet,10,19,,,,,What is a TLB and what problem does it solve?
+FC-COA-10,mid2+sem,COA,4,flashcard,Compare,Write-through vs write-back,ok,,6,32,,,,,Compare write-through and write-back cache policies.
+FC-SEM-COA-47,mid2+sem,COA,4,flashcard,Concept,Control memory,ok,,6,27,,,,,What is stored in control memory?
+FC-SEM-COA-48,mid2+sem,COA,4,flashcard,Concept,Address sequencing,ok,,10,29,,,,,What are the four sources of the next microinstruction address?
+FC-SEM-COA-49,mid2+sem,COA,4,flashcard,Compare,Instruction formats,ok,,7,26,,,,,"Compare zero-, one- and two-address instruction formats."
+FC-SEM-COA-50,mid2+sem,COA,4,flashcard,Concept,Addressing modes,ok,,5,24,,,,,List five common addressing modes.
+FC-SEM-COA-51,mid2+sem,COA,4,flashcard,Compare,Data transfer and manipulation,ok,,7,25,,,,,Distinguish data transfer from data manipulation instructions.
+FC-SEM-COA-52,mid2+sem,COA,4,flashcard,Procedure,Booth's algorithm,ok,,8,32,,,,,Why does Booth's algorithm skip runs of 1s?
+FC-SEM-COA-53,mid2+sem,COA,4,flashcard,Compare,Division algorithms,ok,,5,28,,,,,Compare restoring and non-restoring division.
+FC-SEM-COA-65,mid2+sem,COA,4,flashcard,Concept,General register organization,ok,,10,49,,,,,What does a general register organization with seven registers use?
+FC-SEM-COA-66,mid2+sem,COA,4,flashcard,Concept,Addition and subtraction,ok,,7,46,,,,,How is subtraction performed with two's-complement addition?
+FC-SEM-COA-67,mid2+sem,COA,4,flashcard,Concept,Floating-point arithmetic,ok,,3,41,,,,,Outline floating-point addition.
+FC-SEM-COA-68,mid2+sem,COA,4,flashcard,Concept,Decimal arithmetic unit and operations,ok,,9,47,,,,,Why is BCD addition corrected with a +6 adjustment?
+FC-COA-11,mid2+sem,COA,5,flashcard,Concept,Direct Memory Access (DMA),ok,info:no Keywords line yet,8,20,,,,,What is DMA and why is it used?
+FC-COA-12,mid2+sem,COA,5,flashcard,Compare,DMA Transfer Modes,ok,info:no Keywords line yet,8,26,,,,,Define Burst Mode vs Cycle Stealing in DMA.
+FC-COA-13,mid2+sem,COA,5,flashcard,Compare,Programmed vs Interrupt-Driven I/O,ok,info:no Keywords line yet,6,24,,,,,Compare Programmed I/O with Interrupt-Driven I/O.
+FC-COA-14,mid2+sem,COA,5,flashcard,Concept,Memory hierarchy,ok,,7,30,,,,,Why does a memory hierarchy improve performance?
+FC-COA-15,mid2+sem,COA,5,flashcard,Concept,Associative memory,ok,,9,31,,,,,What is associative memory and where is it used?
+FC-COA-16,mid2+sem,COA,5,flashcard,Procedure,Data Bypassing (Forwarding),ok,info:no Keywords line yet,7,20,,,,,How does Data Forwarding resolve data hazards?
+FC-COA-17,mid2+sem,COA,5,flashcard,Concept,Daisy Chaining,ok,info:no Keywords line yet,8,21,,,,,How does Daisy Chaining work for interrupt priority?
+FC-COA-18,mid2+sem,COA,5,flashcard,Procedure,Cache Line Replacement Algorithms,ok,info:no Keywords line yet,7,23,,,,,Name 3 common cache block replacement policies.
+FC-COA-19,mid2+sem,COA,5,flashcard,Concept,DMA,ok,,6,31,,,,,How does DMA improve I/O performance?
+FC-COA-20,mid2+sem,COA,5,flashcard,Compare,Memory Mapped vs Isolated I/O,ok,info:no Keywords line yet,8,24,,,,,Differentiate Memory-Mapped I/O from Isolated (I/O Mapped) I/O.
+FC-SEM-COA-54,mid2+sem,COA,5,flashcard,Concept,I/O interface,ok,,7,30,,,,,What functions does an I/O interface perform?
+FC-SEM-COA-55,mid2+sem,COA,5,flashcard,Concept,Asynchronous transfer,ok,,6,29,,,,,Explain strobe and handshake asynchronous transfer.
+FC-SEM-COA-56,mid2+sem,COA,5,flashcard,Compare,Modes of transfer,ok,,7,28,,,,,"Compare programmed I/O, interrupt-driven I/O and DMA."
+FC-SEM-COA-57,mid2+sem,COA,5,flashcard,Procedure,Priority interrupt,ok,,9,27,,,,,How does a priority interrupt system resolve simultaneous requests?
+FC-SEM-COA-58,mid2+sem,COA,5,flashcard,Concept,DMA,ok,,7,29,,,,,What are the three DMA transfer modes?
+FC-SEM-COA-59,mid2+sem,COA,5,flashcard,Concept,Memory hierarchy,ok,,8,23,,,,,Order the memory hierarchy from fastest to slowest.
+FC-SEM-COA-60,mid2+sem,COA,5,flashcard,Compare,Cache mapping,ok,,7,33,,,,,"Compare direct, associative and set-associative cache mapping."
+FC-SEM-COA-69,mid2+sem,COA,5,flashcard,Concept,Auxiliary memory,ok,,11,50,,,,,"Define seek time, rotational latency, and access time for a disk."
+OOPJ-M2-001,mid2+sem,OOPJ,3,mcq,,Thread Creation,ok,,17,,25,4,0,easy,Which two mechanisms can be used in Java to define and create a new thread of execution?
+OOPJ-M2-003,mid2+sem,OOPJ,3,mcq,,Thread Lifecycle States,ok,,14,,14,4,1,medium,Which of the following represents valid states in the Java Thread lifecycle (Thread.State 
+OOPJ-M2-004,mid2+sem,OOPJ,3,mcq,,Thread Synchronization,ok,,13,,25,4,2,medium,What happens when a thread enters a synchronized instance method of an object?
+OOPJ-M2-006,mid2+sem,OOPJ,3,mcq,,IllegalMonitorStateException,ok,,21,,18,4,3,medium,If a thread calls wait() or notify() on an object without holding that object's monitor lo
+OOPJ-M2-008,mid2+sem,OOPJ,3,mcq,,Thread join(),ok,,10,,25,4,0,medium,What is the purpose of invoking threadA.join() from within threadB?
+OOPJ-M2-010,mid2+sem,OOPJ,3,mcq,,Volatile Keyword,ok,,13,,28,4,1,hard,What guarantee does the 'volatile' keyword provide for a variable in Java multithreading?
+OOPJ-SEM-059,mid2+sem,OOPJ,3,mcq,,Thread creation,ok,,9,,17,4,3,easy,Which two ways can create a thread in Java?
+OOPJ-SEM-075,mid2+sem,OOPJ,3,mcq,,Thread wait state,ok,,16,,22,4,3,hard,A thread calls `wait()` on an object. It releases the object's monitor and enters which st
+OOPJ-M2-TF-01,mid2+sem,OOPJ,3,tf,,Java Thread Invocation,ok,,15,,22,0,1,medium,Directly invoking t.run() in Java causes the code to execute in a brand-new concurrent thr
+OOPJ-M2-TF-02,mid2+sem,OOPJ,3,tf,,Thread Synchronization,ok,,20,,17,0,0,medium,"In Java, the synchronized keyword can be applied to methods and blocks, but cannot be appl"
+OOPJ-M2-002,mid2+sem,OOPJ,3,fib,,Thread Execution Method,ok,,22,,24,0,,easy,"To start a new thread and cause its run() method to execute in a separate call stack, we i"
+OOPJ-M2-005,mid2+sem,OOPJ,3,fib,,Inter-thread Communication,ok,,14,,23,0,,medium,"The inter-thread communication methods wait(), notify(), and notifyAll() are defined in th"
+OOPJ-M2-007,mid2+sem,OOPJ,3,fib,,Thread Priorities,ok,,11,,18,0,,easy,"In Java, thread priorities range from Thread.MIN_PRIORITY (1) to Thread.MAX_PRIORITY (____"
+OOPJ-M2-009,mid2+sem,OOPJ,3,fib,,Deadlock Condition,ok,,22,,18,0,,easy,"A situation where two or more threads are blocked forever, each waiting for a lock held by"
+OOPJ-M2-011,mid2+sem,OOPJ,4,mcq,,Byte Streams vs Character Streams,ok,,15,,25,4,2,easy,Which superclasses form the root of all byte-oriented input and output streams in Java res
+OOPJ-M2-013,mid2+sem,OOPJ,4,mcq,,Character streams,ok,,12,,16,4,3,easy,Which class is commonly used to read characters from a text file?
+OOPJ-M2-015,mid2+sem,OOPJ,4,mcq,,Try-With-Resources,ok,,18,,23,4,0,medium,"In Java 7+ try-with-resources statement, what interface must the resource object implement"
+OOPJ-M2-016,mid2+sem,OOPJ,4,mcq,,ArrayList,ok,,7,,11,4,1,easy,Which java.util class implements a resizable array?
+OOPJ-M2-018,mid2+sem,OOPJ,4,mcq,,JTable,ok,,9,,14,4,2,easy,Which Swing component displays data in rows and columns?
+OOPJ-M2-020,mid2+sem,OOPJ,4,mcq,,RandomAccessFile,ok,,16,,18,4,3,medium,Which java.io class allows both reading and writing at arbitrary positions within a file u
+OOPJ-SEM-060,mid2+sem,OOPJ,4,mcq,,String immutability,ok,,7,,18,4,0,easy,"Java String objects are immutable, which means:"
+OOPJ-SEM-061,mid2+sem,OOPJ,4,mcq,,StringBuilder,ok,,10,,14,4,1,medium,StringBuilder is preferred over String for heavy concatenation because it:
+OOPJ-SEM-062,mid2+sem,OOPJ,4,mcq,,ArrayList vs LinkedList,ok,,11,,15,4,2,medium,Which operation is faster on an ArrayList than on a LinkedList?
+OOPJ-SEM-063,mid2+sem,OOPJ,4,mcq,,HashMap,ok,,5,,16,4,3,easy,"In a HashMap, duplicate keys:"
+OOPJ-SEM-064,mid2+sem,OOPJ,4,mcq,,java.io,ok,,12,,10,4,0,easy,Which stream class is used to read raw bytes from a file?
+OOPJ-SEM-065,mid2+sem,OOPJ,4,mcq,,Delegation event model,ok,,8,,13,4,1,medium,"In the delegation event model, an event source:"
+OOPJ-SEM-066,mid2+sem,OOPJ,4,mcq,,Layout managers,ok,,14,,15,4,2,easy,"Which layout manager arranges components in five regions: north, south, east, west and cen"
+OOPJ-SEM-076,mid2+sem,OOPJ,4,mcq,,ArrayList subList,ok,,7,,15,4,0,hard,"What is the result of `new ArrayList<>(Arrays.asList(1,2,3)).subList(0,2).size()`?"
+OOPJ-M2-TF-03,mid2+sem,OOPJ,4,tf,,Thread join() Method,ok,,15,,11,0,0,easy,Calling thread.join() causes the calling thread to pause until the referenced thread compl
+OOPJ-M2-012,mid2+sem,OOPJ,4,fib,,Buffered Reading,ok,,16,,18,0,,easy,"To read text efficiently line-by-line from a character stream, we wrap a FileReader inside"
+OOPJ-M2-014,mid2+sem,OOPJ,4,fib,,Buffered streams,ok,,15,,11,0,,medium,Wrapping a FileReader in a _______ reduces the number of disk reads by buffering character
+OOPJ-M2-017,mid2+sem,OOPJ,4,fib,,HashMap,ok,,12,,15,0,,medium,A java.util.HashMap stores data as _______ pairs and allows one null key.
+OOPJ-M2-019,mid2+sem,OOPJ,4,fib,,Comparator,ok,,13,,16,0,,medium,The java.util interface used to define a custom ordering for objects is _______.
+OOPJ-M2-021,mid2+sem,OOPJ,5,mcq,,Collections Hierarchy,ok,info:NOT/EXCEPT question,11,,21,4,0,easy,Which of the following interfaces is NOT a sub-interface of java.util.Collection?
+OOPJ-M2-023,mid2+sem,OOPJ,5,mcq,,ArrayList vs LinkedList,ok,,14,,24,4,1,medium,Why is an ArrayList generally preferred over a LinkedList for random read access operation
+OOPJ-M2-025,mid2+sem,OOPJ,5,mcq,,Comparable vs Comparator,ok,,10,,20,4,2,medium,What is the key difference between Comparable and Comparator interfaces?
+OOPJ-M2-026,mid2+sem,OOPJ,5,mcq,,HashMap Internal Hashing,ok,,25,,23,4,3,hard,"In Java 8, when the number of colliding elements in a single HashMap bucket exceeds the TR"
+OOPJ-M2-028,mid2+sem,OOPJ,5,mcq,,Delegation Event Model,ok,,18,,25,4,0,easy,"In Java's Delegation Event Model, which component generates the event when a user interact"
+OOPJ-M2-030,mid2+sem,OOPJ,5,mcq,,Event Adapters,ok,,15,,19,4,1,medium,What is the primary benefit of using Event Adapter classes (such as MouseAdapter or Window
+OOPJ-M2-031,mid2+sem,OOPJ,5,mcq,,Swing vs AWT,ok,,12,,27,4,2,medium,Why are Swing components referred to as 'lightweight' compared to AWT components?
+OOPJ-SEM-067,mid2+sem,OOPJ,5,mcq,,Swing vs AWT,ok,,7,,18,4,3,medium,Swing components are called lightweight because they:
+OOPJ-SEM-068,mid2+sem,OOPJ,5,mcq,,JFrame,ok,,3,,20,4,0,easy,JFrame is a:
+OOPJ-SEM-069,mid2+sem,OOPJ,5,mcq,,JButton,ok,,7,,10,4,1,easy,Which listener interface handles a JButton click?
+OOPJ-SEM-070,mid2+sem,OOPJ,5,mcq,,JLabel,ok,,5,,16,4,2,easy,A JLabel is used to:
+OOPJ-SEM-071,mid2+sem,OOPJ,5,mcq,,JList and JComboBox,ok,,8,,13,4,3,easy,Which component shows a drop-down list of choices?
+OOPJ-SEM-072,mid2+sem,OOPJ,5,mcq,,Menus,ok,,8,,14,4,0,easy,Which class represents a menu bar in Swing?
+OOPJ-M2-TF-04,mid2+sem,OOPJ,5,tf,,Inter-thread Communication,ok,,14,,16,0,1,medium,"The wait(), notify(), and notifyAll() methods in Java belong to java.lang.Thread rather th"
+OOPJ-M2-022,mid2+sem,OOPJ,5,fib,,Set Characteristics,ok,,15,,20,0,,easy,A Set in the Java Collections Framework is a collection that cannot contain _______ elemen
+OOPJ-M2-024,mid2+sem,OOPJ,5,fib,,Sorting Collections,ok,,16,,16,0,,medium,"To define natural ordering for objects of a class, the class must implement the java.lang."
+OOPJ-M2-027,mid2+sem,OOPJ,5,fib,,HashMap Keys,ok,,19,,22,0,,medium,"For HashMap to work correctly, any custom class used as a key must properly override both "
+OOPJ-M2-029,mid2+sem,OOPJ,5,fib,,ActionListener Method,ok,,11,,21,0,,easy,The ActionListener interface contains a single callback method named _______(ActionEvent e
+OOPJ-M2-032,mid2+sem,OOPJ,5,fib,,Default Layout,ok,,12,,20,0,,easy,The default layout manager for a standard JFrame's content pane is _______Layout.
+FC-OOPJ-01,mid2+sem,OOPJ,3,flashcard,Concept,Thread Creation Mechanisms,ok,info:no Keywords line yet,12,21,,,,,What are the two primary ways to create a Thread in Java?
+FC-OOPJ-02,mid2+sem,OOPJ,3,flashcard,Compare,start() vs run(),ok,info:no Keywords line yet,12,31,,,,,What is the difference between calling start() and run() on a Thread?
+FC-OOPJ-03,mid2+sem,OOPJ,3,flashcard,Concept,Thread Lifecycle States,ok,info:no Keywords line yet,8,18,,,,,Name the 6 states in the Thread.State enum.
+FC-OOPJ-04,mid2+sem,OOPJ,3,flashcard,Compare,Synchronized Method vs Block,ok,info:no Keywords line yet,10,19,,,,,Why is a synchronized block preferred over a synchronized method?
+FC-OOPJ-05,mid2+sem,OOPJ,3,flashcard,Compare,wait() vs sleep(),ok,info:no Keywords line yet,6,28,,,,,Key differences between wait() and Thread.sleep()?
+FC-OOPJ-06,mid2+sem,OOPJ,3,flashcard,Concept,Deadlock Conditions,ok,info:no Keywords line yet,9,13,,,,,What are the 4 Coffman conditions required for Deadlock?
+FC-SEM-OOPJ-45,mid2+sem,OOPJ,3,flashcard,Compare,Thread vs process,ok,,6,27,,,,,Compare a thread and a process.
+FC-SEM-OOPJ-46,mid2+sem,OOPJ,3,flashcard,Concept,Thread life cycle,ok,,9,21,,,,,List the states in the Java thread life cycle.
+FC-SEM-OOPJ-47,mid2+sem,OOPJ,3,flashcard,Concept,Synchronization,ok,,6,29,,,,,What does the synchronized keyword guarantee?
+FC-OOPJ-07,mid2+sem,OOPJ,4,flashcard,Compare,Byte vs Character Streams,ok,info:no Keywords line yet,8,26,,,,,Compare Byte Streams and Character Streams in java.io.
+FC-OOPJ-08,mid2+sem,OOPJ,4,flashcard,Concept,BufferedReader,ok,,5,24,,,,,What is BufferedReader used for?
+FC-OOPJ-09,mid2+sem,OOPJ,4,flashcard,Answer-skeleton,FileWriter,ok,,10,28,,,,,How do you write text to a file in Java?
+FC-OOPJ-10,mid2+sem,OOPJ,4,flashcard,Concept,Collections utility,ok,,4,19,,,,,What does java.util.Collections provide?
+FC-OOPJ-11,mid2+sem,OOPJ,4,flashcard,Concept,Iterator,ok,,8,30,,,,,What is an Iterator and why use it?
+FC-SEM-OOPJ-40,mid2+sem,OOPJ,4,flashcard,Concept,Exploring the Object class,ok,,9,43,,,,,Which methods does every Java class inherit from Object?
+FC-SEM-OOPJ-48,mid2+sem,OOPJ,4,flashcard,Concept,String methods,ok,,6,20,,,,,Name five commonly used String methods.
+FC-SEM-OOPJ-49,mid2+sem,OOPJ,4,flashcard,Compare,String vs StringBuffer,ok,,5,22,,,,,"Compare String, StringBuffer and StringBuilder."
+FC-SEM-OOPJ-50,mid2+sem,OOPJ,4,flashcard,Concept,Collections framework,ok,,9,23,,,,,Name the main interfaces of the Java Collections framework.
+FC-SEM-OOPJ-51,mid2+sem,OOPJ,4,flashcard,Compare,ArrayList vs LinkedList,ok,,9,27,,,,,When would you choose a LinkedList over an ArrayList?
+FC-SEM-OOPJ-52,mid2+sem,OOPJ,4,flashcard,Concept,HashMap,ok,,7,29,,,,,How does a HashMap locate a key?
+FC-SEM-OOPJ-53,mid2+sem,OOPJ,4,flashcard,Compare,Byte vs character streams,ok,,6,26,,,,,Distinguish byte streams and character streams.
+FC-SEM-OOPJ-54,mid2+sem,OOPJ,4,flashcard,Concept,Delegation event model,ok,,5,27,,,,,Explain the delegation event model.
+FC-SEM-OOPJ-55,mid2+sem,OOPJ,4,flashcard,Concept,Adapter classes,ok,,7,30,,,,,Why use an adapter class for events?
+FC-SEM-OOPJ-56,mid2+sem,OOPJ,4,flashcard,Concept,Layout managers,ok,,11,25,,,,,Name the five standard layout managers and one use of each.
+FC-SEM-OOPJ-67,mid2+sem,OOPJ,4,flashcard,Concept,Graphics,ok,,10,38,,,,,Which Graphics methods draw shapes and text in Java AWT?
+FC-OOPJ-12,mid2+sem,OOPJ,5,flashcard,Compare,ArrayList vs LinkedList,ok,info:no Keywords line yet,7,26,,,,,When should you choose ArrayList over LinkedList?
+FC-OOPJ-13,mid2+sem,OOPJ,5,flashcard,Compare,HashSet vs TreeSet,ok,info:no Keywords line yet,4,23,,,,,Compare HashSet and TreeSet.
+FC-OOPJ-14,mid2+sem,OOPJ,5,flashcard,Compare,HashMap vs ConcurrentHashMap,ok,info:no Keywords line yet,8,25,,,,,Why is ConcurrentHashMap superior to Hashtable or Collections.synchronizedMap?
+FC-OOPJ-15,mid2+sem,OOPJ,5,flashcard,Compare,Comparable vs Comparator,ok,info:no Keywords line yet,4,29,,,,,Contrast Comparable<T> and Comparator<T>.
+FC-OOPJ-16,mid2+sem,OOPJ,5,flashcard,Concept,equals() and hashCode() Contract,ok,info:no Keywords line yet,7,24,,,,,State the contract between equals() and hashCode().
+FC-OOPJ-17,mid2+sem,OOPJ,5,flashcard,Concept,Delegation Event Model Components,ok,info:no Keywords line yet,11,26,,,,,What are the 3 core elements of the Delegation Event Model?
+FC-OOPJ-18,mid2+sem,OOPJ,5,flashcard,Concept,Adapter Classes,ok,info:no Keywords line yet,7,21,,,,,What are Event Adapter classes in AWT/Swing?
+FC-OOPJ-19,mid2+sem,OOPJ,5,flashcard,Compare,Heavyweight vs Lightweight Components,ok,info:no Keywords line yet,9,26,,,,,Why are Swing components called 'lightweight' compared to AWT?
+FC-OOPJ-20,mid2+sem,OOPJ,5,flashcard,Concept,AWT/Swing Layout Managers,ok,info:no Keywords line yet,7,34,,,,,Name the 5 common AWT/Swing Layout Managers.
+FC-SEM-OOPJ-57,mid2+sem,OOPJ,5,flashcard,Concept,Swing and MVC,ok,,7,27,,,,,Why does Swing use an MVC architecture?
+FC-SEM-OOPJ-58,mid2+sem,OOPJ,5,flashcard,Compare,Containers,ok,,8,29,,,,,Distinguish a top-level container from an intermediate container.
+FC-SEM-OOPJ-59,mid2+sem,OOPJ,5,flashcard,Concept,Swing components,ok,,8,19,,,,,"Match JTextField, JTextArea and JPasswordField to their use."
+FC-SEM-OOPJ-60,mid2+sem,OOPJ,5,flashcard,Concept,Lists and tables,ok,,6,24,,,,,"When use JList, JComboBox or JTable?"
+FC-SEM-OOPJ-61,mid2+sem,OOPJ,5,flashcard,Concept,Menus,ok,,7,23,,,,,"How are JMenuBar, JMenu and JMenuItem related?"
+FC-SEM-OOPJ-62,mid2+sem,OOPJ,5,flashcard,Concept,JFrame lifecycle,ok,,7,21,,,,,What does setVisible(true) do to a JFrame?
+DBMS-M2-001,mid2+sem,DBMS,3,mcq,,First Normal Form (1NF),ok,,12,,24,4,0,easy,A relation is in First Normal Form (1NF) if and only if:
+DBMS-M2-003,mid2+sem,DBMS,3,mcq,,Third Normal Form (3NF),ok,,15,,27,4,1,medium,"For a non-trivial functional dependency $X \rightarrow Y$ to hold in 3NF, which condition "
+DBMS-M2-004,mid2+sem,DBMS,3,mcq,,Boyce-Codd Normal Form (BCNF),ok,,9,,28,4,2,medium,How does Boyce-Codd Normal Form (BCNF) differ from 3NF?
+DBMS-M2-006,mid2+sem,DBMS,3,mcq,,Dependency Preservation,ok,,14,,27,4,3,medium,Which of the following normal forms guarantees both lossless-join decomposition AND depend
+DBMS-M2-008,mid2+sem,DBMS,3,mcq,,Fifth Normal Form (5NF),ok,,17,,24,4,0,easy,"Fifth Normal Form (5NF), also known as Project-Join Normal Form (PJNF), deals with which t"
+DBMS-SEM-074,mid2+sem,DBMS,3,mcq,,Normal form identification,ok,,17,,23,4,2,hard,"Relation $R(A,B,C)$ has functional dependencies $A \to B$ and $B \to C$. Which is the high"
+DBMS-M2-TF-01,mid2+sem,DBMS,3,tf,,BCNF vs 3NF,ok,,18,,19,0,0,easy,Every relational schema that satisfies Boyce-Codd Normal Form (BCNF) is guaranteed to also
+DBMS-M2-TF-02,mid2+sem,DBMS,3,tf,,2NF Partial Dependency,ok,,16,,13,0,1,easy,A relation in 2NF allows non-prime attributes to be partially dependent on a composite can
+DBMS-M2-002,mid2+sem,DBMS,3,fib,,Second Normal Form (2NF),ok,,16,,17,0,,easy,A relation is in 2NF if it is in 1NF and contains no _______ functional dependencies.
+DBMS-M2-005,mid2+sem,DBMS,3,fib,,Lossless-Join Decomposition,ok,,22,,25,0,,medium,A decomposition of $R$ into $R_1$ and $R_2$ is lossless-join if $R_1 \cap R_2$ forms a ___
+DBMS-M2-007,mid2+sem,DBMS,3,fib,,Fourth Normal Form (4NF),ok,,12,,17,0,,easy,Fourth Normal Form (4NF) is designed specifically to eliminate non-trivial _______-valued 
+DBMS-M2-009,mid2+sem,DBMS,4,mcq,,ACID Properties,ok,,20,,28,4,1,easy,Which ACID property guarantees that all operations of a transaction are completed successf
+DBMS-M2-011,mid2+sem,DBMS,4,mcq,,Conflict Serializability,ok,,25,,28,4,2,easy,Two operations $I_i$ and $I_j$ in a concurrent schedule are said to conflict if they belon
+DBMS-M2-013,mid2+sem,DBMS,4,mcq,,Two-Phase Locking (2PL),ok,,11,,25,4,3,medium,What is the defining rule of the Two-Phase Locking (2PL) protocol?
+DBMS-M2-015,mid2+sem,DBMS,4,mcq,,Deadlock in 2PL,ok,,11,,20,4,0,medium,Does the basic Two-Phase Locking (2PL) protocol guarantee freedom from deadlocks?
+DBMS-M2-017,mid2+sem,DBMS,4,mcq,,Timestamp-Ordering Protocol,ok,,17,,31,4,1,hard,Thomas' Write Rule is an optimization to the Timestamp-Ordering protocol that safely ignor
+DBMS-M2-018,mid2+sem,DBMS,4,mcq,,View Serializability,ok,,12,,17,4,2,medium,Which statement accurately describes the relationship between Conflict Serializability and
+DBMS-SEM-058,mid2+sem,DBMS,4,mcq,,ACID,ok,,11,,17,4,2,easy,Which ACID property guarantees that a committed transaction survives a crash?
+DBMS-SEM-059,mid2+sem,DBMS,4,mcq,,Conflict serializability,ok,,13,,19,4,3,medium,A schedule is conflict serializable if and only if its precedence graph is:
+DBMS-SEM-060,mid2+sem,DBMS,4,mcq,,Two-phase locking,ok,,6,,21,4,0,easy,The two phases of 2PL are:
+DBMS-SEM-061,mid2+sem,DBMS,4,mcq,,Timestamp ordering,ok,,5,,17,4,1,medium,Timestamp ordering resolves conflicts by:
+DBMS-SEM-062,mid2+sem,DBMS,4,mcq,,Deadlock,ok,,7,,15,4,2,medium,Basic two-phase locking can still suffer from:
+DBMS-SEM-063,mid2+sem,DBMS,4,mcq,,Log-based recovery,ok,,11,,16,4,3,medium,"In immediate database modification, which log records are needed for recovery?"
+DBMS-SEM-064,mid2+sem,DBMS,4,mcq,,Checkpoint,ok,,6,,17,4,0,medium,A checkpoint in a DBMS primarily:
+DBMS-SEM-075,mid2+sem,DBMS,4,mcq,,Precedence graph,ok,,15,,22,4,3,hard,A precedence graph for a schedule contains edges $T_1 \to T_2$ and $T_2 \to T_1$. The sche
+DBMS-M2-TF-03,mid2+sem,DBMS,4,tf,,Binary Relation BCNF,ok,,12,,32,0,0,medium,Any relational schema consisting of exactly two attributes is always in BCNF.
+DBMS-M2-010,mid2+sem,DBMS,4,fib,,Durability Mechanism,ok,,15,,24,0,,easy,The ACID property ensuring that committed changes survive system crashes and power failure
+DBMS-M2-012,mid2+sem,DBMS,4,fib,,Precedence Graph,ok,,17,,23,0,,easy,A concurrent schedule is conflict serializable if and only if its precedence (serializatio
+DBMS-M2-014,mid2+sem,DBMS,4,fib,,Strict Two-Phase Locking,ok,,20,,16,0,,medium,Strict 2PL requires that all _______ locks held by a transaction must be retained until th
+DBMS-M2-016,mid2+sem,DBMS,4,fib,,Wait-Die Deadlock Scheme,ok,,28,,17,0,,hard,"In the Wait-Die deadlock prevention scheme based on timestamps, if an older transaction re"
+DBMS-M2-019,mid2+sem,DBMS,5,mcq,,Write-Ahead Logging (WAL),ok,,7,,23,4,3,easy,The Write-Ahead Logging (WAL) protocol dictates that:
+DBMS-M2-021,mid2+sem,DBMS,5,mcq,,Deferred Modification Recovery,ok,,16,,22,4,0,medium,"In the Deferred Database Modification recovery scheme, updates are written to the database"
+DBMS-M2-023,mid2+sem,DBMS,5,mcq,,Log-based recovery,ok,,9,,18,4,1,medium,"In deferred database modification, the log is used to:"
+DBMS-M2-025,mid2+sem,DBMS,5,mcq,,Clustering Index,ok,,13,,31,4,2,easy,A clustering (primary) index is defined as an index on a file where:
+DBMS-M2-026,mid2+sem,DBMS,5,mcq,,B+ Tree Leaf Nodes,ok,,13,,29,4,3,medium,"In a B+ Tree index, where are actual record pointers (data pointers) stored?"
+DBMS-M2-028,mid2+sem,DBMS,5,mcq,,B+ Tree Search Complexity,ok,,24,,18,4,0,easy,What is the worst-case time complexity to search for a record in a balanced B+ Tree with $
+DBMS-M2-030,mid2+sem,DBMS,5,mcq,,Secondary Indexing,ok,,16,,33,4,1,hard,Why must a secondary index on an unordered (heap) data file always be a dense index?
+DBMS-M2-031,mid2+sem,DBMS,5,mcq,,ARIES Recovery Algorithm,ok,,15,,31,4,2,hard,Which three phases are executed in order during crash recovery by the ARIES recovery algor
+DBMS-SEM-065,mid2+sem,DBMS,5,mcq,,Buffer pool,ok,,9,,18,4,1,easy,The buffer pool in a DBMS is used to:
+DBMS-SEM-066,mid2+sem,DBMS,5,mcq,,File organization,ok,,7,,19,4,2,easy,"In a heap file organization, records are:"
+DBMS-SEM-067,mid2+sem,DBMS,5,mcq,,Clustered index,ok,,3,,21,4,3,medium,A clustered index:
+DBMS-SEM-068,mid2+sem,DBMS,5,mcq,,Hash indexing,ok,,6,,20,4,0,medium,Hash-based indexing is most efficient for:
+DBMS-SEM-069,mid2+sem,DBMS,5,mcq,,ISAM,ok,,2,,19,4,1,medium,ISAM is:
+DBMS-SEM-070,mid2+sem,DBMS,5,mcq,,B+ tree,ok,,10,,20,4,2,medium,"In a B+ tree, data records are pointed to from:"
+DBMS-SEM-071,mid2+sem,DBMS,5,mcq,,Index data structures,ok,,4,,17,4,3,medium,A dense index contains:
+DBMS-M2-TF-04,mid2+sem,DBMS,5,tf,,Lossless Join Decomposition,ok,,19,,23,0,1,hard,It is always possible to decompose any relation into BCNF while simultaneously guaranteein
+DBMS-M2-020,mid2+sem,DBMS,5,fib,,Checkpointing,ok,,22,,24,0,,easy,"To avoid scanning the entire log file from the very beginning during crash recovery, the D"
+DBMS-M2-022,mid2+sem,DBMS,5,fib,,Immediate Modification Recovery,ok,,17,,18,0,,medium,"In Immediate Database Modification recovery, recovery after a crash requires both REDO and"
+DBMS-M2-024,mid2+sem,DBMS,5,fib,,Dense Index,ok,,19,,30,0,,easy,An index is called _______ if an index entry appears for every single search key value in 
+DBMS-M2-027,mid2+sem,DBMS,5,fib,,B+ Tree Fan-out,ok,,21,,24,0,,medium,"Compared to a standard B-Tree, a B+ Tree has a much larger fan-out because internal nodes "
+DBMS-M2-029,mid2+sem,DBMS,5,fib,,B-Tree Node Capacity,ok,,21,,26,0,,medium,"In a B-Tree of order $m$, every non-root node must contain at least $\lceil m/2 \rceil - 1"
+DBMS-M2-032,mid2+sem,DBMS,5,fib,,Multi-Level Indexing,ok,,24,,24,0,,easy,"When a primary index becomes too large to fit in memory, we construct an outer index on th"
+FC-DBMS-01,mid2+sem,DBMS,3,flashcard,Concept,"1NF, 2NF, 3NF, BCNF Summary",ok,info:no Keywords line yet,10,49,,,,,"State the core condition for 1NF, 2NF, 3NF, and BCNF."
+FC-DBMS-02,mid2+sem,DBMS,3,flashcard,Compare,3NF vs BCNF Tradeoff,ok,info:no Keywords line yet,9,20,,,,,What is the fundamental tradeoff between 3NF and BCNF?
+FC-DBMS-03,mid2+sem,DBMS,3,flashcard,Concept,Lossless Join Decomposition Condition,ok,info:no Keywords line yet,10,14,,,,,"What condition guarantees that decomposing $R$ into $(R_1, R_2)$ is Lossless?"
+FC-DBMS-04,mid2+sem,DBMS,3,flashcard,Concept,Multi-Valued Dependency & 4NF,ok,info:no Keywords line yet,6,24,,,,,Define Multi-Valued Dependency (MVD) and 4NF.
+FC-SEM-DBMS-48,mid2+sem,DBMS,3,flashcard,Concept,Decomposition,ok,,7,23,,,,,What two properties should a decomposition have?
+FC-SEM-DBMS-66,mid2+sem,DBMS,3,flashcard,Concept,Problems caused by redundancy,ok,,6,44,,,,,Which anomalies does data redundancy cause?
+FC-SEM-DBMS-67,mid2+sem,DBMS,3,flashcard,Concept,BCNF,ok,,7,44,,,,,State the condition for Boyce-Codd Normal Form.
+FC-SEM-DBMS-68,mid2+sem,DBMS,3,flashcard,Concept,Lossless join decomposition,ok,,6,43,,,,,What makes a binary decomposition lossless?
+FC-DBMS-05,mid2+sem,DBMS,4,flashcard,Concept,ACID Properties & Components,ok,info:no Keywords line yet,10,25,,,,,Match ACID properties to the DBMS subsystem responsible for them.
+FC-DBMS-06,mid2+sem,DBMS,4,flashcard,Concept,Conflict Operations,ok,info:no Keywords line yet,9,30,,,,,When do two operations in a concurrent schedule conflict?
+FC-DBMS-07,mid2+sem,DBMS,4,flashcard,Compare,Conflict vs View Serializability,ok,info:no Keywords line yet,9,28,,,,,What is the difference between Conflict and View Serializability?
+FC-DBMS-08,mid2+sem,DBMS,4,flashcard,Concept,Two-Phase Locking (2PL),ok,info:no Keywords line yet,9,25,,,,,What is the Two-Phase Locking protocol and its guarantee?
+FC-DBMS-09,mid2+sem,DBMS,4,flashcard,Compare,Strict 2PL vs Rigorous 2PL,ok,info:no Keywords line yet,6,27,,,,,Differentiate Strict 2PL and Rigorous 2PL.
+FC-DBMS-10,mid2+sem,DBMS,4,flashcard,Compare,Wait-Die vs Wound-Wait,ok,info:no Keywords line yet,6,32,,,,,Compare Wait-Die and Wound-Wait deadlock prevention.
+FC-DBMS-11,mid2+sem,DBMS,4,flashcard,Answer-skeleton,Thomas' Write Rule,ok,info:no Keywords line yet,9,30,,,,,What does Thomas' Write Rule state in Timestamp Ordering?
+FC-SEM-DBMS-49,mid2+sem,DBMS,4,flashcard,Concept,ACID properties,ok,,5,25,,,,,Explain the four ACID properties.
+FC-SEM-DBMS-50,mid2+sem,DBMS,4,flashcard,Concept,Transaction states,ok,,6,21,,,,,List the states of a transaction.
+FC-SEM-DBMS-51,mid2+sem,DBMS,4,flashcard,Compare,Serializability,ok,,5,28,,,,,Distinguish conflict and view serializability.
+FC-SEM-DBMS-52,mid2+sem,DBMS,4,flashcard,Concept,Two-phase locking,ok,,6,25,,,,,Explain the two phases of 2PL.
+FC-SEM-DBMS-53,mid2+sem,DBMS,4,flashcard,Concept,Timestamp ordering,ok,,10,26,,,,,How does timestamp ordering decide the order of conflicting operations?
+FC-SEM-DBMS-54,mid2+sem,DBMS,4,flashcard,Concept,Multiple granularity,ok,,4,29,,,,,What is multiple-granularity locking?
+FC-SEM-DBMS-55,mid2+sem,DBMS,4,flashcard,Concept,Log-based recovery,ok,,8,30,,,,,What do UNDO and REDO do during recovery?
+FC-SEM-DBMS-56,mid2+sem,DBMS,4,flashcard,Concept,Validation-based protocol,ok,,9,25,,,,,What are the three phases of validation-based concurrency control?
+FC-SEM-DBMS-69,mid2+sem,DBMS,4,flashcard,Compare,Recoverability,ok,,6,43,,,,,"Distinguish recoverable, cascadeless, and strict schedules."
+FC-SEM-DBMS-70,mid2+sem,DBMS,4,flashcard,Concept,Implementation of isolation and testing for serializability,ok,,5,49,,,,,How is conflict serializability tested?
+FC-DBMS-12,mid2+sem,DBMS,5,flashcard,Answer-skeleton,Write-Ahead Logging (WAL),ok,,7,25,,,,,State the Write-Ahead Logging (WAL) protocol rules.
+FC-DBMS-13,mid2+sem,DBMS,5,flashcard,Compare,Deferred vs Immediate Modification,ok,info:no Keywords line yet,9,30,,,,,Compare Deferred Modification with Immediate Modification during crash recovery.
+FC-DBMS-14,mid2+sem,DBMS,5,flashcard,Concept,Checkpointing in Recovery,ok,info:no Keywords line yet,8,29,,,,,What is Checkpointing and why is it crucial?
+FC-DBMS-15,mid2+sem,DBMS,5,flashcard,Concept,Checkpoints,ok,,6,30,,,,,Why are checkpoints used in recovery?
+FC-DBMS-16,mid2+sem,DBMS,5,flashcard,Compare,Dense vs Sparse Index,ok,info:no Keywords line yet,6,33,,,,,Distinguish between Dense and Sparse Indexes.
+FC-DBMS-17,mid2+sem,DBMS,5,flashcard,Compare,Clustered vs Secondary Index,ok,info:no Keywords line yet,7,38,,,,,Compare Primary (Clustered) Index with Secondary Index.
+FC-DBMS-18,mid2+sem,DBMS,5,flashcard,Compare,B-Tree vs B+ Tree,ok,info:no Keywords line yet,10,26,,,,,Why are B+ Trees preferred over B-Trees for database indexing?
+FC-DBMS-19,mid2+sem,DBMS,5,flashcard,Concept,B+ Tree Height Bound,ok,info:no Keywords line yet,16,19,,,,,What is the maximum height of a B+ Tree with $N$ entries and order $m$?
+FC-DBMS-20,mid2+sem,DBMS,5,flashcard,Procedure,ARIES 3 Recovery Phases,ok,,11,34,,,,,Name and define the 3 phases of the ARIES recovery algorithm.
+FC-SEM-DBMS-57,mid2+sem,DBMS,5,flashcard,Concept,Storage hierarchy,ok,,8,28,,,,,Why does a DBMS use a buffer pool?
+FC-SEM-DBMS-58,mid2+sem,DBMS,5,flashcard,Compare,File organization,ok,,7,22,,,,,"Compare heap, sorted and hash file organizations."
+FC-SEM-DBMS-59,mid2+sem,DBMS,5,flashcard,Compare,Index types,ok,,6,28,,,,,"Distinguish clustered, primary and secondary indexes."
+FC-SEM-DBMS-60,mid2+sem,DBMS,5,flashcard,Compare,Dense vs sparse index,ok,,5,26,,,,,Compare dense and sparse indexes.
+FC-SEM-DBMS-61,mid2+sem,DBMS,5,flashcard,Concept,Hash indexing,ok,,7,25,,,,,When does hash indexing fail to help?
+FC-SEM-DBMS-62,mid2+sem,DBMS,5,flashcard,Concept,ISAM,ok,,8,28,,,,,How does ISAM differ from a B+ tree?
+FC-SEM-DBMS-63,mid2+sem,DBMS,5,flashcard,Concept,B+ tree,ok,,8,28,,,,,Why are B+ trees preferred for database indexes?
+FC-SEM-DBMS-64,mid2+sem,DBMS,5,flashcard,Concept,Choosing a file organization,ok,,8,27,,,,,What factors guide the choice of file organization?
+SE-M2-001,mid2+sem,SE,3,mcq,,Cohesion Types,ok,,15,,23,4,3,easy,Which type of cohesion is considered the highest and most desirable in component-level sof
+SE-M2-003,mid2+sem,SE,3,mcq,,Coupling Types,ok,,16,,25,4,0,easy,Which of the following coupling types represents the worst (tightest) form of coupling bet
+SE-M2-005,mid2+sem,SE,3,mcq,,Common Coupling,ok,,10,,21,4,1,medium,Common coupling occurs between two or more software modules when:
+SE-M2-006,mid2+sem,SE,3,mcq,,Theo Mandel's Golden Rules,ok,info:NOT/EXCEPT question,21,,24,4,2,easy,"According to Theo Mandel's three Golden Rules of User Interface Design, which of the follo"
+SE-SEM-058,mid2+sem,SE,3,mcq,,Use case diagram,ok,,5,,16,4,1,easy,A use case diagram shows:
+SE-SEM-074,mid2+sem,SE,3,mcq,,Sequence diagram,ok,,10,,16,4,1,hard,Which UML diagram best shows time-ordered messages exchanged between objects?
+SE-M2-TF-01,mid2+sem,SE,3,tf,,Cohesion Principles,ok,,14,,12,0,0,easy,"Functional cohesion represents the highest, most desirable degree of cohesion in modular s"
+SE-M2-TF-02,mid2+sem,SE,3,tf,,Coupling Levels,ok,,19,,23,0,1,easy,Content coupling is the most desirable form of coupling because it gives components direct
+SE-M2-002,mid2+sem,SE,3,fib,,Worst Cohesion,ok,,21,,23,0,,easy,"The weakest and least desirable form of cohesion, where elements are grouped together arbi"
+SE-M2-004,mid2+sem,SE,3,fib,,Best Coupling,ok,,20,,18,0,,easy,"The loosest and most desirable form of coupling, where modules communicate solely by passi"
+SE-M2-007,mid2+sem,SE,3,fib,,UI Design Principle,ok,,19,,25,0,,medium,"To reduce the user's memory load, interfaces should favor visual recognition rather than r"
+SE-M2-008,mid2+sem,SE,4,mcq,,Verification vs Validation,ok,,14,,30,4,3,easy,"In software engineering, what is the core difference between Verification and Validation ("
+SE-M2-010,mid2+sem,SE,4,mcq,,Bottom-Up Integration Drivers,ok,,19,,22,4,0,easy,"In Bottom-Up integration testing, what auxiliary program component is written to invoke an"
+SE-M2-011,mid2+sem,SE,4,mcq,,Regression Testing,ok,,13,,20,4,1,easy,What is the primary objective of performing Regression Testing after a code modification?
+SE-M2-013,mid2+sem,SE,4,mcq,,Cyclomatic Complexity Formula,ok,,21,,29,4,2,medium,"For a program flow graph with $E$ edges, $N$ nodes, and $P$ connected components, McCabe's"
+SE-M2-015,mid2+sem,SE,4,mcq,,Boundary Value Analysis (BVA),ok,,22,,29,4,3,medium,"For an integer input variable valid in the range $[10, 50]$, which set of test input value"
+SE-M2-017,mid2+sem,SE,4,mcq,,White-Box vs Black-Box,ok,,18,,18,4,0,easy,Which of the following testing methodologies relies exclusively on knowledge of internal c
+SE-M2-018,mid2+sem,SE,4,mcq,,Alpha vs Beta Testing,ok,,9,,29,4,1,medium,Where and by whom is Alpha testing typically conducted?
+SE-SEM-059,mid2+sem,SE,4,mcq,,Black-box testing,ok,,6,,18,4,2,easy,Black-box testing derives test cases from:
+SE-SEM-060,mid2+sem,SE,4,mcq,,Boundary value analysis,ok,,12,,21,4,3,medium,"For an input range of 1 to 100, boundary value analysis tests:"
+SE-SEM-061,mid2+sem,SE,4,mcq,,White-box testing,ok,,5,,12,4,0,easy,White-box testing is also called:
+SE-SEM-062,mid2+sem,SE,4,mcq,,Cyclomatic complexity,ok,,13,,8,4,1,medium,A flow graph has 9 edges and 7 nodes. Its cyclomatic complexity is:
+SE-SEM-063,mid2+sem,SE,4,mcq,,Integration testing,ok,,5,,16,4,2,medium,Top-down integration testing starts with:
+SE-SEM-064,mid2+sem,SE,4,mcq,,Verification vs validation,ok,,2,,14,4,3,easy,Verification asks:
+SE-SEM-065,mid2+sem,SE,4,mcq,,Debugging,ok,,6,,10,4,0,easy,Debugging differs from testing because debugging:
+SE-SEM-075,mid2+sem,SE,4,mcq,,Cyclomatic complexity,ok,,16,,2,4,2,hard,"A flow graph has 12 edges, 9 nodes and 2 connected components. Its cyclomatic complexity i"
+SE-M2-TF-03,mid2+sem,SE,4,tf,,Design Heuristics,ok,,15,,19,0,0,easy,High Cohesion paired with Low Coupling is a fundamental heuristic for creating maintainabl
+SE-M2-009,mid2+sem,SE,4,fib,,Integration Testing Stubs,ok,,20,,19,0,,easy,"In Top-Down integration testing, dummy subprogram routines called _______ are used to simu"
+SE-M2-012,mid2+sem,SE,4,fib,,Smoke Testing,ok,,28,,21,0,,easy,"A preliminary set of fast, end-to-end tests run on a new software build to determine wheth"
+SE-M2-014,mid2+sem,SE,4,fib,,Basis Path Predicates,ok,,25,,17,0,,easy,"In a flow graph with a single entry and exit ($P = 1$), if there are 4 predicate (decision"
+SE-M2-016,mid2+sem,SE,4,fib,,Equivalence Partitioning,ok,,24,,25,0,,easy,A black-box testing technique that divides the input domain into classes of data from whic
+SE-M2-019,mid2+sem,SE,5,mcq,,McCall's Quality Factors,ok,,14,,25,4,2,medium,"In McCall's Quality Factors model, into which three categories are software quality factor"
+SE-M2-021,mid2+sem,SE,5,mcq,,CMMI Level 5,ok,,14,,21,4,3,medium,What is the primary characteristic of an organization operating at CMMI Level 5 (Optimizin
+SE-M2-023,mid2+sem,SE,5,mcq,,Basic COCOMO Model,ok,,19,,21,4,0,easy,"In Boehm's Basic COCOMO model, what are the three development modes classified according t"
+SE-M2-025,mid2+sem,SE,5,mcq,,Formal Technical Review (FTR),ok,,15,,26,4,1,medium,What is the primary objective of a Formal Technical Review (FTR) during software quality a
+SE-M2-027,mid2+sem,SE,5,mcq,,Software Maintenance Types,ok,,24,,20,4,2,easy,Modifying software to adapt it to changes in its execution environment (such as a new OS v
+SE-M2-028,mid2+sem,SE,5,mcq,,Corrective Maintenance,ok,,19,,17,4,3,easy,Which software maintenance category addresses diagnosing and rectifying residual errors an
+SE-M2-030,mid2+sem,SE,5,mcq,,Risk Projection,ok,,14,,26,4,0,medium,"In software risk projection (estimation), risk impact is calculated using which two primar"
+SE-M2-031,mid2+sem,SE,5,mcq,,ISO 9126 Standard,ok,,18,,14,4,1,medium,The ISO 9126 standard evaluates software product quality across six key attributes: Functi
+SE-SEM-066,mid2+sem,SE,5,mcq,,Risk exposure,ok,,5,,18,4,1,easy,Risk exposure is computed as:
+SE-SEM-067,mid2+sem,SE,5,mcq,,Reactive vs proactive risk,ok,,4,,17,4,2,easy,A proactive risk strategy:
+SE-SEM-068,mid2+sem,SE,5,mcq,,RMMM,ok,,3,,16,4,3,easy,RMMM stands for:
+SE-SEM-069,mid2+sem,SE,5,mcq,,SQA,ok,,5,,17,4,0,medium,Software quality assurance is primarily:
+SE-SEM-070,mid2+sem,SE,5,mcq,,Formal technical review,ok,,11,,16,4,1,medium,Which review is the most formal and uses a trained moderator?
+SE-SEM-071,mid2+sem,SE,5,mcq,,Reliability,ok,,6,,12,4,2,easy,Mean time to failure (MTTF) measures:
+SE-M2-TF-04,mid2+sem,SE,5,tf,,Cyclomatic Complexity,ok,,17,,20,0,0,medium,McCabe's Cyclomatic Complexity metric calculates the number of linearly independent paths 
+SE-M2-020,mid2+sem,SE,5,fib,,SEI CMM Levels,ok,,13,,17,0,,easy,The SEI Capability Maturity Model (CMM/CMMI) defines exactly _______ levels of process mat
+SE-M2-022,mid2+sem,SE,5,fib,,CMM Level 1,ok,,14,,21,0,,easy,"At CMM Level 1 (Initial), software development processes are characterized as chaotic and "
+SE-M2-024,mid2+sem,SE,5,fib,,COCOMO Effort Formula,ok,,17,,19,0,,easy,"In the Basic COCOMO effort equation $E = a \cdot (\text{KLOC})^b$, the unit of effort $E$ "
+SE-M2-026,mid2+sem,SE,5,fib,,RMMM Plan,ok,,14,,19,0,,easy,"The acronym RMMM in software risk management stands for Risk Mitigation, Monitoring, and _"
+SE-M2-029,mid2+sem,SE,5,fib,,Preventive Maintenance,ok,,18,,19,0,,medium,Re-engineering and refactoring code to improve maintainability and prevent future bugs bef
+SE-M2-032,mid2+sem,SE,5,fib,,Perfective Maintenance Dominance,ok,,22,,22,0,,medium,Empirical studies reveal that _______ maintenance (adding new user features and UI enhance
+FC-SE-01,mid2+sem,SE,3,flashcard,Concept,Cohesion Hierarchy,ok,info:no Keywords line yet,9,34,,,,,Rank Cohesion types from best (strongest) to worst (weakest).
+FC-SE-02,mid2+sem,SE,3,flashcard,Concept,Coupling Hierarchy,ok,info:no Keywords line yet,9,38,,,,,Rank Coupling types from best (loosest) to worst (tightest).
+FC-SE-03,mid2+sem,SE,3,flashcard,Concept,Theo Mandel's 3 Golden Rules,ok,info:no Keywords line yet,10,31,,,,,What are Theo Mandel's 3 Golden Rules for UI Design?
+FC-SEM-SE-48,mid2+sem,SE,3,flashcard,Concept,UML diagrams,ok,,10,26,,,,,Name the six UML diagram types in the MR25 unit.
+FC-SEM-SE-49,mid2+sem,SE,3,flashcard,Concept,Class diagram,ok,,6,22,,,,,What does a class diagram show?
+FC-SEM-SE-68,mid2+sem,SE,3,flashcard,Concept,Collaboration diagrams,ok,,7,40,,,,,What does a UML collaboration diagram show?
+FC-SEM-SE-69,mid2+sem,SE,3,flashcard,Concept,Activity diagrams,ok,,8,44,,,,,Which elements make up a UML activity diagram?
+FC-SE-04,mid2+sem,SE,4,flashcard,Compare,Verification vs Validation,ok,info:no Keywords line yet,8,34,,,,,What is the difference between Verification and Validation?
+FC-SE-05,mid2+sem,SE,4,flashcard,Compare,Top-Down vs Bottom-Up Integration,ok,info:no Keywords line yet,6,26,,,,,Contrast Top-Down and Bottom-Up Integration Testing.
+FC-SE-06,mid2+sem,SE,4,flashcard,Formula,McCabe's Cyclomatic Complexity Formula,ok,info:no Keywords line yet,10,20,,,,,Write McCabe's Cyclomatic Complexity formulas for flow graph $G$.
+FC-SE-07,mid2+sem,SE,4,flashcard,Concept,Basis Path Testing,ok,info:no Keywords line yet,10,31,,,,,What is Basis Path Testing and what does $V(G)$ guarantee?
+FC-SE-08,mid2+sem,SE,4,flashcard,Concept,Boundary Value Analysis (BVA),ok,info:no Keywords line yet,14,19,,,,,"What test cases are chosen for a variable with valid range $[a, b]$ in BVA?"
+FC-SE-09,mid2+sem,SE,4,flashcard,Concept,Equivalence Class Partitioning,ok,info:no Keywords line yet,6,25,,,,,How does Equivalence Class Partitioning work?
+FC-SE-10,mid2+sem,SE,4,flashcard,Compare,Alpha vs Beta Testing,ok,info:no Keywords line yet,5,24,,,,,Compare Alpha and Beta Testing.
+FC-SE-11,mid2+sem,SE,4,flashcard,Compare,Smoke vs Sanity Testing,ok,info:no Keywords line yet,7,35,,,,,Distinguish between Smoke Testing and Sanity Testing.
+FC-SEM-SE-50,mid2+sem,SE,4,flashcard,Concept,Testing strategy,ok,,7,24,,,,,List the four levels of software testing.
+FC-SEM-SE-51,mid2+sem,SE,4,flashcard,Concept,Black-box techniques,ok,,6,22,,,,,Name three black-box test design techniques.
+FC-SEM-SE-52,mid2+sem,SE,4,flashcard,Concept,Boundary value analysis,ok,,6,26,,,,,Why is boundary value analysis effective?
+FC-SEM-SE-53,mid2+sem,SE,4,flashcard,Concept,White-box techniques,ok,,5,25,,,,,Name three white-box coverage criteria.
+FC-SEM-SE-54,mid2+sem,SE,4,flashcard,Formula,Cyclomatic complexity,ok,,6,23,,,,,State two formulas for cyclomatic complexity.
+FC-SEM-SE-55,mid2+sem,SE,4,flashcard,Compare,Integration testing,ok,,5,26,,,,,Compare top-down and bottom-up integration.
+FC-SEM-SE-56,mid2+sem,SE,4,flashcard,Compare,Validation testing,ok,,9,27,,,,,What is the difference between validation and system testing?
+FC-SEM-SE-57,mid2+sem,SE,4,flashcard,Concept,Debugging,ok,,4,25,,,,,Name three debugging approaches.
+FC-SEM-SE-58,mid2+sem,SE,4,flashcard,Compare,Software metrics,ok,,6,25,,,,,"Distinguish process, product and project metrics."
+FC-SEM-SE-70,mid2+sem,SE,4,flashcard,Concept,Metrics for software quality,ok,,5,49,,,,,Which metrics indicate software quality?
+FC-SE-12,mid2+sem,SE,5,flashcard,Concept,SEI CMMI 5 Maturity Levels,ok,info:no Keywords line yet,10,33,,,,,List the 5 levels of CMMI and their defining keyword.
+FC-SE-13,mid2+sem,SE,5,flashcard,Concept,Basic COCOMO Modes,ok,info:no Keywords line yet,12,32,,,,,What are the 3 project types in Basic COCOMO and their characteristics?
+FC-SE-14,mid2+sem,SE,5,flashcard,Concept,McCall's Quality Factors 3 Views,ok,info:no Keywords line yet,10,20,,,,,What are the 3 pillars of McCall's software quality model?
+FC-SE-15,mid2+sem,SE,5,flashcard,Concept,RMMM Plan Components,ok,info:no Keywords line yet,8,37,,,,,Explain the 3 parts of an RMMM Plan.
+FC-SE-16,mid2+sem,SE,5,flashcard,Concept,4 Types of Software Maintenance,ok,info:no Keywords line yet,9,39,,,,,Name and define the 4 types of software maintenance.
+FC-SE-17,mid2+sem,SE,5,flashcard,Concept,Formal Technical Review (FTR) Rules,ok,info:no Keywords line yet,12,32,,,,,What are 3 core golden rules of a Formal Technical Review (FTR)?
+FC-SE-18,mid2+sem,SE,5,flashcard,Procedure,Risk Exposure Formula,ok,info:no Keywords line yet,8,25,,,,,How is Risk Exposure ($RE$) calculated?
+FC-SE-19,mid2+sem,SE,5,flashcard,Concept,ISO 9126 Six Characteristics,ok,info:no Keywords line yet,9,12,,,,,Name the 6 top-level quality characteristics in ISO 9126.
+FC-SE-20,mid2+sem,SE,5,flashcard,Compare,White-Box vs Black-Box Testing,ok,info:no Keywords line yet,5,31,,,,,Summarize White-Box vs Black-Box Testing.
+FC-SEM-SE-59,mid2+sem,SE,5,flashcard,Concept,Software risk,ok,,5,27,,,,,What is a software risk?
+FC-SEM-SE-60,mid2+sem,SE,5,flashcard,Compare,Reactive vs proactive,ok,,6,27,,,,,Compare reactive and proactive risk strategies.
+FC-SEM-SE-61,mid2+sem,SE,5,flashcard,Concept,Risk identification,ok,,6,19,,,,,Name four categories of software risk.
+FC-SEM-SE-62,mid2+sem,SE,5,flashcard,Concept,RMMM plan,ok,,6,21,,,,,What does an RMMM plan contain?
+FC-SEM-SE-63,mid2+sem,SE,5,flashcard,Concept,SQA,ok,,6,29,,,,,What does software quality assurance do?
+FC-SEM-SE-64,mid2+sem,SE,5,flashcard,Compare,Formal technical reviews,ok,,6,28,,,,,Compare a walkthrough and an inspection.
+FC-SEM-SE-65,mid2+sem,SE,5,flashcard,Concept,Reliability,ok,,4,29,,,,,Define MTTF and MTTR.
+FC-SEM-SE-66,mid2+sem,SE,5,flashcard,Concept,ISO 9000,ok,,5,25,,,,,What does ISO 9000 certify?
+FC-SEM-SE-71,mid2+sem,SE,5,flashcard,Concept,Statistical software quality assurance,ok,,7,43,,,,,How does statistical SQA use Pareto analysis?
+ES-M2-001,mid2+sem,ES,3,mcq,,Soil pollution,ok,,12,,15,4,0,easy,Which practice is a major cause of soil salinity in irrigated fields?
+ES-M2-003,mid2+sem,ES,3,mcq,,Wastewater treatment,ok,,5,,12,4,1,easy,Primary wastewater treatment mainly removes:
+ES-M2-005,mid2+sem,ES,3,mcq,,Climate change,ok,,12,,14,4,2,easy,The greenhouse gas with the greatest long-term contribution to human-driven warming is:
+ES-M2-007,mid2+sem,ES,3,mcq,,Bio-magnification,ok,,15,,22,4,3,medium,Biomagnification of non-biodegradable persistent organic pollutants like DDT causes which 
+ES-M2-008,mid2+sem,ES,3,mcq,,Earthquake Measurement,ok,,15,,23,4,0,easy,The amount of energy released by an earthquake at its hypocenter is quantified on the:
+ES-SEM-056,mid2+sem,ES,3,mcq,,Threats to biodiversity,ok,,8,,14,4,3,easy,The greatest cause of current biodiversity loss is:
+ES-SEM-057,mid2+sem,ES,3,mcq,,Conservation,ok,,7,,14,4,0,easy,A biosphere reserve is an example of:
+ES-SEM-058,mid2+sem,ES,3,mcq,,Ex-situ conservation,ok,,6,,13,4,1,easy,Which is an ex-situ conservation method?
+ES-SEM-073,mid2+sem,ES,3,mcq,,Species-area relationship,ok,,7,,24,4,0,medium,The species-area relationship is commonly expressed as:
+ES-M2-TF-01,mid2+sem,ES,3,tf,,Soil pollution,ok,,12,,14,0,0,easy,Excessive use of chemical fertilizers can cause eutrophication of nearby water bodies.
+ES-M2-TF-02,mid2+sem,ES,3,tf,,Wastewater treatment,ok,,8,,15,0,0,easy,Secondary wastewater treatment is primarily a biological process.
+ES-M2-002,mid2+sem,ES,3,fib,,Noise Measurement Unit,ok,,15,,19,0,,easy,"Ambient noise level is standardly measured in decibels on the _______-weighted scale, deno"
+ES-M2-004,mid2+sem,ES,3,fib,,Soil pollution,ok,,14,,14,0,,medium,The buildup of soluble salts in soil due to poor irrigation is called _______.
+ES-M2-006,mid2+sem,ES,3,fib,,Ozone depletion,ok,,12,,13,0,,medium,Ozone in the stratosphere is destroyed mainly by _______ released from CFCs.
+ES-M2-009,mid2+sem,ES,4,mcq,,Brundtland Sustainable Development,ok,,15,,19,4,1,easy,"According to the 1987 Brundtland Commission Report 'Our Common Future', Sustainable Develo"
+ES-M2-011,mid2+sem,ES,4,mcq,,Acid Rain Chemistry,ok,,16,,28,4,2,easy,Which primary atmospheric pollutants react with water vapor to precipitate as Acid Rain ($
+ES-M2-013,mid2+sem,ES,4,mcq,,Ozone Layer Depletion,ok,,22,,21,4,3,easy,Which international environmental treaty was adopted in 1987 to phase out the production o
+ES-M2-015,mid2+sem,ES,4,mcq,,Greenhouse Effect GWP,ok,,20,,33,4,0,medium,Which major greenhouse gas has the highest 100-year Global Warming Potential (GWP) among t
+ES-M2-017,mid2+sem,ES,4,mcq,,Chernobyl Nuclear Disaster,ok,,13,,23,4,1,easy,The Chernobyl nuclear power disaster occurred in 1986 in which former Soviet republic?
+ES-M2-018,mid2+sem,ES,4,mcq,,Resettlement and Rehabilitation,ok,,17,,20,4,2,medium,What is the primary socio-environmental challenge associated with constructing mega hydroe
+ES-SEM-059,mid2+sem,ES,4,mcq,,Soil pollution,ok,,8,,13,4,2,easy,Which agricultural practice most directly causes soil pollution?
+ES-SEM-060,mid2+sem,ES,4,mcq,,Wastewater treatment,ok,,5,,16,4,3,medium,Activated sludge treatment is a:
+ES-SEM-061,mid2+sem,ES,4,mcq,,Tertiary treatment,ok,,6,,12,4,0,medium,Tertiary treatment is used mainly to:
+ES-SEM-062,mid2+sem,ES,4,mcq,,Climate change,ok,,7,,16,4,1,easy,The enhanced greenhouse effect is caused by:
+ES-SEM-063,mid2+sem,ES,4,mcq,,Ozone depletion,ok,,6,,15,4,2,easy,Ozone depletion is most severe over:
+ES-SEM-064,mid2+sem,ES,4,mcq,,Kyoto Protocol,ok,,5,,13,4,3,easy,The Kyoto Protocol primarily targets:
+ES-M2-TF-03,mid2+sem,ES,4,tf,,Biomagnification,ok,,14,,17,0,0,easy,Biomagnification describes the increasing concentration of persistent non-biodegradable to
+ES-M2-010,mid2+sem,ES,4,fib,,Rainwater Harvesting,ok,,22,,16,0,,easy,The technique of collecting and storing rainwater from rooftops or surface catchments for 
+ES-M2-012,mid2+sem,ES,4,fib,,Acid Rain pH,ok,,16,,20,0,,medium,Normal clean rainwater has a slightly acidic pH of about 5.6 due to dissolved atmospheric 
+ES-M2-014,mid2+sem,ES,4,fib,,Ozone Thickness Unit,ok,,14,,24,0,,medium,The total atmospheric column concentration of stratospheric ozone is measured in _______ U
+ES-M2-016,mid2+sem,ES,4,fib,,Kyoto Protocol,ok,,22,,21,0,,easy,The _______ Protocol (1997) was an international treaty that set legally binding emission 
+ES-M2-019,mid2+sem,ES,5,mcq,,Environment Protection Act Year,ok,,14,,30,4,3,easy,The umbrella 'Environment (Protection) Act' in India was enacted by Parliament in the year
+ES-M2-021,mid2+sem,ES,5,mcq,,Air Act Amendment,ok,,23,,30,4,0,medium,In which year was the Air (Prevention and Control of Pollution) Act amended to explicitly 
+ES-M2-023,mid2+sem,ES,5,mcq,,Forest Conservation Act,ok,,22,,27,4,1,medium,"Under the Forest Conservation Act 1980, whose prior approval is mandatory before any reser"
+ES-M2-025,mid2+sem,ES,5,mcq,,HIV/AIDS Transmission,ok,info:NOT/EXCEPT question,14,,22,4,2,easy,Human Immunodeficiency Virus (HIV) does NOT transmit through which of the following everyd
+ES-M2-027,mid2+sem,ES,5,mcq,,Value Education,ok,,11,,16,4,3,easy,What is the primary role of Value Education in environmental sustainability?
+ES-M2-029,mid2+sem,ES,5,mcq,,ENVIS Information System,ok,,10,,27,4,0,medium,The Environmental Information System (ENVIS) established by MoEFCC serves to:
+ES-M2-031,mid2+sem,ES,5,mcq,,Kyoto and Montreal,ok,,8,,15,4,1,easy,The Montreal Protocol is an international agreement to:
+ES-SEM-065,mid2+sem,ES,5,mcq,,Environmental Protection Act,ok,,9,,19,4,0,easy,The Environment (Protection) Act in India was enacted in:
+ES-SEM-066,mid2+sem,ES,5,mcq,,Air Act,ok,,11,,14,4,1,easy,The Air (Prevention and Control of Pollution) Act was enacted in:
+ES-SEM-067,mid2+sem,ES,5,mcq,,Water Act,ok,,11,,12,4,2,easy,The Water (Prevention and Control of Pollution) Act was enacted in:
+ES-SEM-068,mid2+sem,ES,5,mcq,,EIA,ok,,9,,16,4,3,medium,The first step in an environmental impact assessment is:
+ES-SEM-069,mid2+sem,ES,5,mcq,,Sustainable development,ok,,7,,15,4,0,easy,Sustainable development is defined as development that:
+ES-SEM-070,mid2+sem,ES,5,mcq,,Green chemistry,ok,,4,,17,4,1,easy,Green chemistry aims to:
+ES-SEM-074,mid2+sem,ES,5,mcq,,EIA sequence,ok,,11,,23,4,1,hard,Which sequence gives the correct order of environmental impact assessment steps?
+ES-M2-TF-04,mid2+sem,ES,5,tf,,Composting,ok,,14,,13,0,0,easy,Composting is a biological decomposition process that converts biodegradable organic waste
+ES-M2-020,mid2+sem,ES,5,fib,,Water Act Year,ok,,16,,24,0,,easy,The Water (Prevention and Control of Pollution) Act was enacted in India in the year _____
+ES-M2-022,mid2+sem,ES,5,fib,,Wildlife Protection Act,ok,,20,,23,0,,easy,The Wildlife Protection Act was enacted in India in the year _______ to protect endangered
+ES-M2-024,mid2+sem,ES,5,fib,,Population Pyramids,ok,,20,,21,0,,medium,A triangular population pyramid with a broad base and narrow apex indicates a rapidly ____
+ES-M2-026,mid2+sem,ES,5,fib,,GIS in Environmental Management,ok,,21,,20,0,,easy,"The spatial digital software tool used extensively for forest cover mapping, disaster zoni"
+ES-M2-028,mid2+sem,ES,5,fib,,World Environment Day,ok,,13,,17,0,,easy,World Environment Day is observed globally every year on the _______ of June.
+ES-M2-030,mid2+sem,ES,5,fib,,Article 48A Constitution,ok,,21,,22,0,,hard,Article _______ of the Constitution of India directs the State to protect and improve the 
+ES-M2-032,mid2+sem,ES,5,fib,,Fundamental Duty 51A(g),ok,,25,,33,0,,medium,Article 51A(g) states that it is the fundamental duty of every citizen to protect and impr
+FC-ES-01,mid2+sem,ES,3,flashcard,Concept,CPCB Ambient Noise Standards,ok,info:no Keywords line yet,11,40,,,,,State CPCB ambient noise limits for Day and Night in dB(A).
+FC-ES-02,mid2+sem,ES,3,flashcard,Compare,Wastewater treatment,ok,,7,24,,,,,"Compare primary, secondary and tertiary wastewater treatment."
+FC-ES-03,mid2+sem,ES,3,flashcard,Concept,Landfill Leachate Prevention,ok,info:no Keywords line yet,12,25,,,,,What is Leachate and how is it controlled in modern sanitary landfills?
+FC-ES-04,mid2+sem,ES,3,flashcard,Compare,Biomagnification vs Bioaccumulation,ok,info:no Keywords line yet,4,33,,,,,Differentiate Bioaccumulation from Biomagnification.
+FC-SEM-ES-44,mid2+sem,ES,3,flashcard,Concept,Threats to biodiversity,ok,,7,23,,,,,Name the four main threats to biodiversity.
+FC-SEM-ES-45,mid2+sem,ES,3,flashcard,Concept,Man-wildlife conflict,ok,,5,24,,,,,Why does man-wildlife conflict occur?
+FC-SEM-ES-46,mid2+sem,ES,3,flashcard,Concept,In-situ conservation,ok,,5,21,,,,,Name three in-situ conservation areas.
+FC-SEM-ES-47,mid2+sem,ES,3,flashcard,Concept,Ex-situ conservation,ok,,5,24,,,,,Name three ex-situ conservation methods.
+FC-ES-05,mid2+sem,ES,4,flashcard,Concept,Brundtland Sustainable Development,ok,info:no Keywords line yet,7,25,,,,,State the Brundtland definition of Sustainable Development.
+FC-ES-06,mid2+sem,ES,4,flashcard,Concept,Rainwater Harvesting Techniques,ok,,9,25,,,,,What are the two major techniques of Rainwater Harvesting?
+FC-ES-07,mid2+sem,ES,4,flashcard,Answer-skeleton,Acid Rain Reactions,ok,info:no Keywords line yet,7,16,,,,,Write the chemical reactions causing Acid Rain.
+FC-ES-08,mid2+sem,ES,4,flashcard,Concept,Ozone Depletion Mechanism & CFCs,ok,info:no Keywords line yet,6,19,,,,,How do CFCs destroy stratospheric ozone?
+FC-ES-09,mid2+sem,ES,4,flashcard,Compare,Montreal vs Kyoto Protocol,ok,info:no Keywords line yet,6,27,,,,,Compare Montreal Protocol with Kyoto Protocol.
+FC-ES-10,mid2+sem,ES,4,flashcard,Concept,Global Warming Potential (GWP),ok,info:no Keywords line yet,9,22,,,,,Order major GHGs by 100-year Global Warming Potential (GWP).
+FC-ES-11,mid2+sem,ES,4,flashcard,Concept,Major Nuclear Accidents,ok,info:no Keywords line yet,9,37,,,,,Name the 3 most infamous nuclear power plant disasters.
+FC-SEM-ES-50,mid2+sem,ES,4,flashcard,Concept,Soil pollution,ok,,6,22,,,,,Name four causes of soil pollution.
+FC-SEM-ES-51,mid2+sem,ES,4,flashcard,Concept,Wastewater treatment,ok,,8,25,,,,,"What happens in primary, secondary and tertiary treatment?"
+FC-SEM-ES-52,mid2+sem,ES,4,flashcard,Concept,BOD and COD,ok,,4,28,,,,,Define BOD and COD.
+FC-SEM-ES-53,mid2+sem,ES,4,flashcard,Concept,Climate change,ok,,8,26,,,,,Name four greenhouse gases and their main sources.
+FC-SEM-ES-54,mid2+sem,ES,4,flashcard,Concept,Climate impacts,ok,,6,27,,,,,List four impacts of climate change.
+FC-SEM-ES-55,mid2+sem,ES,4,flashcard,Concept,Ozone depletion,ok,,11,33,,,,,What is the net effect of chlorine atoms on stratospheric ozone?
+FC-SEM-ES-56,mid2+sem,ES,4,flashcard,Concept,Ozone effects,ok,,7,23,,,,,What are the effects of ozone depletion?
+FC-SEM-ES-57,mid2+sem,ES,4,flashcard,Compare,Kyoto and Montreal,ok,,8,22,,,,,Compare the Kyoto Protocol and the Montreal Protocol.
+FC-SEM-ES-58,mid2+sem,ES,4,flashcard,Compare,Pollutant classification,ok,,5,28,,,,,Distinguish primary and secondary pollutants.
+FC-ES-12,mid2+sem,ES,5,flashcard,Concept,Indian Environmental Acts Timeline,ok,info:no Keywords line yet,8,35,,,,,Match Indian environmental acts to their enactment years.
+FC-ES-13,mid2+sem,ES,5,flashcard,Concept,Environment (Protection) Act 1986 Genesis,ok,info:no Keywords line yet,11,20,,,,,What event triggered the enactment of the Environment Protection Act 1986?
+FC-ES-14,mid2+sem,ES,5,flashcard,Concept,Constitutional Articles 48A & 51A(g),ok,info:no Keywords line yet,6,39,,,,,Quote Constitutional Articles 48A and 51A(g).
+FC-ES-15,mid2+sem,ES,5,flashcard,Concept,Air Act 1987 Amendment on Noise,ok,info:no Keywords line yet,9,31,,,,,How is noise legally regulated under Indian environmental statutes?
+FC-ES-16,mid2+sem,ES,5,flashcard,Concept,Demographic Transition Theory,ok,info:no Keywords line yet,10,33,,,,,What are the 4 stages of the Demographic Transition Model?
+FC-ES-17,mid2+sem,ES,5,flashcard,Concept,Role of IT in Environment,ok,info:no Keywords line yet,7,34,,,,,How does Information Technology aid Environmental Conservation?
+FC-ES-18,mid2+sem,ES,5,flashcard,Concept,EIA baseline data,ok,,7,28,,,,,What baseline data does an EIA need?
+FC-ES-19,mid2+sem,ES,5,flashcard,Concept,Important Environmental Days,ok,info:no Keywords line yet,9,23,,,,,Recall the calendar dates of 4 key Environmental observances.
+FC-ES-20,mid2+sem,ES,5,flashcard,Concept,Wildlife Protection Schedules,ok,info:no Keywords line yet,10,34,,,,,How are species protected under India's Wildlife Protection Act 1972?
+FC-SEM-ES-59,mid2+sem,ES,5,flashcard,Concept,Environmental Protection Act,ok,,9,25,,,,,What powers does the Environment (Protection) Act 1986 give?
+FC-SEM-ES-60,mid2+sem,ES,5,flashcard,Concept,Air and Water Acts,ok,,11,34,,,,,What do the Air Act 1981 and Water Act 1974 regulate?
+FC-SEM-ES-61,mid2+sem,ES,5,flashcard,Procedure,EIA process,ok,,7,22,,,,,List the main steps of an EIA.
+FC-SEM-ES-62,mid2+sem,ES,5,flashcard,Concept,EIA baseline data,ok,,8,30,,,,,Why is baseline data collected before an EIA?
+FC-SEM-ES-63,mid2+sem,ES,5,flashcard,Concept,Sustainable development,ok,,10,30,,,,,What are the two key ideas in the Brundtland definition?
+FC-SEM-ES-64,mid2+sem,ES,5,flashcard,Concept,Green chemistry,ok,,6,28,,,,,Name four principles of green chemistry.
+FC-SEM-ES-65,mid2+sem,ES,5,flashcard,Concept,Green building,ok,,5,28,,,,,What makes a building green?
+FC-SEM-ES-66,mid2+sem,ES,5,flashcard,Concept,Low-carbon lifestyle,ok,,7,25,,,,,Give four examples of a low-carbon lifestyle.
+IE-SEM-023,mid2+sem,IE,3,mcq,,Prototyping,ok,,6,,20,4,2,easy,A prototype is best described as:
+IE-SEM-024,mid2+sem,IE,3,mcq,,Minimum viable product,ok,,11,,19,4,3,easy,The main purpose of a Minimum Viable Product (MVP) is to:
+IE-SEM-025,mid2+sem,IE,3,mcq,,Prototype validation,ok,,8,,16,4,0,medium,Prototype testing and validation should mainly focus on:
+IE-M2-TF-03,mid2+sem,IE,3,tf,,Prototype,ok,,14,,15,0,0,easy,A prototype is an early model used to test and communicate a product concept.
+IE-SEM-002,mid2+sem,IE,3,fib,,Minimum viable product,ok,,25,,18,0,,easy,A version of a product that allows a team to collect the maximum validated learning with t
+IE-M1-003,mid2+sem,IE,4,mcq,,Lean Canvas problem block,ok,,12,,14,4,3,easy,Which Lean Canvas block lists the top customer problems and existing alternatives?
+IE-M2-001,mid2+sem,IE,4,mcq,,Lean Canvas blocks,ok,,12,,16,4,0,easy,How many blocks does the Lean Canvas use to summarise a startup?
+IE-M2-003,mid2+sem,IE,4,mcq,,Lean Canvas customer segments,ok,,14,,15,4,1,easy,Which Lean Canvas block defines the groups of people the venture aims to serve?
+IE-M2-005,mid2+sem,IE,4,mcq,,Subscription business model,ok,,19,,17,4,2,easy,A business model in which customers pay a recurring fee for continuing access to a product
+IE-M2-007,mid2+sem,IE,4,mcq,,Lean Canvas channels,ok,,8,,16,4,3,easy,"In the Lean Canvas, the Channels block describes:"
+IE-M2-010,mid2+sem,IE,4,mcq,,Fixed cost,ok,,11,,18,4,1,easy,Which cost remains unchanged when output rises in the short run?
+IE-M2-012,mid2+sem,IE,4,mcq,,Break-even formula,ok,,9,,20,4,2,medium,Break-even quantity is calculated by dividing fixed costs by:
+IE-M2-014,mid2+sem,IE,4,mcq,,People plan,ok,,16,,15,4,3,easy,"Which part of a business plan describes the roles, skills and hiring needed by the venture"
+IE-M2-029,mid2+sem,IE,4,mcq,,Direct channel,ok,,11,,19,4,0,easy,Which is an example of a direct channel for reaching customers?
+IE-SEM-026,mid2+sem,IE,4,mcq,,Business model,ok,,4,,20,4,1,easy,A business model describes:
+IE-SEM-027,mid2+sem,IE,4,mcq,,Lean Canvas,ok,,13,,20,4,2,easy,The Lean Canvas replaces lengthy business plans with a one-page model built around:
+IE-SEM-028,mid2+sem,IE,4,mcq,,Business plan components,ok,,9,,18,4,3,easy,Which set lists typical components of a business plan?
+IE-SEM-029,mid2+sem,IE,4,mcq,,Variable cost,ok,,15,,20,4,0,easy,A cost that changes in direct proportion to the number of units produced is a:
+IE-SEM-030,mid2+sem,IE,4,mcq,,Break-even analysis,ok,,20,,17,4,1,hard,"A product sells for ₹500, variable cost is ₹300 per unit and fixed costs are ₹40,000. The "
+IE-SEM-031,mid2+sem,IE,4,mcq,,Unit economics,ok,,5,,19,4,2,medium,Unit economics is concerned with:
+IE-SEM-032,mid2+sem,IE,4,mcq,,Economies of scale,ok,,5,,20,4,3,medium,Economies of scale occur when:
+IE-SEM-033,mid2+sem,IE,4,mcq,,Go-to-market strategy,ok,,5,,18,4,0,medium,A go-to-market strategy mainly decides:
+IE-M2-TF-01,mid2+sem,IE,4,tf,,Lean Canvas structure,ok,,9,,14,0,0,easy,The Lean Canvas is structured around nine core blocks.
+IE-M2-TF-02,mid2+sem,IE,4,tf,,Unfair advantage,ok,,18,,19,0,0,medium,"In the Lean Canvas, an unfair advantage is something that cannot easily be copied or bough"
+IE-M2-002,mid2+sem,IE,4,fib,,Unique value proposition,ok,,21,,17,0,,easy,"In the Lean Canvas, the block that states why the product is different and worth buying is"
+IE-M2-006,mid2+sem,IE,4,fib,,Lean Canvas revenue streams,ok,,17,,14,0,,easy,"In the Lean Canvas, the block that lists how the venture earns money is called Revenue ___"
+IE-M2-011,mid2+sem,IE,4,fib,,Contribution margin,ok,,16,,13,0,,medium,Revenue from one customer minus the cost of serving that customer is called the _______ ma
+IE-M2-013,mid2+sem,IE,4,fib,,Business plan,ok,,17,,15,0,,easy,"A document that forecasts sales, people and finances for a new venture is called a busines"
+IE-M2-015,mid2+sem,IE,4,fib,,Financial plan,ok,,12,,14,0,,medium,"A financial plan projects revenue, costs and expected _______ for the venture."
+IE-M2-028,mid2+sem,IE,4,fib,,Go-to-market strategy,ok,,14,,11,0,,easy,The plan for reaching target customers through selected channels is called the go-to-_____
+IE-M2-008,mid2+sem,IE,5,mcq,,Non-dilutive funding,ok,,11,,15,4,0,medium,Which funding source usually supports a startup without diluting founder ownership?
+IE-M2-016,mid2+sem,IE,5,mcq,,Crowdfunding,ok,,14,,15,4,0,medium,"Which funding method pools small contributions from many people, usually through an online"
+IE-M2-017,mid2+sem,IE,5,mcq,,Startup India Seed Fund,ok,,11,,16,4,1,medium,The Startup India Seed Fund Scheme primarily supports early-stage startups by:
+IE-M2-018,mid2+sem,IE,5,mcq,,Patent Criteria,ok,,18,,30,4,2,easy,"Under the Indian Patents Act 1970, which three criteria must an invention satisfy to be gr"
+IE-M2-020,mid2+sem,IE,5,mcq,,Trademark Protection,ok,,14,,25,4,3,easy,What is the primary function of a Trademark under the Trade Marks Act 1999?
+IE-M2-022,mid2+sem,IE,5,mcq,,Copyright Term,ok,,21,,26,4,0,medium,"Under the Indian Copyright Act 1957, what is the standard duration of copyright protection"
+IE-M2-024,mid2+sem,IE,5,mcq,,Geographical Indication (GI),ok,,16,,30,4,1,easy,Which of the following is an example of an authorized Geographical Indication (GI Tag) in 
+IE-M2-026,mid2+sem,IE,5,mcq,,Licensing,ok,,16,,20,4,2,medium,A licence agreement typically allows the licensee to use intellectual property in exchange
+IE-M2-027,mid2+sem,IE,5,mcq,,Startup lifecycle,ok,,11,,17,4,3,easy,"In a typical startup lifecycle, which stage normally follows problem validation?"
+IE-M2-031,mid2+sem,IE,5,mcq,,NISP,ok,,10,,16,4,1,medium,The National Innovation and Startup Policy primarily encourages innovation in:
+IE-SEM-034,mid2+sem,IE,5,mcq,,Startup registration,ok,,13,,21,4,1,easy,Which is a basic legal requirement for formally registering a startup in India?
+IE-SEM-035,mid2+sem,IE,5,mcq,,Pitch preparation,ok,,6,,17,4,2,easy,A startup pitch should primarily communicate:
+IE-SEM-036,mid2+sem,IE,5,mcq,,Startup funding,ok,,12,,13,4,3,medium,Which source provides early-stage financial support to a startup without taking equity?
+IE-SEM-037,mid2+sem,IE,5,mcq,,NISP,ok,,11,,18,4,0,medium,The National Innovation and Startup Policy (NISP) is mainly intended to:
+IE-SEM-038,mid2+sem,IE,5,mcq,,Patentability,ok,,10,,23,4,1,easy,Which set lists the three main patentability requirements in India?
+IE-SEM-039,mid2+sem,IE,5,mcq,,Patent term,ok,,9,,16,4,2,medium,The term of a granted Indian patent is generally:
+IE-SEM-040,mid2+sem,IE,5,mcq,,Geographical indication,ok,,12,,18,4,3,easy,Which form of intellectual property identifies the geographical origin of a product?
+IE-SEM-041,mid2+sem,IE,5,mcq,,Licensing,ok,,7,,17,4,0,medium,Licensing a technology allows the owner to:
+IE-SEM-042,mid2+sem,IE,5,mcq,,Startup lifecycle,ok,,8,,20,4,1,easy,Which sequence best represents a typical startup lifecycle?
+IE-M2-TF-04,mid2+sem,IE,5,tf,,Grant funding,ok,,11,,14,0,1,medium,A government grant usually dilutes the founder's ownership of the startup.
+IE-M2-009,mid2+sem,IE,5,fib,,Government grant,ok,,16,,14,0,,medium,A government scheme that gives eligible startups financial support without taking equity i
+IE-M2-019,mid2+sem,IE,5,fib,,Patent Validity Period,ok,,19,,25,0,,easy,"In India, the statutory term of protection for a granted patent is _______ years from the "
+IE-M2-021,mid2+sem,IE,5,fib,,Trademark Validity Term,ok,,19,,19,0,,medium,A registered trademark in India is valid for _______ years and can be renewed indefinitely
+IE-M2-023,mid2+sem,IE,5,fib,,Design registration,ok,,14,,19,0,,medium,"A registered design protects the visual _______ of an article, not its technical function."
+IE-M2-025,mid2+sem,IE,5,fib,,Patent Cooperation Treaty,ok,,25,,21,0,,medium,The international treaty that allows an inventor to seek patent protection simultaneously 
+IE-M2-030,mid2+sem,IE,5,fib,,Incorporation,ok,,10,,17,0,,easy,The legal process of forming a company is called _______.
+IE-M2-032,mid2+sem,IE,5,fib,,IPR Design Act,ok,,20,,25,0,,hard,"The visual aesthetic shape, pattern, or ornamental configuration of an industrial product "
+FC-M1-IE-05,mid2+sem,IE,3,flashcard,Concept,Minimum viable product,ok,,6,36,,,,,What is a Minimum Viable Product?
+FC-SEM-IE-21,mid2+sem,IE,3,flashcard,Concept,Prototyping,ok,,4,32,,,,,Why build a prototype?
+FC-SEM-IE-22,mid2+sem,IE,3,flashcard,Concept,Minimum viable product,ok,,7,35,,,,,What should an MVP include and exclude?
+FC-SEM-IE-23,mid2+sem,IE,3,flashcard,Concept,Prototype testing,ok,,6,29,,,,,How should a prototype be tested?
+FC-SEM-IE-24,mid2+sem,IE,3,flashcard,Concept,Validation,ok,,7,36,,,,,What counts as validation of a prototype?
+FC-IE-01,mid2+sem,IE,4,flashcard,Concept,Lean Canvas blocks,ok,,6,32,,,,,List the nine Lean Canvas blocks.
+FC-IE-05,mid2+sem,IE,4,flashcard,Concept,Unit economics,ok,,4,36,,,,,What is unit economics?
+FC-IE-06,mid2+sem,IE,4,flashcard,Formula,Break-even analysis,ok,,5,29,,,,,State the break-even quantity formula.
+FC-IE-08,mid2+sem,IE,4,flashcard,Concept,Business plan components,ok,,8,34,,,,,Name the main components of a business plan.
+FC-IE-09,mid2+sem,IE,4,flashcard,Concept,Sales and people plans,ok,,8,32,,,,,What do the sales and people plans cover?
+FC-IE-10,mid2+sem,IE,4,flashcard,Concept,Go-to-market channels,ok,,6,24,,,,,What does a go-to-market plan decide?
+FC-M1-IE-03,mid2+sem,IE,4,flashcard,Concept,Lean Canvas blocks,ok,,7,32,,,,,What are the nine Lean Canvas blocks?
+FC-SEM-IE-25,mid2+sem,IE,4,flashcard,Concept,Business model,ok,,6,30,,,,,What does a business model describe?
+FC-SEM-IE-26,mid2+sem,IE,4,flashcard,Concept,Lean Canvas,ok,,8,35,,,,,Which Lean Canvas blocks cover customers and money?
+FC-SEM-IE-27,mid2+sem,IE,4,flashcard,Concept,Business plan,ok,,9,39,,,,,What are the main components of a business plan?
+FC-SEM-IE-28,mid2+sem,IE,4,flashcard,Concept,Sales plan,ok,,6,30,,,,,What does a sales plan contain?
+FC-SEM-IE-29,mid2+sem,IE,4,flashcard,Concept,People plan,ok,,6,31,,,,,What does a people plan cover?
+FC-SEM-IE-30,mid2+sem,IE,4,flashcard,Compare,Financial plan and costs,ok,,6,42,,,,,"Distinguish fixed, variable and total cost."
+FC-SEM-IE-31,mid2+sem,IE,4,flashcard,Concept,Unit economics,ok,,9,37,,,,,Why can positive unit economics still produce a loss?
+FC-SEM-IE-32,mid2+sem,IE,4,flashcard,Concept,Economies of scale,ok,,5,31,,,,,What causes economies of scale?
+FC-SEM-IE-33,mid2+sem,IE,4,flashcard,Compare,Go-to-market,ok,,7,39,,,,,Distinguish a channel from an acquisition tactic.
+IE-IE-04,mid2+sem,IE,4,flashcard,Compare,Pre-Money vs Post-Money Valuation,ok,info:no Keywords line yet,9,4,,,,,"State the relationship between Pre-Money, Post-Money, and Investor Equity."
+FC-IE-03,mid2+sem,IE,5,flashcard,Concept,Startup funding sources,ok,,5,27,,,,,Name common startup funding sources.
+FC-IE-07,mid2+sem,IE,5,flashcard,Compare,Grants versus equity,ok,,6,39,,,,,Compare grant funding with equity funding.
+FC-IE-11,mid2+sem,IE,5,flashcard,Compare,Forms of IPR,ok,,6,37,,,,,"Compare patents, copyright, trademarks and GI."
+FC-IE-12,mid2+sem,IE,5,flashcard,Formula,3 Patentability Criteria in India,ok,info:no Keywords line yet,10,35,,,,,What 3 requirements make an invention patentable under Indian law?
+FC-IE-13,mid2+sem,IE,5,flashcard,Concept,Section 3(k) Indian Patents Act,ok,info:no Keywords line yet,10,29,,,,,What is Section 3(k) of the Indian Patents Act 1970?
+FC-IE-14,mid2+sem,IE,5,flashcard,Concept,Trademark Registration Duration,ok,info:no Keywords line yet,9,25,,,,,What is the lifespan of a Trademark in India?
+FC-IE-15,mid2+sem,IE,5,flashcard,Concept,Copyright Duration in India,ok,info:no Keywords line yet,11,17,,,,,How long does Copyright protection last for published books and software?
+FC-IE-16,mid2+sem,IE,5,flashcard,Concept,Patent Cooperation Treaty (PCT),ok,info:no Keywords line yet,11,34,,,,,What is the PCT and its primary benefit for international startups?
+FC-IE-17,mid2+sem,IE,5,flashcard,Concept,Geographical Indications (GI),ok,info:no Keywords line yet,11,24,,,,,What does a Geographical Indication (GI) protect? Give 2 Indian examples.
+FC-IE-18,mid2+sem,IE,5,flashcard,Concept,Startup lifecycle,ok,,5,27,,,,,Describe the typical startup lifecycle.
+FC-IE-19,mid2+sem,IE,5,flashcard,Concept,NISP,ok,,8,31,,,,,What is the National Innovation and Startup Policy?
+FC-IE-20,mid2+sem,IE,5,flashcard,Concept,Licensing and technology transfer,ok,,6,38,,,,,What is licensing and technology transfer?
+FC-SEM-IE-34,mid2+sem,IE,5,flashcard,Concept,Startup requirements,ok,,8,31,,,,,What are basic requirements to start a venture?
+FC-SEM-IE-35,mid2+sem,IE,5,flashcard,Concept,Founding team and mentors,ok,,8,27,,,,,Why are the founding team and mentors important?
+FC-SEM-IE-36,mid2+sem,IE,5,flashcard,Concept,Pitch preparation,ok,,6,32,,,,,What should a venture pitch cover?
+FC-SEM-IE-37,mid2+sem,IE,5,flashcard,Procedure,Registration and legal aspects,ok,,7,32,,,,,What legal steps does startup registration involve?
+FC-SEM-IE-38,mid2+sem,IE,5,flashcard,Concept,Funding opportunities,ok,,9,31,,,,,"Which funding source suits validation, and which suits scaling?"
+FC-SEM-IE-39,mid2+sem,IE,5,flashcard,Concept,Institutional support,ok,,7,25,,,,,What institutional support is available to startups?
+FC-SEM-IE-40,mid2+sem,IE,5,flashcard,Concept,Startup lifecycle,ok,,9,32,,,,,What are the main risks at each startup stage?
+FC-SEM-IE-41,mid2+sem,IE,5,flashcard,Concept,NISP,ok,,8,29,,,,,What does NISP expect a college to provide?
+FC-SEM-IE-42,mid2+sem,IE,5,flashcard,Concept,Patents and designs,ok,,9,36,,,,,"What is patentable, and what does a design protect?"
+FC-SEM-IE-43,mid2+sem,IE,5,flashcard,Procedure,Patent grant procedure,ok,,6,35,,,,,Outline the Indian patent grant procedure.
+FC-SEM-IE-44,mid2+sem,IE,5,flashcard,Concept,Patent rights,ok,,9,38,,,,,"What rights does a patent grant, and how long?"
+FC-SEM-IE-45,mid2+sem,IE,5,flashcard,Compare,"Copyright, trademark and GI",ok,,5,38,,,,,"Distinguish copyright, trademark and GI."
+FC-SEM-IE-46,mid2+sem,IE,5,flashcard,Compare,Licensing and technology transfer,ok,,6,32,,,,,Distinguish licensing from assigning intellectual property.

@@ -1,0 +1,2406 @@
+{
+  "COA": {
+    "questions": 477,
+    "clusters": [
+      {
+        "size": 14,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U1.T07",
+          "COA.U3.T02",
+          "COA.U3.T04",
+          "COA.U4.T01",
+          "COA.U4.T02"
+        ],
+        "sample": "Compare hardwired control with micro programmed control. Is it possible to have a hardwired control associated with control memory?",
+        "ids": [
+          "COA-A2-0109",
+          "COA-A2-0116",
+          "COA-A2-0120",
+          "COA-A2-0126",
+          "COA-A2-0130",
+          "COA-B2-0134",
+          "COA-B2-0135",
+          "COA-B2-0150",
+          "COA-B2-0154",
+          "COA-B2-0155",
+          "COA-B2-0177",
+          "COA-B2-0178",
+          "COA-B3-0238",
+          "COA-B3-0264"
+        ]
+      },
+      {
+        "size": 7,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          2,
+          5,
+          10
+        ],
+        "topics": [
+          "COA.U1.T06"
+        ],
+        "sample": "What are the steps involved in addition / subtraction of two floating-Point Numbers? Explain the operation through a flow chart. With an example.",
+        "ids": [
+          "COA-A3-0199",
+          "COA-B3-0248",
+          "COA-B3-0253",
+          "COA-B3-0257",
+          "COA-B3-0274",
+          "COA-B3-0277",
+          "COA-B3-0283"
+        ]
+      },
+      {
+        "size": 5,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U4.T02",
+          "COA.U4.T06",
+          "COA.U5.T10"
+        ],
+        "sample": "Discuss the different mapping techniques used in cache memories and their relative merits and demerits.",
+        "ids": [
+          "COA-B4-0323",
+          "COA-B4-0336",
+          "COA-B4-0357",
+          "COA-B4-0378",
+          "COA-B4-0381"
+        ]
+      },
+      {
+        "size": 4,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U4.T06"
+        ],
+        "sample": "Distinguish between direct and indirect address instructions. Also, explain the various addressing modes with examples.",
+        "ids": [
+          "COA-A2-0119",
+          "COA-B2-0145",
+          "COA-B2-0158",
+          "COA-B2-0190"
+        ]
+      },
+      {
+        "size": 4,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U1.T05",
+          "COA.U1.T06"
+        ],
+        "sample": "Explain the concept of floating-point representation and how it differs from fixed-point representation. Discuss its advantages and disadvantages.",
+        "ids": [
+          "COA-A3-0205",
+          "COA-A3-0222",
+          "COA-B3-0244",
+          "COA-B3-0255"
+        ]
+      },
+      {
+        "size": 4,
+        "years": [
+          2023,
+          2024,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U4.T07"
+        ],
+        "sample": "Compare and contrast between RISC and CISC architectures. computer",
+        "ids": [
+          "COA-A5-0388",
+          "COA-B5-0432",
+          "COA-B5-0443",
+          "COA-B5-0470"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "COA.U1.T04",
+          "COA.U4.T08"
+        ],
+        "sample": "Give and explain the hardware implementation of the signed magnitude addition and subtraction.",
+        "ids": [
+          "COA-A3-0209",
+          "COA-A3-0216",
+          "COA-B3-0224"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "COA.U4.T07"
+        ],
+        "sample": "Explain the different types of data transfer and data manipulation instructions in computer with suitable examples.",
+        "ids": [
+          "COA-A2-0108",
+          "COA-B2-0157",
+          "COA-B2-0187"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U4.T01",
+          "COA.U4.T02"
+        ],
+        "sample": "Explain about address sequencing in control memory with neat diagrams?",
+        "ids": [
+          "COA-B2-0147",
+          "COA-B2-0189",
+          "COA-B3-0261"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U1.T07"
+        ],
+        "sample": "[xplain about various functional units of a basic computer with the help of block diagram.",
+        "ids": [
+          "COA-A1-0032",
+          "COA-B1-0054",
+          "COA-B1-0075"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U4.T06"
+        ],
+        "sample": "Explain with the help of diagram the register organization of computer with memory bank. 3. ) What do you mean by addressing mode? Atiatysc the following addressing modes. 1) Index addressing mode 11) Relative addressing mode 111) Immediate addressing mode tv) Implied addressing mode.",
+        "ids": [
+          "COA-B2-0152",
+          "COA-B2-0153",
+          "COA-B2-0167"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "COA.U1.T06"
+        ],
+        "sample": "What is meant by normalization in floating point representation? Why do we need it?",
+        "ids": [
+          "COA-A3-0192",
+          "COA-A3-0196"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "COA.U3.T01",
+          "COA.U3.T03"
+        ],
+        "sample": "List out the Register transfer notations for Arithmetic Micro Operations.",
+        "ids": [
+          "COA-A1-0021",
+          "COA-A3-0214"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U3.T05",
+          "COA.U3.T06"
+        ],
+        "sample": "Design a 4-bit ALU which performs arithmetic, Logical and shift operations.",
+        "ids": [
+          "COA-A1-0033",
+          "COA-B3-0263"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U2.T02"
+        ],
+        "sample": "Design a combinational circuit to addition, subtraction, increment and decrement for 4 bit register using full adders and explain control logic?",
+        "ids": [
+          "COA-B1-0036",
+          "COA-B1-0041"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U2.T02"
+        ],
+        "sample": "Design a 4-bit combinational decrementer using 4 full adder circuits.",
+        "ids": [
+          "COA-B1-0048",
+          "COA-B1-0082"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U3.T09"
+        ],
+        "sample": "What is an Instruction Cycle? Illustrate the flowchart diagram of the Instruction Cycle and explain its phases briefly.",
+        "ids": [
+          "COA-B1-0061",
+          "COA-B1-0066"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U3.T03",
+          "COA.U3.T06"
+        ],
+        "sample": "Design a 4 bit arithmetic combinational arithmetic circuit which} implements addition, subtraction, increment, and decrement operations?",
+        "ids": [
+          "COA-B1-0062",
+          "COA-B1-0098"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U3.T01",
+          "COA.U3.T09"
+        ],
+        "sample": "List and explain the steps involved in the execution of a complete instruction cycle. List the basic symbols used in register transfer Language.",
+        "ids": [
+          "COA-B1-0070",
+          "COA-B1-0085"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U4.T01"
+        ],
+        "sample": "What are the advantages of microprogrammed control unit?",
+        "ids": [
+          "COA-A2-0112",
+          "COA-B2-0185"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "COA.U3.T04"
+        ],
+        "sample": "Differentiate between hardwired and microprogrammed Control unit.",
+        "ids": [
+          "COA-A2-0128",
+          "COA-B2-0162"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U4.T10"
+        ],
+        "sample": "Illustrate the various representations of the signed numbers.",
+        "ids": [
+          "COA-B3-0233",
+          "COA-B3-0276"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [],
+        "sample": "Draw the flow chart for decimal division and explain division of 23 with 4.",
+        "ids": [
+          "COA-B3-0252",
+          "COA-B3-0275"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U4.T09"
+        ],
+        "sample": "Draw the flow chart for Booth multiplication algorithm and multiply 13 with -7 using Booth multiplication algorithm.",
+        "ids": [
+          "COA-B3-0254",
+          "COA-B3-0266"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U1.T06"
+        ],
+        "sample": "Explain the flowchart of floating point addition/subtraction operation.",
+        "ids": [
+          "COA-B3-0267",
+          "COA-B3-0269"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          1,
+          2
+        ],
+        "topics": [
+          "COA.U5.T02"
+        ],
+        "sample": "Differentiate Synchronous and Asynchronous data transmission (any 2 differences).",
+        "ids": [
+          "COA-A4-0284",
+          "COA-A4-0293"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U5.T04"
+        ],
+        "sample": "Discuss daisy-chain priority interrupt using neat diagram.",
+        "ids": [
+          "COA-B4-0352",
+          "COA-B4-0376"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U5.T04"
+        ],
+        "sample": "Contrast Daisy-Chaining priority and Parallel priority Interrupt with its hardware diagram.",
+        "ids": [
+          "COA-B4-0356",
+          "COA-B4-0364"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [],
+        "sample": "Discuss the difference between tightly coupled multiprocessor and loosely coupled multiprocessor.",
+        "ids": [
+          "COA-A5-0390",
+          "COA-A5-0413"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [],
+        "sample": "Explain 8x8 omega switching network for multistage switching networks to control processor-memory communication in a tightly coupled multiprocessor system.",
+        "ids": [
+          "COA-A5-0409",
+          "COA-B5-0453"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [],
+        "sample": "What is meant by instruction pipeline? Explain four segment Instruction Pipeline. Give its timing diagram.",
+        "ids": [
+          "COA-B5-0457",
+          "COA-B5-0463"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "COA.U4.T06"
+        ],
+        "sample": "Specify types on of addressing mode in instruction execution?",
+        "ids": [
+          "COA-A1-0015",
+          "COA-A2-0114"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "COA.U1.T07"
+        ],
+        "sample": "Explain the basic operational concepts of a computer with the help of a suitable diagram.",
+        "ids": [
+          "COA-B1-0058",
+          "COA-B1-0084"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "COA.U3.T04",
+          "COA.U4.T10"
+        ],
+        "sample": "Define micro word, micro instruction and micro program? Give the flow chart of restoring algorithm.",
+        "ids": [
+          "COA-A2-0115",
+          "COA-A3-0206"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          1
+        ],
+        "topics": [],
+        "sample": "Draw the flow chart for the add and subtract operations.",
+        "ids": [
+          "COA-A2-0125",
+          "COA-A3-0217"
+        ]
+      }
+    ]
+  },
+  "DBMS": {
+    "questions": 363,
+    "clusters": [
+      {
+        "size": 4,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U2.T05"
+        ],
+        "sample": "What are the Fundamental Relational Algebra Operations? Give an example for each operation.",
+        "ids": [
+          "DBMS-A2-0575",
+          "DBMS-B2-0587",
+          "DBMS-B2-0599",
+          "DBMS-B2-0612"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023
+        ],
+        "marks": [
+          2,
+          5,
+          10
+        ],
+        "topics": [
+          "DBMS.U2.T01",
+          "DBMS.U3.T03",
+          "DBMS.U3.T04"
+        ],
+        "sample": "Consider the following relations: Employee (emp_id, gender, salary) Work For(emp_id, project_id) Project (project_id, project_name, duration_in_ months) Write the following queries in SQL. i) Get the details of Employees having salary >10000. il) Get the names of Employees working for pid 20. iil) Get the strength of Male and Female Employees. iv) List project_ids in the descending order of their duration.",
+        "ids": [
+          "DBMS-B2-0585",
+          "DBMS-B2-0586",
+          "DBMS-A4-0702"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U1.T04"
+        ],
+        "sample": "What is a weak entity set in ER -Diagram? Quote suitable example.",
+        "ids": [
+          "DBMS-A1-0496",
+          "DBMS-B1-0525"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U1.T01"
+        ],
+        "sample": "Explain the Advantages of Database Management system over Traditional File Processing System.",
+        "ids": [
+          "DBMS-B1-0530",
+          "DBMS-B1-0533"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U3.T10",
+          "DBMS.U5.T04"
+        ],
+        "sample": "What is Primary Key, Super Key and Candidate Key explain with an example.",
+        "ids": [
+          "DBMS-A2-0567",
+          "DBMS-B2-0601"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U3.T03",
+          "DBMS.U4.T09"
+        ],
+        "sample": "Develop Salesman Table (salesperson ID, name, city and commission). ii. Create a view to Update the city name which salesperson ID is '5007'.\".",
+        "ids": [
+          "DBMS-B2-0594",
+          "DBMS-B2-0598"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U3.T11"
+        ],
+        "sample": "Assess the functionality of first, second and third normal forms.",
+        "ids": [
+          "DBMS-B3-0652",
+          "DBMS-B3-0691"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U3.T09"
+        ],
+        "sample": "Suppose that we decompose the schema R (A, B, C, D, E) (A, B, C) and R2 (A, D, E). Determine that this decomposition lossless-join decomposition or dependency preserving if the set F of functional dependencies holds: A - BC, CD - E,B E.- A,",
+        "ids": [
+          "DBMS-B3-0663",
+          "DBMS-B3-0684"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U3.T03"
+        ],
+        "sample": "Write the given queries in SQL Sailors(sid: integer, sname: string, rating: integer, age: real); Boats(bid: integer, bname: string, color: string); Reserves(sid: integer, bid: integer, day: date). i. Find all information of sailors who have reserved boat number 101. ii. Find the names of sailors who have reserved a red boat, and green boat iii. Find the names of sailors who have reserved at least one boat.",
+        "ids": [
+          "DBMS-B3-0664",
+          "DBMS-B3-0668"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U1.T01",
+          "DBMS.U1.T02",
+          "DBMS.U3.T09"
+        ],
+        "sample": "Discuss the problems caused by decomposition in Schema] refinement.",
+        "ids": [
+          "DBMS-B3-0667",
+          "DBMS-B3-0671"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "DBMS.U4.T09"
+        ],
+        "sample": "What is time stamp ordering protocol?",
+        "ids": [
+          "DBMS-A4-0707",
+          "DBMS-B4-0752"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U4.T10"
+        ],
+        "sample": "Discuss about Log Based Recovery Techniques. Illustrate with an} example.",
+        "ids": [
+          "DBMS-A4-0721",
+          "DBMS-B4-0734"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U1.T01",
+          "DBMS.U3.T03"
+        ],
+        "sample": "Outline Database - System Applications in detail.",
+        "ids": [
+          "DBMS-A1-0501",
+          "DBMS-B1-0523"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2026
+        ],
+        "marks": [
+          1,
+          2
+        ],
+        "topics": [
+          "DBMS.U3.T01"
+        ],
+        "sample": "Write about the basic form of SQL query?",
+        "ids": [
+          "DBMS-A2-0552",
+          "DBMS-A3-0627"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023
+        ],
+        "marks": [
+          5,
+          10
+        ],
+        "topics": [
+          "DBMS.U3.T03"
+        ],
+        "sample": "What is transaction? Give an example. Explain ACID propertics in} DBMS with the help of examples.",
+        "ids": [
+          "DBMS-B4-0733",
+          "DBMS-B5-0801"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DBMS.U5.T06",
+          "DBMS.U5.T08"
+        ],
+        "sample": "Construct a B+ tree for the following set of key values. (2,3,5,7,11,17,19,23,2,31).Assume that the tree is initially empty and values are added in ascending order.",
+        "ids": [
+          "DBMS-A5-0778",
+          "DBMS-B5-0827"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U5.T02"
+        ],
+        "sample": "List and discuss about various File Organization Techniques with an cxample.",
+        "ids": [
+          "DBMS-B5-0813",
+          "DBMS-B5-0820"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DBMS.U5.T04",
+          "DBMS.U5.T05"
+        ],
+        "sample": "Suppose we are using extendable hashing on a file that contains records with the following search key values Show the extendable hash structure for this file if the hash function is h(x)=x mod 8 and buckets can hold three records.",
+        "ids": [
+          "DBMS-B5-0817",
+          "DBMS-B5-0825"
+        ]
+      }
+    ]
+  },
+  "DM": {
+    "questions": 471,
+    "clusters": [
+      {
+        "size": 7,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T04"
+        ],
+        "sample": "Illustrate how Kruskal's algorithm and Prim's algorithm are used to find a minimum spanning tree, using a weighted graph with at least eight vertices and 15 edges.",
+        "ids": [
+          "DM-B5-1250",
+          "DM-B5-1262",
+          "DM-B5-1277",
+          "DM-B5-1281",
+          "DM-B5-1282",
+          "DM-B5-1295",
+          "DM-B5-1300"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U1.T02",
+          "DM.U1.T03"
+        ],
+        "sample": "Show that the following statements are logically equivalent without using truth table. (PR) A (QR) ⇔ (PVQ) R",
+        "ids": [
+          "DM-B1-0881",
+          "DM-B1-0889",
+          "DM-B1-0922"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023,
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T08",
+          "DM.U5.T09"
+        ],
+        "sample": "Differentiate between Eulerian graph and Hamiltonian graph with an 5 2 example each.",
+        "ids": [
+          "DM-B5-1251",
+          "DM-B5-1257",
+          "DM-B5-1260"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T01",
+          "DM.U5.T09"
+        ],
+        "sample": "Show that a graph Kn has a Hamiltonian cycle whenever n ≥3. ii) Show that Ksis an Euler's circuit and also Hamiltonian cycle.",
+        "ids": [
+          "DM-B5-1254",
+          "DM-B5-1288",
+          "DM-B5-1299"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U1.T02",
+          "DM.U1.T04"
+        ],
+        "sample": "Obtain the PDNF of (PAQ)V(~PAR)V(QAR) without using truth table.",
+        "ids": [
+          "DM-B1-0883",
+          "DM-B1-0901",
+          "DM-B1-0924"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U1.T06"
+        ],
+        "sample": "Define Predicate. Discuss about Free and Bound variables with examples.",
+        "ids": [
+          "DM-B1-0887",
+          "DM-B1-0896",
+          "DM-B1-0916"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T01",
+          "DM.U5.T07",
+          "DM.U5.T10"
+        ],
+        "sample": "Find the chromatic number of a graph with 4 vertices and 4 edges forming a cycle.",
+        "ids": [
+          "DM-B5-1258",
+          "DM-B5-1285",
+          "DM-B5-1306"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T02"
+        ],
+        "sample": "Verify whether two graphs G1 and G2 are isomorphic or not.",
+        "ids": [
+          "DM-B5-1269",
+          "DM-B5-1276",
+          "DM-B5-1293"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U2.T03"
+        ],
+        "sample": "Solve the following recurrence relation by substitution method.",
+        "ids": [
+          "DM-A4-1126",
+          "DM-B4-1160"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U1.T02"
+        ],
+        "sample": "Construct the truth table for the following statement: (P→Q)V(IP-R)",
+        "ids": [
+          "DM-A1-0841",
+          "DM-B1-0888"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U1.T02"
+        ],
+        "sample": "Construct a truth table for each of these compound proposition (peo qgyOC ps?",
+        "ids": [
+          "DM-A1-0851",
+          "DM-B1-0906"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U1.T04"
+        ],
+        "sample": "Obtain the principal disjunctive and conjunctive normal form of the following formula.",
+        "ids": [
+          "DM-B1-0890",
+          "DM-B1-0897"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T05"
+        ],
+        "sample": "Draw the Hasse diagram representing the partial ordering {(a, b) a divides b} on {1, 2, 3, 4, 6, 8, 12}.",
+        "ids": [
+          "DM-B2-0964",
+          "DM-B2-0984"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T06"
+        ],
+        "sample": "State and explain about any four frequently used Primitive Recursive Functions.",
+        "ids": [
+          "DM-B2-0975",
+          "DM-B2-1015"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T03",
+          "DM.U2.T07"
+        ],
+        "sample": "Use Warshall's algorithm to find the transitive closures of the relations in {(2, 1), (2,3), (3,1),(3,4), (4,1), (4, 3)}.",
+        "ids": [
+          "DM-B2-0994",
+          "DM-B2-1020"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T03"
+        ],
+        "sample": "Let A={1, 2, 3, 4, 6}, and let R be the relation on A defined by \"x divides y\", written xly. (Note: xly iff there exists an integer z such that XZ = y) i) Write R as a set of ordered pairs. ii) Draw the digraph of R. iii) Draw the Hasse diagram of the relation",
+        "ids": [
+          "DM-B2-0996",
+          "DM-B2-1023"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U2.T06"
+        ],
+        "sample": "Find the number of ways in which the letters of the word 'MATHEMATICS' can be arranged.",
+        "ids": [
+          "DM-A3-1032",
+          "DM-B4-1194"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U4.T02"
+        ],
+        "sample": "How many four letter words can be formed using the letters a,a, a,b,b,c,c,c,c,d,d?",
+        "ids": [
+          "DM-A3-1033",
+          "DM-B3-1076"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "DM.U4.T02"
+        ],
+        "sample": "How many words can be formed by using the letters from the word \"DRIVER\" such that all the vowels are always together?",
+        "ids": [
+          "DM-A3-1040",
+          "DM-B4-1172"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          1,
+          2
+        ],
+        "topics": [
+          "DM.U4.T02"
+        ],
+        "sample": "How many ways are there to distribute 10 different books among 15 people if no person is to receive more than 1 book?",
+        "ids": [
+          "DM-A3-1057",
+          "DM-A4-1151"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T03"
+        ],
+        "sample": "Find a general expression for a solution to the recurrence relation an-8an-1+12an-2- 0 for n>=2.",
+        "ids": [
+          "DM-B4-1164",
+          "DM-B4-1215"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U4.T10"
+        ],
+        "sample": "Solve the recurrence relation an+ a n-1 - 8 a n-2 - 12 a n-3 =0 for n ≥ 3, given ao=1, a=5, a2=1 by generating functions.",
+        "ids": [
+          "DM-B4-1171",
+          "DM-B4-1216"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T03"
+        ],
+        "sample": "Determine the solution of the recurrence relation an = 6an-1-9an-2 with initial conditions ao = 1 and a₁ =6?",
+        "ids": [
+          "DM-B4-1176",
+          "DM-B4-1198"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U5.T01"
+        ],
+        "sample": "State and Prove fundamental theorem of graph theory.",
+        "ids": [
+          "DM-B5-1253",
+          "DM-B5-1303"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T01"
+        ],
+        "sample": "Let f(x)=x+2, g(x)=x- 2, h(x)=3x for x E R, where R is a set of real numbers. Find (i) fog (ii)gof, (iii)fogoh, (iv)gohof.",
+        "ids": [
+          "DM-B2-0986",
+          "DM-B2-1016"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "DM.U2.T02",
+          "DM.U2.T04"
+        ],
+        "sample": "Find the Boolean product of A and B, where Sob) Define and produce the Cartesian product A BY © where A= f0, 1k, B= {1,2}, and C= (0, 1, 22 3.) Show that the \"divides\" relation ts the set of positive integers In not an equivalence relation, 3.) Draw the Hlasse diagram representing, the partial ordering, (Ca, byfa divides Db} on fi, %,5,4,0, 6, 174",
+        "ids": [
+          "DM-B2-1000",
+          "DM-B2-1002"
+        ]
+      }
+    ]
+  },
+  "OOPJ": {
+    "questions": 574,
+    "clusters": [
+      {
+        "size": 7,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U3.T01",
+          "OOPJ.U3.T03"
+        ],
+        "sample": "Describe the difference between termination and resumptive exception handling models, Ab) Write a Java program that creates two threads: one prints even Ac) Explain the life evele ofa thread in Java with a neat diagram.",
+        "ids": [
+          "OOPJ-B1-1351",
+          "OOPJ-B2-1467",
+          "OOPJ-B2-1498",
+          "OOPJ-B2-1537",
+          "OOPJ-B3-1594",
+          "OOPJ-B3-1602",
+          "OOPJ-B3-1636"
+        ]
+      },
+      {
+        "size": 7,
+        "years": [
+          2023,
+          2024,
+          2026
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T07",
+          "OOPJ.U2.T06",
+          "OOPJ.U2.T07",
+          "OOPJ.U5.T03"
+        ],
+        "sample": "Write a Java program to create a user interface with labels, buttons, and text components.",
+        "ids": [
+          "OOPJ-B1-1352",
+          "OOPJ-A2-1452",
+          "OOPJ-B2-1468",
+          "OOPJ-B2-1484",
+          "OOPJ-B2-1492",
+          "OOPJ-B4-1701",
+          "OOPJ-B5-1822"
+        ]
+      },
+      {
+        "size": 6,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "OOPJ.U3.T06"
+        ],
+        "sample": "Write about thread? Differences between thread-based multitasking and process-based multitasking.",
+        "ids": [
+          "OOPJ-A2-1447",
+          "OOPJ-A3-1560",
+          "OOPJ-A3-1562",
+          "OOPJ-B3-1635",
+          "OOPJ-B3-1651",
+          "OOPJ-B4-1767"
+        ]
+      },
+      {
+        "size": 6,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T04",
+          "OOPJ.U4.T05",
+          "OOPJ.U4.T06"
+        ],
+        "sample": "Develop a Java program to demonstrate mouse and keyboard event handling using adapter classes.",
+        "ids": [
+          "OOPJ-B4-1759",
+          "OOPJ-B4-1777",
+          "OOPJ-B5-1832",
+          "OOPJ-B5-1855",
+          "OOPJ-B5-1872",
+          "OOPJ-B5-1873"
+        ]
+      },
+      {
+        "size": 5,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "OOPJ.U2.T05"
+        ],
+        "sample": "Explain the difference between an abstract class and an interface using appropriate examples.",
+        "ids": [
+          "OOPJ-B1-1422",
+          "OOPJ-A2-1438",
+          "OOPJ-B2-1471",
+          "OOPJ-B2-1497",
+          "OOPJ-B2-1541"
+        ]
+      },
+      {
+        "size": 5,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T05"
+        ],
+        "sample": "Soa) Explain the delegation event model with a suitable diagram. 5? A ) yb} Wriie a fava AW! propraim thai respouds fo a builow click usta, PRALETA AYA FE pt th HEN",
+        "ids": [
+          "OOPJ-B3-1595",
+          "OOPJ-A4-1661",
+          "OOPJ-B4-1712",
+          "OOPJ-B4-1727",
+          "OOPJ-B4-1776"
+        ]
+      },
+      {
+        "size": 4,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          2,
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T02",
+          "OOPJ.U1.T05",
+          "OOPJ.U1.T07"
+        ],
+        "sample": "Differentiate between method overloading and method overriding with cxamples 2. ) List and explain Java buzzwords.",
+        "ids": [
+          "OOPJ-A1-1330",
+          "OOPJ-A1-1337",
+          "OOPJ-B1-1367",
+          "OOPJ-B2-1491"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U3.T06",
+          "OOPJ.U3.T07"
+        ],
+        "sample": "Analyze the Java thread life cycle and discuss how understanding it helps in writing efficient multithreaded programs.",
+        "ids": [
+          "OOPJ-B3-1596",
+          "OOPJ-B3-1640",
+          "OOPJ-B4-1760"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T04"
+        ],
+        "sample": "Write a Java program that copies the content of one file to another file.",
+        "ids": [
+          "OOPJ-B3-1609",
+          "OOPJ-B3-1620",
+          "OOPJ-B3-1652"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T05",
+          "OOPJ.U4.T06"
+        ],
+        "sample": "Explain the procedure to handle mouse events in Java with an Example program.",
+        "ids": [
+          "OOPJ-B4-1721",
+          "OOPJ-B4-1732",
+          "OOPJ-B5-1877"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          1,
+          2,
+          5
+        ],
+        "topics": [
+          "OOPJ.U5.T01",
+          "OOPJ.U5.T02"
+        ],
+        "sample": "Why swing components are preferred over AWT components?",
+        "ids": [
+          "OOPJ-A5-1788",
+          "OOPJ-A5-1813",
+          "OOPJ-B5-1840"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T01",
+          "OOPJ.U4.T03"
+        ],
+        "sample": "Explain how inheritance works in Java with a program example.",
+        "ids": [
+          "OOPJ-B1-1353",
+          "OOPJ-B4-1751"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T01"
+        ],
+        "sample": "Explain how Java handles multiple inheritance using interfaces.",
+        "ids": [
+          "OOPJ-B2-1476",
+          "OOPJ-B2-1501"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "OOPJ.U1.T03",
+          "OOPJ.U1.T04"
+        ],
+        "sample": "Differentiate between Byte streams and character streams. Give any two examples for each stream.",
+        "ids": [
+          "OOPJ-A3-1549",
+          "OOPJ-A3-1557"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U3.T06",
+          "OOPJ.U4.T02"
+        ],
+        "sample": "Develop a Java program demonstrating inter-thread communication using wait(), notify(), and notifyAlI().",
+        "ids": [
+          "OOPJ-B3-1588",
+          "OOPJ-B3-1618"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T05",
+          "OOPJ.U3.T08"
+        ],
+        "sample": "Write a Java program to implement Runnable class to create a thread.",
+        "ids": [
+          "OOPJ-B3-1625",
+          "OOPJ-B3-1659"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T05",
+          "OOPJ.U5.T01"
+        ],
+        "sample": "Demonstrate the delegation event model in Java with an example.",
+        "ids": [
+          "OOPJ-A4-1671",
+          "OOPJ-B5-1825"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [],
+        "sample": "Write a Java program that illustrates passing parameters through applets.",
+        "ids": [
+          "OOPJ-B5-1853",
+          "OOPJ-B5-1859"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T03",
+          "OOPJ.U2.T04"
+        ],
+        "sample": "Discuss the following: (i) using super keyword. (i1) Data types in Java",
+        "ids": [
+          "OOPJ-B1-1389",
+          "OOPJ-A2-1444"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "OOPJ.U1.T01"
+        ],
+        "sample": "Explain how multiple inheritance is achieved through interfaces in Java using suitable examples.",
+        "ids": [
+          "OOPJ-A2-1461",
+          "OOPJ-B2-1504"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T03",
+          "OOPJ.U4.T04"
+        ],
+        "sample": "Develop a Java program that counts unique words from a file using a HashSet.",
+        "ids": [
+          "OOPJ-B3-1593",
+          "OOPJ-B4-1711"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "OOPJ.U3.T01"
+        ],
+        "sample": "Explain the concept of user defined exception with suitable example.",
+        "ids": [
+          "OOPJ-B3-1605",
+          "OOPJ-B3-1634"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "OOPJ.U4.T05"
+        ],
+        "sample": "Compare and contrast the Delegation event model with other event handling models in Java. Discuss the advantages and disadvantages of each model.",
+        "ids": [
+          "OOPJ-A5-1810",
+          "OOPJ-B5-1870"
+        ]
+      }
+    ]
+  },
+  "SE": {
+    "questions": 379,
+    "clusters": [
+      {
+        "size": 15,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          2,
+          5
+        ],
+        "topics": [
+          "SE.U3.T02",
+          "SE.U3.T04",
+          "SE.U3.T05",
+          "SE.U4.T01",
+          "SE.U4.T02",
+          "SE.U4.T03"
+        ],
+        "sample": "What is black box testing? What is boundary value Analysis? Explain the technique specifying rules and its usage with the help of an example.",
+        "ids": [
+          "SE-B3-2078",
+          "SE-B3-2094",
+          "SE-B3-2106",
+          "SE-A4-2116",
+          "SE-A4-2120",
+          "SE-A4-2137",
+          "SE-B4-2145",
+          "SE-B4-2149",
+          "SE-B4-2153",
+          "SE-B4-2158",
+          "SE-B4-2162",
+          "SE-B4-2164",
+          "SE-B4-2180",
+          "SE-B4-2184",
+          "SE-B4-2185"
+        ]
+      },
+      {
+        "size": 6,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5,
+          10
+        ],
+        "topics": [
+          "SE.U3.T01",
+          "SE.U3.T03",
+          "SE.U4.T06",
+          "SE.U5.T04"
+        ],
+        "sample": "Analyze the role of metrics in the design model for ensuring design quality in a software project.",
+        "ids": [
+          "SE-A4-2124",
+          "SE-B4-2146",
+          "SE-B4-2155",
+          "SE-B4-2171",
+          "SE-B4-2188",
+          "SE-B5-2228"
+        ]
+      },
+      {
+        "size": 6,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "SE.U1.T01",
+          "SE.U1.T04"
+        ],
+        "sample": "Lxplain about the Umbrella Activities which support the software developtnent process and discuss about their recessity in maintaining. 2c) Assume that you are the technical manager of a software development organization. A Client approached you for a software solution the problems stated by the client have uncertainties which lead to loss if it not planned and solved which software development modcl you will suggest for this project -justify. Explain that model with its pros and cons and neat sketch 2d) VNseuss Manager's myths about software development and their effect on the practitioner's performance as well as on the overall outcome.",
+        "ids": [
+          "SE-A1-1888",
+          "SE-B1-1913",
+          "SE-B1-1922",
+          "SE-B1-1948",
+          "SE-B1-1949",
+          "SE-B1-1950"
+        ]
+      },
+      {
+        "size": 5,
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          1,
+          5
+        ],
+        "topics": [
+          "SE.U5.T01",
+          "SE.U5.T03"
+        ],
+        "sample": "Elaborate the concepts of Risk management Reactive vs Proactive Risk strategies.",
+        "ids": [
+          "SE-A5-2204",
+          "SE-B5-2232",
+          "SE-B5-2235",
+          "SE-B5-2257",
+          "SE-B5-2263"
+        ]
+      },
+      {
+        "size": 5,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [
+          "SE.U2.T01"
+        ],
+        "sample": "Explain the differences between functional requirements and non- functional requirements by giving suitable examples.",
+        "ids": [
+          "SE-A2-1979",
+          "SE-A2-1984",
+          "SE-B2-2010",
+          "SE-B2-2015",
+          "SE-B2-2024"
+        ]
+      },
+      {
+        "size": 3,
+        "years": [
+          2023,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U2.T05"
+        ],
+        "sample": "Explain in detail about requirements elicitation and analysis process.",
+        "ids": [
+          "SE-B2-1998",
+          "SE-B2-1999",
+          "SE-B2-2031"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U2.T03"
+        ],
+        "sample": "Explain how a software requirements document is structure?",
+        "ids": [
+          "SE-B2-1986",
+          "SE-B2-2012"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [
+          "SE.U1.T01"
+        ],
+        "sample": "List the characteristics of Software contrasting the characteristics of hardware.",
+        "ids": [
+          "SE-A1-1892",
+          "SE-A1-1903"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U1.T03"
+        ],
+        "sample": "With a neat sketch, explain Capability Maturity Model Integration (CMMI).",
+        "ids": [
+          "SE-B1-1915",
+          "SE-B1-1942"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          2,
+          5
+        ],
+        "topics": [],
+        "sample": "Illustrate how context modelling helps to model a system.",
+        "ids": [
+          "SE-A2-1985",
+          "SE-B2-2011"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2026
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U3.T03",
+          "SE.U4.T06"
+        ],
+        "sample": "Discuss the Metrics for Analysis Model and Metrics for Design Model.",
+        "ids": [
+          "SE-B4-2141",
+          "SE-B4-2160"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U3.T03"
+        ],
+        "sample": "Discuss about metrics for design model and source code.",
+        "ids": [
+          "SE-B4-2150",
+          "SE-B4-2152"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024,
+          2025
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U5.T04"
+        ],
+        "sample": "What is software quality? What are the metrics used for source code analysis?",
+        "ids": [
+          "SE-B4-2168",
+          "SE-B5-2252"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023,
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U5.T05"
+        ],
+        "sample": "What are software reviews? Explain how a formal technical review is conducted.",
+        "ids": [
+          "SE-B5-2229",
+          "SE-B5-2242"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2025
+        ],
+        "marks": [
+          1,
+          10
+        ],
+        "topics": [
+          "SE.U2.T01"
+        ],
+        "sample": "List the activities of Requirements clicitation and analysis? Explain in detail.",
+        "ids": [
+          "SE-A2-1974",
+          "SE-B2-2009"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2024
+        ],
+        "marks": [
+          5
+        ],
+        "topics": [
+          "SE.U4.T06"
+        ],
+        "sample": "Analyze the different source code and testing metrics.",
+        "ids": [
+          "SE-B4-2159",
+          "SE-B4-2167"
+        ]
+      }
+    ]
+  },
+  "ES": {
+    "questions": 24,
+    "clusters": [
+      {
+        "size": 2,
+        "years": [
+          2023
+        ],
+        "marks": [
+          2
+        ],
+        "topics": [],
+        "sample": "Describe the benefits and problems associated with the construction of big dams.",
+        "ids": [
+          "ES-B2-2271",
+          "ES-B2-2278"
+        ]
+      },
+      {
+        "size": 2,
+        "years": [
+          2023
+        ],
+        "marks": [
+          2,
+          3
+        ],
+        "topics": [
+          "ES.U3.T01"
+        ],
+        "sample": "Explain genetic, species, and ecosystem biodiversity with examples.",
+        "ids": [
+          "ES-B1-2273",
+          "ES-B1-2285"
+        ]
+      }
+    ]
+  }
+}

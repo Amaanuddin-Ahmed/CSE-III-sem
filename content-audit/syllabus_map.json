@@ -1,0 +1,4433 @@
+{
+  "regulation": "MR-25",
+  "institution": "MGIT (Autonomous)",
+  "programme": "B.Tech CSE Semester III",
+  "source": "docs/_work/syllabus-test.pdf (official MGIT scheme + III semester course content)",
+  "subjects": {
+    "DM": {
+      "name": "Discrete Mathematics",
+      "code": "CS301PC",
+      "units": {
+        "1": {
+          "title": "Mathematical Logic",
+          "topics": [
+            {
+              "id": "DM.U1.T01",
+              "title": "Statements, notation and connectives",
+              "wording": "Introduction, Statements and Notation, Connectives",
+              "scope": "sem",
+              "keywords": [
+                "statement",
+                "connective",
+                "negation",
+                "conjunction",
+                "disjunction",
+                "conditional",
+                "biconditional",
+                "implication",
+                "truth value",
+                "proposition"
+              ]
+            },
+            {
+              "id": "DM.U1.T02",
+              "title": "Truth tables, tautology, contradiction, contingency",
+              "wording": "Normal Forms (truth-table foundations)",
+              "scope": "sem",
+              "keywords": [
+                "truth table",
+                "tautology",
+                "contradiction",
+                "contingency",
+                "logically true",
+                "logically false"
+              ]
+            },
+            {
+              "id": "DM.U1.T03",
+              "title": "Logical equivalence and laws",
+              "wording": "Normal Forms (equivalence)",
+              "scope": "sem",
+              "keywords": [
+                "logically equivalent",
+                "equivalence",
+                "de morgan",
+                "absorption",
+                "distribution",
+                "idempotent",
+                "identity law",
+                "domination",
+                "contrapositive",
+                "converse",
+                "inverse"
+              ]
+            },
+            {
+              "id": "DM.U1.T04",
+              "title": "Normal forms: PDNF and PCNF",
+              "wording": "Normal Forms",
+              "scope": "sem",
+              "keywords": [
+                "normal form",
+                "pdnf",
+                "pcnf",
+                "dnf",
+                "cnf",
+                "minterm",
+                "maxterm",
+                "principal disjunctive",
+                "principal conjunctive"
+              ]
+            },
+            {
+              "id": "DM.U1.T05",
+              "title": "Theory of inference for statement calculus",
+              "wording": "Theory of Inference for the Statement Calculus",
+              "scope": "sem",
+              "keywords": [
+                "inference",
+                "valid argument",
+                "rule p",
+                "rule t",
+                "rule cp",
+                "modus ponens",
+                "modus tollens",
+                "syllogism",
+                "direct proof",
+                "indirect proof",
+                "consistency"
+              ]
+            },
+            {
+              "id": "DM.U1.T06",
+              "title": "Predicate calculus and quantifiers",
+              "wording": "The Predicate Calculus",
+              "scope": "sem",
+              "keywords": [
+                "predicate",
+                "quantifier",
+                "universal",
+                "existential",
+                "forall",
+                "exists",
+                "bound variable",
+                "free variable",
+                "scope of quantifier"
+              ]
+            },
+            {
+              "id": "DM.U1.T07",
+              "title": "Inference theory of predicate calculus",
+              "wording": "Inference Theory of the Predicate Calculus",
+              "scope": "sem",
+              "keywords": [
+                "us",
+                "ug",
+                "es",
+                "eg",
+                "universal specification",
+                "universal generalization",
+                "existential specification",
+                "existential generalization",
+                "predicate inference"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Set Theory",
+          "topics": [
+            {
+              "id": "DM.U2.T01",
+              "title": "Basic concepts of set theory",
+              "wording": "Introduction, Basic Concepts of Set Theory",
+              "scope": "sem",
+              "keywords": [
+                "set",
+                "subset",
+                "proper subset",
+                "empty set",
+                "universal set",
+                "venn",
+                "element",
+                "belongs",
+                "union",
+                "intersection",
+                "complement",
+                "difference"
+              ]
+            },
+            {
+              "id": "DM.U2.T02",
+              "title": "Set identities and cardinality",
+              "wording": "Basic Concepts of Set Theory",
+              "scope": "sem",
+              "keywords": [
+                "power set",
+                "cartesian product",
+                "cardinality",
+                "inclusion-exclusion",
+                "set identity",
+                "distributive law",
+                "demorgan",
+                "symmetric difference"
+              ]
+            },
+            {
+              "id": "DM.U2.T03",
+              "title": "Relations and their properties",
+              "wording": "Relations and Ordering",
+              "scope": "sem",
+              "keywords": [
+                "relation",
+                "reflexive",
+                "symmetric",
+                "antisymmetric",
+                "transitive",
+                "matrix representation",
+                "digraph",
+                "directed graph",
+                "relation matrix"
+              ]
+            },
+            {
+              "id": "DM.U2.T04",
+              "title": "Equivalence relations and partitions",
+              "wording": "Relations and Ordering",
+              "scope": "sem",
+              "keywords": [
+                "equivalence relation",
+                "equivalence class",
+                "partition",
+                "congruence modulo",
+                "quotient set"
+              ]
+            },
+            {
+              "id": "DM.U2.T05",
+              "title": "Partial ordering, Hasse diagrams and POSets",
+              "wording": "Relations and Ordering",
+              "scope": "sem",
+              "keywords": [
+                "partial order",
+                "poset",
+                "hasse",
+                "lattice",
+                "lub",
+                "glb",
+                "maximal",
+                "minimal",
+                "greatest",
+                "least",
+                "upper bound",
+                "lower bound",
+                "chain",
+                "antichain"
+              ]
+            },
+            {
+              "id": "DM.U2.T06",
+              "title": "Functions: injective, surjective, bijective",
+              "wording": "Functions",
+              "scope": "sem",
+              "keywords": [
+                "function",
+                "injective",
+                "one-to-one",
+                "surjective",
+                "onto",
+                "bijective",
+                "inverse function",
+                "composition",
+                "domain",
+                "codomain",
+                "range"
+              ]
+            },
+            {
+              "id": "DM.U2.T07",
+              "title": "Closures and Warshall algorithm",
+              "wording": "Representation of Discrete Structures",
+              "scope": "sem",
+              "keywords": [
+                "closure",
+                "reflexive closure",
+                "symmetric closure",
+                "transitive closure",
+                "warshall",
+                "reachability"
+              ]
+            },
+            {
+              "id": "DM.U2.T08",
+              "title": "Counting relations and functions",
+              "wording": "Representation of Discrete Structures",
+              "scope": "sem",
+              "keywords": [
+                "number of relations",
+                "number of functions",
+                "number of injections",
+                "number of bijections",
+                "2^(n^2)"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Algebraic Structures",
+          "topics": [
+            {
+              "id": "DM.U3.T01",
+              "title": "Algebraic systems and binary operations",
+              "wording": "Introduction, Algebraic Systems",
+              "scope": "mid1",
+              "keywords": [
+                "algebraic system",
+                "algebraic structure",
+                "binary operation",
+                "closure",
+                "operation table",
+                "cayley table"
+              ]
+            },
+            {
+              "id": "DM.U3.T02",
+              "title": "Semigroups",
+              "wording": "Semi groups",
+              "scope": "mid1",
+              "keywords": [
+                "semigroup",
+                "semi group",
+                "associative",
+                "subsemigroup"
+              ]
+            },
+            {
+              "id": "DM.U3.T03",
+              "title": "Monoids",
+              "wording": "Monoids",
+              "scope": "mid1",
+              "keywords": [
+                "monoid",
+                "identity element",
+                "submonoid"
+              ]
+            },
+            {
+              "id": "DM.U3.T04",
+              "title": "Homomorphism and isomorphism",
+              "wording": "Algebraic Systems",
+              "scope": "mid1",
+              "keywords": [
+                "homomorphism",
+                "isomorphism",
+                "endomorphism",
+                "automorphism",
+                "kernel"
+              ]
+            },
+            {
+              "id": "DM.U3.T05",
+              "title": "Groups, subgroups and cyclic groups (PYQ extension)",
+              "wording": "Algebraic Systems (PYQ extension; not named in the MR25 unit text)",
+              "scope": "mid1",
+              "keywords": [
+                "group",
+                "subgroup",
+                "abelian",
+                "cyclic",
+                "coset",
+                "lagrange",
+                "order of element",
+                "inverse element",
+                "normal subgroup"
+              ]
+            },
+            {
+              "id": "DM.U3.T06",
+              "title": "Lattices as partially ordered sets",
+              "wording": "Lattices as Partially Ordered Sets",
+              "scope": "mid2",
+              "keywords": [
+                "lattice",
+                "sublattice",
+                "poset",
+                "join",
+                "meet",
+                "lub",
+                "glb",
+                "least upper bound",
+                "greatest lower bound"
+              ]
+            },
+            {
+              "id": "DM.U3.T07",
+              "title": "Lattice properties and special lattices",
+              "wording": "Lattices as Partially Ordered Sets",
+              "scope": "mid2",
+              "keywords": [
+                "bounded lattice",
+                "complemented lattice",
+                "distributive lattice",
+                "modular lattice",
+                "pentagon",
+                "diamond",
+                "absorption",
+                "idempotent",
+                "chain"
+              ]
+            },
+            {
+              "id": "DM.U3.T08",
+              "title": "Boolean algebra",
+              "wording": "Boolean Algebra",
+              "scope": "mid2",
+              "keywords": [
+                "boolean algebra",
+                "boolean function",
+                "boolean expression",
+                "boolean simplification",
+                "atoms",
+                "stone representation",
+                "boolean identity"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Elementary Combinatorics",
+          "topics": [
+            {
+              "id": "DM.U4.T01",
+              "title": "Basics of counting: sum and product rules",
+              "wording": "Basics of Counting",
+              "scope": "sem",
+              "keywords": [
+                "sum rule",
+                "product rule",
+                "counting principle",
+                "fundamental principle"
+              ]
+            },
+            {
+              "id": "DM.U4.T02",
+              "title": "Permutations",
+              "wording": "Combinations and Permutations",
+              "scope": "sem",
+              "keywords": [
+                "permutation",
+                "arrangement",
+                "npr",
+                "p(n,r)",
+                "linear arrangement"
+              ]
+            },
+            {
+              "id": "DM.U4.T03",
+              "title": "Combinations",
+              "wording": "Combinations and Permutations",
+              "scope": "sem",
+              "keywords": [
+                "combination",
+                "ncr",
+                "c(n,r)",
+                "selection",
+                "committee"
+              ]
+            },
+            {
+              "id": "DM.U4.T04",
+              "title": "Permutations and combinations with repetition",
+              "wording": "Enumerating Combinations and Permutations with Repetitions",
+              "scope": "sem",
+              "keywords": [
+                "with repetition",
+                "repetition allowed",
+                "stars and bars",
+                "multiset",
+                "non-negative solution",
+                "nonnegative solution"
+              ]
+            },
+            {
+              "id": "DM.U4.T05",
+              "title": "Constrained repetitions and indistinguishable objects",
+              "wording": "Enumerating Permutation with Constrained Repetitions",
+              "scope": "sem",
+              "keywords": [
+                "indistinguishable",
+                "identical objects",
+                "mississippi",
+                "constrained repetition",
+                "at least",
+                "at most",
+                "circular permutation",
+                "round table"
+              ]
+            },
+            {
+              "id": "DM.U4.T06",
+              "title": "Binomial coefficient and binomial theorem",
+              "wording": "Binomial Coefficient, The Binomial and Multinomial Theorems",
+              "scope": "sem",
+              "keywords": [
+                "binomial coefficient",
+                "binomial theorem",
+                "pascal",
+                "coefficient of",
+                "expansion"
+              ]
+            },
+            {
+              "id": "DM.U4.T07",
+              "title": "Multinomial theorem",
+              "wording": "The Binomial and Multinomial Theorems",
+              "scope": "sem",
+              "keywords": [
+                "multinomial",
+                "trinomial",
+                "multinomial coefficient"
+              ]
+            },
+            {
+              "id": "DM.U4.T08",
+              "title": "Principle of exclusion (inclusion-exclusion)",
+              "wording": "The Principle of Exclusion",
+              "scope": "sem",
+              "keywords": [
+                "inclusion-exclusion",
+                "inclusion exclusion",
+                "principle of exclusion",
+                "derangement",
+                "divisible by",
+                "none of"
+              ]
+            },
+            {
+              "id": "DM.U4.T09",
+              "title": "Pigeonhole principle (PYQ extension)",
+              "wording": "Basics of Counting (PYQ extension; not named in the MR25 unit text)",
+              "scope": "sem",
+              "keywords": [
+                "pigeonhole",
+                "pigeon hole",
+                "boxes",
+                "at least one box"
+              ]
+            },
+            {
+              "id": "DM.U4.T10",
+              "title": "Recurrence relations and generating functions (PYQ extension)",
+              "wording": "Course objectives name recurrence relations and generating functions; the unit text does not",
+              "scope": "sem",
+              "keywords": [
+                "recurrence",
+                "generating function",
+                "characteristic equation",
+                "characteristic root",
+                "homogeneous",
+                "fibonacci"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Graph Theory",
+          "topics": [
+            {
+              "id": "DM.U5.T01",
+              "title": "Basic concepts, degree and handshaking",
+              "wording": "Basic Concepts",
+              "scope": "sem",
+              "keywords": [
+                "graph",
+                "vertex",
+                "edge",
+                "degree",
+                "handshaking",
+                "simple graph",
+                "complete graph",
+                "regular graph",
+                "path",
+                "cycle"
+              ]
+            },
+            {
+              "id": "DM.U5.T02",
+              "title": "Isomorphism and subgraphs",
+              "wording": "Isomorphism and Subgraphs",
+              "scope": "sem",
+              "keywords": [
+                "isomorphism",
+                "isomorphic",
+                "subgraph",
+                "induced subgraph",
+                "degree sequence"
+              ]
+            },
+            {
+              "id": "DM.U5.T03",
+              "title": "Trees and their properties",
+              "wording": "Trees and their Properties",
+              "scope": "sem",
+              "keywords": [
+                "tree",
+                "forest",
+                "leaf",
+                "pendant vertex",
+                "acyclic",
+                "connected",
+                "n-1 edges"
+              ]
+            },
+            {
+              "id": "DM.U5.T04",
+              "title": "Spanning trees: Kruskal and Prim",
+              "wording": "Spanning Trees",
+              "scope": "sem",
+              "keywords": [
+                "spanning tree",
+                "kruskal",
+                "prim",
+                "minimum spanning tree",
+                "mst"
+              ]
+            },
+            {
+              "id": "DM.U5.T05",
+              "title": "Directed trees",
+              "wording": "Directed Trees",
+              "scope": "sem",
+              "keywords": [
+                "directed tree",
+                "arborescence",
+                "rooted tree",
+                "out-tree",
+                "in-tree"
+              ]
+            },
+            {
+              "id": "DM.U5.T06",
+              "title": "Binary trees and traversals",
+              "wording": "Binary Trees",
+              "scope": "sem",
+              "keywords": [
+                "binary tree",
+                "full binary tree",
+                "preorder",
+                "inorder",
+                "postorder",
+                "traversal",
+                "height",
+                "level"
+              ]
+            },
+            {
+              "id": "DM.U5.T07",
+              "title": "Planar graphs and Euler formula",
+              "wording": "Planar Graphs, Euler's Formula",
+              "scope": "sem",
+              "keywords": [
+                "planar",
+                "euler formula",
+                "region",
+                "face",
+                "kuratowski",
+                "k5",
+                "k3,3",
+                "3v-6"
+              ]
+            },
+            {
+              "id": "DM.U5.T08",
+              "title": "Multigraphs and Euler circuits",
+              "wording": "Multi-graphs and Euler Circuits",
+              "scope": "sem",
+              "keywords": [
+                "multigraph",
+                "euler circuit",
+                "euler path",
+                "eulerian",
+                "odd degree",
+                "seven bridges"
+              ]
+            },
+            {
+              "id": "DM.U5.T09",
+              "title": "Hamiltonian graphs",
+              "wording": "Hamiltonian Graphs",
+              "scope": "sem",
+              "keywords": [
+                "hamiltonian",
+                "dirac",
+                "ore",
+                "hamilton cycle"
+              ]
+            },
+            {
+              "id": "DM.U5.T10",
+              "title": "Chromatic number and four-color problem",
+              "wording": "Chromatic Numbers, The Four-Color Problem",
+              "scope": "sem",
+              "keywords": [
+                "chromatic",
+                "coloring",
+                "colouring",
+                "four color",
+                "four colour",
+                "bipartite",
+                "clique"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "COA": {
+      "name": "Computer Organization and Architecture",
+      "code": "CS302PC",
+      "units": {
+        "1": {
+          "title": "Boolean Algebra, Logic Gates, Data Representation and Digital Computers",
+          "topics": [
+            {
+              "id": "COA.U1.T01",
+              "title": "Binary codes (BCD, excess-3, Gray, ASCII, parity)",
+              "wording": "Binary codes",
+              "scope": "sem",
+              "keywords": [
+                "bcd",
+                "excess-3",
+                "excess 3",
+                "gray code",
+                "ascii",
+                "parity",
+                "binary code",
+                "8421"
+              ]
+            },
+            {
+              "id": "COA.U1.T02",
+              "title": "Binary storage, registers and binary logic",
+              "wording": "Binary Storage and Registers, Binary logic",
+              "scope": "sem",
+              "keywords": [
+                "binary storage",
+                "register",
+                "binary logic",
+                "flip-flop storage",
+                "n-bit register"
+              ]
+            },
+            {
+              "id": "COA.U1.T03",
+              "title": "Digital logic gates and universality",
+              "wording": "Digital logic gates",
+              "scope": "sem",
+              "keywords": [
+                "logic gate",
+                "and gate",
+                "or gate",
+                "not gate",
+                "nand",
+                "nor",
+                "xor",
+                "universal gate",
+                "truth table"
+              ]
+            },
+            {
+              "id": "COA.U1.T04",
+              "title": "Data types and complements",
+              "wording": "Data types, Complements",
+              "scope": "sem",
+              "keywords": [
+                "data type",
+                "complement",
+                "1's complement",
+                "2's complement",
+                "r's complement",
+                "diminished radix",
+                "signed magnitude"
+              ]
+            },
+            {
+              "id": "COA.U1.T05",
+              "title": "Fixed-point representation and range",
+              "wording": "Fixed Point Representation",
+              "scope": "sem",
+              "keywords": [
+                "fixed point",
+                "fixed-point",
+                "range",
+                "overflow",
+                "sign bit",
+                "fraction",
+                "integer representation"
+              ]
+            },
+            {
+              "id": "COA.U1.T06",
+              "title": "Floating-point representation (IEEE 754)",
+              "wording": "Floating Point Representation",
+              "scope": "sem",
+              "keywords": [
+                "floating point",
+                "floating-point",
+                "ieee 754",
+                "ieee-754",
+                "mantissa",
+                "exponent",
+                "bias",
+                "normalization",
+                "normalisation",
+                "single precision",
+                "double precision"
+              ]
+            },
+            {
+              "id": "COA.U1.T07",
+              "title": "Digital computer block diagram; organization, architecture and design",
+              "wording": "Introduction, Block diagram of Digital Computer, Definition of Computer Organization, Computer Design and Computer Architecture",
+              "scope": "sem",
+              "keywords": [
+                "block diagram",
+                "digital computer",
+                "computer organization",
+                "computer architecture",
+                "computer design",
+                "stored program",
+                "von neumann"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Combinational and Sequential Logic",
+          "topics": [
+            {
+              "id": "COA.U2.T01",
+              "title": "Combinational circuits: analysis and design",
+              "wording": "Combinational Circuits, Analysis procedure Design procedure",
+              "scope": "sem",
+              "keywords": [
+                "combinational circuit",
+                "analysis procedure",
+                "design procedure",
+                "truth table",
+                "k-map",
+                "karnaugh",
+                "sop",
+                "pos"
+              ]
+            },
+            {
+              "id": "COA.U2.T02",
+              "title": "Binary adder and subtractor",
+              "wording": "Binary Adder- Subtractor",
+              "scope": "sem",
+              "keywords": [
+                "half adder",
+                "full adder",
+                "adder",
+                "subtractor",
+                "adder-subtractor",
+                "carry",
+                "ripple carry"
+              ]
+            },
+            {
+              "id": "COA.U2.T03",
+              "title": "Decimal (BCD) adder",
+              "wording": "Decimal Adder",
+              "scope": "sem",
+              "keywords": [
+                "bcd adder",
+                "decimal adder",
+                "0110",
+                "nine's complement",
+                "10's complement"
+              ]
+            },
+            {
+              "id": "COA.U2.T04",
+              "title": "Binary multiplier",
+              "wording": "Binary multiplier",
+              "scope": "sem",
+              "keywords": [
+                "binary multiplier",
+                "multiplicand",
+                "multiplier",
+                "partial product",
+                "and gate"
+              ]
+            },
+            {
+              "id": "COA.U2.T05",
+              "title": "Magnitude comparator",
+              "wording": "magnitude comparator",
+              "scope": "sem",
+              "keywords": [
+                "magnitude comparator",
+                "comparator",
+                "a>b",
+                "a=b",
+                "a<b"
+              ]
+            },
+            {
+              "id": "COA.U2.T06",
+              "title": "Decoders, encoders and multiplexers",
+              "wording": "Decoders, Encoders, Multiplexers",
+              "scope": "sem",
+              "keywords": [
+                "decoder",
+                "encoder",
+                "multiplexer",
+                "mux",
+                "demultiplexer",
+                "priority encoder",
+                "select line"
+              ]
+            },
+            {
+              "id": "COA.U2.T07",
+              "title": "HDL for combinational circuits",
+              "wording": "HDL for combinational circuits",
+              "scope": "sem",
+              "keywords": [
+                "hdl",
+                "verilog",
+                "vhdl",
+                "module",
+                "assign",
+                "always",
+                "gate-level"
+              ]
+            },
+            {
+              "id": "COA.U2.T08",
+              "title": "Latches and flip-flops",
+              "wording": "latches, Flip-Flops",
+              "scope": "sem",
+              "keywords": [
+                "latch",
+                "flip-flop",
+                "flip flop",
+                "sr latch",
+                "d latch",
+                "jk flip-flop",
+                "t flip-flop",
+                "master-slave",
+                "edge triggered",
+                "level triggered",
+                "race around"
+              ]
+            },
+            {
+              "id": "COA.U2.T09",
+              "title": "Clocked sequential analysis, state reduction and design",
+              "wording": "Analysis of clocked sequential circuits, state Reduction and Assignment, Design Procedure",
+              "scope": "sem",
+              "keywords": [
+                "state diagram",
+                "state table",
+                "state reduction",
+                "state assignment",
+                "excitation table",
+                "sequential circuit design",
+                "mealy",
+                "moore"
+              ]
+            },
+            {
+              "id": "COA.U2.T10",
+              "title": "Registers and shift registers",
+              "wording": "Registers, shift Registers",
+              "scope": "sem",
+              "keywords": [
+                "register",
+                "shift register",
+                "siso",
+                "sipo",
+                "piso",
+                "pipo",
+                "serial input",
+                "parallel input"
+              ]
+            },
+            {
+              "id": "COA.U2.T11",
+              "title": "Ripple, synchronous and other counters",
+              "wording": "Ripple counters, synchronous counters, other counters",
+              "scope": "sem",
+              "keywords": [
+                "counter",
+                "ripple counter",
+                "synchronous counter",
+                "asynchronous counter",
+                "mod-n",
+                "ring counter",
+                "johnson counter",
+                "sequence counter"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Register Transfer Language, Micro-operations and Basic Computer",
+          "topics": [
+            {
+              "id": "COA.U3.T01",
+              "title": "Register transfer language and register transfer",
+              "wording": "Register Transfer language, Register Transfer",
+              "scope": "mid1",
+              "keywords": [
+                "register transfer",
+                "rtl",
+                "register transfer language",
+                "conditional transfer",
+                "microoperation notation"
+              ]
+            },
+            {
+              "id": "COA.U3.T02",
+              "title": "Bus and memory transfers",
+              "wording": "Bus and memory transfers",
+              "scope": "mid1",
+              "keywords": [
+                "bus",
+                "common bus",
+                "three-state",
+                "tri-state",
+                "memory transfer",
+                "m[ar]",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "id": "COA.U3.T03",
+              "title": "Arithmetic micro-operations",
+              "wording": "Arithmetic Micro operations",
+              "scope": "mid1",
+              "keywords": [
+                "arithmetic micro",
+                "add micro",
+                "subtract micro",
+                "increment",
+                "decrement",
+                "adder"
+              ]
+            },
+            {
+              "id": "COA.U3.T04",
+              "title": "Logic micro-operations",
+              "wording": "logic micro operations",
+              "scope": "mid1",
+              "keywords": [
+                "logic micro",
+                "and micro",
+                "or micro",
+                "xor micro",
+                "complement micro",
+                "selective set",
+                "selective clear"
+              ]
+            },
+            {
+              "id": "COA.U3.T05",
+              "title": "Shift micro-operations",
+              "wording": "shift micro operations",
+              "scope": "mid1",
+              "keywords": [
+                "shift micro",
+                "logical shift",
+                "arithmetic shift",
+                "circular shift",
+                "rotate"
+              ]
+            },
+            {
+              "id": "COA.U3.T06",
+              "title": "Arithmetic logic shift unit (ALSU)",
+              "wording": "Arithmetic logic shift unit",
+              "scope": "mid1",
+              "keywords": [
+                "alsu",
+                "arithmetic logic shift",
+                "alu",
+                "multiplexer stage"
+              ]
+            },
+            {
+              "id": "COA.U3.T07",
+              "title": "Instruction codes, computer registers and instructions",
+              "wording": "Instruction codes, Computer Registers Computer instructions",
+              "scope": "mid2",
+              "keywords": [
+                "instruction code",
+                "opcode",
+                "operand",
+                "computer register",
+                "ar",
+                "pc",
+                "dr",
+                "ac",
+                "ir",
+                "tr"
+              ]
+            },
+            {
+              "id": "COA.U3.T08",
+              "title": "Timing and control",
+              "wording": "Timing and Control",
+              "scope": "mid2",
+              "keywords": [
+                "timing",
+                "control unit",
+                "control signal",
+                "t0",
+                "t1",
+                "t2",
+                "sequence counter",
+                "decoder"
+              ]
+            },
+            {
+              "id": "COA.U3.T09",
+              "title": "Instruction cycle",
+              "wording": "Instruction cycle",
+              "scope": "mid2",
+              "keywords": [
+                "instruction cycle",
+                "fetch",
+                "decode",
+                "execute",
+                "indirect cycle",
+                "interrupt cycle"
+              ]
+            },
+            {
+              "id": "COA.U3.T10",
+              "title": "Memory-reference instructions",
+              "wording": "Memory Reference Instructions",
+              "scope": "mid2",
+              "keywords": [
+                "memory reference",
+                "and instruction",
+                "add instruction",
+                "lda",
+                "sta",
+                "bun",
+                "bsa",
+                "isz",
+                "effective address"
+              ]
+            },
+            {
+              "id": "COA.U3.T11",
+              "title": "Input-output and interrupt",
+              "wording": "Input – Output and Interrupt",
+              "scope": "mid2",
+              "keywords": [
+                "input output",
+                "i/o",
+                "inp",
+                "out",
+                "ski",
+                "sko",
+                "ion",
+                "iof",
+                "interrupt",
+                "fgi",
+                "fgo",
+                "ien"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Microprogrammed Control, CPU and Computer Arithmetic",
+          "topics": [
+            {
+              "id": "COA.U4.T01",
+              "title": "Control memory, control word and microinstruction",
+              "wording": "Control memory",
+              "scope": "sem",
+              "keywords": [
+                "control memory",
+                "control word",
+                "microinstruction",
+                "microprogram",
+                "micro-operation field"
+              ]
+            },
+            {
+              "id": "COA.U4.T02",
+              "title": "Address sequencing",
+              "wording": "Address sequencing",
+              "scope": "sem",
+              "keywords": [
+                "address sequencing",
+                "car",
+                "sbr",
+                "mapping",
+                "branch",
+                "next address"
+              ]
+            },
+            {
+              "id": "COA.U4.T03",
+              "title": "Microprogram example and control unit design",
+              "wording": "micro program example, design of control unit",
+              "scope": "sem",
+              "keywords": [
+                "microprogram example",
+                "control unit design",
+                "microinstruction format",
+                "f1 f2 f3",
+                "cd",
+                "br",
+                "ad"
+              ]
+            },
+            {
+              "id": "COA.U4.T04",
+              "title": "General register organization",
+              "wording": "General Register Organization",
+              "scope": "sem",
+              "keywords": [
+                "general register",
+                "sela",
+                "selb",
+                "seld",
+                "register organization",
+                "14-bit"
+              ]
+            },
+            {
+              "id": "COA.U4.T05",
+              "title": "Instruction formats",
+              "wording": "Instruction Formats",
+              "scope": "sem",
+              "keywords": [
+                "instruction format",
+                "instruction formats",
+                "three-address",
+                "two-address",
+                "one-address",
+                "zero-address",
+                "address field"
+              ]
+            },
+            {
+              "id": "COA.U4.T06",
+              "title": "Addressing modes",
+              "wording": "Addressing modes",
+              "scope": "sem",
+              "keywords": [
+                "addressing mode",
+                "immediate",
+                "direct address",
+                "indirect address",
+                "register indirect",
+                "indexed",
+                "relative",
+                "base register",
+                "autoincrement",
+                "autodecrement",
+                "effective address"
+              ]
+            },
+            {
+              "id": "COA.U4.T07",
+              "title": "Data transfer, manipulation and program control",
+              "wording": "Data Transfer and Manipulation, Program Control",
+              "scope": "sem",
+              "keywords": [
+                "data transfer",
+                "data manipulation",
+                "program control",
+                "status flag",
+                "branch",
+                "call",
+                "return",
+                "cisc",
+                "risc"
+              ]
+            },
+            {
+              "id": "COA.U4.T08",
+              "title": "Addition and subtraction",
+              "wording": "Addition and subtraction",
+              "scope": "sem",
+              "keywords": [
+                "signed magnitude addition",
+                "2's complement addition",
+                "subtraction",
+                "overflow",
+                "carry"
+              ]
+            },
+            {
+              "id": "COA.U4.T09",
+              "title": "Multiplication algorithms (Booth)",
+              "wording": "multiplication Algorithms",
+              "scope": "sem",
+              "keywords": [
+                "multiplication algorithm",
+                "booth",
+                "shift and add",
+                "signed multiplication",
+                "recoding",
+                "q-1"
+              ]
+            },
+            {
+              "id": "COA.U4.T10",
+              "title": "Division algorithms",
+              "wording": "Division Algorithms",
+              "scope": "sem",
+              "keywords": [
+                "division algorithm",
+                "restoring division",
+                "non-restoring",
+                "non restoring",
+                "quotient",
+                "divisor"
+              ]
+            },
+            {
+              "id": "COA.U4.T11",
+              "title": "Floating-point arithmetic",
+              "wording": "Floating – point Arithmetic operations",
+              "scope": "sem",
+              "keywords": [
+                "floating point addition",
+                "floating point multiplication",
+                "floating point division",
+                "align exponent",
+                "normalize",
+                "normalise",
+                "guard bit"
+              ]
+            },
+            {
+              "id": "COA.U4.T12",
+              "title": "Decimal arithmetic unit and operations",
+              "wording": "Decimal Arithmetic unit, Decimal Arithmetic operations",
+              "scope": "sem",
+              "keywords": [
+                "decimal arithmetic",
+                "bcd arithmetic",
+                "nine's complement",
+                "ten's complement",
+                "decimal adder"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Input-Output Organization and Memory Organization",
+          "topics": [
+            {
+              "id": "COA.U5.T01",
+              "title": "Input-output interface",
+              "wording": "Input-Output Interface",
+              "scope": "sem",
+              "keywords": [
+                "i/o interface",
+                "input-output interface",
+                "interface module",
+                "isolated i/o",
+                "memory-mapped",
+                "memory mapped"
+              ]
+            },
+            {
+              "id": "COA.U5.T02",
+              "title": "Asynchronous data transfer",
+              "wording": "Asynchronous data transfer",
+              "scope": "sem",
+              "keywords": [
+                "asynchronous",
+                "strobe",
+                "handshaking",
+                "handshake",
+                "baud",
+                "start bit",
+                "stop bit",
+                "serial"
+              ]
+            },
+            {
+              "id": "COA.U5.T03",
+              "title": "Modes of transfer",
+              "wording": "Modes of Transfer",
+              "scope": "sem",
+              "keywords": [
+                "programmed i/o",
+                "interrupt-initiated",
+                "interrupt initiated",
+                "dma",
+                "burst",
+                "cycle stealing",
+                "block transfer"
+              ]
+            },
+            {
+              "id": "COA.U5.T04",
+              "title": "Priority interrupt",
+              "wording": "Priority Interrupt",
+              "scope": "sem",
+              "keywords": [
+                "priority interrupt",
+                "polling",
+                "daisy chain",
+                "parallel priority",
+                "mask register",
+                "priority encoder"
+              ]
+            },
+            {
+              "id": "COA.U5.T05",
+              "title": "Direct memory access",
+              "wording": "Direct memory Access",
+              "scope": "sem",
+              "keywords": [
+                "dma controller",
+                "dmac",
+                "dma transfer",
+                "word count",
+                "address register"
+              ]
+            },
+            {
+              "id": "COA.U5.T06",
+              "title": "Memory hierarchy",
+              "wording": "Memory Hierarchy",
+              "scope": "sem",
+              "keywords": [
+                "memory hierarchy",
+                "registers",
+                "cache",
+                "main memory",
+                "auxiliary memory",
+                "cost per bit",
+                "locality"
+              ]
+            },
+            {
+              "id": "COA.U5.T07",
+              "title": "Main memory",
+              "wording": "Main Memory",
+              "scope": "sem",
+              "keywords": [
+                "main memory",
+                "ram",
+                "rom",
+                "sram",
+                "dram",
+                "prom",
+                "eprom",
+                "eeprom",
+                "memory chip",
+                "address line"
+              ]
+            },
+            {
+              "id": "COA.U5.T08",
+              "title": "Auxiliary memory",
+              "wording": "Auxiliary memory",
+              "scope": "sem",
+              "keywords": [
+                "auxiliary memory",
+                "magnetic disk",
+                "track",
+                "sector",
+                "cylinder",
+                "seek time",
+                "rotational latency",
+                "access time",
+                "raid"
+              ]
+            },
+            {
+              "id": "COA.U5.T09",
+              "title": "Associative memory",
+              "wording": "Associate Memory",
+              "scope": "sem",
+              "keywords": [
+                "associative memory",
+                "content addressable",
+                "cam",
+                "argument register",
+                "mask register",
+                "match register"
+              ]
+            },
+            {
+              "id": "COA.U5.T10",
+              "title": "Cache memory",
+              "wording": "Cache Memory",
+              "scope": "sem",
+              "keywords": [
+                "cache",
+                "hit ratio",
+                "average access time",
+                "direct mapping",
+                "associative mapping",
+                "set-associative",
+                "write-through",
+                "write-back",
+                "lru",
+                "fifo",
+                "tag",
+                "index",
+                "offset"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "OOPJ": {
+      "name": "Object Oriented Programming through Java",
+      "code": "CS303PC",
+      "units": {
+        "1": {
+          "title": "Object Oriented Thinking and Java Basics",
+          "topics": [
+            {
+              "id": "OOPJ.U1.T01",
+              "title": "Need for OOP, OOP concepts and abstraction",
+              "wording": "Need for oop paradigm, summary of oop concepts, coping with complexity, abstraction mechanisms",
+              "scope": "sem",
+              "keywords": [
+                "oop",
+                "object oriented",
+                "encapsulation",
+                "abstraction",
+                "polymorphism",
+                "inheritance",
+                "coping with complexity"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T02",
+              "title": "History of Java, buzzwords, JVM/JRE/JDK",
+              "wording": "History of Java, Java buzzwords",
+              "scope": "sem",
+              "keywords": [
+                "history of java",
+                "buzzword",
+                "jvm",
+                "jre",
+                "jdk",
+                "bytecode",
+                "platform independent",
+                "write once"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T03",
+              "title": "Data types, variables, scope, arrays",
+              "wording": "data types, variables, scope and lifetime of variables, arrays",
+              "scope": "sem",
+              "keywords": [
+                "data type",
+                "primitive",
+                "int",
+                "byte",
+                "short",
+                "long",
+                "float",
+                "double",
+                "char",
+                "boolean",
+                "variable scope",
+                "lifetime",
+                "array",
+                "jagged"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T04",
+              "title": "Operators, expressions, control statements, casting",
+              "wording": "operators, expressions, control statements, type conversion and casting",
+              "scope": "sem",
+              "keywords": [
+                "operator",
+                "expression",
+                "control statement",
+                "if",
+                "switch",
+                "loop",
+                "for",
+                "while",
+                "type conversion",
+                "casting",
+                "widening",
+                "narrowing",
+                "shift operator"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T05",
+              "title": "Classes, objects, constructors, methods, access control, this",
+              "wording": "concepts of classes, objects, constructors, methods, access control, this keyword",
+              "scope": "sem",
+              "keywords": [
+                "class",
+                "object",
+                "constructor",
+                "method",
+                "access control",
+                "private",
+                "protected",
+                "public",
+                "default",
+                "this keyword",
+                "new"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T06",
+              "title": "Garbage collection",
+              "wording": "garbage collection",
+              "scope": "sem",
+              "keywords": [
+                "garbage collection",
+                "garbage collector",
+                "finalize",
+                "unreachable",
+                "system.gc"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T07",
+              "title": "Method/constructor overloading, parameter passing, recursion",
+              "wording": "overloading methods and constructors, parameter passing, recursion",
+              "scope": "sem",
+              "keywords": [
+                "overloading",
+                "parameter passing",
+                "call by value",
+                "pass by value",
+                "recursion",
+                "recursive",
+                "constructor overloading"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T08",
+              "title": "Nested and inner classes",
+              "wording": "nested and inner classes",
+              "scope": "sem",
+              "keywords": [
+                "nested class",
+                "inner class",
+                "static nested",
+                "anonymous class",
+                "local class"
+              ]
+            },
+            {
+              "id": "OOPJ.U1.T09",
+              "title": "String class basics",
+              "wording": "exploring String class",
+              "scope": "sem",
+              "keywords": [
+                "string",
+                "immutable",
+                "string pool",
+                "string literal",
+                "concat",
+                "substring",
+                "charat",
+                "equals"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Inheritance, Packages and Interfaces",
+          "topics": [
+            {
+              "id": "OOPJ.U2.T01",
+              "title": "Hierarchical abstractions, subclass, subtype, substitutability",
+              "wording": "Hierarchical abstractions, Base class object, subclass, subtype, substitutability",
+              "scope": "sem",
+              "keywords": [
+                "hierarchical abstraction",
+                "base class",
+                "superclass",
+                "subclass",
+                "subtype",
+                "substitutability",
+                "is-a"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T02",
+              "title": "Forms of inheritance",
+              "wording": "forms of inheritance specialization, specification, construction, extension, limitation, combination",
+              "scope": "sem",
+              "keywords": [
+                "forms of inheritance",
+                "specialization",
+                "specification",
+                "construction",
+                "extension",
+                "limitation",
+                "combination"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T03",
+              "title": "Benefits and costs of inheritance; member access rules",
+              "wording": "benefits of inheritance, costs of inheritance. Member access rules",
+              "scope": "sem",
+              "keywords": [
+                "benefit of inheritance",
+                "cost of inheritance",
+                "member access",
+                "access rule",
+                "protected"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T04",
+              "title": "super and final keywords",
+              "wording": "super keyword uses, using final keyword with inheritance",
+              "scope": "sem",
+              "keywords": [
+                "super",
+                "final",
+                "final variable",
+                "final method",
+                "final class",
+                "constructor chaining"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T05",
+              "title": "Polymorphism, overriding, abstract classes, Object class",
+              "wording": "polymorphism- method overriding, abstract classes, the Object class",
+              "scope": "sem",
+              "keywords": [
+                "polymorphism",
+                "overriding",
+                "dynamic dispatch",
+                "abstract class",
+                "object class",
+                "tostring",
+                "equals",
+                "hashcode",
+                "getclass"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T06",
+              "title": "Packages, CLASSPATH and importing",
+              "wording": "Defining, Creating and Accessing a Package, Understanding CLASSPATH, importing packages",
+              "scope": "sem",
+              "keywords": [
+                "package",
+                "classpath",
+                "import",
+                "javac -d",
+                "package statement"
+              ]
+            },
+            {
+              "id": "OOPJ.U2.T07",
+              "title": "Classes vs interfaces, defining and extending interfaces",
+              "wording": "differences between classes and interfaces, defining an interface, implementing interface, applying interfaces, variables in interface and extending interfaces",
+              "scope": "sem",
+              "keywords": [
+                "interface",
+                "implements",
+                "extends interface",
+                "default method",
+                "static method",
+                "interface variable",
+                "abstract method"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Exception Handling and Multithreading",
+          "topics": [
+            {
+              "id": "OOPJ.U3.T01",
+              "title": "Exception concepts, benefits, termination/resumptive models",
+              "wording": "Concepts of exception handling, benefits of exception handling, Termination or resumptive models",
+              "scope": "mid1",
+              "keywords": [
+                "exception handling",
+                "benefit of exception",
+                "termination model",
+                "resumptive model",
+                "error handling"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T02",
+              "title": "Exception hierarchy, checked vs unchecked",
+              "wording": "exception hierarchy",
+              "scope": "mid1",
+              "keywords": [
+                "throwable",
+                "exception hierarchy",
+                "checked exception",
+                "unchecked exception",
+                "runtimeexception",
+                "error"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T03",
+              "title": "try, catch, throw, throws and finally",
+              "wording": "usage of try, catch, throw, throws and finally",
+              "scope": "mid1",
+              "keywords": [
+                "try",
+                "catch",
+                "throw",
+                "throws",
+                "finally",
+                "try-catch",
+                "try with resources"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T04",
+              "title": "Built-in exceptions",
+              "wording": "built in exceptions",
+              "scope": "mid1",
+              "keywords": [
+                "arithmeticexception",
+                "arrayindexoutofbounds",
+                "nullpointerexception",
+                "numberformatexception",
+                "classcastexception",
+                "built-in exception"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T05",
+              "title": "Creating custom exception subclasses",
+              "wording": "creating own exception subclasses",
+              "scope": "mid1",
+              "keywords": [
+                "custom exception",
+                "user-defined exception",
+                "own exception",
+                "extends exception"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T06",
+              "title": "Multithreading vs multitasking",
+              "wording": "Differences between multithreading and multitasking",
+              "scope": "mid2",
+              "keywords": [
+                "multithreading",
+                "multitasking",
+                "process-based",
+                "thread-based",
+                "lightweight process"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T07",
+              "title": "Thread life cycle",
+              "wording": "thread life cycle",
+              "scope": "mid2",
+              "keywords": [
+                "thread life cycle",
+                "new state",
+                "runnable",
+                "blocked",
+                "waiting",
+                "timed waiting",
+                "terminated",
+                "thread state"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T08",
+              "title": "Creating threads",
+              "wording": "creating threads",
+              "scope": "mid2",
+              "keywords": [
+                "extend thread",
+                "implement runnable",
+                "start()",
+                "run()",
+                "thread creation",
+                "runnable interface"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T09",
+              "title": "Thread priorities",
+              "wording": "thread priorities",
+              "scope": "mid2",
+              "keywords": [
+                "thread priority",
+                "min_priority",
+                "max_priority",
+                "norm_priority",
+                "setpriority",
+                "getpriority"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T10",
+              "title": "Synchronization",
+              "wording": "synchronizing threads",
+              "scope": "mid2",
+              "keywords": [
+                "synchronized",
+                "synchronization",
+                "monitor",
+                "lock",
+                "race condition",
+                "mutual exclusion"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T11",
+              "title": "Inter-thread communication",
+              "wording": "inter thread communication",
+              "scope": "mid2",
+              "keywords": [
+                "wait",
+                "notify",
+                "notifyall",
+                "inter-thread",
+                "producer consumer",
+                "illegalmonitorstate"
+              ]
+            },
+            {
+              "id": "OOPJ.U3.T12",
+              "title": "Thread groups and daemon threads",
+              "wording": "thread groups, daemon threads",
+              "scope": "mid2",
+              "keywords": [
+                "thread group",
+                "daemon",
+                "setdaemon",
+                "isdaemon",
+                "join",
+                "yield",
+                "sleep"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "String, Object, java.util, java.io, Events, Graphics and Layouts",
+          "topics": [
+            {
+              "id": "OOPJ.U4.T01",
+              "title": "Exploring the String class",
+              "wording": "Exploring String class",
+              "scope": "sem",
+              "keywords": [
+                "stringbuffer",
+                "stringbuilder",
+                "string methods",
+                "immutable string",
+                "string comparison"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T02",
+              "title": "Exploring the Object class",
+              "wording": "Object class",
+              "scope": "sem",
+              "keywords": [
+                "object class methods",
+                "clone",
+                "finalize",
+                "wait notify",
+                "getclass"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T03",
+              "title": "Exploring java.util",
+              "wording": "Exploring java.util package",
+              "scope": "sem",
+              "keywords": [
+                "java.util",
+                "collection",
+                "arraylist",
+                "linkedlist",
+                "hashset",
+                "treeset",
+                "hashmap",
+                "hashtable",
+                "iterator",
+                "scanner",
+                "random",
+                "stringtokenizer",
+                "date"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T04",
+              "title": "Exploring java.io",
+              "wording": "Exploring java.io package",
+              "scope": "sem",
+              "keywords": [
+                "java.io",
+                "inputstream",
+                "outputstream",
+                "reader",
+                "writer",
+                "fileinputstream",
+                "fileoutputstream",
+                "bufferedreader",
+                "printwriter",
+                "file class"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T05",
+              "title": "Events, sources, classes, listeners and delegation model",
+              "wording": "Events, Event sources, Event classes, Event Listeners, Delegation event model",
+              "scope": "sem",
+              "keywords": [
+                "event",
+                "event source",
+                "event class",
+                "event listener",
+                "delegation event model",
+                "actionevent",
+                "actionlistener",
+                "addactionlistener"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T06",
+              "title": "Mouse and keyboard events; adapter classes",
+              "wording": "handling mouse and keyboard events, Adapter classes",
+              "scope": "sem",
+              "keywords": [
+                "mouseevent",
+                "mouse listener",
+                "mouselistener",
+                "mousemotionlistener",
+                "keyevent",
+                "keylistener",
+                "adapter class"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T07",
+              "title": "Graphics",
+              "wording": "graphics",
+              "scope": "sem",
+              "keywords": [
+                "graphics",
+                "paint",
+                "drawline",
+                "drawrect",
+                "drawoval",
+                "fillrect",
+                "drawstring",
+                "setcolor",
+                "graphics class"
+              ]
+            },
+            {
+              "id": "OOPJ.U4.T08",
+              "title": "Layout managers: border, grid, flow, card, grid bag",
+              "wording": "layout manager – layout manager types – border, grid, flow, card and grid bag",
+              "scope": "sem",
+              "keywords": [
+                "layout manager",
+                "flowlayout",
+                "borderlayout",
+                "gridlayout",
+                "cardlayout",
+                "gridbaglayout",
+                "default layout"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Swing",
+          "topics": [
+            {
+              "id": "OOPJ.U5.T01",
+              "title": "Swing introduction, AWT limitations and MVC",
+              "wording": "Swing – Introduction, limitations of AWT, MVC architecture",
+              "scope": "sem",
+              "keywords": [
+                "swing",
+                "awt",
+                "lightweight",
+                "heavyweight",
+                "mvc",
+                "look and feel",
+                "pluggable"
+              ]
+            },
+            {
+              "id": "OOPJ.U5.T02",
+              "title": "Components, containers, JFrame and JComponent",
+              "wording": "components, containers, exploring swing- JFrame and JComponent",
+              "scope": "sem",
+              "keywords": [
+                "jframe",
+                "jcomponent",
+                "container",
+                "component",
+                "content pane",
+                "jpanel",
+                "jdialog",
+                "japplet"
+              ]
+            },
+            {
+              "id": "OOPJ.U5.T03",
+              "title": "JLabel, ImageIcon, JTextField, JButton, JCheckBox, JRadioButton",
+              "wording": "JLabel, ImageIcon, JTextField, JButton, JCheckBox, JRadioButton",
+              "scope": "sem",
+              "keywords": [
+                "jlabel",
+                "imageicon",
+                "jtextfield",
+                "jbutton",
+                "jcheckbox",
+                "jradiobutton",
+                "buttongroup"
+              ]
+            },
+            {
+              "id": "OOPJ.U5.T04",
+              "title": "JList, JComboBox, tabbed panes, scroll panes, trees and tables",
+              "wording": "JList, JComboBox, Tabbed Panes, Scroll Panes, Trees, and Tables",
+              "scope": "sem",
+              "keywords": [
+                "jlist",
+                "jcombobox",
+                "jtabbedpane",
+                "jscrollpane",
+                "jtree",
+                "jtable",
+                "tabbed pane",
+                "scroll pane"
+              ]
+            },
+            {
+              "id": "OOPJ.U5.T05",
+              "title": "Menus and popup menus",
+              "wording": "Menu Basics, Menu related classes - JMenuBar, JMenu, JMenuItem, JCheckBoxMenuItem, JRadioButtonMenuItem, JSeperator. creating a popup menu",
+              "scope": "sem",
+              "keywords": [
+                "jmenubar",
+                "jmenu",
+                "jmenuitem",
+                "jcheckboxmenuitem",
+                "jradiobuttonmenuitem",
+                "jseparator",
+                "jpopupmenu",
+                "popup menu"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "SE": {
+      "name": "Software Engineering",
+      "code": "CS304PC",
+      "units": {
+        "1": {
+          "title": "Introduction and Process Models",
+          "topics": [
+            {
+              "id": "SE.U1.T01",
+              "title": "Evolving role and changing nature of software; software myths",
+              "wording": "The evolving role of software, changing nature of software, software myths",
+              "scope": "sem",
+              "keywords": [
+                "evolving role",
+                "changing nature",
+                "software myth",
+                "management myth",
+                "customer myth",
+                "practitioner myth",
+                "software definition"
+              ]
+            },
+            {
+              "id": "SE.U1.T02",
+              "title": "Layered technology and process framework",
+              "wording": "Software engineering- a layered technology, a process framework",
+              "scope": "sem",
+              "keywords": [
+                "layered technology",
+                "process framework",
+                "framework activity",
+                "umbrella activity",
+                "quality focus",
+                "process layer",
+                "methods",
+                "tools"
+              ]
+            },
+            {
+              "id": "SE.U1.T03",
+              "title": "Capability Maturity Model Integration (CMMI)",
+              "wording": "the capability maturity model integration (CMMI)",
+              "scope": "sem",
+              "keywords": [
+                "cmmi",
+                "capability maturity",
+                "maturity level",
+                "initial",
+                "managed",
+                "defined",
+                "quantitatively managed",
+                "optimizing"
+              ]
+            },
+            {
+              "id": "SE.U1.T04",
+              "title": "Waterfall, spiral, incremental, concurrent and component-based models",
+              "wording": "The waterfall model, Spiral model, Incremental Process Models, Concurrent Models, Component based development",
+              "scope": "sem",
+              "keywords": [
+                "waterfall",
+                "spiral",
+                "incremental",
+                "concurrent model",
+                "component based",
+                "rad",
+                "prototyping",
+                "process model"
+              ]
+            },
+            {
+              "id": "SE.U1.T05",
+              "title": "Agile development",
+              "wording": "Agile Development",
+              "scope": "sem",
+              "keywords": [
+                "agile",
+                "manifesto",
+                "xp",
+                "extreme programming",
+                "scrum",
+                "sprint",
+                "pair programming",
+                "refactoring",
+                "continuous integration"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Software Requirements",
+          "topics": [
+            {
+              "id": "SE.U2.T01",
+              "title": "Functional and non-functional requirements",
+              "wording": "Functional and non-functional requirements",
+              "scope": "sem",
+              "keywords": [
+                "functional requirement",
+                "non-functional",
+                "nonfunctional",
+                "product requirement",
+                "organisational requirement",
+                "external requirement",
+                "quality requirement"
+              ]
+            },
+            {
+              "id": "SE.U2.T02",
+              "title": "User and system requirements; interface specification",
+              "wording": "user requirements, system requirements, interface specification",
+              "scope": "sem",
+              "keywords": [
+                "user requirement",
+                "system requirement",
+                "interface specification",
+                "procedural interface",
+                "data representation"
+              ]
+            },
+            {
+              "id": "SE.U2.T03",
+              "title": "Software requirements document (SRS)",
+              "wording": "the software requirements document",
+              "scope": "sem",
+              "keywords": [
+                "srs",
+                "software requirements document",
+                "requirements document",
+                "srs quality",
+                "verifiable",
+                "traceable",
+                "complete",
+                "consistent"
+              ]
+            },
+            {
+              "id": "SE.U2.T04",
+              "title": "Feasibility studies",
+              "wording": "Feasibility studies",
+              "scope": "sem",
+              "keywords": [
+                "feasibility",
+                "technical feasibility",
+                "economic feasibility",
+                "operational feasibility",
+                "schedule feasibility",
+                "legal feasibility"
+              ]
+            },
+            {
+              "id": "SE.U2.T05",
+              "title": "Requirements elicitation and analysis",
+              "wording": "requirements elicitation and analysis",
+              "scope": "sem",
+              "keywords": [
+                "elicitation",
+                "interview",
+                "questionnaire",
+                "observation",
+                "use case",
+                "scenario",
+                "prototyping",
+                "jad",
+                "fast",
+                "qfd",
+                "requirements analysis"
+              ]
+            },
+            {
+              "id": "SE.U2.T06",
+              "title": "Requirements validation",
+              "wording": "requirements validation",
+              "scope": "sem",
+              "keywords": [
+                "requirements validation",
+                "validation",
+                "review",
+                "prototype validation",
+                "test case generation",
+                "requirements check"
+              ]
+            },
+            {
+              "id": "SE.U2.T07",
+              "title": "Requirements management",
+              "wording": "requirements management",
+              "scope": "sem",
+              "keywords": [
+                "requirements management",
+                "change control",
+                "traceability",
+                "requirement change",
+                "baseline"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Design Engineering, Architecture and UML",
+          "topics": [
+            {
+              "id": "SE.U3.T01",
+              "title": "Design process and design quality",
+              "wording": "Design process and design quality",
+              "scope": "mid1",
+              "keywords": [
+                "design process",
+                "design quality",
+                "good design",
+                "design guideline",
+                "design evaluation"
+              ]
+            },
+            {
+              "id": "SE.U3.T02",
+              "title": "Design concepts",
+              "wording": "design concepts",
+              "scope": "mid1",
+              "keywords": [
+                "abstraction",
+                "architecture",
+                "pattern",
+                "separation of concerns",
+                "modularity",
+                "information hiding",
+                "functional independence",
+                "refinement",
+                "refactoring",
+                "cohesion",
+                "coupling"
+              ]
+            },
+            {
+              "id": "SE.U3.T03",
+              "title": "The design model",
+              "wording": "the design model",
+              "scope": "mid1",
+              "keywords": [
+                "design model",
+                "data design",
+                "architectural design",
+                "interface design",
+                "component-level design",
+                "component level design"
+              ]
+            },
+            {
+              "id": "SE.U3.T04",
+              "title": "Software architecture and data design",
+              "wording": "software architecture, data design",
+              "scope": "mid1",
+              "keywords": [
+                "software architecture",
+                "data design",
+                "architecture",
+                "data structure",
+                "database design"
+              ]
+            },
+            {
+              "id": "SE.U3.T05",
+              "title": "Architectural styles and patterns",
+              "wording": "architectural styles and patterns, architectural design",
+              "scope": "mid1",
+              "keywords": [
+                "architectural style",
+                "architectural pattern",
+                "data-centered",
+                "data-flow",
+                "call-and-return",
+                "layered architecture",
+                "object-oriented architecture",
+                "client-server",
+                "pipe and filter"
+              ]
+            },
+            {
+              "id": "SE.U3.T06",
+              "title": "UML conceptual model and basic structural modeling",
+              "wording": "conceptual model of UML, basic structural modeling",
+              "scope": "mid2",
+              "keywords": [
+                "uml",
+                "conceptual model",
+                "structural modeling",
+                "thing",
+                "relationship",
+                "diagram",
+                "common mechanism",
+                "stereotype",
+                "tagged value"
+              ]
+            },
+            {
+              "id": "SE.U3.T07",
+              "title": "Use case diagrams",
+              "wording": "use case diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "use case",
+                "actor",
+                "system boundary",
+                "include",
+                "extend",
+                "use-case diagram"
+              ]
+            },
+            {
+              "id": "SE.U3.T08",
+              "title": "Class diagrams",
+              "wording": "class diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "class diagram",
+                "attribute",
+                "operation",
+                "visibility",
+                "multiplicity",
+                "aggregation",
+                "composition",
+                "generalization",
+                "association class"
+              ]
+            },
+            {
+              "id": "SE.U3.T09",
+              "title": "Sequence diagrams",
+              "wording": "sequence diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "sequence diagram",
+                "lifeline",
+                "message",
+                "activation",
+                "synchronous message",
+                "asynchronous message"
+              ]
+            },
+            {
+              "id": "SE.U3.T10",
+              "title": "Collaboration diagrams",
+              "wording": "collaboration diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "collaboration diagram",
+                "communication diagram",
+                "object",
+                "link",
+                "numbered message"
+              ]
+            },
+            {
+              "id": "SE.U3.T11",
+              "title": "Activity diagrams",
+              "wording": "activity diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "activity diagram",
+                "action state",
+                "decision",
+                "fork",
+                "join",
+                "swimlane",
+                "initial state",
+                "final state"
+              ]
+            },
+            {
+              "id": "SE.U3.T12",
+              "title": "Component diagrams",
+              "wording": "component diagrams",
+              "scope": "mid2",
+              "keywords": [
+                "component diagram",
+                "component",
+                "interface",
+                "dependency",
+                "provided interface",
+                "required interface"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Testing Strategies and Metrics",
+          "topics": [
+            {
+              "id": "SE.U4.T01",
+              "title": "Strategic approach and testing for conventional software",
+              "wording": "A strategic approach to software testing, test strategies for conventional software",
+              "scope": "sem",
+              "keywords": [
+                "testing strategy",
+                "unit testing",
+                "integration testing",
+                "top-down",
+                "bottom-up",
+                "sandwich",
+                "regression testing",
+                "smoke testing",
+                "verification",
+                "validation"
+              ]
+            },
+            {
+              "id": "SE.U4.T02",
+              "title": "Black-box testing",
+              "wording": "black-box and white-box testing",
+              "scope": "sem",
+              "keywords": [
+                "black-box",
+                "black box",
+                "equivalence partitioning",
+                "boundary value",
+                "cause-effect",
+                "cause effect",
+                "functional testing"
+              ]
+            },
+            {
+              "id": "SE.U4.T03",
+              "title": "White-box testing and basis path testing",
+              "wording": "black-box and white-box testing",
+              "scope": "sem",
+              "keywords": [
+                "white-box",
+                "white box",
+                "basis path",
+                "cyclomatic",
+                "flow graph",
+                "independent path",
+                "control structure testing",
+                "condition testing",
+                "loop testing"
+              ]
+            },
+            {
+              "id": "SE.U4.T04",
+              "title": "Validation and system testing",
+              "wording": "validation testing, system testing",
+              "scope": "sem",
+              "keywords": [
+                "validation testing",
+                "alpha",
+                "beta",
+                "system testing",
+                "recovery testing",
+                "security testing",
+                "stress testing",
+                "performance testing",
+                "deployment testing"
+              ]
+            },
+            {
+              "id": "SE.U4.T05",
+              "title": "The art of debugging",
+              "wording": "the art of debugging",
+              "scope": "sem",
+              "keywords": [
+                "debugging",
+                "brute force",
+                "backtracking",
+                "cause elimination",
+                "debugging versus testing",
+                "debugger"
+              ]
+            },
+            {
+              "id": "SE.U4.T06",
+              "title": "Software measurement and metrics",
+              "wording": "Software measurement, metrics for software quality",
+              "scope": "sem",
+              "keywords": [
+                "software measurement",
+                "direct metric",
+                "indirect metric",
+                "size-oriented",
+                "function-oriented",
+                "function point",
+                "loc",
+                "loc metric",
+                "metric"
+              ]
+            },
+            {
+              "id": "SE.U4.T07",
+              "title": "Metrics for software quality",
+              "wording": "metrics for software quality",
+              "scope": "sem",
+              "keywords": [
+                "defect density",
+                "dre",
+                "defect removal efficiency",
+                "mccall",
+                "iso 9126",
+                "quality metric",
+                "reliability metric"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Risk Management and Quality Management",
+          "topics": [
+            {
+              "id": "SE.U5.T01",
+              "title": "Reactive vs proactive risk strategies; software risks",
+              "wording": "Reactive Vs proactive risk strategies, software risks",
+              "scope": "sem",
+              "keywords": [
+                "reactive",
+                "proactive",
+                "risk strategy",
+                "project risk",
+                "technical risk",
+                "business risk",
+                "known risk",
+                "predictable risk",
+                "unpredictable risk"
+              ]
+            },
+            {
+              "id": "SE.U5.T02",
+              "title": "Risk identification, projection and refinement",
+              "wording": "risk identification, risk projection, risk refinement",
+              "scope": "sem",
+              "keywords": [
+                "risk identification",
+                "risk projection",
+                "risk table",
+                "risk exposure",
+                "likelihood",
+                "impact",
+                "condition-transition-consequence",
+                "risk refinement"
+              ]
+            },
+            {
+              "id": "SE.U5.T03",
+              "title": "RMMM",
+              "wording": "RMMM",
+              "scope": "sem",
+              "keywords": [
+                "rmmm",
+                "risk mitigation",
+                "risk monitoring",
+                "risk management",
+                "contingency plan"
+              ]
+            },
+            {
+              "id": "SE.U5.T04",
+              "title": "Quality concepts and software quality assurance",
+              "wording": "Quality concepts, software quality assurance",
+              "scope": "sem",
+              "keywords": [
+                "quality concept",
+                "quality control",
+                "quality assurance",
+                "sqa",
+                "cost of quality",
+                "software quality"
+              ]
+            },
+            {
+              "id": "SE.U5.T05",
+              "title": "Software reviews and formal technical reviews",
+              "wording": "software reviews, formal technical reviews",
+              "scope": "sem",
+              "keywords": [
+                "software review",
+                "formal technical review",
+                "ftr",
+                "walkthrough",
+                "inspection",
+                "review meeting",
+                "reviewer"
+              ]
+            },
+            {
+              "id": "SE.U5.T06",
+              "title": "Statistical software quality assurance",
+              "wording": "statistical software quality assurance",
+              "scope": "sem",
+              "keywords": [
+                "statistical sqa",
+                "pareto",
+                "vital few",
+                "cause analysis",
+                "defect cause"
+              ]
+            },
+            {
+              "id": "SE.U5.T07",
+              "title": "Software reliability",
+              "wording": "software reliability",
+              "scope": "sem",
+              "keywords": [
+                "reliability",
+                "mtbf",
+                "mttf",
+                "mttr",
+                "availability",
+                "failure intensity"
+              ]
+            },
+            {
+              "id": "SE.U5.T08",
+              "title": "ISO 9000 quality standards",
+              "wording": "the ISO 9000 quality standards",
+              "scope": "sem",
+              "keywords": [
+                "iso 9000",
+                "iso 9001",
+                "iso 9000-3",
+                "certification",
+                "quality standard"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "DBMS": {
+      "name": "Database Management Systems",
+      "code": "CS305PC",
+      "units": {
+        "1": {
+          "title": "Introduction and ER Design",
+          "topics": [
+            {
+              "id": "DBMS.U1.T01",
+              "title": "Applications, historical perspective, file systems vs DBMS",
+              "wording": "Database System Applications: A Historical Perspective, File Systems versus a DBMS",
+              "scope": "sem",
+              "keywords": [
+                "file system",
+                "file systems",
+                "dbms",
+                "redundancy",
+                "inconsistency",
+                "data isolation",
+                "atomicity",
+                "concurrent access",
+                "database application"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T02",
+              "title": "Data model, levels of abstraction and data independence",
+              "wording": "the Data Model, Levels of Abstraction in a DBMS, Data Independence",
+              "scope": "sem",
+              "keywords": [
+                "data model",
+                "levels of abstraction",
+                "physical level",
+                "logical level",
+                "view level",
+                "data independence",
+                "physical data independence",
+                "logical data independence",
+                "schema",
+                "instance"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T03",
+              "title": "Structure of a DBMS and DBA",
+              "wording": "Structure of a DBMS",
+              "scope": "sem",
+              "keywords": [
+                "structure of dbms",
+                "query processor",
+                "storage manager",
+                "buffer manager",
+                "transaction manager",
+                "dba",
+                "database administrator",
+                "ddl interpreter",
+                "dml compiler"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T04",
+              "title": "ER model: entities, attributes and entity sets",
+              "wording": "Database Design and ER Diagrams, Entities, Attributes, and Entity Sets",
+              "scope": "sem",
+              "keywords": [
+                "er diagram",
+                "entity",
+                "attribute",
+                "entity set",
+                "key attribute",
+                "composite attribute",
+                "multivalued",
+                "derived attribute",
+                "weak entity"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T05",
+              "title": "Relationships, relationship sets and cardinality",
+              "wording": "Relationships and Relationship Sets",
+              "scope": "sem",
+              "keywords": [
+                "relationship",
+                "relationship set",
+                "cardinality",
+                "1:1",
+                "1:n",
+                "m:n",
+                "participation",
+                "total participation",
+                "partial participation",
+                "degree"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T06",
+              "title": "Additional ER features: weak entities, specialization, generalization, aggregation",
+              "wording": "Additional Features of the ER Model",
+              "scope": "sem",
+              "keywords": [
+                "weak entity",
+                "identifying relationship",
+                "partial key",
+                "specialization",
+                "generalization",
+                "aggregation",
+                "isa",
+                "disjoint",
+                "overlapping"
+              ]
+            },
+            {
+              "id": "DBMS.U1.T07",
+              "title": "Conceptual design with the ER model; ER-to-relational mapping",
+              "wording": "Conceptual Design with the ER Model",
+              "scope": "sem",
+              "keywords": [
+                "conceptual design",
+                "er to relational",
+                "map er",
+                "tables from er",
+                "schema design"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Relational Model, Algebra and Calculus",
+          "topics": [
+            {
+              "id": "DBMS.U2.T01",
+              "title": "Relational model terms",
+              "wording": "Introduction to the Relational Model",
+              "scope": "sem",
+              "keywords": [
+                "relation",
+                "tuple",
+                "attribute",
+                "domain",
+                "degree",
+                "cardinality",
+                "schema",
+                "instance",
+                "relational model"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T02",
+              "title": "Integrity constraints and enforcement",
+              "wording": "Integrity constraint over relations, enforcing integrity constraints",
+              "scope": "sem",
+              "keywords": [
+                "integrity constraint",
+                "domain constraint",
+                "key constraint",
+                "entity integrity",
+                "referential integrity",
+                "foreign key",
+                "cascade",
+                "set null",
+                "no action"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T03",
+              "title": "Querying relational data and views",
+              "wording": "querying relational data, introduction to views",
+              "scope": "sem",
+              "keywords": [
+                "view",
+                "query relational data",
+                "virtual table",
+                "create view",
+                "view update"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T04",
+              "title": "Destroying and altering tables and views",
+              "wording": "destroying/altering tables and views",
+              "scope": "sem",
+              "keywords": [
+                "alter table",
+                "drop table",
+                "drop view",
+                "add column",
+                "modify column"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T05",
+              "title": "Relational algebra",
+              "wording": "Relational Algebra",
+              "scope": "sem",
+              "keywords": [
+                "relational algebra",
+                "selection",
+                "projection",
+                "union",
+                "intersect",
+                "set difference",
+                "cross product",
+                "join",
+                "natural join",
+                "theta join",
+                "outer join",
+                "division",
+                "rename"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T06",
+              "title": "Tuple relational calculus",
+              "wording": "Tuple relational Calculus",
+              "scope": "sem",
+              "keywords": [
+                "tuple relational calculus",
+                "trc",
+                "tuple calculus",
+                "safe expression",
+                "{t |"
+              ]
+            },
+            {
+              "id": "DBMS.U2.T07",
+              "title": "Domain relational calculus",
+              "wording": "Domain relational calculus",
+              "scope": "sem",
+              "keywords": [
+                "domain relational calculus",
+                "drc",
+                "domain calculus",
+                "safe",
+                "{<"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "SQL, Constraints, Triggers and Schema Refinement",
+          "topics": [
+            {
+              "id": "DBMS.U3.T01",
+              "title": "Form of basic SQL query",
+              "wording": "form of basic SQL query",
+              "scope": "mid1",
+              "keywords": [
+                "select",
+                "from",
+                "where",
+                "sql query",
+                "distinct",
+                "order by",
+                "basic sql"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T02",
+              "title": "UNION, INTERSECT and EXCEPT",
+              "wording": "UNION, INTERSECT, and EXCEPT",
+              "scope": "mid1",
+              "keywords": [
+                "union",
+                "intersect",
+                "except",
+                "union all",
+                "set operation"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T03",
+              "title": "Nested queries",
+              "wording": "Nested Queries",
+              "scope": "mid1",
+              "keywords": [
+                "nested query",
+                "subquery",
+                "in",
+                "not in",
+                "exists",
+                "any",
+                "all",
+                "correlated"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T04",
+              "title": "Aggregation operators",
+              "wording": "aggregation operators",
+              "scope": "mid1",
+              "keywords": [
+                "aggregate",
+                "count",
+                "sum",
+                "avg",
+                "min",
+                "max",
+                "group by",
+                "having"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T05",
+              "title": "NULL values",
+              "wording": "NULL values",
+              "scope": "mid1",
+              "keywords": [
+                "null",
+                "is null",
+                "three-valued",
+                "three valued",
+                "unknown",
+                "count(*)"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T06",
+              "title": "Complex integrity constraints in SQL",
+              "wording": "complex integrity constraints in SQL",
+              "scope": "mid1",
+              "keywords": [
+                "check constraint",
+                "assertion",
+                "unique constraint",
+                "primary key constraint",
+                "foreign key constraint",
+                "not null"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T07",
+              "title": "Triggers and active databases",
+              "wording": "triggers and active databases",
+              "scope": "mid1",
+              "keywords": [
+                "trigger",
+                "active database",
+                "before trigger",
+                "after trigger",
+                "row level",
+                "statement level",
+                "event condition action"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T08",
+              "title": "Problems caused by redundancy",
+              "wording": "Problems caused by redundancy",
+              "scope": "mid2",
+              "keywords": [
+                "redundancy",
+                "insertion anomaly",
+                "deletion anomaly",
+                "update anomaly",
+                "anomaly"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T09",
+              "title": "Decompositions and problems related to decomposition",
+              "wording": "decompositions, problems related to decomposition",
+              "scope": "mid2",
+              "keywords": [
+                "decomposition",
+                "lossless join",
+                "lossy join",
+                "dependency preservation",
+                "lossless"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T10",
+              "title": "Functional dependencies, Armstrong axioms and closures",
+              "wording": "reasoning about functional dependencies",
+              "scope": "mid2",
+              "keywords": [
+                "functional dependency",
+                "fd",
+                "armstrong",
+                "reflexivity",
+                "augmentation",
+                "transitivity",
+                "closure",
+                "candidate key",
+                "canonical cover",
+                "prime attribute"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T11",
+              "title": "First, second and third normal forms",
+              "wording": "FIRST, SECOND, THIRD normal forms",
+              "scope": "mid2",
+              "keywords": [
+                "1nf",
+                "2nf",
+                "3nf",
+                "first normal",
+                "second normal",
+                "third normal",
+                "partial dependency",
+                "transitive dependency"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T12",
+              "title": "BCNF",
+              "wording": "BCNF",
+              "scope": "mid2",
+              "keywords": [
+                "bcnf",
+                "boyce-codd",
+                "boyce codd"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T13",
+              "title": "Lossless join decomposition",
+              "wording": "lossless join decomposition",
+              "scope": "mid2",
+              "keywords": [
+                "lossless join decomposition",
+                "lossless decomposition",
+                "binary decomposition"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T14",
+              "title": "Multivalued dependencies and fourth normal form",
+              "wording": "multivalued dependencies, FOURTH normal form",
+              "scope": "mid2",
+              "keywords": [
+                "multivalued dependency",
+                "multi-valued",
+                "mvd",
+                "4nf",
+                "fourth normal"
+              ]
+            },
+            {
+              "id": "DBMS.U3.T15",
+              "title": "Fifth normal form",
+              "wording": "FIFTH normal form",
+              "scope": "mid2",
+              "keywords": [
+                "5nf",
+                "fifth normal",
+                "join dependency"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Transactions, Concurrency and Recovery",
+          "topics": [
+            {
+              "id": "DBMS.U4.T01",
+              "title": "Transaction concept and state",
+              "wording": "Transaction Concept, Transaction State",
+              "scope": "sem",
+              "keywords": [
+                "transaction",
+                "transaction state",
+                "active",
+                "partially committed",
+                "committed",
+                "failed",
+                "aborted",
+                "terminated"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T02",
+              "title": "Atomicity and durability implementation",
+              "wording": "Implementation of Atomicity and Durability",
+              "scope": "sem",
+              "keywords": [
+                "atomicity",
+                "durability",
+                "shadow copy",
+                "shadow paging",
+                "log",
+                "stable storage"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T03",
+              "title": "Concurrent executions and serializability",
+              "wording": "Concurrent Executions, Serializability",
+              "scope": "sem",
+              "keywords": [
+                "concurrent execution",
+                "serial schedule",
+                "serializable",
+                "serialisable",
+                "conflict",
+                "lost update",
+                "dirty read",
+                "phantom"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T04",
+              "title": "Recoverability",
+              "wording": "Recoverability",
+              "scope": "sem",
+              "keywords": [
+                "recoverable",
+                "cascadeless",
+                "strict",
+                "recoverability",
+                "dirty read"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T05",
+              "title": "Implementation of isolation and testing for serializability",
+              "wording": "Implementation of Isolation, Testing for serializability",
+              "scope": "sem",
+              "keywords": [
+                "isolation",
+                "isolation level",
+                "precedence graph",
+                "serialization graph",
+                "conflict serializable",
+                "view serializable"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T06",
+              "title": "Lock-based protocols",
+              "wording": "Lock Based Protocols",
+              "scope": "sem",
+              "keywords": [
+                "lock",
+                "shared lock",
+                "exclusive lock",
+                "two-phase locking",
+                "2pl",
+                "strict 2pl",
+                "rigorous",
+                "lock point",
+                "deadlock",
+                "wait-die",
+                "wound-wait"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T07",
+              "title": "Timestamp-based protocols",
+              "wording": "Timestamp Based Protocols",
+              "scope": "sem",
+              "keywords": [
+                "timestamp",
+                "timestamp ordering",
+                "thomas write rule",
+                "read timestamp",
+                "write timestamp"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T08",
+              "title": "Validation-based protocols",
+              "wording": "Validation- Based Protocols",
+              "scope": "sem",
+              "keywords": [
+                "validation-based",
+                "validation based",
+                "read phase",
+                "validation phase",
+                "write phase",
+                "optimistic"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T09",
+              "title": "Multiple granularity",
+              "wording": "Multiple Granularity",
+              "scope": "sem",
+              "keywords": [
+                "multiple granularity",
+                "granularity",
+                "intention shared",
+                "intention exclusive",
+                "is",
+                "ix",
+                "six"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T10",
+              "title": "Recovery and atomicity; log-based recovery",
+              "wording": "Recovery and Atomicity, Log–Based Recovery",
+              "scope": "sem",
+              "keywords": [
+                "log-based recovery",
+                "log based",
+                "undo",
+                "redo",
+                "deferred modification",
+                "immediate modification",
+                "checkpoint",
+                "wal",
+                "write ahead log"
+              ]
+            },
+            {
+              "id": "DBMS.U4.T11",
+              "title": "Recovery with concurrent transactions",
+              "wording": "Recovery with Concurrent Transactions",
+              "scope": "sem",
+              "keywords": [
+                "recovery with concurrent",
+                "undo list",
+                "redo list",
+                "crash recovery",
+                "transaction table"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Storage, File Organization and Indexing",
+          "topics": [
+            {
+              "id": "DBMS.U5.T01",
+              "title": "Data on external storage, pages and buffer pool",
+              "wording": "Data on External Storage",
+              "scope": "sem",
+              "keywords": [
+                "external storage",
+                "page",
+                "buffer pool",
+                "buffer manager",
+                "disk",
+                "block",
+                "record"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T02",
+              "title": "File organization",
+              "wording": "File Organization and Indexing",
+              "scope": "sem",
+              "keywords": [
+                "file organization",
+                "heap file",
+                "sorted file",
+                "hashed file",
+                "file organisation"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T03",
+              "title": "Clustered, primary and secondary indexes",
+              "wording": "Cluster Indexes, Primary and Secondary Indexes",
+              "scope": "sem",
+              "keywords": [
+                "clustered index",
+                "cluster index",
+                "primary index",
+                "secondary index",
+                "dense index",
+                "sparse index",
+                "index"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T04",
+              "title": "Index data structures",
+              "wording": "Index data Structures",
+              "scope": "sem",
+              "keywords": [
+                "index data structure",
+                "search key",
+                "data entry",
+                "index entry",
+                "primary key"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T05",
+              "title": "Hash-based indexing",
+              "wording": "Hash Based Indexing",
+              "scope": "sem",
+              "keywords": [
+                "hash-based",
+                "hash based",
+                "static hashing",
+                "extendible hashing",
+                "extendable hashing",
+                "global depth",
+                "local depth",
+                "overflow chain",
+                "bucket"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T06",
+              "title": "Tree-based indexing and ISAM",
+              "wording": "Tree based Indexing, Indexed Sequential Access Methods (ISAM)",
+              "scope": "sem",
+              "keywords": [
+                "tree-based",
+                "tree based",
+                "isam",
+                "indexed sequential",
+                "b+ tree",
+                "b tree",
+                "b-tree"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T07",
+              "title": "Comparison of file organizations",
+              "wording": "Comparison of File Organizations",
+              "scope": "sem",
+              "keywords": [
+                "comparison of file",
+                "cost model",
+                "scan",
+                "equality search",
+                "insert cost",
+                "heap cost",
+                "sorted cost"
+              ]
+            },
+            {
+              "id": "DBMS.U5.T08",
+              "title": "B+ trees",
+              "wording": "B+ Trees: A Dynamic Index Structure",
+              "scope": "sem",
+              "keywords": [
+                "b+ tree",
+                "b+tree",
+                "leaf level",
+                "internal node",
+                "order",
+                "split",
+                "merge",
+                "root split",
+                "linked leaf"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "IE": {
+      "name": "Innovation and Entrepreneurship",
+      "code": "MS301HS",
+      "units": {
+        "1": {
+          "title": "Fundamentals of Innovation and Entrepreneurship",
+          "topics": [
+            {
+              "id": "IE.U1.T01",
+              "title": "Innovation: introduction, need and features",
+              "wording": "Innovation: Introduction, need for innovation, Features",
+              "scope": "sem",
+              "keywords": [
+                "innovation",
+                "need for innovation",
+                "feature of innovation",
+                "invention",
+                "creativity"
+              ]
+            },
+            {
+              "id": "IE.U1.T02",
+              "title": "Types of innovation; manufacturing and service innovation",
+              "wording": "Types of innovations, innovations in manufacturing and service sectors",
+              "scope": "sem",
+              "keywords": [
+                "types of innovation",
+                "incremental",
+                "radical",
+                "disruptive",
+                "architectural",
+                "manufacturing innovation",
+                "service innovation",
+                "product innovation",
+                "process innovation"
+              ]
+            },
+            {
+              "id": "IE.U1.T03",
+              "title": "Fostering a culture of innovation and planning for innovation",
+              "wording": "fostering a culture of innovation, planning for innovation",
+              "scope": "sem",
+              "keywords": [
+                "culture of innovation",
+                "innovation culture",
+                "planning for innovation",
+                "innovation strategy"
+              ]
+            },
+            {
+              "id": "IE.U1.T04",
+              "title": "Entrepreneurship: types, attributes and mindset",
+              "wording": "Entrepreneurship: Introduction, types of entrepreneurship attributes, mindset of entrepreneurial and intrapreneurial leadership",
+              "scope": "sem",
+              "keywords": [
+                "entrepreneurship",
+                "entrepreneur",
+                "intrapreneur",
+                "entrepreneurial mindset",
+                "attributes of entrepreneur",
+                "types of entrepreneurship"
+              ]
+            },
+            {
+              "id": "IE.U1.T05",
+              "title": "Role of entrepreneurs, women entrepreneurship and on-campus startups",
+              "wording": "Role of entrepreneurs in economic development. Woman Entrepreneurship, Importance of on-campus startups",
+              "scope": "sem",
+              "keywords": [
+                "economic development",
+                "women entrepreneurship",
+                "woman entrepreneur",
+                "on-campus startup",
+                "campus startup",
+                "role of entrepreneur"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Problem and Customer Identification",
+          "topics": [
+            {
+              "id": "IE.U2.T01",
+              "title": "Identifying the gap/problem from an industry perspective",
+              "wording": "Identification of gap, problem, analyzing the problem from a industry perspective, real-world problems",
+              "scope": "sem",
+              "keywords": [
+                "problem identification",
+                "gap",
+                "industry perspective",
+                "real-world problem",
+                "pain point",
+                "customer problem"
+              ]
+            },
+            {
+              "id": "IE.U2.T02",
+              "title": "Market and customer segmentation",
+              "wording": "market and customer segmentation",
+              "scope": "sem",
+              "keywords": [
+                "market segmentation",
+                "customer segmentation",
+                "demographic",
+                "geographic",
+                "psychographic",
+                "behavioural",
+                "behavioral",
+                "segment"
+              ]
+            },
+            {
+              "id": "IE.U2.T03",
+              "title": "Validation of problem-customer fit and iteration",
+              "wording": "validation of customer problem fit, Iterating problem-customer fit",
+              "scope": "sem",
+              "keywords": [
+                "problem-customer fit",
+                "problem customer fit",
+                "customer discovery",
+                "get out of the building",
+                "validation",
+                "iterate"
+              ]
+            },
+            {
+              "id": "IE.U2.T04",
+              "title": "Competition and industry trends mapping",
+              "wording": "Competition and Industry trends mapping and assessing initial opportunity",
+              "scope": "sem",
+              "keywords": [
+                "competition",
+                "competitor",
+                "industry trend",
+                "trend mapping",
+                "opportunity assessment"
+              ]
+            },
+            {
+              "id": "IE.U2.T05",
+              "title": "Porter Five Forces model",
+              "wording": "Porter's Five Force Model",
+              "scope": "sem",
+              "keywords": [
+                "porter",
+                "five forces",
+                "five force",
+                "new entrant",
+                "supplier power",
+                "buyer power",
+                "substitute",
+                "rivalry"
+              ]
+            },
+            {
+              "id": "IE.U2.T06",
+              "title": "Idea generation and ideation techniques",
+              "wording": "Idea generation, Ideation techniques: Brainstorming, Brain writing, Round robin, and SCAMPER",
+              "scope": "sem",
+              "keywords": [
+                "idea generation",
+                "ideation",
+                "brainstorming",
+                "brain writing",
+                "brainwriting",
+                "round robin",
+                "scamper"
+              ]
+            },
+            {
+              "id": "IE.U2.T07",
+              "title": "Design thinking principles and solution mapping",
+              "wording": "Design thinking principles, Mapping of solution to problem",
+              "scope": "sem",
+              "keywords": [
+                "design thinking",
+                "empathise",
+                "empathize",
+                "define",
+                "ideate",
+                "prototype",
+                "test",
+                "solution mapping"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Opportunity Assessment and Prototype Development",
+          "topics": [
+            {
+              "id": "IE.U3.T01",
+              "title": "Global competitors and industry trends",
+              "wording": "Identify and map global competitors, review industry trends",
+              "scope": "mid1",
+              "keywords": [
+                "global competitor",
+                "competitor mapping",
+                "industry trend",
+                "global market"
+              ]
+            },
+            {
+              "id": "IE.U3.T02",
+              "title": "Market sizing: TAM, SAM and SOM",
+              "wording": "understand market sizing: TAM, SAM, and SOM",
+              "scope": "mid1",
+              "keywords": [
+                "tam",
+                "sam",
+                "som",
+                "market sizing",
+                "total addressable",
+                "serviceable available",
+                "serviceable obtainable"
+              ]
+            },
+            {
+              "id": "IE.U3.T03",
+              "title": "Assessing scope and potential scale",
+              "wording": "Assessing scope and potential scale for the opportunity",
+              "scope": "mid1",
+              "keywords": [
+                "scope",
+                "potential scale",
+                "scalability",
+                "opportunity scope",
+                "market potential"
+              ]
+            },
+            {
+              "id": "IE.U3.T04",
+              "title": "Prototyping",
+              "wording": "Understanding prototyping",
+              "scope": "mid2",
+              "keywords": [
+                "prototype",
+                "prototyping",
+                "wireframe",
+                "mock-up",
+                "mockup",
+                "sketch",
+                "working prototype"
+              ]
+            },
+            {
+              "id": "IE.U3.T05",
+              "title": "Minimum viable product (MVP)",
+              "wording": "Minimum Viable Product (MVP)",
+              "scope": "mid2",
+              "keywords": [
+                "mvp",
+                "minimum viable product",
+                "build measure learn",
+                "build-measure-learn"
+              ]
+            },
+            {
+              "id": "IE.U3.T06",
+              "title": "Developing a prototype: testing and validation",
+              "wording": "Developing a prototype: Testing, and validation",
+              "scope": "mid2",
+              "keywords": [
+                "prototype testing",
+                "validation",
+                "user testing",
+                "feedback",
+                "iterate prototype"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Business and Financial Models",
+          "topics": [
+            {
+              "id": "IE.U4.T01",
+              "title": "Business model and types",
+              "wording": "Introduction to Business Model and types",
+              "scope": "sem",
+              "keywords": [
+                "business model",
+                "business model type",
+                "revenue model",
+                "subscription",
+                "freemium",
+                "marketplace"
+              ]
+            },
+            {
+              "id": "IE.U4.T02",
+              "title": "Lean Canvas: nine blocks",
+              "wording": "Lean Canvas Approach: 9-block lean canvas model, building lean canvas for your startup",
+              "scope": "sem",
+              "keywords": [
+                "lean canvas",
+                "9-block",
+                "nine block",
+                "problem",
+                "customer segments",
+                "unique value proposition",
+                "solution",
+                "channels",
+                "revenue streams",
+                "cost structure",
+                "key metrics",
+                "unfair advantage"
+              ]
+            },
+            {
+              "id": "IE.U4.T03",
+              "title": "Business plan components",
+              "wording": "Business planning: components of Business plan- Sales plan, People plan and financial plan",
+              "scope": "sem",
+              "keywords": [
+                "business plan",
+                "sales plan",
+                "people plan",
+                "financial plan",
+                "business planning"
+              ]
+            },
+            {
+              "id": "IE.U4.T04",
+              "title": "Types of costs and financial planning for profitability",
+              "wording": "Financial Planning: Types of costs, preparing a financial plan for profitability using a financial template",
+              "scope": "sem",
+              "keywords": [
+                "fixed cost",
+                "variable cost",
+                "semi-variable",
+                "semi variable",
+                "break-even",
+                "break even",
+                "financial plan",
+                "profitability"
+              ]
+            },
+            {
+              "id": "IE.U4.T05",
+              "title": "Unit economics, economies of scale and financial performance",
+              "wording": "understanding the basics of Unit economics, Economies of Scale and analyzing financial performance",
+              "scope": "sem",
+              "keywords": [
+                "unit economics",
+                "cac",
+                "ltv",
+                "customer acquisition cost",
+                "lifetime value",
+                "contribution margin",
+                "economies of scale",
+                "financial performance"
+              ]
+            },
+            {
+              "id": "IE.U4.T06",
+              "title": "Go-to-market approach, channels and customer acquisition",
+              "wording": "Go-To-Market (GTM) approach – Selecting the Right Channel, creating digital presence, and building customer acquisition strategy",
+              "scope": "sem",
+              "keywords": [
+                "go-to-market",
+                "gtm",
+                "channel",
+                "digital presence",
+                "customer acquisition",
+                "marketing channel"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Startups and IPR",
+          "topics": [
+            {
+              "id": "IE.U5.T01",
+              "title": "Startup requirements, founding team and mentors",
+              "wording": "Startup requirements, building founding team members and mentors",
+              "scope": "sem",
+              "keywords": [
+                "startup requirement",
+                "founding team",
+                "mentor",
+                "co-founder",
+                "team building"
+              ]
+            },
+            {
+              "id": "IE.U5.T02",
+              "title": "Pitch preparation and venture pitching readiness",
+              "wording": "pitch preparation, venture pitching readiness",
+              "scope": "sem",
+              "keywords": [
+                "pitch",
+                "pitch deck",
+                "elevator pitch",
+                "traction",
+                "ask",
+                "venture pitching"
+              ]
+            },
+            {
+              "id": "IE.U5.T03",
+              "title": "Startup registration, documentation and legal aspects",
+              "wording": "start-up registration process, documentation, legal aspects in startup",
+              "scope": "sem",
+              "keywords": [
+                "startup registration",
+                "registration",
+                "legal aspect",
+                "incorporation",
+                "llp",
+                "private limited",
+                "documentation"
+              ]
+            },
+            {
+              "id": "IE.U5.T04",
+              "title": "Funding opportunities, institutional support and startup lifecycle",
+              "wording": "funding opportunities and schemes, institutional support to entrepreneurs, startup lifecycle",
+              "scope": "sem",
+              "keywords": [
+                "funding",
+                "bootstrapping",
+                "angel",
+                "venture capital",
+                "grant",
+                "crowdfunding",
+                "incubator",
+                "accelerator",
+                "startup lifecycle",
+                "institutional support"
+              ]
+            },
+            {
+              "id": "IE.U5.T05",
+              "title": "National Innovation Startup Policy (NISP)",
+              "wording": "National Innovation Startup Policy (NISP) and its features",
+              "scope": "sem",
+              "keywords": [
+                "nisp",
+                "national innovation startup policy",
+                "startup policy"
+              ]
+            },
+            {
+              "id": "IE.U5.T06",
+              "title": "Patents, designs, patentability and grant procedure",
+              "wording": "Patents, Designs, Patentability, Procedure for grants of patents",
+              "scope": "sem",
+              "keywords": [
+                "patent",
+                "design registration",
+                "patentability",
+                "novelty",
+                "inventive step",
+                "industrial applicability",
+                "patent grant",
+                "patent procedure"
+              ]
+            },
+            {
+              "id": "IE.U5.T07",
+              "title": "Patent rights, Indian and international patenting",
+              "wording": "Indian Scenario of Patenting, International Scenario: International cooperation on Intellectual Property. Patent Rights: Scope of Patent Rights",
+              "scope": "sem",
+              "keywords": [
+                "patent right",
+                "indian patent",
+                "international patent",
+                "pct",
+                "paris convention",
+                "trips",
+                "scope of patent"
+              ]
+            },
+            {
+              "id": "IE.U5.T08",
+              "title": "Copyright, trademark and geographical indications",
+              "wording": "Copyright, trademark, and GI",
+              "scope": "sem",
+              "keywords": [
+                "copyright",
+                "trademark",
+                "trade mark",
+                "geographical indication",
+                "gi tag",
+                "ipr"
+              ]
+            },
+            {
+              "id": "IE.U5.T09",
+              "title": "Licensing and transfer of technology",
+              "wording": "Licensing and transfer of technology",
+              "scope": "sem",
+              "keywords": [
+                "licensing",
+                "license",
+                "technology transfer",
+                "royalty",
+                "know-how"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ES": {
+      "name": "Environmental Science",
+      "code": "VA301BS",
+      "units": {
+        "1": {
+          "title": "Ecosystems",
+          "topics": [
+            {
+              "id": "ES.U1.T01",
+              "title": "Ecosystem definition, scope, importance and classification",
+              "wording": "Definition, Scope, and Importance of ecosystem. Classification",
+              "scope": "sem",
+              "keywords": [
+                "ecosystem",
+                "definition",
+                "scope",
+                "importance",
+                "classification",
+                "aquatic",
+                "terrestrial",
+                "forest ecosystem"
+              ]
+            },
+            {
+              "id": "ES.U1.T02",
+              "title": "Structure and function of an ecosystem",
+              "wording": "structure and function of an ecosystem",
+              "scope": "sem",
+              "keywords": [
+                "structure",
+                "function",
+                "abiotic",
+                "biotic",
+                "producer",
+                "consumer",
+                "decomposer",
+                "food chain",
+                "food web"
+              ]
+            },
+            {
+              "id": "ES.U1.T03",
+              "title": "Food chains and food web",
+              "wording": "Food chains, food web",
+              "scope": "sem",
+              "keywords": [
+                "food chain",
+                "food web",
+                "grazing chain",
+                "detritus chain",
+                "trophic level"
+              ]
+            },
+            {
+              "id": "ES.U1.T04",
+              "title": "Flow of energy and universal flow model",
+              "wording": "Flow of energy – universal flow model",
+              "scope": "sem",
+              "keywords": [
+                "energy flow",
+                "universal flow",
+                "10% law",
+                "ten percent",
+                "pyramid of energy",
+                "ecological pyramid"
+              ]
+            },
+            {
+              "id": "ES.U1.T05",
+              "title": "Biogeochemical cycles: nitrogen cycle",
+              "wording": "Biogeochemical cycles – Nitrogen cycle",
+              "scope": "sem",
+              "keywords": [
+                "biogeochemical",
+                "nitrogen cycle",
+                "nitrification",
+                "denitrification",
+                "nitrogen fixation",
+                "ammonification",
+                "assimilation"
+              ]
+            },
+            {
+              "id": "ES.U1.T06",
+              "title": "Bioaccumulation and biomagnification",
+              "wording": "Bioaccumulation, Bio magnification",
+              "scope": "sem",
+              "keywords": [
+                "bioaccumulation",
+                "biomagnification",
+                "biomagnify",
+                "ddt",
+                "food chain concentration"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "title": "Natural Resources",
+          "topics": [
+            {
+              "id": "ES.U2.T01",
+              "title": "Classification of resources",
+              "wording": "Classification of Resources",
+              "scope": "sem",
+              "keywords": [
+                "natural resource",
+                "renewable",
+                "non-renewable",
+                "nonrenewable",
+                "resource classification",
+                "inexhaustible",
+                "exhaustible"
+              ]
+            },
+            {
+              "id": "ES.U2.T02",
+              "title": "Water resources, over-utilization and dams",
+              "wording": "Water resources: Effects of over utilization of surface and ground water. Dams: benefits and problems",
+              "scope": "sem",
+              "keywords": [
+                "water resource",
+                "surface water",
+                "ground water",
+                "groundwater",
+                "over utilization",
+                "overutilization",
+                "dam",
+                "reservoir",
+                "flood",
+                "drought"
+              ]
+            },
+            {
+              "id": "ES.U2.T03",
+              "title": "Mineral resources and effects of mining",
+              "wording": "Mineral resources: Environmental effects of mining",
+              "scope": "sem",
+              "keywords": [
+                "mineral resource",
+                "mining",
+                "mine",
+                "ore",
+                "land degradation",
+                "mine drainage"
+              ]
+            },
+            {
+              "id": "ES.U2.T04",
+              "title": "Forest resources and deforestation",
+              "wording": "Forest resources: Benefits of forest, causes and effects of deforestation",
+              "scope": "sem",
+              "keywords": [
+                "forest resource",
+                "forest benefit",
+                "deforestation",
+                "afforestation",
+                "forest cover"
+              ]
+            },
+            {
+              "id": "ES.U2.T05",
+              "title": "Energy resources: renewable and non-renewable",
+              "wording": "Energy resources: Renewable and non-renewable energy sources",
+              "scope": "sem",
+              "keywords": [
+                "energy resource",
+                "renewable energy",
+                "non-renewable energy",
+                "solar",
+                "wind",
+                "hydro",
+                "biomass",
+                "geothermal",
+                "tidal",
+                "fossil fuel",
+                "coal",
+                "petroleum"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "title": "Biodiversity and Biotic Resources",
+          "topics": [
+            {
+              "id": "ES.U3.T01",
+              "title": "Biodiversity: definition and levels",
+              "wording": "Introduction, Definition, levels of biodiversity - genetic, species and ecosystem diversity",
+              "scope": "mid1",
+              "keywords": [
+                "biodiversity",
+                "genetic diversity",
+                "species diversity",
+                "ecosystem diversity",
+                "levels of biodiversity"
+              ]
+            },
+            {
+              "id": "ES.U3.T02",
+              "title": "Value of biodiversity",
+              "wording": "Value of biodiversity; consumptive use, productive use, social, ethical, aesthetic and optional values",
+              "scope": "mid1",
+              "keywords": [
+                "value of biodiversity",
+                "consumptive",
+                "productive use",
+                "social value",
+                "ethical value",
+                "aesthetic value",
+                "optional value",
+                "option value"
+              ]
+            },
+            {
+              "id": "ES.U3.T03",
+              "title": "Threats to biodiversity",
+              "wording": "Threats to biodiversity: habitat loss, poaching of wildlife, man-wildlife conflicts",
+              "scope": "mid2",
+              "keywords": [
+                "threat",
+                "habitat loss",
+                "poaching",
+                "man-wildlife",
+                "man wildlife",
+                "invasive species",
+                "extinction",
+                "endangered"
+              ]
+            },
+            {
+              "id": "ES.U3.T04",
+              "title": "In-situ and ex-situ conservation",
+              "wording": "conservation of biodiversity: In- Situ and Ex-situ conservation",
+              "scope": "mid2",
+              "keywords": [
+                "in-situ",
+                "ex-situ",
+                "insitu",
+                "exsitu",
+                "conservation",
+                "biosphere reserve",
+                "national park",
+                "sanctuary",
+                "seed bank",
+                "zoo",
+                "botanical garden"
+              ]
+            }
+          ]
+        },
+        "4": {
+          "title": "Environmental Pollution and Control Technologies",
+          "topics": [
+            {
+              "id": "ES.U4.T01",
+              "title": "Classification of pollution and pollutants; soil pollution",
+              "wording": "Classification of pollution and pollutants. Soil Pollution: Impacts of modern agriculture, degradation of soil",
+              "scope": "sem",
+              "keywords": [
+                "pollution",
+                "pollutant",
+                "primary pollutant",
+                "secondary pollutant",
+                "soil pollution",
+                "soil degradation",
+                "fertilizer",
+                "pesticide",
+                "modern agriculture"
+              ]
+            },
+            {
+              "id": "ES.U4.T02",
+              "title": "Wastewater treatment: primary, secondary and tertiary",
+              "wording": "Pollution control technologies: Wastewater Treatment: Primary, secondary and Tertiary treatment",
+              "scope": "sem",
+              "keywords": [
+                "wastewater",
+                "sewage",
+                "primary treatment",
+                "secondary treatment",
+                "tertiary treatment",
+                "activated sludge",
+                "trickling filter",
+                "sedimentation",
+                "disinfection",
+                "bod",
+                "do"
+              ]
+            },
+            {
+              "id": "ES.U4.T03",
+              "title": "Climate change and its impacts",
+              "wording": "Climate change and its impacts on human environment",
+              "scope": "sem",
+              "keywords": [
+                "climate change",
+                "global warming",
+                "greenhouse",
+                "ghg",
+                "carbon dioxide",
+                "methane",
+                "sea level",
+                "impact of climate"
+              ]
+            },
+            {
+              "id": "ES.U4.T04",
+              "title": "Ozone depletion and ozone-depleting substances",
+              "wording": "Ozone depletion and Ozone depleting substances (ODS)",
+              "scope": "sem",
+              "keywords": [
+                "ozone",
+                "ozone depletion",
+                "ods",
+                "chlorofluorocarbon",
+                "cfc",
+                "ozone hole",
+                "montreal"
+              ]
+            },
+            {
+              "id": "ES.U4.T05",
+              "title": "Kyoto Protocol and Montreal Protocol",
+              "wording": "International conventions / Protocols: Kyoto protocol, and Montréal Protocol",
+              "scope": "sem",
+              "keywords": [
+                "kyoto",
+                "montreal",
+                "protocol",
+                "convention",
+                "cop",
+                "unfccc"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "title": "Environmental Policy, Legislation and EIA",
+          "topics": [
+            {
+              "id": "ES.U5.T01",
+              "title": "Environmental Protection Act",
+              "wording": "Environmental Protection act",
+              "scope": "sem",
+              "keywords": [
+                "environment protection act",
+                "environmental protection act",
+                "epa 1986",
+                "umbrella act"
+              ]
+            },
+            {
+              "id": "ES.U5.T02",
+              "title": "Air Act 1981 and Water Act",
+              "wording": "Legal aspects Air Act-1981, and Water Act",
+              "scope": "sem",
+              "keywords": [
+                "air act",
+                "water act",
+                "air pollution act",
+                "water pollution act",
+                "1981",
+                "1974"
+              ]
+            },
+            {
+              "id": "ES.U5.T03",
+              "title": "EIA: structure and baseline data acquisition",
+              "wording": "Environmental Impact Assessment (EIA): Structure, methods of baseline data acquisition",
+              "scope": "sem",
+              "keywords": [
+                "eia",
+                "environmental impact assessment",
+                "baseline data",
+                "screening",
+                "scoping",
+                "impact prediction",
+                "public hearing",
+                "environmental management plan"
+              ]
+            },
+            {
+              "id": "ES.U5.T04",
+              "title": "Sustainable development, green chemistry, green building and low-carbon lifestyle",
+              "wording": "Sustainable development: Concept and threats to sustainable development, Green chemistry principles, Green building, low carbon life style",
+              "scope": "sem",
+              "keywords": [
+                "sustainable development",
+                "sustainability",
+                "green chemistry",
+                "green building",
+                "low carbon",
+                "brundtland",
+                "sdg"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

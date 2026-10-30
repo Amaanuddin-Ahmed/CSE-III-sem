@@ -1,0 +1,45 @@
+2m | List the applications of Database systems?
+2m | Write about the Database languages.
+2m | Write Database system Applications.
+2m | Explain the roles of a data base administrator.
+1m | Define a Database and Database Management System.
+2m | State the purpose of database systems.
+2m | Name the applications of database system.
+5m | Explain the Architecture of the database?
+5m | Explain about additional features of ER Model.
+5m | Illustrate with an example E-R diagram.
+5m | What are speciality databases? Explain.
+5m | Summarize the major disadvantages of file-processing system.
+5m | Design an E-R Diagram for Airline Reservation System.
+5m | Explain the Advantages of Database Management system over Traditional File Processing System.
+5m | Write about different types of database users.
+5m | What are the extended ER features and explain.
+5m | Compare different data modes?
+5m | Explain about the E-R diagram concept?
+2m | What are the SQL statements used to retrieve and modify the database?
+2m | Compare Procedural and Non- Procedural Query Languages.
+2m | How do you create and modify the database?
+1m | Define a constraint and list types of constraints.
+2m | List out the standard operations on sets.
+5m | Write about SQL. data types and different types of constraints that can be applied on data.
+5m | Explain DDL and DMI, commands with examples.
+1m | Discuss different types of SQL operators.
+1m | ind the ids and names of sailors who have reserved two different boats on the same day, Pow,
+1m | Define Normalization.
+2m | What are functional dependencies?
+5m | Discuss about trival and non trival functional dependencies?
+5m | Define Normalization and write the importance of Normalization.
+5m | Discuss the concept of 'Trivial and Non-Trivial functional dependencies
+5m | Illustrate dependency? And explain the problems caused by it?
+5m | Define normalization and explain 1st and 2st normal forms with an example?
+2m | Write about serializability?
+1m | Name the disadvantages of Time stamp protocol.
+2m | Define a Schedule? Give an Example.
+5m | [:xplain the concept of Sertalizability.
+5m | Explain serializability concept with example.
+5m | Explain Time stamp based protocol.
+5m | ye) Explain Vransaction concept.
+5m | Llaborate the impact of various anomalies due to interleaved >xecution.
+1m | Explain memory storage device hierarchy.
+2m | Explain Failure with loss of non volatile storage.
+5m | Explain open hashing with suitable example.

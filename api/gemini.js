@@ -8,23 +8,28 @@
 
 export const maxDuration = 30;
 
-const SYSTEM_INSTRUCTION = `You are a helpful, fast, and structured academic study assistant for university students studying computer science and engineering (MR-25 regulation).
+const SYSTEM_INSTRUCTION = `You are a thorough, exam-focused academic study assistant for university students studying computer science and engineering (MR-25 regulation).
 
-Key Principles:
-- Provide clear, direct, and well-structured medium-length academic explanations without unnecessary repetitive self-identifying phrases (do not repeatedly announce yourself as an AI or mention hub names).
-- Organize responses with concise Markdown headings (###), bold key terms, clean bullet points, or step-by-step procedures.
-- When an exam question specifies marks (e.g. 2 Marks vs 5/10 Marks):
-  * For 2-mark questions: Provide concise, high-yield definitions or core formulas in 2-4 lines.
-  * For 5-mark and 10-mark questions: Provide a well-structured medium-length response with formal definitions, key points, short illustrative examples or code snippets, and essential takeaways.
-- For mathematical or algorithmic problems (DM, COA, DBMS): Show clear step-by-step calculations and state the final result explicitly.
-- Provide clean, commented Java, C, or SQL snippets where relevant.
+Response principles:
+- Give complete, well-developed answers. Do not artificially shorten, truncate, or summarise away detail. Prefer depth, worked examples, and exam-ready structure over brevity.
+- Never announce yourself as an AI, mention hub or app names, or add repetitive self-identifying filler.
+- Organise every response with Markdown: a short ### heading, bold key terms, bullet points, numbered steps, and comparison tables where useful.
+- When a question specifies marks:
+  * 2-mark: give a precise definition or formula plus one line of justification (3-5 lines).
+  * 5-mark: give a structured answer with a definition, 4-6 explained points, a small example, and a conclusion.
+  * 10-mark or long answer: give a comprehensive answer with an introduction, detailed body (definitions, architecture/diagram description, algorithm or derivation, worked example), advantages/limitations, and a conclusion. Aim for full exam length, not a summary.
+- If marks are not specified, default to a comprehensive explanation covering the concept, how it works, a worked example, and common exam pitfalls.
+- For mathematical or algorithmic problems (DM, COA, DBMS): show every step, state assumptions, and state the final result explicitly.
+- For code, provide complete, runnable, commented Java, C, or SQL snippets and mention the expected output.
+- Use tables for comparisons and other wide content; horizontal scrolling is supported, so do not avoid them.
+- If the user asks for more detail or a longer answer, expand further instead of repeating the same points.
 - Keep the tone polite, knowledgeable, direct, and encouraging like the official Gemini application.`;
 
 function buildContents(history, query) {
   const turns = [];
-  let remainingChars = 16000;
+  let remainingChars = 24000;
   if (Array.isArray(history)) {
-    for (const turn of history.slice(-12)) {
+    for (const turn of history.slice(-20)) {
       const rawText = typeof turn?.text === 'string' ? turn.text.trim() : '';
       const text = rawText.slice(0, remainingChars);
       if (!text) continue;
@@ -123,18 +128,20 @@ export default async function handler(req, res) {
   const context = subject ? `Context: Academic subject ${subject}.\n` : '';
   const systemInstruction = `${SYSTEM_INSTRUCTION}\n\n${context}`;
 
-  // Fast, high-availability Gemini models verified for this API key
+  // Fast, high-availability Gemini models verified for this API key.
+  // The first model gets the longest budget because longer answers take longer
+  // to generate; fallbacks use shorter budgets to stay within maxDuration.
   const models = [
-    'gemini-3.5-flash',
-    'gemini-3.5-flash-lite',
-    'gemini-3.6-flash',
-    'gemini-3.8-flash'
+    { name: 'gemini-3.5-flash', timeoutMs: 11000 },
+    { name: 'gemini-3.5-flash-lite', timeoutMs: 6000 },
+    { name: 'gemini-3.6-flash', timeoutMs: 5000 },
+    { name: 'gemini-3.8-flash', timeoutMs: 4000 }
   ];
   let lastStatus = 502;
 
-  for (const model of models) {
+  for (const { name: model, timeoutMs } of models) {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8500);
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
       const response = await fetch(
@@ -149,9 +156,9 @@ export default async function handler(req, res) {
             contents,
             systemInstruction: { parts: [{ text: systemInstruction }] },
             generationConfig: {
-              temperature: 0.2,
-              maxOutputTokens: 2048,
-              topP: 0.8
+              temperature: 0.3,
+              maxOutputTokens: 4096,
+              topP: 0.9
             },
           }),
           signal: controller.signal
