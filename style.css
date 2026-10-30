@@ -8893,65 +8893,101 @@ body.ai-running {
   min-height: 44px;
 }
 
-/* --- Footer: single tidy row ------------------------------------------ */
+/* --- Footer: 3 items placed one below other ----------------------------- */
 .bottom-footer {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
-  padding: 16px 18px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  padding: 22px 18px !important;
+  text-align: center;
 }
 
 .bottom-footer .footer-division {
-  width: auto;
-  text-align: left;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 .bottom-footer .feedback-division {
-  flex: 1 1 320px;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .bottom-footer .whatsapp-link {
-  width: 100%;
+  width: 100% !important;
+  max-width: 480px;
   justify-content: center;
   min-height: 44px;
 }
 
 .bottom-footer .attribution-division {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 0;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+}
+
+.attribution-division .attribution-box {
+  display: inline-flex !important;
+  margin: 0 auto;
+}
+
+.attribution-division .footer-rate-box {
+  display: inline-flex !important;
+  margin: 0 auto;
 }
 
 .footer-rate-link {
-  min-height: 44px;
-  padding: 8px 16px;
+  min-height: 38px;
+  padding: 6px 18px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  border-radius: 9999px;
+  border: 1px solid #fcd34d;
+  background: #fffbeb;
+  color: #b45309;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.footer-rate-link i {
+  color: #f59e0b;
+  font-size: 12px;
+}
+
+.footer-rate-link:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
 }
 
 @media (max-width: 640px) {
   .bottom-footer {
-    flex-direction: column;
-    align-items: stretch;
-    padding-bottom: calc(18px + var(--safe-bottom));
+    padding: 18px 14px calc(18px + var(--safe-bottom, 0px)) !important;
+    gap: 12px !important;
   }
 
-  .bottom-footer .feedback-division {
-    flex: 0 0 auto;
+  .bottom-footer .whatsapp-link {
+    max-width: 100%;
+    font-size: 13.5px;
+    padding: 10px 14px;
   }
 
   .bottom-footer .attribution-division {
-    justify-content: space-between;
-  }
-
-  .bottom-footer .footer-division {
-    width: 100%;
-    text-align: center;
+    gap: 10px !important;
   }
 }
 
@@ -9389,10 +9425,7 @@ body.ai-running {
   padding: 5px 12px;
 }
 
-/* Home shows all three footer actions; inner pages keep feedback + rate. */
-.attribution-division.attribution-compact .attribution-box {
-  display: none;
-}
+/* All three footer actions placed one below the other across all pages */
 
 /* ==========================================================================
    Full-screen AI assistant modal + horizontal scrolling for wide answers

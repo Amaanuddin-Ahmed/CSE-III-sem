@@ -464,8 +464,7 @@
 
   function updateFooterAttribution() {
     if (!el.attributionDivision) return;
-    el.attributionDivision.style.display = 'block';
-    el.attributionDivision.classList.toggle('attribution-compact', state.currentView !== 'home');
+    el.attributionDivision.style.display = 'flex';
   }
 
   function pushAppState(view, extra) {
