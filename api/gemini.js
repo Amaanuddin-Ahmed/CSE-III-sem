@@ -6,6 +6,8 @@
  * It is never sent to, or stored in, the browser bundle.
  */
 
+export const maxDuration = 30;
+
 const SYSTEM_INSTRUCTION = `You are a helpful, fast, and structured academic study assistant for university students studying computer science and engineering (MR-25 regulation).
 
 Key Principles:
@@ -121,61 +123,66 @@ export default async function handler(req, res) {
   const context = subject ? `Context: Academic subject ${subject}.\n` : '';
   const systemInstruction = `${SYSTEM_INSTRUCTION}\n\n${context}`;
 
-  // Current, publicly available Gemini models (Gemini 3.8 Flash primary)
-  const models = ['gemini-3.8-flash', 'gemini-3.8-flash-lite', 'gemini-2.5-flash', 'gemini-flash-latest'];
+  // Fast, high-availability Gemini models verified for this API key
+  const models = [
+    'gemini-3.5-flash',
+    'gemini-3.5-flash-lite',
+    'gemini-3.6-flash',
+    'gemini-3.8-flash'
+  ];
   let lastStatus = 502;
 
   for (const model of models) {
-    for (let attempt = 0; attempt < 2; attempt++) {
-      try {
-        const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-goog-api-key': apiKey,
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8500);
+
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': apiKey,
+          },
+          body: JSON.stringify({
+            contents,
+            systemInstruction: { parts: [{ text: systemInstruction }] },
+            generationConfig: {
+              temperature: 0.2,
+              maxOutputTokens: 2048,
+              topP: 0.8
             },
-            body: JSON.stringify({
-              contents,
-              systemInstruction: { parts: [{ text: systemInstruction }] },
-              generationConfig: { temperature: 0.2, maxOutputTokens: 2048, topP: 0.8 },
-            }),
-          }
-        );
+          }),
+          signal: controller.signal
+        }
+      );
+      clearTimeout(timeoutId);
 
-        if (response.ok) {
-          const data = await response.json();
-          const text = data.candidates?.[0]?.content?.parts
-            ?.map((p) => p.text || '')
-            .join('')
-            .trim();
-          if (text) return res.status(200).json({ success: true, text, model });
-          break; // Empty/safety-blocked answer: try the next model.
-        }
-
-        lastStatus = response.status;
-        // Bad API key / permission errors will not improve with another model.
-        if (response.status === 401 || response.status === 403) {
-          return res.status(503).json({
-            error: 'AI_AUTH_ERROR',
-            message: 'The AI assistant is temporarily unavailable. The owner needs to check the server key.',
-          });
-        }
-        // Retry once on an upstream 5xx before moving to the next model.
-        if (response.status >= 500 && attempt === 0) {
-          await new Promise((resolve) => setTimeout(resolve, 350));
-          continue;
-        }
-        break;
-      } catch (err) {
-        console.error('Gemini upstream request failed', err?.name || 'Unknown error');
-        if (attempt === 0) {
-          await new Promise((resolve) => setTimeout(resolve, 350));
-          continue;
-        }
-        break;
+      if (response.ok) {
+        const data = await response.json();
+        const text = data.candidates?.[0]?.content?.parts
+          ?.map((p) => p.text || '')
+          .join('')
+          .trim();
+        if (text) return res.status(200).json({ success: true, text, model });
+        continue; // Empty/safety-blocked answer: try the next model.
       }
+
+      lastStatus = response.status;
+      // Bad API key / permission errors will not improve with another model.
+      if (response.status === 401 || response.status === 403) {
+        return res.status(503).json({
+          error: 'AI_AUTH_ERROR',
+          message: 'The AI assistant is temporarily unavailable. The owner needs to check the server key.',
+        });
+      }
+      // If 404, 429, or 503 (model busy/unavailable), cascade to next model
+      continue;
+    } catch (err) {
+      clearTimeout(timeoutId);
+      console.error(`Gemini model ${model} failed:`, err?.name || err?.message || 'Unknown error');
+      continue;
     }
   }
 
