@@ -988,7 +988,7 @@
             </div>`;
           return;
         }
-        renderNotesReaderEntry(entry);
+        renderNotesReaderEntry(entry, driveLink);
       })
       .catch(() => {
         if (notesReaderState.currentId !== noteId) return;
@@ -1001,7 +1001,8 @@
       });
   }
 
-  function renderNotesReaderEntry(entry) {
+  function renderNotesReaderEntry(entry, driveLink) {
+    const isLimited = entry.quality === 'limited';
     const frag = document.createDocumentFragment();
 
     entry.pages.forEach(page => {
@@ -1031,7 +1032,35 @@
     });
 
     el.notesReaderBody.innerHTML = '';
-    el.notesReaderBody.appendChild(frag);
+
+    if (isLimited) {
+      const notice = document.createElement('div');
+      notice.className = 'notes-reader-limited';
+      notice.innerHTML = `
+        <div class="notes-reader-limited-icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></div>
+        <div class="notes-reader-limited-copy">
+          <h3>Handwritten / scanned note</h3>
+          <p>This note is mostly handwritten or scanned, so Tesseract OCR cannot read it reliably. The approximate text is available below, but use the original file for the accurate version.</p>
+          <div class="notes-reader-limited-actions">
+            <button type="button" class="notes-reader-show-ocr" id="notesReaderShowOcrBtn">Show approximate OCR text</button>
+            <a class="notes-reader-drive" href="${driveLink}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              <span>Open original</span>
+            </a>
+          </div>
+        </div>`;
+      el.notesReaderBody.appendChild(notice);
+
+      const pagesWrap = document.createElement('div');
+      pagesWrap.id = 'notesReaderPages';
+      pagesWrap.className = 'notes-reader-pages';
+      pagesWrap.hidden = true;
+      pagesWrap.appendChild(frag);
+      el.notesReaderBody.appendChild(pagesWrap);
+    } else {
+      el.notesReaderBody.appendChild(frag);
+    }
+
     el.notesReaderBody.scrollTop = 0;
     if (el.notesReaderSearch) el.notesReaderSearch.value = '';
     if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
@@ -1055,6 +1084,15 @@
     if (term.length < 2) {
       if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
       return 0;
+    }
+
+    // A search is an explicit request to read the note, so reveal the
+    // approximate OCR text for handwritten notes as soon as a search starts.
+    const pagesWrap = document.getElementById('notesReaderPages');
+    if (pagesWrap && pagesWrap.hidden) {
+      pagesWrap.hidden = false;
+      const showBtn = document.getElementById('notesReaderShowOcrBtn');
+      if (showBtn) showBtn.textContent = 'Hide approximate OCR text';
     }
 
     const regex = new RegExp(escapeRegExp(term), 'gi');
@@ -3128,6 +3166,18 @@
         const value = e.target.value;
         clearTimeout(notesReaderState.searchTimer);
         notesReaderState.searchTimer = setTimeout(() => runNotesSearch(value), 160);
+      });
+    }
+    if (el.notesReaderBody) {
+      el.notesReaderBody.addEventListener('click', (e) => {
+        const btn = e.target.closest('#notesReaderShowOcrBtn');
+        if (!btn) return;
+        const pages = document.getElementById('notesReaderPages');
+        if (!pages) return;
+        const willShow = pages.hidden;
+        pages.hidden = !willShow;
+        btn.textContent = willShow ? 'Hide approximate OCR text' : 'Show approximate OCR text';
+        if (willShow) pages.scrollIntoView({ block: 'start', behavior: 'smooth' });
       });
     }
     if (el.notesReaderTopBtn) {
