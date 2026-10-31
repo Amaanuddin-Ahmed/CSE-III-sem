@@ -380,9 +380,9 @@
           </div>
         </div>
 
-        <p class="notes-scope-note">
+        <p class="notes-scope-note" id="notesScopeNote">
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          Every unit is shown here. Notes are reference material, so they stay available even when a Mid-1 or Mid-2 exam filter is active.
+          <span id="notesScopeText">Showing <strong>Mid-2</strong> notes (Units 3–5). Need other units? Switch exam to Semester End.</span>
         </p>
 
         <div class="division-controls">
@@ -651,13 +651,13 @@
         </div>
 
         <div class="modal-actions-bar">
-          <a id="modalOpenDrivePaperBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
-            <i class="fa-brands fa-google-drive"></i>
-            <span>Open Original Paper in Google Drive</span>
-          </a>
+          <button type="button" class="btn-action-primary" id="modalViewSolutionBtn">
+            <i class="fa-solid fa-book-open"></i>
+            <span>View Solution</span>
+          </button>
           <button type="button" class="btn-action-secondary" id="modalSolveAiBtn">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Solve with AI</span>
+            <span>Ask with AI</span>
           </button>
         </div>
       </div>
@@ -665,6 +665,83 @@
   </div>
 
   <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- MODAL: Ask with AI Choice Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="askWithModal" style="display: none; z-index: 100003;" role="dialog" aria-modal="true" aria-labelledby="askWithModalTitle">
+    <div class="modal-dialog small-dialog ask-with-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title" id="askWithModalTitle"><i class="fa-solid fa-wand-magic-sparkles"></i> Ask with AI</h4>
+        <button type="button" class="modal-close-btn" id="closeAskWithModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 18px 20px;">
+        <p class="ask-with-intro">Choose your preferred AI to solve and explain this question:</p>
+        <div class="ask-with-options">
+          <button type="button" class="ask-with-card builtin-ai" id="askOptionBuiltin">
+            <div class="ask-with-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+              </svg>
+            </div>
+            <div class="ask-with-info">
+              <strong>In-Built Study Assistant</strong>
+              <span>Powered by Gemini 2.5 Flash &bull; Built into MGIT Hub</span>
+            </div>
+            <span class="ask-badge-rec">Fastest</span>
+          </button>
+          
+          <div class="ask-divider"><span>or open external AI (question auto-copied)</span></div>
+
+          <button type="button" class="ask-with-card chatgpt-ai" id="askOptionChatgpt">
+            <div class="ask-with-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="ask-with-info">
+              <strong>ChatGPT</strong>
+              <span>Opens ChatGPT with your question ready</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
+          </button>
+
+          <button type="button" class="ask-with-card gemini-ai" id="askOptionGemini">
+            <div class="ask-with-icon"><i class="fa-brands fa-google"></i></div>
+            <div class="ask-with-info">
+              <strong>Google Gemini</strong>
+              <span>Opens gemini.google.com with your prompt</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: View Solution Modal -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="solutionModal" style="display: none; z-index: 100003;" role="dialog" aria-modal="true" aria-labelledby="solutionModalTitle">
+    <div class="modal-dialog large-dialog solution-dialog">
+      <div class="modal-header">
+        <div class="solution-header-badges">
+          <span class="modal-badge" id="solSubjectBadge">DM</span>
+          <span class="modal-badge secondary" id="solMarksBadge">2 Marks</span>
+          <span class="modal-badge tertiary" id="solUnitBadge">Unit 1</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeSolutionModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 22px 26px;">
+        <h3 class="solution-question-heading" id="solQuestionTitle">Question Text</h3>
+        <div class="solution-model-answer" id="solAnswerBody">
+          <!-- Populated dynamically with verified structured model answer -->
+        </div>
+        <div class="solution-actions-row">
+          <button type="button" class="btn-action-primary" id="solAskAiDeeperBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ask AI for Deeper Explanation</span>
+          </button>
+          <button type="button" class="btn-secondary-flat" id="solCloseBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: Contribution Warning Modal -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="contribWarningModal" style="display: none;" role="dialog" aria-modal="true">
@@ -1170,24 +1247,28 @@
     </main>
   </div>
 
-  <!-- End-of-chapter Flashcard Prompt -->
+  <!-- End-of-chapter Celebration Modal -->
   <div class="modal-backdrop practice-exit-backdrop" id="flashcardContinueModal" style="display: none; z-index: 100005;" role="dialog" aria-modal="true" aria-labelledby="flashContinueTitle">
-    <div class="modal-dialog small-dialog">
-      <div class="modal-header">
-        <h4 class="modal-dialog-title" id="flashContinueTitle"><i class="fa-solid fa-layer-group"></i> Chapter complete</h4>
+    <div class="modal-dialog celebration-modal-dialog">
+      <div class="celebration-hero-wrap">
+        <div class="celebration-popper-badge"><i class="fa-solid fa-champagne-glasses"></i> 🎉</div>
+        <h3 class="celebration-title" id="flashContinueTitle">Congrats! You've made it well</h3>
+        <p class="celebration-sub" id="flashContinueText">Unit complete! Outstanding job.</p>
+        <p class="celebration-meta" id="flashContinueSubText">Keep the momentum going into the next chapter.</p>
       </div>
-      <div class="modal-body" style="text-align: center; padding: 20px 24px;">
-        <p id="flashContinueText" style="font-size: 14.5px; color: var(--text-main); margin-bottom: 8px; font-weight: 600;"></p>
-        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
-          Keep the momentum going, or leave and come back later.
-        </p>
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <button type="button" class="btn-secondary-flat" id="flashContinueExitBtn">Exit</button>
-          <button type="button" class="btn-action-primary" id="flashContinueNextBtn">
-            <span>Continue</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
+      <div class="celebration-actions-wrap">
+        <button type="button" class="btn-celebrate-primary" id="flashContinueNextBtn">
+          <span>Continue to Next Chapter</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button type="button" class="btn-celebrate-notes" id="flashContinueNotesBtn" style="display: none;">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Read Next Chapter Notes</span>
+        </button>
+        <button type="button" class="btn-celebrate-secondary" id="flashContinueExitBtn">
+          <i class="fa-solid fa-house"></i>
+          <span>Back to Syllabus Hub</span>
+        </button>
       </div>
     </div>
   </div>

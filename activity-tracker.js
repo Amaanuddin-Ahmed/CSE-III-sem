@@ -226,7 +226,7 @@ const ActivityTracker = (function () {
   }
 
   function recordCardViewed(examId, subjectId, cardId) {
-    if (arguments.length === 3 && cardId === undefined) {
+    if (arguments.length === 2 || (arguments.length === 3 && cardId === undefined)) {
       // Called as (subjectId, cardId) for convenience.
       cardId = subjectId;
       subjectId = examId;
@@ -383,7 +383,8 @@ const ActivityTracker = (function () {
     const exam = data.exams[examId] || data.exams.mid2 || {};
     let total = 0;
     Object.values(exam.subjects || {}).forEach(s => {
-      total += (s.gotItCardIds || []).length;
+      const cards = new Set([...(s.gotItCardIds || []), ...(s.viewedCardIds || [])]);
+      total += cards.size;
     });
     return total;
   }

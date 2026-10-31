@@ -270,9 +270,9 @@
       card.style.setProperty('--sub-accent', sub.accentColor);
       card.style.setProperty('--sub-bg', sub.bgColor);
 
-      // Notes are reference material, so every uploaded note is counted here
-      // regardless of the active exam. PYQs stay exam-scoped in the subject view.
-      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id).length;
+      // Notes count is exam-scoped (Mid-1: Units 1-3, Mid-2: Units 3-5, Sem: Units 1-5)
+      const examKey = state.activeExam || 'mid2';
+      const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true)).length;
 
       card.innerHTML = `
         <div class="subject-card-header-bar">
@@ -306,6 +306,103 @@
   // -------------------------------------------------------------
   // Subject Selection & Detail View
   // -------------------------------------------------------------
+  
+  // -------------------------------------------------------------
+  // Solution Modal & Ask With AI Functions
+  // -------------------------------------------------------------
+  let pendingAiQuestion = null;
+
+  function buildPromptForQuestion(q) {
+    const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+    const subName = sub ? (sub.shortName + ' - ' + sub.title) : q.subjectId;
+    const partDesc = 'Part ' + q.part + ' (' + marksLabel(q.marks) + ', ' + (q.part === 'A' ? 'short answer' : 'long answer') + ')';
+    return 'Explain and solve this MGIT examination question from ' + subName + '.\n' +
+      'Unit ' + q.chapter + ', ' + partDesc + ', paper: ' + q.paperName + '.\n' +
+      'Question: ' + q.question + '\n\n' +
+      'Structure the answer with precise definitions, formulas, step-by-step derivation or diagram explanation, and key points required for full marks according to MGIT MR-25 regulation.';
+  }
+
+  function openAskWithModal(q) {
+    pendingAiQuestion = q;
+    const modal = document.getElementById('askWithModal');
+    if (modal) {
+      modal.style.display = 'flex';
+      modal.style.zIndex = '100003';
+    }
+  }
+
+  function closeAskWithModal() {
+    const modal = document.getElementById('askWithModal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  function openSolutionModal(q) {
+    const modal = document.getElementById('solutionModal');
+    if (!modal) return;
+    const subBadge = document.getElementById('solSubjectBadge');
+    const marksBadge = document.getElementById('solMarksBadge');
+    const unitBadge = document.getElementById('solUnitBadge');
+    const titleEl = document.getElementById('solQuestionTitle');
+    const bodyEl = document.getElementById('solAnswerBody');
+
+    const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+    if (subBadge) subBadge.textContent = sub ? sub.shortName : q.subjectId;
+    if (marksBadge) marksBadge.textContent = marksLabel(q.marks);
+    if (unitBadge) unitBadge.textContent = 'Unit ' + q.chapter;
+    if (titleEl) titleEl.textContent = q.question;
+
+    if (bodyEl) {
+      const tipText = q.tip || '';
+      bodyEl.innerHTML = `
+        <div class="solution-section">
+          <h4 class="sol-sec-title"><i class="fa-solid fa-graduation-cap"></i> Model Academic Solution (MR-25 Blueprint)</h4>
+          <div class="sol-sec-content">
+            <p><strong>Core Concept &amp; Approach:</strong></p>
+            <p>${escapeHtml(tipText || 'This question evaluates your foundational understanding of Unit ' + q.chapter + '. State the standard definition, write the relevant mathematical formula or architecture block, and explain the key properties.')}</p>
+          </div>
+        </div>
+        <div class="solution-section">
+          <h4 class="sol-sec-title"><i class="fa-solid fa-list-check"></i> Key Steps for Full Marks:</h4>
+          <ul class="sol-steps-list">
+            <li><strong>Step 1:</strong> Define the primary terminology and state any mathematical notations or assumptions.</li>
+            <li><strong>Step 2:</strong> Draw or state the relevant schematic/equations clearly with labels.</li>
+            <li><strong>Step 3:</strong> Provide a concise worked example or step-by-step breakdown illustrating the principle.</li>
+            <li><strong>Step 4:</strong> Mention concluding summary and practical engineering application.</li>
+          </ul>
+        </div>
+      `;
+    }
+
+    const askDeeperBtn = document.getElementById('solAskAiDeeperBtn');
+    if (askDeeperBtn) {
+      askDeeperBtn.onclick = () => {
+        closeSolutionModal();
+        solveQuestionWithGemini(q);
+      };
+    }
+
+    modal.style.display = 'flex';
+    modal.style.zIndex = '100003';
+  }
+
+  function closeSolutionModal() {
+    const modal = document.getElementById('solutionModal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  // Global helper to jump to a specific subject's unit notes
+  window.showNotesForUnit = function(subjectId, unit) {
+    const sub = SUBJECTS_DATA[subjectId];
+    if (sub) {
+      selectSubject(sub);
+      switchSubjectTab('notes');
+      state.notesChapterFilter = String(unit);
+      if (el.notesChapterSelect) el.notesChapterSelect.value = String(unit);
+      renderNotesDivision();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   function selectSubject(sub, options) {
     const opts = options || {};
     // Leaving the subject list pauses the revision hint instead of letting its
@@ -352,7 +449,7 @@
     // Update counts on the Mode Choice Cards. Notes are reference material and
     // are always shown in full; only PYQs are scoped to the active exam.
     const examKey = state.activeExam || 'mid2';
-    const allNotes = NOTES_DATA.filter(n => n.subjectId === sub.id);
+    const allNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true));
     const scopedQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey)));
     if (el.modeNotesCountText) {
       el.modeNotesCountText.textContent = `${allNotes.length} Note${allNotes.length === 1 ? '' : 's'}`;
@@ -789,16 +886,61 @@
   // -------------------------------------------------------------
   // Division 1: Notes Rendering
   // -------------------------------------------------------------
+  function sortNotes(list) {
+    return list.slice().sort((a, b) => {
+      const uA = (window.getNoteUnits ? window.getNoteUnits(a) : [Number(a.chapter)])[0] || 99;
+      const uB = (window.getNoteUnits ? window.getNoteUnits(b) : [Number(b.chapter)])[0] || 99;
+      if (uA !== uB) return uA - uB;
+
+      const aTitle = (a.title || a.fileName || '').toLowerCase();
+      const bTitle = (b.title || b.fileName || '').toLowerCase();
+      const aPartA = aTitle.includes('part a') || aTitle.includes('part-a') || aTitle.includes('part 1');
+      const bPartA = bTitle.includes('part a') || bTitle.includes('part-a') || bTitle.includes('part 1');
+      const aPartB = aTitle.includes('part b') || aTitle.includes('part-b') || aTitle.includes('part 2');
+      const bPartB = bTitle.includes('part b') || bTitle.includes('part-b') || bTitle.includes('part 2');
+      if (aPartA && bPartB) return -1;
+      if (aPartB && bPartA) return 1;
+
+      return aTitle.localeCompare(bTitle, undefined, { numeric: true, sensitivity: 'base' });
+    });
+  }
+
   function renderNotesDivision() {
     if (!el.notesListContainer || !state.currentSubject) return;
     el.notesListContainer.innerHTML = '';
 
     const subId = state.currentSubject.id;
+    const examKey = state.activeExam || 'mid2';
 
-    // Notes are reference material: every uploaded unit is always listed, even
-    // when the active exam only covers some units. This prevents notes for
-    // Units 1-2 from disappearing while Mid-2 is selected.
-    let notes = NOTES_DATA.filter(n => n.subjectId === subId);
+    // Update dynamic scope notice text
+    const scopeTextEl = document.getElementById('notesScopeText');
+    if (scopeTextEl) {
+      if (examKey === 'mid1') {
+        scopeTextEl.innerHTML = 'Showing <strong>Mid-1</strong> notes (Units 1–3). Need other units? <button type="button" class="notes-switch-exam-btn" id="notesSwitchExamBtn">Switch to Semester End</button>';
+      } else if (examKey === 'mid2') {
+        scopeTextEl.innerHTML = 'Showing <strong>Mid-2</strong> notes (Units 3–5). Need other units? <button type="button" class="notes-switch-exam-btn" id="notesSwitchExamBtn">Switch to Semester End</button>';
+      } else {
+        scopeTextEl.innerHTML = 'Showing <strong>Semester End</strong> notes across all Units 1–5.';
+      }
+      const switchBtn = document.getElementById('notesSwitchExamBtn');
+      if (switchBtn) {
+        switchBtn.addEventListener('click', () => {
+          if (typeof applyExamSelection === 'function') applyExamSelection('sem', true);
+        });
+      }
+    }
+
+    // Filter notes by exam scope:
+    // Mid-1: Units 1, 2, 3 only (removes Units 4, 5)
+    // Mid-2: Units 3, 4, 5 only (removes Units 1, 2)
+    // Sem: All units 1-5
+    let notes = NOTES_DATA.filter(n => {
+      if (n.subjectId !== subId) return false;
+      return typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true;
+    });
+
+    // Deterministic sort: Unit ASC -> Part A before Part B -> title natural sort
+    notes = sortNotes(notes);
 
     if (el.notesChapterSelect) {
       const availableUnits = new Set();
@@ -1364,14 +1506,16 @@
 
   function marksLabel(value) {
     const n = Number(value);
-    if (!Number.isFinite(n) || n <= 0) return 'Marks not listed';
-    return n === 1 ? '1 Mark' : `${n} Marks`;
+    if (!Number.isFinite(n) || n <= 0) return '2 Marks';
+    if (n === 1) return '2 Marks';
+    return `${n} Marks`;
   }
 
   function marksSummary(value) {
     const n = Number(value);
-    if (!Number.isFinite(n) || n <= 0) return 'Marks not listed';
-    return n === 1 ? '1 Mark' : `${n} Marks`;
+    if (!Number.isFinite(n) || n <= 0) return '2 Marks';
+    if (n === 1) return '2 Marks';
+    return `${n} Marks`;
   }
 
   function getPartMarksSummary(partAQuestions) {
@@ -1655,15 +1799,19 @@
           </a>
         </div>
         <div class="footer-right-actions">
-          <button type="button" class="btn-card-action btn-card-tips" title="View model exam tips and detailed analysis">
-            <i class="fa-solid fa-lightbulb"></i>
-            <span>Exam Tips</span>
+          <button type="button" class="btn-card-action btn-card-tips" title="View question details & info">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Info</span>
           </button>
-          <button type="button" class="btn-card-action btn-card-ai" title="Generate an instant MGIT-style model answer with AI">
+          <button type="button" class="btn-card-action btn-card-sol" title="View step-by-step structured model solution">
+            <i class="fa-solid fa-book-open"></i>
+            <span>View Solution</span>
+          </button>
+          <button type="button" class="btn-card-action btn-card-ai" title="Ask with AI assistant">
             <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
               <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
             </svg>
-            <span>Solve with AI</span>
+            <span>Ask with AI</span>
           </button>
         </div>
       </div>
@@ -1678,11 +1826,19 @@
       });
     }
 
+    const solBtn = card.querySelector('.btn-card-sol');
+    if (solBtn) {
+      solBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openSolutionModal(q);
+      });
+    }
+
     const aiBtn = card.querySelector('.btn-card-ai');
     if (aiBtn) {
       aiBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        solveQuestionWithGemini(q);
+        openAskWithModal(q);
       });
     }
 
@@ -2675,7 +2831,8 @@
   }
 
   function updateAiMessageContent(element, rawMarkdown, isError, userQuery) {
-    const formattedHtml = formatGeminiResponse(rawMarkdown);
+    let cleanedMarkdown = (rawMarkdown || '').replace(/verify against (?:your|ur) notes[.,!]?/gi, '').replace(/verify with (?:your|ur) notes[.,!]?/gi, '');
+    const formattedHtml = formatGeminiResponse(cleanedMarkdown);
     let fallbackHtml = '';
     if (isError) {
       const escapedQuestionAttr = userQuery ? escapeHtml(userQuery).replace(/"/g, '&quot;') : '';
@@ -3203,6 +3360,60 @@
         if (e.target === el.questionModal) closeQuestionModal();
       });
     }
+    
+    // Ask With AI modal wiring
+    const closeAskWithBtn = document.getElementById('closeAskWithModalBtn');
+    if (closeAskWithBtn) closeAskWithBtn.addEventListener('click', closeAskWithModal);
+
+    const askBuiltin = document.getElementById('askOptionBuiltin');
+    if (askBuiltin) {
+      askBuiltin.addEventListener('click', () => {
+        const q = pendingAiQuestion;
+        closeAskWithModal();
+        if (q) solveQuestionWithGemini(q);
+      });
+    }
+
+    const askChatgpt = document.getElementById('askOptionChatgpt');
+    if (askChatgpt) {
+      askChatgpt.addEventListener('click', async () => {
+        const q = pendingAiQuestion;
+        closeAskWithModal();
+        if (!q) return;
+        const prompt = buildPromptForQuestion(q);
+        try { await navigator.clipboard.writeText(prompt); } catch (e) {}
+        showGlobalToast('Question copied to clipboard! Opening ChatGPT...', 3000);
+        window.open('https://chatgpt.com/?q=' + encodeURIComponent(prompt), '_blank');
+      });
+    }
+
+    const askGemini = document.getElementById('askOptionGemini');
+    if (askGemini) {
+      askGemini.addEventListener('click', async () => {
+        const q = pendingAiQuestion;
+        closeAskWithModal();
+        if (!q) return;
+        const prompt = buildPromptForQuestion(q);
+        try { await navigator.clipboard.writeText(prompt); } catch (e) {}
+        showGlobalToast('Question copied to clipboard! Opening Google Gemini...', 3000);
+        window.open('https://gemini.google.com/app', '_blank');
+      });
+    }
+
+    // Solution modal wiring
+    const closeSolBtn = document.getElementById('closeSolutionModalBtn');
+    if (closeSolBtn) closeSolBtn.addEventListener('click', closeSolutionModal);
+    const solCloseFlat = document.getElementById('solCloseBtn');
+    if (solCloseFlat) solCloseFlat.addEventListener('click', closeSolutionModal);
+
+    // Detail modal solution & ask buttons
+    const modalViewSolutionBtn = document.getElementById('modalViewSolutionBtn');
+    if (modalViewSolutionBtn) {
+      modalViewSolutionBtn.addEventListener('click', () => {
+        if (state.currentQuestion) openSolutionModal(state.currentQuestion);
+      });
+    }
+
     if (el.modalSolveAiBtn) {
       el.modalSolveAiBtn.addEventListener('click', () => {
         if (state.currentQuestion) {

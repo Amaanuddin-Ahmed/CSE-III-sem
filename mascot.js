@@ -169,11 +169,11 @@ const Mascot = (function () {
           <!-- Gaze looking up and right -->
           <circle cx="59" cy="42" r="2" fill="#ffffff" />
           <circle cx="87" cy="42" r="2" fill="#ffffff" />
-          <!-- Thought bubbles -->
+          <!-- Thought bubbles (clean cute floating thought bubbles without stray glyphs) -->
           <circle cx="106" cy="22" r="3" fill="#cbd5e1" />
           <circle cx="114" cy="14" r="5" fill="#cbd5e1" />
-          <ellipse cx="124" cy="8" rx="8" ry="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
-          <text x="124" y="11" font-size="7" font-weight="bold" fill="#64748b" text-anchor="middle">?</text>
+          <circle cx="123" cy="8" r="7" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+          <circle cx="122" cy="7" r="2.5" fill="#94a3b8" />
         `;
 
       case 'celebrating':

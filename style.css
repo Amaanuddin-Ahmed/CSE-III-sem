@@ -9428,30 +9428,50 @@ body.ai-running {
 /* All three footer actions placed one below the other across all pages */
 
 /* ==========================================================================
-   Full-screen AI assistant modal + horizontal scrolling for wide answers
-   (final cascade override)
+   Responsive AI assistant modal (100dvh sheet on mobile, spacious centered card on desktop)
    ========================================================================== */
 
-#geminiModal.modal-backdrop {
-  padding: 0 !important;
-  align-items: stretch !important;
-  justify-content: stretch !important;
-}
+@media (max-width: 767px) {
+  #geminiModal.modal-backdrop {
+    padding: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+  }
 
-#geminiModal .gemini-app-layout {
-  width: 100vw !important;
-  max-width: none !important;
-  height: 100dvh !important;
-  max-height: none !important;
-  border-radius: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-}
-
-@supports not (height: 100dvh) {
   #geminiModal .gemini-app-layout {
-    height: 100vh !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100dvh !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  @supports not (height: 100dvh) {
+    #geminiModal .gemini-app-layout {
+      height: 100vh !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #geminiModal.modal-backdrop {
+    padding: 24px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #geminiModal .gemini-app-layout {
+    width: min(880px, calc(100vw - 64px)) !important;
+    max-width: 880px !important;
+    height: min(780px, calc(100dvh - 64px)) !important;
+    max-height: calc(100dvh - 64px) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25) !important;
+    margin: auto !important;
   }
 }
 
@@ -10039,4 +10059,382 @@ body.notes-reader-open {
 .notes-scope-note i {
   margin-top: 2px;
   flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   MASTER UPGRADE ADDITIONS: PASTEL TOAST, PRACTICE MODAL, CELEBRATION & SOL
+   ========================================================================== */
+
+/* Toast Revision Hint Bar: Pastel Gradient with travelling multi-color outline */
+@property --toast-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.toast-msg {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  padding: 13px 18px !important;
+  border-radius: 16px !important;
+  font-size: 13.5px !important;
+  pointer-events: auto !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 50%, #eff6ff 100%) !important;
+  color: #1e293b !important;
+  border: 2px solid transparent !important;
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.18), 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+}
+
+.toast-msg::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 18px;
+  background: conic-gradient(from var(--toast-angle, 0deg), #3b82f6, #8b5cf6, #ec4899, #06b6d4, #3b82f6);
+  animation: rotateToastAngle 3.5s linear infinite;
+}
+
+@keyframes rotateToastAngle {
+  to {
+    --toast-angle: 360deg;
+  }
+}
+
+.toast-msg .toast-text {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+.toast-msg .toast-action {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 700 !important;
+  padding: 7px 14px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+}
+
+.toast-msg .toast-progress {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899) !important;
+  height: 3.5px !important;
+}
+
+/* Practice Modal Horizontal Scrollbar Fix & Subject Card Colors */
+.practice-modal-dialog {
+  overflow-x: hidden !important;
+}
+
+.practice-subjects-list {
+  overflow-x: hidden !important;
+  min-width: 0 !important;
+}
+
+.practice-subject-card {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  position: relative;
+  border-left-width: 4px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.practice-subject-card[data-sub="DM"] { border-left-color: #2563eb !important; background: #fafcff; }
+.practice-subject-card[data-sub="COA"] { border-left-color: #059669 !important; background: #f8fdfa; }
+.practice-subject-card[data-sub="OOPJ"] { border-left-color: #d97706 !important; background: #fffdf7; }
+.practice-subject-card[data-sub="DBMS"] { border-left-color: #7c3aed !important; background: #fbf9ff; }
+.practice-subject-card[data-sub="SE"] { border-left-color: #0284c7 !important; background: #f8fcff; }
+.practice-subject-card[data-sub="ES"] { border-left-color: #16a34a !important; background: #f8fdf9; }
+.practice-subject-card[data-sub="IE"] { border-left-color: #e11d48 !important; background: #fff9fa; }
+.practice-subject-card[data-sub="MIXED"] { border-left-color: #8b5cf6 !important; background: #faf8ff; }
+
+.practice-subject-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 18px -4px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Chapter Complete Celebratory Modal */
+.celebration-modal-dialog {
+  max-width: 480px;
+  width: 92%;
+  text-align: center;
+  padding: 28px 24px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #fdf4ff 50%, #eff6ff 100%);
+  box-shadow: 0 24px 60px rgba(124, 58, 237, 0.25);
+  border: 1.5px solid rgba(192, 132, 252, 0.4);
+}
+
+.celebration-popper-badge {
+  font-size: 52px;
+  margin-bottom: 12px;
+  animation: popCelebrate 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+  display: inline-block;
+}
+
+@keyframes popCelebrate {
+  0% { transform: scale(0.92) rotate(-6deg); }
+  100% { transform: scale(1.12) rotate(6deg); }
+}
+
+.celebration-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin-bottom: 8px;
+}
+
+.celebration-sub {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #4338ca;
+  margin-bottom: 6px;
+}
+
+.celebration-meta {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 22px;
+}
+
+.celebration-actions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-celebrate-primary {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14.5px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-celebrate-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.45);
+}
+
+.btn-celebrate-notes {
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1.5px solid #c084fc;
+  color: #6b21a8;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-celebrate-notes:hover {
+  background: #faf5ff;
+  border-color: #9333ea;
+}
+
+.btn-celebrate-secondary {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-celebrate-secondary:hover {
+  color: #1e293b;
+}
+
+/* Ask With AI Modal & Solution Modal Styling */
+.ask-with-dialog {
+  border-radius: 20px;
+}
+
+.ask-with-intro {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.ask-with-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ask-with-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.ask-with-card:hover {
+  border-color: #6366f1;
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.ask-with-card.builtin-ai {
+  border-color: #a855f7;
+  background: linear-gradient(135deg, #fbf8ff 0%, #f3e8ff 100%);
+}
+
+.ask-with-card.builtin-ai .ask-with-icon {
+  color: #7c3aed;
+}
+
+.ask-with-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ask-with-info strong {
+  display: block;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.ask-with-info span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.ask-badge-rec {
+  font-size: 11px;
+  font-weight: 700;
+  background: #7c3aed;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.ask-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 4px 0;
+}
+
+.ask-divider::before, .ask-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ask-divider span {
+  padding: 0 8px;
+}
+
+/* Solution Modal */
+.solution-dialog {
+  max-width: 720px;
+  border-radius: 20px;
+}
+
+.solution-question-heading {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  line-height: 1.45;
+}
+
+.solution-model-answer {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.sol-sec-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4338ca;
+  margin: 14px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sol-steps-list {
+  margin: 8px 0 16px 20px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.solution-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Question card action buttons */
+.btn-card-action.btn-card-sol {
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+}
+
+.btn-card-action.btn-card-sol:hover {
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+  color: #0369a1;
+}
+
+/* Mobile table scroll & sticky column in AI output */
+#geminiModal .ai-msg-body table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  border-collapse: collapse;
+  margin: 14px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+#geminiModal .ai-msg-body table th:first-child,
+#geminiModal .ai-msg-body table td:first-child {
+  position: sticky;
+  left: 0;
+  background: #ffffff;
+  z-index: 1;
 }

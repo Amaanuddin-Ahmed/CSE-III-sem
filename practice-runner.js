@@ -671,6 +671,10 @@
       }
 
       // Update Counter Pill
+      const sessionCounterPill = document.getElementById('sessionCounterPill');
+      if (sessionCounterPill) {
+        sessionCounterPill.innerHTML = `Question <span id="sessionCurrentCount">1</span> of <span id="sessionTotalCount">${this.activeQueue.length}</span>`;
+      }
       this.updateProgressUi();
       this.renderCurrentQuestion();
     },
@@ -709,17 +713,31 @@
     },
 
     updateProgressUi() {
-      // Progress bar advances ONLY on correct answers!
-      const percent = this.totalToMaster > 0 ? (this.masteredCount / this.totalToMaster) * 100 : 0;
       const fill = document.getElementById('sessionProgressFill');
       const track = document.getElementById('sessionProgressTrack');
       const currentCount = document.getElementById('sessionCurrentCount');
       const totalCount = document.getElementById('sessionTotalCount');
 
+      if (this.mode === 'flashcards') {
+        const total = Math.max(this.activeDeck ? this.activeDeck.length : 1, 1);
+        const current = Math.min(this.currentCardIndex + 1, total);
+        const percent = Math.min(100, Math.round((current / total) * 100));
+        if (fill) fill.style.width = `${percent}%`;
+        if (track) track.setAttribute('aria-valuenow', percent);
+        if (currentCount) currentCount.textContent = current;
+        if (totalCount) totalCount.textContent = total;
+        return;
+      }
+
+      // Quiz Mode: Progress bar advances with each question attempted/progressed
+      const total = Math.max(this.totalToMaster || (this.activeQueue && this.activeQueue.length) || 1, 1);
+      const answeredCount = Math.min(total, this.currentIndex + (this.isAnswered ? 1 : 0));
+      const percent = Math.min(100, Math.round((answeredCount / total) * 100));
+
       if (fill) fill.style.width = `${percent}%`;
-      if (track) track.setAttribute('aria-valuenow', Math.round(percent));
-      if (currentCount) currentCount.textContent = Math.min(this.currentIndex + 1, Math.max(this.activeQueue.length, 1));
-      if (totalCount) totalCount.textContent = Math.max(this.activeQueue.length, 1);
+      if (track) track.setAttribute('aria-valuenow', percent);
+      if (currentCount) currentCount.textContent = Math.min(this.currentIndex + 1, total);
+      if (totalCount) totalCount.textContent = total;
     },
 
     renderCurrentQuestion() {
@@ -896,9 +914,11 @@
         window.ActivityTracker.recordQuizResult(q.subjectId || this.subjectId, q.id, isCorrect);
       }
 
+      this.isAnswered = true;
+      this.updateProgressUi();
+
       if (isCorrect) {
         this.masteredCount++;
-        this.updateProgressUi();
 
         if (this.mascot) {
           this.mascot.setState('happy', "Woohoo! Nailed it! 🎉");
@@ -989,7 +1009,12 @@
       }
       this.currentIndex++;
       if (this.currentIndex >= this.activeQueue.length || this.masteredCount >= this.totalToMaster) {
-        this.showResults();
+        const nextUnit = this.getNextUnitInScope(this.unit);
+        if (nextUnit !== null && this.unit !== 'all') {
+          this.showChapterCelebration(nextUnit);
+        } else {
+          this.showResults();
+        }
       } else {
         this.renderCurrentQuestion();
       }
@@ -1008,7 +1033,12 @@
       }
       this.currentIndex++;
       if (this.currentIndex >= this.activeQueue.length) {
-        this.showResults();
+        const nextUnit = this.getNextUnitInScope(this.unit);
+        if (nextUnit !== null && this.unit !== 'all') {
+          this.showChapterCelebration(nextUnit);
+        } else {
+          this.showResults();
+        }
       } else {
         this.renderCurrentQuestion();
       }
@@ -1047,6 +1077,11 @@
       this.activeDeck = rawDeck;
       this.currentCardIndex = 0;
       this.isFlipped = false;
+
+      const sessionCounterPill = document.getElementById('sessionCounterPill');
+      if (sessionCounterPill) {
+        sessionCounterPill.innerHTML = `Card <span id="sessionCurrentCount">1</span> of <span id="sessionTotalCount">${this.activeDeck.length}</span>`;
+      }
 
       if (this.activeDeck.length === 0) {
         this.renderEmptyFlashcards();
@@ -1141,7 +1176,7 @@
       if (currentCount) currentCount.textContent = this.currentCardIndex + 1;
       if (totalCount) totalCount.textContent = this.activeDeck.length;
       const fcCounter = document.getElementById('fcCounter');
-      if (fcCounter) fcCounter.textContent = `${this.currentCardIndex + 1} / ${this.activeDeck.length}`;
+      if (fcCounter) fcCounter.textContent = `Card ${this.currentCardIndex + 1} of ${this.activeDeck.length}`;
       if (fill) {
         const pct = ((this.currentCardIndex + 1) / this.activeDeck.length) * 100;
         fill.style.width = `${pct}%`;
@@ -1202,47 +1237,81 @@
         return;
       }
 
-      const nextUnit = this.getNextFlashcardUnit();
-      if (nextUnit !== null) {
-        this.promptNextFlashcardUnit(nextUnit);
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const card = this.activeDeck[this.currentCardIndex];
+      const subId = (card && card.subjectId) || this.subjectId;
+      if (window.ActivityTracker && card && card.id) {
+        window.ActivityTracker.recordCardViewed(activeExam, subId, card.id);
+      }
+
+      const nextUnit = this.getNextUnitInScope(this.unit);
+      if (nextUnit !== null && this.unit !== 'all') {
+        this.showChapterCelebration(nextUnit);
       } else {
         this.showResults();
       }
     },
 
-    getNextFlashcardUnit() {
-      if (this.mode !== 'flashcards' || this.unit === 'all') return null;
+    getNextUnitInScope(currentUnit) {
+      const cur = Number(currentUnit);
+      if (!Number.isFinite(cur) || this.unit === 'all') return null;
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      let inScopeUnits = [1, 2, 3, 4, 5];
+      if (activeExam === 'mid1') inScopeUnits = [1, 2, 3];
+      else if (activeExam === 'mid2') inScopeUnits = [3, 4, 5];
+
       const dataBank = this.getActiveDataSource();
-      if (!dataBank || !dataBank.flashcards) return null;
-
-      const units = new Set();
-      const addUnits = (cards) => {
-        (cards || []).forEach(card => {
-          const unit = Number(card.unit);
-          if (Number.isFinite(unit) && unit > 0) units.add(unit);
+      const unitsWithData = new Set();
+      if (this.mode === 'flashcards' && dataBank && dataBank.flashcards) {
+        const pool = this.subjectId === 'MIXED' ? Object.values(dataBank.flashcards).flat() : (dataBank.flashcards[this.subjectId] || []);
+        pool.forEach(c => {
+          const u = Number(c.unit);
+          if (inScopeUnits.includes(u)) unitsWithData.add(u);
         });
-      };
-
-      if (this.subjectId === 'MIXED') {
-        Object.values(dataBank.flashcards).forEach(addUnits);
-      } else {
-        addUnits(dataBank.flashcards[this.subjectId]);
+      } else if (dataBank && dataBank.questions) {
+        const pool = this.subjectId === 'MIXED' ? Object.values(dataBank.questions).flat() : (dataBank.questions[this.subjectId] || []);
+        pool.forEach(q => {
+          const u = Number(q.unit);
+          if (inScopeUnits.includes(u)) unitsWithData.add(u);
+        });
       }
 
-      const currentUnit = Number(this.unit);
-      return Array.from(units).sort((a, b) => a - b).find(unit => unit > currentUnit) || null;
+      const next = Array.from(unitsWithData).sort((a, b) => a - b).find(u => u > cur);
+      return next !== undefined ? next : null;
     },
 
-    promptNextFlashcardUnit(nextUnit) {
+    getNextFlashcardUnit() {
+      return this.getNextUnitInScope(this.unit);
+    },
+
+    showChapterCelebration(nextUnit) {
       this._pendingNextUnit = nextUnit;
       const modal = document.getElementById('flashcardContinueModal');
+      const title = document.getElementById('flashContinueTitle');
       const text = document.getElementById('flashContinueText');
+      const subText = document.getElementById('flashContinueSubText');
       const nextBtn = document.getElementById('flashContinueNextBtn');
+      const notesBtn = document.getElementById('flashContinueNotesBtn');
+
+      if (title) {
+        title.innerHTML = `<span class="popper-anim">🎉</span> Congrats! You've made it well`;
+      }
       if (text) {
-        text.textContent = `You finished Unit ${this.unit}. Continue with Unit ${nextUnit}?`;
+        text.innerHTML = `<strong>Unit ${this.unit}</strong> is done! Let's move on to <strong>Unit ${nextUnit}</strong>.`;
+      }
+      if (subText) {
+        const streak = window.ActivityTracker ? window.ActivityTracker.getStreak() : 1;
+        subText.innerHTML = `Streak: ${streak} 🔥 &bull; Fantastic progress! Ready for the next chapter?`;
       }
       if (nextBtn) {
-        nextBtn.innerHTML = `<span>Continue to Unit ${nextUnit}</span> <i class="fa-solid fa-arrow-right"></i>`;
+        nextBtn.innerHTML = `<span>Next Chapter: Unit ${nextUnit}</span> <i class="fa-solid fa-arrow-right"></i>`;
+      }
+      if (notesBtn) {
+        notesBtn.style.display = 'inline-flex';
+        notesBtn.onclick = () => {
+          this.exitSession();
+          if (window.showNotesForUnit) window.showNotesForUnit(this.subjectId, nextUnit);
+        };
       }
       if (modal) {
         modal.style.display = 'flex';
@@ -1250,8 +1319,12 @@
         if (nextBtn) nextBtn.focus();
       }
       if (this.mascot) {
-        this.mascot.setState('happy', `Unit ${this.unit} complete! Ready for the next one?`);
+        this.mascot.setState('happy', `Congrats! Unit ${this.unit} complete! 🎉 Let's crush Unit ${nextUnit}!`);
       }
+    },
+
+    promptNextFlashcardUnit(nextUnit) {
+      this.showChapterCelebration(nextUnit);
     },
 
     continueToNextFlashcardUnit() {
@@ -1260,7 +1333,7 @@
       if (modal) modal.style.display = 'none';
       this._pendingNextUnit = null;
       if (nextUnit === null || nextUnit === undefined) return;
-      this.startSession(this.subjectId, 'flashcards', nextUnit);
+      this.startSession(this.subjectId, this.mode, nextUnit);
     },
 
     exitFromFlashcardPrompt() {
