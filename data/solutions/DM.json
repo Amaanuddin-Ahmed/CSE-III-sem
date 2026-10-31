@@ -1,0 +1,495 @@
+{
+  "subjectId": "DM",
+  "generatedAt": "2026-10-31T20:40:24.951Z",
+  "count": 61,
+  "solutions": {
+    "dm|define lattice with an example": {
+      "key": "dm|define lattice with an example",
+      "subjectId": "DM",
+      "question": "Define Lattice with an example.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|list any two lattice basic operations": {
+      "key": "dm|list any two lattice basic operations",
+      "subjectId": "DM",
+      "question": "List any two lattice basic operations.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|define lattice": {
+      "key": "dm|define lattice",
+      "subjectId": "DM",
+      "question": "Define Lattice.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|state any two properties of lattices": {
+      "key": "dm|state any two properties of lattices",
+      "subjectId": "DM",
+      "question": "State any two properties of Lattices.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|in a lattice l a v state and prove the laws idempotent commutative associative and absorption": {
+      "key": "dm|in a lattice l a v state and prove the laws idempotent commutative associative and absorption",
+      "subjectId": "DM",
+      "question": "In a lattice (L,<,A,V)state and prove the laws idempotent, commutative, associative and absorption.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|show with examples how lattice operations satisfy commutative and associative laws": {
+      "key": "dm|show with examples how lattice operations satisfy commutative and associative laws",
+      "subjectId": "DM",
+      "question": "Show with examples how lattice operations satisfy commutative and associative laws.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|let a 1 2 3 6 with partial order defined by divisibility i e a b a b prove that a is a lattice by showing that lub join and glb meet exist for all pairs": {
+      "key": "dm|let a 1 2 3 6 with partial order defined by divisibility i e a b a b prove that a is a lattice by showing that lub join and glb meet exist for all pairs",
+      "subjectId": "DM",
+      "question": "Let A= {1,2,3,6} with partial order defined by divisibility (i.e., a ≤b a b). Prove that (A, ) is a lattice by showing that LUB (join) and GLB (meet) exist for all pairs.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice."
+    },
+    "dm|what is tautology": {
+      "key": "dm|what is tautology",
+      "subjectId": "DM",
+      "question": "What is Tautology?",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|define tautology with a suitable example": {
+      "key": "dm|define tautology with a suitable example",
+      "subjectId": "DM",
+      "question": "Define Tautology with a suitable example.",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|find p p v q formula is tautology or contradiction": {
+      "key": "dm|find p p v q formula is tautology or contradiction",
+      "subjectId": "DM",
+      "question": "Find (P→ (P V Q)) formula is tautology or contradiction.",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|show that p v q v p v q v r v p a q v p a r is a tautology": {
+      "key": "dm|show that p v q v p v q v r v p a q v p a r is a tautology",
+      "subjectId": "DM",
+      "question": "Show that ((P V Q) v - (−P v (− Q V ¬R))) V (−P A ¬Q) V (¬P A- R) is a tautology.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|show that q p q p is a tautology": {
+      "key": "dm|show that q p q p is a tautology",
+      "subjectId": "DM",
+      "question": "Show that ((¬Q ∧ (P → Q)) → ¬P is a tautology.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|show that these conditional statements is a tautology by using truth tables i p q v b r pr ii": {
+      "key": "dm|show that these conditional statements is a tautology by using truth tables i p q v b r pr ii",
+      "subjectId": "DM",
+      "question": "Show that these conditional statements is a tautology by using truth tables: i [)p→q) v (b →→r)[ → (pr) ii.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|show that p b v b r p r is a tautology": {
+      "key": "dm|show that p b v b r p r is a tautology",
+      "subjectId": "DM",
+      "question": "Show that (p→b( v )b→r) → (p→r) is a Tautology.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|show that paq pvq is a tautology": {
+      "key": "dm|show that paq pvq is a tautology",
+      "subjectId": "DM",
+      "question": "Show that (PAQ) → (PVQ) is a tautology.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|using the truth table show that the proposition pvi paq is a tautology": {
+      "key": "dm|using the truth table show that the proposition pvi paq is a tautology",
+      "subjectId": "DM",
+      "question": "Using the truth table, show that the proposition PVI(PAQ) is a} tautology.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Definition of a Tautology\nA compound propositional formula $P(p_1, p_2, \\dots, p_n)$ is called a **tautology** (denoted $\\mathbf{T}$) if it evaluates to **True** for every possible assignment of truth values to its constituent variables.\n\n### Key Formula & Example:\n**Law of Excluded Middle:**\n$$p \\vee \\neg p \\equiv \\mathbf{T}$$\n\n| $p$ | $\\neg p$ | $p \\vee \\neg p$ |\n|:---:|:---------:|:-----------------:|\n| T | F | **T** |\n| F | T | **T** |\n\n**Modus Ponens:**\n$$((p \\rightarrow q) \\wedge p) \\rightarrow q \\equiv \\mathbf{T}$$\n\n$\\therefore$ A formula whose truth table final column consists purely of True (T) values is a tautology."
+    },
+    "dm|what are well formed formulas": {
+      "key": "dm|what are well formed formulas",
+      "subjectId": "DM",
+      "question": "What are well formed formulas?",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Well-Formed Formula (WFF)\nIn propositional logic, a **Well-Formed Formula (WFF)** is a syntactically valid string of symbols generated according to the formal inductive rules of logic:\n\n1. **Base Step:** Any atomic propositional variable ($P, Q, R$) or truth constant (T, F) is a WFF.\n2. **Recursive Step:** If $A$ and $B$ are WFFs, then $\\neg A$, $(A \\wedge B)$, $(A \\vee B)$, $(A \\rightarrow B)$, and $(A \\leftrightarrow B)$ are also WFFs.\n3. **Closure Step:** No other string is a WFF.\n\n**Example:**\n- Valid WFF: $(P \\rightarrow (Q \\wedge \\neg R))$\n- Invalid String: $P \\wedge \\vee Q \\neg$"
+    },
+    "dm|state and explain the rules that can generate a well formed formula": {
+      "key": "dm|state and explain the rules that can generate a well formed formula",
+      "subjectId": "DM",
+      "question": "State and explain the rules that can generate a well formed formula.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### Well-Formed Formula (WFF)\nIn propositional logic, a **Well-Formed Formula (WFF)** is a syntactically valid string of symbols generated according to the formal inductive rules of logic:\n\n1. **Base Step:** Any atomic propositional variable ($P, Q, R$) or truth constant (T, F) is a WFF.\n2. **Recursive Step:** If $A$ and $B$ are WFFs, then $\\neg A$, $(A \\wedge B)$, $(A \\vee B)$, $(A \\rightarrow B)$, and $(A \\leftrightarrow B)$ are also WFFs.\n3. **Closure Step:** No other string is a WFF.\n\n**Example:**\n- Valid WFF: $(P \\rightarrow (Q \\wedge \\neg R))$\n- Invalid String: $P \\wedge \\vee Q \\neg$"
+    },
+    "dm|what is an equivalence relation give an example": {
+      "key": "dm|what is an equivalence relation give an example",
+      "subjectId": "DM",
+      "question": "What is an equivalence relation? Give an example.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|define equivalence relation": {
+      "key": "dm|define equivalence relation",
+      "subjectId": "DM",
+      "question": "Define Equivalence relation.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|let x 1 2 3 4 and r 1 1 1 4 4 1 4 4 2 2 2 3 3 2 3 3 check whether the relation is an equivalence relation write the matrix of r and sketch its graph": {
+      "key": "dm|let x 1 2 3 4 and r 1 1 1 4 4 1 4 4 2 2 2 3 3 2 3 3 check whether the relation is an equivalence relation write the matrix of r and sketch its graph",
+      "subjectId": "DM",
+      "question": "Let X={1,2,3,4} and R={(1,1),1,4),(4,1),(4,4),(2,2),(2,3),(3,2),(3,3)} check whether the relation is an equivalence relation, Write the matrix of R and sketch its graph.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|find the boolean product of a and b where sob define and produce the cartesian product a by where a f0 1k b 1 2 and c 0 1 22 3 show that the divides relation ts the set of positive integers in not an equivalence relation 3 draw the hlasse diagram representing the partial ordering ca byfa divides db on fi 5 4 0 6 174": {
+      "key": "dm|find the boolean product of a and b where sob define and produce the cartesian product a by where a f0 1k b 1 2 and c 0 1 22 3 show that the divides relation ts the set of positive integers in not an equivalence relation 3 draw the hlasse diagram representing the partial ordering ca byfa divides db on fi 5 4 0 6 174",
+      "subjectId": "DM",
+      "question": "Find the Boolean product of A and B, where Sob) Define and produce the Cartesian product A BY © where A= f0, 1k, B= {1,2}, and C= (0, 1, 22 3.) Show that the \"divides\" relation ts the set of positive integers In not an equivalence relation, 3.) Draw the Hlasse diagram representing, the partial ordering, (Ca, byfa divides Db} on fi, %,5,4,0, 6, 174",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|show that the divides relation is the set of positive integers in not an equivalence relation": {
+      "key": "dm|show that the divides relation is the set of positive integers in not an equivalence relation",
+      "subjectId": "DM",
+      "question": "Show that the \"divides\" relation is the set of positive integers in not an equivalence relation.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|let r be a relation on the se t of all ordered pairs of natural numbers defined by x y r u v iff xv yu show that r is an equivalence relation": {
+      "key": "dm|let r be a relation on the se t of all ordered pairs of natural numbers defined by x y r u v iff xv yu show that r is an equivalence relation",
+      "subjectId": "DM",
+      "question": "Let R be a relation on the se t of all ordered pairs of natural numbers defined by (x,y) R (u,v) iff xv=yu. Show that R is an equivalence relation.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|show that the relation r is defined nxn by a b r c d if and only if a d b c is an equivalence relation": {
+      "key": "dm|show that the relation r is defined nxn by a b r c d if and only if a d b c is an equivalence relation",
+      "subjectId": "DM",
+      "question": "Show that the relation R is defined NxN by (a, b)R(c, d) if and only if a+d = b+c is an equivalence relation.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|suppose that r is the relation on the set of strings that consist of english letters such that a rb if and only if l a l b where 1 x is the length of the string x is r an equivalence relation": {
+      "key": "dm|suppose that r is the relation on the set of strings that consist of english letters such that a rb if and only if l a l b where 1 x is the length of the string x is r an equivalence relation",
+      "subjectId": "DM",
+      "question": "Suppose that R is the relation on the set of strings that consist of English letters such that a Rb if and only if l(a) = l(b), where 1(x) is the length of the string x. Is R an equivalence relation?",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|let x 1 2 3 4 5 6 7 and r x y x y is divisible by 3 in x show that r is an equivalence relation": {
+      "key": "dm|let x 1 2 3 4 5 6 7 and r x y x y is divisible by 3 in x show that r is an equivalence relation",
+      "subjectId": "DM",
+      "question": "Let X = {1, 2, 3, 4, 5, 6, 7} and R = {(x, y) x-y is divisible by 3 in X}. Show that R is an equivalence relation.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Equivalence Relation\nA binary relation $R$ on a non-empty set $A$ is an **equivalence relation** if and only if it satisfies three axioms:\n\n1. **Reflexive:** $\\forall x \\in A, \\quad (x, x) \\in R$.\n2. **Symmetric:** $\\forall x, y \\in A, \\quad (x, y) \\in R \\implies (y, x) \\in R$.\n3. **Transitive:** $\\forall x, y, z \\in A, \\quad [(x, y) \\in R \\wedge (y, z) \\in R] \\implies (x, z) \\in R$.\n\n### Standard Example:\nCongruence modulo $m$ on integers $\\mathbb{Z}$:\n$$a R b \\iff a \\equiv b \\pmod m \\iff m \\mid (a - b)$$\nThis relation is reflexive ($a-a = 0$), symmetric ($m|(a-b) \\implies m|(b-a)$), and transitive ($a-b=k_1m, b-c=k_2m \\implies a-c=(k_1+k_2)m$).\n$\\therefore$ Congruence modulo $m$ is an equivalence relation."
+    },
+    "dm|define a monoid": {
+      "key": "dm|define a monoid",
+      "subjectId": "DM",
+      "question": "Define a monoid.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### Definition of a Monoid\nAn algebraic system $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Algebraic Hierarchy:\n$$\\text{Groupoid (Closure)} \\rightarrow \\text{Semigroup (Associativity)} \\rightarrow \\mathbf{Monoid} \\text{ (Identity)} \\rightarrow \\text{Group (Inverse)}$$\n\n**Examples:**\n- $(\\mathbb{N}, +)$ with identity $0$.\n- $(\\mathbb{Z}, \\times)$ with identity $1$."
+    },
+    "dm|define monoid and state its properties": {
+      "key": "dm|define monoid and state its properties",
+      "subjectId": "DM",
+      "question": "Define monoid and state its properties.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### Definition of a Monoid\nAn algebraic system $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Algebraic Hierarchy:\n$$\\text{Groupoid (Closure)} \\rightarrow \\text{Semigroup (Associativity)} \\rightarrow \\mathbf{Monoid} \\text{ (Identity)} \\rightarrow \\text{Group (Inverse)}$$\n\n**Examples:**\n- $(\\mathbb{N}, +)$ with identity $0$.\n- $(\\mathbb{Z}, \\times)$ with identity $1$."
+    },
+    "dm|discuss about homomorphism of semigroups and monoids": {
+      "key": "dm|discuss about homomorphism of semigroups and monoids",
+      "subjectId": "DM",
+      "question": "Discuss about Homomorphism of Semigroups and Monoids.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Monoid\nAn algebraic system $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Algebraic Hierarchy:\n$$\\text{Groupoid (Closure)} \\rightarrow \\text{Semigroup (Associativity)} \\rightarrow \\mathbf{Monoid} \\text{ (Identity)} \\rightarrow \\text{Group (Inverse)}$$\n\n**Examples:**\n- $(\\mathbb{N}, +)$ with identity $0$.\n- $(\\mathbb{Z}, \\times)$ with identity $1$."
+    },
+    "dm|explain about the following i semi group ii sub monoid tii homomorphism": {
+      "key": "dm|explain about the following i semi group ii sub monoid tii homomorphism",
+      "subjectId": "DM",
+      "question": "Explain about the following. i) Semi group ii) Sub monoid tii) Homomorphism.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|the set a 2 4 5 6 8 9 on which the operation is defined by a b minimum of b find whether the given set forms a semi group or monoid": {
+      "key": "dm|the set a 2 4 5 6 8 9 on which the operation is defined by a b minimum of b find whether the given set forms a semi group or monoid",
+      "subjectId": "DM",
+      "question": "The set A={2,4,5,6,8,9} on which the operation * is defined by a*b=Minimum of b. Find whether the given set forms a semi group or monoid.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|let be a binary operation on the set r of real numbers defined by a b a b 2ab is r a monoid justify": {
+      "key": "dm|let be a binary operation on the set r of real numbers defined by a b a b 2ab is r a monoid justify",
+      "subjectId": "DM",
+      "question": "Let * be a binary operation on the set R of real numbers defined by a*b=a+b+2ab.Is (R,*) a monoid? Justify.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Monoid\nAn algebraic system $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Algebraic Hierarchy:\n$$\\text{Groupoid (Closure)} \\rightarrow \\text{Semigroup (Associativity)} \\rightarrow \\mathbf{Monoid} \\text{ (Identity)} \\rightarrow \\text{Group (Inverse)}$$\n\n**Examples:**\n- $(\\mathbb{N}, +)$ with identity $0$.\n- $(\\mathbb{Z}, \\times)$ with identity $1$."
+    },
+    "dm|discuss about subsemigroups and submonoids": {
+      "key": "dm|discuss about subsemigroups and submonoids",
+      "subjectId": "DM",
+      "question": "Discuss about Subsemigroups and Submonoids.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Monoid\nAn algebraic system $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Algebraic Hierarchy:\n$$\\text{Groupoid (Closure)} \\rightarrow \\text{Semigroup (Associativity)} \\rightarrow \\mathbf{Monoid} \\text{ (Identity)} \\rightarrow \\text{Group (Inverse)}$$\n\n**Examples:**\n- $(\\mathbb{N}, +)$ with identity $0$.\n- $(\\mathbb{Z}, \\times)$ with identity $1$."
+    },
+    "dm|define a group": {
+      "key": "dm|define a group",
+      "subjectId": "DM",
+      "question": "Define a group.",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|a committee of 5 people is to be formed from a group of 4 men and 7 women how many possible committee can be formed if at least 3 women are on the committee": {
+      "key": "dm|a committee of 5 people is to be formed from a group of 4 men and 7 women how many possible committee can be formed if at least 3 women are on the committee",
+      "subjectId": "DM",
+      "question": "A committee of 5 people is to be formed from a group of 4 men and 7 women. How many possible committee can be formed if at least 3 women are on the committee?",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|let s nxn let be the operation on s defined by a b ac bd show that s is a semigroup under": {
+      "key": "dm|let s nxn let be the operation on s defined by a b ac bd show that s is a semigroup under",
+      "subjectId": "DM",
+      "question": "Let S=NxN Let * be the operation on S defined by (a, b) * (ac, bd).show that S is a semigroup under *.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|prove that the set of even integers forms a group under addition": {
+      "key": "dm|prove that the set of even integers forms a group under addition",
+      "subjectId": "DM",
+      "question": "Prove that the set of even integers forms a group under addition.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|prove that the set 1 5 7 11 is a finite abelian group of order 4 under multiplication modulo 12 as composition": {
+      "key": "dm|prove that the set 1 5 7 11 is a finite abelian group of order 4 under multiplication modulo 12 as composition",
+      "subjectId": "DM",
+      "question": "Prove that the set{1,5,7,11} is a finite abelian group of order 4 under multiplication modulo 12 as composition.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|on the set q of all rational numbers the operation is defined by a b a b ab verify that under this operation q forms a group or not": {
+      "key": "dm|on the set q of all rational numbers the operation is defined by a b a b ab verify that under this operation q forms a group or not",
+      "subjectId": "DM",
+      "question": "On the set Q of all rational numbers, the operation * is defined by a*b=a+b-ab. Verify that under this operation, Q forms a group or not?",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|let g 1 1 i i be a multiplicative group find the order of every element": {
+      "key": "dm|let g 1 1 i i be a multiplicative group find the order of every element",
+      "subjectId": "DM",
+      "question": "Let G = {1, -1, i, -i}be a multiplicative group. Find the order of every element.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|let g 1 1 i i judge whether g forms an abelian group under usual multiplication": {
+      "key": "dm|let g 1 1 i i judge whether g forms an abelian group under usual multiplication",
+      "subjectId": "DM",
+      "question": "Let G={1,-1,i,-i}, Judge whether G forms an abelian group under usual multiplication.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|in any group g by proving the inverse of every element is unique show that a b b a for all a b g": {
+      "key": "dm|in any group g by proving the inverse of every element is unique show that a b b a for all a b g",
+      "subjectId": "DM",
+      "question": "In any group (G,*), by proving the inverse of every element is unique. Show that (a*b) =b* a, for all a,b G.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Definition of a Group\nAn algebraic system $(G, *)$ is called a **group** if it satisfies four fundamental axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $\\forall a, b \\in G: a * b = b * a$, it is an **Abelian group**.\n- **Example:** $(\\mathbb{Z}, +)$ is an infinite Abelian group with identity $e = 0$ and inverse $-a$."
+    },
+    "dm|define a planar graph": {
+      "key": "dm|define a planar graph",
+      "subjectId": "DM",
+      "question": "Define a planar graph?",
+      "chapter": 5,
+      "marks": 2,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|what is a planar graph give examples of planar and non planar graphs": {
+      "key": "dm|what is a planar graph give examples of planar and non planar graphs",
+      "subjectId": "DM",
+      "question": "What is a planar graph? Give examples of planar and non-planar graphs.",
+      "chapter": 5,
+      "marks": 2,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|define i planar graph ii spanning tree with example": {
+      "key": "dm|define i planar graph ii spanning tree with example",
+      "subjectId": "DM",
+      "question": "Define i) planar graph ii) Spanning Tree with Example.",
+      "chapter": 5,
+      "marks": 2,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|what is a planar graph find the number of regions in graph g given vertices are 20 and degree of each vertex is 3": {
+      "key": "dm|what is a planar graph find the number of regions in graph g given vertices are 20 and degree of each vertex is 3",
+      "subjectId": "DM",
+      "question": "What is a Planar Graph? Find the number of regions in Graph G, given vertices are 20 and degree of each vertex is 3.",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|what is the significance of planar graphs": {
+      "key": "dm|what is the significance of planar graphs",
+      "subjectId": "DM",
+      "question": "What is the significance of Planar graphs?",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|show that the complete bi partite graph k3 3 is not planar graph": {
+      "key": "dm|show that the complete bi partite graph k3 3 is not planar graph",
+      "subjectId": "DM",
+      "question": "Show that the complete bi-partite graph K3.3 is not planar graph.",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|let g be a 4 regular connected planar graph having 16 edges find the number of regions of g": {
+      "key": "dm|let g be a 4 regular connected planar graph having 16 edges find the number of regions of g",
+      "subjectId": "DM",
+      "question": "Let G be a 4-regular connected planar graph having 16 edges. Find the number of regions of G.",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|define planar graph": {
+      "key": "dm|define planar graph",
+      "subjectId": "DM",
+      "question": "Define Planar graph.",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|prove that if g is a connected planar graph then v e r 2 where r denote number of regions e denote number of edges and v the number of vertices": {
+      "key": "dm|prove that if g is a connected planar graph then v e r 2 where r denote number of regions e denote number of edges and v the number of vertices",
+      "subjectId": "DM",
+      "question": "Prove that if G is a connected planar graph, then V-E +R = 2 where [R denote number of regions, [E denote number of edges and V the number of vertices.",
+      "chapter": 5,
+      "marks": 5,
+      "answerMd": "### Planar Graph & Euler's Formula\n\n### 1. Definition:\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a plane such that no two edges intersect or cross each other except at their common vertices.\n\n### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n### 3. Necessary Planarity Inequality:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\n\n### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete 5-vertex graph) or $K_{3,3}$ (complete bipartite 3-3 graph)."
+    },
+    "dm|what is generating function": {
+      "key": "dm|what is generating function",
+      "subjectId": "DM",
+      "question": "What is generating function?",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|what is the generating function for the sequence i 1 1 1 1 1": {
+      "key": "dm|what is the generating function for the sequence i 1 1 1 1 1",
+      "subjectId": "DM",
+      "question": "What is the generating function for the sequence I, 1, 1, 1, 1, 1?",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|find the generating function of 1 2 3 4": {
+      "key": "dm|find the generating function of 1 2 3 4",
+      "subjectId": "DM",
+      "question": "Find the generating function of 1, 2, 3, 4.",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|find the generating function for the sequence of numbers 1 2 3 4": {
+      "key": "dm|find the generating function for the sequence of numbers 1 2 3 4",
+      "subjectId": "DM",
+      "question": "Find the generating function for the sequence of numbers 1,-2,3,-4,",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|solve an 7an 1 10an 2 0 for n 2 given ao 10 a 41 using generating functions method": {
+      "key": "dm|solve an 7an 1 10an 2 0 for n 2 given ao 10 a 41 using generating functions method",
+      "subjectId": "DM",
+      "question": "Solve an-7an-1+10an-2 = 0, for n>=2, given ao-10, a=41 using generating functions method.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|solve the recurrence relation an 4a n 1 4 an 2 n 1 2 for n 2 given ao 0 a 1 by generating functions method": {
+      "key": "dm|solve the recurrence relation an 4a n 1 4 an 2 n 1 2 for n 2 given ao 0 a 1 by generating functions method",
+      "subjectId": "DM",
+      "question": "Solve the recurrence relation an - 4a n-1+ 4 an-2 = (n²+1)2\" for n ≥2, given ao=0, a₁=1 by generating functions method.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|find the coefficient of x 2005 in the generating function 1 1 5x 2": {
+      "key": "dm|find the coefficient of x 2005 in the generating function 1 1 5x 2",
+      "subjectId": "DM",
+      "question": "Find the coefficient of x^2005 in the generating function 1/(1 + 5x)^2.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|find the generating functions for 1 x and 1 x where n is a positive integer using the extended binomial theorem": {
+      "key": "dm|find the generating functions for 1 x and 1 x where n is a positive integer using the extended binomial theorem",
+      "subjectId": "DM",
+      "question": "Find the generating functions for (1 + x) \" and (1 - x) \", where n is a positive integer, using the extended binomial theorem.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    },
+    "dm|solve the recurrence relation an a n 1 8 a n 2 12 a n 3 0 for n 3 given ao 1 a 5 a2 1 by generating functions": {
+      "key": "dm|solve the recurrence relation an a n 1 8 a n 2 12 a n 3 0 for n 3 given ao 1 a 5 a2 1 by generating functions",
+      "subjectId": "DM",
+      "question": "Solve the recurrence relation an+ a n-1 - 8 a n-2 - 12 a n-3 =0 for n ≥ 3, given ao=1, a=5, a2=1 by generating functions.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### Generating Functions in Combinatorics\n\n### 1. Definition:\nThe **ordinary generating function** for an infinite sequence of real numbers $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n### 2. Key Closed-Form Generating Functions:\n- Sequence $(1, 1, 1, 1, \\dots)$:\n  $$G(x) = 1 + x + x^2 + x^3 + \\dots = \\frac{1}{1 - x}$$\n- Sequence $(1, a, a^2, a^3, \\dots)$:\n  $$G(x) = \\frac{1}{1 - ax}$$\n- Binomial expansion:\n  $$(1 + x)^n = \\sum_{k=0}^n \\binom{n}{k} x^k$$\n\n### 3. Applications:\n- Solving linear homogeneous and non-homogeneous recurrence relations.\n- Counting integer partitions and arrangements with constraints."
+    }
+  }
+}

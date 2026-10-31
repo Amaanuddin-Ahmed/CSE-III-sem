@@ -10041,25 +10041,7 @@ body.notes-reader-open {
   }
 }
 
-.notes-scope-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin: 0 0 14px;
-  padding: 10px 12px;
-  border: 1px solid #bfdbfe;
-  border-radius: 10px;
-  background: #eff6ff;
-  color: #1e40af;
-  font-size: 12.5px;
-  font-weight: 600;
-  line-height: 1.45;
-}
 
-.notes-scope-note i {
-  margin-top: 2px;
-  flex-shrink: 0;
-}
 
 
 /* ==========================================================================
@@ -10437,4 +10419,105 @@ body.notes-reader-open {
   left: 0;
   background: #ffffff;
   z-index: 1;
+}
+
+
+/* ==========================================================================
+   F1: FULL-BLEED MOBILE AI RESPONSE & NATURAL-WIDTH HORIZONTAL TABLE SCROLL
+   ========================================================================== */
+
+/* Mobile AI Window: almost full-bleed with maximum response width */
+@media (max-width: 767px) {
+  #geminiModal .gemini-chat-output {
+    padding: 10px 8px 80px 8px !important;
+    gap: 12px !important;
+  }
+
+  #geminiModal .ai-msg {
+    padding: 14px 12px !important;
+    border-radius: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #geminiModal .ai-msg-body {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  #geminiModal .user-msg {
+    max-width: 90% !important;
+    padding: 10px 14px !important;
+    margin-right: 2px !important;
+  }
+}
+
+/* Natural-width horizontal scrolling container for tables, code, math */
+.gemini-table-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x pan-y !important;
+  overscroll-behavior-x: contain !important;
+  margin: 14px 0 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+.gemini-table-wrapper table,
+.gemini-table {
+  width: max-content !important;
+  min-width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+}
+
+.gemini-table th,
+.gemini-table td {
+  min-width: 120px !important;
+  padding: 10px 14px !important;
+  border: 1px solid #e2e8f0 !important;
+  vertical-align: top !important;
+}
+
+.gemini-table th:first-child,
+.gemini-table td:first-child {
+  position: sticky !important;
+  left: 0 !important;
+  background: #f8fafc !important;
+  z-index: 2 !important;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+.gemini-table th {
+  background: #f1f5f9 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+/* Soft Green Strip for Ask With AI Copied Status */
+.ask-copied-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ask-with-subcue {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 14px;
 }

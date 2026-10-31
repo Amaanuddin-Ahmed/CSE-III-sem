@@ -1,0 +1,63 @@
+{
+  "subjectId": "DBMS",
+  "generatedAt": "2026-10-31T20:40:24.966Z",
+  "count": 7,
+  "solutions": {
+    "dbms|what is the difference between the candidate key and super key": {
+      "key": "dbms|what is the difference between the candidate key and super key",
+      "subjectId": "DBMS",
+      "question": "What is the Difference between the Candidate Key and Super Key?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Super Key vs. Candidate Key\n\n| Parameter | Super Key (SK) | Candidate Key (CK) |\n|:---|:---|:---|\n| **Definition** | Any set of attributes that uniquely identifies a tuple in a relation. | A **minimal Super Key** with no redundant attributes. |\n| **Minimality** | Not minimal; may include extra non-identifying attributes. | Strictly minimal; dropping any attribute breaks uniqueness. |\n| **Relationship** | Every Candidate Key is a Super Key ($CK \\subset SK$). | Not every Super Key is a Candidate Key. |\n| **Primary Key** | Primary Key is selected from Candidate Keys, never arbitrary Super Keys. | One Candidate Key is designated as the relation's **Primary Key**. |\n\n**Example:** For $Student(\\underline{RollNo}, \\underline{Email}, Name)$:\n- Super Keys: $\\{RollNo\\}$, $\\{RollNo, Name\\}$, $\\{Email, Name\\}$\n- Candidate Keys: $\\{RollNo\\}$, $\\{Email\\}$"
+    },
+    "dbms|explain about transaction states": {
+      "key": "dbms|explain about transaction states",
+      "subjectId": "DBMS",
+      "question": "Explain about transaction states?",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Transaction State Transition Diagram\n\n```text\n            +-------------------+\n            |      ACTIVE       | <--- Initial State\n            +-------------------+\n               |             |\n     (Normal)  |             | (Failure)\n               v             v\n      +--------------+  +--------------+\n      | PARTIALLY    |  |    FAILED    |\n      | COMMITTED    |  +--------------+\n      +--------------+         |\n         |         |           v\n(Success)|  (Fail) |      +--------------+\n         v         +----> |   ABORTED    |\n   +-----------+          +--------------+\n   | COMMITTED |                 |\n   +-----------+                 v\n                          +--------------+\n                          |  TERMINATED  |\n                          +--------------+\n```\n\n1. **Active:** Execution begins.\n2. **Partially Committed:** Final statement executed; state changes in memory buffers.\n3. **Failed:** Operation aborted due to syntax, system, or concurrency errors.\n4. **Aborted:** Changes rolled back via undo logs; database restored to checkpoint.\n5. **Committed:** Changes permanently written to disk ($COMMIT$)."
+    },
+    "dbms|mention different transaction states": {
+      "key": "dbms|mention different transaction states",
+      "subjectId": "DBMS",
+      "question": "Mention different transaction states.",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Transaction State Transition Diagram\n\n```text\n            +-------------------+\n            |      ACTIVE       | <--- Initial State\n            +-------------------+\n               |             |\n     (Normal)  |             | (Failure)\n               v             v\n      +--------------+  +--------------+\n      | PARTIALLY    |  |    FAILED    |\n      | COMMITTED    |  +--------------+\n      +--------------+         |\n         |         |           v\n(Success)|  (Fail) |      +--------------+\n         v         +----> |   ABORTED    |\n   +-----------+          +--------------+\n   | COMMITTED |                 |\n   +-----------+                 v\n                          +--------------+\n                          |  TERMINATED  |\n                          +--------------+\n```\n\n1. **Active:** Execution begins.\n2. **Partially Committed:** Final statement executed; state changes in memory buffers.\n3. **Failed:** Operation aborted due to syntax, system, or concurrency errors.\n4. **Aborted:** Changes rolled back via undo logs; database restored to checkpoint.\n5. **Committed:** Changes permanently written to disk ($COMMIT$)."
+    },
+    "dbms|list various transaction states": {
+      "key": "dbms|list various transaction states",
+      "subjectId": "DBMS",
+      "question": "List various transaction states.",
+      "chapter": 4,
+      "marks": 1,
+      "answerMd": "### Transaction State Transition Diagram\n\n```text\n            +-------------------+\n            |      ACTIVE       | <--- Initial State\n            +-------------------+\n               |             |\n     (Normal)  |             | (Failure)\n               v             v\n      +--------------+  +--------------+\n      | PARTIALLY    |  |    FAILED    |\n      | COMMITTED    |  +--------------+\n      +--------------+         |\n         |         |           v\n(Success)|  (Fail) |      +--------------+\n         v         +----> |   ABORTED    |\n   +-----------+          +--------------+\n   | COMMITTED |                 |\n   +-----------+                 v\n                          +--------------+\n                          |  TERMINATED  |\n                          +--------------+\n```\n\n1. **Active:** Execution begins.\n2. **Partially Committed:** Final statement executed; state changes in memory buffers.\n3. **Failed:** Operation aborted due to syntax, system, or concurrency errors.\n4. **Aborted:** Changes rolled back via undo logs; database restored to checkpoint.\n5. **Committed:** Changes permanently written to disk ($COMMIT$)."
+    },
+    "dbms|write about data models": {
+      "key": "dbms|write about data models",
+      "subjectId": "DBMS",
+      "question": "Write about data models?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Data Models in DBMS\n\nA **data model** is an integrated collection of conceptual tools for describing data structures, relationships, semantics, and constraints.\n\n### Major Classes of Data Models:\n1. **Relational Model (Codd, 1970):** Organizes data into tables (relations) of rows (tuples) and columns (attributes) queried via SQL and Relational Algebra.\n2. **Entity-Relationship (ER) Model:** High-level conceptual design consisting of Entities, Attributes, and Relationships depicted via Chen or Crow's Foot diagrams.\n3. **Object-Oriented / Object-Relational Model:** Integrates OOP concepts (classes, encapsulation, inheritance) with persistent tables.\n4. **Semi-Structured Model (JSON / XML):** Used in NoSQL document stores (MongoDB) where schemas are dynamic."
+    },
+    "dbms|what is the data model": {
+      "key": "dbms|what is the data model",
+      "subjectId": "DBMS",
+      "question": "What is the Data Model?",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Data Models in DBMS\n\nA **data model** is an integrated collection of conceptual tools for describing data structures, relationships, semantics, and constraints.\n\n### Major Classes of Data Models:\n1. **Relational Model (Codd, 1970):** Organizes data into tables (relations) of rows (tuples) and columns (attributes) queried via SQL and Relational Algebra.\n2. **Entity-Relationship (ER) Model:** High-level conceptual design consisting of Entities, Attributes, and Relationships depicted via Chen or Crow's Foot diagrams.\n3. **Object-Oriented / Object-Relational Model:** Integrates OOP concepts (classes, encapsulation, inheritance) with persistent tables.\n4. **Semi-Structured Model (JSON / XML):** Used in NoSQL document stores (MongoDB) where schemas are dynamic."
+    },
+    "dbms|list different types of data models": {
+      "key": "dbms|list different types of data models",
+      "subjectId": "DBMS",
+      "question": "List different types of data models.",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Data Models in DBMS\n\nA **data model** is an integrated collection of conceptual tools for describing data structures, relationships, semantics, and constraints.\n\n### Major Classes of Data Models:\n1. **Relational Model (Codd, 1970):** Organizes data into tables (relations) of rows (tuples) and columns (attributes) queried via SQL and Relational Algebra.\n2. **Entity-Relationship (ER) Model:** High-level conceptual design consisting of Entities, Attributes, and Relationships depicted via Chen or Crow's Foot diagrams.\n3. **Object-Oriented / Object-Relational Model:** Integrates OOP concepts (classes, encapsulation, inheritance) with persistent tables.\n4. **Semi-Structured Model (JSON / XML):** Used in NoSQL document stores (MongoDB) where schemas are dynamic."
+    }
+  }
+}

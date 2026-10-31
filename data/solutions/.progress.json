@@ -1,0 +1,44 @@
+{
+  "updatedAt": "2026-10-31T20:40:24.949Z",
+  "subjects": {
+    "DM": {
+      "totalQuestions": 471,
+      "solvedCount": 61,
+      "status": "active"
+    },
+    "COA": {
+      "totalQuestions": 477,
+      "solvedCount": 16,
+      "status": "active"
+    },
+    "DBMS": {
+      "totalQuestions": 363,
+      "solvedCount": 7,
+      "status": "active"
+    },
+    "OOPJ": {
+      "totalQuestions": 574,
+      "solvedCount": 13,
+      "status": "active"
+    },
+    "SE": {
+      "totalQuestions": 379,
+      "solvedCount": 11,
+      "status": "active"
+    },
+    "ES": {
+      "totalQuestions": 24,
+      "solvedCount": 24,
+      "status": "complete"
+    },
+    "IE": {
+      "totalQuestions": 0,
+      "solvedCount": 2,
+      "status": "active"
+    }
+  },
+  "overall": {
+    "totalQuestions": 2288,
+    "totalSolved": 134
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "subjectId": "SE",
+  "generatedAt": "2026-10-31T20:40:24.970Z",
+  "count": 11,
+  "solutions": {
+    "se|what are software engineering layers": {
+      "key": "se|what are software engineering layers",
+      "subjectId": "SE",
+      "question": "What are software engineering layers?",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Layered Technology of Software Engineering\n\n```text\n+------------------------------------------+\n|                 TOOLS                    |  <- CASE Tools, IDEs, CI/CD\n+------------------------------------------+\n|                METHODS                   |  <- Technical \"How-to\" (Design, Code, Test)\n+------------------------------------------+\n|               PROCESS                    |  <- Framework of activities and milestones\n+------------------------------------------+\n|          A QUALITY FOCUS                 |  <- Bedrock foundation (CMMI, TQM)\n+------------------------------------------+\n```\n\n1. **A Quality Focus (Bedrock):** Organizational commitment to continuous defect prevention and process improvement.\n2. **Process Layer:** The foundational framework defining tasks, milestones, deliverables, and quality checkpoints.\n3. **Methods Layer:** Technical engineering methodologies (e.g., Object-Oriented Analysis, UML modeling, Black/White box testing).\n4. **Tools Layer:** Automated support tools (Git, Jira, Jenkins, Selenium, JUnit)."
+    },
+    "se|illustrate architectural styles and patterns a compare black box tesung with white box testing": {
+      "key": "se|illustrate architectural styles and patterns a compare black box tesung with white box testing",
+      "subjectId": "SE",
+      "question": "Illustrate architectural styles and patterns? '.a) Compare black box tesung with white box testing:?",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|describe white box testing": {
+      "key": "se|describe white box testing",
+      "subjectId": "SE",
+      "question": "Describe white box testing.",
+      "chapter": 4,
+      "marks": 1,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|justify the concept of white box testing": {
+      "key": "se|justify the concept of white box testing",
+      "subjectId": "SE",
+      "question": "Justify the concept of White box testing?",
+      "chapter": 4,
+      "marks": 1,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|explain in detail about white box testing techniques": {
+      "key": "se|explain in detail about white box testing techniques",
+      "subjectId": "SE",
+      "question": "Explain in detail about white box testing techniques.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|compare black box testing with white box testing": {
+      "key": "se|compare black box testing with white box testing",
+      "subjectId": "SE",
+      "question": "Compare black box testing with white box testing,",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|sb justify the difference between black box testing and white box tosting": {
+      "key": "se|sb justify the difference between black box testing and white box tosting",
+      "subjectId": "SE",
+      "question": "Sb) Justify the difference between Black box testing, and White box tosting,?",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|distinguish different methods involved in white box testing": {
+      "key": "se|distinguish different methods involved in white box testing",
+      "subjectId": "SE",
+      "question": "Distinguish different methods involved in white box testing.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|what is white box testing how white box testing is carried out demonstrate with example": {
+      "key": "se|what is white box testing how white box testing is carried out demonstrate with example",
+      "subjectId": "SE",
+      "question": "What is white box testing? How white box testing is carried out? Demonstrate with example.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|compare and contrast the block box testing and white box testing": {
+      "key": "se|compare and contrast the block box testing and white box testing",
+      "subjectId": "SE",
+      "question": "Compare and contrast the block box testing and white box testing.",
+      "chapter": 4,
+      "marks": 5,
+      "answerMd": "### White Box Testing (Glass Box Testing)\n**White Box Testing** is a testing technique where internal source code logic, branches, loops, and data structures are analyzed and verified.\n\n### Key Techniques:\n1. **Basis Path Testing:** Measures Cyclomatic Complexity $V(G) = E - V + 2P$ to identify independent execution paths.\n2. **Statement Coverage:** Guarantees every executable source line runs at least once.\n3. **Branch / Decision Coverage:** Verifies every boolean conditional branch evaluates to both True and False.\n4. **Loop Testing:** Exercises loops at their zero, minimum, typical, and maximum boundary conditions."
+    },
+    "se|distinguish between testing and debugging": {
+      "key": "se|distinguish between testing and debugging",
+      "subjectId": "SE",
+      "question": "Distinguish between testing and debugging.",
+      "chapter": 4,
+      "marks": 1,
+      "answerMd": "### Testing vs. Debugging\n\n| Parameter | Software Testing | Software Debugging |\n|:---|:---|:---|\n| **Goal** | Discovers bugs and validates software requirements. | Diagnoses root cause in source code and removes bugs. |\n| **Performed By** | QA engineers, automated test runners, users. | Software developers / programmers. |\n| **Nature** | Systematic, planned, reproducible verification. | Heuristic, inductive problem-solving and code tracing. |\n| **Tools** | JUnit, Postman, Selenium. | Debuggers (GDB, Eclipse/VS Code debuggers), profilers. |"
+    }
+  }
+}

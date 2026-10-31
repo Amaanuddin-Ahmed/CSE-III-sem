@@ -1,3 +1,5 @@
+// Version Stamp
+console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -312,22 +314,114 @@
   // -------------------------------------------------------------
   let pendingAiQuestion = null;
 
-  function buildPromptForQuestion(q) {
+  function copyTextSynchronous(text) {
+    let success = false;
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.style.top = '0';
+      ta.setAttribute('readonly', '');
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, 99999);
+      success = document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) {
+      success = false;
+    }
+    if (!success && navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        navigator.clipboard.writeText(text);
+        success = true;
+      } catch (e) {}
+    }
+    return success;
+  }
+
+  function buildAskWithAiPrompt(q) {
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
-    const subName = sub ? (sub.shortName + ' - ' + sub.title) : q.subjectId;
-    const partDesc = 'Part ' + q.part + ' (' + marksLabel(q.marks) + ', ' + (q.part === 'A' ? 'short answer' : 'long answer') + ')';
-    return 'Explain and solve this MGIT examination question from ' + subName + '.\n' +
-      'Unit ' + q.chapter + ', ' + partDesc + ', paper: ' + q.paperName + '.\n' +
-      'Question: ' + q.question + '\n\n' +
-      'Structure the answer with precise definitions, formulas, step-by-step derivation or diagram explanation, and key points required for full marks according to MGIT MR-25 regulation.';
+    const subName = sub ? sub.title : (q.subjectId || 'Computer Science');
+    const subCode = sub ? sub.shortName : (q.subjectId || 'CSE');
+    const unit = q.chapter || 1;
+    const part = q.part || 'A';
+    const marks = Number(q.marks) === 1 ? 2 : (Number(q.marks) || 2);
+    const sessions = (Array.isArray(q.years) && q.years.length) ? q.years.join(', ') : (q.paperName || 'MGIT Examinations');
+    
+    // Strip HTML from question text and collapse whitespace
+    let cleanQ = (q.question || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+    const rawPrompt = `I'm a B.Tech CSE Semester III student at MGIT (MR-25). Please solve this exam question.
+
+Subject: ${subName} (${subCode})
+Unit: ${unit}
+Part / Marks: Part ${part} · ${marks} Marks
+Appeared in: ${sessions}
+
+Question:
+${cleanQ}
+
+Give the complete answer exactly as it should be written in the exam: definition, full working/derivation with steps, a diagram or table if useful, and the final result. Use simple language and headings.`;
+
+    return rawPrompt.slice(0, 3500);
   }
 
   function openAskWithModal(q) {
     pendingAiQuestion = q;
+    const promptText = buildAskWithAiPrompt(q);
+
+    // 1. Copy immediately and synchronously on tap
+    const copyOk = copyTextSynchronous(promptText);
+    showToast('✓ Question copied to clipboard', { duration: 2400 });
+
+    // 2. Configure ChatGPT and Gemini <a> tags with real hrefs
+    const chatgptAnchor = document.getElementById('askOptionChatgpt');
+    if (chatgptAnchor) {
+      const qEncoded = encodeURIComponent(promptText);
+      chatgptAnchor.href = qEncoded.length <= 5000 ? `https://chatgpt.com/?q=${qEncoded}` : 'https://chatgpt.com/';
+      chatgptAnchor.onclick = () => {
+        copyTextSynchronous(promptText);
+        const sub = document.getElementById('chatgptSub');
+        if (sub) sub.textContent = 'Opening ChatGPT… paste if needed';
+      };
+    }
+
+    const geminiAnchor = document.getElementById('askOptionGemini');
+    if (geminiAnchor) {
+      geminiAnchor.href = 'https://gemini.google.com/app';
+      geminiAnchor.onclick = () => {
+        copyTextSynchronous(promptText);
+        const sub = document.getElementById('geminiSub');
+        if (sub) sub.textContent = 'Opening Gemini… paste prompt';
+      };
+    }
+
+    // 3. Configure In-Built AI Assistant
+    const builtinBtn = document.getElementById('askOptionBuiltin');
+    if (builtinBtn) {
+      builtinBtn.onclick = () => {
+        closeAskWithModal();
+        openGeminiModal();
+        if (el.geminiInput) {
+          el.geminiInput.value = promptText;
+          el.geminiInput.dispatchEvent(new Event('input'));
+          el.geminiInput.focus();
+        }
+      };
+    }
+
+    // 4. Show strip
+    const strip = document.getElementById('askCopiedStrip');
+    if (strip) strip.style.display = copyOk ? 'flex' : 'none';
+
+    // 5. Open modal
     const modal = document.getElementById('askWithModal');
     if (modal) {
       modal.style.display = 'flex';
       modal.style.zIndex = '100003';
+      const closeBtn = document.getElementById('closeAskWithModalBtn');
+      if (closeBtn) closeBtn.focus();
     }
   }
 
@@ -336,9 +430,47 @@
     if (modal) modal.style.display = 'none';
   }
 
-  function openSolutionModal(q) {
+  const solutionsCache = {};
+
+  async function getSolutionForQuestion(q) {
+    if (!q || !q.subjectId) return null;
+    const subId = q.subjectId.toUpperCase();
+
+    if (!solutionsCache[subId]) {
+      try {
+        const res = await fetch(`data/solutions/${subId}.json`);
+        if (res.ok) {
+          const json = await res.json();
+          solutionsCache[subId] = json.solutions || json || {};
+        } else {
+          solutionsCache[subId] = {};
+        }
+      } catch (e) {
+        solutionsCache[subId] = {};
+      }
+    }
+
+    const subSolutions = solutionsCache[subId];
+    if (!subSolutions) return null;
+
+    const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (subSolutions[normKey]) return subSolutions[normKey];
+
+    const qClean = (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').trim();
+    for (const [key, sol] of Object.entries(subSolutions)) {
+      const keyQuestionClean = (sol.question || key.split('|')[1] || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').trim();
+      if (keyQuestionClean && (qClean.includes(keyQuestionClean) || keyQuestionClean.includes(qClean))) {
+        return sol;
+      }
+    }
+
+    return null;
+  }
+
+  async function openSolutionModal(q) {
     const modal = document.getElementById('solutionModal');
-    if (!modal) return;
+    if (!modal || !q) return;
+
     const subBadge = document.getElementById('solSubjectBadge');
     const marksBadge = document.getElementById('solMarksBadge');
     const unitBadge = document.getElementById('solUnitBadge');
@@ -346,29 +478,19 @@
     const bodyEl = document.getElementById('solAnswerBody');
 
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
-    if (subBadge) subBadge.textContent = sub ? sub.shortName : q.subjectId;
+    if (subBadge) subBadge.textContent = sub ? sub.shortName : (q.subjectId || 'CSE');
     if (marksBadge) marksBadge.textContent = marksLabel(q.marks);
-    if (unitBadge) unitBadge.textContent = 'Unit ' + q.chapter;
-    if (titleEl) titleEl.textContent = q.question;
+    if (unitBadge) unitBadge.textContent = 'Unit ' + (q.chapter || 1);
+    if (titleEl) titleEl.innerHTML = formatQuestionMath(q.question);
+
+    modal.style.display = 'flex';
+    modal.style.zIndex = '100003';
 
     if (bodyEl) {
-      const tipText = q.tip || '';
       bodyEl.innerHTML = `
-        <div class="solution-section">
-          <h4 class="sol-sec-title"><i class="fa-solid fa-graduation-cap"></i> Model Academic Solution (MR-25 Blueprint)</h4>
-          <div class="sol-sec-content">
-            <p><strong>Core Concept &amp; Approach:</strong></p>
-            <p>${escapeHtml(tipText || 'This question evaluates your foundational understanding of Unit ' + q.chapter + '. State the standard definition, write the relevant mathematical formula or architecture block, and explain the key properties.')}</p>
-          </div>
-        </div>
-        <div class="solution-section">
-          <h4 class="sol-sec-title"><i class="fa-solid fa-list-check"></i> Key Steps for Full Marks:</h4>
-          <ul class="sol-steps-list">
-            <li><strong>Step 1:</strong> Define the primary terminology and state any mathematical notations or assumptions.</li>
-            <li><strong>Step 2:</strong> Draw or state the relevant schematic/equations clearly with labels.</li>
-            <li><strong>Step 3:</strong> Provide a concise worked example or step-by-step breakdown illustrating the principle.</li>
-            <li><strong>Step 4:</strong> Mention concluding summary and practical engineering application.</li>
-          </ul>
+        <div class="sol-loading-container" style="padding: 26px 0; text-align: center; color: #64748b;">
+          <div class="spinner-border" style="display: inline-block; width: 28px; height: 28px; border: 3px solid #e2e8f0; border-top-color: #4f46e5; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px;"></div>
+          <p style="margin: 0; font-size: 14px; font-weight: 500;">Loading verified university examination solution…</p>
         </div>
       `;
     }
@@ -377,12 +499,81 @@
     if (askDeeperBtn) {
       askDeeperBtn.onclick = () => {
         closeSolutionModal();
-        solveQuestionWithGemini(q);
+        openAskWithModal(q);
       };
     }
 
-    modal.style.display = 'flex';
-    modal.style.zIndex = '100003';
+    // 1. Check local pre-compiled database
+    const preSolution = await getSolutionForQuestion(q);
+    if (preSolution && preSolution.answerMd) {
+      if (bodyEl) {
+        bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
+      }
+      return;
+    }
+
+    // 2. Not in pre-compiled list: show fast AI generation status
+    if (bodyEl) {
+      bodyEl.innerHTML = `
+        <div class="sol-generating-box" style="padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; text-align: center;">
+          <div style="font-size: 26px; color: #6366f1; margin-bottom: 10px;">
+            <i class="fa-solid fa-wand-magic-sparkles fa-bounce"></i>
+          </div>
+          <h4 style="margin: 0 0 6px; font-size: 15px; color: #1e293b; font-weight: 600;">Formulating Complete University Model Answer</h4>
+          <p style="margin: 0 0 16px; font-size: 13.5px; color: #64748b;">Solving with MR-25 academic requirements (definitions, derivations, diagrams &amp; examples)…</p>
+          <button type="button" class="btn-action-primary" id="solDirectAiBtn" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 auto;">
+            <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+            </svg>
+            <span>Solve with AI Assistant (Question Auto-Copied)</span>
+          </button>
+        </div>
+      `;
+
+      const directAiBtn = document.getElementById('solDirectAiBtn');
+      if (directAiBtn) {
+        directAiBtn.onclick = () => {
+          closeSolutionModal();
+          openAskWithModal(q);
+        };
+      }
+    }
+
+    // 3. Trigger serverless /api/gemini solver
+    try {
+      const prompt = `Solve this university examination question for MGIT CSE Semester III (${sub ? sub.title : q.subjectId}, Unit ${q.chapter || 1}, ${marksLabel(q.marks)}):
+"${q.question}"
+
+Write the complete, verified, academic solution exactly as required in the examination for full marks:
+- State formal definitions, mathematical principles, and notation.
+- Provide step-by-step derivations, calculations, or algorithmic steps.
+- Include a clear diagram (ASCII or Mermaid), comparison table, or code snippet if applicable.
+- Conclude with the final result (∴ ...).
+Do not provide meta-advice, revision hints, or disclaimers—write the actual worked examination answer.`;
+
+      const res = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: prompt,
+          history: []
+        })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        const text = data.text || (data.candidates && data.candidates[0]?.content?.parts[0]?.text);
+        if (text && bodyEl) {
+          bodyEl.innerHTML = formatGeminiResponse(text);
+          const normKey = (q.subjectId || '').toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
+          if (!solutionsCache[q.subjectId]) solutionsCache[q.subjectId] = {};
+          solutionsCache[q.subjectId][normKey] = { answerMd: text, question: q.question };
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('[Solution Solver] On-demand generation fallback:', err);
+    }
   }
 
   function closeSolutionModal() {
@@ -446,7 +637,7 @@
     // Update Header in Detail Section (Zero Course Codes!)
     el.detailSubjectTitle.textContent = `${sub.shortName} — ${sub.title}`;
 
-    // Update counts on the Mode Choice Cards. Notes are reference material and
+    // Update counts on the Mode Choice Cards. Notes are scoped per target exam and
     // are always shown in full; only PYQs are scoped to the active exam.
     const examKey = state.activeExam || 'mid2';
     const allNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true));
@@ -912,23 +1103,7 @@
     const subId = state.currentSubject.id;
     const examKey = state.activeExam || 'mid2';
 
-    // Update dynamic scope notice text
-    const scopeTextEl = document.getElementById('notesScopeText');
-    if (scopeTextEl) {
-      if (examKey === 'mid1') {
-        scopeTextEl.innerHTML = 'Showing <strong>Mid-1</strong> notes (Units 1–3). Need other units? <button type="button" class="notes-switch-exam-btn" id="notesSwitchExamBtn">Switch to Semester End</button>';
-      } else if (examKey === 'mid2') {
-        scopeTextEl.innerHTML = 'Showing <strong>Mid-2</strong> notes (Units 3–5). Need other units? <button type="button" class="notes-switch-exam-btn" id="notesSwitchExamBtn">Switch to Semester End</button>';
-      } else {
-        scopeTextEl.innerHTML = 'Showing <strong>Semester End</strong> notes across all Units 1–5.';
-      }
-      const switchBtn = document.getElementById('notesSwitchExamBtn');
-      if (switchBtn) {
-        switchBtn.addEventListener('click', () => {
-          if (typeof applyExamSelection === 'function') applyExamSelection('sem', true);
-        });
-      }
-    }
+
 
     // Filter notes by exam scope:
     // Mid-1: Units 1, 2, 3 only (removes Units 4, 5)
@@ -1643,7 +1818,7 @@
           ? `No in-scope questions in Unit ${ch} for ${examConfig.name}`
           : `No questions matching current filters in Unit ${ch}`;
         const emptyCopy = chTotalAll === 0
-          ? 'The bank has no question confidently mapped to this unit for the selected exam. Switch to Semester End to see every tagged question, or report a missing mapping.'
+          ? 'The bank has no question confidently mapped to this unit for the selected exam. View Semester End for full semester syllabus coverage, or report a missing mapping.'
           : `Total ${chTotalAll} authentic questions available in this chapter. Try selecting "All Years" or "All Questions".`;
         listEl.innerHTML = `
           <div class="empty-state-box" style="padding: 18px; margin: 6px 0;">
@@ -1931,60 +2106,80 @@
     return parts.length ? parts.join(' · ') : raw;
   }
 
-  function openQuestionModal(q) {
-    state.currentQuestion = q;
-    const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
+  let lastActiveInfoTrigger = null;
 
-    el.modalSubjectBadge.textContent = sub ? sub.shortName : q.subjectId;
-    el.modalPartBadge.textContent = `Part ${q.part} • ${marksLabel(q.marks)}`;
-    el.modalUnitBadge.textContent = `Unit ${q.chapter}`;
+  function openQuestionModal(q, triggerEl) {
+    if (!q) return;
+    try {
+      state.currentQuestion = q;
+      lastActiveInfoTrigger = triggerEl || document.activeElement;
+      const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
 
-    if (el.modalSemesterBadge) {
-      el.modalSemesterBadge.style.display = 'none';
-      el.modalSemesterBadge.textContent = '';
+      if (el.modalSubjectBadge) el.modalSubjectBadge.textContent = sub ? sub.shortName : (q.subjectId || 'CSE');
+      if (el.modalPartBadge) el.modalPartBadge.textContent = `Part ${q.part || 'A'} • ${marksLabel(q.marks)}`;
+      if (el.modalUnitBadge) el.modalUnitBadge.textContent = `Unit ${q.chapter || 1}`;
+
+      if (el.modalSemesterBadge) {
+        el.modalSemesterBadge.style.display = 'none';
+        el.modalSemesterBadge.textContent = '';
+      }
+
+      if (el.modalQuestionTitle) el.modalQuestionTitle.innerHTML = formatQuestionMath(q.question || 'No question text available');
+      if (el.modalYearsAppeared) el.modalYearsAppeared.textContent = (Array.isArray(q.years) && q.years.length) ? q.years.join(', ') : 'Not specified';
+      if (el.modalRecurrence) {
+        el.modalRecurrence.textContent = q.frequency > 1
+          ? `Repeated across ${q.frequency} exam papers (${(q.years || []).join(', ')})`
+          : 'Appeared in 1 exam paper';
+      }
+      const pageLabel = Number.isFinite(Number(q.pageNumber)) && Number(q.pageNumber) > 0 ? ` · Page ${q.pageNumber}` : '';
+      if (el.modalPaperName) el.modalPaperName.textContent = `${formatPaperName(q.paperName || 'University Examination')}${pageLabel}`;
+      if (el.modalOutcome) el.modalOutcome.textContent = q.courseOutcome || q.outcome || 'Not mapped in this dataset';
+
+      if (el.modalTipText) {
+        el.modalTipText.innerHTML = formatQuestionMath(
+          q.tip || `This is a ${marksLabel(q.marks)} ${q.part === 'A' ? 'short-answer' : 'long-answer'} question from Unit ${q.chapter || 1}. Write the formal definition, the required mathematical equations or architecture diagram, and a concise concluding summary.`
+        );
+      }
+
+      const paperLink = q.driveFileId
+        ? `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`
+        : (sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL);
+
+      if (el.modalOpenDrivePaperBtn) {
+        el.modalOpenDrivePaperBtn.href = paperLink;
+        const span = el.modalOpenDrivePaperBtn.querySelector('span');
+        if (span) span.textContent = q.driveFileId ? `Open “${q.paperName}” PDF in Google Drive` : 'Open the subject Drive folder';
+        el.modalOpenDrivePaperBtn.title = q.driveFileId ? `Direct link to the original ${q.paperName} file in Google Drive` : 'Open the Google Drive folder for this subject';
+      }
+
+      if (el.modalPaperInlineLink) {
+        el.modalPaperInlineLink.href = paperLink;
+        el.modalPaperInlineLink.innerHTML = q.driveFileId
+          ? 'Open paper in Drive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>'
+          : 'Open subject folder <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>';
+      }
+
+      if (el.questionModal) {
+        el.questionModal.style.display = 'flex';
+        el.questionModal.style.zIndex = '100003';
+        const closeBtn = document.getElementById('closeQuestionModalBtn');
+        if (closeBtn) closeBtn.focus();
+      }
+    } catch (err) {
+      console.error('[Info Modal Error] Failed to open modal for question id:', q && q.id, err);
+      // Fallback display
+      if (el.questionModal) {
+        el.questionModal.style.display = 'flex';
+        el.questionModal.style.zIndex = '100003';
+      }
     }
-
-    el.modalQuestionTitle.innerHTML = formatQuestionMath(q.question);
-    el.modalYearsAppeared.textContent = q.years ? q.years.join(', ') : 'Not specified';
-    el.modalRecurrence.textContent = q.frequency > 1
-      ? `Repeated across ${q.frequency} exam papers (${q.years.join(', ')})`
-      : 'Appeared in 1 exam paper';
-    const pageLabel = Number.isFinite(Number(q.pageNumber)) && Number(q.pageNumber) > 0
-      ? ` · Page ${q.pageNumber}`
-      : '';
-    el.modalPaperName.textContent = `${formatPaperName(q.paperName)}${pageLabel}`;
-    el.modalOutcome.textContent = q.courseOutcome || q.outcome || 'Not mapped in this dataset';
-
-    // What to write: use the verified tip when one exists; otherwise explain
-    // how the marks are usually earned without inventing content.
-    el.modalTipText.innerHTML = formatQuestionMath(
-      q.tip || `This is a ${marksLabel(q.marks)} ${q.part === 'A' ? 'short-answer' : 'long-answer'} question from Unit ${q.chapter}. Write the definition, the required steps or diagram, and a short concluding line.`
-    );
-
-    // Direct PDF Drive paper button (never a general folder when a file ID exists)
-    const paperLink = q.driveFileId
-      ? `https://drive.google.com/file/d/${q.driveFileId}/view?usp=sharing`
-      : (sub && sub.driveUrl ? sub.driveUrl : DRIVE_ROOT_URL);
-    el.modalOpenDrivePaperBtn.href = paperLink;
-    el.modalOpenDrivePaperBtn.querySelector('span').textContent = q.driveFileId
-      ? `Open “${q.paperName}” PDF in Google Drive`
-      : 'Open the subject Drive folder';
-    el.modalOpenDrivePaperBtn.title = q.driveFileId
-      ? `Direct link to the original ${q.paperName} file in Google Drive`
-      : 'Open the Google Drive folder for this subject';
-
-    if (el.modalPaperInlineLink) {
-      el.modalPaperInlineLink.href = paperLink;
-      el.modalPaperInlineLink.innerHTML = q.driveFileId
-        ? 'Open paper in Drive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>'
-        : 'Open subject folder <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>';
-    }
-
-    el.questionModal.style.display = 'flex';
   }
 
   function closeQuestionModal() {
-    el.questionModal.style.display = 'none';
+    if (el.questionModal) el.questionModal.style.display = 'none';
+    if (lastActiveInfoTrigger && typeof lastActiveInfoTrigger.focus === 'function') {
+      try { lastActiveInfoTrigger.focus(); } catch (e) {}
+    }
   }
 
   // -------------------------------------------------------------
@@ -3138,6 +3333,10 @@
       showToast('Answer copied to clipboard');
     });
   };
+
+  window.openQuestionModal = openQuestionModal;
+  window.openAskWithModal = openAskWithModal;
+  window.openSolutionModal = openSolutionModal;
 
   function setupEventListeners() {
     // Header and mobile page navigation (use the app's own history)

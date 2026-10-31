@@ -1,0 +1,111 @@
+{
+  "subjectId": "OOPJ",
+  "generatedAt": "2026-10-31T20:40:24.968Z",
+  "count": 13,
+  "solutions": {
+    "oopj|explain the purpose of the this keyword in java": {
+      "key": "oopj|explain the purpose of the this keyword in java",
+      "subjectId": "OOPJ",
+      "question": "Explain the purpose of the \"this\" keyword in Java.",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### Purpose of `this` Keyword in Java\nIn Java, `this` is a reference variable that refers to the **current object** instance.\n\n### Key Applications:\n1. **Disambiguate Shadowed Fields:**\n```java\npublic class Student {\n    private String name;\n    public Student(String name) {\n        this.name = name; // refers to instance variable\n    }\n}\n```\n2. **Constructor Chaining (`this()`)**:\n```java\npublic Student() {\n    this(\"Unknown\"); // calls parameterized constructor\n}\n```\n3. **Pass Current Instance as Argument:** `notify(this);`\n4. **Method Chaining:** `return this;`"
+    },
+    "oopj|list the java buzzwords": {
+      "key": "oopj|list the java buzzwords",
+      "subjectId": "OOPJ",
+      "question": "List the Java buzzwords.",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|what are java buzzwords list any two": {
+      "key": "oopj|what are java buzzwords list any two",
+      "subjectId": "OOPJ",
+      "question": "What are Java buzzwords? List any two.",
+      "chapter": 1,
+      "marks": 1,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|what are java buzzwords explain any five with suitable examples": {
+      "key": "oopj|what are java buzzwords explain any five with suitable examples",
+      "subjectId": "OOPJ",
+      "question": "What are Java buzzwords? Explain any five with suitable examples.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|differentiate between method overloading and method overriding with cxamples 2 list and explain java buzzwords": {
+      "key": "oopj|differentiate between method overloading and method overriding with cxamples 2 list and explain java buzzwords",
+      "subjectId": "OOPJ",
+      "question": "Differentiate between method overloading and method overriding with cxamples 2. ) List and explain Java buzzwords.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|list and explain java buzzwords": {
+      "key": "oopj|list and explain java buzzwords",
+      "subjectId": "OOPJ",
+      "question": "List and explain Java buzzwords.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|explain about java buzzwords": {
+      "key": "oopj|explain about java buzzwords",
+      "subjectId": "OOPJ",
+      "question": "Explain about Java buzzwords.",
+      "chapter": 1,
+      "marks": 5,
+      "answerMd": "### The Java Buzzwords\nThe official Java White Paper identifies **11 core design characteristics**:\n\n1. **Simple:** Clean C++-like syntax without confusing pointers or operator overloading.\n2. **Object-Oriented:** Strictly class-based; supports encapsulation, inheritance, polymorphism.\n3. **Platform-Independent:** \"Write Once, Run Anywhere\" (WORA) via bytecode and JVM.\n4. **Robust:** Strong type checking, garbage collection, and exception handling.\n5. **Secure:** Sandboxed bytecode verification and no direct memory pointers.\n6. **Architecture-Neutral:** Standardized primitive bit-widths across all hardware.\n7. **Portable:** Identical execution behavior across OS platforms.\n8. **High Performance:** Just-In-Time (JIT) compiler converts hot bytecode into native code.\n9. **Multithreaded:** Built-in concurrency primitives (`Thread`, `synchronized`).\n10. **Distributed:** Native TCP/IP networking and RMI support.\n11. **Dynamic:** Dynamically links classes and libraries at runtime."
+    },
+    "oopj|explain the difference between abstract class and interface": {
+      "key": "oopj|explain the difference between abstract class and interface",
+      "subjectId": "OOPJ",
+      "question": "Explain the difference between abstract class and interface.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Abstract Class vs. Interface in Java\n\n| Parameter | Abstract Class | Interface |\n|:---|:---|:---|\n| **Keyword** | `abstract class` | `interface` |\n| **Inheritance** | Single inheritance (`extends`) | Multiple inheritance (`implements`) |\n| **Methods** | Concrete and abstract methods. | Abstract by default; Java 8+ allows `default` & `static`; Java 9+ allows `private`. |\n| **Variables** | Instance, static, final, mutable fields. | Strictly `public static final` constants. |\n| **Constructor** | Has constructors (called via `super()`). | Cannot have constructors. |\n| **Design Intent** | \"IS-A\" hierarchy with shared state. | \"CAN-DO\" behavioral contract. |"
+    },
+    "oopj|differentiate between abstract class and interfaces": {
+      "key": "oopj|differentiate between abstract class and interfaces",
+      "subjectId": "OOPJ",
+      "question": "Differentiate between abstract class and interfaces.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Abstract Class vs. Interface in Java\n\n| Parameter | Abstract Class | Interface |\n|:---|:---|:---|\n| **Keyword** | `abstract class` | `interface` |\n| **Inheritance** | Single inheritance (`extends`) | Multiple inheritance (`implements`) |\n| **Methods** | Concrete and abstract methods. | Abstract by default; Java 8+ allows `default` & `static`; Java 9+ allows `private`. |\n| **Variables** | Instance, static, final, mutable fields. | Strictly `public static final` constants. |\n| **Constructor** | Has constructors (called via `super()`). | Cannot have constructors. |\n| **Design Intent** | \"IS-A\" hierarchy with shared state. | \"CAN-DO\" behavioral contract. |"
+    },
+    "oopj|develop a java program using try catch finally to handle arrayindexoutofboundsexception": {
+      "key": "oopj|develop a java program using try catch finally to handle arrayindexoutofboundsexception",
+      "subjectId": "OOPJ",
+      "question": "Develop a Java program using try-catch-finally to handle ArrayIndexOutOfBoundsException.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Purpose of `finally` Block in Java\nThe `finally` block is used to execute critical clean-up code (e.g., closing file streams, socket connections, or database handles).\n\n### Key Rules:\n1. **Guaranteed Execution:** Executes whether an exception is thrown, caught, or unhandled.\n2. **Executes Even After Return:** Even if `try` or `catch` contains a `return` statement, `finally` runs before the method finishes.\n3. **Only Exception:** Does not run if `System.exit(0)` is called or a fatal JVM crash occurs.\n\n```java\nFileInputStream fis = null;\ntry {\n    fis = new FileInputStream(\"data.txt\");\n} catch (IOException e) {\n    System.err.println(\"Error: \" + e.getMessage());\n} finally {\n    if (fis != null) {\n        try { fis.close(); } catch (IOException ignored) {}\n    }\n}\n```"
+    },
+    "oopj|discuss about the usage of finally keyword in exception handling with examples": {
+      "key": "oopj|discuss about the usage of finally keyword in exception handling with examples",
+      "subjectId": "OOPJ",
+      "question": "Discuss about the usage of finally keyword in exception handling with examples.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Purpose of `finally` Block in Java\nThe `finally` block is used to execute critical clean-up code (e.g., closing file streams, socket connections, or database handles).\n\n### Key Rules:\n1. **Guaranteed Execution:** Executes whether an exception is thrown, caught, or unhandled.\n2. **Executes Even After Return:** Even if `try` or `catch` contains a `return` statement, `finally` runs before the method finishes.\n3. **Only Exception:** Does not run if `System.exit(0)` is called or a fatal JVM crash occurs.\n\n```java\nFileInputStream fis = null;\ntry {\n    fis = new FileInputStream(\"data.txt\");\n} catch (IOException e) {\n    System.err.println(\"Error: \" + e.getMessage());\n} finally {\n    if (fis != null) {\n        try { fis.close(); } catch (IOException ignored) {}\n    }\n}\n```"
+    },
+    "oopj|summarize what is finally class how to catch exception": {
+      "key": "oopj|summarize what is finally class how to catch exception",
+      "subjectId": "OOPJ",
+      "question": "Summarize what is finally class. How to catch exception?",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Purpose of `finally` Block in Java\nThe `finally` block is used to execute critical clean-up code (e.g., closing file streams, socket connections, or database handles).\n\n### Key Rules:\n1. **Guaranteed Execution:** Executes whether an exception is thrown, caught, or unhandled.\n2. **Executes Even After Return:** Even if `try` or `catch` contains a `return` statement, `finally` runs before the method finishes.\n3. **Only Exception:** Does not run if `System.exit(0)` is called or a fatal JVM crash occurs.\n\n```java\nFileInputStream fis = null;\ntry {\n    fis = new FileInputStream(\"data.txt\");\n} catch (IOException e) {\n    System.err.println(\"Error: \" + e.getMessage());\n} finally {\n    if (fis != null) {\n        try { fis.close(); } catch (IOException ignored) {}\n    }\n}\n```"
+    },
+    "oopj|what is the use of finally block in exception handling": {
+      "key": "oopj|what is the use of finally block in exception handling",
+      "subjectId": "OOPJ",
+      "question": "What is the use of 'finally' block in exception handling?",
+      "chapter": 3,
+      "marks": 1,
+      "answerMd": "### Purpose of `finally` Block in Java\nThe `finally` block is used to execute critical clean-up code (e.g., closing file streams, socket connections, or database handles).\n\n### Key Rules:\n1. **Guaranteed Execution:** Executes whether an exception is thrown, caught, or unhandled.\n2. **Executes Even After Return:** Even if `try` or `catch` contains a `return` statement, `finally` runs before the method finishes.\n3. **Only Exception:** Does not run if `System.exit(0)` is called or a fatal JVM crash occurs.\n\n```java\nFileInputStream fis = null;\ntry {\n    fis = new FileInputStream(\"data.txt\");\n} catch (IOException e) {\n    System.err.println(\"Error: \" + e.getMessage());\n} finally {\n    if (fis != null) {\n        try { fis.close(); } catch (IOException ignored) {}\n    }\n}\n```"
+    }
+  }
+}

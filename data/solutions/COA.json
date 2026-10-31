@@ -1,0 +1,135 @@
+{
+  "subjectId": "COA",
+  "generatedAt": "2026-10-31T20:40:24.964Z",
+  "count": 16,
+  "solutions": {
+    "coa|what is the difference between computer organization and computer architecture": {
+      "key": "coa|what is the difference between computer organization and computer architecture",
+      "subjectId": "COA",
+      "question": "What is the difference between Computer Organization and Computer Architecture?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Computer Organization vs. Computer Architecture\n\n| Parameter | Computer Architecture | Computer Organization |\n|:---|:---|:---|\n| **Definition** | Conceptual design and functional behavior visible to the assembly programmer. | Physical hardware realization and interconnection of operational units. |\n| **Focus** | \"What\" the processor does (ISA, addressing modes, data formats). | \"How\" the hardware performs it (control signals, clock frequency, circuit logic). |\n| **Stability** | Remains consistent across generations (e.g., x86-64, ARMv8). | Upgraded frequently for performance (e.g., Core i7 12th vs 13th gen). |\n| **Key Example** | Does the CPU have a hardware multiply instruction? | Is multiplication done via Wallace tree or repeated addition? |"
+    },
+    "coa|define computer organization and computer architecture": {
+      "key": "coa|define computer organization and computer architecture",
+      "subjectId": "COA",
+      "question": "Define computer organization and computer architecture?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Computer Organization vs. Computer Architecture\n\n| Parameter | Computer Architecture | Computer Organization |\n|:---|:---|:---|\n| **Definition** | Conceptual design and functional behavior visible to the assembly programmer. | Physical hardware realization and interconnection of operational units. |\n| **Focus** | \"What\" the processor does (ISA, addressing modes, data formats). | \"How\" the hardware performs it (control signals, clock frequency, circuit logic). |\n| **Stability** | Remains consistent across generations (e.g., x86-64, ARMv8). | Upgraded frequently for performance (e.g., Core i7 12th vs 13th gen). |\n| **Key Example** | Does the CPU have a hardware multiply instruction? | Is multiplication done via Wallace tree or repeated addition? |"
+    },
+    "coa|what are register transfer logic languages explain rtl statements": {
+      "key": "coa|what are register transfer logic languages explain rtl statements",
+      "subjectId": "COA",
+      "question": "What are register transfer logic languages? Explain RTL statements?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Register Transfer Language (RTL)\n\n**Register Transfer Language (RTL)** is a symbolic notation used to specify micro-operations and data transfers between internal processor registers.\n\n### Basic Syntax:\n$$\\mathbf{P: \\quad R_2 \\leftarrow R_1}$$\n- **Meaning:** If control predicate condition $P = 1$, then on the active clock edge, the contents of register $R_1$ are transferred into $R_2$.\n\n### Core RTL Operations:\n- **Direct Transfer:** $R_2 \\leftarrow R_1$\n- **Memory Read:** $DR \\leftarrow M[AR]$ (Data read from memory address in Address Register)\n- **Memory Write:** $M[AR] \\leftarrow R_1$\n- **Arithmetic:** $R_3 \\leftarrow R_1 + R_2$\n- **Logic:** $R_1 \\leftarrow R_1 \\oplus R_2$ (Bitwise XOR)"
+    },
+    "coa|explain rtl statements": {
+      "key": "coa|explain rtl statements",
+      "subjectId": "COA",
+      "question": "Explain RTL statements?",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Register Transfer Language (RTL)\n\n**Register Transfer Language (RTL)** is a symbolic notation used to specify micro-operations and data transfers between internal processor registers.\n\n### Basic Syntax:\n$$\\mathbf{P: \\quad R_2 \\leftarrow R_1}$$\n- **Meaning:** If control predicate condition $P = 1$, then on the active clock edge, the contents of register $R_1$ are transferred into $R_2$.\n\n### Core RTL Operations:\n- **Direct Transfer:** $R_2 \\leftarrow R_1$\n- **Memory Read:** $DR \\leftarrow M[AR]$ (Data read from memory address in Address Register)\n- **Memory Write:** $M[AR] \\leftarrow R_1$\n- **Arithmetic:** $R_3 \\leftarrow R_1 + R_2$\n- **Logic:** $R_1 \\leftarrow R_1 \\oplus R_2$ (Bitwise XOR)"
+    },
+    "coa|explain various types of shift operations": {
+      "key": "coa|explain various types of shift operations",
+      "subjectId": "COA",
+      "question": "Explain various types of Shift operations?",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Types of Shift Operations in Computer Arithmetic\n\n### 1. Logical Shift:\nShifts bits left or right; vacant positions are unconditionally zero-filled ($0$).\n- **Logical Shift Left (LSL):** Equivalent to unsigned multiplication by 2.\n- **Logical Shift Right (LSR):** Equivalent to unsigned integer division by 2.\n\n### 2. Arithmetic Shift:\nPreserves the algebraic sign bit of signed two's complement numbers.\n- **Arithmetic Shift Right (ASR):** MSB sign bit is replicated into itself during rightward shift.\n- **Arithmetic Shift Left (ASL):** Identical to LSL but sets overflow flag if the sign bit flips.\n\n### 3. Circular Shift (Rotate):\nBits shifted out of one end re-enter the opposing end without loss of information (Rotate Left / Rotate Right)."
+    },
+    "coa|explain arithmetic logical and shift operations with examples": {
+      "key": "coa|explain arithmetic logical and shift operations with examples",
+      "subjectId": "COA",
+      "question": "Explain arithmetic, logical and shift operations with examples.",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Types of Shift Operations in Computer Arithmetic\n\n### 1. Logical Shift:\nShifts bits left or right; vacant positions are unconditionally zero-filled ($0$).\n- **Logical Shift Left (LSL):** Equivalent to unsigned multiplication by 2.\n- **Logical Shift Right (LSR):** Equivalent to unsigned integer division by 2.\n\n### 2. Arithmetic Shift:\nPreserves the algebraic sign bit of signed two's complement numbers.\n- **Arithmetic Shift Right (ASR):** MSB sign bit is replicated into itself during rightward shift.\n- **Arithmetic Shift Left (ASL):** Identical to LSL but sets overflow flag if the sign bit flips.\n\n### 3. Circular Shift (Rotate):\nBits shifted out of one end re-enter the opposing end without loss of information (Rotate Left / Rotate Right)."
+    },
+    "coa|design a 4 bit alu which performs arithmetic logical and shift operations": {
+      "key": "coa|design a 4 bit alu which performs arithmetic logical and shift operations",
+      "subjectId": "COA",
+      "question": "Design a 4-bit ALU which performs arithmetic, Logical and shift operations.",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Types of Shift Operations in Computer Arithmetic\n\n### 1. Logical Shift:\nShifts bits left or right; vacant positions are unconditionally zero-filled ($0$).\n- **Logical Shift Left (LSL):** Equivalent to unsigned multiplication by 2.\n- **Logical Shift Right (LSR):** Equivalent to unsigned integer division by 2.\n\n### 2. Arithmetic Shift:\nPreserves the algebraic sign bit of signed two's complement numbers.\n- **Arithmetic Shift Right (ASR):** MSB sign bit is replicated into itself during rightward shift.\n- **Arithmetic Shift Left (ASL):** Identical to LSL but sets overflow flag if the sign bit flips.\n\n### 3. Circular Shift (Rotate):\nBits shifted out of one end re-enter the opposing end without loss of information (Rotate Left / Rotate Right)."
+    },
+    "coa|differentiate between write through a cache policy and write backa cache policy": {
+      "key": "coa|differentiate between write through a cache policy and write backa cache policy",
+      "subjectId": "COA",
+      "question": "Differentiate between Write through a cache policy and Write backa cache policy?",
+      "chapter": 4,
+      "marks": 2,
+      "answerMd": "### Cache Write Policies: Write-Through vs. Write-Back\n\n| Parameter | Write-Through Policy | Write-Back Policy |\n|:---|:---|:---|\n| **Operation** | Updates both cache and main memory simultaneously on every write. | Updates only the cache line immediately; writes to memory only upon block eviction. |\n| **Bus Traffic** | High memory bus traffic from frequent memory writes. | Low memory bus traffic; writes in infrequent bursts. |\n| **Dirty Bit** | Not required. | Required (**Dirty Bit**) to track modified blocks. |\n| **Speed** | Slower (bounded by main memory write speed). | Fast (operates at full SRAM cache speed). |"
+    },
+    "coa|what is a control memory": {
+      "key": "coa|what is a control memory",
+      "subjectId": "COA",
+      "question": "What is a control memory?",
+      "chapter": 2,
+      "marks": 1,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|draw the block diagram of a control memory and associated hardware needed for selecting the next microinstruction address": {
+      "key": "coa|draw the block diagram of a control memory and associated hardware needed for selecting the next microinstruction address",
+      "subjectId": "COA",
+      "question": "Draw the block diagram of a control memory and associated hardware needed for selecting the next microinstruction address.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|what are the functions of control memory": {
+      "key": "coa|what are the functions of control memory",
+      "subjectId": "COA",
+      "question": "What are the functions of control memory?",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|explain about address sequencing capabilities in control memory": {
+      "key": "coa|explain about address sequencing capabilities in control memory",
+      "subjectId": "COA",
+      "question": "Explain about address sequencing capabilities in control memory.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|compare hardwired control with micro programmed control is it possible to have a hardwired control associated with control memory": {
+      "key": "coa|compare hardwired control with micro programmed control is it possible to have a hardwired control associated with control memory",
+      "subjectId": "COA",
+      "question": "Compare hardwired control with micro programmed control. Is it possible to have a hardwired control associated with control memory?",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|explain microprogram sequencer for a control memory with a neat block diagram": {
+      "key": "coa|explain microprogram sequencer for a control memory with a neat block diagram",
+      "subjectId": "COA",
+      "question": "Explain microprogram sequencer for a control memory with a neat block diagram.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|what is control memory write about address sequencing": {
+      "key": "coa|what is control memory write about address sequencing",
+      "subjectId": "COA",
+      "question": "What is control memory? Write about address sequencing.",
+      "chapter": 2,
+      "marks": 5,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    },
+    "coa|explain about address sequencing in control memory with neat diagrams": {
+      "key": "coa|explain about address sequencing in control memory with neat diagrams",
+      "subjectId": "COA",
+      "question": "Explain about address sequencing in control memory with neat diagrams?",
+      "chapter": 3,
+      "marks": 5,
+      "answerMd": "### Control Memory in Microprogrammed Control Units\n\n### 1. Definition:\n**Control Memory** is a dedicated high-speed read-only memory (ROM) inside the CPU's control unit that stores microprograms (sequences of microinstructions) that generate the control signals required to execute machine instructions.\n\n### 2. Block Diagram:\n```text\n                 +--------------------------+\n  Address -----> |  Control Address Reg     | (CAR)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |     CONTROL MEMORY       | (Microprogram ROM)\n                 +--------------------------+\n                               |\n                               v\n                 +--------------------------+\n                 |  Control Data Register   | (CDR / Microinstruction Reg)\n                 +--------------------------+\n                   /          |           \\\n                  /           |            \\\n          Micro-ops      Next Address    Branch Conditions\n```\n\n### 3. Key Components:\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer / Next-Address Logic:** Determines sequencing (increment CAR, branch, or map from opcode).\n- **Control Data Register (CDR):** Holds the active microinstruction generating control words."
+    }
+  }
+}

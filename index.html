@@ -380,10 +380,7 @@
           </div>
         </div>
 
-        <p class="notes-scope-note" id="notesScopeNote">
-          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          <span id="notesScopeText">Showing <strong>Mid-2</strong> notes (Units 3–5). Need other units? Switch exam to Semester End.</span>
-        </p>
+
 
         <div class="division-controls">
           <label for="notesChapterSelect" class="control-label">Select Chapter / Unit:</label>
@@ -518,6 +515,7 @@
              class="attribution-link"
              title="Connect with Amaan on LinkedIn">
             <span class="attribution-text">Made by <span class="amaan-name-gradient" style="text-decoration: underline; text-underline-offset: 3px;">Amaan</span></span>
+            <span class="app-version-stamp" style="font-size: 10px; color: var(--text-muted); opacity: 0.7; margin-left: 6px;">v2026.11.01-0f53b11</span>
           </a>
         </div>
         <div class="footer-rate-box">
@@ -666,7 +664,7 @@
 
   <!-- ============================================================== -->
   <!-- ============================================================== -->
-  <!-- MODAL: Ask with AI Choice Modal -->
+  <!-- MODAL: Ask with AI Choice Modal (F3: ChatGPT #1, Gemini #2, In-Built #3) -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="askWithModal" style="display: none; z-index: 100003;" role="dialog" aria-modal="true" aria-labelledby="askWithModalTitle">
     <div class="modal-dialog small-dialog ask-with-dialog">
@@ -674,9 +672,36 @@
         <h4 class="modal-dialog-title" id="askWithModalTitle"><i class="fa-solid fa-wand-magic-sparkles"></i> Ask with AI</h4>
         <button type="button" class="modal-close-btn" id="closeAskWithModalBtn" aria-label="Close">&times;</button>
       </div>
-      <div class="modal-body" style="padding: 18px 20px;">
-        <p class="ask-with-intro">Choose your preferred AI to solve and explain this question:</p>
+      <div class="modal-body" style="padding: 16px 20px;">
+        <!-- Soft green copied strip -->
+        <div class="ask-copied-strip" id="askCopiedStrip">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Question copied to clipboard</span>
+        </div>
+        <p class="ask-with-subcue">Paste it in the app if the question doesn't appear automatically.</p>
+
+        <!-- Options: 1. ChatGPT, 2. Gemini, separator, 3. In-Built AI -->
         <div class="ask-with-options">
+          <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ask-with-card chatgpt-ai" id="askOptionChatgpt">
+            <div class="ask-with-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="ask-with-info">
+              <strong>ChatGPT</strong>
+              <span id="chatgptSub">Opens ChatGPT with question ready</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
+          </a>
+
+          <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" class="ask-with-card gemini-ai" id="askOptionGemini">
+            <div class="ask-with-icon"><i class="fa-brands fa-google"></i></div>
+            <div class="ask-with-info">
+              <strong>Google Gemini</strong>
+              <span id="geminiSub">Opens gemini.google.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
+          </a>
+
+          <div class="ask-divider"><span>or ask directly inside website</span></div>
+
           <button type="button" class="ask-with-card builtin-ai" id="askOptionBuiltin">
             <div class="ask-with-icon">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -685,29 +710,9 @@
             </div>
             <div class="ask-with-info">
               <strong>In-Built Study Assistant</strong>
-              <span>Powered by Gemini 2.5 Flash &bull; Built into MGIT Hub</span>
+              <span>Instant exam answer &bull; Powered by Gemini</span>
             </div>
-            <span class="ask-badge-rec">Fastest</span>
-          </button>
-          
-          <div class="ask-divider"><span>or open external AI (question auto-copied)</span></div>
-
-          <button type="button" class="ask-with-card chatgpt-ai" id="askOptionChatgpt">
-            <div class="ask-with-icon"><i class="fa-solid fa-bolt"></i></div>
-            <div class="ask-with-info">
-              <strong>ChatGPT</strong>
-              <span>Opens ChatGPT with your question ready</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
-          </button>
-
-          <button type="button" class="ask-with-card gemini-ai" id="askOptionGemini">
-            <div class="ask-with-icon"><i class="fa-brands fa-google"></i></div>
-            <div class="ask-with-info">
-              <strong>Google Gemini</strong>
-              <span>Opens gemini.google.com with your prompt</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
+            <i class="fa-solid fa-arrow-right ask-ext-icon"></i>
           </button>
         </div>
       </div>
@@ -729,7 +734,7 @@
       </div>
       <div class="modal-body" style="padding: 22px 26px;">
         <h3 class="solution-question-heading" id="solQuestionTitle">Question Text</h3>
-        <div class="solution-model-answer" id="solAnswerBody">
+        <div class="solution-model-answer ai-msg-body" id="solAnswerBody">
           <!-- Populated dynamically with verified structured model answer -->
         </div>
         <div class="solution-actions-row">
@@ -927,7 +932,7 @@
               </svg>
             </div>
             <h2 class="gemini-greet-title">
-              <span class="gemini-shimmer-text">Where do you want to solve this?</span>
+              <span class="gemini-shimmer-text">What do you want to solve today?</span>
             </h2>
             <p class="gemini-greet-sub">Ask about a concept, a PYQ, or an exam strategy. Attach a question paper photo with <strong>+</strong> if you want me to read it.</p>
             
@@ -1027,7 +1032,7 @@
                 <i class="fa-solid fa-arrow-up"></i>
               </button>
             </form>
-            <p class="gemini-legal-caption">AI answers can be wrong or incomplete. Verify important details with your syllabus and class notes.</p>
+            <p class="gemini-legal-caption">MGIT CSE Semester III Study Assistant &bull; MR-25 Regulation</p>
           </div>
         </div>
       </section>
@@ -1202,7 +1207,7 @@
             <button type="button" class="btn-fc-nav" id="fcPrevBtn" title="Previous Card (Left Arrow)" aria-label="Previous card">
               <i class="fa-solid fa-chevron-left"></i> <span>Previous</span>
             </button>
-            <span class="fc-counter" id="fcCounter" aria-live="polite">1 / 1</span>
+            <span class="fc-counter" id="fcCounter" aria-live="polite">Card 1 of 1</span>
             <button type="button" class="btn-fc-nav" id="fcNextBtn" title="Next Card (Right Arrow)" aria-label="Next card">
               <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
             </button>
