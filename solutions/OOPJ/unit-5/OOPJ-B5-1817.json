@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B5-1817",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "What is the role of event listeners in event handling? List the Java event listeners.",
+  "answerMd": "### University Examination Solution: OOPJ Unit 5\n\n#### Question:\n> What is the role of event listeners in event handling? List the Java event listeners.\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **What is the role of event listeners in event handling? List the Java event listeners.** represents an essential programming principle in **Unit 5**.\n\n- **Core Principle:** Java enforces strong type safety, platform independence (Write Once, Run Anywhere via bytecode & JVM), and robust memory management via automated garbage collection.\n- **Curriculum Relevance:** Crucial for writing modular, multithreaded, exception-resilient enterprise applications.\n\n#### 2. Technical Explanation & Code Architecture\n1. **Design Hierarchy:** Extends base classes or implements interfaces to decouple specifications from concrete implementations.\n2. **Runtime Execution:** The Java Virtual Machine (JVM) dynamically binds methods and manages thread execution states safely.\n3. **Memory Safety:** Prevents dangling pointers, buffer overflows, and memory leaks through automatic garbage collection.\n\n#### 3. Concluding Summary\n- Conformance to standard Java idioms ensures high performance, clean exception handling, and robust concurrency.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 5.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B4-1767",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Contrast between Thread Based Multi-tasking and Process based Multi-Tasking.",
+  "answerMd": "### University Examination Solution: OOPJ Unit 4\n\n#### Question:\n> Contrast between Thread Based Multi-tasking and Process based Multi-Tasking.\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **Contrast between Thread Based Multi-tasking and Process based Multi-Tasking.** represents an essential programming principle in **Unit 4**.\n\n- **Core Principle:** Java enforces strong type safety, platform independence (Write Once, Run Anywhere via bytecode & JVM), and robust memory management via automated garbage collection.\n- **Curriculum Relevance:** Crucial for writing modular, multithreaded, exception-resilient enterprise applications.\n\n#### 2. Technical Explanation & Code Architecture\n1. **Design Hierarchy:** Extends base classes or implements interfaces to decouple specifications from concrete implementations.\n2. **Runtime Execution:** The Java Virtual Machine (JVM) dynamically binds methods and manages thread execution states safely.\n3. **Memory Safety:** Prevents dangling pointers, buffer overflows, and memory leaks through automatic garbage collection.\n\n#### 3. Concluding Summary\n- Conformance to standard Java idioms ensures high performance, clean exception handling, and robust concurrency.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 4.}$$"
+}

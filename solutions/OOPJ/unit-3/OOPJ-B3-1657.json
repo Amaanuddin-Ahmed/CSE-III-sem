@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B3-1657",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain thread life cycle with a neat labelled diagram.",
+  "answerMd": "### Thread Life Cycle in Java\n\nA Java thread managed by the JVM scheduler transitions through distinct operational states defined in `java.lang.Thread.State`:\n\n```\n   +-------------+\n   |     New     |  (Thread t = new Thread())\n   +------+------+\n          |  t.start()\n          v\n   +-------------+\n   |  Runnable   |<-----------------+\n   +------+------+                  |\n          |  Thread Scheduler       | notify() / time elapsed / lock acquired\n          v                         |\n   +-------------+                  |\n   |   Running   |                  |\n   +------+------+                  |\n          |                         |\n          +---> [ Waiting / Timed Waiting / Blocked ]\n          |     (sleep(), wait(), I/O, synchronized)\n          v\n   +-------------+\n   | Terminated  |  (run() method finishes)\n   +-------------+\n```\n\n#### State Explanations:\n1. **New:** A thread instance has been created but `start()` has not yet been invoked.\n2. **Runnable:** Eligible to run; waiting in the ready pool for CPU timeslice from the OS thread scheduler.\n3. **Running:** The thread scheduler selected the thread and its instructions in `run()` are executing on the CPU core.\n4. **Blocked / Waiting:** Suspended waiting for a monitor lock (`Blocked`), waiting indefinitely for a notification via `wait()` (`Waiting`), or waiting for a specified timeout via `sleep(ms)` (`Timed_Waiting`).\n5. **Terminated (Dead):** The `run()` method has completed execution or terminated abnormally due to an unhandled exception.\n\n$$\\therefore \\text{Java threads provide concurrent preemptive multitasking within a shared JVM address space.}$$"
+}

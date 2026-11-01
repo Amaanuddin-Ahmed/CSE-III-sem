@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-1788",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "L.i) = Why is Swing preferred over AWT?",
+  "answerMd": "### AWT vs. Swing: Why Swing is Preferred Over AWT\n\nThe **Abstract Window Toolkit (AWT)** and **Swing** are the two primary Java GUI frameworks:\n\n| Parameter | AWT (Abstract Window Toolkit) | Swing Framework |\n| :--- | :--- | :--- |\n| **Component Weight** | **Heavyweight:** Built using underlying OS native GUI peer widgets. | **Lightweight:** Written 100% in pure Java; drawn via Java 2D graphics. |\n| **Look and Feel** | Platform-dependent (looks different on Windows, macOS, Linux). | **Pluggable Look-and-Feel (PLAF):** Uniform cross-platform design. |\n| **Package** | `java.awt.*` | `javax.swing.*` |\n| **Widget Richness** | Minimal basic components (`Button`, `TextField`, `Choice`). | Rich advanced widgets (`JTable`, `JTree`, `JTabbedPane`, `JSlider`). |\n| **Architecture** | Direct procedural component architecture. | **Model-View-Controller (MVC)** architectural design. |\n| **Performance** | Faster initialization but limited flexibility. | Slightly higher memory consumption but far superior UI polish. |\n\n#### Key Reasons Why Swing is Preferred:\n1. **Platform Independence:** Swing components do not rely on native OS peers, guaranteeing identical rendering on all operating systems.\n2. **Extensibility:** Components can be customized easily (e.g., adding icons to `JButton`, tooltips, borders).\n3. **Double Buffering:** Swing includes automatic double-buffering, eliminating visual screen flickering during animations.\n\n$$\\therefore \\text{Swing overcomes AWT limitations by delivering 100% portable, lightweight, MVC-compliant GUIs.}$$"
+}

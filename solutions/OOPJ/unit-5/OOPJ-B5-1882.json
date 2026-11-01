@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B5-1882",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "What are the various layout managers used in Java? Give Java code 5 2 5 for at least two types.",
+  "answerMd": "### Layout Managers in Java GUI Programming\n\n**Definition:**\nA **LayoutManager** is an interface that automatically governs the position, size, and alignment of GUI components inside a container (like `JFrame` or `JPanel`), dynamically adjusting to window resizing.\n\n#### Common Types of Layout Managers:\n\n1. **FlowLayout:**\n   - Arranges components horizontally in a row from left to right.\n   - When a row fills up, components wrap to the next line.\n   - Default layout for `JPanel` and `Applet`.\n\n2. **BorderLayout:**\n   - Divides the container into five distinct regions: `NORTH`, `SOUTH`, `EAST`, `WEST`, and `CENTER`.\n   - The `CENTER` area automatically expands to claim all remaining space.\n   - Default layout for `JFrame` content panes.\n\n3. **GridLayout:**\n   - Arranges components into a rectangular grid of equal-sized cells defined by rows and columns (e.g., `new GridLayout(3, 3)`).\n   - Ideal for calculator keypads and tic-tac-toe boards.\n\n$$\\therefore \\text{Layout managers enable responsive, platform-independent GUI resizing without fixed hardcoded coordinates.}$$"
+}

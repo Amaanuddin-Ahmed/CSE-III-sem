@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-1671",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Discuss the event delegation model used in Java's AWT.",
+  "answerMd": "### The Delegation Event Model in Java\n\n**Definition:**\nThe **Delegation Event Model** is the standard architectural pattern for modern Java event handling. It decouples the user interface component where an event originates from the code that processes that event.\n\n#### The Three Core Participants:\n1. **Event Source:** The GUI component that generates the event when user interaction occurs (e.g., `JButton`, `JTextField`, `Checkbox`).\n2. **Event Object:** Encapsulates information about the event that occurred (e.g., `ActionEvent`, `MouseEvent`, `KeyEvent`), inheriting from `java.util.EventObject`.\n3. **Event Listener:** An interface containing callback methods to handle the event (e.g., `ActionListener`, `MouseListener`).\n\n```\n +--------------+    User Clicks    +----------------+    Invokes Callback    +----------------+\n | Event Source |------------------>|  Event Object  |----------------------->| Event Listener |\n |  (JButton)   |   Generates       | (ActionEvent)  |    actionPerformed()   | (Handler Code) |\n +--------------+                   +----------------+                        +----------------+\n```\n\n#### Working Sequence:\n1. The listener registers with the source: `button.addActionListener(listener)`. \n2. When user clicks, the source instantiates an `ActionEvent` and dispatches it to all registered listeners by calling `listener.actionPerformed(event)`.\n\n$$\\therefore \\text{Delegation event model separates GUI presentation logic from business action processing.}$$"
+}

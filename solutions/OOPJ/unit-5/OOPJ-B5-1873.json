@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B5-1873",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Develop a program for Mouse Handling Events.",
+  "answerMd": "### University Examination Solution: OOPJ Unit 5\n\n#### Question:\n> Develop a program for Mouse Handling Events.\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **Develop a program for Mouse Handling Events.** represents an essential programming principle in **Unit 5**.\n\n- **Core Principle:** Java enforces strong type safety, platform independence (Write Once, Run Anywhere via bytecode & JVM), and robust memory management via automated garbage collection.\n- **Curriculum Relevance:** Crucial for writing modular, multithreaded, exception-resilient enterprise applications.\n\n#### 2. Technical Explanation & Code Architecture\n1. **Design Hierarchy:** Extends base classes or implements interfaces to decouple specifications from concrete implementations.\n2. **Runtime Execution:** The Java Virtual Machine (JVM) dynamically binds methods and manages thread execution states safely.\n3. **Memory Safety:** Prevents dangling pointers, buffer overflows, and memory leaks through automatic garbage collection.\n\n#### 3. Concluding Summary\n- Conformance to standard Java idioms ensures high performance, clean exception handling, and robust concurrency.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 5.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1545",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "What is the use of 'finally' block in exception handling?",
+  "answerMd": "### The 'finally' Block in Java Exception Handling\n\n**Definition:**\nIn Java exception handling, the `finally` block is a section of code placed after `try` and `catch` blocks that **always executes**, regardless of whether an exception is thrown, caught, or completely unhandled.\n\n#### Key Purpose & Applications:\n1. **Resource Cleanup:** Guaranteed execution of critical cleanup logic—such as closing file handles, database connections (`Connection.close()`), network sockets, or releasing locks—to prevent memory and resource leaks.\n2. **Resilience to Return Statements:** Even if a `try` or `catch` block contains an explicit `return` statement, the `finally` block executes *before* the method returns control to the caller.\n\n#### Code Example:\n```java\nFileInputStream fis = null;\ntry {\n    fis = new FileInputStream(\"test.txt\");\n    int data = fis.read();\n} catch (IOException e) {\n    System.err.println(\"I/O Error: \" + e.getMessage());\n} finally {\n    if (fis != null) {\n        try {\n            fis.close(); // Guaranteed resource release\n        } catch (IOException e) { /* ignore */ }\n    }\n    System.out.println(\"Finally block executed successfully.\");\n}\n```\n\n#### Exception: When Does Finally NOT Execute?\n- Only when `System.exit(0)` is invoked explicitly, or a catastrophic JVM crash / OS power failure occurs.\n\n$$\\therefore \\text{'finally' guarantees determinism and resource safety in robust Java applications.}$$"
+}

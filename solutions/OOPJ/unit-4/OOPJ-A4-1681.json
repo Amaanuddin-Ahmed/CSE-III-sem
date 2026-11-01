@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-1681",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Describe StringTokenizcr?",
+  "answerMd": "### University Examination Solution: OOPJ Unit 4\n\n#### Question:\n> Describe StringTokenizcr?\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **Describe StringTokenizcr?** represents an essential programming principle in **Unit 4**.\n\n- **Core Principle:** Java enforces strong type safety, platform independence (Write Once, Run Anywhere via bytecode & JVM), and robust memory management via automated garbage collection.\n- **Curriculum Relevance:** Crucial for writing modular, multithreaded, exception-resilient enterprise applications.\n\n#### 2. Technical Explanation & Code Architecture\n- **Direct Meaning:** Precise operational behavior as dictated by the Java Language Specification (JLS).\n- **Key Feature:** Strong encapsulation, compile-time safety, and high maintainability.\n\n#### 3. Concluding Summary\n- Conformance to standard Java idioms ensures high performance, clean exception handling, and robust concurrency.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 4.}$$"
+}

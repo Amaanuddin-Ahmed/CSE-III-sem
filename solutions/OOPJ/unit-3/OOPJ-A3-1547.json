@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1547",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Explain various string handling classes available in Java.",
+  "answerMd": "### String Handling Classes in Java: String vs. StringBuffer vs. StringBuilder\n\nJava provides three core classes in `java.lang` to handle text sequences:\n\n| Parameter | String | StringBuffer | StringBuilder |\n| :--- | :--- | :--- | :--- |\n| **Mutability** | **Immutable** (cannot be modified after creation) | **Mutable** (modifiable in place) | **Mutable** (modifiable in place) |\n| **Thread Safety** | Safe (inherently thread-safe due to immutability) | **Thread-Safe** (all methods are `synchronized`) | **Not Thread-Safe** (non-synchronized methods) |\n| **Performance** | Slow for concatenation (creates new objects in SCP)| Slower (synchronization locking overhead) | **Fastest** (zero synchronization overhead) |\n| **Memory Storage**| Stored in String Constant Pool (SCP) | Stored in Heap Memory | Stored in Heap Memory |\n| **Introduced In**| JDK 1.0 | JDK 1.0 | JDK 1.5 |\n\n#### Best Practice Usage:\n- Use `String` for immutable constants, identifiers, map keys, and credentials.\n- Use `StringBuffer` when text undergoes heavy concurrent modifications across multiple threads.\n- Use `StringBuilder` for high-speed single-threaded string concatenation in loops.\n\n$$\\therefore \\text{StringBuilder is preferred for performance; StringBuffer for thread safety; String for immutable safety.}$$"
+}

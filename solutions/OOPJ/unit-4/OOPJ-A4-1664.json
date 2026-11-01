@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-1664",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Define Iterator. How is it used in a Collection?",
+  "answerMd": "### Java Iterator: Definition and ArrayList Traversal\n\n**Definition:**\nAn **Iterator** (`java.util.Iterator<E>`) is a universal cursor interface used to traverse any Java Collection sequentially in the forward direction while safely removing elements during iteration.\n\n#### Core Methods in `Iterator<E>`:\n1. `boolean hasNext()`: Returns `true` if the collection has more elements.\n2. `E next()`: Returns the next element and advances the cursor.\n3. `void remove()`: Removes the last element returned by `next()` from the underlying collection safely.\n\n#### Java Code Snippet: Iterating through an ArrayList using an Iterator\n```java\nimport java.util.ArrayList;\nimport java.util.Iterator;\n\npublic class IteratorDemo {\n    public static void main(String[] args) {\n        // 1. Create and populate ArrayList\n        ArrayList<String> subjects = new ArrayList<>();\n        subjects.add(\"DM\");\n        subjects.add(\"COA\");\n        subjects.add(\"DBMS\");\n        subjects.add(\"OOPJ\");\n\n        // 2. Obtain Iterator from ArrayList\n        Iterator<String> itr = subjects.iterator();\n\n        // 3. Traverse elements sequentially\n        System.out.println(\"Traversing Subjects using Iterator:\");\n        while (itr.hasNext()) {\n            String sub = itr.next();\n            System.out.println(\"- \" + sub);\n        }\n    }\n}\n```\n\n$$\\therefore \\text{Iterators provide safe traversal without risking ConcurrentModificationException.}$$"
+}

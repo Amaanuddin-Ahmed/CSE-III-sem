@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-1783",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "Define the life cycle of an applet.",
+  "answerMd": "### Applet Life Cycle in Java\n\nAn **Applet** is a specialized Java program designed to run embedded within a web browser or applet viewer. It is controlled by the browser container through five milestone life cycle methods in `java.applet.Applet`:\n\n```\n  [ Load Applet ]\n         |\n         v\n  +--------------+\n  |    init()    |  (Executed ONCE when applet is loaded)\n  +------+-------+\n         |\n         v\n  +--------------+<----------+\n  |   start()    |           |  Page revisited / un-minimized\n  +------+-------+           |\n         |                   |\n         v                   |\n  +--------------+           |\n  |  paint(g)    |           |\n  +------+-------+           |\n         |                   |\n         v  Page minimized   |\n  +--------------+           |\n  |    stop()    |-----------+\n  +------+-------+\n         |  Browser window closed\n         v\n  +--------------+\n  |  destroy()   |  (Executed ONCE before removal from memory)\n  +--------------+\n```\n\n#### Method Breakdown:\n1. `init()`: Called once to perform one-time initializations (reading parameters, loading fonts/images).\n2. `start()`: Called each time the browser window becomes active or resumes.\n3. `paint(Graphics g)`: Renders graphics, shapes, strings, and custom visuals onto the applet screen canvas.\n4. `stop()`: Suspends execution when user navigates away from the web page or minimizes the browser.\n5. `destroy()`: Performs final cleanup before the applet is discarded from memory.\n\n$$\\therefore \\text{Applet life cycle methods provide deterministic container-managed execution.}$$"
+}

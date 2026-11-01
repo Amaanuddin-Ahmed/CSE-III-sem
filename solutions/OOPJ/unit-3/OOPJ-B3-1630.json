@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B3-1630",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "What is a stream? What is the difference between byte streams and} character streams? How are they used to capture input from the user?",
+  "answerMd": "### Byte Stream vs. Character Stream in Java I/O\n\nJava I/O operations are partitioned into two stream hierarchies in `java.io`:\n\n| Feature | Byte Stream | Character Stream |\n| :--- | :--- | :--- |\n| **Data Unit** | Reads and writes raw binary data **byte-by-byte (8 bits)**. | Reads and writes textual characters **16-bit Unicode (2 bytes)**. |\n| **Root Classes** | `InputStream` and `OutputStream` (Abstract). | `Reader` and `Writer` (Abstract). |\n| **Primary Subclasses**| `FileInputStream`, `FileOutputStream`, `BufferedInputStream`. | `FileReader`, `FileWriter`, `BufferedReader`, `PrintWriter`. |\n| **Encoding** | No character encoding; operates on raw binary octets. | Handles internationalization via character sets (UTF-8, ASCII). |\n| **Best For** | Audio, video, images, PDF files, executable binaries. | Text files (`.txt`, `.csv`, `.java`, `.html`). |\n\n$$\\therefore \\text{Byte streams handle binary media; character streams handle localized Unicode text.}$$"
+}

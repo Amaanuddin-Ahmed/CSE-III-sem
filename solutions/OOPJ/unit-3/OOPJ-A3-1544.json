@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1544",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "What is interthread communication?",
+  "answerMd": "### Inter-Thread Communication in Java\n\n**Definition:**\n**Inter-thread communication** is a synchronization mechanism that allows concurrent threads to communicate with each other through shared object monitors, avoiding inefficient CPU polling (busy waiting).\n\n#### Methods defined in `java.lang.Object`:\n- `wait()`: Causes the calling thread to release the object's monitor lock and suspend execution until another thread invokes `notify()` or `notifyAll()` on the same object.\n- `notify()`: Wakes up a single arbitrary thread that is waiting on this object's monitor.\n- `notifyAll()`: Wakes up all threads waiting on this object's monitor.\n\n*Note:* These methods **must** be called from within a `synchronized` context (method or block), otherwise a `java.lang.IllegalMonitorStateException` is thrown.\n\n#### Classic Application: Producer-Consumer Architecture\n```java\nclass SharedBuffer {\n    private int contents;\n    private boolean available = false;\n\n    public synchronized void put(int value) {\n        while (available) {\n            try { wait(); } catch (InterruptedException e) {}\n        }\n        contents = value;\n        available = true;\n        notifyAll(); // Signal consumer\n    }\n\n    public synchronized int get() {\n        while (!available) {\n            try { wait(); } catch (InterruptedException e) {}\n        }\n        available = false;\n        notifyAll(); // Signal producer\n        return contents;\n    }\n}\n```\n\n$$\\therefore \\text{Inter-thread communication prevents deadlock and eliminates busy-waiting loops.}$$"
+}

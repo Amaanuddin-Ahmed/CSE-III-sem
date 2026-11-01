@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1543",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "What is autoboxing in Java?",
+  "answerMd": "### Autoboxing and Unboxing in Java\n\n#### 1. Autoboxing\n- **Definition:** The automatic conversion that the Java compiler makes between the primitive data types and their corresponding object wrapper classes.\n- *Example:* Converting `int` to `Integer`, `double` to `Double`, `char` to `Character`.\n```java\nint num = 45;\nInteger obj = num; // Autoboxing (compiler generates Integer.valueOf(num))\nList<Integer> list = new ArrayList<>();\nlist.add(10); // Autoboxed from primitive int to Integer object\n```\n\n#### 2. Unboxing\n- **Definition:** The reverse process: automatically converting an object of a wrapper class back to its corresponding primitive type.\n```java\nInteger obj = Integer.valueOf(100);\nint num = obj; // Unboxing (compiler generates obj.intValue())\n```\n\n$$\\therefore \\text{Autoboxing enables primitives to seamlessly integrate with generic Collections without manual conversion.}$$"
+}
