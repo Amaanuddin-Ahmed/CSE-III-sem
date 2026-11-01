@@ -1,0 +1,9 @@
+{
+  "id": "SE-B4-2184",
+  "subjectId": "SE",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Compare and contrast the block box testing and white box testing.",
+  "answerMd": "### White-Box Testing and Basis Path Testing\n\n**Definition:**\n**White-Box Testing** (also called Glass-Box or Structural Testing) is a test case design methodology that derives test cases by examining internal source code logic, control flow graphs, and data structures.\n\n#### Basis Path Testing (Tom McCabe):\n- Guarantees that every independent execution path through the source code is traversed at least once.\n- **Independent Path:** Any path through the program that introduces at least one new set of processing statements or a new condition.\n\n#### Cyclomatic Complexity ($V(G)$):\nA software metric that provides a quantitative measure of the logical complexity of a program, defining the upper bound for the number of independent paths needed for test coverage:\n\n$$\\mathbf{V(G) = E - N + 2P}$$\n$$\\mathbf{V(G) = P + 1}$$\nwhere:\n- $E$ is the number of flow graph edges.\n- $N$ is the number of flow graph nodes.\n- $P$ is the number of predicate (decision) nodes (nodes containing a condition).\n\n#### White-Box Testing Techniques:\n1. **Statement Coverage:** Guarantees every source code statement executes at least once.\n2. **Branch / Decision Coverage:** Ensures every conditional branch evaluates to both `TRUE` and `FALSE`.\n3. **Condition Coverage:** Evaluates every boolean sub-expression independently.\n4. **Loop Testing:** Validates loops at boundary limits (skip loop, 1 pass, 2 passes, $m$ passes, $n-1$ passes, $n$ passes).\n\n$$\\therefore \\text{Cyclomatic complexity dictates the exact minimum number of test cases required for complete path coverage.}$$"
+}

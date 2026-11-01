@@ -1,0 +1,9 @@
+{
+  "id": "SE-A4-2116",
+  "subjectId": "SE",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Define black box testing strategy.",
+  "answerMd": "### Black-Box Testing Strategies: Equivalence Partitioning & Boundary Value Analysis\n\n**Definition:**\n**Black-Box Testing** (Behavioral Testing) examines the functional requirements of software without inspecting the internal source code implementation or logic paths.\n\n#### 1. Equivalence Partitioning (EP)\n- **Principle:** Divides the input domain of a program into equivalence classes from which test cases can be derived. An equivalence class represents a set of valid or invalid states.\n- **Hypothesis:** If one test case in an equivalence class uncovers an error, all other test cases in that class will uncover the same error (and vice versa).\n- **Example:** An input field accepts student marks from $0$ to $100$:\n  - Valid Class: $[0, 100]$ (Test case: 65)\n  - Invalid Class 1: $< 0$ (Test case: -5)\n  - Invalid Class 2: $> 100$ (Test case: 120)\n\n#### 2. Boundary Value Analysis (BVA)\n- **Principle:** Experience proves that a high percentage of software defects occur at the **boundaries** of input ranges rather than at the center.\n- **Test Values Derived:** Min, Min+1, Nominal, Max-1, Max, Min-1 (Invalid), Max+1 (Invalid).\n- **Example for Range $[0, 100]$:**\n  - Test values: $\\mathbf{-1, 0, 1, 50, 99, 100, 101}$.\n\n$$\\therefore \\text{Combining Equivalence Partitioning with Boundary Value Analysis maximizes defect discovery with minimum test cases.}$$"
+}

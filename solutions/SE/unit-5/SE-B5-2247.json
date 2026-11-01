@@ -1,0 +1,9 @@
+{
+  "id": "SE-B5-2247",
+  "subjectId": "SE",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain about software risks? Che",
+  "answerMd": "### Software Risk Management and Categories of Risks\n\n**Definition:**\nA **Software Risk** is a potential future event characterized by two attributes: **Probability** ($P > 0$) of occurrence and **Impact / Loss** ($I$) if it occurs ($L = P \\times I$).\n\n#### Categories of Software Risks:\n1. **Project Risks:** Threaten project schedule and budget (e.g., loss of key staff, scope creep, budget cuts).\n2. **Technical Risks:** Threaten the quality and timeliness of the software (e.g., untried third-party libraries, complex algorithms, ambiguous requirements).\n3. **Business Risks:** Threaten the viability of the software product in the market:\n   - Market risk (building a product nobody wants).\n   - Strategic risk (product does not fit company business model).\n   - Sales risk (sales team does not know how to market the product).\n   - Budget risk (overspending capital).\n\n#### The RMMM Plan (Risk Mitigation, Monitoring, and Management):\n- **Mitigation (Proactive):** Steps taken before risk occurs to reduce probability (e.g., cross-training developers to counter staff turnover).\n- **Monitoring:** Continuously tracking risk indicators (e.g., tracking team morale and overtime hours).\n- **Management (Contingency):** Action plan executed when the risk becomes an actual reality.\n\n$$\\therefore \\text{Effective RMMM transforms reactive crisis management into proactive project control.}$$"
+}

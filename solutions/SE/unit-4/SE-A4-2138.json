@@ -1,0 +1,9 @@
+{
+  "id": "SE-A4-2138",
+  "subjectId": "SE",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "What is the role of debugging in the software testing process?",
+  "answerMd": "### Distinguish Between Software Testing and Debugging\n\nAlthough closely related in the defect removal lifecycle, **Testing** and **Debugging** are fundamentally distinct software engineering activities:\n\n| Parameter | Software Testing | Software Debugging |\n| :--- | :--- | :--- |\n| **Primary Objective** | **Find Defects:** Execute program with the intent of uncovering latent bugs and failures. | **Fix Defects:** Locate the exact root cause of a known failure and modify code to eliminate it. |\n| **When Initiated** | Begins early in the development lifecycle and continues through system release. | Initiated immediately after a test case fails. |\n| **Performed By** | Dedicated Independent QA Engineers / Test Team. | Original Software Developers / Programmers. |\n| **Process Nature** | Systematic, predictable, test-plan driven, and automated. | Heuristic, diagnostic, exploratory, and ad-hoc reasoning. |\n| **Knowledge Needed** | Requires specifications, requirements, and test design patterns. | Requires intimate knowledge of internal source code, stack traces, and memory states. |\n| **Outcome** | Test execution reports, pass/fail metrics, bug tickets. | Code refactoring, patch submission, resolved bug tickets. |\n\n$$\\therefore \\text{Testing exposes the presence of errors; debugging diagnoses and removes their root causes.}$$"
+}

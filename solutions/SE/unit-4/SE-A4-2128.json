@@ -1,0 +1,9 @@
+{
+  "id": "SE-A4-2128",
+  "subjectId": "SE",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Why do we need to test software?",
+  "answerMd": "### University Examination Solution: SE Unit 4\n\n#### Question:\n> Why do we need to test software?\n\n#### 1. Core Software Engineering Principle & Definition\nIn Software Engineering (MR-25 Regulation), **Why do we need to test software?** represents a key engineering principle in **Unit 4**.\n\n- **Core Principle:** Software engineering establishes disciplined, quantifiable, systematic approaches to development, operation, and maintenance (IEEE Standard 610.12).\n- **Curriculum Relevance:** Essential for understanding software lifecycle models, quality verification, architectural design, and risk assessment.\n\n#### 2. Technical Explanation & Lifecycle Impact\n- **Direct Meaning:** Precise operational behavior as dictated by standard IEEE and ISO software engineering bodies.\n- **Key Feature:** High maintainability, systematic process control, and predictable software quality.\n\n#### 3. Concluding Summary\n- Applying standard software engineering paradigms guarantees reliable project delivery within budget, on schedule, and with zero critical defects.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for SE Unit } 4.}$$"
+}

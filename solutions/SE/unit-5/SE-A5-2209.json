@@ -1,0 +1,9 @@
+{
+  "id": "SE-A5-2209",
+  "subjectId": "SE",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "Discuss about software reviews?",
+  "answerMd": "### Formal Technical Review (FTR) in Software Engineering\n\n**Definition:**\nA **Formal Technical Review (FTR)** is a peer review activity conducted by software engineers with the primary objective of uncovering errors in function, logic, or implementation in any software work product early in the engineering lifecycle.\n\n#### Types of FTR:\n1. **Walkthroughs:** Informal peer reviews led by the author to educate the team and collect feedback.\n2. **Formal Inspections (Fagan Inspections):** Highly disciplined, metrics-driven reviews led by an independent trained Moderator with formal roles (Producer, Reviewer, Recorder).\n\n#### Core Review Guidelines for an Effective FTR:\n1. **Review the Product, Not the Producer:** Focus strictly on finding defects in the artifacts, avoiding personal criticism.\n2. **Set an Agenda and Maintain Schedule:** Limit review meetings to **under 2 hours** with 3 to 5 participants to avoid cognitive fatigue.\n3. **Limit Debate and Rebuttal:** Record defects on the issues list without trying to solve them during the review meeting (solve offline).\n4. **Enforce Advance Preparation:** All participants must inspect artifacts prior to the meeting.\n\n$$\\therefore \\text{FTRs are the most cost-effective defect removal mechanism, catching up to 70% of design errors before coding.}$$"
+}

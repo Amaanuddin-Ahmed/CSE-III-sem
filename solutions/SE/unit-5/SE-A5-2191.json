@@ -1,0 +1,9 @@
+{
+  "id": "SE-A5-2191",
+  "subjectId": "SE",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "What is software reliability?",
+  "answerMd": "### Software Reliability and Availability Metrics\n\n**Formal Definition:**\n**Software Reliability** is the probability of failure-free software operation for a specified period of time in a specified environment.\n\n#### Primary Metrics:\n1. **Mean Time Between Failures (MTBF):**\n   $$\\mathbf{MTBF = MTTF + MTTR}$$\n   where:\n   - **MTTF (Mean Time To Failure):** Average operational time before a failure occurs.\n   - **MTTR (Mean Time To Repair):** Average time taken to diagnose, patch, and restore the failed system.\n\n2. **Software Availability ($A$):**\n   The probability that a system is operating satisfactorily at a given point in time:\n   $$\\mathbf{A = \\frac{MTTF}{MTTF + MTTR} = \\frac{MTTF}{MTBF} \\times 100\\%}$$\n   *High availability systems target 'Five Nines' ($99.999\\%$ uptime, less than 5.26 minutes downtime per year).* \n\n$$\\therefore \\text{High software reliability requires maximizing MTTF while minimizing repair downtime MTTR.}$$"
+}

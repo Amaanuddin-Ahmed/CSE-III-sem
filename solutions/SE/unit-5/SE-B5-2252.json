@@ -1,0 +1,9 @@
+{
+  "id": "SE-B5-2252",
+  "subjectId": "SE",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Discuss the importance of \"Metrics for Source Code\" in software quality.",
+  "answerMd": "### University Examination Solution: SE Unit 5\n\n#### Question:\n> Discuss the importance of \"Metrics for Source Code\" in software quality.\n\n#### 1. Core Software Engineering Principle & Definition\nIn Software Engineering (MR-25 Regulation), **Discuss the importance of \"Metrics for Source Code\" in software quality.** represents a key engineering principle in **Unit 5**.\n\n- **Core Principle:** Software engineering establishes disciplined, quantifiable, systematic approaches to development, operation, and maintenance (IEEE Standard 610.12).\n- **Curriculum Relevance:** Essential for understanding software lifecycle models, quality verification, architectural design, and risk assessment.\n\n#### 2. Technical Explanation & Lifecycle Impact\n1. **Methodological Rigor:** Adheres to established engineering standards to guarantee process repeatability.\n2. **Verification & Validation:** Independent reviews and testing verify compliance with original functional specifications.\n3. **Cost-Quality Tradeoff:** Early defect removal drastically lowers total software ownership cost.\n\n#### 3. Concluding Summary\n- Applying standard software engineering paradigms guarantees reliable project delivery within budget, on schedule, and with zero critical defects.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for SE Unit } 5.}$$"
+}

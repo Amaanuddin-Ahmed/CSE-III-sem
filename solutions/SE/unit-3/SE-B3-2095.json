@@ -1,0 +1,9 @@
+{
+  "id": "SE-B3-2095",
+  "subjectId": "SE",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "Generalize on the concept of User Interface design and list the characteristics of good user interface design.",
+  "answerMd": "### Theo Mandel's Three Golden Rules for User Interface Design\n\n#### 1. Place the User in Control\n- **Flexible Interaction:** Allow interaction modes to be entered, suspended, and exited freely (e.g., keyboard shortcuts vs mouse clicks).\n- **Graceful Recovery:** Provide robust Undo and Redo facilities so users feel safe exploring.\n- **Non-Interruptive Customization:** Allow advanced users to customize workflows and configure settings without imposing complexity on novices.\n\n#### 2. Reduce the User's Memory Load\n- **Recognition over Recall:** Provide clear visual cues, drop-down menus, and sensible defaults rather than forcing users to recall obscure commands from memory.\n- **Chunking Information:** Organize complex data hierarchically into digestible visual groups (Miller's $7 \\pm 2$ rule).\n- **Progressive Disclosure:** Expose high-level features first and reveal advanced parameters only upon explicit user request.\n\n#### 3. Make the Interface Consistent\n- **Visual Consistency:** Maintain uniform typography, iconography, color palettes, and component alignments across all application screens.\n- **Behavioral Consistency:** Consistent keyboard shortcuts (`Ctrl+C`, `Ctrl+Z`), navigation paradigms, and button placements.\n\n$$\\therefore \\text{Adhering to the Three Golden Rules creates intuitive, accessible, and error-tolerant interfaces.}$$"
+}

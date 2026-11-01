@@ -1,0 +1,9 @@
+{
+  "id": "SE-A3-2036",
+  "subjectId": "SE",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "What is software architecture? Define.",
+  "answerMd": "### Software Architecture: Definition and Importance\n\n**Formal Definition:**\nThe **Software Architecture** of a system is the high-level structural blueprint comprising software elements, the externally visible properties of those elements, and the relationships (connectors) among them (Bass, Clements, Kazman).\n\n#### Importance of Software Architecture:\n1. **Stakeholder Communication:** Serves as a common language understandable by business clients, managers, and technical engineers.\n2. **Early Design Decisions:** Dictates fundamental choices regarding scalability, performance, fault tolerance, and security that are costly to change later.\n3. **Transferable Abstraction:** Architectural patterns can be reused across product families and domains.\n\n#### Major Architectural Styles:\n1. **Data-Centered Architecture:** A centralized data repository (blackboard) accessed and updated by independent client components.\n2. **Data-Flow (Pipe and Filter):** Discrete filter components process incoming streams of data and pump them through pipes to subsequent filters.\n3. **Call-and-Return Architecture:** Hierarchical subroutine call structures (main program and subroutines, remote procedure calls).\n4. **Layered Architecture:** Partitioned into cohesive horizontal layers (e.g., Presentation Layer $\\to$ Application/Business Logic Layer $\\to$ Database Persistence Layer).\n\n$$\\therefore \\text{Architecture establishes the skeletal integrity and quality attributes of software systems.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "SE-A4-2115",
+  "subjectId": "SE",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "What is integration testing?",
+  "answerMd": "### Integration Testing Strategies in Software Engineering\n\n**Definition:**\n**Integration Testing** is a systematic technique for assembling and testing the software architecture to uncover defects associated with module interfaces and data communication.\n\n#### Major Integration Approaches:\n\n1. **Big Bang Integration:**\n   - All modules are combined at once and the entire system is tested as a whole.\n   - *Drawback:* Catastrophic debugging difficulty; errors cannot be isolated easily.\n\n2. **Top-Down Integration:**\n   - Modules are integrated by moving downward through the control hierarchy, beginning with the main module.\n   - Subordinate modules are replaced with **Stubs** (dummy skeleton routines simulating called modules).\n\n3. **Bottom-Up Integration:**\n   - Begins construction and testing with atomic, low-level modules.\n   - Requires **Drivers** (control programs that coordinate test case input and output).\n\n4. **Sandwich (Hybrid) Testing:**\n   - Combines top-down and bottom-up approaches around a central target layer, minimizing both stubs and drivers.\n\n$$\\therefore \\text{Incremental integration testing isolates interface defects systematically as modules are united.}$$"
+}
