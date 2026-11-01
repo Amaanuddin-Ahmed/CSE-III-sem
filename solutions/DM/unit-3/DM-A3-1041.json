@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1041",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Define Lattice with an example.",
+  "answerMd": "### 1. Formal Definition of a Lattice\nA partially ordered set (poset) $(L, \\le)$ is called a **lattice** if every pair of elements $a, b \\in L$ has:\n1. A unique **Least Upper Bound (LUB)** or *join* (supremum), denoted by $a \\vee b = \\sup\\{a, b\\}$.\n2. A unique **Greatest Lower Bound (GLB)** or *meet* (infimum), denoted by $a \\wedge b = \\inf\\{a, b\\}$.\n\nFormally:\n$$\\forall a, b \\in L: \\quad (a \\vee b \\in L) \\quad \\text{and} \\quad (a \\wedge b \\in L)$$\n\n### 2. Standard Example\nConsider $S = \\{1, 2\\}$. The power set $P(S)$ ordered by subset inclusion $\\subseteq$ is:\n$$P(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}$$\n\nFor any two subsets $A, B \\in P(S)$:\n- **Meet (GLB):** $A \\wedge B = A \\cap B \\in P(S)$\n- **Join (LUB):** $A \\vee B = A \\cup B \\in P(S)$\n\n### 3. Hasse Diagram\n```text\n       {1, 2}\n       /    \\\n     {1}    {2}\n       \\    /\n         ∅\n```\n\n### 4. Conclusion\nSince every pair of elements has a unique meet and join, $(P(S), \\subseteq)$ is a valid distributive lattice.\n$\\therefore (P(S), \\subseteq)$ satisfies all lattice axioms."
+}

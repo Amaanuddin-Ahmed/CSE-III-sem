@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1044",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Give any three applications of Pigeonhole principle?",
+  "answerMd": "### The Pigeonhole Principle\n\n#### Statement:\n> If $k$ items (pigeons) are placed into $n$ containers (pigeonholes) where $k > n$, then at least one container must contain two or more items.\n\n#### Generalized Pigeonhole Principle:\nIf $N$ objects are placed into $k$ boxes, then at least one box must contain at least:\n$$\\left\\lceil \\frac{N}{k} \\right\\rceil \\quad \\text{objects}$$\n\n#### Standard Applications:\n1. **Birthday Collision:** In any group of $367$ people, since there are at most $366$ days in a year (including leap year), at least $2$ people share a birthday ($\\lceil 367/366 \\rceil = 2$).\n2. **Color Selection:** From a bag with socks of $3$ distinct colors, selecting $4$ socks guarantees at least one matching pair ($\\lceil 4/3 \\rceil = 2$).\n3. **Lossless Data Compression:** Guarantees that no lossless algorithm can compress every possible file."
+}

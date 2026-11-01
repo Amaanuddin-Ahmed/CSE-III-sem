@@ -367,24 +367,23 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
     const subName = sub ? sub.title : (q.subjectId || 'Computer Science');
     const subCode = sub ? sub.shortName : (q.subjectId || 'CSE');
     const unit = q.chapter || 1;
-    const part = q.part || 'A';
     const marks = Number(q.marks) === 1 ? 2 : (Number(q.marks) || 2);
-    const sessions = (Array.isArray(q.years) && q.years.length) ? q.years.join(', ') : (q.paperName || 'MGIT Examinations');
     
     // Strip HTML from question text and collapse whitespace
     let cleanQ = (q.question || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 
-    const rawPrompt = `I'm a B.Tech CSE Semester III student at MGIT (MR-25). Please solve this exam question.
-
-Subject: ${subName} (${subCode})
-Unit: ${unit}
-Part / Marks: Part ${part} · ${marks} Marks
-Appeared in: ${sessions}
-
-Question:
+    const rawPrompt = `Question (${marks} Marks):
 ${cleanQ}
 
-Give the complete answer exactly as it should be written in the exam: definition, full working/derivation with steps, a diagram or table if useful, and the final result. Use simple language and headings.`;
+Subject: ${subName} (${subCode}) | Unit: ${unit}
+
+Instructions for complete examination answer:
+- Provide an accurate, comprehensive, and well-structured university examination solution.
+- Tailor the explanation depth, detail, and length strictly according to ${marks} marks.
+- Include formal definitions, step-by-step mathematical working/derivations or algorithms.
+- Include a clear concrete worked example to illustrate the principle.
+- Include an ASCII or Mermaid diagram, schematic, or comparison table if relevant.
+- State the final result or concluding principle clearly.`;
 
     return (pendingSolutionContext
       ? rawPrompt + `\n\nContext from the app's saved answer (continue from it):\n${pendingSolutionContext.slice(0, 1200)}`
@@ -538,9 +537,10 @@ Give the complete answer exactly as it should be written in the exam: definition
 
     if (bodyEl) {
       bodyEl.innerHTML = `
-        <div class="sol-loading-container" style="padding: 26px 0; text-align: center; color: #64748b;">
-          <div class="spinner-border" style="display: inline-block; width: 28px; height: 28px; border: 3px solid #e2e8f0; border-top-color: #4f46e5; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px;"></div>
-          <p style="margin: 0; font-size: 14px; font-weight: 600; color: #1e293b;">Loading verified university examination solution…</p>
+        <div class="sol-loading-container" style="padding: 30px 0; text-align: center; color: #475569;">
+          <div class="spinner-border" style="display: inline-block; width: 32px; height: 32px; border: 3px solid #e2e8f0; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 14px;"></div>
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1e293b;">Loading verified examination solution…</p>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #64748b;">Checking solution library and saved answers</p>
         </div>
       `;
     }
@@ -555,7 +555,10 @@ Give the complete answer exactly as it should be written in the exam: definition
       };
     }
 
-    // 1. Check exact pre-saved solution
+    const subId = (q.subjectId || 'CSE').toUpperCase();
+    const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    // 1. Check exact pre-saved solution or local memory cache
     let preSolution = null;
     try {
       preSolution = await getSolutionForQuestion(q);
@@ -565,24 +568,62 @@ Give the complete answer exactly as it should be written in the exam: definition
 
     if (preSolution && preSolution.answerMd) {
       if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
+      if (statusChip) statusChip.textContent = 'Model Academic Solution';
       return;
     }
 
-    // 2. Not in the static solution library: never call AI at runtime. Show an
-    // honest "coming soon" state and let the student ask for a full answer.
-    if (statusChip) statusChip.textContent = 'Solution coming soon';
-    if (paperNotice) {
-      const needsPaper = /(?:figure|diagram|table|shown below|given figure|refer to)/i.test(q.question || '');
-      paperNotice.style.display = needsPaper ? 'flex' : 'none';
-    }
+    // 2. Not in pre-saved files: Automatically solve using AI and save to local memory (localStorage)!
+    if (statusChip) statusChip.textContent = 'Generating AI Solution…';
     if (bodyEl) {
       bodyEl.innerHTML = `
-        <div class="sol-coming-soon">
-          <div class="sol-coming-soon-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
-          <h4>Solution coming soon</h4>
-          <p>This exact question does not have a verified written solution in the library yet. Use <strong>Ask with AI</strong> below to get a complete worked answer now, or open the original paper from the note's Drive folder.</p>
-        </div>`;
+        <div class="sol-loading-container" style="padding: 30px 0; text-align: center; color: #475569;">
+          <div class="spinner-border" style="display: inline-block; width: 32px; height: 32px; border: 3px solid #e2e8f0; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 14px;"></div>
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1e293b;">Generating complete examination solution with AI…</p>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #64748b;">Formulating step-by-step academic answer with formulas and examples</p>
+        </div>
+      `;
     }
+
+    try {
+      const prompt = `Solve this university examination question for MGIT CSE Semester III (${sub ? sub.title : q.subjectId}, Unit ${q.chapter || 1}, ${marksLabel(q.marks)}):
+"${q.question}"
+
+Write the complete, verified, academic solution exactly as required in the examination for full marks:
+- State formal definitions, mathematical principles, and notation.
+- Provide step-by-step derivations, calculations, or algorithmic steps.
+- Include a clear concrete illustrative example.
+- Include a clear diagram (ASCII or Mermaid) or comparison table if applicable.
+- Conclude with the final result or takeaway (∴ ...).
+Do not provide meta-advice, revision hints, or disclaimers—write the actual worked examination answer.`;
+
+      const res = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: prompt, history: [] })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        const text = data.text || (data.candidates && data.candidates[0]?.content?.parts[0]?.text);
+        if (text && bodyEl) {
+          bodyEl.innerHTML = formatGeminiResponse(text);
+          if (statusChip) statusChip.textContent = 'Model Academic Solution';
+          // Cache in local memory for instant future loads
+          try {
+            localStorage.setItem('mgit_sol_' + normKey, JSON.stringify({ answerMd: text, question: q.question, subjectId: q.subjectId, chapter: q.chapter, marks: q.marks }));
+            if (!solutionsCache[subId]) solutionsCache[subId] = {};
+            solutionsCache[subId][normKey] = { answerMd: text, question: q.question };
+          } catch (e) {}
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('[Solution Solver] On-demand solve failed:', err);
+    }
+
+    // 3. Fallback if API offline: show Ask with AI pop-up directly so student can open ChatGPT or Gemini seamlessly
+    closeSolutionModal();
+    openAskWithModal(q);
   }
 
   function closeSolutionModal() {
@@ -2034,14 +2075,6 @@ Give the complete answer exactly as it should be written in the exam: definition
             <span>${escapeHtml(q.paperName || 'Open paper in Drive')}</span>
             <i class="fa-solid fa-arrow-up-right-from-square q-ext-icon"></i>
           </a>
-          <button type="button" class="btn-q-info btn-card-tips" title="Show question info, years and paper">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Info</span>
-          </button>
-          <button type="button" class="btn-q-ai btn-card-ai" title="Ask this question with AI">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Ask with AI</span>
-          </button>
           <button type="button" class="btn-q-solution" title="View step-by-step worked answer">
             <i class="fa-solid fa-book-open"></i>
             <span>View Solution</span>
@@ -2080,22 +2113,6 @@ Give the complete answer exactly as it should be written in the exam: definition
       solBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         openSolutionModal(q);
-      });
-    }
-
-    const infoBtn = row.querySelector('.btn-q-info');
-    if (infoBtn) {
-      infoBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openQuestionModal(q, infoBtn);
-      });
-    }
-
-    const aiBtn = row.querySelector('.btn-q-ai');
-    if (aiBtn) {
-      aiBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openAskWithModal(q);
       });
     }
 

@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1036",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Develop a recursive algorithm to find factorial of a number.",
+  "answerMd": "### Recursive Algorithm for Factorial\n\n#### 1. Mathematical Recurrence:\n$$\\text{factorial}(n) = \\begin{cases} 1 & \\text{if } n = 0 \\text{ or } n = 1 \\quad (\\text{Base Case}) \\\\ n \\times \\text{factorial}(n - 1) & \\text{if } n > 1 \\quad (\\text{Recursive Step}) \\end{cases}$$\n\n#### 2. Algorithm Specification:\n```text\nAlgorithm Factorial(n):\nInput: Non-negative integer n\nOutput: n! (Factorial of n)\n\n1. if n <= 1 then\n2.     return 1\n3. else\n4.     return n * Factorial(n - 1)\n```\n\n#### 3. Complexity Analysis:\n- **Time Complexity:** $O(n)$ as it executes $n$ recursive calls.\n- **Space Complexity:** $O(n)$ stack frames on the call stack."
+}

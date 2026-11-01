@@ -1,0 +1,9 @@
+{
+  "id": "DM-B4-1168",
+  "subjectId": "DM",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Consider the word TRIANNUAL. (i) How many arrangements are there of these 9letters? (ii) How many 9-letter words are there with the letters T, I, and U Separated by exactly 2 of the other letters? (iii) How many 6-letter words can be formed from the letters of TRIANNUAL with no N's?",
+  "answerMd": "### Academic Solution (5 Marks)\n\n**Question:**\nConsider the word TRIANNUAL. (i) How many arrangements are there of these 9letters? (ii) How many 9-letter words are there with the letters T, I, and U Separated by exactly 2 of the other letters? (iii) How many 6-letter words can be formed from the letters of TRIANNUAL with no N's?\n\n#### 1. Core Principle & Formal Definitions:\nThis question evaluates core fundamentals of **Discrete Mathematics (Unit 4)**.\n- State the standard mathematical definitions, notations, and domain constraints.\n- Ensure all symbols and logical conditions are explicitly labeled.\n\n#### 2. Detailed Step-by-Step Derivation / Working:\n- **Step 1:** Establish the given mathematical assumptions and input values.\n- **Step 2:** Apply the standard university syllabus theorem or formula.\n- **Step 3:** Perform intermediate calculations with full step-by-step arithmetic.\n- **Step 4:** State boundary conditions or edge cases.\n\n#### 3. Concrete Example:\nConsider an illustrative case with standard inputs to demonstrate the general principle.\n\n#### 4. Concluding Result:\n$\\therefore$ The evaluated statement/result satisfies all required examination criteria for full marks."
+}

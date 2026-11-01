@@ -1,0 +1,9 @@
+{
+  "id": "DM-B4-1185",
+  "subjectId": "DM",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Define binomial theorem.",
+  "answerMd": "### State and Prove Binomial Theorem\n\n#### Statement:\nFor any real numbers $x, y$ and non-negative integer $n$:\n$$(x + y)^n = \\sum_{r=0}^{n} \\binom{n}{r} x^{n-r} y^r = \\binom{n}{0}x^n + \\binom{n}{1}x^{n-1}y + \\dots + \\binom{n}{n}y^n$$\n\n#### Proof by Mathematical Induction:\n1. **Base Case ($n=1$):**\n   $$(x + y)^1 = x + y = \\binom{1}{0}x^1 + \\binom{1}{1}y^1 \\quad \\text{(True)}$$\n\n2. **Inductive Hypothesis:**\n   Assume true for $n = k$:\n   $$(x + y)^k = \\sum_{r=0}^k \\binom{k}{r} x^{k-r} y^r$$\n\n3. **Inductive Step ($n = k + 1$):**\n   $$(x + y)^{k+1} = (x + y)(x + y)^k = (x + y) \\sum_{r=0}^k \\binom{k}{r} x^{k-r} y^r$$\n   $$= \\sum_{r=0}^k \\binom{k}{r} x^{k-r+1} y^r + \\sum_{r=0}^k \\binom{k}{r} x^{k-r} y^{r+1}$$\n   Using Pascal's Identity $\\binom{k}{r-1} + \\binom{k}{r} = \\binom{k+1}{r}$:\n   $$(x + y)^{k+1} = \\sum_{r=0}^{k+1} \\binom{k+1}{r} x^{k+1-r} y^r$$\n\n$\\therefore$ The theorem holds for all $n \\in \\mathbb{N}$."
+}

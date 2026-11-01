@@ -1,0 +1,9 @@
+{
+  "id": "DM-B3-1114",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "Define an algebraic system. Give two examples of algebraic systems one with a single binary operation and another with two binary operations.",
+  "answerMd": "### Definition of an Algebraic System\n\nAn **Algebraic System** (or algebraic structure) is formally defined as an ordered pair or tuple:\n\n$$(S, *_1, *_2, \\dots, *_k)$$\n\nconsisting of:\n1. A non-empty set $S$, called the **underlying set** or **carrier set**.\n2. One or more closed binary (or n-ary) operations $*_1, *_2, \\dots, *_k$ defined on $S$, where each operation maps:\n   $$* : S \\times S \\rightarrow S \\quad (\\text{Closure Property})$$\n\n#### Standard Classification:\n- **Semigroup**: An algebraic system $(S, *)$ where $*$ is associative.\n- **Monoid**: A semigroup $(S, *, e)$ containing an identity element $e \\in S$.\n- **Group**: A monoid $(G, *, e)$ where every element has a unique inverse in $G$.\n\n**Example:** $(\\mathbb{Z}, +)$ is an algebraic system consisting of the set of integers $\\mathbb{Z}$ equipped with standard addition $+$. It forms an Abelian group because addition is closed, associative, has identity $0$, and every $a \\in \\mathbb{Z}$ has inverse $-a$."
+}

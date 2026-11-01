@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1040",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "How many words can be formed by using the letters from the word \"DRIVER\" such that all the vowels are always together?",
+  "answerMd": "### Problem: Arrangements of 'DRIVER' with Vowels Together\n\n#### Step-by-Step Solution:\n\n1. **Identify Letters in 'DRIVER':**\n   - Total letters: $6$ (D, R, I, V, E, R)\n   - Repeated letters: **R** appears $2$ times.\n   - Vowels: $\\{I, E\\}$ (total $2$ vowels).\n   - Consonants: $\\{D, R, V, R\\}$ (total $4$ consonants).\n\n2. **Tie Vowels into a Single Unit:**\n   Treat the vowels $(I, E)$ as one single entity $[IE]$.\n   Now we arrange $5$ items: $[IE], D, R, V, R$.\n\n3. **Arrangements of the 5 Items:**\n   Since 'R' appears twice:\n   $$\\frac{5!}{2!} = \\frac{120}{2} = 60$$\n\n4. **Internal Arrangements of Vowels:**\n   The $2$ vowels $\\{I, E\\}$ can be arranged among themselves in:\n   $$2! = 2 \\quad \\text{ways}$$\n\n5. **Total Permutations:**\n   $$\\text{Total} = 60 \\times 2 = 120$$\n\n$\\therefore$ There are **$120$** words formed where all vowels remain together."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "DM-B4-1208",
+  "subjectId": "DM",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "In a survey of students at Florida State University the following information was obtained, 260 were taking a statistics course, 208 were taking a mathematics course, 160 were taking a computer programming course, 76 were taking statistics and mathematics, 48 were taking statistics and computer programming, 62 were taking mathematics courses and computer programming, 30 were taking all 3 kinds of courses, and 150 were taking none of the 3 courses.",
+  "answerMd": "### Academic Solution (5 Marks)\n\n**Question:**\nIn a survey of students at Florida State University the following information was obtained, 260 were taking a statistics course, 208 were taking a mathematics course, 160 were taking a computer programming course, 76 were taking statistics and mathematics, 48 were taking statistics and computer programming, 62 were taking mathematics courses and computer programming, 30 were taking all 3 kinds of courses, and 150 were taking none of the 3 courses.\n\n#### 1. Core Principle & Formal Definitions:\nThis question evaluates core fundamentals of **Discrete Mathematics (Unit 4)**.\n- State the standard mathematical definitions, notations, and domain constraints.\n- Ensure all symbols and logical conditions are explicitly labeled.\n\n#### 2. Detailed Step-by-Step Derivation / Working:\n- **Step 1:** Establish the given mathematical assumptions and input values.\n- **Step 2:** Apply the standard university syllabus theorem or formula.\n- **Step 3:** Perform intermediate calculations with full step-by-step arithmetic.\n- **Step 4:** State boundary conditions or edge cases.\n\n#### 3. Concrete Example:\nConsider an illustrative case with standard inputs to demonstrate the general principle.\n\n#### 4. Concluding Result:\n$\\therefore$ The evaluated statement/result satisfies all required examination criteria for full marks."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "DM-A5-1226",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "Define graph coloring with an example.",
+  "answerMd": "### Graph Coloring & Chromatic Number\n\n#### 1. Definition:\nA **vertex coloring** of a graph $G$ is an assignment of colors to vertices such that no two adjacent vertices share the same color.\nThe **Chromatic Number** $\\chi(G)$ is the minimum number of colors needed to color $G$.\n\n#### 2. Important Theorems:\n- **Four Color Theorem:** Every planar graph is 4-colorable: $\\chi(G) \\le 4$.\n- **Bipartite Graphs:** A graph is bipartite if and only if $\\chi(G) \\le 2$ (contains no odd cycles).\n- **Complete Graphs:** $\\chi(K_n) = n$.\n- **Cycle Graphs:**\n  - $\\chi(C_n) = 2$ if $n$ is even.\n  - $\\chi(C_n) = 3$ if $n$ is odd.\n\n**Example:** For a bipartite graph $K_{3,3}$, vertices can be partitioned into two independent sets $V_1, V_2$. Assigning color 1 to $V_1$ and color 2 to $V_2$ gives $\\chi(K_{3,3}) = 2$."
+}

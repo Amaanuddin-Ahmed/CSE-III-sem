@@ -1,0 +1,9 @@
+{
+  "id": "DM-A5-1218",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "Define a planar graph?",
+  "answerMd": "### Planar Graph\nA graph $G = (V, E)$ is called a **planar graph** if it can be drawn in a single geometric plane in such a way that no two edges cross or intersect each other except at their shared vertices.\n\n### Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ bounded/unbounded regions:\n$$\\mathbf{V - E + R = 2}$$\n\n### Condition for Simple Planar Graphs:\nIf $V \\ge 3$, then:\n$$E \\le 3V - 6$$"
+}

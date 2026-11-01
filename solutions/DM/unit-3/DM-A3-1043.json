@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1043",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "How many words of three distinct letters can be formed from CAKE?",
+  "answerMd": "### Problem: 3-Letter Words from 'CAKE'\n\n#### Step-by-Step Solution:\n\n1. **Given Data:**\n   - Word: **CAKE** has $n = 4$ distinct letters: $\\{C, A, K, E\\}$.\n   - Length of word: $r = 3$.\n\n2. **Permutation Formula:**\n   $$P(n, r) = \\frac{n!}{(n - r)!} = \\frac{4!}{(4 - 3)!} = \\frac{24}{1!} = 24$$\n\n$\\therefore$ **$24$** distinct $3$-letter words can be formed."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1047",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Define inductive hypothesis?",
+  "answerMd": "### Definition of Inductive Hypothesis\n\nIn a proof by Mathematical Induction, the **Inductive Hypothesis** is the formal assumption that the given statement or formula $P(n)$ is true for an arbitrary positive integer $k$ (where $k \\ge n_0$, the base case).\n\n#### Role in Proof Architecture:\n- It serves as the temporary premise upon which the truth of the succeeding step $P(k + 1)$ is logically derived.\n- Without the inductive hypothesis, the inductive transition step $P(k) \\rightarrow P(k + 1)$ cannot be established.\n\n**Example:**\nTo prove by induction that $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$:\n- **Inductive Hypothesis:** \"Assume the formula holds for $n = k$, i.e., $1^2 + 2^2 + \\dots + k^2 = \\frac{k(k+1)(2k+1)}{6}$.\"\n- This assumed equation is then substituted into the expression for $S_{k+1}$ to complete the proof."
+}

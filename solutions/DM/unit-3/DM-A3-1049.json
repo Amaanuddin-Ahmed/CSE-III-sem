@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1049",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "List any two lattice basic operations.",
+  "answerMd": "### Two Basic Operations in a Lattice\n\nIn any lattice $(L, \\le)$, the two fundamental binary algebraic operations are:\n\n1. **Meet Operation ($\\wedge$ or Infimum / GLB):**\n   Assigns to every pair of elements $(a, b) \\in L$ their unique Greatest Lower Bound:\n   $$a \\wedge b = \\text{GLB}(a, b) = \\inf\\{a, b\\}$$\n\n2. **Join Operation ($\\vee$ or Supremum / LUB):**\n   Assigns to every pair of elements $(a, b) \\in L$ their unique Least Upper Bound:\n   $$a \\vee b = \\text{LUB}(a, b) = \\sup\\{a, b\\}$$\n\nBoth operations satisfy the **Idempotent**, **Commutative**, **Associative**, and **Absorption** laws."
+}

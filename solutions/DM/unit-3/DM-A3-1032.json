@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1032",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "In how many ways can the letters of the word 'MATHEMATICS' be arranged?",
+  "answerMd": "### Problem: Arrangements of the letters in 'MATHEMATICS'\n\n#### Step-by-Step Solution:\n\n1. **Count Total Letters:**\n   The word **MATHEMATICS** has a total of $n = 11$ letters.\n\n2. **Identify Repeated Frequencies:**\n   - **M:** appears $2$ times\n   - **A:** appears $2$ times\n   - **T:** appears $2$ times\n   - **H:** appears $1$ time\n   - **E:** appears $1$ time\n   - **I:** appears $1$ time\n   - **C:** appears $1$ time\n   - **S:** appears $1$ time\n\n3. **Formula for Permutations with Repetition:**\n   $$P = \\frac{n!}{n_1! \\cdot n_2! \\cdot \\dots \\cdot n_k!} = \\frac{11!}{2! \\cdot 2! \\cdot 2!}$$\n\n4. **Calculation:**\n   $$11! = 39,916,800$$\n   $$2! \\cdot 2! \\cdot 2! = 2 \\times 2 \\times 2 = 8$$\n   $$P = \\frac{39,916,800}{8} = 4,989,600$$\n\n$\\therefore$ The letters of the word 'MATHEMATICS' can be arranged in **$4,989,600$** distinct ways."
+}

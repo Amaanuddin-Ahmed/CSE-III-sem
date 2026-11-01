@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1053",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "State any two properties of Lattices.",
+  "answerMd": "### Two Fundamental Properties of Lattices\n\nFor any lattice $(L, \\wedge, \\vee)$ and all elements $a, b, c \\in L$:\n\n1. **Absorption Laws:**\n   Connecting meet and join operations:\n   $$a \\wedge (a \\vee b) = a \\quad \\text{and} \\quad a \\vee (a \\wedge b) = a$$\n\n2. **Idempotent Laws:**\n   Every element combined with itself yields itself:\n   $$a \\wedge a = a \\quad \\text{and} \\quad a \\vee a = a$$\n\n*(Note: Lattices also satisfy the **Commutative laws** $a \\wedge b = b \\wedge a$ and **Associative laws** $(a \\wedge b) \\wedge c = a \\wedge (b \\wedge c)$).*"
+}

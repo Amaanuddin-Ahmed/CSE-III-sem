@@ -1,0 +1,9 @@
+{
+  "id": "DM-B4-1162",
+  "subjectId": "DM",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Solve the recurrence relation of the Fibonacci series of numbers.",
+  "answerMd": "### Solving Linear Homogeneous Recurrence Relations\n\nA linear homogeneous recurrence relation of degree $k$ with constant coefficients has the form:\n$$a_n + c_1 a_{n-1} + c_2 a_{n-2} + \\dots + c_k a_{n-k} = 0$$\n\n#### Solution Procedure:\n1. **Characteristic Equation:**\n   Substitute $a_n = r^n$:\n   $$r^k + c_1 r^{k-1} + \\dots + c_k = 0$$\n2. **Find Roots $r_1, r_2, \\dots, r_k$:**\n   - **Case 1: Distinct Real Roots:**\n     $$a_n = C_1 r_1^n + C_2 r_2^n + \\dots + C_k r_k^n$$\n   - **Case 2: Repeated Roots:** If root $r_1$ has multiplicity $m$:\n     $$(C_1 + C_2 n + \\dots + C_m n^{m-1}) r_1^n$$\n3. **Determine Constants:**\n   Substitute initial conditions to compute constants $C_i$.\n\n**Example:** Solve $a_n - 5a_{n-1} + 6a_{n-2} = 0$ with $a_0=1, a_1=4$:\n- Characteristic equation: $r^2 - 5r + 6 = 0 \\implies (r - 2)(r - 3) = 0 \\implies r = 2, 3$.\n- General solution: $a_n = C_1(2^n) + C_2(3^n)$.\n- Applying conditions gives $C_1 = -1, C_2 = 2 \\implies a_n = 2(3^n) - 2^n$."
+}

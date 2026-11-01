@@ -1,0 +1,9 @@
+{
+  "id": "DM-B5-1307",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Prove that if G is a connected planar graph, then V-E +R = 2 where [R denote number of regions, [E denote number of edges and V the number of vertices.",
+  "answerMd": "### Planar Graphs and Euler's Formula\n\n#### 1. Definition:\nA graph $G = (V, E)$ is **planar** if it can be drawn in a plane such that no two edges cross or intersect each other except at common vertices.\n\n#### 2. Euler's Formula for Planar Graphs:\nFor any connected planar graph with $V$ vertices, $E$ edges, and $R$ bounded/unbounded regions (faces):\n$$\\mathbf{V - E + R = 2}$$\n\n#### 3. Edge Inequality Bounds:\nFor any simple connected planar graph with $V \\ge 3$:\n$$E \\le 3V - 6$$\nIf the graph contains no triangles (cycles of length 3):\n$$E \\le 2V - 4$$\n\n#### 4. Kuratowski's Theorem:\nA graph is planar if and only if it contains no subgraph homeomorphic to $K_5$ (complete graph on 5 vertices) or $K_{3,3}$ (complete bipartite utility graph)."
+}

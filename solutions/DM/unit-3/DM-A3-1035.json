@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1035",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "How do we denote Boolean algebra?",
+  "answerMd": "### Formal Mathematical Notation of Boolean Algebra\n\nA **Boolean algebra** is formally denoted as a 6-tuple algebraic system:\n\n$$\\langle B, \\vee, \\wedge, ', 0, 1 \\rangle$$\n\nwhere:\n- **$B$** is a non-empty set of elements (carrier set).\n- **$\\vee$** (Join / Logical OR) is a closed binary operation on $B$.\n- **$\\wedge$** (Meet / Logical AND) is a closed binary operation on $B$.\n- **$'$** (Complement / Negation) is a unary operation mapping each $a \\in B$ to $a' \\in B$.\n- **$0$** is the zero element (least element / identity for $\\vee$).\n- **$1$** is the unit element (greatest element / identity for $\\wedge$).\n\n#### Huntington's Axiomatic Postulates:\n1. **Closure**: $\\forall a, b \\in B: a \\vee b \\in B$ and $a \\wedge b \\in B$.\n2. **Commutativity**: $a \\vee b = b \\vee a$ and $a \\wedge b = b \\wedge a$.\n3. **Distributivity**:\n   - $a \\wedge (b \\vee c) = (a \\wedge b) \\vee (a \\wedge c)$\n   - $a \\vee (b \\wedge c) = (a \\vee b) \\wedge (a \\vee c)$\n4. **Identity**: $a \\vee 0 = a$ and $a \\wedge 1 = a$.\n5. **Complement**: $a \\vee a' = 1$ and $a \\wedge a' = 0$.\n\n**Example:** The two-element switching algebra is denoted as $\\langle \\{0, 1\\}, +, \\cdot, ', 0, 1 \\rangle$."
+}

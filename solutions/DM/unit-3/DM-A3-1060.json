@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1060",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Write a recursive algorithm to find Fibonacci sequence for a number.",
+  "answerMd": "### Recursive Algorithm for Fibonacci Sequence\n\n#### 1. Mathematical Recurrence:\n$$F(n) = \\begin{cases} 0 & \\text{if } n = 0 \\quad (\\text{Base Case 1}) \\\\ 1 & \\text{if } n = 1 \\quad (\\text{Base Case 2}) \\\\ F(n - 1) + F(n - 2) & \\text{if } n \\ge 2 \\quad (\\text{Recursive Step}) \\end{cases}$$\n\n#### 2. Algorithm Specification:\n```text\nAlgorithm Fibonacci(n):\nInput: Non-negative integer n\nOutput: The n-th Fibonacci number F(n)\n\n1. if n == 0 then\n2.     return 0\n3. else if n == 1 then\n4.     return 1\n5. else\n6.     return Fibonacci(n - 1) + Fibonacci(n - 2)\n```\n\n#### 3. Complexity:\n- **Time Complexity:** $O(2^n)$ due to binary recursion tree.\n- **Space Complexity:** $O(n)$ auxiliary stack space."
+}

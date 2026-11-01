@@ -1,0 +1,9 @@
+{
+  "id": "DM-B5-1287",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Determine if a directed graph can have both Euler and Hamiltonian circuits.",
+  "answerMd": "### Euler Graphs, Trails, and Circuits\n\n#### 1. Definitions:\n- **Eulerian Trail (Path):** A walk that traverses every edge of a graph $G$ exactly once.\n- **Eulerian Circuit (Tour):** A closed walk that traverses every edge of $G$ exactly once and returns to the start vertex.\n- **Eulerian Graph:** A graph that possesses an Eulerian circuit.\n\n#### 2. Necessary and Sufficient Conditions:\n- **Eulerian Circuit:** A connected graph $G$ contains an Eulerian circuit if and only if **every vertex has an even degree**.\n- **Eulerian Trail:** A connected graph contains an Eulerian path if and only if it has **strictly two vertices of odd degree** (which serve as the start and end of the path).\n\n#### 3. Algorithm:\n**Fleury's Algorithm** finds an Euler circuit in $O(|E|)$ by avoiding bridges unless there is no alternative edge."
+}

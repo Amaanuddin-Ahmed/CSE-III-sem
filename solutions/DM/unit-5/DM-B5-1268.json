@@ -1,0 +1,9 @@
+{
+  "id": "DM-B5-1268",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain BFS using following algorithm.",
+  "answerMd": "### Graph Traversals: BFS vs DFS\n\n#### 1. Breadth-First Search (BFS):\n- **Mechanism:** Explores graph level by level from a source vertex.\n- **Data Structure:** FIFO Queue.\n- **Applications:** Shortest paths in unweighted graphs, connected components.\n- **Time Complexity:** $O(V + E)$ with adjacency list.\n\n#### 2. Depth-First Search (DFS):\n- **Mechanism:** Explores as deep as possible along each branch before backtracking.\n- **Data Structure:** LIFO Stack (or system call recursion).\n- **Applications:** Cycle detection, topological sorting, connected components.\n- **Time Complexity:** $O(V + E)$.\n\n| Feature | Breadth-First Search (BFS) | Depth-First Search (DFS) |\n| :--- | :--- | :--- |\n| **Strategy** | Level-by-level | Branch-deep backtrack |\n| **Data Structure** | Queue | Stack / Recursion |\n| **Shortest Path** | Guarantees shortest path in unweighted | Does not guarantee shortest path |"
+}

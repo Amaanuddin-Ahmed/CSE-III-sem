@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1042",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Find LUB and GLB for the subset {a,b}, {a},{b}} of power set of A.",
+  "answerMd": "### Problem Statement\nFind the Least Upper Bound (LUB) and Greatest Lower Bound (GLB) for the subset $\\{\\{a\\}, \\{b\\}\\}$ of the power set $P(A)$, where $A = \\{a, b\\}$ ordered by set inclusion $\\subseteq$.\n\n### 1. Mathematical Formulation\n- Power set: $P(A) = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{a, b\\}\\}$\n- Given subset: $S = \\{\\{a\\}, \\{b\\}\\}$\n\n### 2. Finding GLB (Greatest Lower Bound / Meet)\n- The lower bounds of $\\{\\{a\\}, \\{b\\}\\}$ are elements $X \\in P(A)$ such that $X \\subseteq \\{a\\}$ and $X \\subseteq \\{b\\}$.\n- The only lower bound is $\\emptyset$.\n- Therefore:\n$$\\text{GLB}(\\{\\{a\\}, \\{b\\}\\}) = \\{a\\} \\cap \\{b\\} = \\emptyset$$\n\n### 3. Finding LUB (Least Upper Bound / Join)\n- The upper bounds of $\\{\\{a\\}, \\{b\\}\\}$ are elements $Y \\in P(A)$ such that $\\{a\\} \\subseteq Y$ and $\\{b\\} \\subseteq Y$.\n- The unique minimal upper bound containing both $\\{a\\}$ and $\\{b\\}$ is $\\{a, b\\}$.\n- Therefore:\n$$\\text{LUB}(\\{\\{a\\}, \\{b\\}\\}) = \\{a\\} \\cup \\{b\\} = \\{a, b\\}$$\n\n### 4. Result\n- **$\\text{GLB} = \\emptyset$**\n- **$\\text{LUB} = \\{a, b\\}$**"
+}

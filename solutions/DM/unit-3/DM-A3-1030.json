@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1030",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Define a monoid.",
+  "answerMd": "### Definition of a Monoid\nAn algebraic structure $(M, *)$ consisting of a non-empty set $M$ and a closed binary operation $*$ is called a **monoid** if it satisfies two axioms:\n\n1. **Associativity:** $\\forall a, b, c \\in M: \\quad (a * b) * c = a * (b * c)$\n2. **Identity Element:** $\\exists e \\in M \\text{ such that } \\forall a \\in M: \\quad a * e = e * a = a$\n\n### Examples:\n- $(\\mathbb{N}, +)$ where identity $e = 0$.\n- $(\\mathbb{Z}, \\times)$ where identity $e = 1$."
+}

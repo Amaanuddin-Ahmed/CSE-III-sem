@@ -1,0 +1,9 @@
+{
+  "id": "DM-B3-1078",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "Use mathematical induction to show that 1+2+22+.+ 2\"=2\"+1_1 for all positive integers n.",
+  "answerMd": "### Principle of Mathematical Induction\n\nThe **Principle of Mathematical Induction (PMI)** is a formal mathematical proof technique used to establish that a statement $P(n)$ is true for all positive integers $n \\ge n_0$.\n\n#### Three Essential Steps:\n\n1. **Basis Step (Base Case):**\n   Show that the statement $P(n_0)$ is true for the initial value (typically $n = 1$).\n\n2. **Inductive Hypothesis:**\n   Assume that the proposition $P(k)$ is true for an arbitrary positive integer $k \\ge n_0$.\n\n3. **Inductive Step:**\n   Using the inductive hypothesis $P(k)$, prove that $P(k + 1)$ must necessarily be true.\n\n$$\\Big[ P(1) \\wedge \\forall k \\big( P(k) \\rightarrow P(k+1) \\big) \\Big] \\implies \\forall n \\ge 1: P(n)$$\n\n#### Concrete Example:\nProve $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.\n- **Base Case ($n=1$):** LHS $= 1$, RHS $= \\frac{1(2)}{2} = 1$. True.\n- **Inductive Hypothesis:** Assume true for $n=k$: $S_k = \\frac{k(k+1)}{2}$.\n- **Inductive Step ($n=k+1$):**\n  $$S_{k+1} = S_k + (k+1) = \\frac{k(k+1)}{2} + (k+1) = \\frac{(k+1)(k+2)}{2}$$\n  Matches the formula for $n=k+1$.\n\n$\\therefore$ By the Principle of Mathematical Induction, $P(n)$ holds for all $n \\in \\mathbb{Z}^+$."
+}

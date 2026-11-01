@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1031",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Define a group.",
+  "answerMd": "### Definition of a Group\nAn algebraic structure $(G, *)$ consisting of a non-empty set $G$ and a closed binary operation $*$ is called a **group** if it satisfies four axioms:\n\n1. **Closure:** $\\forall a, b \\in G: \\quad a * b \\in G$\n2. **Associativity:** $\\forall a, b, c \\in G: \\quad (a * b) * c = a * (b * c)$\n3. **Identity Element:** $\\exists e \\in G \\text{ such that } \\forall a \\in G: \\quad a * e = e * a = a$\n4. **Inverse Element:** $\\forall a \\in G, \\exists a^{-1} \\in G: \\quad a * a^{-1} = a^{-1} * a = e$\n\nIf additionally $a * b = b * a$ for all $a, b \\in G$, it is an **Abelian group**."
+}

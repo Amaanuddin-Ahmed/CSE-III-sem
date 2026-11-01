@@ -1,0 +1,9 @@
+{
+  "id": "DM-B5-1267",
+  "subjectId": "DM",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Find the minimal spanning tree using Kruskal's algorithm.",
+  "answerMd": "### Trees and Spanning Trees\n\n#### 1. Definition of a Tree:\nA **tree** is a connected undirected graph with no cycles.\n**Properties:**\n- A tree with $n$ vertices has exactly $n - 1$ edges ($|E| = n - 1$).\n- There is a unique simple path between any pair of vertices.\n- Adding any edge creates exactly one cycle.\n\n#### 2. Spanning Tree:\nA **spanning tree** of a connected graph $G = (V, E)$ is a subgraph that is a tree and includes all vertices in $V$.\n\n#### 3. Minimal Spanning Tree (MST) Algorithms:\n1. **Kruskal's Algorithm ($O(E \\log E)$):** Greedily selects edges with smallest weight that do not form a cycle.\n2. **Prim's Algorithm ($O(E + V \\log V)$):** Grows a single tree from a starting vertex by selecting minimum-weight cut edge."
+}

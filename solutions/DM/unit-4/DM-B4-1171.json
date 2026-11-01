@@ -1,0 +1,9 @@
+{
+  "id": "DM-B4-1171",
+  "subjectId": "DM",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Solve the recurrence relation an - 4a n-1+ 4 an-2 = (n²+1)2\" for n ≥2, given ao=0, a₁=1 by generating functions method.",
+  "answerMd": "### Generating Functions in Combinatorics\n\nThe **ordinary generating function** for an infinite sequence $(a_0, a_1, a_2, \\dots)$ is the formal power series:\n\n$$G(x) = \\sum_{n=0}^{\\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \\dots$$\n\n#### Key Properties & Standard Pairs:\n1. Sequence of all $1$s $(1, 1, 1, \\dots)$:\n   $$G(x) = 1 + x + x^2 + \\dots = \\frac{1}{1 - x}$$\n2. Geometric sequence $(1, a, a^2, \\dots)$:\n   $$G(x) = \\frac{1}{1 - ax}$$\n3. Binomial sequence $\\binom{n}{r}$:\n   $$(1 + x)^n = \\sum_{r=0}^n \\binom{n}{r} x^r$$\n\n#### Application:\nGenerating functions transform discrete recurrence relations into algebraic polynomial equations that can be solved directly by partial fraction expansion."
+}

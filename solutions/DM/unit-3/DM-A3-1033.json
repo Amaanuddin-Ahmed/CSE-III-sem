@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1033",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "How many 3-letter words can be formed using the letters from the word \"FABLE\"?",
+  "answerMd": "### Problem: 3-Letter Words from 'FABLE'\n\n#### Step-by-Step Solution:\n\n1. **Given Data:**\n   - The word **FABLE** contains $n = 5$ distinct letters: $\\{F, A, B, L, E\\}$.\n   - We need to form $3$-letter words ($r = 3$).\n\n2. **Permutation Formula:**\n   Since order matters in forming words and all letters are distinct:\n   $$P(n, r) = \\frac{n!}{(n - r)!}$$\n\n3. **Calculation:**\n   $$P(5, 3) = \\frac{5!}{(5 - 3)!} = \\frac{5!}{2!} = \\frac{120}{2} = 60$$\n\n$\\therefore$ **$60$** distinct $3$-letter words can be formed from 'FABLE'."
+}

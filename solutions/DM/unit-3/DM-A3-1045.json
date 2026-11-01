@@ -1,0 +1,9 @@
+{
+  "id": "DM-A3-1045",
+  "subjectId": "DM",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Write a short note on well-ordering property,",
+  "answerMd": "### The Well-Ordering Property\n\nThe **Well-Ordering Property** states that:\n> **Every non-empty set of non-negative integers contains a least (smallest) element.**\n\nFormally, if $S \\subseteq \\mathbb{N}$ and $S \\ne \\emptyset$, then:\n$$\\exists m \\in S \\quad \\text{such that} \\quad \\forall x \\in S: m \\le x$$\n\n#### Significance:\n1. It forms an axiom of the standard Peano arithmetic foundation of the natural numbers.\n2. It is logically equivalent to the Principle of Mathematical Induction and the Principle of Strong Mathematical Induction.\n3. Used fundamentally in division algorithms and establishing the termination of recursive algorithms."
+}
