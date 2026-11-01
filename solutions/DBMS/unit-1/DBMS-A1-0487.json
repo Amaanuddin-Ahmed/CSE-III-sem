@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A1-0487",
+  "subjectId": "DBMS",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "List different types of data models.",
+  "answerMd": "### Data Models in DBMS\n\n**Definition:**\nA **Data Model** is an abstract conceptual framework consisting of integrated tools for describing data, data relationships, data semantics, and consistency constraints.\n\n#### Major Categories of Data Models:\n1. **Relational Data Model (E.F. Codd, 1970):**\n   - Represents all data and relationships in the form of two-dimensional tables called **Relations** consisting of rows (tuples) and columns (attributes).\n   - Standard model behind Oracle, PostgreSQL, MySQL, and SQL Server.\n2. **Entity-Relationship (ER) Model:**\n   - High-level conceptual data model based on real-world objects called **Entities** and associations among them called **Relationships**.\n   - Used extensively during database conceptual design.\n3. **Hierarchical Data Model:**\n   - Organizes data in a tree-like structure with parent-child relationships (1:N), where each child record has exactly one parent (e.g., IBM IMS).\n4. **Network Data Model (CODASYL):**\n   - Represents data as records connected by links in a general graph (many-to-many relationships supported).\n5. **Object-Oriented Data Model:**\n   - Encapsulates data and member methods into objects, supporting inheritance, polymorphism, and complex objects.\n\n$$\\therefore \\text{The relational model is the universal standard for modern database management systems.}$$"
+}

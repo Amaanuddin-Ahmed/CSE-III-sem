@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-B2-0577",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Write about operations in relational algebra with an example?",
+  "answerMd": "### Fundamental Operations of Relational Algebra\n\n**Relational Algebra** is a formal procedural query language that takes one or two relations as input and produces a new relation as output.\n\n#### The 5 Fundamental Operations:\n1. **Select ($\\sigma$):** Unary operator that filters rows satisfying a predicate:\n   $$\\sigma_{\\text{Salary} > 50000}(Instructor)$$\n2. **Project ($\\pi$):** Unary operator that outputs specified columns while discarding duplicates:\n   $$\\pi_{\\text{Name}, \\text{Salary}}(Instructor)$$\n3. **Cartesian Product ($\\times$):** Combines every tuple of relation $R$ with every tuple of relation $S$:\n   $$R \\times S$$\n4. **Union ($\\cup$):** Combines tuples from two union-compatible relations without duplicates:\n   $$R \\cup S$$\n5. **Set Difference ($-$)**: Selects tuples that appear in $R$ but not in $S$:\n   $$R - S$$\n\n#### Derived Operations (Combinations of the Fundamental 5):\n- **Natural Join ($R \\bowtie S$):** Cartesian product followed by equality selection on common attributes and projection: $\\pi(\\sigma_{R.A = S.A}(R \\times S))$.\n- **Set Intersection ($R \\cap S$):** $R - (R - S)$.\n- **Division ($R \\div S$):** Useful for queries involving universal quantification (\"find customers who purchased all items\").\n\n$$\\therefore \\text{Relational algebra forms the theoretical execution framework for SQL query optimization.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A2-0558",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "What is the difference between primary key and unique key? Give example.",
+  "answerMd": "### Primary Key vs. Unique Key in SQL\n\nBoth `PRIMARY KEY` and `UNIQUE` constraints enforce entity uniqueness across table rows, but differ in syntax and nullability rules:\n\n| Feature | PRIMARY KEY Constraint | UNIQUE Constraint |\n| :--- | :--- | :--- |\n| **Nullability** | **Cannot accept NULL values** (strictly `NOT NULL` enforced). | **Can accept NULL values** (allows one or more `NULL` values depending on DBMS). |\n| **Count per Table**| Exactly **ONE** primary key permitted per table. | **Multiple** unique constraints permitted per table. |\n| **Default Index** | Automatically generates a **Clustered Index** on the column(s). | Automatically generates a **Non-Clustered Index**. |\n| **Semantic Role** | Serves as the canonical identifier for rows and foreign keys. | Guarantees uniqueness for secondary candidate keys (e.g., Email, PAN, Aadhaar). |\n\n#### SQL Syntax Example:\n```sql\nCREATE TABLE Students (\n    RollNo INT PRIMARY KEY,         -- Only one Primary Key; no NULLs\n    Email VARCHAR(100) UNIQUE,      -- Secondary Unique column\n    PassportNo VARCHAR(20) UNIQUE   -- Multiple UNIQUE constraints allowed\n);\n```\n\n$$\\therefore \\text{Primary Key is the mandatory unique row identifier; Unique keys guard secondary unique attributes.}$$"
+}

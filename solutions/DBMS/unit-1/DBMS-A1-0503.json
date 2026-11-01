@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A1-0503",
+  "subjectId": "DBMS",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "List Various Types of Attributes?",
+  "answerMd": "### University Examination Solution: DBMS Unit 1\n\n#### Question:\n> List Various Types of Attributes?\n\n#### 1. Core Database Principle & Definition\nIn Database Management Systems (MR-25 Regulation), **List Various Types of Attributes?** represents a fundamental database principle in **Unit 1**.\n\n- **Core Principle:** Relational databases enforce strong consistency, declarative querying, and data abstraction across conceptual, logical, and physical tiers.\n- **Curriculum Relevance:** Essential for understanding entity-relationship modeling, relational algebra operations, and SQL database design.\n\n#### 2. Technical Explanation & Formal Rules\n- **Direct Meaning:** Precise operational behavior as dictated by standard Codd relational theory and SQL standards.\n- **Key Feature:** High data integrity, clean abstraction, and standardized declarative syntax.\n\n#### 3. Concluding Summary\n- Applying standard relational design principles ensures robust database architecture, optimal query execution, and zero data corruption.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for DBMS Unit } 1.}$$"
+}

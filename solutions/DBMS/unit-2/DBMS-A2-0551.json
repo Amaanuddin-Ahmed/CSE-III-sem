@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A2-0551",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "Discuss the use of Rename operation?",
+  "answerMd": "### The Rename Operation ($\\rho$) in Relational Algebra\n\n**Definition:**\nThe **Rename Operation** (denoted by the lowercase Greek letter rho $\\rho$) allows us to rename a relational algebra expression, or both the relation name and its attribute names.\n\n#### Formal Notation:\n1. Renaming Relation Schema:\n   $$\\rho_{S}(E)$$\n   Returns the result of expression $E$ under the new name $S$.\n2. Renaming Relation and Attributes Simultaneously:\n   $$\\rho_{S(A_1, A_2, \\dots, A_n)}(E)$$\n   Returns relation $E$ named $S$, with its attributes renamed to $A_1, A_2, \\dots, A_n$.\n\n#### Why Rename Operation is Essential:\n1. **Self-Joins (Comparing Tuples within the Same Relation):**\n   When finding employees earning more than their manager in `EMP`, renaming allows joining `EMP` with itself unambiguously:\n   $$\\pi_{E.Name}(\\sigma_{E.Salary > M.Salary}(EMP \\bowtie_{E.MgrId = M.EmpId} \\rho_M(EMP)))$$ \n2. **Ambiguity Resolution in Joins:** Avoids naming collisions when two joined relations possess identically named columns.\n3. **Intermediate Expression Storing:** Simplifies long relational queries into readable temporary sub-results.\n\n$$\\therefore \\text{Rename operation enables self-joins and eliminates naming ambiguities in relational algebra.}$$"
+}

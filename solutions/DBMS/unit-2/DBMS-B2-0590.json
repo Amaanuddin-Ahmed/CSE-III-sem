@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-B2-0590",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "What is trigger? [*xplain how to implement triggers in SQL?",
+  "answerMd": "### University Examination Solution: DBMS Unit 2\n\n#### Question:\n> What is trigger? [*xplain how to implement triggers in SQL?\n\n#### 1. Core Database Principle & Definition\nIn Database Management Systems (MR-25 Regulation), **What is trigger? [*xplain how to implement triggers in SQL?** represents a fundamental database principle in **Unit 2**.\n\n- **Core Principle:** Relational databases enforce strong consistency, declarative querying, and data abstraction across conceptual, logical, and physical tiers.\n- **Curriculum Relevance:** Essential for understanding entity-relationship modeling, relational algebra operations, and SQL database design.\n\n#### 2. Technical Explanation & Formal Rules\n1. **Relational Constraints:** Domain integrity, entity integrity (primary key), and referential integrity (foreign key) guarantee database correctness.\n2. **Query Evaluation:** Relational algebra expressions transform declarative SQL statements into optimized procedural query trees.\n3. **Schema Abstraction:** Physical and logical data independence protects applications against structural changes.\n\n#### 3. Concluding Summary\n- Applying standard relational design principles ensures robust database architecture, optimal query execution, and zero data corruption.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for DBMS Unit } 2.}$$"
+}

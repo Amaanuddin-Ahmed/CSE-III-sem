@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A1-0484",
+  "subjectId": "DBMS",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "Write about the Database languages.",
+  "answerMd": "### Database Languages: DDL, DML, DCL, and TCL\n\nA DBMS provides specialized languages for defining, manipulating, controlling, and managing data:\n\n| Category | Full Name | Primary Purpose | Common SQL Statements |\n| :--- | :--- | :--- | :--- |\n| **DDL** | Data Definition Language | Defines, alters, and deletes database schema structures in the data dictionary. | `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME` |\n| **DML** | Data Manipulation Language | Retrieves, inserts, modifies, and deletes instance records from tables. | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |\n| **DCL** | Data Control Language | Manages user access permissions, privileges, and database security. | `GRANT`, `REVOKE` |\n| **TCL** | Transaction Control Language | Manages transactions and guarantees ACID atomicity and durability. | `COMMIT`, `ROLLBACK`, `SAVEPOINT` |\n\n#### Characteristics:\n- DDL commands automatically issue an implicit `COMMIT` (permanent schema modification).\n- DML operations can be rolled back using TCL `ROLLBACK` within an active transaction block.\n\n$$\\therefore \\text{DDL manages structure; DML manages content; DCL manages access; TCL manages transactions.}$$"
+}

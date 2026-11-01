@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A2-0556",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "What is View? State its purpose.",
+  "answerMd": "### Database Views: Definition and Purpose\n\n**Definition:**\nA **View** in SQL is a virtual table whose contents are defined by an underlying SQL query. A view does not physically store duplicate data on disk (unless materialized); it dynamically generates data at query time from the base tables.\n\n#### SQL Syntax:\n```sql\nCREATE VIEW HighSalaryEmployees AS\nSELECT EmpId, Name, Department, Salary\nFROM Employee\nWHERE Salary > 80000;\n```\n\n#### Key Purposes & Advantages of Views:\n1. **Data Security & Confidentiality:** Restricts user access to sensitive columns (e.g., exposing employee names while hiding bank account numbers or passwords).\n2. **Query Simplification:** Hides complex multi-table joins, aggregations, and subqueries behind a single simple view name (`SELECT * FROM HighSalaryEmployees`).\n3. **Logical Data Independence:** If base table schemas change, altering the view definition preserves existing external applications without rewriting their client queries.\n\n$$\\therefore \\text{Views enhance security, abstract complexity, and provide logical data independence.}$$"
+}
