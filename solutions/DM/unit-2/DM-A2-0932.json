@@ -1,0 +1,9 @@
+{
+  "id": "DM-A2-0932",
+  "subjectId": "DM",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "Explain Antisymmetric, irreflexive properties of a relation with examples?",
+  "answerMd": "### Antisymmetric and Irreflexive Properties of Relations\n\nLet $R$ be a binary relation on set $A$ ($R \\subseteq A \\times A$):\n\n#### 1. Antisymmetric Property\n- **Formal Definition:** A relation $R$ on set $A$ is **antisymmetric** if whenever $(a, b) \\in R$ and $(b, a) \\in R$, then $a$ must equal $b$:\n  $$\\forall a, b \\in A, \\quad ((a, b) \\in R \\land (b, a) \\in R) \\implies a = b$$\n- **Contrapositive formulation:** If $a \\ne b$, then $(a, b) \\in R$ and $(b, a) \\in R$ cannot both hold simultaneously.\n- **Example:** The \"less than or equal to\" relation $(\\le)$ on $\\mathbb{R}$:\n  $$(x \\le y \\land y \\le x) \\implies x = y \\quad \\text{(Antisymmetric)}$$\n- *Note:* Antisymmetry is NOT the opposite of symmetry. A relation can be both, neither, or either.\n\n#### 2. Irreflexive Property\n- **Formal Definition:** A relation $R$ on set $A$ is **irreflexive** if no element in $A$ is related to itself:\n  $$\\forall a \\in A, \\quad (a, a) \\notin R$$\n- **Example:** The strict inequality relation \"$<$\" on $\\mathbb{Z}$:\n  For any integer $a$, $a < a$ is false, so $(a, a) \\notin R$ for all $a$ (Irreflexive).\n\n$$\\therefore \\text{Partial orders are Reflexive and Antisymmetric; strict orders are Irreflexive and Antisymmetric.}$$"
+}

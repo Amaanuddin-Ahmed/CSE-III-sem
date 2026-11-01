@@ -1,0 +1,9 @@
+{
+  "id": "DM-A2-0930",
+  "subjectId": "DM",
+  "chapter": 2,
+  "part": "A",
+  "marks": 1,
+  "question": "Give an example of a Bijective function.",
+  "answerMd": "### Bijective Function (One-to-One Correspondence)\n\n**Formal Definition:**\nA function $f: A \\to B$ from set $A$ to set $B$ is called **Bijective** (a bijection) if and only if it is both **Injective (One-to-One)** and **Surjective (Onto)**.\n\n#### 1. Injective (One-to-One):\n- Distinct elements in domain $A$ map to distinct elements in codomain $B$:\n  $$\\forall x_1, x_2 \\in A, \\quad f(x_1) = f(x_2) \\implies x_1 = x_2$$\n\n#### 2. Surjective (Onto):\n- Every element in codomain $B$ has at least one pre-image in domain $A$:\n  $$\\forall y \\in B, \\quad \\exists x \\in A \\text{ such that } f(x) = y \\quad (\\text{Range } f = \\text{Codomain } B)$$\n\n#### Concrete Example:\nLet $f: \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = 2x + 5$:\n1. **Injectivity:** Let $f(x_1) = f(x_2) \\implies 2x_1 + 5 = 2x_2 + 5 \\implies 2x_1 = 2x_2 \\implies x_1 = x_2$. (One-to-One)\n2. **Surjectivity:** For any real $y \\in \\mathbb{R}$, choose $x = \\frac{y - 5}{2} \\in \\mathbb{R}$. Then $f(x) = 2\\left(\\frac{y-5}{2}\\right) + 5 = y$. (Onto)\n- Hence, $f(x) = 2x + 5$ is a **Bijective function**.\n\n#### Invertibility:\n- A function is invertible ($f^{-1}$ exists) if and only if it is bijective.\n\n$$\\therefore \\text{A bijection establishes an exact one-to-one correspondence between domain and codomain.}$$"
+}

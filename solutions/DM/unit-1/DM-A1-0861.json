@@ -1,0 +1,9 @@
+{
+  "id": "DM-A1-0861",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "Write contra positive of the conditional statement: p: 2+2=4, q: I am not the Prime Minister of India.",
+  "answerMd": "### Conditional Statement: Converse, Inverse, and Contrapositive\n\n#### Original Implication Statement:\n> *\"If $X$ is odd, then $X^2$ is odd.\"*\n\nLet:\n- $P$: \"$X$ is odd\"\n- $Q$: \"$X^2$ is odd\"\n- Original statement format: $P \\to Q$\n\n---\n\n#### 1. Converse ($Q \\to P$)\n- **Form:** If consequence $Q$, then antecedent $P$.\n- **Statement:** *\"If $X^2$ is odd, then $X$ is odd.\"*\n\n#### 2. Inverse ($\\neg P \\to \\neg Q$)\n- **Form:** If not $P$, then not $Q$.\n- **Statement:** *\"If $X$ is not odd (i.e. $X$ is even), then $X^2$ is not odd (i.e. $X^2$ is even).\"*\n\n#### 3. Contrapositive ($\\neg Q \\to \\neg P$)\n- **Form:** If not $Q$, then not $P$.\n- **Statement:** *\"If $X^2$ is not odd (i.e. $X^2$ is even), then $X$ is not odd (i.e. $X$ is even).\"*\n\n#### Logical Equivalence Note:\n- An implication and its contrapositive are logically equivalent: $P \\to Q \\equiv \\neg Q \\to \\neg P$.\n\n$$\\therefore \\text{Converse: If } X^2 \\text{ is odd, } X \\text{ is odd. Contrapositive: If } X^2 \\text{ is even, } X \\text{ is even.}$$"
+}

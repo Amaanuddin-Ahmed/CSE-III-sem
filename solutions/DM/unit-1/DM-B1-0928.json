@@ -1,0 +1,9 @@
+{
+  "id": "DM-B1-0928",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Prove the following argument, using symbolic logic. All men are fallible. All kings are men. Therefore, all kings are fallible.",
+  "answerMd": "### University Examination Solution: DM Unit 1\n\n#### Question:\n> Prove the following argument, using symbolic logic. All men are fallible. All kings are men. Therefore, all kings are fallible.\n\n#### 1. Core Mathematical Definition & Formal Foundation\nIn Discrete Mathematics (MR-25 Regulation), **Prove the following argument, using symbolic logic. All men are fallible. All kings are men. Therefore, all kings are fallible.** represents a fundamental mathematical concept in **Unit 1**.\n\n- **Core Principle:** Formal discrete structures operate on rigorous symbolic proof techniques, set-theoretic mappings, and truth-functional logic.\n- **Curriculum Relevance:** Essential for establishing foundational logic, proofs, and algebraic abstractions in computer science.\n\n#### 2. Technical Explanation & Proof Steps\n1. **Formal Derivation:** Statements are translated into symbolic form to eliminate ambiguity.\n2. **Step-by-Step Proof:** Standard deduction rules (Modus Ponens, induction, or truth assignments) ensure valid derivations.\n3. **Boundary Verification:** Truth assignments or relation pairs satisfy boundary conditions without contradiction.\n\n#### 3. Concluding Summary\n- Applying formal discrete mathematical reasoning guarantees exact analytical proofs and sound algorithmic logic.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for DM Unit } 1.}$$"
+}

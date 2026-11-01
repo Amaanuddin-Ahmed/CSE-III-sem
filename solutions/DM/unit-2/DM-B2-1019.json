@@ -1,0 +1,9 @@
+{
+  "id": "DM-B2-1019",
+  "subjectId": "DM",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Draw Hasse Diagram for the poset ({2, 4, 6, 9, 12, 18, 27, 36, 48, 60, 72}, ) and answer below questions i) Find the maximal elements and minimal elements. ii) Find all upper bounds and least upper bounds of {2, 9}.",
+  "answerMd": "### Partial Ordering Relation and Posets\n\n**Formal Definition:**\nA relation $R$ on a set $S$ is called a **Partial Ordering Relation** (or partial order) if it satisfies three axioms:\n1. **Reflexive:** $\\forall x \\in S, \\; (x, x) \\in R$.\n2. **Antisymmetric:** $\\forall x, y \\in S, \\; ((x, y) \\in R \\land (y, x) \\in R) \\implies x = y$.\n3. **Transitive:** $\\forall x, y, z \\in S, \\; ((x, y) \\in R \\land (y, z) \\in R) \\implies (x, z) \\in R$.\n\n- A set $S$ together with a partial order $\\le$ is called a **Partially Ordered Set**, denoted as a pair $(S, \\le)$ or **POSET**.\n\n#### Classic Examples:\n1. $(\\mathbb{Z}, \\le)$: Standard arithmetic less-than-or-equal relation.\n2. $(\\mathcal{P}(A), \\subseteq)$: The power set of $A$ ordered by subset inclusion.\n3. $(\\mathbb{Z}^+, \\mid)$: Positive integers ordered by divisibility ($a \\mid b$).\n\n#### Visual Representation: Hasse Diagram\n- A simplified directed graph of a finite poset where reflexive self-loops and transitive composite edges are omitted, and relations are drawn moving upwards.\n\n$$\\therefore \\text{A poset formalizes hierarchical precedence without requiring total comparability.}$$"
+}

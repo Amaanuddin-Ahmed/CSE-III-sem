@@ -1,0 +1,9 @@
+{
+  "id": "DM-B1-0883",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Obtain the PDNF for (PAQ) V (-PAR) V (QAR).",
+  "answerMd": "### Normal Forms: CNF and DNF in Propositional Logic\n\n#### 1. Conjunctive Normal Form (CNF)\n- **Definition:** A compound statement is in **Conjunctive Normal Form (CNF)** if it is expressed as a conjunction of one or more clauses, where each clause is a disjunction of literals:\n  $$\\text{CNF} = \\bigwedge_{i=1}^m \\left( \\bigvee_{j=1}^{k_i} L_{ij} \\right) = (L_1 \\lor L_2) \\land (L_3 \\lor L_4 \\lor L_5) \\land \\dots$$\n- **Example:** $(P \\lor \\neg Q) \\land (\\neg P \\lor R \\lor S)$ is in CNF.\n\n#### 2. Disjunctive Normal Form (DNF)\n- **Definition:** A statement is in **Disjunctive Normal Form (DNF)** if it is expressed as a disjunction of conjunctions of literals (a \"sum of products\"):\n  $$\\text{DNF} = \\bigvee_{i=1}^m \\left( \\bigwedge_{j=1}^{k_i} L_{ij} \\right) = (L_1 \\land L_2) \\lor (L_3 \\land \\neg L_4) \\lor \\dots$$\n- **Example:** $(P \\land Q) \\lor (\\neg P \\land R)$ is in DNF.\n\n#### Principle Normal Forms:\n- **PCNF (Maxterms):** Each disjunctive clause contains every propositional variable of the formula.\n- **PDNF (Minterms):** Each conjunctive term contains every variable, corresponding directly to the rows of the truth table that evaluate to True.\n\n$$\\therefore \\text{CNF represents products-of-sums; DNF represents sums-of-products.}$$"
+}

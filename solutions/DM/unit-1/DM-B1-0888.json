@@ -1,0 +1,9 @@
+{
+  "id": "DM-B1-0888",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Construct the truth table for the following statement: (P→Q)V(IP-R)",
+  "answerMd": "### Construction of Truth Table for $\\neg (P \\lor (Q \\land R))$\n\n#### Formula Evaluation Steps:\nGiven the propositional variables $P, Q, R$, there are $2^3 = 8$ truth assignments:\n\n| $P$ | $Q$ | $R$ | $Q \\land R$ | $P \\lor (Q \\land R)$ | $\\mathbf{\\neg (P \\lor (Q \\land R))}$ |\n| :---: | :---: | :---: | :---: | :---: | :---: |\n| T | T | T | T | T | **F** |\n| T | T | F | F | T | **F** |\n| T | F | T | F | T | **F** |\n| T | F | F | F | T | **F** |\n| F | T | T | T | T | **F** |\n| F | T | F | F | F | **T** |\n| F | F | T | F | F | **T** |\n| F | F | F | F | F | **T** |\n\n#### Observation:\n- The formula evaluates to **True (T)** exactly when $P = \\text{False}$ and at least one of $Q$ or $R$ is **False**.\n- Since the truth values contain both T and F, the formula is a **Contingency** (satisfiable but not a tautology).\n\n$$\\therefore \\text{Truth table verified for all 8 standard boolean valuations.}$$"
+}

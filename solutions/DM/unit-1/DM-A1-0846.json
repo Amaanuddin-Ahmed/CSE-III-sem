@@ -1,0 +1,9 @@
+{
+  "id": "DM-A1-0846",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "What is universal and existential Quantifiers?",
+  "answerMd": "### Universal and Existential Quantifiers in Predicate Logic\n\nIn first-order predicate calculus, **Quantifiers** indicate the scope and quantity of specimens in the domain of discourse for which a predicate $P(x)$ holds true:\n\n#### 1. Universal Quantifier ($\\forall$)\n- **Symbol:** $\\forall$ (Read: \"For all\", \"For every\", \"For each\").\n- **Definition:** $\\forall x \\, P(x)$ asserts that $P(x)$ is true for **every element** $x$ in the domain of discourse $D$.\n- **Truth Condition:** True if $P(a)$ is true for every $a \\in D$; False if there exists at least one counterexample $a \\in D$ where $P(a)$ is false.\n- *Example:* \"All humans are mortal\" $\\implies \\forall x \\, (H(x) \\to M(x))$.\n\n#### 2. Existential Quantifier ($\\exists$)\n- **Symbol:** $\\exists$ (Read: \"There exists\", \"For some\", \"At least one\").\n- **Definition:** $\\exists x \\, P(x)$ asserts that there is **at least one element** $x$ in the domain $D$ for which $P(x)$ is true.\n- **Truth Condition:** True if $P(a)$ is true for at least one $a \\in D$; False only if $P(x)$ is false for every single element in $D$.\n- *Example:* \"Some prime numbers are even\" $\\implies \\exists x \\, (P(x) \\land E(x))$.\n\n#### De Morgan's Laws for Quantifiers:\n$$\\neg (\\forall x \\, P(x)) \\equiv \\exists x \\, \\neg P(x)$$\n$$\\neg (\\exists x \\, P(x)) \\equiv \\forall x \\, \\neg P(x)$$\n\n$$\\therefore \\text{Quantifiers transform propositional functions into definite truth-evaluable propositions.}$$"
+}

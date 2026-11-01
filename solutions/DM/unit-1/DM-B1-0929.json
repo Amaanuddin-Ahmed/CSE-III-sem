@@ -1,0 +1,9 @@
+{
+  "id": "DM-B1-0929",
+  "subjectId": "DM",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Using the truth table, show that the proposition PVI(PAQ) is a} tautology.",
+  "answerMd": "### Definition and Properties of a Tautology\n\n**Formal Definition:**\nIn propositional logic, a compound statement formula $A(P_1, P_2, \\dots, P_n)$ is called a **Tautology** (universally valid) if and only if it evaluates to **True (T)** under every possible assignment of truth values to its constituent propositional variables.\n\n- A tautology is denoted by the symbol $\\mathbf{\\top}$ or $\\mathbf{1}$.\n- The negation of a tautology is a **Contradiction** (absurdity, $\\mathbf{\\bot}$), which is false under all assignments.\n\n#### Canonical Examples:\n1. **Law of Excluded Middle:**\n   $$P \\lor \\neg P \\equiv \\mathbf{T}$$\n2. **Law of Non-Contradiction (Negated):**\n   $$\\neg(P \\land \\neg P) \\equiv \\mathbf{T}$$\n3. **Self-Implication:**\n   $$P \\to P \\equiv \\neg P \\lor P \\equiv \\mathbf{T}$$\n\n#### Verification via Truth Table ($P \\lor \\neg P$):\n| $P$ | $\\neg P$ | $P \\lor \\neg P$ |\n| :---: | :---: | :---: |\n| T | F | **T** |\n| F | T | **T** |\n\n$$\\therefore \\text{Every row evaluates to True; hence the formula is a valid Tautology.}$$"
+}
