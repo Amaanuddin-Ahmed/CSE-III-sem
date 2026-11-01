@@ -426,56 +426,6 @@
           </div>
         </div>
 
-        <!-- PYQ Search & Filter Controls -->
-        <div class="pyq-filters-container">
-          <!-- Search + collapsible filters -->
-          <div class="pyq-toolbar">
-            <div class="pyq-search-box">
-              <i class="fa-solid fa-magnifying-glass search-icon"></i>
-              <input type="text" id="pyqSearchInput" class="pyq-search-input" placeholder="Search this subject (e.g. Normalization, Booth, Tautology)..." autocomplete="off">
-              <button type="button" id="clearPyqSearchBtn" class="pyq-search-clear" style="display: none;" title="Clear search">&times;</button>
-            </div>
-            <button type="button" id="pyqFilterToggle" class="pyq-filter-toggle" aria-expanded="false" aria-controls="pyqFilterPanel">
-              <i class="fa-solid fa-sliders"></i>
-              <span>Filters</span>
-              <span class="filter-count" id="activeFilterCount" hidden>0</span>
-            </button>
-          </div>
-
-          <div class="pyq-filter-panel" id="pyqFilterPanel" hidden>
-            <div class="filter-group">
-              <div class="filter-group-title">Year</div>
-              <div class="filter-options" id="yearFilterOptions">
-                <!-- year checkboxes are generated from the loaded papers -->
-              </div>
-            </div>
-            
-                        <div class="filter-group">
-              <div class="filter-group-title">Part</div>
-              <div class="filter-options">
-                <label class="filter-option"><input type="radio" name="partFilter" value="all" checked> <span>All questions</span></label>
-                <label class="filter-option"><input type="radio" name="partFilter" value="A"> <span>Part A</span></label>
-                <label class="filter-option"><input type="radio" name="partFilter" value="B"> <span>Part B</span></label>
-              </div>
-            </div>
-<div class="filter-group">
-              <div class="filter-group-title">Show</div>
-              <div class="filter-options">
-                <label class="filter-option"><input type="checkbox" id="repeatedOnlyFilter"> <span>Repeated questions only</span></label>
-              </div>
-            </div>
-            <div class="filter-panel-actions">
-              <button type="button" id="resetFiltersBtn" class="btn-secondary-flat">Reset filters</button>
-              <button type="button" id="applyFiltersBtn" class="btn-action-primary"><span id="applyFilterCountText">Show questions</span></button>
-            </div>
-          </div>
-
-          <!-- Dynamic Question Count Summary -->
-          <div class="pyq-count-banner" id="pyqCountBanner">
-            Loading questions…
-          </div>
-        </div>
-
         <!-- 5 Chapter Accordions Container (CH 1 to CH 5) -->
         <div class="chapter-accordions-container" id="chapterAccordionsContainer">
           <!-- Dynamically populated 5 Chapter Accordion Rows: CH 1 to CH 5 -->
@@ -515,7 +465,7 @@
              class="attribution-link"
              title="Connect with Amaan on LinkedIn">
             <span class="attribution-text">Made by <span class="amaan-name-gradient" style="text-decoration: underline; text-underline-offset: 3px;">Amaan</span></span>
-            <span class="app-version-stamp" style="font-size: 10px; color: var(--text-muted); opacity: 0.7; margin-left: 6px;">v2026.11.01-0f53b11</span>
+            
           </a>
         </div>
         <div class="footer-rate-box">
@@ -669,14 +619,21 @@
   <div class="modal-backdrop" id="askWithModal" style="display: none; z-index: 100003;" role="dialog" aria-modal="true" aria-labelledby="askWithModalTitle">
     <div class="modal-dialog small-dialog ask-with-dialog">
       <div class="modal-header">
-        <h4 class="modal-dialog-title" id="askWithModalTitle"><i class="fa-solid fa-wand-magic-sparkles"></i> Ask with AI</h4>
+        <h4 class="modal-dialog-title" id="askWithModalTitle"><i class="fa-solid fa-wand-magic-sparkles"></i> Ask with:</h4>
         <button type="button" class="modal-close-btn" id="closeAskWithModalBtn" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body" style="padding: 16px 20px;">
         <!-- Soft green copied strip -->
-        <div class="ask-copied-strip" id="askCopiedStrip">
+        <div class="ask-copied-strip" id="askCopiedStrip" role="status" aria-live="polite">
           <i class="fa-solid fa-circle-check"></i>
           <span>Question copied to clipboard</span>
+        </div>
+        <div class="ask-copy-fallback" id="askCopyFallback" style="display: none;">
+          <p>Couldn't copy automatically. Select the text below and copy it.</p>
+          <textarea id="askCopyFallbackText" readonly rows="4" aria-label="Question text to copy"></textarea>
+          <button type="button" class="btn-action-primary" id="askCopyFallbackBtn">
+            <i class="fa-regular fa-copy"></i> Copy question
+          </button>
         </div>
         <p class="ask-with-subcue">Paste it in the app if the question doesn't appear automatically.</p>
 
@@ -729,17 +686,22 @@
           <span class="modal-badge" id="solSubjectBadge">DM</span>
           <span class="modal-badge secondary" id="solMarksBadge">2 Marks</span>
           <span class="modal-badge tertiary" id="solUnitBadge">Unit 1</span>
+          <span class="sol-status-chip" id="solStatusChip">AI-generated · verify with your notes</span>
         </div>
         <button type="button" class="modal-close-btn" id="closeSolutionModalBtn" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body" style="padding: 22px 26px;">
         <h3 class="solution-question-heading" id="solQuestionTitle">Question Text</h3>
+        <div class="sol-paper-notice" id="solPaperNotice" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>This question refers to a figure or table in the original paper. Open the paper to see it.</span>
+        </div>
         <div class="solution-model-answer ai-msg-body" id="solAnswerBody">
           <!-- Populated dynamically with verified structured model answer -->
         </div>
         <div class="solution-actions-row">
-          <button type="button" class="btn-action-primary" id="solAskAiDeeperBtn">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ask AI for Deeper Explanation</span>
+          <button type="button" class="btn-action-primary sol-ask-ai-btn" id="solAskAiDeeperBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Still have doubts? Ask with AI</span>
           </button>
           <button type="button" class="btn-secondary-flat" id="solCloseBtn">Close</button>
         </div>

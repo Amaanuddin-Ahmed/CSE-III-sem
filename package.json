@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "stamp": "node scripts/stamp-build.js",
+    "verify": "node scripts/verify-all.js"
+  },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
   }

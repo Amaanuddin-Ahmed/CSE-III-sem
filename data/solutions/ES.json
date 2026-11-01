@@ -1,6 +1,6 @@
 {
   "subjectId": "ES",
-  "generatedAt": "2026-10-31T20:40:24.971Z",
+  "generatedAt": "2026-11-01T04:34:30.604Z",
   "count": 24,
   "solutions": {
     "es|enumerate the classification of ecosystems": {
@@ -9,135 +9,7 @@
       "question": "Enumerate the classification of ecosystems.",
       "chapter": 1,
       "marks": 2,
-      "answerMd": "### Classification of Ecosystems\nAn **ecosystem** is a self-sustaining structural and functional unit of the biosphere where living organisms interact with each other and their physical environment.\n\n```text\n                               ECOSYSTEMS\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   TERRESTRIAL (Land-based)                            AQUATIC (Water-based)\n         |                                                   |\n   +-----+-----+-----+                         +-------------+-------------+\n   |     |     |     |                         |                           |\nForest Grass- Desert Tundra               Freshwater                     Marine\n        land                             (Rivers, Lakes, Ponds)    (Oceans, Estuaries)\n```\n\n1. **Terrestrial Ecosystems (Land-based):**\n   - **Forest Ecosystem:** High tree density, canopy layers, rich biodiversity (Tropical, Temperate, Boreal/Taiga).\n   - **Grassland Ecosystem:** Dominated by herbaceous grasses with moderate rainfall (Savannas, Prairies, Steppes).\n   - **Desert Ecosystem:** Arid landscapes with rainfall $< 25\\text{ cm/year}$, drought-tolerant xerophytic vegetation.\n   - **Tundra Ecosystem:** Treeless polar regions with permafrost subsoil.\n\n2. **Aquatic Ecosystems (Water-based):**\n   - **Freshwater Ecosystem:** Salt concentration $< 0.5\\text{ ppt}$; subdivided into *Lotic* (flowing: rivers, streams) and *Lentic* (standing: lakes, ponds, wetlands).\n   - **Marine Ecosystem:** High salinity ($> 35\\text{ ppt}$); includes open oceans, coral reefs, and estuaries."
-    },
-    "es|define the biogeochemical cycle explain the carbon cycle in detail": {
-      "key": "es|define the biogeochemical cycle explain the carbon cycle in detail",
-      "subjectId": "ES",
-      "question": "Define the biogeochemical cycle. Explain the carbon cycle in detail.",
-      "chapter": 1,
-      "marks": 2,
-      "answerMd": "### 1. Definition of Biogeochemical Cycle\nA **biogeochemical cycle** is the pathway by which an essential chemical element or molecule circulates through the biotic (biosphere) and abiotic (lithosphere, hydrosphere, atmosphere) components of Earth.\n\n### 2. The Carbon Cycle\nCarbon ($C$) forms the fundamental backbone of all organic biomolecules (carbohydrates, proteins, lipids, and nucleic acids).\n\n```text\n                  ATMOSPHERIC CO2 (750 Gt C Pool)\n                    ^     ^        |\n      Respiration  |     | Combustion of Fossil Fuels\n                   |     |         v\n               Animals  Factories  Photosynthesis\n                   ^               |\n                   | Grazing       v\n               Plants <--------- Organic Carbon\n                   |\n                   v (Death & Decay)\n               Soil Decomposers ---> Fossil Fuels (Millions of years)\n```\n\n### 3. Core Chemical & Ecological Steps:\n1. **Biological Fixation (Photosynthesis):**\n   $$6CO_2 + 6H_2O \\xrightarrow{\\text{Light, Chlorophyll}} C_6H_{12}O_6 + 6O_2$$\n2. **Biological Release (Cellular Respiration):**\n   $$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + \\text{ATP}$$\n3. **Decomposition:** Microbial decomposers oxidize dead biomass, returning $CO_2$ to soil and air.\n4. **Combustion & Anthropogenic Impact:** Industrial fossil-fuel burning produces excess $CO_2$, accelerating global warming."
-    },
-    "es|define the biogeochemical cycle explain the processes of the nitrogen cycle with a diagram": {
-      "key": "es|define the biogeochemical cycle explain the processes of the nitrogen cycle with a diagram",
-      "subjectId": "ES",
-      "question": "Define the biogeochemical cycle. Explain the processes of the nitrogen cycle with a diagram.",
-      "chapter": 1,
-      "marks": 3,
-      "answerMd": "### 1. Definition of Nitrogen Cycle\nThe **nitrogen cycle** is the biogeochemical cycle by which atmospheric dinitrogen ($N_2$, $78\\%$ of air) is converted into reactive chemical forms usable by living organisms, passed through food webs, and returned to the atmosphere.\n\n### 2. Five Sequential Stages of the Nitrogen Cycle:\n\n```text\n                Atmospheric Nitrogen (N2)\n                  |                  ^\n       Nitrogen   |                  | Denitrification\n       Fixation   v                  | (Pseudomonas)\n             Ammonia (NH3)       Nitrates (NO3-)\n                  |                  ^\n      Nitrification                  | Nitrification\n     (Nitrosomonas)                  | (Nitrobacter)\n                  v                  |\n                   Nitrites (NO2-) --+\n```\n\n1. **Nitrogen Fixation:** Reduction of atmospheric $N_2$ into Ammonia ($NH_3$/$NH_4^+$) via biological nitrogen fixers (*Rhizobium* in legume root nodules, *Azotobacter*) or industrial Haber-Bosch process.\n2. **Nitrification:** Two-step aerobic biological oxidation:\n   - Step 1: $2NH_3 + 3O_2 \\xrightarrow{\\text{Nitrosomonas}} 2NO_2^- + 2H^+ + 2H_2O$\n   - Step 2: $2NO_2^- + O_2 \\xrightarrow{\\text{Nitrobacter}} 2NO_3^-$\n3. **Assimilation:** Plant roots absorb nitrates ($NO_3^-$) to synthesize essential amino acids and nucleic acids.\n4. **Ammonification:** Fungal and bacterial decay of organic excreta/carcasses converts organic nitrogen back into ammonia ($NH_3$).\n5. **Denitrification:** Anaerobic bacteria (*Pseudomonas denitrificans*, *Thiobacillus*) reduce $NO_3^-$ back to gaseous $N_2$, completing the cycle."
-    },
-    "es|list renewable energy sources and explain their advantages": {
-      "key": "es|list renewable energy sources and explain their advantages",
-      "subjectId": "ES",
-      "question": "List renewable energy sources and explain their advantages.",
-      "chapter": 2,
-      "marks": 3,
-      "answerMd": "### Renewable Energy Sources & Advantages\n\n### 1. Key Renewable Energy Sources:\n1. **Solar Power:** Photovoltaic silicon semiconductors and concentrated solar thermal plants.\n2. **Wind Energy:** Large-scale horizontal and vertical axis wind turbines generating rotational kinetic energy.\n3. **Hydroelectric Power:** Gravitational head of impounded dam water driving hydraulic turbines.\n4. **Biomass & Biogas:** Anaerobic digestion of livestock manure and crop residues yielding methane ($CH_4$).\n5. **Geothermal Energy:** Enthalpy of hydrothermal steam from volcanic crustal reservoirs.\n6. **Oceanic / Tidal:** Kinetic energy harvested from tidal surges and surface sea waves.\n\n### 2. Environmental & Economic Advantages:\n- **Zero Combustion Greenhouse Emissions:** Operates without generating $CO_2$, sulfur dioxide ($SO_2$), or nitrous oxides ($NO_x$).\n- **Inexhaustible & Sustainable:** Unaffected by fossil-fuel depletion or OPEC oil embargoes.\n- **Decentralized Generation:** Rooftop solar microgrids eliminate transmission and distribution (T&D) losses.\n- **Air Quality Improvement:** Drastically lowers particulate matter ($PM_{2.5}$) and acid precipitation."
-    },
-    "es|enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability": {
-      "key": "es|enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability",
-      "subjectId": "ES",
-      "question": "Enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability.",
-      "chapter": 2,
-      "marks": 3,
-      "answerMd": "### Renewable Energy Sources & Advantages\n\n### 1. Key Renewable Energy Sources:\n1. **Solar Power:** Photovoltaic silicon semiconductors and concentrated solar thermal plants.\n2. **Wind Energy:** Large-scale horizontal and vertical axis wind turbines generating rotational kinetic energy.\n3. **Hydroelectric Power:** Gravitational head of impounded dam water driving hydraulic turbines.\n4. **Biomass & Biogas:** Anaerobic digestion of livestock manure and crop residues yielding methane ($CH_4$).\n5. **Geothermal Energy:** Enthalpy of hydrothermal steam from volcanic crustal reservoirs.\n6. **Oceanic / Tidal:** Kinetic energy harvested from tidal surges and surface sea waves.\n\n### 2. Environmental & Economic Advantages:\n- **Zero Combustion Greenhouse Emissions:** Operates without generating $CO_2$, sulfur dioxide ($SO_2$), or nitrous oxides ($NO_x$).\n- **Inexhaustible & Sustainable:** Unaffected by fossil-fuel depletion or OPEC oil embargoes.\n- **Decentralized Generation:** Rooftop solar microgrids eliminate transmission and distribution (T&D) losses.\n- **Air Quality Improvement:** Drastically lowers particulate matter ($PM_{2.5}$) and acid precipitation."
-    },
-    "es|define food chain and food web giving suitable examples": {
-      "key": "es|define food chain and food web giving suitable examples",
-      "subjectId": "ES",
-      "question": "Define food chain and food web, giving suitable examples.",
-      "chapter": 1,
-      "marks": 2,
-      "answerMd": "### Food Chains vs. Food Webs\n\n### 1. Food Chain\nA **food chain** is a linear transfer of energy and nutrients as one organism consumes another at successive trophic tiers.\n\n**Terrestrial Grassland Example:**\n$$\\text{Green Grass (Producer)} \\xrightarrow{10\\%} \\text{Grasshopper (Primary Consumer)} \\xrightarrow{10\\%} \\text{Frog (Secondary)} \\xrightarrow{10\\%} \\text{Snake} \\xrightarrow{10\\%} \\text{Hawk (Apex Predator)}$$\n\n### 2. Food Web\nA **food web** is a complex, interconnected matrix of multiple intersecting food chains within an ecosystem.\n\n```text\n                       Eagle (Apex)\n                      /    |    \\\n                   Snake  Hawk   Fox\n                    / \\    |     |\n                 Frog Mouse Rabbit\n                   \\  /    /\n                   Grasses (Producers)\n```\n\n### 3. Key Ecological Principles:\n- **Resilience:** A food web confers ecosystem stability because alternative prey choices prevent predator starvation if one species suffers decline.\n- **Lindeman's 10% Efficiency Law:** Only $\\approx 10\\%$ of incident chemical energy is assimilated into biomass at the next trophic level; $90\\%$ is dissipated as metabolic respiration heat ($Q$).\n- **Biomagnification:** Non-biodegradable lipophilic toxins (DDT, methylmercury) progressively concentrate at higher trophic levels."
-    },
-    "es|explain food chains and food webs with suitable examples give their significance": {
-      "key": "es|explain food chains and food webs with suitable examples give their significance",
-      "subjectId": "ES",
-      "question": "Explain food chains and food webs with suitable examples. Give their significance.",
-      "chapter": 1,
-      "marks": 3,
-      "answerMd": "### Food Chains vs. Food Webs\n\n### 1. Food Chain\nA **food chain** is a linear transfer of energy and nutrients as one organism consumes another at successive trophic tiers.\n\n**Terrestrial Grassland Example:**\n$$\\text{Green Grass (Producer)} \\xrightarrow{10\\%} \\text{Grasshopper (Primary Consumer)} \\xrightarrow{10\\%} \\text{Frog (Secondary)} \\xrightarrow{10\\%} \\text{Snake} \\xrightarrow{10\\%} \\text{Hawk (Apex Predator)}$$\n\n### 2. Food Web\nA **food web** is a complex, interconnected matrix of multiple intersecting food chains within an ecosystem.\n\n```text\n                       Eagle (Apex)\n                      /    |    \\\n                   Snake  Hawk   Fox\n                    / \\    |     |\n                 Frog Mouse Rabbit\n                   \\  /    /\n                   Grasses (Producers)\n```\n\n### 3. Key Ecological Principles:\n- **Resilience:** A food web confers ecosystem stability because alternative prey choices prevent predator starvation if one species suffers decline.\n- **Lindeman's 10% Efficiency Law:** Only $\\approx 10\\%$ of incident chemical energy is assimilated into biomass at the next trophic level; $90\\%$ is dissipated as metabolic respiration heat ($Q$).\n- **Biomagnification:** Non-biodegradable lipophilic toxins (DDT, methylmercury) progressively concentrate at higher trophic levels."
-    },
-    "es|discuss the consequences of overexploitation of mineral resources": {
-      "key": "es|discuss the consequences of overexploitation of mineral resources",
-      "subjectId": "ES",
-      "question": "Discuss the consequences of overexploitation of mineral resources.",
-      "chapter": 2,
-      "marks": 3,
-      "answerMd": "### Environmental Consequences of Overexploitation of Mineral Resources\n\nMining and extraction of non-renewable minerals (iron, bauxite, coal, rare earths) exert profound ecological stresses:\n\n1. **Deforestation and Habitat Fragmentation:**\n   - Surface open-cast strip mining clears virgin forest canopies, destroying critical wildlife corridors and ancestral indigenous lands.\n2. **Acid Mine Drainage (AMD):**\n   - Sulfide-bearing ores (pyrite, $FeS_2$) react with atmospheric oxygen and water:\n   $$4FeS_2 + 15O_2 + 14H_2O \\rightarrow 4Fe(OH)_3 + 8H_2SO_4$$\n   - Highly toxic sulfuric acid leaches heavy metals (arsenic, lead, mercury) into regional rivers and municipal drinking aquifers.\n3. **Severe Air and Particulate Pollution:**\n   - Drilling, blasting, crushing, and haul trucks emit clouds of fine respirable dust ($PM_{10}$, $PM_{2.5}$), causing pneumoconiosis and silicosis among miners and neighboring villagers.\n4. **Land Subsidence & Mine Spoil Dumps:**\n   - Underground gallery collapses trigger surface terrain subsidence, while unmanaged overburden slag heaps generate catastrophic landslides during monsoon rains."
-    },
-    "es|evaluate the environmental effects of mineral resource extraction": {
-      "key": "es|evaluate the environmental effects of mineral resource extraction",
-      "subjectId": "ES",
-      "question": "Evaluate the environmental effects of mineral-resource extraction.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Environmental Consequences of Overexploitation of Mineral Resources\n\nMining and extraction of non-renewable minerals (iron, bauxite, coal, rare earths) exert profound ecological stresses:\n\n1. **Deforestation and Habitat Fragmentation:**\n   - Surface open-cast strip mining clears virgin forest canopies, destroying critical wildlife corridors and ancestral indigenous lands.\n2. **Acid Mine Drainage (AMD):**\n   - Sulfide-bearing ores (pyrite, $FeS_2$) react with atmospheric oxygen and water:\n   $$4FeS_2 + 15O_2 + 14H_2O \\rightarrow 4Fe(OH)_3 + 8H_2SO_4$$\n   - Highly toxic sulfuric acid leaches heavy metals (arsenic, lead, mercury) into regional rivers and municipal drinking aquifers.\n3. **Severe Air and Particulate Pollution:**\n   - Drilling, blasting, crushing, and haul trucks emit clouds of fine respirable dust ($PM_{10}$, $PM_{2.5}$), causing pneumoconiosis and silicosis among miners and neighboring villagers.\n4. **Land Subsidence & Mine Spoil Dumps:**\n   - Underground gallery collapses trigger surface terrain subsidence, while unmanaged overburden slag heaps generate catastrophic landslides during monsoon rains."
-    },
-    "es|describe the benefits and problems associated with the construction of big dams": {
-      "key": "es|describe the benefits and problems associated with the construction of big dams",
-      "subjectId": "ES",
-      "question": "Describe the benefits and problems associated with the construction of big dams.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Multipurpose Big Dams: Benefits vs. Ecological & Socioeconomic Problems\n\n### 1. Benefits of Big Dams:\n- **Hydroelectric Power:** Provides grid stabilization and renewable peak electricity without combustion emissions.\n- **Command Area Irrigation:** Extensive canal distribution networks convert arid scrublands into fertile agricultural zones (e.g., Bhakra-Nangal, Nagarjuna Sagar).\n- **Flood Mitigation:** Moderates extreme monsoon discharge, shielding downstream settlements from flash deluges.\n- **Urban Potable Water Reserves:** Guarantees year-round municipal drinking water supplies to major urban centers.\n\n### 2. Environmental & Social Problems:\n- **Mass Displacement & Social Injustice:** Submerges ancestral villages, involuntarily displacing millions of indigenous rural populations without equitable rehabilitation.\n- **Submergence of Virgin Biodiversity:** Submerges primary riparian forests, drowning endangered flora, endemic fauna, and historic archaeological sites.\n- **Silt Trapping & Delta Degradation:** Traps nutrient-rich alluvial sediments in reservoirs, starving downstream agricultural deltas and triggering severe coastal erosion.\n- **Reservoir-Induced Seismicity (RIS):** The enormous localized hydrostatic mass of impounded water increases pore-fluid pressures along crustal faults, triggering earthquakes (e.g., Koyna Dam 6.3 magnitude quake)."
-    },
-    "es|list the benefits and problems associated with big dams": {
-      "key": "es|list the benefits and problems associated with big dams",
-      "subjectId": "ES",
-      "question": "List the benefits and problems associated with big dams.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Multipurpose Big Dams: Benefits vs. Ecological & Socioeconomic Problems\n\n### 1. Benefits of Big Dams:\n- **Hydroelectric Power:** Provides grid stabilization and renewable peak electricity without combustion emissions.\n- **Command Area Irrigation:** Extensive canal distribution networks convert arid scrublands into fertile agricultural zones (e.g., Bhakra-Nangal, Nagarjuna Sagar).\n- **Flood Mitigation:** Moderates extreme monsoon discharge, shielding downstream settlements from flash deluges.\n- **Urban Potable Water Reserves:** Guarantees year-round municipal drinking water supplies to major urban centers.\n\n### 2. Environmental & Social Problems:\n- **Mass Displacement & Social Injustice:** Submerges ancestral villages, involuntarily displacing millions of indigenous rural populations without equitable rehabilitation.\n- **Submergence of Virgin Biodiversity:** Submerges primary riparian forests, drowning endangered flora, endemic fauna, and historic archaeological sites.\n- **Silt Trapping & Delta Degradation:** Traps nutrient-rich alluvial sediments in reservoirs, starving downstream agricultural deltas and triggering severe coastal erosion.\n- **Reservoir-Induced Seismicity (RIS):** The enormous localized hydrostatic mass of impounded water increases pore-fluid pressures along crustal faults, triggering earthquakes (e.g., Koyna Dam 6.3 magnitude quake)."
-    },
-    "es|explain the consumptive use productive use and ethical values of biodiversity": {
-      "key": "es|explain the consumptive use productive use and ethical values of biodiversity",
-      "subjectId": "ES",
-      "question": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.",
-      "chapter": 1,
-      "marks": 2,
-      "answerMd": "### Values of Biodiversity\n\nBiodiversity provides immense ecological, financial, and ethical value categorized under the following frameworks:\n\n### 1. Consumptive Use Value:\nDirect non-marketed harvest of natural resources consumed locally without passing through commercial marketplaces:\n- **Food:** Wild game, fish, tubers, mushrooms, and native seeds.\n- **Fuelwood:** Timber and dried shrubs collected by rural households for cooking and domestic heating.\n- **Folk Medicine:** Ethnobotanical herbs (e.g., neem, tulsi, cinchona bark for quinine) utilized by indigenous healers.\n\n### 2. Productive Use Value:\nCommercial, market-priced commodities harvested from nature for industrial manufacturing:\n- **Pharmaceutical Drugs:** Over $25\\%$ of modern prescription drugs originate from wild plant extracts (e.g., paclitaxel/Taxol from yew trees for chemotherapy).\n- **Industrial Raw Materials:** Natural rubber, silk, cotton fibers, resins, waxes, dyes, and cosmetic essential oils.\n\n### 3. Ethical and Aesthetic Value:\n- **Ethical / Intrinsic Value:** All living species have an inherent right to exist on Earth independent of their utilitarian value to humans.\n- **Aesthetic Value:** Spiritual inspiration, ecotourism, nature photography, and recreational hiking."
-    },
-    "es|discuss the consumptive and social values of biodiversity giving examples of each": {
-      "key": "es|discuss the consumptive and social values of biodiversity giving examples of each",
-      "subjectId": "ES",
-      "question": "Discuss the consumptive and social values of biodiversity, giving examples of each.",
-      "chapter": 1,
-      "marks": 3,
-      "answerMd": "### Values of Biodiversity\n\nBiodiversity provides immense ecological, financial, and ethical value categorized under the following frameworks:\n\n### 1. Consumptive Use Value:\nDirect non-marketed harvest of natural resources consumed locally without passing through commercial marketplaces:\n- **Food:** Wild game, fish, tubers, mushrooms, and native seeds.\n- **Fuelwood:** Timber and dried shrubs collected by rural households for cooking and domestic heating.\n- **Folk Medicine:** Ethnobotanical herbs (e.g., neem, tulsi, cinchona bark for quinine) utilized by indigenous healers.\n\n### 2. Productive Use Value:\nCommercial, market-priced commodities harvested from nature for industrial manufacturing:\n- **Pharmaceutical Drugs:** Over $25\\%$ of modern prescription drugs originate from wild plant extracts (e.g., paclitaxel/Taxol from yew trees for chemotherapy).\n- **Industrial Raw Materials:** Natural rubber, silk, cotton fibers, resins, waxes, dyes, and cosmetic essential oils.\n\n### 3. Ethical and Aesthetic Value:\n- **Ethical / Intrinsic Value:** All living species have an inherent right to exist on Earth independent of their utilitarian value to humans.\n- **Aesthetic Value:** Spiritual inspiration, ecotourism, nature photography, and recreational hiking."
-    },
-    "es|explain ecosystem values and services": {
-      "key": "es|explain ecosystem values and services",
-      "subjectId": "ES",
-      "question": "Explain ecosystem values and services.",
-      "chapter": 1,
-      "marks": 3,
-      "answerMd": "### Ecosystem Values and Services (Millennium Ecosystem Assessment)\n\nEcosystem services are the direct and indirect benefits that humankind derives from naturally functioning ecosystems.\n\n### 1. The Four Categories of Ecosystem Services:\n1. **Provisioning Services (Material Benefits):**\n   - Direct products harvested from nature: timber, fuelwood, crops, potable freshwater, genetic resources, and plant-derived medicinal pharmaceuticals (e.g., quinine, taxol).\n2. **Regulating Services (Biospheric Buffering):**\n   - Natural balance regulation: atmospheric carbon sequestration by forests, climate moderation, natural pollination of food crops by wild bees, and storm surge buffering by coastal mangrove belts.\n3. **Supporting Services (Nutrient Foundations):**\n   - Necessary foundations for all other services: primary production, soil formation, photosynthesis, and biogeochemical cycles (Nitrogen, Water).\n4. **Cultural Services (Non-material Uplift):**\n   - Aesthetic pleasure, ecotourism, outdoor recreation, artistic inspiration, and spiritual/sacred values."
-    },
-    "es|summarize the benefits of forests and the harmful effects of deforestation": {
-      "key": "es|summarize the benefits of forests and the harmful effects of deforestation",
-      "subjectId": "ES",
-      "question": "Summarize the benefits of forests and the harmful effects of deforestation.",
-      "chapter": 2,
-      "marks": 3,
-      "answerMd": "### Forests: Ecological Benefits, Deforestation Causes & Consequences\n\n### 1. Ecological & Economic Benefits of Forests:\n- **Carbon Sequestration:** Primary terrestrial carbon sink absorbing billions of tons of atmospheric $CO_2$.\n- **Hydrological Regulation:** Forest sponge effect slows rainfall runoff, recharges aquifers, and prevents catastrophic flash floods.\n- **Soil Conservation:** Extensive tree root networks bind topsoil, stopping erosion and landslides.\n- **Timber & Non-Timber Produce:** Yields timber, bamboo, natural gums, honey, and medicinal compounds.\n\n### 2. Primary Causes of Deforestation:\n- **Agricultural Expansion:** Clearing vast rainforests for commercial cattle ranching, soybean plantations, and palm oil.\n- **Infrastructure & Urban Sprawl:** Construction of expressways, hydroelectric dams, and mining corridors.\n- **Commercial Logging:** Legal and illegal logging for paper pulp and hardwood furniture.\n\n### 3. Severe Environmental Consequences:\n- **Accelerated Climate Change:** Forest clearing releases stored carbon, responsible for $\\approx 15\\%$ of global greenhouse emissions.\n- **Biodiversity Loss & Extinction:** Permanent loss of tropical rainforest habitats housing $> 50\\%$ of world species.\n- **Soil Desertification:** Direct exposure of thin tropical topsoils to sunlight and torrential rain leaches nutrients, creating barren laterite wastelands."
-    },
-    "es|analyze the reasons for deforestation and its consequences on the environment": {
-      "key": "es|analyze the reasons for deforestation and its consequences on the environment",
-      "subjectId": "ES",
-      "question": "Analyze the reasons for deforestation and its consequences on the environment.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Forests: Ecological Benefits, Deforestation Causes & Consequences\n\n### 1. Ecological & Economic Benefits of Forests:\n- **Carbon Sequestration:** Primary terrestrial carbon sink absorbing billions of tons of atmospheric $CO_2$.\n- **Hydrological Regulation:** Forest sponge effect slows rainfall runoff, recharges aquifers, and prevents catastrophic flash floods.\n- **Soil Conservation:** Extensive tree root networks bind topsoil, stopping erosion and landslides.\n- **Timber & Non-Timber Produce:** Yields timber, bamboo, natural gums, honey, and medicinal compounds.\n\n### 2. Primary Causes of Deforestation:\n- **Agricultural Expansion:** Clearing vast rainforests for commercial cattle ranching, soybean plantations, and palm oil.\n- **Infrastructure & Urban Sprawl:** Construction of expressways, hydroelectric dams, and mining corridors.\n- **Commercial Logging:** Legal and illegal logging for paper pulp and hardwood furniture.\n\n### 3. Severe Environmental Consequences:\n- **Accelerated Climate Change:** Forest clearing releases stored carbon, responsible for $\\approx 15\\%$ of global greenhouse emissions.\n- **Biodiversity Loss & Extinction:** Permanent loss of tropical rainforest habitats housing $> 50\\%$ of world species.\n- **Soil Desertification:** Direct exposure of thin tropical topsoils to sunlight and torrential rain leaches nutrients, creating barren laterite wastelands."
-    },
-    "es|describe the structure of an ecosystem": {
-      "key": "es|describe the structure of an ecosystem",
-      "subjectId": "ES",
-      "question": "Describe the structure of an ecosystem.",
-      "chapter": 1,
-      "marks": 3,
-      "answerMd": "### Structure of an Ecosystem\nThe **structure of an ecosystem** comprises two interdependent fundamental components:\n\n```text\n                          ECOSYSTEM STRUCTURE\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   ABIOTIC COMPONENTS                                  BIOTIC COMPONENTS\n   (Non-living factors)                                (Living organisms)\n         |                                                   |\n   +-----+-----+                                       +-----+-----+\n   |           |                                       |           |\nPhysical    Chemical                               Autotrophs  Heterotrophs\n(Sunlight,  (Proteins,                             (Producers) (Consumers,\n Temp, Soil) N, P, pH)                                           Decomposers)\n```\n\n### 1. Abiotic Components (Non-Living Environmental Matrix):\n- **Physical Factors:** Solar radiation intensity, atmospheric temperature, precipitation, ambient humidity, wind speed, and topographical altitude.\n- **Edaphic Factors:** Soil texture, mineral grain size, soil water retention capacity, and pH.\n- **Chemical Compounds:** Inorganic nutrients ($C, N, P, K$) and organic matter (humus, amino acids).\n\n### 2. Biotic Components (Living Community):\n- **Producers (Autotrophs):** Chlorophyll-bearing plants, phytoplankton, and cyanobacteria capable of synthesizing organic glucose via photosynthesis.\n- **Consumers (Heterotrophs):**\n  - *Primary Consumers (Herbivores):* Feed directly on producers (zooplankton, deer, cattle).\n  - *Secondary Consumers (Carnivores):* Prey on herbivores (frogs, foxes).\n  - *Tertiary / Apex Consumers:* Top carnivores (lions, tigers, hawks).\n- **Decomposers (Saprotrophs):** Heterotrophic fungi and bacteria that biochemically break down complex detritus into elemental mineral salts, closing the nutrient loop."
+      "answerMd": "### Classification of Ecosystems\nAn **ecosystem** is a self-sustaining structural and functional unit where biotic organisms interact with their abiotic environment.\n\n```text\n                               ECOSYSTEMS\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   TERRESTRIAL (Land)                                  AQUATIC (Water)\n         |                                                   |\n   +-----+-----+-----+                         +-------------+-------------+\n   |     |     |     |                         |                           |\nForest Grass- Desert Tundra               Freshwater                     Marine\n        land                             (Rivers, Lakes)             (Oceans, Reefs)\n```\n\n1. **Terrestrial Ecosystems:** Forest (canopy layers), Grassland (herbaceous cover), Desert ($< 25\\text{ cm}$ rain), Tundra (permafrost).\n2. **Aquatic Ecosystems:** Freshwater (Lotic flowing rivers, Lentic standing ponds) and Marine (oceans, coral reefs, estuaries)."
     },
     "es|summarize the socioeconomic impacts of floods and droughts": {
       "key": "es|summarize the socioeconomic impacts of floods and droughts",
@@ -145,39 +17,55 @@
       "question": "Summarize the socioeconomic impacts of floods and droughts.",
       "chapter": 2,
       "marks": 3,
-      "answerMd": "### Droughts: Types and Socioeconomic Implications\n\nA **drought** is an extended deficiency in precipitation over a substantial period, resulting in a severe water shortage for some activity, group, or ecological sector.\n\n### 1. Four Recognized Categories:\n1. **Meteorological Drought:** Significant percentage deficit in rainfall compared to long-term climatological normals.\n2. **Hydrological Drought:** Marked depletion of surface water reserves (lakes, reservoirs) and sinking groundwater water tables.\n3. **Agricultural Drought:** Inadequate soil moisture during critical crop phenological growth phases.\n4. **Socioeconomic Drought:** When physical water scarcity disrupts the supply and demand of economic goods (drinking water, food, hydroelectricity).\n\n### 2. Socioeconomic Implications:\n- **Agrarian Distress & Famine:** Crop desiccation, plummeting farm incomes, and severe farmer debt distress.\n- **Rural Out-Migration:** Distress migration of landless agricultural laborers to urban slums.\n- **Women & Children Hardship:** Disproportionately forces rural women and girls to trek miles under extreme heat to secure basic drinking water.\n- **Fodder Starvation:** Massive mortality of livestock due to parched pastures."
+      "answerMd": "### Floods: Causes and Socioeconomic Implications\nA **flood** is an inundation of dry land caused by extreme meteorological and hydrological conditions.\n\n**Causes:**\n- Cloudbursts, prolonged monsoon downpours, embankment breaches, and unmanaged dam releases.\n- Urban concrete surfaces blocking natural rainwater infiltration.\n\n**Socioeconomic Impacts:**\n- Loss of life and livestock; mass displacement of vulnerable populations.\n- Submergence of crops leading to food inflation and farmer debt distress.\n- Infrastructure destruction (bridges, power grids, drinking water pipelines).\n- Water-borne epidemics (cholera, typhoid, hepatitis) and mosquito vector blooms (malaria, dengue)."
     },
-    "es|what is a flood analyze the socioeconomic implications of flood conditions": {
-      "key": "es|what is a flood analyze the socioeconomic implications of flood conditions",
+    "es|define the biogeochemical cycle explain the carbon cycle in detail": {
+      "key": "es|define the biogeochemical cycle explain the carbon cycle in detail",
       "subjectId": "ES",
-      "question": "What is a flood? Analyze the socioeconomic implications of flood conditions.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Floods: Causes and Socioeconomic Implications\n\nA **flood** is an overflow of an expanse of water that submerges land that is usually dry, resulting from severe meteorological and hydrological conditions.\n\n### 1. Primary Causes:\n- Intense prolonged precipitation during monsoon cloudbursts.\n- Breaching of river embankments or unplanned emergency dam sluice releases.\n- Rapid melting of Himalayan glaciers coupled with debris blockages.\n- Urban impervious surfaces (concrete, paved roads) and clogged stormwater drains.\n\n### 2. Socioeconomic Implications:\n- **Loss of Life and Mass Displacement:** Human drowning, livestock casualties, and large-scale displacement into temporary relief camps.\n- **Agricultural Disaster:** Prolonged submergence of standing paddy and cash crops leads to root rot, total crop failure, and acute food shortages.\n- **Critical Infrastructure Breakdown:** Collapse of bridges, submergence of electrical transformers, rail track washouts, and municipal drinking water contamination.\n- **Disease Outbreaks:** Explosive post-flood outbreaks of water-borne epidemics (cholera, typhoid, gastroenteritis, leptospirosis) and vector-borne dengue/malaria."
-    },
-    "es|what is a drought analyze the socioeconomic implications of prolonged drought conditions": {
-      "key": "es|what is a drought analyze the socioeconomic implications of prolonged drought conditions",
-      "subjectId": "ES",
-      "question": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.",
-      "chapter": 2,
-      "marks": 2,
-      "answerMd": "### Droughts: Types and Socioeconomic Implications\n\nA **drought** is an extended deficiency in precipitation over a substantial period, resulting in a severe water shortage for some activity, group, or ecological sector.\n\n### 1. Four Recognized Categories:\n1. **Meteorological Drought:** Significant percentage deficit in rainfall compared to long-term climatological normals.\n2. **Hydrological Drought:** Marked depletion of surface water reserves (lakes, reservoirs) and sinking groundwater water tables.\n3. **Agricultural Drought:** Inadequate soil moisture during critical crop phenological growth phases.\n4. **Socioeconomic Drought:** When physical water scarcity disrupts the supply and demand of economic goods (drinking water, food, hydroelectricity).\n\n### 2. Socioeconomic Implications:\n- **Agrarian Distress & Famine:** Crop desiccation, plummeting farm incomes, and severe farmer debt distress.\n- **Rural Out-Migration:** Distress migration of landless agricultural laborers to urban slums.\n- **Women & Children Hardship:** Disproportionately forces rural women and girls to trek miles under extreme heat to secure basic drinking water.\n- **Fodder Starvation:** Massive mortality of livestock due to parched pastures."
-    },
-    "es|illustrate the universal energy flow model of an ecosystem": {
-      "key": "es|illustrate the universal energy flow model of an ecosystem",
-      "subjectId": "ES",
-      "question": "Illustrate the universal energy-flow model of an ecosystem.",
+      "question": "Define the biogeochemical cycle. Explain the carbon cycle in detail.",
       "chapter": 1,
       "marks": 2,
-      "answerMd": "### Universal Energy Flow Model of an Ecosystem (E.P. Odum Model)\n\nThe **Universal Energy Flow Model**, formulated by ecologist Eugene P. Odum, depicts the thermodynamic flow of energy through any biological component, whether an individual organism, a population, or a complete trophic level.\n\n```text\n                  UNABSORBED / LOST ENERGY (NU)\n                           ^\n                           |\n   INPUT ENERGY (I) ---> [ ASSIMILATED (A) ] ---> RESPIRATION (R) [Heat Loss]\n                                |\n                                v\n                       BIOMASS PRODUCTION (P)\n                                |\n                 +--------------+--------------+\n                 |                             |\n          GROWTH (G) / YIELD            EXCRETION / MORTALITY (E)\n```\n\n### 1. Thermodynamic Balance Equation:\n$$\\mathbf{I = A + NU}$$\n$$\\mathbf{A = P + R}$$\n\nWhere:\n- $\\mathbf{I}$ = Total gross energy input ingested or intercepted.\n- $\\mathbf{NU}$ = Not utilized energy (passed out unassimilated in feces or reflected light).\n- $\\mathbf{A}$ = Assimilated energy absorbed across digestive/cellular boundaries.\n- $\\mathbf{R}$ = Energy lost as metabolic maintenance heat through cellular respiration (irreversible loss as per 2nd Law of Thermodynamics).\n- $\\mathbf{P}$ = Net secondary production converted into organic structural tissues (growth $G$ and reproduction).\n\n### 2. Unidirectional / Non-Cyclic Nature:\nUnlike nutrients which cycle infinitely via biogeochemical loops, **energy flow is strictly unidirectional**—it enters as solar radiant photons and leaves as degraded thermal entropy into outer space."
+      "answerMd": "### The Carbon Cycle\nCarbon ($C$) forms the fundamental backbone of all organic biomolecules.\n\n```text\n                  ATMOSPHERIC CO2 (Pool)\n                    ^     ^        |\n      Respiration  |     | Combustion of Fossil Fuels\n                   |     |         v\n               Animals  Factories  Photosynthesis\n                   ^               |\n                   | Grazing       v\n               Plants <--------- Organic Carbon\n                   |\n                   v (Death & Decay)\n               Soil Decomposers ---> Fossil Fuels (Millions of years)\n```\n\n1. **Photosynthesis:** $6CO_2 + 6H_2O \\xrightarrow{\\text{Light, Chlorophyll}} C_6H_{12}O_6 + 6O_2$\n2. **Respiration:** $C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + \\text{ATP}$\n3. **Decomposition:** Microorganisms oxidize dead biomass, returning $CO_2$ to soil and air.\n4. **Combustion:** Burning coal and oil releases sequestered carbon, driving the enhanced greenhouse effect."
     },
-    "es|what are ecological pyramids discuss the pyramid of energy": {
-      "key": "es|what are ecological pyramids discuss the pyramid of energy",
+    "es|list renewable energy sources and explain their advantages": {
+      "key": "es|list renewable energy sources and explain their advantages",
       "subjectId": "ES",
-      "question": "What are ecological pyramids? Discuss the pyramid of energy.",
+      "question": "List renewable energy sources and explain their advantages.",
+      "chapter": 2,
+      "marks": 3,
+      "answerMd": "### Renewable Energy Sources & Advantages\n1. **Solar Power:** Photovoltaic silicon cells and solar thermal collectors.\n2. **Wind Power:** Kinetic energy converted into electricity via aerodynamic wind turbines.\n3. **Hydroelectric Power:** Gravitational head of impounded dam water driving hydraulic turbines.\n4. **Biomass & Biogas:** Anaerobic digestion of organic residues yielding methane ($CH_4$).\n5. **Geothermal Energy:** Subsurface enthalpy from geothermal steam reservoirs.\n\n**Key Advantages:** Zero operational greenhouse gas emissions, inexhaustible natural supply, energy independence, and reduction of air pollutants ($PM_{2.5}, SO_2$)."
+    },
+    "es|define food chain and food web giving suitable examples": {
+      "key": "es|define food chain and food web giving suitable examples",
+      "subjectId": "ES",
+      "question": "Define food chain and food web, giving suitable examples.",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Food Chain vs. Food Web\n1. **Food Chain:** A linear transfer of energy as one organism consumes another:\n   $$\\text{Grass (Producer)} \\rightarrow \\text{Grasshopper} \\rightarrow \\text{Frog} \\rightarrow \\text{Snake} \\rightarrow \\text{Hawk (Apex)}$$\n2. **Food Web:** A complex, interconnected network of multiple overlapping food chains within an ecological community.\n3. **Key Laws:**\n   - **Lindeman's 10% Rule:** Only $\\approx 10\\%$ of energy is transferred to the next trophic level; $90\\%$ is dissipated as metabolic respiration heat.\n   - **Resilience:** Food webs provide alternative prey pathways, conferring ecosystem stability."
+    },
+    "es|discuss the consequences of overexploitation of mineral resources": {
+      "key": "es|discuss the consequences of overexploitation of mineral resources",
+      "subjectId": "ES",
+      "question": "Discuss the consequences of overexploitation of mineral resources.",
+      "chapter": 2,
+      "marks": 3,
+      "answerMd": "### Environmental Consequences of Mineral Resource Extraction\n1. **Deforestation & Habitat Loss:** Open-cast strip mining strips surface vegetation and destroys wildlife habitats.\n2. **Acid Mine Drainage (AMD):** Sulfide ores exposed to air and water generate dilute sulfuric acid ($H_2SO_4$), leaching toxic heavy metals into river basins.\n3. **Air Pollution:** Blasting, crushing, and haul trucks emit respirable particulate matter ($PM_{10}, PM_{2.5}$), causing silicosis among miners.\n4. **Land Subsidence:** Collapse of underground mining cavities damages surface infrastructure."
+    },
+    "es|describe the benefits and problems associated with the construction of big dams": {
+      "key": "es|describe the benefits and problems associated with the construction of big dams",
+      "subjectId": "ES",
+      "question": "Describe the benefits and problems associated with the construction of big dams.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Big Dams: Multipurpose Benefits vs. Ecological Problems\n**Benefits:**\n- Large-scale hydroelectric power generation without combustion emissions.\n- Perennial irrigation canals transforming arid lands into fertile food bowls.\n- Monsoon flood attenuation in river valleys.\n- Municipal potable water supply to metropolises.\n\n**Environmental & Social Problems:**\n- Involuntary mass displacement of rural tribal populations without adequate rehabilitation.\n- Submergence of virgin biodiversity-rich forests.\n- Silt trapping in reservoirs causing downstream delta erosion.\n- Reservoir-Induced Seismicity (RIS) due to hydrostatic pressure along crustal faults."
+    },
+    "es|explain ecosystem values and services": {
+      "key": "es|explain ecosystem values and services",
+      "subjectId": "ES",
+      "question": "Explain ecosystem values and services.",
       "chapter": 1,
       "marks": 3,
-      "answerMd": "### Ecological Pyramids and the Pyramid of Energy\n\n### 1. Types of Ecological Pyramids:\n- **Pyramid of Numbers:** Shows the number of individual organisms at each trophic level. Can be upright (grassland) or inverted (a single oak tree hosting millions of insects).\n- **Pyramid of Biomass:** Quantifies dry organic weight per unit area. Upright in terrestrial forests; inverted in marine ecosystems where microscopic phytoplankton have high turnover rates.\n- **Pyramid of Energy:** Shows total energy flowing through each trophic level per unit area per unit time ($\\text{kJ}/\\text{m}^2/\\text{year}$).\n\n### 2. The Pyramid of Energy is Universally Upright:\n```text\n        Top Carnivore (10 J)        [Apex]\n              ^\n        Secondary Carnivore (100 J)\n              ^\n        Primary Consumer (1,000 J)\n              ^\n        Primary Producer (10,000 J) [Broad Base]\n```\n\n**Scientific Reason:**\nGoverned by the **Second Law of Thermodynamics** and **Lindeman's 10% Rule**:\n- At each successive trophic step, approximately $90\\%$ of consumed energy is dissipated as metabolic respiration heat ($Q$), entropy, or unconsumed waste.\n- Only $\\approx 10\\%$ of energy is converted into living biomass available to the next consumer.\n- Since energy cannot increase as it moves up trophic tiers, the pyramid of energy can **never be inverted** under any circumstances."
+      "answerMd": "### Ecosystem Values and Services (Millennium Ecosystem Assessment)\n1. **Provisioning Services:** Direct material products: food crops, timber, drinking water, natural fibers, and medicinal plant extracts.\n2. **Regulating Services:** Natural buffering: carbon sequestration by forests, climate moderation, natural crop pollination by wild bees, and storm surge absorption by mangroves.\n3. **Supporting Services:** Foundations for all life: soil formation, photosynthesis, and biogeochemical nutrient cycles.\n4. **Cultural Services:** Spiritual inspiration, ecotourism, outdoor recreation, and aesthetic joy."
     },
     "es|define genetic species and ecosystem biodiversity with examples": {
       "key": "es|define genetic species and ecosystem biodiversity with examples",
@@ -185,7 +73,95 @@
       "question": "Define genetic, species, and ecosystem biodiversity with examples.",
       "chapter": 1,
       "marks": 2,
-      "answerMd": "### Genetic, Species, and Ecosystem Biodiversity\n\nBiodiversity is structured across three hierarchical levels:\n\n### 1. Genetic Diversity\nVariation of genetic alleles and chromosomes within a single biological species.\n- **Significance:** Provides adaptive evolutionary resilience against epidemics and climate extremes.\n- **Examples:** Over $50,000$ distinct cultivars of rice (*Oryza sativa*) across India; over $1,000$ mango varieties (*Mangifera indica*).\n\n### 2. Species Diversity\nThe variety and abundance of different biological species inhabiting an ecosystem.\n- Measured via **Species Richness** (total distinct species count) and **Species Evenness** (relative numerical equitability).\n- **Example:** High amphibian and floral richness in the Western Ghats and Indo-Burma biodiversity hotspots.\n\n### 3. Ecosystem Diversity\nThe variety of distinct geographic landscapes, biomes, and ecological niches.\n- **Example:** India contains diverse biomes spanning Himalayan alpine pastures, mangrove swamps in the Sundarbans, the Thar desert, and Andaman coral reefs."
+      "answerMd": "### Three Levels of Biodiversity\n1. **Genetic Diversity:** Variation of alleles within a single species.\n   - *Example:* Over $50,000$ strains of rice (*Oryza sativa*) and over $1,000$ mango varieties (*Mangifera indica*) in India.\n2. **Species Diversity:** Variety and equitability of different taxonomic species in a community.\n   - *Example:* Western Ghats amphibian and floral richness.\n3. **Ecosystem Diversity:** Variety of biological habitats and biomes across regions.\n   - *Example:* India's landscapes span alpine meadows, Thar desert sand dunes, mangrove estuaries, and coral reefs."
+    },
+    "es|what are ecological pyramids discuss the pyramid of energy": {
+      "key": "es|what are ecological pyramids discuss the pyramid of energy",
+      "subjectId": "ES",
+      "question": "What are ecological pyramids? Discuss the pyramid of energy.",
+      "chapter": 1,
+      "marks": 3,
+      "answerMd": "### Ecological Pyramids & The Pyramid of Energy\nAn **ecological pyramid** is a graphical representation of trophic structure:\n- **Pyramid of Numbers:** Can be upright (grassland) or inverted (tree hosting thousands of insects).\n- **Pyramid of Biomass:** Upright in forests, inverted in marine systems where phytoplankton rapidly turnover.\n- **Pyramid of Energy:** **ALWAYS UPRIGHT**.\n\n```text\n        Top Carnivore (10 J)        [Apex]\n              ^\n        Secondary Consumer (100 J)\n              ^\n        Primary Consumer (1,000 J)\n              ^\n        Primary Producer (10,000 J) [Broad Base]\n```\n\n**Scientific Reason:** By the **Second Law of Thermodynamics** and **Lindeman's 10% Law**, energy is degraded and lost as metabolic heat ($90\\%$) at every trophic step. Energy cannot be created or recycled upward, so the pyramid of energy can never be inverted."
+    },
+    "es|explain the consumptive use productive use and ethical values of biodiversity": {
+      "key": "es|explain the consumptive use productive use and ethical values of biodiversity",
+      "subjectId": "ES",
+      "question": "Explain the consumptive-use, productive-use, and ethical values of biodiversity.",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Values of Biodiversity\n1. **Consumptive Use Value:** Direct non-market consumption (wild berries, fish, firewood for cooking, indigenous medicinal plants like neem and tulsi).\n2. **Productive Use Value:** Commercial commodities sold in national/international markets (timber, rubber, silk, cotton, pharmaceuticals like Taxol).\n3. **Social & Cultural Value:** Aesthetic joy, ecotourism, sacred groves, and nature photography.\n4. **Ethical Value:** The moral understanding that all biological species possess an inherent right to exist on Earth."
+    },
+    "es|summarize the benefits of forests and the harmful effects of deforestation": {
+      "key": "es|summarize the benefits of forests and the harmful effects of deforestation",
+      "subjectId": "ES",
+      "question": "Summarize the benefits of forests and the harmful effects of deforestation.",
+      "chapter": 2,
+      "marks": 3,
+      "answerMd": "### Forests: Benefits and Deforestation Impacts\n**Benefits of Forests:**\n- Carbon sequestration, acting as Earth's primary terrestrial carbon sink.\n- Watershed protection: sponge effect prevents flash floods and recharges groundwater.\n- Soil conservation: root systems anchor topsoil against wind and water erosion.\n- Timber, resin, medicinal herbs, and honey production.\n\n**Consequences of Deforestation:**\n- Accelerated global warming (responsible for $\\approx 15\\%$ of greenhouse gas emissions).\n- Mass extinction of endemic tropical wildlife species.\n- Desertification and severe soil erosion."
+    },
+    "es|describe the structure of an ecosystem": {
+      "key": "es|describe the structure of an ecosystem",
+      "subjectId": "ES",
+      "question": "Describe the structure of an ecosystem.",
+      "chapter": 1,
+      "marks": 3,
+      "answerMd": "### Structure of an Ecosystem\nComprises two fundamental components:\n\n```text\n                          ECOSYSTEM STRUCTURE\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   ABIOTIC COMPONENTS                                  BIOTIC COMPONENTS\n   (Non-living matrix)                                 (Living community)\n         |                                                   |\n   +-----+-----+                                       +-----+-----+\n   |           |                                       |           |\nPhysical    Chemical                               Autotrophs  Heterotrophs\n(Sunlight,  (Proteins,                             (Producers) (Consumers,\n Temp, Soil) N, P, pH)                                           Decomposers)\n```\n\n1. **Abiotic Components:** Physical factors (solar radiation, temperature, rainfall, wind) and chemical nutrients ($N, P, K$, soil pH).\n2. **Biotic Components:**\n   - Producers (Autotrophs): Plants and phytoplankton synthesizing glucose.\n   - Consumers (Heterotrophs): Herbivores, carnivores, omnivores.\n   - Decomposers (Saprotrophs): Fungi and bacteria cycling organic detritus."
+    },
+    "es|list the benefits and problems associated with big dams": {
+      "key": "es|list the benefits and problems associated with big dams",
+      "subjectId": "ES",
+      "question": "List the benefits and problems associated with big dams.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Big Dams: Multipurpose Benefits vs. Ecological Problems\n**Benefits:**\n- Large-scale hydroelectric power generation without combustion emissions.\n- Perennial irrigation canals transforming arid lands into fertile food bowls.\n- Monsoon flood attenuation in river valleys.\n- Municipal potable water supply to metropolises.\n\n**Environmental & Social Problems:**\n- Involuntary mass displacement of rural tribal populations without adequate rehabilitation.\n- Submergence of virgin biodiversity-rich forests.\n- Silt trapping in reservoirs causing downstream delta erosion.\n- Reservoir-Induced Seismicity (RIS) due to hydrostatic pressure along crustal faults."
+    },
+    "es|define the biogeochemical cycle explain the processes of the nitrogen cycle with a diagram": {
+      "key": "es|define the biogeochemical cycle explain the processes of the nitrogen cycle with a diagram",
+      "subjectId": "ES",
+      "question": "Define the biogeochemical cycle. Explain the processes of the nitrogen cycle with a diagram.",
+      "chapter": 1,
+      "marks": 3,
+      "answerMd": "### The Nitrogen Cycle\nAtmospheric $N_2$ ($78\\%$ of air) is converted into biological forms across 5 sequential stages:\n\n```text\n                Atmospheric Nitrogen (N2)\n                  |                  ^\n       Nitrogen   |                  | Denitrification\n       Fixation   v                  | (Pseudomonas)\n             Ammonia (NH3)       Nitrates (NO3-)\n                  |                  ^\n      Nitrification                  | Nitrification\n     (Nitrosomonas)                  | (Nitrobacter)\n                  v                  |\n                   Nitrites (NO2-) --+\n```\n\n1. **Fixation:** $N_2 \\rightarrow NH_3$ via *Rhizobium* in legume roots or lightning.\n2. **Nitrification:**\n   - $2NH_3 + 3O_2 \\xrightarrow{\\text{Nitrosomonas}} 2NO_2^- + 2H^+ + 2H_2O$\n   - $2NO_2^- + O_2 \\xrightarrow{\\text{Nitrobacter}} 2NO_3^-$\n3. **Assimilation:** Plant roots absorb $NO_3^-$ to synthesize amino acids.\n4. **Ammonification:** Decomposers break down organic waste into ammonia.\n5. **Denitrification:** *Pseudomonas* reduces $NO_3^-$ back to gaseous $N_2$."
+    },
+    "es|analyze the reasons for deforestation and its consequences on the environment": {
+      "key": "es|analyze the reasons for deforestation and its consequences on the environment",
+      "subjectId": "ES",
+      "question": "Analyze the reasons for deforestation and its consequences on the environment.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Forests: Benefits and Deforestation Impacts\n**Benefits of Forests:**\n- Carbon sequestration, acting as Earth's primary terrestrial carbon sink.\n- Watershed protection: sponge effect prevents flash floods and recharges groundwater.\n- Soil conservation: root systems anchor topsoil against wind and water erosion.\n- Timber, resin, medicinal herbs, and honey production.\n\n**Consequences of Deforestation:**\n- Accelerated global warming (responsible for $\\approx 15\\%$ of greenhouse gas emissions).\n- Mass extinction of endemic tropical wildlife species.\n- Desertification and severe soil erosion."
+    },
+    "es|explain food chains and food webs with suitable examples give their significance": {
+      "key": "es|explain food chains and food webs with suitable examples give their significance",
+      "subjectId": "ES",
+      "question": "Explain food chains and food webs with suitable examples. Give their significance.",
+      "chapter": 1,
+      "marks": 3,
+      "answerMd": "### Food Chain vs. Food Web\n1. **Food Chain:** A linear transfer of energy as one organism consumes another:\n   $$\\text{Grass (Producer)} \\rightarrow \\text{Grasshopper} \\rightarrow \\text{Frog} \\rightarrow \\text{Snake} \\rightarrow \\text{Hawk (Apex)}$$\n2. **Food Web:** A complex, interconnected network of multiple overlapping food chains within an ecological community.\n3. **Key Laws:**\n   - **Lindeman's 10% Rule:** Only $\\approx 10\\%$ of energy is transferred to the next trophic level; $90\\%$ is dissipated as metabolic respiration heat.\n   - **Resilience:** Food webs provide alternative prey pathways, conferring ecosystem stability."
+    },
+    "es|what is a flood analyze the socioeconomic implications of flood conditions": {
+      "key": "es|what is a flood analyze the socioeconomic implications of flood conditions",
+      "subjectId": "ES",
+      "question": "What is a flood? Analyze the socioeconomic implications of flood conditions.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Floods: Causes and Socioeconomic Implications\nA **flood** is an inundation of dry land caused by extreme meteorological and hydrological conditions.\n\n**Causes:**\n- Cloudbursts, prolonged monsoon downpours, embankment breaches, and unmanaged dam releases.\n- Urban concrete surfaces blocking natural rainwater infiltration.\n\n**Socioeconomic Impacts:**\n- Loss of life and livestock; mass displacement of vulnerable populations.\n- Submergence of crops leading to food inflation and farmer debt distress.\n- Infrastructure destruction (bridges, power grids, drinking water pipelines).\n- Water-borne epidemics (cholera, typhoid, hepatitis) and mosquito vector blooms (malaria, dengue)."
+    },
+    "es|enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability": {
+      "key": "es|enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability",
+      "subjectId": "ES",
+      "question": "Enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability.",
+      "chapter": 2,
+      "marks": 3,
+      "answerMd": "### Renewable Energy Sources & Advantages\n1. **Solar Power:** Photovoltaic silicon cells and solar thermal collectors.\n2. **Wind Power:** Kinetic energy converted into electricity via aerodynamic wind turbines.\n3. **Hydroelectric Power:** Gravitational head of impounded dam water driving hydraulic turbines.\n4. **Biomass & Biogas:** Anaerobic digestion of organic residues yielding methane ($CH_4$).\n5. **Geothermal Energy:** Subsurface enthalpy from geothermal steam reservoirs.\n\n**Key Advantages:** Zero operational greenhouse gas emissions, inexhaustible natural supply, energy independence, and reduction of air pollutants ($PM_{2.5}, SO_2$)."
+    },
+    "es|illustrate the universal energy flow model of an ecosystem": {
+      "key": "es|illustrate the universal energy flow model of an ecosystem",
+      "subjectId": "ES",
+      "question": "Illustrate the universal energy-flow model of an ecosystem.",
+      "chapter": 1,
+      "marks": 2,
+      "answerMd": "### Universal Energy Flow Model (E.P. Odum)\nDescribes the thermodynamic flow of energy through any biological trophic level:\n\n```text\n                  UNABSORBED / LOST ENERGY (NU)\n                           ^\n                           |\n   INPUT ENERGY (I) ---> [ ASSIMILATED (A) ] ---> RESPIRATION (R) [Heat Loss]\n                                |\n                                v\n                       BIOMASS PRODUCTION (P)\n                                |\n                 +--------------+--------------+\n                 |                             |\n          GROWTH (G) / YIELD            EXCRETION / MORTALITY (E)\n```\n\n**Thermodynamic Formulas:**\n$$\\mathbf{I = A + NU} \\quad \\text{and} \\quad \\mathbf{A = P + R}$$\n\nWhere $I$ is gross ingested energy, $A$ is assimilated energy, $R$ is irreversible metabolic heat lost (Second Law of Thermodynamics), and $P$ is net biomass production. Energy flow is strictly **unidirectional** and non-cyclic."
     },
     "es|explain genetic species and ecosystem biodiversity with examples": {
       "key": "es|explain genetic species and ecosystem biodiversity with examples",
@@ -193,7 +169,31 @@
       "question": "Explain genetic, species, and ecosystem biodiversity with examples.",
       "chapter": 1,
       "marks": 3,
-      "answerMd": "### Genetic, Species, and Ecosystem Biodiversity\n\nBiodiversity is structured across three hierarchical levels:\n\n### 1. Genetic Diversity\nVariation of genetic alleles and chromosomes within a single biological species.\n- **Significance:** Provides adaptive evolutionary resilience against epidemics and climate extremes.\n- **Examples:** Over $50,000$ distinct cultivars of rice (*Oryza sativa*) across India; over $1,000$ mango varieties (*Mangifera indica*).\n\n### 2. Species Diversity\nThe variety and abundance of different biological species inhabiting an ecosystem.\n- Measured via **Species Richness** (total distinct species count) and **Species Evenness** (relative numerical equitability).\n- **Example:** High amphibian and floral richness in the Western Ghats and Indo-Burma biodiversity hotspots.\n\n### 3. Ecosystem Diversity\nThe variety of distinct geographic landscapes, biomes, and ecological niches.\n- **Example:** India contains diverse biomes spanning Himalayan alpine pastures, mangrove swamps in the Sundarbans, the Thar desert, and Andaman coral reefs."
+      "answerMd": "### Three Levels of Biodiversity\n1. **Genetic Diversity:** Variation of alleles within a single species.\n   - *Example:* Over $50,000$ strains of rice (*Oryza sativa*) and over $1,000$ mango varieties (*Mangifera indica*) in India.\n2. **Species Diversity:** Variety and equitability of different taxonomic species in a community.\n   - *Example:* Western Ghats amphibian and floral richness.\n3. **Ecosystem Diversity:** Variety of biological habitats and biomes across regions.\n   - *Example:* India's landscapes span alpine meadows, Thar desert sand dunes, mangrove estuaries, and coral reefs."
+    },
+    "es|evaluate the environmental effects of mineral resource extraction": {
+      "key": "es|evaluate the environmental effects of mineral resource extraction",
+      "subjectId": "ES",
+      "question": "Evaluate the environmental effects of mineral-resource extraction.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Environmental Consequences of Mineral Resource Extraction\n1. **Deforestation & Habitat Loss:** Open-cast strip mining strips surface vegetation and destroys wildlife habitats.\n2. **Acid Mine Drainage (AMD):** Sulfide ores exposed to air and water generate dilute sulfuric acid ($H_2SO_4$), leaching toxic heavy metals into river basins.\n3. **Air Pollution:** Blasting, crushing, and haul trucks emit respirable particulate matter ($PM_{10}, PM_{2.5}$), causing silicosis among miners.\n4. **Land Subsidence:** Collapse of underground mining cavities damages surface infrastructure."
+    },
+    "es|discuss the consumptive and social values of biodiversity giving examples of each": {
+      "key": "es|discuss the consumptive and social values of biodiversity giving examples of each",
+      "subjectId": "ES",
+      "question": "Discuss the consumptive and social values of biodiversity, giving examples of each.",
+      "chapter": 1,
+      "marks": 3,
+      "answerMd": "### Values of Biodiversity\n1. **Consumptive Use Value:** Direct non-market consumption (wild berries, fish, firewood for cooking, indigenous medicinal plants like neem and tulsi).\n2. **Productive Use Value:** Commercial commodities sold in national/international markets (timber, rubber, silk, cotton, pharmaceuticals like Taxol).\n3. **Social & Cultural Value:** Aesthetic joy, ecotourism, sacred groves, and nature photography.\n4. **Ethical Value:** The moral understanding that all biological species possess an inherent right to exist on Earth."
+    },
+    "es|what is a drought analyze the socioeconomic implications of prolonged drought conditions": {
+      "key": "es|what is a drought analyze the socioeconomic implications of prolonged drought conditions",
+      "subjectId": "ES",
+      "question": "What is a drought? Analyze the socioeconomic implications of prolonged drought conditions.",
+      "chapter": 2,
+      "marks": 2,
+      "answerMd": "### Droughts: Types and Socioeconomic Implications\nA **drought** is an extended period of deficient precipitation resulting in hydrological imbalance.\n\n**Four Types:**\n1. *Meteorological:* Severe percentage shortfall in normal rainfall.\n2. *Hydrological:* Depletion of surface lakes, reservoirs, and groundwater aquifers.\n3. *Agricultural:* Inadequate soil moisture during crop vegetative stages.\n4. *Socioeconomic:* Water shortage disrupting economic supply and demand.\n\n**Socioeconomic Impacts:**\n- Widespread crop failure, farmer suicides, and acute agrarian distress.\n- Forced rural-to-urban distress migration into urban slums.\n- Severe domestic water hardship for women and children who must walk miles to fetch water."
     }
   }
 }

@@ -1,23 +1,6 @@
 {
   "subjectId": "IE",
-  "generatedAt": "2026-10-31T20:40:24.973Z",
-  "count": 2,
-  "solutions": {
-    "ie|explain the 9 building blocks of business model canvas bmc": {
-      "key": "ie|explain the 9 building blocks of business model canvas bmc",
-      "subjectId": "IE",
-      "question": "Explain the 9 Building Blocks of Business Model Canvas (BMC).",
-      "chapter": 1,
-      "marks": 10,
-      "answerMd": "### The Business Model Canvas (BMC)\nThe **Business Model Canvas**, developed by Alexander Osterwalder, is a visual chart consisting of 9 building blocks that describe a startup's value proposition, infrastructure, customers, and finances:\n\n```text\n+---------------------+-------------------+-------------------+-------------------+---------------------+\n| KEY PARTNERS        | KEY ACTIVITIES    | VALUE             | CUSTOMER          | CUSTOMER            |\n| - Suppliers         | - Production      | PROPOSITIONS      | RELATIONSHIPS     | SEGMENTS            |\n| - Strategic alliances| - Problem-solving| - Core products   | - Self-service    | - Target users      |\n|                     +-------------------+   solving customer| - Personal assist | - Mass or niche     |\n|                     | KEY RESOURCES     |   pain points     +-------------------+                     |\n|                     | - Physical, IP    |                   | CHANNELS          |                     |\n|                     | - Human, financial|                   | - Direct, web     |                     |\n+---------------------+-------------------+-------------------+-------------------+---------------------+\n| COST STRUCTURE                          | REVENUE STREAMS                                             |\n| - Fixed & variable costs, economies of scale | - Direct sales, subscriptions, licensing, usage fees    |\n+-----------------------------------------+-------------------------------------------------------------+\n```\n\n1. **Customer Segments:** Target demographic or niche market.\n2. **Value Propositions:** Bundle of products/services solving specific customer problems.\n3. **Channels:** Distribution and communication touchpoints.\n4. **Customer Relationships:** Retention, acquisition, and support strategies.\n5. **Revenue Streams:** Monetization model (subscription, one-time sales).\n6. **Key Resources:** Essential physical, intellectual, human, and capital assets.\n7. **Key Activities:** Critical operational processes required to deliver value.\n8. **Key Partnerships:** External network of suppliers and partners.\n9. **Cost Structure:** Major fixed, variable, and operational expenditures."
-    },
-    "ie|explain the 5 stages of the design thinking process": {
-      "key": "ie|explain the 5 stages of the design thinking process",
-      "subjectId": "IE",
-      "question": "Explain the 5 stages of the Design Thinking process.",
-      "chapter": 1,
-      "marks": 5,
-      "answerMd": "### The 5 Stages of Design Thinking (Stanford d.school)\n\n```text\n[Empathize] ---> [Define] ---> [Ideate] ---> [Prototype] ---> [Test]\n     ^                                                          |\n     +------------------- (Iterative Feedback) -----------------+\n```\n\n1. **Empathize:** Conduct qualitative research and observe real users to understand their physical and emotional pain points without bias.\n2. **Define:** Synthesize observations into a focused, human-centered **Problem Statement** (\"How might we...\").\n3. **Ideate:** Brainstorm unconstrained creative solutions using mind mapping, SCAMPER, and divergent thinking.\n4. **Prototype:** Build inexpensive, scaled-down, tactile versions (wireframes, paper mockups, 3D printed models) to explore potential solutions.\n5. **Test:** Rigorously test prototypes with end users to gather qualitative feedback and iterate."
-    }
-  }
+  "generatedAt": "2026-11-01T04:34:30.608Z",
+  "count": 0,
+  "solutions": {}
 }

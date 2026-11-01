@@ -313,11 +313,14 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
   // Solution Modal & Ask With AI Functions
   // -------------------------------------------------------------
   let pendingAiQuestion = null;
+  let pendingAskProvider = '';
+  let pendingSolutionContext = '';
 
   function copyTextSynchronous(text) {
     let success = false;
+    let ta = null;
     try {
-      const ta = document.createElement('textarea');
+      ta = document.createElement('textarea');
       ta.value = text;
       ta.style.position = 'fixed';
       ta.style.left = '-9999px';
@@ -327,17 +330,36 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
       ta.select();
       ta.setSelectionRange(0, 99999);
       success = document.execCommand('copy');
-      document.body.removeChild(ta);
     } catch (e) {
       success = false;
+    } finally {
+      if (ta && ta.parentNode) ta.parentNode.removeChild(ta);
     }
-    if (!success && navigator.clipboard && navigator.clipboard.writeText) {
+
+    // Fire-and-forget on purpose: never await here, or mobile browsers lose
+    // the user gesture and block the navigation that follows.
+    if (navigator.clipboard && navigator.clipboard.writeText) {
       try {
-        navigator.clipboard.writeText(text);
-        success = true;
+        const write = navigator.clipboard.writeText(text);
+        if (write && typeof write.catch === 'function') write.catch(() => {});
+        if (!success) success = true;
       } catch (e) {}
     }
     return success;
+  }
+
+  function setAskCopyStatus(copied, text) {
+    const strip = document.getElementById('askCopiedStrip');
+    const fallback = document.getElementById('askCopyFallback');
+    const fallbackText = document.getElementById('askCopyFallbackText');
+    if (strip) strip.style.display = copied ? 'flex' : 'none';
+    if (fallback) fallback.style.display = copied ? 'none' : 'block';
+    if (fallbackText && !copied) {
+      fallbackText.value = text;
+      setTimeout(() => {
+        try { fallbackText.focus(); fallbackText.select(); } catch (e) {}
+      }, 50);
+    }
   }
 
   function buildAskWithAiPrompt(q) {
@@ -364,26 +386,30 @@ ${cleanQ}
 
 Give the complete answer exactly as it should be written in the exam: definition, full working/derivation with steps, a diagram or table if useful, and the final result. Use simple language and headings.`;
 
-    return rawPrompt.slice(0, 3500);
+    return (pendingSolutionContext
+      ? rawPrompt + `\n\nContext from the app's saved answer (continue from it):\n${pendingSolutionContext.slice(0, 1200)}`
+      : rawPrompt).slice(0, 3500);
   }
 
   function openAskWithModal(q) {
     pendingAiQuestion = q;
     const promptText = buildAskWithAiPrompt(q);
 
-    // 1. Copy immediately and synchronously on tap
+    // 1. Copy immediately and synchronously on tap. No await before this point.
     const copyOk = copyTextSynchronous(promptText);
-    showToast('✓ Question copied to clipboard', { duration: 2400 });
+    setAskCopyStatus(copyOk, promptText);
+    showToast(copyOk ? '✓ Question copied to clipboard' : "Couldn't copy automatically — select the text below", { duration: 2600 });
 
-    // 2. Configure ChatGPT and Gemini <a> tags with real hrefs
+    // 2. Configure ChatGPT and Gemini <a> tags with real hrefs.
     const chatgptAnchor = document.getElementById('askOptionChatgpt');
     if (chatgptAnchor) {
-      const qEncoded = encodeURIComponent(promptText);
-      chatgptAnchor.href = qEncoded.length <= 5000 ? `https://chatgpt.com/?q=${qEncoded}` : 'https://chatgpt.com/';
+      const chatgptUrl = `https://chatgpt.com/?q=${encodeURIComponent(promptText)}`;
+      chatgptAnchor.href = chatgptUrl.length <= 6000 ? chatgptUrl : 'https://chatgpt.com/';
       chatgptAnchor.onclick = () => {
         copyTextSynchronous(promptText);
+        pendingAskProvider = 'ChatGPT';
         const sub = document.getElementById('chatgptSub');
-        if (sub) sub.textContent = 'Opening ChatGPT… paste if needed';
+        if (sub) sub.textContent = 'Opening ChatGPT… paste if the box is empty';
       };
     }
 
@@ -392,12 +418,13 @@ Give the complete answer exactly as it should be written in the exam: definition
       geminiAnchor.href = 'https://gemini.google.com/app';
       geminiAnchor.onclick = () => {
         copyTextSynchronous(promptText);
+        pendingAskProvider = 'Gemini';
         const sub = document.getElementById('geminiSub');
-        if (sub) sub.textContent = 'Opening Gemini… paste prompt';
+        if (sub) sub.textContent = 'Opening Gemini… paste the prompt';
       };
     }
 
-    // 3. Configure In-Built AI Assistant
+    // 3. Configure In-Built AI Assistant.
     const builtinBtn = document.getElementById('askOptionBuiltin');
     if (builtinBtn) {
       builtinBtn.onclick = () => {
@@ -411,11 +438,26 @@ Give the complete answer exactly as it should be written in the exam: definition
       };
     }
 
-    // 4. Show strip
-    const strip = document.getElementById('askCopiedStrip');
-    if (strip) strip.style.display = copyOk ? 'flex' : 'none';
+    // 4. Manual fallback if the browser refused both copy methods.
+    const fallbackBtn = document.getElementById('askCopyFallbackBtn');
+    if (fallbackBtn) {
+      fallbackBtn.onclick = () => {
+        const fallbackText = document.getElementById('askCopyFallbackText');
+        if (!fallbackText) return;
+        fallbackText.focus();
+        fallbackText.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        if (!ok && navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(fallbackText.value).catch(() => {});
+          ok = true;
+        }
+        setAskCopyStatus(ok, fallbackText.value);
+        if (ok) showToast('✓ Question copied to clipboard', { duration: 2000 });
+      };
+    }
 
-    // 5. Open modal
+    // 5. Open modal only after the copy attempt.
     const modal = document.getElementById('askWithModal');
     if (modal) {
       modal.style.display = 'flex';
@@ -436,6 +478,7 @@ Give the complete answer exactly as it should be written in the exam: definition
     if (!q || !q.subjectId) return null;
     const subId = q.subjectId.toUpperCase();
 
+    // 1. Check in-memory cache
     if (!solutionsCache[subId]) {
       try {
         const res = await fetch(`data/solutions/${subId}.json`);
@@ -450,19 +493,20 @@ Give the complete answer exactly as it should be written in the exam: definition
       }
     }
 
-    const subSolutions = solutionsCache[subId];
-    if (!subSolutions) return null;
-
+    const subSolutions = solutionsCache[subId] || {};
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
+    
+    // Strict exact match only - prevents cross-question duplicate answers
     if (subSolutions[normKey]) return subSolutions[normKey];
 
-    const qClean = (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').trim();
-    for (const [key, sol] of Object.entries(subSolutions)) {
-      const keyQuestionClean = (sol.question || key.split('|')[1] || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').trim();
-      if (keyQuestionClean && (qClean.includes(keyQuestionClean) || keyQuestionClean.includes(qClean))) {
-        return sol;
+    // Check localStorage cache for previously AI-generated answers
+    try {
+      const localStored = localStorage.getItem('mgit_sol_' + normKey);
+      if (localStored) {
+        const parsed = JSON.parse(localStored);
+        if (parsed && parsed.answerMd) return parsed;
       }
-    }
+    } catch (e) {}
 
     return null;
   }
@@ -476,12 +520,16 @@ Give the complete answer exactly as it should be written in the exam: definition
     const unitBadge = document.getElementById('solUnitBadge');
     const titleEl = document.getElementById('solQuestionTitle');
     const bodyEl = document.getElementById('solAnswerBody');
+    const statusChip = document.getElementById('solStatusChip');
+    const paperNotice = document.getElementById('solPaperNotice');
 
     const sub = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
     if (subBadge) subBadge.textContent = sub ? sub.shortName : (q.subjectId || 'CSE');
     if (marksBadge) marksBadge.textContent = marksLabel(q.marks);
     if (unitBadge) unitBadge.textContent = 'Unit ' + (q.chapter || 1);
-    if (titleEl) titleEl.innerHTML = formatQuestionMath(q.question);
+    if (titleEl) titleEl.innerHTML = cleanHumanFriendlyQuestion(q.question);
+    if (statusChip) statusChip.textContent = 'Model Academic Solution';
+    if (paperNotice) paperNotice.style.display = 'none';
 
     modal.style.display = 'flex';
     modal.style.zIndex = '100003';
@@ -490,7 +538,7 @@ Give the complete answer exactly as it should be written in the exam: definition
       bodyEl.innerHTML = `
         <div class="sol-loading-container" style="padding: 26px 0; text-align: center; color: #64748b;">
           <div class="spinner-border" style="display: inline-block; width: 28px; height: 28px; border: 3px solid #e2e8f0; border-top-color: #4f46e5; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px;"></div>
-          <p style="margin: 0; font-size: 14px; font-weight: 500;">Loading verified university examination solution…</p>
+          <p style="margin: 0; font-size: 14px; font-weight: 600; color: #1e293b;">Loading verified university examination solution…</p>
         </div>
       `;
     }
@@ -498,48 +546,27 @@ Give the complete answer exactly as it should be written in the exam: definition
     const askDeeperBtn = document.getElementById('solAskAiDeeperBtn');
     if (askDeeperBtn) {
       askDeeperBtn.onclick = () => {
+        pendingSolutionContext = (bodyEl ? bodyEl.innerText : '').slice(0, 2400);
         closeSolutionModal();
         openAskWithModal(q);
+        pendingSolutionContext = '';
       };
     }
 
-    // 1. Check local pre-compiled database
-    const preSolution = await getSolutionForQuestion(q);
+    // 1. Check exact pre-saved solution
+    let preSolution = null;
+    try {
+      preSolution = await getSolutionForQuestion(q);
+    } catch (err) {
+      console.warn('[Solution Library] Lookup error:', err);
+    }
+
     if (preSolution && preSolution.answerMd) {
-      if (bodyEl) {
-        bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
-      }
+      if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
       return;
     }
 
-    // 2. Not in pre-compiled list: show fast AI generation status
-    if (bodyEl) {
-      bodyEl.innerHTML = `
-        <div class="sol-generating-box" style="padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; text-align: center;">
-          <div style="font-size: 26px; color: #6366f1; margin-bottom: 10px;">
-            <i class="fa-solid fa-wand-magic-sparkles fa-bounce"></i>
-          </div>
-          <h4 style="margin: 0 0 6px; font-size: 15px; color: #1e293b; font-weight: 600;">Formulating Complete University Model Answer</h4>
-          <p style="margin: 0 0 16px; font-size: 13.5px; color: #64748b;">Solving with MR-25 academic requirements (definitions, derivations, diagrams &amp; examples)…</p>
-          <button type="button" class="btn-action-primary" id="solDirectAiBtn" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 auto;">
-            <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-              <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
-            </svg>
-            <span>Solve with AI Assistant (Question Auto-Copied)</span>
-          </button>
-        </div>
-      `;
-
-      const directAiBtn = document.getElementById('solDirectAiBtn');
-      if (directAiBtn) {
-        directAiBtn.onclick = () => {
-          closeSolutionModal();
-          openAskWithModal(q);
-        };
-      }
-    }
-
-    // 3. Trigger serverless /api/gemini solver
+    // 2. Not in pre-saved JSON: Generate with AI on-demand
     try {
       const prompt = `Solve this university examination question for MGIT CSE Semester III (${sub ? sub.title : q.subjectId}, Unit ${q.chapter || 1}, ${marksLabel(q.marks)}):
 "${q.question}"
@@ -554,10 +581,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       const res = await fetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: prompt,
-          history: []
-        })
+        body: JSON.stringify({ query: prompt, history: [] })
       });
 
       if (res.ok) {
@@ -566,14 +590,20 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         if (text && bodyEl) {
           bodyEl.innerHTML = formatGeminiResponse(text);
           const normKey = (q.subjectId || '').toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
-          if (!solutionsCache[q.subjectId]) solutionsCache[q.subjectId] = {};
-          solutionsCache[q.subjectId][normKey] = { answerMd: text, question: q.question };
+          try {
+            localStorage.setItem('mgit_sol_' + normKey, JSON.stringify({ answerMd: text, question: q.question }));
+          } catch (e) {}
           return;
         }
       }
     } catch (err) {
-      console.warn('[Solution Solver] On-demand generation fallback:', err);
+      console.warn('[Solution Solver] On-demand solve failed:', err);
     }
+
+    // 3. If AI cannot generate the answer, DO NOT show an error message!
+    // Simply show the "Ask AI for Deeper Explanation" window with question auto-copied
+    closeSolutionModal();
+    openAskWithModal(q);
   }
 
   function closeSolutionModal() {
@@ -1934,74 +1964,73 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
   function createQuestionCardElement(q) {
     const isPartA = q.part === 'A';
-    const partBadgeClass = isPartA ? 'part-a' : 'part-b';
-    const partLabel = 'Part ' + q.part + ' • ' + marksLabel(q.marks);
-    const recurrenceBadge = q.frequency > 1
-      ? '<span class="q-badge recurrence"><i class="fa-solid fa-fire"></i> Repeated ' + q.frequency + 'x (' + (q.years ? q.years.join(', ') : '') + ')</span>'
-      : '';
-
-    const card = document.createElement('div');
-    card.className = 'question-item-card ' + (isPartA ? 'part-a-card' : 'part-b-card') + (q.frequency > 1 ? ' repeated-card' : '');
+    const row = document.createElement('div');
+    row.className = 'q-compact-item';
+    row.dataset.qid = q.id;
 
     const subForCard = SUBJECTS_DATA[q.subjectId] || state.currentSubject;
     const directPdfUrl = q.driveFileId
       ? ('https://drive.google.com/file/d/' + q.driveFileId + '/view?usp=sharing')
       : (subForCard && subForCard.driveUrl ? subForCard.driveUrl : DRIVE_ROOT_URL);
 
-    // Format math in question preview
-    const formattedQuestionText = formatQuestionMath(q.question);
+    const cleanText = cleanHumanFriendlyQuestion(q.question);
+    const qNum = q.questionNumber || 'Q';
 
-    card.innerHTML = `
-      <div class="question-card-top">
-        <div class="question-badges">
-          <span class="q-badge q-num">${escapeHtml(q.questionNumber || 'Q')}</span>
-          <span class="q-badge ${partBadgeClass}">${partLabel}</span>
-          <span class="q-badge topic">${escapeHtml(q.topicTag || 'Core Syllabus')}</span>
-          ${semesterBadgeHtml(q)}
-          ${recurrenceBadge}
-        </div>
-        <div class="question-years-tag">
-          Asked in: <strong>${q.years ? q.years.join(', ') : ''}</strong>
+    row.innerHTML = `
+      <div class="q-compact-header" role="button" tabindex="0" aria-expanded="false" title="Click to view question options">
+        <span class="q-compact-num">${escapeHtml(qNum)}</span>
+        <div class="q-compact-text">${escapeHtml(cleanText)}</div>
+        <div class="q-compact-toggle">
+          <i class="fa-solid fa-chevron-down q-compact-chevron" aria-hidden="true"></i>
         </div>
       </div>
-      <div class="question-text-preview">${formattedQuestionText}</div>
-      <div class="question-card-footer">
-        <div class="footer-left-proof">
-          <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="direct-pdf-badge" onclick="event.stopPropagation();" title="Directly open original ${escapeHtml(q.paperName)} PDF in Google Drive">
-            <i class="fa-regular fa-file-pdf"></i>
-            <span>${escapeHtml(q.paperName)}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px; margin-left:3px;"></i>
-          </a>
+      <div class="q-compact-drawer" style="display: none;">
+        <div class="q-compact-meta-row">
+          <span class="q-meta-chip part-chip">Part ${q.part || 'A'} · ${marksLabel(q.marks)}</span>
+          <span class="q-meta-chip unit-chip">Unit ${q.chapter || 1}</span>
+          ${(q.years && q.years.length) ? `<span class="q-meta-chip year-chip"><i class="fa-regular fa-calendar"></i> Asked in: ${escapeHtml(q.years.join(', '))}</span>` : ''}
+          ${q.frequency > 1 ? `<span class="q-meta-chip rep-chip"><i class="fa-solid fa-fire"></i> Repeated ${q.frequency}x</span>` : ''}
         </div>
-        <div class="footer-right-actions">
-          <button type="button" class="btn-card-action btn-card-tips" title="View question details & info">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Info</span>
-          </button>
-          <button type="button" class="btn-card-action btn-card-sol" title="View step-by-step structured model solution">
+        <div class="q-compact-actions">
+          <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="btn-q-drive" title="Directly open original ${escapeHtml(q.paperName || 'paper')} in Google Drive">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>${escapeHtml(q.paperName || 'Open paper in Drive')}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square q-ext-icon"></i>
+          </a>
+          <button type="button" class="btn-q-solution" title="View step-by-step worked answer">
             <i class="fa-solid fa-book-open"></i>
             <span>View Solution</span>
-          </button>
-          <button type="button" class="btn-card-action btn-card-ai" title="Ask with AI assistant">
-            <svg class="gemini-sparkle-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-              <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
-            </svg>
-            <span>Ask with AI</span>
           </button>
         </div>
       </div>
     `;
 
-    // Event listeners
-    const tipsBtn = card.querySelector('.btn-card-tips');
-    if (tipsBtn) {
-      tipsBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openQuestionModal(q);
-      });
+    const header = row.querySelector('.q-compact-header');
+    const drawer = row.querySelector('.q-compact-drawer');
+    const solBtn = row.querySelector('.btn-q-solution');
+
+    function toggleDrawer(e) {
+      if (e) e.stopPropagation();
+      const isOpen = drawer.style.display !== 'none';
+      if (isOpen) {
+        drawer.style.display = 'none';
+        row.classList.remove('is-open');
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        drawer.style.display = 'block';
+        row.classList.add('is-open');
+        header.setAttribute('aria-expanded', 'true');
+      }
     }
 
-    const solBtn = card.querySelector('.btn-card-sol');
+    header.addEventListener('click', toggleDrawer);
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleDrawer();
+      }
+    });
+
     if (solBtn) {
       solBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -2009,18 +2038,29 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       });
     }
 
-    const aiBtn = card.querySelector('.btn-card-ai');
-    if (aiBtn) {
-      aiBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openAskWithModal(q);
-      });
-    }
+    return row;
+  }
 
-    // Clicking anywhere on card also opens details
-    card.addEventListener('click', () => openQuestionModal(q));
-
-    return card;
+  function cleanHumanFriendlyQuestion(text) {
+    if (!text) return '';
+    let s = String(text);
+    // Strip LaTeX / Math delimiter tokens
+    s = s.replace(/\\\[\s*/g, '').replace(/\s*\\\]/g, '');
+    s = s.replace(/\\\(\s*/g, '').replace(/\s*\\\)/g, '');
+    s = s.replace(/\$\$([^$]+)\$\$/g, '$1');
+    s = s.replace(/\$([a-zA-Z0-9_\-\+\*\/\(\)\{\}\s,]+)\$/g, '$1');
+    s = s.replace(/@@GEMINI_MATH_\d+@@/g, '');
+    s = s.replace(/\?\$/g, '');
+    // Clean and decode logic symbols
+    s = s.replace(/\b-(P\b|\b-\(|~(?=[P-Z\(]))/g, '¬');
+    s = s.replace(/([A-Z])V([A-Z])/g, '$1 ∨ $2');
+    s = s.replace(/([A-Z])A([A-Z])/g, '$1 ∧ $2');
+    s = s.replace(/<->/g, ' ↔ ');
+    s = s.replace(/->/g, ' → ');
+    s = s.replace(/<=/g, ' ≤ ');
+    s = s.replace(/>=/g, ' ≥ ');
+    s = s.replace(/!=/g, ' ≠ ');
+    return s.replace(/\s+/g, ' ').trim();
   }
 
   function formatQuestionMath(text) {
@@ -3560,44 +3600,20 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       });
     }
     
-    // Ask With AI modal wiring
+    // Ask With AI modal wiring. The row handlers are configured per-open in
+    // openAskWithModal(); do not attach legacy window.open/clipboard handlers
+    // here, because they would await before navigation and overwrite the
+    // pre-filled in-built prompt.
     const closeAskWithBtn = document.getElementById('closeAskWithModalBtn');
     if (closeAskWithBtn) closeAskWithBtn.addEventListener('click', closeAskWithModal);
 
-    const askBuiltin = document.getElementById('askOptionBuiltin');
-    if (askBuiltin) {
-      askBuiltin.addEventListener('click', () => {
-        const q = pendingAiQuestion;
-        closeAskWithModal();
-        if (q) solveQuestionWithGemini(q);
-      });
-    }
-
-    const askChatgpt = document.getElementById('askOptionChatgpt');
-    if (askChatgpt) {
-      askChatgpt.addEventListener('click', async () => {
-        const q = pendingAiQuestion;
-        closeAskWithModal();
-        if (!q) return;
-        const prompt = buildPromptForQuestion(q);
-        try { await navigator.clipboard.writeText(prompt); } catch (e) {}
-        showGlobalToast('Question copied to clipboard! Opening ChatGPT...', 3000);
-        window.open('https://chatgpt.com/?q=' + encodeURIComponent(prompt), '_blank');
-      });
-    }
-
-    const askGemini = document.getElementById('askOptionGemini');
-    if (askGemini) {
-      askGemini.addEventListener('click', async () => {
-        const q = pendingAiQuestion;
-        closeAskWithModal();
-        if (!q) return;
-        const prompt = buildPromptForQuestion(q);
-        try { await navigator.clipboard.writeText(prompt); } catch (e) {}
-        showGlobalToast('Question copied to clipboard! Opening Google Gemini...', 3000);
-        window.open('https://gemini.google.com/app', '_blank');
-      });
-    }
+    // Return-to-site reminder after an external AI row was tapped.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && pendingAskProvider) {
+        showToast(`Question copied — paste it in ${pendingAskProvider}`, { duration: 3000 });
+        pendingAskProvider = '';
+      }
+    });
 
     // Solution modal wiring
     const closeSolBtn = document.getElementById('closeSolutionModalBtn');
@@ -3617,7 +3633,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       el.modalSolveAiBtn.addEventListener('click', () => {
         if (state.currentQuestion) {
           closeQuestionModal();
-          solveQuestionWithGemini(state.currentQuestion);
+          openAskWithModal(state.currentQuestion);
         }
       });
     }
