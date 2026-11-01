@@ -475,14 +475,37 @@ Instructions for complete examination answer:
 
   const solutionsCache = {};
 
+  function isStaleFallbackSolution(text) {
+    if (!text || typeof text !== 'string') return true;
+    return text.includes('Establish the given mathematical assumptions') ||
+           text.includes('Core Principle & Formal Definitions') ||
+           text.includes('State the standard mathematical definitions') ||
+           text.includes('State boundary conditions or edge cases') ||
+           text.includes('Step 1: Establish the given mathematical');
+  }
+
+  // Purge any stale generic fallback solutions from localStorage immediately
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('mgit_sol_')) {
+        const val = localStorage.getItem(k);
+        if (isStaleFallbackSolution(val)) {
+          localStorage.removeItem(k);
+        }
+      }
+    }
+  } catch (e) {}
+
+
   async function getSolutionForQuestion(q) {
     if (!q || !q.subjectId) return null;
     const subId = q.subjectId.toUpperCase();
 
-    // 1. Check in-memory cache
+    // 1. Check in-memory cache (with cache buster query string to bypass stale SW/browser cache)
     if (!solutionsCache[subId]) {
       try {
-        const res = await fetch(`data/solutions/${subId}.json`);
+        const res = await fetch(`data/solutions/${subId}.json?v=${Date.now()}`, { cache: 'no-cache' });
         if (res.ok) {
           const json = await res.json();
           solutionsCache[subId] = json.solutions || json || {};
@@ -497,15 +520,24 @@ Instructions for complete examination answer:
     const subSolutions = solutionsCache[subId] || {};
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
     
-    // Strict exact match only - prevents cross-question duplicate answers
-    if (subSolutions[normKey]) return subSolutions[normKey];
+    // Strict exact match only - ensure not stale template
+    if (subSolutions[normKey] && !isStaleFallbackSolution(subSolutions[normKey].answerMd)) {
+      return subSolutions[normKey];
+    }
+    if (subSolutions[q.id] && !isStaleFallbackSolution(subSolutions[q.id].answerMd)) {
+      return subSolutions[q.id];
+    }
 
     // Check localStorage cache for previously AI-generated answers
     try {
       const localStored = localStorage.getItem('mgit_sol_' + normKey);
       if (localStored) {
         const parsed = JSON.parse(localStored);
-        if (parsed && parsed.answerMd) return parsed;
+        if (parsed && parsed.answerMd && !isStaleFallbackSolution(parsed.answerMd)) {
+          return parsed;
+        } else {
+          localStorage.removeItem('mgit_sol_' + normKey);
+        }
       }
     } catch (e) {}
 
@@ -566,7 +598,7 @@ Instructions for complete examination answer:
       console.warn('[Solution Library] Lookup error:', err);
     }
 
-    if (preSolution && preSolution.answerMd) {
+    if (preSolution && preSolution.answerMd && !isStaleFallbackSolution(preSolution.answerMd)) {
       if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
       if (statusChip) statusChip.textContent = 'Model Academic Solution';
       return;

@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.01-d4531bb';
+const CACHE_NAME = 'mgit-hub-v2026.11.01-fix242d-5';
 
 const STATIC_ASSETS = [
   './',
@@ -103,6 +103,12 @@ self.addEventListener('fetch', (event) => {
     url.hostname.includes('generativelanguage.googleapis.com') ||
     url.hostname.includes('tally.so')
   ) {
+    return;
+  }
+
+  // 1.5 Solution datasets and JSON data: always network first so updates load instantly
+  if (url.pathname.includes('/data/solutions/') || url.pathname.includes('/solutions/') || url.pathname.endsWith('.json')) {
+    event.respondWith(networkFirst(event));
     return;
   }
 

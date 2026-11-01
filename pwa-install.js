@@ -8,7 +8,7 @@
   // 1. Service Worker Registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
+      navigator.serviceWorker.register('./sw.js').then(r => { r.update(); return r; })
         .then((reg) => {
           console.log('[PWA] Service Worker registered:', reg.scope);
         })
