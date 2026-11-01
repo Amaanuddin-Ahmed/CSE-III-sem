@@ -430,10 +430,12 @@ Give the complete answer exactly as it should be written in the exam: definition
       builtinBtn.onclick = () => {
         closeAskWithModal();
         openGeminiModal();
-        if (el.geminiInput) {
-          el.geminiInput.value = promptText;
-          el.geminiInput.dispatchEvent(new Event('input'));
-          el.geminiInput.focus();
+        if (el.geminiQueryInput) {
+          el.geminiQueryInput.value = promptText;
+          el.geminiQueryInput.dispatchEvent(new Event('input'));
+          el.geminiQueryInput.focus();
+          const end = el.geminiQueryInput.value.length;
+          try { el.geminiQueryInput.setSelectionRange(end, end); } catch (e) {}
         }
       };
     }
@@ -566,44 +568,21 @@ Give the complete answer exactly as it should be written in the exam: definition
       return;
     }
 
-    // 2. Not in pre-saved JSON: Generate with AI on-demand
-    try {
-      const prompt = `Solve this university examination question for MGIT CSE Semester III (${sub ? sub.title : q.subjectId}, Unit ${q.chapter || 1}, ${marksLabel(q.marks)}):
-"${q.question}"
-
-Write the complete, verified, academic solution exactly as required in the examination for full marks:
-- State formal definitions, mathematical principles, and notation.
-- Provide step-by-step derivations, calculations, or algorithmic steps.
-- Include a clear diagram (ASCII or Mermaid), comparison table, or code snippet if applicable.
-- Conclude with the final result (∴ ...).
-Do not provide meta-advice, revision hints, or disclaimers—write the actual worked examination answer.`;
-
-      const res = await fetch('/api/gemini', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: prompt, history: [] })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        const text = data.text || (data.candidates && data.candidates[0]?.content?.parts[0]?.text);
-        if (text && bodyEl) {
-          bodyEl.innerHTML = formatGeminiResponse(text);
-          const normKey = (q.subjectId || '').toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
-          try {
-            localStorage.setItem('mgit_sol_' + normKey, JSON.stringify({ answerMd: text, question: q.question }));
-          } catch (e) {}
-          return;
-        }
-      }
-    } catch (err) {
-      console.warn('[Solution Solver] On-demand solve failed:', err);
+    // 2. Not in the static solution library: never call AI at runtime. Show an
+    // honest "coming soon" state and let the student ask for a full answer.
+    if (statusChip) statusChip.textContent = 'Solution coming soon';
+    if (paperNotice) {
+      const needsPaper = /(?:figure|diagram|table|shown below|given figure|refer to)/i.test(q.question || '');
+      paperNotice.style.display = needsPaper ? 'flex' : 'none';
     }
-
-    // 3. If AI cannot generate the answer, DO NOT show an error message!
-    // Simply show the "Ask AI for Deeper Explanation" window with question auto-copied
-    closeSolutionModal();
-    openAskWithModal(q);
+    if (bodyEl) {
+      bodyEl.innerHTML = `
+        <div class="sol-coming-soon">
+          <div class="sol-coming-soon-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
+          <h4>Solution coming soon</h4>
+          <p>This exact question does not have a verified written solution in the library yet. Use <strong>Ask with AI</strong> below to get a complete worked answer now, or open the original paper from the note's Drive folder.</p>
+        </div>`;
+    }
   }
 
   function closeSolutionModal() {
@@ -1214,11 +1193,9 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
 
       const contentIndex = window.NOTES_CONTENT_INDEX || {};
-      const contentInfo = contentIndex[note.id];
-      const qualityTag = contentInfo && contentInfo.quality === 'limited'
-        ? `<span class="note-quality-tag" title="Handwritten/scanned pages may have incomplete OCR text"><i class="fa-solid fa-triangle-exclamation"></i> OCR limited</span>`
-        : '';
-      const readButton = contentInfo
+      const noteSummaries = window.NOTE_SUMMARIES || {};
+      const hasNoteContent = Boolean(noteSummaries[note.id] || contentIndex[note.id]);
+      const readButton = hasNoteContent
         ? `<button type="button" class="note-read-btn" data-note-id="${escapeHtml(note.id)}">
              <i class="fa-solid fa-book-open"></i>
              <span>Read</span>
@@ -1233,14 +1210,13 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
             <span><i class="${iconClass}" style="color: ${iconColor};"></i> ${escapeHtml(note.fileName)}</span> &bull; 
             <span>${escapeHtml(note.fileSize)}</span> &bull; 
             <span>${escapeHtml(unitLabel)}</span>
-            ${qualityTag}
           </div>
         </div>
         <div class="note-actions">
           ${readButton}
           <a href="${fileLink}" target="_blank" rel="noopener noreferrer" class="note-open-btn">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Open Drive</span>
+            <span>Open with Drive</span>
           </a>
         </div>
       `;
@@ -1304,27 +1280,39 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     el.notesReaderTitle.textContent = note.title;
     el.notesReaderMeta.textContent = `${note.fileName} · ${note.fileSize}${index ? ` · ${index.pages} page${index.pages === 1 ? '' : 's'}` : ''}`;
     el.notesReaderDriveLink.href = driveLink;
-    el.notesReaderWarning.hidden = !index || index.quality !== 'limited';
+    if (el.notesReaderWarning) el.notesReaderWarning.hidden = true;
     el.notesReaderSearch.value = '';
     el.notesReaderSearchCount.textContent = '';
-    el.notesReaderFooterMeta.textContent = index
-      ? `${index.pages} page${index.pages === 1 ? '' : 's'} · ${index.quality === 'limited' ? 'OCR text may be incomplete' : 'Extracted text'}`
-      : '';
-    el.notesReaderBody.innerHTML = `
-      <div class="notes-reader-loading">
-        <i class="fa-solid fa-circle-notch fa-spin"></i>
-        <span>Loading extracted notes...</span>
-      </div>`;
-    el.notesReaderBody.scrollTop = 0;
+    if (el.notesReaderSearch) el.notesReaderSearch.placeholder = 'Search this summary...';
+    if (el.notesReaderFooterMeta) el.notesReaderFooterMeta.textContent = 'Structured academic summary';
     el.notesReaderModal.style.display = 'flex';
     document.body.classList.add('notes-reader-open');
     document.documentElement.classList.add('notes-reader-open');
     notesReaderState.currentId = noteId;
 
+    // Fast path: if structured summary already exists in window.NOTE_SUMMARIES, render immediately!
+    const instantSummary = (window.NOTE_SUMMARIES || {})[noteId];
+    if (instantSummary) {
+      renderNoteSummary(instantSummary, driveLink);
+      return;
+    }
+
+    el.notesReaderBody.innerHTML = `
+      <div class="notes-reader-loading">
+        <i class="fa-solid fa-circle-notch fa-spin"></i>
+        <span>Loading summary...</span>
+      </div>`;
+    el.notesReaderBody.scrollTop = 0;
+
     loadNotesContentScript()
       .then(content => {
         if (notesReaderState.currentId !== noteId) return;
         const entry = content && content[noteId];
+        const summary = (window.NOTE_SUMMARIES || {})[noteId];
+        if (summary) {
+          renderNoteSummary(summary, driveLink);
+          return;
+        }
         if (!entry || !Array.isArray(entry.pages) || entry.pages.length === 0) {
           el.notesReaderBody.innerHTML = `
             <div class="notes-reader-loading">
@@ -1412,6 +1400,55 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
   }
 
+  function renderNoteSummary(summary, driveLink) {
+    const topics = Array.isArray(summary.topics) ? summary.topics : [];
+    const mustKnow = Array.isArray(summary.mustKnow) ? summary.mustKnow : [];
+
+    const topicHtml = topics.map((topic, i) => {
+      const points = (topic.points || []).filter(Boolean);
+      const formulas = (topic.formulas || []).filter(Boolean);
+      return `
+        <section class="note-summary-topic note-topic-${i % 5}">
+          <h3><span class="note-topic-number">${String(i + 1).padStart(2, '0')}</span>${escapeHtml(topic.title)}</h3>
+          ${topic.summary ? `<p>${escapeHtml(topic.summary)}</p>` : ''}
+          ${points.length ? `<ul>${points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
+          ${formulas.length ? `<div class="note-summary-formulas">${formulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
+          ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${escapeHtml(topic.example)}</div>` : ''}
+        </section>`;
+    }).join('');
+
+    el.notesReaderBody.innerHTML = `
+      <div class="note-summary">
+        <div class="note-summary-hero">
+          <span class="note-summary-kicker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Exam High-Yield Summary</span>
+          <h3>${escapeHtml(summary.title || 'Core Syllabus Breakdown')}</h3>
+          <p>${escapeHtml(summary.overview || 'Comprehensive structured summary covering definitions, formulas, and examination principles.')}</p>
+          <div class="note-summary-meta">
+            ${summary.pageCount ? `<span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> ${summary.pageCount} pages</span>` : ''}
+            <span><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${topics.length} key topic${topics.length === 1 ? '' : 's'}</span>
+            <span><i class="fa-solid fa-certificate" aria-hidden="true"></i> MR-25 Blueprint Aligned</span>
+          </div>
+        </div>
+        <div class="note-summary-topics">${topicHtml || '<p class="note-summary-empty">No structured topics could be loaded for this note. Open the original PDF to read it.</p>'}</div>
+        ${mustKnow.length ? `
+          <div class="note-summary-mustknow">
+            <h3><i class="fa-solid fa-star" aria-hidden="true"></i> Exam Must-Know Principles</h3>
+            <ul>${mustKnow.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          </div>` : ''}
+        <div class="note-summary-cta">
+          <a class="note-open-btn note-summary-drive" href="${driveLink}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-google-drive" aria-hidden="true"></i>
+            <span>Open Full Original Note in Google Drive</span>
+          </a>
+        </div>
+        <p class="note-summary-disclaimer">Curated exam-oriented summary to accelerate revision. Use the Drive button above to inspect complete proofs, circuit schematics, and handwritten pages.</p>
+      </div>`;
+
+    el.notesReaderBody.scrollTop = 0;
+    if (el.notesReaderSearch) el.notesReaderSearch.value = '';
+    if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
+  }
+
   function clearNotesHighlights() {
     if (!el.notesReaderBody) return;
     el.notesReaderBody.querySelectorAll('mark.notes-hit').forEach(mark => {
@@ -1444,7 +1481,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const regex = new RegExp(escapeRegExp(term), 'gi');
     let total = 0;
 
-    el.notesReaderBody.querySelectorAll('.notes-page-text').forEach(pre => {
+    el.notesReaderBody.querySelectorAll('.notes-page-text, .note-summary').forEach(pre => {
       const walker = document.createTreeWalker(pre, NodeFilter.SHOW_TEXT, null);
       const nodes = [];
       while (walker.nextNode()) nodes.push(walker.currentNode);
@@ -1997,6 +2034,14 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
             <span>${escapeHtml(q.paperName || 'Open paper in Drive')}</span>
             <i class="fa-solid fa-arrow-up-right-from-square q-ext-icon"></i>
           </a>
+          <button type="button" class="btn-q-info btn-card-tips" title="Show question info, years and paper">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Info</span>
+          </button>
+          <button type="button" class="btn-q-ai btn-card-ai" title="Ask this question with AI">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Ask with AI</span>
+          </button>
           <button type="button" class="btn-q-solution" title="View step-by-step worked answer">
             <i class="fa-solid fa-book-open"></i>
             <span>View Solution</span>
@@ -2035,6 +2080,22 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       solBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         openSolutionModal(q);
+      });
+    }
+
+    const infoBtn = row.querySelector('.btn-q-info');
+    if (infoBtn) {
+      infoBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openQuestionModal(q, infoBtn);
+      });
+    }
+
+    const aiBtn = row.querySelector('.btn-q-ai');
+    if (aiBtn) {
+      aiBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openAskWithModal(q);
       });
     }
 

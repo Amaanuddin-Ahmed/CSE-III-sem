@@ -23,6 +23,7 @@ const STATIC_ASSETS = [
   'pwa-install.js',
   'pyq-data.js',
   'notes-content-index.js',
+  'notes-summaries.js',
   'data/mid2-practice.js',
   'data/sem-practice.js',
   'data/mid1-practice.js',
