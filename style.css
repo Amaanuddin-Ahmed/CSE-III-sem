@@ -9864,22 +9864,37 @@ body.ai-running {
 }
 
 .notes-reader-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 100010;
-  padding: 20px;
+  padding: 24px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(15, 23, 42, 0.68);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .notes-reader-dialog {
-  width: min(1120px, 96vw);
-  height: min(92vh, 940px);
+  width: 80vw;
+  max-width: 980px;
+  min-width: 300px;
+  height: 80vh;
+  max-height: 80vh;
+  margin: auto;
   background: #ffffff;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid #cbd5e1;
   border-radius: 20px;
-  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.28);
+  box-shadow: 0 25px 65px -12px rgba(15, 23, 42, 0.45), 0 10px 25px -10px rgba(15, 23, 42, 0.25);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
+  animation: modalFadeIn 0.22s ease-out;
 }
 
 .notes-reader-header {
@@ -9954,20 +9969,30 @@ body.ai-running {
 }
 
 .notes-reader-dialog .modal-close-btn {
-  width: 38px;
-  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 10px;
-  border: 1px solid var(--border-subtle);
-  background: #ffffff;
-  color: var(--text-muted);
-  font-size: 22px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1;
   cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .notes-reader-dialog .modal-close-btn:hover {
-  background: #f1f5f9;
-  color: var(--text-main);
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #ef4444;
+  transform: scale(1.08);
 }
 
 .notes-reader-toolbar {
@@ -10165,18 +10190,22 @@ mark.notes-hit.notes-hit-active {
 
 @media (max-width: 768px) {
   .notes-reader-backdrop {
-    padding: 0;
-    align-items: stretch;
-    justify-content: stretch;
+    padding: 16px 12px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .notes-reader-dialog {
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100dvh;
-    border-radius: 0;
-    border: none;
+    width: 82vw !important;
+    max-width: 86vw !important;
+    height: 80vh !important;
+    height: 80dvh !important;
+    max-height: 80dvh !important;
+    margin: auto !important;
+    border-radius: 18px !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.4) !important;
   }
 
   .notes-reader-header {
