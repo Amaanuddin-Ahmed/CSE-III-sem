@@ -1,163 +1,139 @@
-/**
- * MGIT PYQ Hub — Theme Manager (Light / Dark Mode)
- * Lightweight, zero-dependency theme engine with circular reveal transition,
- * anti-FOUC early initialization, and multi-tab synchronization.
- */
 (function() {
   'use strict';
+  var TK = 'mgit_theme', IK = 'mgit_dark_intro_seen', DARK = 'dark', LIGHT = 'light';
+  var MD = '#0b1220', ML = '#1e3a8a';
 
-  var THEME_KEY = 'mgit_theme';
-  var DARK_THEME = 'dark';
-  var LIGHT_THEME = 'light';
-  var META_DARK = '#0b1220';
-  var META_LIGHT = '#1e3a8a';
-
-  function getStoredTheme() {
-    try {
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('theme') === 'reset') {
-        localStorage.removeItem(THEME_KEY);
-        localStorage.removeItem('mgit_dark_intro_seen');
-        return LIGHT_THEME;
-      }
-      var saved = localStorage.getItem(THEME_KEY);
-      if (saved === DARK_THEME || saved === LIGHT_THEME) return saved;
-    } catch (e) {}
-    return LIGHT_THEME;
+  function getTheme() {
+    return document.documentElement.getAttribute('data-theme') === DARK ? DARK : LIGHT;
   }
 
-  function getCurrentTheme() {
-    return document.documentElement.getAttribute('data-theme') === DARK_THEME ? DARK_THEME : LIGHT_THEME;
-  }
-
-  function updateMetaAndControls(theme) {
-    var isDark = theme === DARK_THEME;
-
-    // 1. Meta theme-color
+  function updateUI(t) {
+    var isD = t === DARK;
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) {
-      meta.setAttribute('content', isDark ? META_DARK : META_LIGHT);
-    }
-
-    // 2. Header toggle button
+    if (meta) meta.setAttribute('content', isD ? MD : ML);
     var btn = document.getElementById('themeToggleBtn');
     if (btn) {
-      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-      btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-pressed', isD ? 'true' : 'false');
+      btn.setAttribute('title', isD ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-label', isD ? 'Switch to light mode' : 'Switch to dark mode');
     }
-
-    // 3. Dispatch themechange event for third-party libraries (Mermaid / KaTeX)
-    try {
-      window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
-    } catch (e) {}
+    try { window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: t } })); } catch (e) {}
   }
 
-  function applyThemeDirect(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    updateMetaAndControls(theme);
+  function applyDirect(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    updateUI(t);
   }
 
-  function setTheme(theme, options) {
-    var opts = options || {};
-    var validTheme = (theme === DARK_THEME) ? DARK_THEME : LIGHT_THEME;
-    var current = getCurrentTheme();
+  function setTheme(t, opts) {
+    opts = opts || {};
+    var val = t === DARK ? DARK : LIGHT;
+    try { localStorage.setItem(TK, val); } catch (e) {}
+    if (val === getTheme()) { updateUI(val); return; }
 
-    // Persist in localStorage
-    try {
-      localStorage.setItem(THEME_KEY, validTheme);
-    } catch (e) {}
-
-    if (validTheme === current) {
-      updateMetaAndControls(validTheme);
-      return;
-    }
-
-    // Circular reveal view transition if supported and not reduced-motion
-    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (document.startViewTransition && !opts.skipAnimation && !prefersReduced) {
+    var red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (document.startViewTransition && !opts.skipAnimation && !red) {
       var x = typeof opts.originX === 'number' ? opts.originX : (window.innerWidth - 40);
       var y = typeof opts.originY === 'number' ? opts.originY : 30;
-
-      var endRadius = Math.hypot(
-        Math.max(x, window.innerWidth - x),
-        Math.max(y, window.innerHeight - y)
-      );
-
-      var transition = document.startViewTransition(function() {
-        applyThemeDirect(validTheme);
-      });
-
-      transition.ready.then(function() {
-        var clipPath = [
-          'circle(0px at ' + x + 'px ' + y + 'px)',
-          'circle(' + endRadius + 'px at ' + x + 'px ' + y + 'px)'
-        ];
-
+      var r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      var tr = document.startViewTransition(function() { applyDirect(val); });
+      tr.ready.then(function() {
+        var cp = ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'];
         document.documentElement.animate(
-          {
-            clipPath: validTheme === DARK_THEME ? clipPath : [clipPath[1], clipPath[0]]
-          },
-          {
-            duration: 380,
-            easing: 'ease-in-out',
-            pseudoElement: validTheme === DARK_THEME ? '::view-transition-new(root)' : '::view-transition-old(root)'
-          }
+          { clipPath: val === DARK ? cp : [cp[1], cp[0]] },
+          { duration: 380, easing: 'ease-in-out', pseudoElement: val === DARK ? '::view-transition-new(root)' : '::view-transition-old(root)' }
         );
-      }).catch(function() {
-        applyThemeDirect(validTheme);
-      });
+      }).catch(function() { applyDirect(val); });
     } else {
-      applyThemeDirect(validTheme);
+      applyDirect(val);
     }
   }
 
-  function toggleTheme(event) {
-    var current = getCurrentTheme();
-    var next = (current === DARK_THEME) ? LIGHT_THEME : DARK_THEME;
-    var originX, originY;
-
-    if (event && event.clientX) {
-      originX = event.clientX;
-      originY = event.clientY;
-    } else {
-      var btn = document.getElementById('themeToggleBtn');
-      if (btn) {
-        var rect = btn.getBoundingClientRect();
-        originX = rect.left + rect.width / 2;
-        originY = rect.top + rect.height / 2;
-      }
-    }
-
-    setTheme(next, { originX: originX, originY: originY });
+  function toggle(e) {
+    var next = getTheme() === DARK ? LIGHT : DARK;
+    var x, y, b = document.getElementById('themeToggleBtn');
+    if (e && e.clientX) { x = e.clientX; y = e.clientY; }
+    else if (b) { var r = b.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; }
+    setTheme(next, { originX: x, originY: y });
   }
 
-  // Cross-tab sync
   window.addEventListener('storage', function(e) {
-    if (e.key === THEME_KEY && e.newValue) {
-      applyThemeDirect(e.newValue);
-    }
+    if (e.key === TK && e.newValue) applyDirect(e.newValue);
   });
 
-  // Attach button listener on DOM ready
-  function initControls() {
+  function dismissIntro(toDark) {
+    var m = document.getElementById('darkIntroModal');
+    var dlg = document.getElementById('darkIntroDialog');
     var btn = document.getElementById('themeToggleBtn');
-    if (btn) {
-      btn.addEventListener('click', toggleTheme);
-      updateMetaAndControls(getCurrentTheme());
+    try { localStorage.setItem(IK, 'true'); } catch (e) {}
+    if (!m) return;
+
+    var red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (dlg && btn && !red) {
+      var tr = btn.getBoundingClientRect(), dr = dlg.getBoundingClientRect();
+      var tx = tr.left + tr.width / 2, ty = tr.top + tr.height / 2;
+      var dx = tx - (dr.left + dr.width / 2), dy = ty - (dr.top + dr.height / 2);
+      dlg.style.transition = 'transform 0.38s cubic-bezier(0.2,0.8,0.2,1), opacity 0.35s ease';
+      dlg.style.transform = 'translate(' + Math.round(dx) + 'px,' + Math.round(dy) + 'px) scale(0.08)';
+      dlg.style.opacity = '0';
+      m.style.transition = 'background-color 0.32s ease';
+      m.style.backgroundColor = 'transparent';
+      setTimeout(function() {
+        m.style.display = 'none';
+        dlg.style.transform = ''; dlg.style.opacity = '';
+        btn.classList.add('theme-btn-pulse');
+        setTimeout(function() { btn.classList.remove('theme-btn-pulse'); }, 500);
+        if (toDark) setTheme(DARK, { originX: tx, originY: ty });
+      }, 380);
+    } else {
+      m.style.display = 'none';
+      if (toDark) setTheme(DARK, { skipAnimation: true });
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initControls);
-  } else {
-    initControls();
+  function showIntro() {
+    try { if (localStorage.getItem(IK) === 'true') return; } catch (e) { return; }
+    var m = document.getElementById('darkIntroModal');
+    if (m) m.style.display = 'flex';
   }
 
-  // Expose global ThemeManager
-  window.ThemeManager = {
-    getTheme: getCurrentTheme,
-    setTheme: setTheme,
-    toggleTheme: toggleTheme
-  };
+  function maybeShowIntro() {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('theme') === 'reset') localStorage.removeItem(IK);
+      if (localStorage.getItem(IK) === 'true') return;
+    } catch (e) { return; }
+
+    var ov = document.getElementById('tourOverlay');
+    var seen = false;
+    try { seen = localStorage.getItem('mgit_tour_seen_v2') === 'true'; } catch (e) {}
+    if (!seen && ov) {
+      var obs = new MutationObserver(function() {
+        if (ov.style.display === 'none') { obs.disconnect(); setTimeout(showIntro, 700); }
+      });
+      obs.observe(ov, { attributes: true, attributeFilter: ['style', 'class'] });
+      return;
+    }
+    if (ov && ov.style.display !== 'none') return;
+    setTimeout(showIntro, 600);
+  }
+
+  function onId(id, ev, fn) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener(ev, fn);
+  }
+
+  function init() {
+    onId('themeToggleBtn', 'click', toggle);
+    onId('darkIntroSwitchBtn', 'click', function() { dismissIntro(true); });
+    onId('darkIntroLaterBtn', 'click', function() { dismissIntro(false); });
+    onId('darkIntroCloseBtn', 'click', function() { dismissIntro(false); });
+    updateUI(getTheme());
+    maybeShowIntro();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+
+  window.ThemeManager = { getTheme: getTheme, setTheme: setTheme, toggleTheme: toggle, showIntro: showIntro, dismissIntro: dismissIntro };
 })();

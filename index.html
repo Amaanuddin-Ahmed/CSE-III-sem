@@ -504,6 +504,59 @@
     </footer>
 
   
+  <!-- MODAL: Introducing Dark Mode Popup -->
+  <div class="modal-backdrop dark-intro-backdrop" id="darkIntroModal" style="display: none; z-index: 100004;" role="dialog" aria-modal="true" aria-labelledby="darkIntroTitle">
+    <div class="modal-dialog dark-intro-dialog" id="darkIntroDialog">
+      <div class="dark-intro-header">
+        <h3 class="dark-intro-title" id="darkIntroTitle">Introducing Dark Mode</h3>
+        <button type="button" class="dark-intro-close-btn" id="darkIntroCloseBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="dark-intro-body">
+        <!-- Animated Sun / Moon Stage -->
+        <div class="dark-intro-stage" id="darkIntroStage" aria-hidden="true">
+          <div class="stage-sky">
+            <div class="stage-sun-moon-wrap">
+              <svg class="stage-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="stage-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+            <div class="stage-stars">
+              <span class="star s1">&#10022;</span>
+              <span class="star s2">&#10022;</span>
+              <span class="star s3">&#10022;</span>
+            </div>
+          </div>
+          <div class="stage-preview-mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-line line-1"></div>
+            <div class="mockup-line line-2"></div>
+          </div>
+        </div>
+
+        <p class="dark-intro-desc">Study comfortably late at night. Switch themes anytime using the moon icon in the header.</p>
+
+        <div class="dark-intro-actions">
+          <button type="button" class="btn-dark-switch" id="darkIntroSwitchBtn">
+            <i class="fa-solid fa-moon"></i>
+            <span>Switch to Dark mode</span>
+          </button>
+          <button type="button" class="btn-dark-later" id="darkIntroLaterBtn">Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: Quiz Time mode / subject / unit selector -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="practiceSelectorModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="practiceModalTitle">
