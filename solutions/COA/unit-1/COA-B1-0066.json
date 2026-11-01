@@ -1,0 +1,9 @@
+{
+  "id": "COA-B1-0066",
+  "subjectId": "COA",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "List and explain the phases of instruction cycle with flowchart.",
+  "answerMd": "### Fetch Phase of the Instruction Cycle\n\nThe **Instruction Cycle** consists of Fetch, Decode, Read Effective Address, and Execute. The **Fetch Phase** reads the next instruction from memory into the Instruction Register (IR):\n\n#### Timing & RTL Steps of the Fetch Phase:\n1. **Timing State $T_0$:** The contents of the Program Counter (PC), holding the address of the next instruction, are transferred to the Address Register (AR):\n   $$T_0: \\quad AR \\leftarrow PC$$\n2. **Timing State $T_1$:** Memory is read at the address specified by AR, loading the instruction word into the Instruction Register (IR). Simultaneously, the Program Counter is incremented by 1 to point to the subsequent instruction:\n   $$T_1: \\quad IR \\leftarrow M[AR], \\quad PC \\leftarrow PC + 1$$\n3. **Timing State $T_2$:** The opcode bits in $IR(12-14)$ are decoded by a $3 \\times 8$ decoder, the addressing mode bit $IR(15)$ is loaded into flip-flop $I$, and the operand address bits $IR(0-11)$ are placed into AR:\n   $$T_2: \\quad D_0 \\dots D_7 \\leftarrow \\text{Decode } IR(12-14), \\quad AR \\leftarrow IR(0-11), \\quad I \\leftarrow IR(15)$$\n\n```\n   T0: [PC] -----------> [AR]\n   T1: M[AR] ----------> [IR],   [PC] + 1 ---> [PC]\n   T2: Decode Opcode, Address to AR, Mode bit to I\n```\n\n$$\\therefore \\text{The fetch phase guarantees that the CPU retrieves and pre-decodes the next instruction cleanly.}$$"
+}

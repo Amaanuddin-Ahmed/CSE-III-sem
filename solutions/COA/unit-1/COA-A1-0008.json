@@ -1,0 +1,9 @@
+{
+  "id": "COA-A1-0008",
+  "subjectId": "COA",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "Explain Von-Neumann Architecture with neat diagram.",
+  "answerMd": "### Von-Neumann Architecture and the Stored-Program Concept\n\nThe **Von-Neumann Architecture** (introduced by John von Neumann in 1945) is the theoretical foundation of modern general-purpose computing systems:\n\n```\n      +-------------------------------------------+\n      |             Central Processing Unit (CPU) |\n      |  +--------------------+  +--------------+ |\n      |  | Control Unit (CU)  |  |   ALU        | |\n      |  | (PC, IR, Decoder)  |  | (Registers)  | |\n      |  +---------+----------+  +-------+------+ |\n      +------------+---------------------+--------+\n                   |                     |\n  =================+=====================+=========== System Bus\n                   |                     |\n        +----------v---------+  +--------v-------+\n        |   Memory Subsystem |  |   Input/Output |\n        |   (Unified Data &  |  |     Subsystem  |\n        |    Instructions)   |  |   (Peripherals)|\n        +--------------------+  +----------------+\n```\n\n#### Core Principles:\n1. **Stored-Program Concept:** Instructions and numerical data share the **same unified physical memory** address space.\n2. **Sequential Execution:** Instructions are fetched and executed in strict sequential order unless modified by a jump/branch.\n3. **Binary Digital Representation:** Data and control words are represented in binary.\n\n#### The Von-Neumann Bottleneck:\n- Because instructions and data must traverse the **same shared physical bus**, CPU throughput is strictly throttled by memory bus bandwidth.\n\n$$\\therefore \\text{Modern CPUs mitigate the Von-Neumann bottleneck using multi-level L1/L2 caches and Harvard architectures.}$$"
+}

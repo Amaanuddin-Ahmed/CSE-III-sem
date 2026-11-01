@@ -1,0 +1,9 @@
+{
+  "id": "COA-A1-0001",
+  "subjectId": "COA",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "What is the difference between Computer Organization and Computer Architecture?",
+  "answerMd": "### Computer Organization vs. Computer Architecture\n\nAlthough frequently used together, **Computer Architecture** and **Computer Organization** address fundamentally different abstraction layers of a computing system:\n\n| Parameter | Computer Architecture | Computer Organization |\n| :--- | :--- | :--- |\n| **Focus** | **Logical & Functional Design:** What the computer does from the programmer's perspective. | **Physical & Operational Implementation:** How the hardware implements the architectural specifications. |\n| **Visibility** | Visible to the machine-language programmer / compiler writer. | Transparent (invisible) to the programmer. |\n| **Key Attributes** | Instruction set architecture (ISA), addressing modes, word length, data types, CPU registers. | Control signals, memory technology (SRAM/DRAM), ALU bus widths, physical interconnects, clock speeds. |\n| **Example** | Whether a multiplication instruction (`MUL`) exists in the instruction set. | Whether multiplication is done via a dedicated hardware multiplier or repeated addition. |\n| **Design Stability**| Long-lasting across multiple hardware generations (e.g., x86 architecture has endured for 40+ years). | Changes frequently with advancing semiconductor fabrication nodes and circuit improvements. |\n\n$$\\therefore \\text{Architecture provides the functional blueprint; Organization provides the physical implementation.}$$"
+}

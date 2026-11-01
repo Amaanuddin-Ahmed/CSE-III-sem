@@ -1,0 +1,9 @@
+{
+  "id": "COA-A2-0118",
+  "subjectId": "COA",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "What are the functions of control memory?",
+  "answerMd": "### Control Unit Design: Hardwired vs. Microprogrammed Control\n\nThe **Control Unit (CU)** orchestrates the operation of all functional units by generating timing control signals:\n\n| Parameter | Hardwired Control Unit | Microprogrammed Control Unit |\n| :--- | :--- | :--- |\n| **Implementation** | Fixed combinational logic gates, decoders, and flip-flops. | **Control Memory (ROM)** storing sequences of microinstructions. |\n| **Speed** | **Extremely Fast** (signals propagate at gate switching speeds). | Slower (requires memory fetch cycle for each microinstruction). |\n| **Flexibility** | **Rigid / Inflexible:** Modifying instruction set requires physical rewiring/redesign. | **High:** Instructions can be added or updated simply by altering ROM firmware. |\n| **Instruction Complexity**| Best suited for simple, reduced instruction sets (RISC). | Ideal for complex, rich instruction sets (CISC). |\n| **Cost & Area** | Compact for small instruction sets; explodes with complexity. | High initial cost, but scales easily with large instruction sets. |\n\n#### Control Memory & Sequencer Organization:\n- **Control Memory (CM):** Dedicated high-speed ROM containing microprograms.\n- **Control Address Register (CAR):** Holds the address of the next microinstruction to read.\n- **Sequencer:** Determines the address sequencing logic (Increment, Branch, Mapping, Subroutine Call).\n\n$$\\therefore \\text{Hardwired optimizes raw speed in RISC; microprogramming optimizes complexity in CISC.}$$"
+}

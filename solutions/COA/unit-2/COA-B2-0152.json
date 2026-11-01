@@ -1,0 +1,9 @@
+{
+  "id": "COA-B2-0152",
+  "subjectId": "COA",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain with the help of diagram the register organization of computer with memory bank. 3. ) What do you mean by addressing mode? Atiatysc the following addressing modes. 1) Index addressing mode 11) Relative addressing mode 111) Immediate addressing mode tv) Implied addressing mode.",
+  "answerMd": "### Addressing Modes in Computer Organization\n\nAn **Addressing Mode** specifies the mathematical rule for interpreting or modifying the address field of an instruction to locate the **Effective Address (EA)** of the operand:\n\n#### Primary Addressing Modes:\n\n1. **Immediate Mode:** Operand is explicitly specified within the instruction itself (`MOV R1, #25`). Zero memory access required.\n2. **Register Mode:** Operand resides in a CPU register (`ADD R1, R2`). $EA = R_2$.\n3. **Register Indirect Mode:** Register contains the memory address of the operand (`MOV R1, (R2)`). $EA = [R_2]$.\n4. **Direct / Absolute Mode:** The instruction address field contains the actual effective memory address directly (`LDA 2050H`). $EA = \\text{Address}$.\n5. **Indirect Mode:** Address field contains the address of a memory location that holds the true effective address (`LDA @2050H`). $EA = M[\\text{Address}]$.\n6. **Relative Addressing Mode:** $EA = PC + \\text{Offset}$. Used for relocatable branch instructions.\n7. **Indexed Addressing Mode:**\n   $$EA = \\text{Base Address} + \\text{Content of Index Register (XR)}$$\n   - **Why used for array processing?** The base address points to the start of the array in memory, while the index register acts as the loop index ($i$). Incrementing $XR$ in a loop sequentially accesses consecutive array elements (`A[i]`) without modifying the instruction itself.\n\n$$\\therefore \\text{Addressing modes provide programming versatility and compact instruction encoding.}$$"
+}

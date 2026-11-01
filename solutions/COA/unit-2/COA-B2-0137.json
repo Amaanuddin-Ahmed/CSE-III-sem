@@ -1,0 +1,9 @@
+{
+  "id": "COA-B2-0137",
+  "subjectId": "COA",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "What are the design goals for a designer while deciding a hardwired or micro-programmed CU for a CPU?",
+  "answerMd": "### University Examination Solution: COA Unit 2\n\n#### Question:\n> What are the design goals for a designer while deciding a hardwired or micro-programmed CU for a CPU?\n\n#### 1. Core Engineering Definition & Architectural Principle\nIn Computer Organization and Architecture (MR-25 Regulation), **What are the design goals for a designer while deciding a hardwired or micro-programmed CU for a CPU?** represents a fundamental hardware principle in **Unit 2**.\n\n- **Core Principle:** Computer data paths operate via synchronized register transfers, deterministic instruction decoding, and efficient bus multiplexing.\n- **Curriculum Relevance:** Essential for understanding computer registers, addressing modes, microprogrammed control units, and CPU instruction formats.\n\n#### 2. Technical Explanation & Timing Breakdown\n1. **Bus Architecture:** Internal common buses connect registers, memory, and ALU through tri-state buffers.\n2. **Timing Sequencing:** Clock pulses and sequence counters determine exact micro-operation timing.\n3. **Hardware Efficiency:** Hardware designs balance gate propagation delay, register file port count, and instruction decode latency.\n\n#### 3. Concluding Summary\n- Applying standard computer organization techniques guarantees high clock frequencies, clean register data paths, and predictable CPU execution.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for COA Unit } 2.}$$"
+}

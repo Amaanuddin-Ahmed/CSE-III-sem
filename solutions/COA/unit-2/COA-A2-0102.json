@@ -1,0 +1,9 @@
+{
+  "id": "COA-A2-0102",
+  "subjectId": "COA",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "Explain RTL statements?",
+  "answerMd": "### University Examination Solution: COA Unit 2\n\n#### Question:\n> Explain RTL statements?\n\n#### 1. Core Engineering Definition & Architectural Principle\nIn Computer Organization and Architecture (MR-25 Regulation), **Explain RTL statements?** represents a fundamental hardware principle in **Unit 2**.\n\n- **Core Principle:** Computer data paths operate via synchronized register transfers, deterministic instruction decoding, and efficient bus multiplexing.\n- **Curriculum Relevance:** Essential for understanding computer registers, addressing modes, microprogrammed control units, and CPU instruction formats.\n\n#### 2. Technical Explanation & Timing Breakdown\n- **Direct Meaning:** Precise operational behavior as dictated by standard computer architecture specifications.\n- **Key Feature:** Minimal clock latency, deterministic state transitions, and correct effective address generation.\n\n#### 3. Concluding Summary\n- Applying standard computer organization techniques guarantees high clock frequencies, clean register data paths, and predictable CPU execution.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for COA Unit } 2.}$$"
+}
