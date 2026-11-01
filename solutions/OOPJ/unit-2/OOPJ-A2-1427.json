@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1427",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "part": "A",
+  "marks": 1,
+  "question": "Define a package in Java.",
+  "answerMd": "### Packages in Java and User-Defined Package Creation\n\n**Definition:**\nA **Package** in Java is a named namespace that groups related classes, interfaces, and sub-packages together, preventing naming collisions and providing access protection.\n\n#### Major Advantages:\n1. **Prevents Naming Collisions:** Two classes can share the same name (e.g., `java.util.Date` and `java.sql.Date`) if they reside in different packages.\n2. **Access Control:** Facilitates package-private (default) and `protected` access levels.\n3. **Maintainability & Modularity:** Organizes enterprise codebases into clear modular directories.\n\n#### Steps to Create and Import a User-Defined Package:\n1. **Declare Package:** Add `package <name>;` as the very first non-comment statement in the Java source file:\n   ```java\n   // File: src/mypack/MathHelper.java\n   package mypack;\n   public class MathHelper {\n       public static int square(int n) { return n * n; }\n   }\n   ```\n2. **Compile with Directory Flag:**\n   `javac -d . MathHelper.java` (Creates folder `mypack/MathHelper.class`).\n3. **Import in Client Application:**\n   ```java\n   // File: TestApp.java\n   import mypack.MathHelper;\n   public class TestApp {\n       public static void main(String[] args) {\n           System.out.println(\"Square: \" + MathHelper.square(5));\n       }\n   }\n   ```\n\n$$\\therefore \\text{Packages provide structured hierarchical namespace encapsulation in Java.}$$"
+}

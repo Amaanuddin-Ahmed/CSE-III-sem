@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A1-1313",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "List the Java buzzwords.",
+  "answerMd": "### The Java Buzzwords (Architectural Features)\n\nThe creators of Java (James Gosling et al. at Sun Microsystems) formulated Java around primary design goals known as the **Java Buzzwords**:\n\n1. **Simple:** Derived from C++ but eliminated confusing, bug-prone features like explicit pointers, operator overloading, multiple inheritance, and manual memory deallocation.\n2. **Object-Oriented:** Everything in Java (except primitive data types) is modeled as classes and objects adhering to Encapsulation, Inheritance, and Polymorphism.\n3. **Platform-Independent & Portable (\"Write Once, Run Anywhere - WORA\"):** Source code compiles into platform-neutral **Bytecode (`.class`)**, which executes on any system hosting a compatible **Java Virtual Machine (JVM)**.\n4. **Robust:** Emphasizes early compile-time and runtime error checking, strict type checking, and automated Garbage Collection to eliminate memory corruption.\n5. **Secure:** Employs a bytecode verifier, ClassLoader sandboxing, and security managers to prevent unauthorized memory access and malicious applets.\n6. **Distributed:** Native support for TCP/IP network protocols and Remote Method Invocation (RMI) for building networked distributed applications.\n7. **Multithreaded:** Built-in primitives (`Thread`, `Runnable`, `synchronized`, `wait()`, `notify()`) enabling concurrent multi-threaded execution.\n8. **Dynamic & Interpreted:** Dynamic loading of classes at runtime on-demand without recompilation.\n\n$$\\therefore \\text{The Java buzzwords establish the blueprint for secure, portable, enterprise software development.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B1-1364",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Discuss the difference between method overriding and method 5 2? overloading with examples.",
+  "answerMd": "### Method Overloading vs. Method Overriding in Java\n\n| Parameter | Method Overloading | Method Overriding |\n| :--- | :--- | :--- |\n| **Polymorphism Type** | **Compile-Time Polymorphism** (Static Binding). | **Runtime Polymorphism** (Dynamic Binding / Dynamic Method Dispatch). |\n| **Location** | Occurs within the **same class**. | Occurs between **Subclass and Superclass** (Inheritance required). |\n| **Method Signature** | Must have the **same method name**, but **different parameter list** (count, types, order). | Must have the **exact same name, return type, and parameter list**. |\n| **Return Type** | Return type can be different (not sufficient on its own). | Must be identical (or covariant type). |\n| **Private/Static/Final**| `private`, `static`, and `final` methods **can** be overloaded. | `private`, `static`, and `final` methods **cannot** be overridden. |\n\n#### Code Example:\n```java\n// Method Overloading:\nclass Calculator {\n    int add(int a, int b) { return a + b; }\n    double add(double a, double b) { return a + b; }\n}\n\n// Method Overriding:\nclass Animal {\n    void sound() { System.out.println(\"Generic Animal Sound\"); }\n}\nclass Dog extends Animal {\n    @Override\n    void sound() { System.out.println(\"Bark\"); }\n}\n```\n\n$$\\therefore \\text{Overloading provides multiple forms of a method; overriding provides specialized subclass behavior.}$$"
+}

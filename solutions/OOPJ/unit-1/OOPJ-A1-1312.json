@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A1-1312",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "Explain the purpose of the \"this\" keyword in Java.",
+  "answerMd": "### The 'this' Keyword in Java\n\n**Definition:**\nIn Java, `this` is a reference variable that refers to the **current object** (the invoking instance of the class).\n\n#### Six Major Uses of the 'this' Keyword:\n1. **Disambiguate Instance Variables from Method Parameters (Shadowing):**\n   ```java\n   public class Student {\n       private int rollNo;\n       public Student(int rollNo) {\n           this.rollNo = rollNo; // this.rollNo refers to instance variable\n       }\n   }\n   ```\n2. **Constructor Chaining using `this(...)`:**\n   Invokes another constructor in the same class (must be the first line of the constructor):\n   ```java\n   public Student() {\n       this(101); // Calls parameterized constructor\n   }\n   ```\n3. **Invoke Current Class Method:** `this.display()` explicitly calls a method on the current object.\n4. **Pass Current Object as Method Parameter:** `printReport(this)` passes the current instance to an external method.\n5. **Pass as Argument in Constructor Call:** Passes `this` into another component.\n6. **Return Current Object Instance from Method:** Enables method chaining (fluent interface design): `return this;`.\n\n$$\\therefore \\text{'this' resolves scope ambiguities and enables clean object-level delegation.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1449",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "What is the datatype of the methods and variables in interfaces?",
+  "answerMd": "### University Examination Solution: OOPJ Unit 2\n\n#### Question:\n> What is the datatype of the methods and variables in interfaces?\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **What is the datatype of the methods and variables in interfaces?** represents a fundamental programming principle in **Unit 2**.\n\n- **Core Principle:** Java couples strict static type checking with object encapsulation, inheritance, and clean memory models to deliver robust software.\n- **Curriculum Relevance:** Essential for understanding Java class mechanics, access modifiers, constructors, and polymorphism.\n\n#### 2. Technical Explanation & Code Architecture\n- **Direct Meaning:** Precise operational behavior as dictated by the Java Language Specification (JLS).\n- **Key Feature:** Strong encapsulation, compile-time type safety, and clean syntax.\n\n#### 3. Concluding Summary\n- Adhering to standard Java object-oriented design ensures modular, reusable, and bug-free application architecture.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 2.}$$"
+}

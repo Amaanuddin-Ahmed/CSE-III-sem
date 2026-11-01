@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B1-1363",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain the concept of garbage collection in Java. Why is it important?",
+  "answerMd": "### Garbage Collection in Java\n\n**Definition:**\n**Garbage Collection (GC)** is an automated memory management process performed by the Java Virtual Machine (JVM) that reclaims heap memory occupied by unreferenced objects that are no longer accessible by any active thread.\n\n#### How an Object Becomes Eligible for GC:\n1. **Nulling a reference:** `Student s = new Student(); s = null;`\n2. **Reassigning reference:** `Student s1 = new Student(); Student s2 = new Student(); s1 = s2;`\n3. **Object created inside a method:** Once method execution terminates, local reference variables pop off the stack.\n4. **Islands of Isolation:** Two objects refer to each other, but neither is reachable from GC Roots.\n\n#### Invoking Garbage Collection:\n- The JVM runs GC automatically as a low-priority daemon thread.\n- Programmers can suggest GC execution via `System.gc()` or `Runtime.getRuntime().gc()`, but JVM makes the final decision.\n\n$$\\therefore \\text{Garbage collection prevents memory leaks and eliminates manual pointer deallocation bugs.}$$"
+}

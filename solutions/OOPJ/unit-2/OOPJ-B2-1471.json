@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B2-1471",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Describe how abstract classes differ from interfaces with an example.",
+  "answerMd": "### Abstract Class vs. Interface in Java\n\n| Parameter | Abstract Class | Interface |\n| :--- | :--- | :--- |\n| **Abstraction Level** | Supports **partial abstraction** ($0\\%$ to $100\\%$). | Supports **pure abstraction** (prior to Java 8; $100\\%$ contract). |\n| **Methods Supported** | Can contain both abstract methods and concrete methods with body. | Only abstract methods (Java 8 added `default` and `static` methods; Java 9 added `private`). |\n| **Fields / Variables** | Can declare instance variables (`private`, `protected`, `public`) and constants. | All variables are implicitly **`public static final`** constants. |\n| **Inheritance Support**| A class can extend only **one** abstract class (Single Inheritance). | A class can implement **multiple** interfaces (`implements A, B`) (Multiple Inheritance). |\n| **Constructors** | Can declare constructors (invoked via `super()` in subclass). | **Cannot have constructors** (cannot be instantiated). |\n| **Keywords** | Declared with `abstract class`; inherited with `extends`. | Declared with `interface`; implemented with `implements`. |\n\n#### When to Use Which:\n- Use **Abstract Class** when related classes share common state, constructors, and default implementations.\n- Use **Interface** to define a peripheral contract or role across completely unrelated classes (e.g., `Comparable`, `Serializable`).\n\n$$\\therefore \\text{Abstract classes model 'is-a' hierarchies; interfaces model 'can-do' behavioral contracts.}$$"
+}

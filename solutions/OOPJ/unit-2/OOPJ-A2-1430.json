@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1430",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "part": "A",
+  "marks": 2,
+  "question": "What is an exception? How does it differ from an error?",
+  "answerMd": "### Exception vs. Error in Java (`java.lang.Throwable`)\n\nBoth `Exception` and `Error` inherit directly from the root class `java.lang.Throwable`:\n\n```\n                    Throwable\n                   /         \\\n             Exception        Error\n            /         \\          |\n    Checked     Unchecked    (Catastrophic/JVM)\n (IOException) (RuntimeException) (OutOfMemoryError)\n```\n\n| Parameter | Exception (`java.lang.Exception`) | Error (`java.lang.Error`) |\n| :--- | :--- | :--- |\n| **Nature** | Represents **recoverable conditions** that a reasonable application should anticipate and catch. | Represents **catastrophic, unrecoverable system conditions** occurring within the JVM. |\n| **Recovery / Catch**| Can and **should be caught** using `try-catch` blocks. | Should **not be caught**; application cannot safely recover. |\n| **Classification** | Classified into Checked exceptions (`IOException`, `SQLException`) and Unchecked (`NullPointerException`). | All Errors are strictly Unchecked. |\n| **Origin** | Caused by program logic, invalid user input, or external resource failures. | Caused by system-level resource exhaustion or JVM crashes. |\n| **Examples** | `FileNotFoundException`, `ArithmeticException`, `NumberFormatException`. | `OutOfMemoryError`, `StackOverflowError`, `VirtualMachineError`. |\n\n$$\\therefore \\text{Exceptions are programmatically recoverable; errors indicate terminal JVM failures.}$$"
+}

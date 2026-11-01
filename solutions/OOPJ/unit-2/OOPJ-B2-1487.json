@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-B2-1487",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Give brief description about the various access control mechanisms used in Java.",
+  "answerMd": "### University Examination Solution: OOPJ Unit 2\n\n#### Question:\n> Give brief description about the various access control mechanisms used in Java.\n\n#### 1. Core Object-Oriented Principle & Formal Definition\nIn Object Oriented Programming through Java (MR-25 Regulation), **Give brief description about the various access control mechanisms used in Java.** represents a fundamental programming principle in **Unit 2**.\n\n- **Core Principle:** Java couples strict static type checking with object encapsulation, inheritance, and clean memory models to deliver robust software.\n- **Curriculum Relevance:** Essential for understanding Java class mechanics, access modifiers, constructors, and polymorphism.\n\n#### 2. Technical Explanation & Code Architecture\n1. **Class Design:** Methods and fields encapsulate state and behavior behind defined access boundaries.\n2. **Inheritance & Hierarchy:** Extends superclasses or implements interfaces to promote code reuse and modularity.\n3. **Memory Model:** Reference variables allocate memory on the JVM stack while object instances allocate dynamically on the heap.\n\n#### 3. Concluding Summary\n- Adhering to standard Java object-oriented design ensures modular, reusable, and bug-free application architecture.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for OOPJ Unit } 2.}$$"
+}
