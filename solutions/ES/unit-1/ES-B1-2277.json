@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2277",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 3,
+  "question": "Describe the structure of an ecosystem.",
+  "answerMd": "### Structure of an Ecosystem\nComprises two fundamental components:\n\n```text\n                          ECOSYSTEM STRUCTURE\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   ABIOTIC COMPONENTS                                  BIOTIC COMPONENTS\n   (Non-living matrix)                                 (Living community)\n         |                                                   |\n   +-----+-----+                                       +-----+-----+\n   |           |                                       |           |\nPhysical    Chemical                               Autotrophs  Heterotrophs\n(Sunlight,  (Proteins,                             (Producers) (Consumers,\n Temp, Soil) N, P, pH)                                           Decomposers)\n```\n\n1. **Abiotic Components:** Physical factors (solar radiation, temperature, rainfall, wind) and chemical nutrients ($N, P, K$, soil pH).\n2. **Biotic Components:**\n   - Producers (Autotrophs): Plants and phytoplankton synthesizing glucose.\n   - Consumers (Heterotrophs): Herbivores, carnivores, omnivores.\n   - Decomposers (Saprotrophs): Fungi and bacteria cycling organic detritus."
+}

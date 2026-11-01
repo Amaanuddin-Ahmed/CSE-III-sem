@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2279",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 3,
+  "question": "Define the biogeochemical cycle. Explain the processes of the nitrogen cycle with a diagram.",
+  "answerMd": "### The Nitrogen Cycle\nAtmospheric $N_2$ ($78\\%$ of air) is converted into biological forms across 5 sequential stages:\n\n```text\n                Atmospheric Nitrogen (N2)\n                  |                  ^\n       Nitrogen   |                  | Denitrification\n       Fixation   v                  | (Pseudomonas)\n             Ammonia (NH3)       Nitrates (NO3-)\n                  |                  ^\n      Nitrification                  | Nitrification\n     (Nitrosomonas)                  | (Nitrobacter)\n                  v                  |\n                   Nitrites (NO2-) --+\n```\n\n1. **Fixation:** $N_2 \\rightarrow NH_3$ via *Rhizobium* in legume roots or lightning.\n2. **Nitrification:**\n   - $2NH_3 + 3O_2 \\xrightarrow{\\text{Nitrosomonas}} 2NO_2^- + 2H^+ + 2H_2O$\n   - $2NO_2^- + O_2 \\xrightarrow{\\text{Nitrobacter}} 2NO_3^-$\n3. **Assimilation:** Plant roots absorb $NO_3^-$ to synthesize amino acids.\n4. **Ammonification:** Decomposers break down organic waste into ammonia.\n5. **Denitrification:** *Pseudomonas* reduces $NO_3^-$ back to gaseous $N_2$."
+}

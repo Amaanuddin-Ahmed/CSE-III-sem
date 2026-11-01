@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2265",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 2,
+  "question": "Enumerate the classification of ecosystems.",
+  "answerMd": "### Classification of Ecosystems\nAn **ecosystem** is a self-sustaining structural and functional unit where biotic organisms interact with their abiotic environment.\n\n```text\n                               ECOSYSTEMS\n                                   |\n         +-------------------------+-------------------------+\n         |                                                   |\n   TERRESTRIAL (Land)                                  AQUATIC (Water)\n         |                                                   |\n   +-----+-----+-----+                         +-------------+-------------+\n   |     |     |     |                         |                           |\nForest Grass- Desert Tundra               Freshwater                     Marine\n        land                             (Rivers, Lakes)             (Oceans, Reefs)\n```\n\n1. **Terrestrial Ecosystems:** Forest (canopy layers), Grassland (herbaceous cover), Desert ($< 25\\text{ cm}$ rain), Tundra (permafrost).\n2. **Aquatic Ecosystems:** Freshwater (Lotic flowing rivers, Lentic standing ponds) and Marine (oceans, coral reefs, estuaries)."
+}

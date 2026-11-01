@@ -1,0 +1,9 @@
+{
+  "id": "ES-B2-2283",
+  "subjectId": "ES",
+  "chapter": 2,
+  "part": "B",
+  "marks": 3,
+  "question": "Enumerate the advantages of renewable energy resources in terms of environmental impact and sustainability.",
+  "answerMd": "### Renewable Energy Sources & Advantages\n1. **Solar Power:** Photovoltaic silicon cells and solar thermal collectors.\n2. **Wind Power:** Kinetic energy converted into electricity via aerodynamic wind turbines.\n3. **Hydroelectric Power:** Gravitational head of impounded dam water driving hydraulic turbines.\n4. **Biomass & Biogas:** Anaerobic digestion of organic residues yielding methane ($CH_4$).\n5. **Geothermal Energy:** Subsurface enthalpy from geothermal steam reservoirs.\n\n**Key Advantages:** Zero operational greenhouse gas emissions, inexhaustible natural supply, energy independence, and reduction of air pollutants ($PM_{2.5}, SO_2$)."
+}

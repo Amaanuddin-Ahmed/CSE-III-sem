@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2284",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 2,
+  "question": "Illustrate the universal energy-flow model of an ecosystem.",
+  "answerMd": "### Universal Energy Flow Model (E.P. Odum)\nDescribes the thermodynamic flow of energy through any biological trophic level:\n\n```text\n                  UNABSORBED / LOST ENERGY (NU)\n                           ^\n                           |\n   INPUT ENERGY (I) ---> [ ASSIMILATED (A) ] ---> RESPIRATION (R) [Heat Loss]\n                                |\n                                v\n                       BIOMASS PRODUCTION (P)\n                                |\n                 +--------------+--------------+\n                 |                             |\n          GROWTH (G) / YIELD            EXCRETION / MORTALITY (E)\n```\n\n**Thermodynamic Formulas:**\n$$\\mathbf{I = A + NU} \\quad \\text{and} \\quad \\mathbf{A = P + R}$$\n\nWhere $I$ is gross ingested energy, $A$ is assimilated energy, $R$ is irreversible metabolic heat lost (Second Law of Thermodynamics), and $P$ is net biomass production. Energy flow is strictly **unidirectional** and non-cyclic."
+}

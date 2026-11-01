@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2274",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 3,
+  "question": "What are ecological pyramids? Discuss the pyramid of energy.",
+  "answerMd": "### Ecological Pyramids & The Pyramid of Energy\nAn **ecological pyramid** is a graphical representation of trophic structure:\n- **Pyramid of Numbers:** Can be upright (grassland) or inverted (tree hosting thousands of insects).\n- **Pyramid of Biomass:** Upright in forests, inverted in marine systems where phytoplankton rapidly turnover.\n- **Pyramid of Energy:** **ALWAYS UPRIGHT**.\n\n```text\n        Top Carnivore (10 J)        [Apex]\n              ^\n        Secondary Consumer (100 J)\n              ^\n        Primary Consumer (1,000 J)\n              ^\n        Primary Producer (10,000 J) [Broad Base]\n```\n\n**Scientific Reason:** By the **Second Law of Thermodynamics** and **Lindeman's 10% Law**, energy is degraded and lost as metabolic heat ($90\\%$) at every trophic step. Energy cannot be created or recycled upward, so the pyramid of energy can never be inverted."
+}

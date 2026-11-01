@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2269",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 2,
+  "question": "Define food chain and food web, giving suitable examples.",
+  "answerMd": "### Food Chain vs. Food Web\n1. **Food Chain:** A linear transfer of energy as one organism consumes another:\n   $$\\text{Grass (Producer)} \\rightarrow \\text{Grasshopper} \\rightarrow \\text{Frog} \\rightarrow \\text{Snake} \\rightarrow \\text{Hawk (Apex)}$$\n2. **Food Web:** A complex, interconnected network of multiple overlapping food chains within an ecological community.\n3. **Key Laws:**\n   - **Lindeman's 10% Rule:** Only $\\approx 10\\%$ of energy is transferred to the next trophic level; $90\\%$ is dissipated as metabolic respiration heat.\n   - **Resilience:** Food webs provide alternative prey pathways, conferring ecosystem stability."
+}

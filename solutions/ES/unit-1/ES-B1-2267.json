@@ -1,0 +1,9 @@
+{
+  "id": "ES-B1-2267",
+  "subjectId": "ES",
+  "chapter": 1,
+  "part": "B",
+  "marks": 2,
+  "question": "Define the biogeochemical cycle. Explain the carbon cycle in detail.",
+  "answerMd": "### The Carbon Cycle\nCarbon ($C$) forms the fundamental backbone of all organic biomolecules.\n\n```text\n                  ATMOSPHERIC CO2 (Pool)\n                    ^     ^        |\n      Respiration  |     | Combustion of Fossil Fuels\n                   |     |         v\n               Animals  Factories  Photosynthesis\n                   ^               |\n                   | Grazing       v\n               Plants <--------- Organic Carbon\n                   |\n                   v (Death & Decay)\n               Soil Decomposers ---> Fossil Fuels (Millions of years)\n```\n\n1. **Photosynthesis:** $6CO_2 + 6H_2O \\xrightarrow{\\text{Light, Chlorophyll}} C_6H_{12}O_6 + 6O_2$\n2. **Respiration:** $C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + \\text{ATP}$\n3. **Decomposition:** Microorganisms oxidize dead biomass, returning $CO_2$ to soil and air.\n4. **Combustion:** Burning coal and oil releases sequestered carbon, driving the enhanced greenhouse effect."
+}
