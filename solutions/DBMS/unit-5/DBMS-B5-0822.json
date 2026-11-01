@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-B5-0822",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Compare static hashing and Extendible hashing.",
+  "answerMd": "### Global Depth and Local Depth in Extendible Hashing\n\n**Extendible Hashing** is a dynamic hashing technique that uses an in-memory directory of pointers to disk buckets, growing and shrinking dynamically without performance degradation.\n\n#### 1. Global Depth ($d$):\n- **Definition:** The number of leading (or trailing) bits of the hash value used to index the directory array.\n- **Directory Size:** The directory contains exactly **$2^d$ entries**.\n- When a bucket overflows and its local depth equals the global depth ($d' = d$), the **Global Depth increments by 1 ($d \\leftarrow d + 1$)**, causing the directory size to **double** ($2^{d+1}$).\n\n#### 2. Local Depth ($d'$):\n- **Definition:** The number of bits of the hash value that all records residing within a specific disk bucket share in common.\n- **Relationship:** The local depth of any bucket is always less than or equal to the global depth:\n  $$d' \\le d$$\n- The number of directory pointers pointing to a bucket with local depth $d'$ is: $2^{d - d'}$.\n\n#### Bucket Splitting Rule:\n- When a bucket with local depth $d'$ overflows:\n  1. If $d' < d$: Split the bucket, redistribute records using $(d'+1)$ bits, and increment $d'$ by 1 (no directory doubling needed).\n  2. If $d' == d$: Double the directory ($d \\leftarrow d+1$), split the bucket, and set new $d' = d$.\n\n$$\\therefore \\text{Global depth dictates directory size; local depth dictates bucket specificity.}$$"
+}

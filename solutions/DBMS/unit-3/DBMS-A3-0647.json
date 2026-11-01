@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A3-0647",
+  "subjectId": "DBMS",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Write about functional dependency?",
+  "answerMd": "### Functional Dependency in Relational Databases\n\n**Formal Definition:**\nGiven a relational schema $R$ and subsets of attributes $X, Y \\subseteq R$, a **Functional Dependency** denoted as:\n$$X \\to Y \\quad (\\text{Read: } X \\text{ functionally determines } Y)$$\nholds on $R$ if and only if for any valid legal relational instance $r(R)$, whenever two tuples $t_1$ and $t_2$ agree on attribute values $X$, they must also agree on attribute values $Y$:\n$$\\forall t_1, t_2 \\in r(R): \\quad t_1[X] = t_2[X] \\implies t_1[Y] = t_2[Y]$$\n\n- **$X$** is called the **Determinant**.\n- **$Y$** is called the **Dependent**.\n\n#### Concrete Example:\nIn a Student table `STUDENT(RollNo, Name, Branch, Phone)`:\n$$\\text{RollNo} \\to \\text{Name}$$\nBecause every unique `RollNo` is assigned to exactly one student name.\n\n#### Armstrong's Inference Rules (Axioms):\n1. **Reflexivity:** If $Y \\subseteq X$, then $X \\to Y$.\n2. **Augmentation:** If $X \\to Y$, then $XZ \\to YZ$.\n3. **Transitivity:** If $X \\to Y$ and $Y \\to Z$, then $X \\to Z$.\n\n$$\\therefore \\text{Functional dependencies express real-world semantic integrity constraints on data.}$$"
+}

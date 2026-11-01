@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A4-0717",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Draw the transaction state diagram.",
+  "answerMd": "### Transaction States in DBMS\n\nA **Transaction** is a logical unit of database processing that includes one or more database access operations. During execution, a transaction traverses through several distinct states:\n\n```\n               +------------+\n               |   Active   |\n               +-----+------+\n                     |\n                     v\n             +-------+--------+\n             | Partially      |\n             | Committed      |\n             +---+--------+---+\n                 |        |\n     Commit      v        v  Failure\n   +---------------+    +------------+\n   |   Committed   |    |   Failed   |\n   +---------------+    +-----+------+\n                              |\n                              v  Rollback / Undo\n                        +------------+\n                        |  Aborted   |\n                        +------------+\n```\n\n#### State Descriptions:\n1. **Active:** The initial state where the transaction begins and executes read/write operations.\n2. **Partially Committed:** Entered after the final statement has been executed, but updates are still residing in main memory buffers (not yet safely flushed to disk log).\n3. **Failed:** Entered when normal execution cannot proceed due to hardware failure, logical bug, or concurrency deadlock.\n4. **Aborted:** The transaction has rolled back all changes via the undo-log, restoring the database to its consistent pre-transaction state.\n5. **Committed:** The transaction has successfully completed and all updates are permanently written to persistent storage (Durability).\n\n$$\\therefore \\text{Transaction states guarantee strict ACID atomicity and recovery management.}$$"
+}

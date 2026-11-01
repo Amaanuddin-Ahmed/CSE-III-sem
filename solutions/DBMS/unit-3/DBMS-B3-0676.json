@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-B3-0676",
+  "subjectId": "DBMS",
+  "chapter": 3,
+  "part": "B",
+  "marks": 5,
+  "question": "Ab) What do you mean by redundancy? Discuss about insertion, updation and deletion anomalies.",
+  "answerMd": "### Data Redundancy and Its Associated Anomalies\n\n**Definition:**\nData redundancy occurs when the same information is stored repetitively across multiple tuples in a database table due to unnormalized relational schema designs.\n\n#### Three Major Anomalies Caused by Redundancy:\n\n#### 1. Insertion Anomaly\n- Inability to insert information about an entity without artificially inserting details of another entity.\n- *Example:* Cannot insert a new Course until at least one Student enrolls, if `CourseID` and `StudentID` are combined in a non-normalized enrollment relation.\n\n#### 2. Deletion Anomaly\n- Unintended loss of crucial data when a record containing other information is deleted.\n- *Example:* If the last student enrolled in a department drops out, deleting that student tuple deletes the entire department's office location and head information.\n\n#### 3. Update / Modification Anomaly\n- If data is duplicated across 1,000 records, modifying that attribute (e.g., updating teacher salary) requires updating all 1,000 tuples.\n- Failing to update even one row creates **data inconsistency** and conflicting truth.\n\n$$\\therefore \\text{Schema normalization (1NF } \\to \\text{ BCNF) eliminates redundancy and prevents database anomalies.}$$"
+}

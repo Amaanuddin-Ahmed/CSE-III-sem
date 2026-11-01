@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A4-0704",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "What are the properties of Transaction?",
+  "answerMd": "### ACID Properties of Database Transactions\n\nTo preserve database integrity during concurrent execution and system failures, transactions must satisfy the four **ACID properties**:\n\n| Property | Meaning | Enforced By DBMS Component |\n| :--- | :--- | :--- |\n| **Atomicity** | **'All or Nothing'**: Either all transaction operations execute to completion, or none do. | **Recovery Manager** (Undo logging & rollback) |\n| **Consistency** | The transaction transforms the database from one valid consistent state satisfying all integrity constraints to another. | **Application Programmer** & Integrity Constraints Subsystem |\n| **Isolation** | Intermediate states of concurrently executing transactions are invisible to one another. | **Concurrency Control Manager** (Locking, 2PL, Timestamps) |\n| **Durability** | Once committed, changes persist permanently in non-volatile storage, surviving power failures or crashes. | **Recovery Manager** (Redo logging, WAL, checkpoints) |\n\n#### Concrete Example (Bank Transfer of ₹500 from Account A to B):\n1. `Read(A)`\n2. `A = A - 500`\n3. `Write(A)`\n4. `Read(B)`\n5. `B = B + 500`\n6. `Write(B)`\n- **Atomicity:** If crash occurs after step 3, Account A is refunded ₹500 upon recovery.\n- **Consistency:** Total money $A + B$ before transfer equals total money after transfer.\n\n$$\\therefore \\text{ACID properties are the cornerstone of reliable database transaction processing.}$$"
+}

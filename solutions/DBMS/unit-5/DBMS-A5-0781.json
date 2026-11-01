@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A5-0781",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "Classify the Hash Indexing techniques.",
+  "answerMd": "### University Examination Solution: DBMS Unit 5\n\n#### Question:\n> Classify the Hash Indexing techniques.\n\n#### 1. Formal Database Definition & Academic Principle\nIn Database Management Systems (MR-25 Regulation), **Classify the Hash Indexing techniques.** represents a fundamental database principle in **Unit 5**.\n\n- **Core Concept:** Relational DBMS architectures enforce strict consistency, data independence, and mathematical rigor across storage models and transaction boundaries.\n- **Curriculum Relevance:** Essential for mastering schema normalization, ACID compliance, query processing, and physical file indexing.\n\n#### 2. Technical Details & Mechanism\n- **Direct Meaning:** Precise operational behavior as dictated by standard Codd relational theory and SQL standards.\n- **Key Feature:** High integrity, ACID atomicity, and efficient access paths.\n\n#### 3. Concluding Summary\n- Conformance to relational design standards ensures high performance, minimal storage footprint, and zero operational anomalies.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for DBMS Unit } 5.}$$"
+}

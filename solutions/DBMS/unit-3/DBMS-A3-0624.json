@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A3-0624",
+  "subjectId": "DBMS",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "List out the properties of decomposition?",
+  "answerMd": "### Properties of Relational Decomposition\n\nWhen decomposing a relation schema $R$ into smaller schemas $R_1, R_2, \\dots, R_k$, the decomposition must satisfy two critical formal properties:\n\n#### 1. Lossless-Join Decomposition (Non-Additive Join Property)\n- **Definition:** Guarantees that when natural join is performed across the decomposed relations, the resulting relation produces the exact original relation without introducing extraneous spurious tuples:\n  $$R_1 \\bowtie R_2 \\bowtie \\dots \\bowtie R_k = R$$\n- **Formal Test for Binary Decomposition $(R_1, R_2)$:**\n  A decomposition of $R$ into $R_1$ and $R_2$ is lossless with respect to a functional dependency set $F$ if and only if the common attributes contain a candidate key for at least one of the decomposed relations:\n  $$(R_1 \\cap R_2) \\to R_1 \\quad \\text{OR} \\quad (R_1 \\cap R_2) \\to R_2$$\n\n#### 2. Dependency Preservation Property\n- **Definition:** Ensures that all functional dependencies in the original set $F$ can be verified by inspecting individual decomposed relations independently, without needing to perform expensive relational joins:\n  $$(F_1 \\cup F_2 \\cup \\dots \\cup F_k)^+ = F^+$$\n  where $F_i$ is the projection of $F$ onto $R_i$.\n\n| Property | Enforced in 3NF? | Enforced in BCNF? |\n| :--- | :--- | :--- |\n| **Lossless Join** | Always Guaranteed | Always Guaranteed |\n| **Dependency Preservation** | Always Guaranteed | Not Always Possible |\n\n$$\\therefore \\text{Lossless join prevents spurious data; dependency preservation avoids cross-table join verification.}$$"
+}

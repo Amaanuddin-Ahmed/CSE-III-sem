@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A5-0788",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "Summarize the characteristics of a B+ tree. 1.3) Label the main alternatives for what to store as a data entry inan index.",
+  "answerMd": "### Tree-Based Indexing (B+ Trees) vs. Hash-Based Indexing\n\n#### 1. B+ Tree Indexing (Tree-Based)\n- **Structure:** Self-balancing multi-way search tree where all actual data pointers reside strictly in the **leaf nodes**, linked as a bidirectional doubly-linked list.\n- Internal nodes act as routing guides with search keys and child pointers.\n- **Query Strengths:**\n  - Excellent for **Range Queries** (`WHERE salary BETWEEN 50000 AND 80000`) by finding the start key in $\\mathcal{O}(\\log_B N)$ and scanning the leaf chain sequentially.\n  - Excellent for Equality Queries (`WHERE id = 101`).\n\n#### 2. Hash-Based Indexing\n- **Structure:** Uses a hash function $h(k)$ that maps search keys directly into bucket addresses on disk.\n- Types: Static hashing vs Extendible/Dynamic hashing.\n- **Query Strengths:**\n  - Unbeatable for **Exact Match Queries** (`WHERE id = 101`), executing in $\\mathcal{O}(1)$ average disk I/O.\n- **Limitation:** Useless for range queries or ordered scans because hashing scatters contiguous keys randomly across buckets.\n\n| Feature | B+ Tree Index | Hash-Based Index |\n| :--- | :--- | :--- |\n| **Lookup Cost** | $\\mathcal{O}(\\log_B N)$ | $\\mathcal{O}(1)$ average |\n| **Range Queries** | Highly Efficient (Leaf linked list) | Ineffective / Full table scan required |\n| **Dynamic Growth**| Automatic split & merge ($\\,\\ge 50\\%$ fill) | Requires directory doubling in extendible hashing |\n\n$$\\therefore \\text{B+ trees are the default universal index in relational DBMS due to range query support.}$$"
+}

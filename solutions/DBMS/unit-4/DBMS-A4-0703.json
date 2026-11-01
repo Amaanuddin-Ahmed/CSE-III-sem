@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A4-0703",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "What are Check Points? What is the use of it?",
+  "answerMd": "### Checkpoints in Database Recovery\n\n**Definition:**\nA **Checkpoint** is a synchronization point where the DBMS flushes all dirty memory buffer blocks and active log records to persistent disk storage, recording a `<CHECKPOINT (T_list)>` entry in the log.\n\n#### Why are Checkpoints Essential?\n1. **Limits Recovery Time:** Without checkpoints, recovering from a crash requires scanning the transaction log from the very beginning of database history.\n2. **Garbage Collection:** Log records written prior to the checkpoint can be safely pruned from disk, saving storage.\n3. **Clear Demarcation:** The recovery subsystem only needs to examine transactions active at or after the most recent checkpoint.\n\n#### Checkpoint Recovery Procedure:\n1. Scan log backwards to find the last `<CHECKPOINT>` record.\n2. Form **Redo list** and **Undo list**:\n   - **Redo:** Transactions that committed after the checkpoint.\n   - **Undo:** Transactions that were active (uncommitted) at the time of crash.\n3. Scan forward redoing committed transactions; scan backward rolling back uncommitted transactions.\n\n$$\\therefore \\text{Checkpoints drastically minimize Mean Time To Recovery (MTTR) following database crashes.}$$"
+}

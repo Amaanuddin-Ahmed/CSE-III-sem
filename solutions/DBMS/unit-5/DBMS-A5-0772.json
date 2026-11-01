@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A5-0772",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "part": "A",
+  "marks": 2,
+  "question": "Differentiate between Primary Indexing and Secondary Indexing.",
+  "answerMd": "### Primary Indexing vs. Secondary Indexing\n\nAn **Index** is an auxiliary data structure that accelerates data retrieval without scanning the entire data file.\n\n| Parameter | Primary Index | Secondary Index |\n| :--- | :--- | :--- |\n| **Search Key** | Built on the **Primary Key / Ordering Key** of the table. | Built on a **Non-ordering / Candidate Key** or non-key attribute. |\n| **Data Ordering** | Data file is physically sorted on the search key. | Data file is NOT ordered by the secondary key. |\n| **Index Density** | Typically **Sparse Index** (one entry per disk block). | Always **Dense Index** (one index entry for every single data record). |\n| **Number per Table** | At most **one** Primary Index per table. | Multiple Secondary Indexes permitted per table. |\n| **Pointer Target** | Points to the first record / block anchor of each block. | Points directly to individual record IDs (RIDs) or bucket pointers. |\n\n$$\\therefore \\text{Primary indexes dictate physical block layout; secondary indexes provide alternative access paths.}$$"
+}

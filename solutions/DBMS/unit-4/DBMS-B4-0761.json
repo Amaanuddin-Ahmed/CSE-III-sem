@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-B4-0761",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Mutual exclusion is a mechanism to achieve serializability. Justify?",
+  "answerMd": "### Serializability: Conflict Serializability vs. View Serializability\n\n**Definition:**\n**Serializability** is the theoretical criterion for correctness in concurrent transaction execution. A concurrent non-serial schedule is serializable if its outcome is equivalent to some serial execution of the same transactions.\n\n#### 1. Conflict Serializability\n- **Conflict Operations:** Two operations in a schedule conflict if they belong to different transactions, access the same data item, and at least one is a **Write** operation ($R_1(A)-W_2(A)$, $W_1(A)-R_2(A)$, $W_1(A)-W_2(A)$).\n- **Test:** A schedule $S$ is conflict serializable if it can be transformed into a serial schedule by repeatedly swapping non-conflicting adjacent operations.\n- **Precedence Graph (Serialization Graph):**\n  - Nodes represent Transactions ($T_i$).\n  - Directed edge $T_i \\to T_j$ exists if an operation of $T_i$ precedes and conflicts with an operation of $T_j$.\n  - **Theorem:** A schedule is conflict serializable if and only if its **precedence graph is acyclic (contains no directed cycles)**.\n\n#### 2. View Serializability\n- A schedule $S$ is view serializable if it is view equivalent to a serial schedule $S'$, requiring:\n  1. Initial read equivalence (same initial reads).\n  2. Read-from equivalence (same write-to-read dependencies).\n  3. Final write equivalence (same transaction writes final value).\n- Every conflict serializable schedule is view serializable, but not vice versa (view serializability permits blind writes).\n\n$$\\therefore \\text{Conflict serializability is polynomial-time testable (graph cycle check); view serializability is NP-complete.}$$"
+}

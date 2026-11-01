@@ -1,0 +1,9 @@
+{
+  "id": "DBMS-A3-0631",
+  "subjectId": "DBMS",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "What is schema refinement?",
+  "answerMd": "### Schema Refinement in Database Design\n\n**Definition:**\n**Schema Refinement** is the formal phase of database design that systematically analyzes an initial relational schema (often derived from an ER model) to detect redundancy, anomalies, and undesirable dependencies, decomposing it into well-structured normal forms.\n\n#### Objectives of Schema Refinement:\n1. **Eliminate Redundancy:** Minimize duplicate storage of facts across tuples.\n2. **Prevent Anomalies:** Protect the database from insertion, deletion, and update anomalies.\n3. **Ensure Lossless Reconstruction:** Guarantee that tables can be joined back to reproduce original data losslessly.\n4. **Preserve Functional Dependencies:** Permit validation of dependencies within isolated tables without expensive join queries.\n\n#### Methodological Framework:\n- Compute attribute closures ($X^+$) and minimal cover of FDs.\n- Identify candidate keys and primary keys.\n- Decompose relations iteratively to achieve 3NF or BCNF.\n\n$$\\therefore \\text{Schema refinement transforms crude conceptual designs into robust, normalized database structures.}$$"
+}
