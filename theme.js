@@ -68,6 +68,8 @@
     try { localStorage.setItem(IK, 'true'); } catch (e) {}
     if (!m) return;
 
+    if (toDark) setTheme(DARK);
+
     var red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (dlg && btn && !red) {
       var tr = btn.getBoundingClientRect(), dr = dlg.getBoundingClientRect();
@@ -83,11 +85,9 @@
         dlg.style.transform = ''; dlg.style.opacity = '';
         btn.classList.add('theme-btn-pulse');
         setTimeout(function() { btn.classList.remove('theme-btn-pulse'); }, 500);
-        if (toDark) setTheme(DARK, { originX: tx, originY: ty });
       }, 380);
     } else {
       m.style.display = 'none';
-      if (toDark) setTheme(DARK, { skipAnimation: true });
     }
   }
 
@@ -104,18 +104,7 @@
       if (localStorage.getItem(IK) === 'true') return;
     } catch (e) { return; }
 
-    var ov = document.getElementById('tourOverlay');
-    var seen = false;
-    try { seen = localStorage.getItem('mgit_tour_seen_v2') === 'true'; } catch (e) {}
-    if (!seen && ov) {
-      var obs = new MutationObserver(function() {
-        if (ov.style.display === 'none') { obs.disconnect(); setTimeout(showIntro, 700); }
-      });
-      obs.observe(ov, { attributes: true, attributeFilter: ['style', 'class'] });
-      return;
-    }
-    if (ov && ov.style.display !== 'none') return;
-    setTimeout(showIntro, 600);
+    setTimeout(showIntro, 2000);
   }
 
   function onId(id, ev, fn) {
