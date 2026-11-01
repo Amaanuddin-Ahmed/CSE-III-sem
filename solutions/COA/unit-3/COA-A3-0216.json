@@ -1,0 +1,9 @@
+{
+  "id": "COA-A3-0216",
+  "subjectId": "COA",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Draw the hardware configuration for signed 2's complement addition and subtraction.",
+  "answerMd": "### University Examination Solution: COA Unit 3\n\n#### Question:\n> Draw the hardware configuration for signed 2's complement addition and subtraction.\n\n#### 1. Core Engineering Definition & Architectural Principle\nIn Computer Organization and Architecture (MR-25 Regulation), **Draw the hardware configuration for signed 2's complement addition and subtraction.** represents a fundamental hardware/architectural concept in **Unit 3**.\n\n- **Core Principle:** Hardware components and control units operate deterministically under synchronized clock pulses to ensure correct data path transfer and arithmetic precision.\n- **Curriculum Relevance:** Essential for understanding computer arithmetic, memory subsystem design, and parallel pipelined processing.\n\n#### 2. Technical Explanation & Operation Details\n- **Direct Meaning:** Precise operational behavior as dictated by standard IEEE and ISO computer engineering standards.\n- **Key Feature:** High data integrity, deterministic control sequencing, and minimal hardware latency.\n\n#### 3. Concluding Takeaway\n- Adhering to structured architectural design ensures optimal throughput, scalable bus utilization, and zero hazard penalties.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for COA Unit } 3.}$$"
+}

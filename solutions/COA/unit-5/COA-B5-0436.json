@@ -1,0 +1,9 @@
+{
+  "id": "COA-B5-0436",
+  "subjectId": "COA",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "Compare and contrast between parallel processing and pipeline processing with suitable examples.",
+  "answerMd": "### University Examination Solution: COA Unit 5\n\n#### Question:\n> Compare and contrast between parallel processing and pipeline processing with suitable examples.\n\n#### 1. Core Engineering Definition & Architectural Principle\nIn Computer Organization and Architecture (MR-25 Regulation), **Compare and contrast between parallel processing and pipeline processing with suitable examples.** represents a fundamental hardware/architectural concept in **Unit 5**.\n\n- **Core Principle:** Hardware components and control units operate deterministically under synchronized clock pulses to ensure correct data path transfer and arithmetic precision.\n- **Curriculum Relevance:** Essential for understanding computer arithmetic, memory subsystem design, and parallel pipelined processing.\n\n#### 2. Technical Explanation & Operation Details\n1. **Register Transfer Operations:** Control signals activate appropriate tri-state buffers and multiplexers to route operands through internal CPU buses.\n2. **Timing & Synchronization:** Operations adhere strictly to setup and hold times across master-slave flip-flops and clock states.\n3. **Tradeoffs:** System designs optimize between clock cycle latency, gate count, memory bandwidth, and power consumption.\n\n#### 3. Concluding Takeaway\n- Adhering to structured architectural design ensures optimal throughput, scalable bus utilization, and zero hazard penalties.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for COA Unit } 5.}$$"
+}

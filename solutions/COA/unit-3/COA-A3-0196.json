@@ -1,0 +1,9 @@
+{
+  "id": "COA-A3-0196",
+  "subjectId": "COA",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "What is meant by normalization in floating point representation? Why do we need it?",
+  "answerMd": "### Normalization in Floating Point Representation\n\n**Formal Definition:**\nIn binary floating-point representation (IEEE 754 standard), a non-zero number is in **normalized form** when the most significant bit (MSB) of the mantissa/significand immediately to the left of the binary radix point is non-zero (i.e., exactly 1):\n$$\\text{Value} = (-1)^S \\times 1.M \\times 2^{E - \\text{Bias}}$$\nwhere $S$ is the sign bit, $E$ is the biased exponent, and $1.M$ is the normalized mantissa.\n\n#### Why Normalization is Essential:\n1. **Maximum Precision:** Eliminates leading zeros, ensuring the limited mantissa bit-field holds maximum significant fractional precision.\n2. **Unique Representation:** Guarantees a single canonical representation for each real number (e.g., prevents ambiguous values where $0.1_2 \\times 2^1 = 0.01_2 \\times 2^2$).\n3. **Hidden Bit Efficiency:** Since the bit preceding the binary point is always 1, IEEE 754 leaves it unstored (implicit hidden bit), effectively granting an extra bit of physical precision.\n\n#### Concrete Example:\nConvert unnormalized $0.001101_2 \\times 2^6$ to normalized format:\n- Shift mantissa left by 3 bit positions until first '1' is at leading position: $1.101_2$\n- Decrement exponent by 3: $6 - 3 = 3$\n- Normalized result: **$1.101_2 \\times 2^3$**\n\n$$\\therefore \\text{Normalization preserves maximum precision and provides unique canonical encoding.}$$"
+}

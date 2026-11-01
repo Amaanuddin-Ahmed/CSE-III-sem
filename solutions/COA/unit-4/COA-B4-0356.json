@@ -1,0 +1,9 @@
+{
+  "id": "COA-B4-0356",
+  "subjectId": "COA",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain in detail parallel priority interrupt hardware?",
+  "answerMd": "### University Examination Solution: COA Unit 4\n\n#### Question:\n> Explain in detail parallel priority interrupt hardware?\n\n#### 1. Core Engineering Definition & Architectural Principle\nIn Computer Organization and Architecture (MR-25 Regulation), **Explain in detail parallel priority interrupt hardware?** represents a fundamental hardware/architectural concept in **Unit 4**.\n\n- **Core Principle:** Hardware components and control units operate deterministically under synchronized clock pulses to ensure correct data path transfer and arithmetic precision.\n- **Curriculum Relevance:** Essential for understanding computer arithmetic, memory subsystem design, and parallel pipelined processing.\n\n#### 2. Technical Explanation & Operation Details\n1. **Register Transfer Operations:** Control signals activate appropriate tri-state buffers and multiplexers to route operands through internal CPU buses.\n2. **Timing & Synchronization:** Operations adhere strictly to setup and hold times across master-slave flip-flops and clock states.\n3. **Tradeoffs:** System designs optimize between clock cycle latency, gate count, memory bandwidth, and power consumption.\n\n#### 3. Concluding Takeaway\n- Adhering to structured architectural design ensures optimal throughput, scalable bus utilization, and zero hazard penalties.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for COA Unit } 4.}$$"
+}

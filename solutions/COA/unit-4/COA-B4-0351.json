@@ -1,0 +1,9 @@
+{
+  "id": "COA-B4-0351",
+  "subjectId": "COA",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "A cache memory consists of size of 256X16 and 8 blocks. The main memory contains memory size of 4096X16. Find out how many bits are there in Index, Tag, Block and Word fields in the case of direct mapping.",
+  "answerMd": "### Restoring Division Algorithm for Unsigned Integers\n\n#### Algorithm Sequence:\n1. Load Dividend in $Q$, Divisor in $M$, clear Accumulator $A = 0$, set Count $n = \\text{bits of } Q$.\n2. Shift left $[A, Q]$ by 1 bit.\n3. Subtract divisor: $A \\leftarrow A - M$.\n4. Check sign of $A$:\n   - If $A \\ge 0$ (MSB = 0): Set $Q_0 = 1$.\n   - If $A < 0$ (MSB = 1): Set $Q_0 = 0$, and **restore** remainder: $A \\leftarrow A + M$.\n5. Decrement count $n$. Repeat until $n = 0$.\n\n#### Numerical Execution for $25 / 6$ (Dividend 25, Divisor 6):\n- $Q = 11001_2$ ($25_{10}$), $M = 00110_2$ ($6_{10}$), $n = 5$, initial $A = 000000_2$.\n\n| Iteration | Operation | $A$ | $Q$ | Action |\n| :---: | :--- | :---: | :---: | :--- |\n| 1 | Shift left, $A-M < 0 \\implies$ Restore | 000001 | 10010 | $Q_0 = 0$ |\n| 2 | Shift left, $A-M < 0 \\implies$ Restore | 000011 | 00100 | $Q_0 = 0$ |\n| 3 | Shift left, $A-M \\ge 0 \\implies$ No restore | 000000 | 01001 | $Q_0 = 1$ |\n| 4 | Shift left, $A-M < 0 \\implies$ Restore | 000000 | 10010 | $Q_0 = 0$ |\n| 5 | Shift left, $A-M < 0 \\implies$ Restore | 000001 | 00100 | $Q_0 = 0$ |\n\n- **Quotient ($Q$):** $00100_2 = \\mathbf{4_{10}}$\n- **Remainder ($A$):** $000001_2 = \\mathbf{1_{10}}$\n- Verification: $25 = 6 \\times 4 + 1$ (Verified Correct).\n\n$$\\therefore \\text{Quotient } Q = 4, \\quad \\text{Remainder } A = 1.$$"
+}

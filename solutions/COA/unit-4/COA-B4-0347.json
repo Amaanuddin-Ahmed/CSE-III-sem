@@ -1,0 +1,9 @@
+{
+  "id": "COA-B4-0347",
+  "subjectId": "COA",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "In a computer, the number of cache hits are 7 and cache miss are 3, then determine the hit ratio of cache memory.",
+  "answerMd": "### Calculation of Cache Hit Ratio\n\n#### Given Data:\n- Main Memory access time ($T_m$) = $1200\\text{ ns}$\n- Cache Memory access time ($T_c$) = $100\\text{ ns}$\n- Required average memory access time ($T_{avg}$) $\\le 120\\text{ ns}$\n\n#### Formula:\n$$T_{avg} = h \\times T_c + (1 - h) \\times T_m$$\nwhere $h$ is the cache hit ratio.\n\n#### Derivation:\n$$120 = 100h + 1200(1 - h)$$\n$$120 = 100h + 1200 - 1200h$$\n$$1100h = 1080$$\n$$h = \\frac{1080}{1100} = 0.9818$$\n\n$$\\therefore \\text{Required Cache Hit Ratio } h = \\mathbf{0.9818 \\;(98.18\\%)}.$$"
+}

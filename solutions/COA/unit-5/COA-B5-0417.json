@@ -1,0 +1,9 @@
+{
+  "id": "COA-B5-0417",
+  "subjectId": "COA",
+  "chapter": 5,
+  "part": "B",
+  "marks": 5,
+  "question": "List and explain various types of solutions for handling pipeline Hazards.",
+  "answerMd": "### Pipeline Hazards and Solutions\n\nA pipeline hazard is any condition that stalls instruction execution in a pipelined processor.\n\n#### 1. Structural Hazards (Hardware Conflicts):\n- **Cause:** Two or more instructions require the same hardware resource simultaneously.\n- **Solution:** Harvard architecture (separate instruction and data caches) and dual-ported register files.\n\n#### 2. Data Hazards (Data Dependencies):\n- **RAW (Read After Write):** Instruction requires an operand not yet written back by an earlier instruction.\n- **WAR / WAW:** Anti and output dependencies.\n- **Solutions:**\n  - **Operand Forwarding (Bypassing):** Routes ALU output directly to ALU input of subsequent instruction.\n  - **Hardware Interlocking:** Injects pipeline bubble/stall.\n  - **Compiler Scheduling:** Inserts independent instructions into delay slots.\n\n#### 3. Control Hazards (Branch Hazards):\n- **Cause:** Branch and jump instructions where target address is evaluated in later pipeline stages.\n- **Solutions:** Dynamic branch prediction (2-bit branch history tables), Branch Target Buffer (BTB), and delayed branching.\n\n$$\\therefore \\text{Operand forwarding and branch prediction prevent costly pipeline bubbles.}$$"
+}

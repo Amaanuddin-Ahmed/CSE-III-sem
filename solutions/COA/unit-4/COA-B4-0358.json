@@ -1,0 +1,9 @@
+{
+  "id": "COA-B4-0358",
+  "subjectId": "COA",
+  "chapter": 4,
+  "part": "B",
+  "marks": 5,
+  "question": "With a neat diagram explain the memory hierarchy in a process.",
+  "answerMd": "### Memory Hierarchy in Computer Architecture\n\n#### Principle:\nThe memory hierarchy balances the tradeoff between speed, capacity, and cost across different storage technologies.\n\n#### Hierarchy Levels (Top to Bottom):\n1. **Internal CPU Registers:** Speed $< 1\\text{ ns}$, Capacity $< 1\\text{ KB}$, Cost very high.\n2. **Level 1 (L1) Cache:** Speed $1-2\\text{ ns}$, Capacity $32-64\\text{ KB}$ per core.\n3. **Level 2 (L2) Cache:** Speed $3-10\\text{ ns}$, Capacity $512\\text{ KB}-2\\text{ MB}$.\n4. **Level 3 (L3) Cache:** Speed $10-20\\text{ ns}$, Capacity $8-64\\text{ MB}$ shared.\n5. **Main Memory (DRAM):** Speed $50-100\\text{ ns}$, Capacity $8-64\\text{ GB}$.\n6. **Secondary Storage (SSD / HDD):** Speed $10-100\\;\\mu\\text{s}$, Capacity $512\\text{ GB}-4\\text{ TB}$.\n\n#### Locality of Reference:\n- **Temporal Locality:** Instructions/data accessed recently will likely be accessed again soon (e.g., loops).\n- **Spatial Locality:** Contiguous memory locations will likely be accessed consecutively (e.g., sequential code, arrays).\n\n$$\\therefore \\text{Hierarchy achieves average access speed close to L1 cache with the vast capacity of secondary storage.}$$"
+}

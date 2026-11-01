@@ -1,0 +1,9 @@
+{
+  "id": "COA-A4-0297",
+  "subjectId": "COA",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "What are advantages of DMA control?",
+  "answerMd": "### Direct Memory Access (DMA) and DMA Controller\n\n#### Working Principle:\nDMA allows high-speed I/O devices (disk drives, network adapters) to transfer blocks of data directly to/from main memory without continuous CPU intervention.\n\n#### Transfer Sequence:\n1. CPU initializes DMA registers: Memory Address Register (MAR), Word Count Register (WCR), and Control Register.\n2. DMA Controller asserts **Bus Request (BR)** to CPU.\n3. CPU completes current bus cycle and returns **Bus Grant (BG)**, floating its address/data buses.\n4. DMA controller drives the buses, transferring data words directly between device and RAM.\n5. On word count reaching zero, DMA controller raises an **Interrupt** to notify CPU.\n\n#### Modes of Transfer:\n- **Burst Transfer:** Entire data block is transferred in one continuous burst while CPU is halted.\n- **Cycle Stealing:** DMA steals a single clock cycle between CPU bus accesses.\n- **Transparent Mode:** DMA only uses the bus when the CPU is performing internal execution.\n\n$$\\therefore \\text{DMA maximizes system I/O throughput while releasing CPU cycles for program execution.}$$"
+}
