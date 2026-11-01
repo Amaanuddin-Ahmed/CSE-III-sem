@@ -1,0 +1,580 @@
+/* ==========================================================================
+   MGIT PYQ Hub — Dark Mode Theme Stylesheet (MR-25 Regulation)
+   Preserves 100% of light mode styles. Scoped strictly under html[data-theme="dark"].
+   Only color-related properties are modified. No geometry/layout shifts.
+   ========================================================================== */
+
+/* 1. Global Dark Tokens & Color Scheme */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Theme surface tokens */
+  --bg-top: #0b1220;
+  --bg-bottom: #080d18;
+  --surface-card: #111a2e;
+  --surface-card-alt: #162238;
+  --surface-chip: #1e2c47;
+  --surface-elevated: #162238;
+
+  /* Text tokens */
+  --text-main: #e6edf7;
+  --text-muted: #9fb0c9;
+  --text-dim: #64748b;
+
+  /* Border tokens */
+  --border-subtle: #243352;
+  --border-card: #243352;
+  --border-divider: #1e2c47;
+
+  /* Accent tokens */
+  --brand-navy: #0f1d4a;
+  --brand-blue: #3b82f6;
+  --accent-blue-soft: rgba(59, 130, 246, 0.15);
+  --accent-purple-soft: rgba(168, 85, 247, 0.18);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
+}
+
+/* 2. Base Canvas & Typography */
+html[data-theme="dark"] body {
+  background-color: #0b1220 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .bg-canvas {
+  background: radial-gradient(circle at 50% 0%, #162238 0%, #0b1220 50%, #080d18 100%) !important;
+}
+
+/* 3. Site Header & Header Action Buttons */
+html[data-theme="dark"] .site-header {
+  background: rgba(11, 18, 32, 0.88) !important;
+  border-bottom-color: #243352 !important;
+}
+
+html[data-theme="dark"] .brand-name {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .brand-sub {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .brand-icon {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+html[data-theme="dark"] .site-header .top-drive-btn,
+html[data-theme="dark"] .site-header .top-a2hs-btn,
+html[data-theme="dark"] .site-header .top-theme-btn {
+  background: rgba(22, 34, 56, 0.85) !important;
+  border-color: #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .site-header .top-drive-btn:hover,
+html[data-theme="dark"] .site-header .top-a2hs-btn:hover,
+html[data-theme="dark"] .site-header .top-theme-btn:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* Header theme toggle button styling in both modes */
+.site-header .top-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(129, 140, 248, 0.28);
+  color: #334155;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.site-header .top-theme-btn:hover {
+  background: #ffffff;
+  border-color: rgba(99, 102, 241, 0.42);
+  color: #3730a3;
+  transform: translateY(-1px);
+}
+
+.site-header .top-theme-btn .theme-icon-sun {
+  display: none;
+}
+
+.site-header .top-theme-btn .theme-icon-moon {
+  display: inline-block;
+}
+
+html[data-theme="dark"] .site-header .top-theme-btn {
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .site-header .top-theme-btn .theme-icon-sun {
+  display: inline-block !important;
+}
+
+html[data-theme="dark"] .site-header .top-theme-btn .theme-icon-moon {
+  display: none !important;
+}
+
+/* 4. Mobile Navigation & Breadcrumb */
+html[data-theme="dark"] .site-header .mobile-header-history {
+  border-top-color: #243352 !important;
+}
+
+html[data-theme="dark"] .header-arrow-btn {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .header-arrow-btn:hover:not(:disabled) {
+  background: #1e2c47 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .header-arrow-btn:disabled {
+  opacity: 0.35;
+}
+
+html[data-theme="dark"] .app-breadcrumb .crumb-link {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .app-breadcrumb .crumb-link:hover {
+  color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .app-breadcrumb .crumb-current {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .app-breadcrumb .crumb-sep {
+  color: #475569 !important;
+}
+
+/* 5. Exam Selection View (Mid-1, Mid-2, Semester End) */
+html[data-theme="dark"] .category-title,
+html[data-theme="dark"] .section-heading-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .category-sub,
+html[data-theme="dark"] .section-heading-sub {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .exam-card,
+html[data-theme="dark"] .exam-choice-card {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .exam-card:hover,
+html[data-theme="dark"] .exam-choice-card:hover {
+  background: #162238 !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .exam-card-title,
+html[data-theme="dark"] .exam-choice-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .exam-card-desc,
+html[data-theme="dark"] .exam-choice-desc {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .exam-card-meta {
+  color: #64748b !important;
+}
+
+/* 6. Subject Grid & Subject Cards */
+html[data-theme="dark"] .subject-card,
+html[data-theme="dark"] .subj-card {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .subject-card:hover,
+html[data-theme="dark"] .subj-card:hover {
+  background: #162238 !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .subject-card-title,
+html[data-theme="dark"] .subj-name {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .subject-card-sub,
+html[data-theme="dark"] .subj-meta {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .subject-card-badge,
+html[data-theme="dark"] .subj-count {
+  background: #1e2c47 !important;
+  color: #9fb0c9 !important;
+  border-color: #243352 !important;
+}
+
+/* 7. Mode Choices (Notes vs PYQs) */
+html[data-theme="dark"] .mode-selector-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .mode-selector-sub {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .mode-choice-card {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .mode-choice-card:hover {
+  background: #162238 !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .mode-card-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .mode-card-desc {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .mode-card-badge {
+  background: #1e2c47 !important;
+  color: #9fb0c9 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .mode-card-action {
+  color: #60a5fa !important;
+}
+
+/* Mode Switcher Bar */
+html[data-theme="dark"] .mode-switcher-bar {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .mode-tab-btn {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .mode-tab-btn.active {
+  background: #162238 !important;
+  color: #60a5fa !important;
+  border-color: #3b82f6 !important;
+}
+
+/* 8. Notes Division */
+html[data-theme="dark"] .note-item-card {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .note-item-card:hover {
+  background: #162238 !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .note-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .note-desc {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .note-meta {
+  color: #64748b !important;
+}
+
+html[data-theme="dark"] .note-read-btn {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .note-read-btn:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* 9. PYQs Division & Question Cards */
+html[data-theme="dark"] .pyq-unit-card,
+html[data-theme="dark"] .unit-accordion-group {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .unit-header-bar,
+html[data-theme="dark"] .unit-accordion-header {
+  background: #162238 !important;
+  border-bottom-color: #243352 !important;
+}
+
+html[data-theme="dark"] .unit-title-text {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .unit-badge-pill {
+  background: #1e2c47 !important;
+  color: #9fb0c9 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .q-compact-row {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .q-compact-row:hover {
+  background: #141f36 !important;
+}
+
+html[data-theme="dark"] .q-compact-header:hover {
+  background: #162238 !important;
+}
+
+html[data-theme="dark"] .q-compact-text {
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .q-compact-num {
+  background: #1e2c47 !important;
+  color: #60a5fa !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .q-compact-toggle {
+  background: #1e2c47 !important;
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .q-compact-drawer {
+  background: #0f1829 !important;
+  border-top-color: #243352 !important;
+}
+
+html[data-theme="dark"] .q-meta-chip {
+  background: #1e2c47 !important;
+  color: #9fb0c9 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .btn-q-drive {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .btn-q-drive:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* 10. Modals & Dialogs (View Solution, Ask with AI, Reader) */
+html[data-theme="dark"] .modal-backdrop {
+  background: rgba(4, 7, 15, 0.75) !important;
+}
+
+html[data-theme="dark"] .modal-dialog {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75) !important;
+}
+
+html[data-theme="dark"] .modal-header {
+  border-bottom-color: #243352 !important;
+}
+
+html[data-theme="dark"] .modal-dialog-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .modal-close-btn {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .modal-close-btn:hover {
+  background: #1e2c47 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-question-heading {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-model-answer {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .sol-sec-title {
+  color: #818cf8 !important;
+}
+
+html[data-theme="dark"] .solution-actions-row {
+  border-top-color: #243352 !important;
+}
+
+html[data-theme="dark"] .ask-with-card {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .ask-with-card:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .ask-with-info strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .ask-with-info span {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .ask-divider {
+  color: #64748b !important;
+}
+
+html[data-theme="dark"] .ask-divider::before,
+html[data-theme="dark"] .ask-divider::after {
+  border-bottom-color: #243352 !important;
+}
+
+/* 11. In-Built AI Assistant Modal (#geminiModal) */
+html[data-theme="dark"] #geminiModal .gemini-app-layout {
+  background: #0b1220 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] #geminiModal .gemini-workspace-header {
+  background: #111a2e !important;
+  border-bottom-color: #243352 !important;
+}
+
+html[data-theme="dark"] #geminiModal .gemini-workspace-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #geminiModal .gemini-chat-area {
+  background: #0b1220 !important;
+}
+
+html[data-theme="dark"] #geminiModal .user-msg {
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body {
+  color: #e6edf7 !important;
+}
+
+/* Sticky First Column in AI Tables on Dark */
+html[data-theme="dark"] #geminiModal .ai-msg-body table th:first-child,
+html[data-theme="dark"] #geminiModal .ai-msg-body table td:first-child {
+  background: #162238 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body table {
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body th,
+html[data-theme="dark"] #geminiModal .ai-msg-body td {
+  border-color: #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body th {
+  background: #162238 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body pre {
+  background: #0f1829 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-msg-body code {
+  background: rgba(30, 44, 71, 0.7) !important;
+  color: #93c5fd !important;
+}
+
+html[data-theme="dark"] #geminiModal .ai-input-wrapper {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] #geminiModal .gemini-query-input {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #geminiModal .gemini-query-input::placeholder {
+  color: #64748b !important;
+}
+
+/* 12. KaTeX Equations & Math Delimiters */
+html[data-theme="dark"] .katex,
+html[data-theme="dark"] .katex-display,
+html[data-theme="dark"] .gemini-math {
+  color: #e6edf7 !important;
+  background: transparent !important;
+}
+
+/* 13. Footer & Attribution Badges */
+html[data-theme="dark"] .bottom-footer {
+  border-top-color: #243352 !important;
+}
+
+html[data-theme="dark"] .attribution-box {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .attribution-text {
+  color: #9fb0c9 !important;
+}
+
+html[data-theme="dark"] .footer-rate-box .footer-rate-link {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .footer-rate-box .footer-rate-link:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+}
