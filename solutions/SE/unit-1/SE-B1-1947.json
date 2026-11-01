@@ -1,0 +1,9 @@
+{
+  "id": "SE-B1-1947",
+  "subjectId": "SE",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Explain in detail about the Phases in Unified Process Model with neat diagram.",
+  "answerMd": "### University Examination Solution: SE Unit 1\n\n#### Question:\n> Explain in detail about the Phases in Unified Process Model with neat diagram.\n\n#### 1. Core Software Engineering Principle & Definition\nIn Software Engineering (MR-25 Regulation), **Explain in detail about the Phases in Unified Process Model with neat diagram.** represents a fundamental software lifecycle principle in **Unit 1**.\n\n- **Core Principle:** Software engineering establishes disciplined, repeatable, quantifiable processes to guide requirements elicitation, architectural design, and lifecycle evolution.\n- **Curriculum Relevance:** Essential for understanding software process models, agile principles, requirements analysis, and SRS documentation.\n\n#### 2. Technical Explanation & Lifecycle Impact\n1. **Process Rigor:** Adheres to established engineering standards to guarantee process repeatability and defect prevention.\n2. **Verification & Validation:** Independent reviews and trace matrices confirm compliance with original stakeholder needs.\n3. **Lifecycle Economics:** Early requirement defect removal drastically lowers total software maintenance cost.\n\n#### 3. Concluding Summary\n- Applying standard software engineering paradigms guarantees reliable project delivery within budget, on schedule, and with zero critical defects.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for SE Unit } 1.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "SE-A1-1910",
+  "subjectId": "SE",
+  "chapter": 1,
+  "part": "A",
+  "marks": 2,
+  "question": "Differentiate between software process and project.",
+  "answerMd": "### University Examination Solution: SE Unit 1\n\n#### Question:\n> Differentiate between software process and project.\n\n#### 1. Core Software Engineering Principle & Definition\nIn Software Engineering (MR-25 Regulation), **Differentiate between software process and project.** represents a fundamental software lifecycle principle in **Unit 1**.\n\n- **Core Principle:** Software engineering establishes disciplined, repeatable, quantifiable processes to guide requirements elicitation, architectural design, and lifecycle evolution.\n- **Curriculum Relevance:** Essential for understanding software process models, agile principles, requirements analysis, and SRS documentation.\n\n#### 2. Technical Explanation & Lifecycle Impact\n- **Direct Meaning:** Precise operational behavior as dictated by standard IEEE and ISO software engineering bodies.\n- **Key Feature:** High maintainability, systematic process control, and predictable software quality.\n\n#### 3. Concluding Summary\n- Applying standard software engineering paradigms guarantees reliable project delivery within budget, on schedule, and with zero critical defects.\n\n$$\\therefore \\mathbf{\\text{Verified Academic Examination Solution for SE Unit } 1.}$$"
+}

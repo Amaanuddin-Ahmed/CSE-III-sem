@@ -1,0 +1,9 @@
+{
+  "id": "SE-B2-2010",
+  "subjectId": "SE",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Differentiate functional and non-functional requirements.",
+  "answerMd": "### Functional vs. Non-Functional Requirements\n\nIn requirements engineering, software requirements are categorized into functional capabilities and overall quality attributes:\n\n| Parameter | Functional Requirements (FR) | Non-Functional Requirements (NFR) |\n| :--- | :--- | :--- |\n| **Definition** | Statements describing **what the system should do**: specific services, calculations, inputs, and outputs. | Statements describing **how well the system should perform**: quality attributes and operational constraints. |\n| **Focus** | System behavior, business logic, features, and user workflows. | System performance, security, reliability, scalability, and usability. |\n| **Verification** | Verified by running functional test cases (Pass / Fail). | Measured quantitatively using benchmark metrics (response time, throughput, uptime). |\n| **Example** | *\"The system shall allow students to search PYQs by subject and unit.\"* | *\"The search results must render within 200 milliseconds under 5,000 concurrent users.\"* |\n\n#### Major Categories of Non-Functional Requirements (URPS+):\n1. **Usability:** Aesthetic UI, intuitive navigation, accessibility compliance (WCAG).\n2. **Reliability:** Uptime availability ($99.99\\%$), mean time between failures (MTBF).\n3. **Performance:** CPU utilization, memory footprint, network latency.\n4. **Security:** Role-based access control (RBAC), end-to-end data encryption (AES-256).\n\n$$\\therefore \\text{Functional requirements define system features; non-functional requirements define system quality.}$$"
+}

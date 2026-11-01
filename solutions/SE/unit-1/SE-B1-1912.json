@@ -1,0 +1,9 @@
+{
+  "id": "SE-B1-1912",
+  "subjectId": "SE",
+  "chapter": 1,
+  "part": "B",
+  "marks": 5,
+  "question": "Describe \"Software myth? Discuss on various types of software myths and the true aspects of these myths?",
+  "answerMd": "### Software Myths and Realities in Software Engineering\n\n**Software Myths** are misleading beliefs, folklore, and false assumptions about software development that have historically led to project failures:\n\n#### 1. Management Myths\n- *Myth:* \"We already have a book of standards and procedures; our developers know everything they need to do.\"\n- *Reality:* Written standards are often outdated, incomplete, or ignored by practitioners who lack training in modern tools.\n- *Myth:* \"If we fall behind schedule, we can simply add more programmers to catch up.\"\n- *Reality (Brooks' Law):* **\"Adding manpower to a late software project makes it later\"** due to communication overhead and onboarding friction.\n\n#### 2. Customer Myths\n- *Myth:* \"A general statement of objectives is enough to begin writing code; we can fill in the details later.\"\n- *Reality:* Vague ambiguous requirements lead to rework, missed deadlines, and customer dissatisfaction. Late requirement changes cost 10x-100x more to fix.\n\n#### 3. Practitioner Myths\n- *Myth:* \"Once we write the code and get it to run, our job is done.\"\n- *Reality:* 60% to 80% of total software lifecycle effort is spent during **maintenance and evolution** after release.\n- *Myth:* \"The only deliverable work product is the working executable program.\"\n- *Reality:* Comprehensive documentation, test suites, and models are vital for long-term maintainability.\n\n$$\\therefore \\text{Debunking myths with disciplined engineering practices is essential for predictable software delivery.}$$"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "SE-B2-2018",
+  "subjectId": "SE",
+  "chapter": 2,
+  "part": "B",
+  "marks": 5,
+  "question": "Summarize briefly how requirement validation is done?",
+  "answerMd": "### Requirements Validation Techniques\n\n**Definition:**\n**Requirements Validation** is the process of verifying that the Software Requirements Specification (SRS) accurately defines the software that the client truly needs (\"Building the right product\").\n\n#### Five Key Criteria Evaluated During Validation:\n1. **Validity / Correctness:** Does the software provide the functions that best support customer needs?\n2. **Consistency:** Are there conflicting requirements that contradict each other?\n3. **Completeness:** Are all real-world system constraints, states, and exception paths documented?\n4. **Realism:** Can the requirements be physically implemented within the budget, technology, and schedule constraints?\n5. **Verifiability (Testability):** Can an objective test case be designed to prove requirement satisfaction?\n\n#### Principal Validation Techniques:\n- **Requirements Reviews (Inspections):** Systematic manual peer reviews by clients and engineers to uncover ambiguities.\n- **Prototyping:** Demonstrating interactive mockups so users can confirm expected behavior.\n- **Test-Case Generation:** Writing test cases derived directly from SRS requirements to reveal untestable ambiguities early.\n- **Automated Consistency Checks:** Using CASE tools to check database schemas and data flow diagrams for unconnected data paths.\n\n$$\\therefore \\text{Validating requirements early avoids the extreme 100x cost penalty of post-release rework.}$$"
+}

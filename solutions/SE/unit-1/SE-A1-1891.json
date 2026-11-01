@@ -1,0 +1,9 @@
+{
+  "id": "SE-A1-1891",
+  "subjectId": "SE",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "What is spiral Model.",
+  "answerMd": "### The Spiral Process Model (Barry Boehm, 1988)\n\n**Definition:**\nThe **Spiral Model** is an evolutionary software process model that combines the systematic, controlled aspects of the Waterfall model with the iterative nature of Prototyping, guided throughout by **formal Risk Analysis**.\n\n```\n                     Planning & Objective Setting\n                                  |\n        Quadrant 4:               |               Quadrant 1:\n    Customer Evaluation           |          Determine Objectives,\n       & Next Phase               |         Alternatives & Constraints\n    ------------------------------+------------------------------\n        Quadrant 3:               |               Quadrant 2:\n      Engineering &               |          Risk Analysis &\n    Product Development           |            Prototyping\n                                  |\n                            Risk Analysis\n```\n\n#### The Four Quadrants of Each Spiral Iteration:\n1. **Determine Objectives (Planning):** Identify project goals, alternative approaches, and operational constraints.\n2. **Identify & Resolve Risks (Risk Analysis):** Evaluate alternatives, assess technical/management risks, and build targeted prototypes to mitigate risks.\n3. **Engineering & Development:** Develop, verify, and test the next level of software product using appropriate development methods.\n4. **Plan Next Phase (Evaluation):** Customer evaluates current release; project team reviews progress and plans the subsequent spiral cycle.\n\n#### Primary Advantage:\n- Explicit risk handling at every stage prevents catastrophic late-lifecycle project failure.\n\n$$\\therefore \\text{The Spiral model is the optimal choice for large, expensive, high-risk mission-critical systems.}$$"
+}

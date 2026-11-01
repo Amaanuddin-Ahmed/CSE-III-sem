@@ -1,0 +1,9 @@
+{
+  "id": "SE-A1-1889",
+  "subjectId": "SE",
+  "chapter": 1,
+  "part": "A",
+  "marks": 1,
+  "question": "What are software engineering layers?",
+  "answerMd": "### The Layered Technology of Software Engineering\n\nSoftware engineering is characterized as a **Layered Technology** founded upon four disciplined tiers:\n\n```\n  +---------------------------------------------+\n  |                   TOOLS                     |\n  +---------------------------------------------+\n  |                  METHODS                    |\n  +---------------------------------------------+\n  |                  PROCESS                    |\n  +---------------------------------------------+\n  |             A QUALITY FOCUS                 |\n  +---------------------------------------------+\n```\n\n#### Layer Descriptions (Bottom to Top):\n1. **A Quality Focus (Bedrock / Foundation):**\n   - Any engineering approach must rest on an organizational commitment to quality (Total Quality Management - TQM, Six Sigma).\n   - Drives continuous process improvement and customer satisfaction.\n2. **Process Layer (The Glue):**\n   - Forms the framework that binds all technology layers together.\n   - Defines the sequence of lifecycle activities, milestones, deliverables, quality assurance checkpoints, and change management controls.\n3. **Methods Layer (\"How-To\" Technical Expertise):**\n   - Provides technical methods for building software: requirements analysis, architectural design, data modeling, coding, testing, and maintenance.\n4. **Tools Layer (Automated & Semi-Automated Support):**\n   - Computer-Aided Software Engineering (CASE) tools, IDEs, CI/CD pipelines, version control (Git), and automated testing suites that streamline process execution.\n\n$$\\therefore \\text{Quality forms the foundation; Process is the glue; Methods provide technique; Tools automate delivery.}$$"
+}
