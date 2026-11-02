@@ -2912,3 +2912,323 @@ html[data-theme="dark"] .ai-fallback-btn.gemini-btn:hover {
   background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
   border-color: #60a5fa !important;
 }
+
+/* ==========================================================================
+   22. Universal Academic Solution & Question Text Dark High-Contrast Rules,
+       Mode Tabs, and Comprehensive Component Overhaul
+   ========================================================================== */
+
+/* 22.1 Academic Solution Modal & Universal AI/Markdown High-Contrast */
+html[data-theme="dark"] #solutionModal .solution-dialog,
+html[data-theme="dark"] #solutionModal .modal-dialog,
+html[data-theme="dark"] #solutionModal .modal-body {
+  background: #111a2e !important;
+  color: #e6edf7 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] #solQuestionTitle,
+html[data-theme="dark"] .solution-question-heading {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-model-answer,
+html[data-theme="dark"] #solAnswerBody,
+html[data-theme="dark"] .ai-msg-body {
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer h1,
+html[data-theme="dark"] .ai-msg-body h1,
+html[data-theme="dark"] .gemini-h1 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-model-answer h2,
+html[data-theme="dark"] .ai-msg-body h2,
+html[data-theme="dark"] .gemini-h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-model-answer h3,
+html[data-theme="dark"] .ai-msg-body h3,
+html[data-theme="dark"] .gemini-h3 {
+  color: #93c5fd !important;
+}
+
+html[data-theme="dark"] .solution-model-answer h4,
+html[data-theme="dark"] .ai-msg-body h4,
+html[data-theme="dark"] .gemini-h4 {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer strong,
+html[data-theme="dark"] .solution-model-answer b,
+html[data-theme="dark"] .ai-msg-body strong,
+html[data-theme="dark"] .ai-msg-body b {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer p,
+html[data-theme="dark"] .ai-msg-body p {
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer ul,
+html[data-theme="dark"] .solution-model-answer ol,
+html[data-theme="dark"] .solution-model-answer li,
+html[data-theme="dark"] .ai-msg-body ul,
+html[data-theme="dark"] .ai-msg-body ol,
+html[data-theme="dark"] .ai-msg-body li,
+html[data-theme="dark"] .ai-msg-body .gemini-li {
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer hr,
+html[data-theme="dark"] .ai-msg-body hr,
+html[data-theme="dark"] .gemini-divider {
+  border-top-color: #243352 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer code,
+html[data-theme="dark"] .ai-msg-body code:not(pre code),
+html[data-theme="dark"] .gemini-inline-code {
+  background: #1e293b !important;
+  color: #93c5fd !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer pre,
+html[data-theme="dark"] .ai-msg-body pre,
+html[data-theme="dark"] .gemini-code-block {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .solution-model-answer .katex,
+html[data-theme="dark"] .solution-model-answer .katex-display,
+html[data-theme="dark"] .ai-msg-body .katex,
+html[data-theme="dark"] .ai-msg-body .katex-display,
+html[data-theme="dark"] #solutionModal .katex,
+html[data-theme="dark"] #solutionModal .katex-display {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #solutionModal table,
+html[data-theme="dark"] .solution-model-answer table,
+html[data-theme="dark"] .gemini-table,
+html[data-theme="dark"] .ai-msg-body table {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #solutionModal table th,
+html[data-theme="dark"] .solution-model-answer table th,
+html[data-theme="dark"] .gemini-table th,
+html[data-theme="dark"] .ai-msg-body table th {
+  background: #162238 !important;
+  color: #93c5fd !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] #solutionModal table td,
+html[data-theme="dark"] .solution-model-answer table td,
+html[data-theme="dark"] .gemini-table td,
+html[data-theme="dark"] .ai-msg-body table td {
+  background: #111a2e !important;
+  color: #e6edf7 !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] #solutionModal table tr:nth-child(even) td,
+html[data-theme="dark"] .solution-model-answer table tr:nth-child(even) td,
+html[data-theme="dark"] .gemini-table tr:nth-child(even) td,
+html[data-theme="dark"] .ai-msg-body table tr:nth-child(even) td {
+  background: #162238 !important;
+}
+
+html[data-theme="dark"] #solutionModal table td .katex,
+html[data-theme="dark"] #solutionModal table th .katex,
+html[data-theme="dark"] .solution-model-answer table td .katex,
+html[data-theme="dark"] .gemini-table td .katex,
+html[data-theme="dark"] .ai-msg-body table td .katex {
+  color: #ffffff !important;
+}
+
+/* 22.2 Question Cards Typography & Badges in Dark Mode */
+html[data-theme="dark"] .question-text-preview,
+html[data-theme="dark"] .question-text-content,
+html[data-theme="dark"] .q-card-text {
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .q-badge.topic {
+  background-color: #1e293b !important;
+  color: #93c5fd !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .q-badge.q-num {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .q-badge.part-b {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99, 102, 241, 0.4) !important;
+}
+
+html[data-theme="dark"] .q-badge.recurrence {
+  background-color: rgba(239, 68, 68, 0.18) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.35) !important;
+}
+
+/* 22.3 Mode Switch Tabs (Notes vs PYQs) */
+html[data-theme="dark"] .mode-tab-btn {
+  background-color: #162238 !important;
+  border: 1.5px solid #243352 !important;
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .mode-tab-btn:hover {
+  background-color: #1e2c47 !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .mode-tab-btn.active {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* 22.4 Bottom Footer & Subtle Contribute Buttons */
+html[data-theme="dark"] .bottom-footer {
+  background: #111a2e !important;
+  border: 1.5px solid #243352 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .attribution-text {
+  background-color: #111a2e !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .footer-rate-link {
+  background-color: #162238 !important;
+  border: 1.5px solid #243352 !important;
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .footer-rate-link:hover {
+  background-color: #1e2c47 !important;
+  border-color: #f59e0b !important;
+  color: #fde047 !important;
+}
+
+html[data-theme="dark"] .btn-contribute-subtle {
+  background-color: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-contribute-subtle:hover {
+  background-color: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-contribute-subtle i {
+  color: #60a5fa !important;
+}
+
+/* 22.5 WhatsApp Share / Contribution Modal */
+html[data-theme="dark"] .guideline-soft-banner {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .guideline-soft-lead {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .guideline-soft-sub {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .guideline-cta-box,
+html[data-theme="dark"] #warningModal .guideline-cta-box {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #confirmWarningBtn,
+html[data-theme="dark"] #warningModal .btn-confirm {
+  background: #16a34a !important;
+  border-color: #22c55e !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4) !important;
+}
+
+html[data-theme="dark"] #confirmWarningBtn:hover,
+html[data-theme="dark"] #warningModal .btn-confirm:hover {
+  background: #15803d !important;
+  border-color: #4ade80 !important;
+  color: #ffffff !important;
+}
+
+/* 22.6 Results Secondary Buttons (Back to Syllabus Hub) */
+html[data-theme="dark"] #resultsHomeBtn,
+html[data-theme="dark"] .btn-results-secondary {
+  background: #162238 !important;
+  border: 1.5px solid #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] #resultsHomeBtn:hover,
+html[data-theme="dark"] .btn-results-secondary:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* 22.7 PWA Install Prompts & Dialogs */
+html[data-theme="dark"] #pwaInstallBanner,
+html[data-theme="dark"] .pwa-install-dialog,
+html[data-theme="dark"] .pwa-install-banner,
+html[data-theme="dark"] .install-sheet-dialog {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  color: #e6edf7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .pwa-install-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pwa-install-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-dismiss,
+html[data-theme="dark"] .btn-pwa-later {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-dismiss:hover,
+html[data-theme="dark"] .btn-pwa-later:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
