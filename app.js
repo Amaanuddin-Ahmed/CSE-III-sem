@@ -1268,7 +1268,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     // Track unit open/collapsed state
     if (!state.expandedNotesUnits) {
-      state.expandedNotesUnits = { 1: true, 2: true, 3: true, 4: true, 5: true, 'multi': true };
+      state.expandedNotesUnits = {};
     }
 
     // Filter notes by exam scope:
@@ -1355,7 +1355,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       const uNotes = unitGroups[u] || [];
       if (uNotes.length === 0) return;
 
-      const isExpanded = state.expandedNotesUnits[u] !== false;
+      const isExpanded = state.notesChapterFilter !== 'all' ? true : Boolean(state.expandedNotesUnits[u]);
       const subChapters = (sub && sub.chapters) || {};
       const unitTitle = subChapters[u] || `Unit ${u}`;
 
@@ -1398,7 +1398,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     // Render Multi-Unit / Comprehensive Question Bank Accordion
     if (multiUnitNotes.length > 0 && state.notesChapterFilter === 'all') {
-      const isExpanded = state.expandedNotesUnits['multi'] !== false;
+      const isExpanded = Boolean(state.expandedNotesUnits['multi']);
       const card = document.createElement('div');
       card.className = 'notes-unit-accordion-card chapter-accordion-card' + (isExpanded ? ' open' : '');
       card.id = 'notesUnitAccordion-multi';
@@ -3373,10 +3373,13 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     // 1. Try KaTeX if loaded
     if (typeof window !== 'undefined' && window.katex && typeof window.katex.renderToString === 'function') {
       try {
-        return window.katex.renderToString(expr, {
+        const rendered = window.katex.renderToString(expr, {
           displayMode: isBlock,
           throwOnError: false
         });
+        if (rendered && !rendered.includes('katex-error')) {
+          return rendered;
+        }
       } catch (err) {
         console.warn('KaTeX render error, falling back to clean text math:', err);
       }
@@ -3442,7 +3445,71 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     return `<span class="gemini-math">${clean}</span>`;
   }
 
+  
+  function convertLatexArraysToHumanText(str) {
+    if (!str || typeof str !== 'string' || !str.includes('\\begin{array}')) return str;
+    return str.replace(/(\$\$)?\s*\\begin\{array\}[^}]*\}([\s\S]*?)\\end\{array\}\s*(\$\$)?/g, (match, d1, inner, d2) => {
+      // Check if table
+      if (inner.includes('\\times') || inner.includes('Vertex in') || inner.includes('|')) {
+        const rows = inner.split('\\\\').map(l => l.replace(/\\hline/g, '').trim()).filter(Boolean);
+        if (rows.length >= 2) {
+          const cleanRows = rows.map(r => r.split('&').map(c => c.replace(/\\text\{([^}]*)\}/g, '$1').replace(/\\times_?{?(\d+)}?/g, '×$1').replace(/\\times/g, '×').replace(/[\$\\]/g, '').trim()));
+          const maxCols = Math.max(...cleanRows.map(r => r.length));
+          cleanRows.forEach(r => { while (r.length < maxCols) r.push(''); });
+          const header = '| ' + cleanRows[0].join(' | ') + ' |';
+          const sep = '| ' + Array(maxCols).fill(':---:').join(' | ') + ' |';
+          const body = cleanRows.slice(1).map(r => '| ' + r.join(' | ') + ' |').join('\n');
+          return '\n\n' + header + '\n' + sep + '\n' + body + '\n\n';
+        }
+      }
+
+      // Arithmetic / aligned math calculation
+      const lines = inner.split('\\\\').map(l => l.trim()).filter(Boolean);
+      const rows = [];
+      const hasDividerBefore = new Set();
+      lines.forEach((l) => {
+        if (l.includes('\\hline')) {
+          hasDividerBefore.add(rows.length);
+          l = l.replace(/\\hline/g, '').trim();
+        }
+        if (!l) return;
+        const cells = l.split('&').map(c => {
+          return c
+            .replace(/\\text\{([^}]*)\}/g, '$1')
+            .replace(/\\mathbf\{([^}]*)\}/g, '$1')
+            .replace(/\\mathit\{([^}]*)\}/g, '$1')
+            .replace(/_\{?(\d+)\}?/g, '_$1')
+            .replace(/\\,/g, ' ')
+            .replace(/\\quad/g, ' ')
+            .replace(/[\$]/g, '')
+            .trim();
+        });
+        rows.push(cells);
+      });
+
+      if (!rows.length) return match;
+      const maxCols = Math.max(...rows.map(r => r.length));
+      const colWidths = Array(maxCols).fill(0);
+      rows.forEach(r => {
+        r.forEach((c, i) => { colWidths[i] = Math.max(colWidths[i], c.length); });
+      });
+
+      const out = [];
+      rows.forEach((r, idx) => {
+        if (hasDividerBefore.has(idx)) {
+          const len = colWidths.reduce((a, b) => a + b, 0) + 3 * (maxCols - 1);
+          out.push('-'.repeat(Math.max(len, 14)));
+        }
+        const formatted = r.map((c, i) => (i === 0 ? c.padStart(colWidths[i]) : c.padEnd(colWidths[i])));
+        out.push(formatted.join('   '));
+      });
+
+      return '\n\n```text\n' + out.join('\n') + '\n```\n\n';
+    });
+  }
+
   function formatGeminiResponse(rawText) {
+    rawText = convertLatexArraysToHumanText(rawText);
     if (!rawText) return '';
     let text = rawText.trim();
 

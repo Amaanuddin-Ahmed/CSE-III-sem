@@ -88,7 +88,11 @@
     } catch (e) {}
     if (!m) return;
 
-    if (toDark) setTheme(DARK);
+    if (toDark) {
+      setTheme(DARK);
+    } else {
+      setTheme(LIGHT, { skipAnimation: true });
+    }
 
     var red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (dlg && btn && !red) {
