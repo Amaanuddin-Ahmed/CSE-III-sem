@@ -481,7 +481,9 @@ Instructions for complete examination answer:
            text.includes('Core Principle & Formal Definitions') ||
            text.includes('State the standard mathematical definitions') ||
            text.includes('State boundary conditions or edge cases') ||
-           text.includes('Step 1: Establish the given mathematical');
+           text.includes('Step 1: Establish the given mathematical') ||
+           text.includes('Core Engineering Definition & Architectural Principle') ||
+           text.includes('Adhering to structured architectural design ensures optimal throughput');
   }
 
   // Purge any stale generic fallback solutions from localStorage immediately
@@ -520,12 +522,13 @@ Instructions for complete examination answer:
     const subSolutions = solutionsCache[subId] || {};
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
     
-    // Strict exact match only - ensure not stale template
-    if (subSolutions[normKey] && !isStaleFallbackSolution(subSolutions[normKey].answerMd)) {
-      return subSolutions[normKey];
-    }
-    if (subSolutions[q.id] && !isStaleFallbackSolution(subSolutions[q.id].answerMd)) {
-      return subSolutions[q.id];
+    // Support both preSolution object with .answerMd and direct markdown strings
+    const candidate = subSolutions[normKey] || subSolutions[q.id];
+    if (candidate) {
+      const text = typeof candidate === 'string' ? candidate : (candidate.answerMd || candidate.solution || candidate.answer || '');
+      if (text && !isStaleFallbackSolution(text)) {
+        return { answerMd: text, question: q.question, subjectId: q.subjectId };
+      }
     }
 
     // Check localStorage cache for previously AI-generated answers
@@ -533,8 +536,9 @@ Instructions for complete examination answer:
       const localStored = localStorage.getItem('mgit_sol_' + normKey);
       if (localStored) {
         const parsed = JSON.parse(localStored);
-        if (parsed && parsed.answerMd && !isStaleFallbackSolution(parsed.answerMd)) {
-          return parsed;
+        const text = parsed ? (typeof parsed === 'string' ? parsed : (parsed.answerMd || parsed.solution || parsed.answer || '')) : '';
+        if (text && !isStaleFallbackSolution(text)) {
+          return { answerMd: text, question: q.question, subjectId: q.subjectId };
         } else {
           localStorage.removeItem('mgit_sol_' + normKey);
         }
@@ -580,14 +584,8 @@ Instructions for complete examination answer:
     const askDeeperBtn = document.getElementById('solAskAiDeeperBtn');
     if (askDeeperBtn) {
       askDeeperBtn.onclick = () => {
-        const promptText = buildAskWithAiPrompt(q);
         closeSolutionModal();
-        openGeminiModal();
-        if (el.geminiQueryInput) {
-          el.geminiQueryInput.value = promptText;
-          el.geminiQueryInput.dispatchEvent(new Event('input'));
-          el.geminiQueryInput.focus();
-        }
+        openAskWithModal(q);
       };
     }
 
@@ -602,8 +600,9 @@ Instructions for complete examination answer:
       console.warn('[Solution Library] Lookup error:', err);
     }
 
-    if (preSolution && preSolution.answerMd && !isStaleFallbackSolution(preSolution.answerMd)) {
-      if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(preSolution.answerMd);
+    const solutionText = preSolution ? (preSolution.answerMd || (typeof preSolution === 'string' ? preSolution : '')) : '';
+    if (solutionText && !isStaleFallbackSolution(solutionText)) {
+      if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(solutionText);
       if (statusChip) statusChip.textContent = 'Model Academic Solution';
       return;
     }

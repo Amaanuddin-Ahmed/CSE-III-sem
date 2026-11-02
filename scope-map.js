@@ -57,7 +57,7 @@ const SCOPE_MAP = {
       mid1Description: 'Algebraic Systems, Semigroups and Monoids',
       mid2Description: 'Lattices as Partially Ordered Sets and Boolean Algebra',
       mid1Keywords: ['algebraic system', 'algebraic structure', 'semigroup', 'semi group', 'monoid', 'submonoid', 'sub monoid', 'subsemigroup', 'closure', 'associative', 'binary operation', 'identity element', 'identity and inverse', 'inverse element', 'subalgebra', 'direct product', 'homomorphism', 'isomorphism', 'forms a group', 'group under', 'abelian group', 'define a group', 'multiplicative group', 'in any group', 'order of every element', 'order of an element', 'subgroup', 'cyclic group', 'coset', 'lagrange', 'normal subgroup'],
-      mid2Keywords: ['lattice', 'sublattice', 'poset', 'partially ordered', 'partial order', 'boolean algebra', 'boolean function', 'boolean expression', 'boolean simplification', 'bounded lattice', 'distributive lattice', 'lattice operations', 'complement', 'lub', 'glb', 'join and meet', 'absorption']
+      mid2Keywords: ['lattice', 'sublattice', 'poset', 'partially ordered', 'partial order', 'boolean algebra', 'boolean function', 'boolean expression', 'boolean simplification', 'bounded lattice', 'distributive lattice', 'lattice operations', 'complement', 'lub', 'glb', 'join and meet', 'absorption', 'hasse', 'induction', 'inductive', 'well-ordering', 'pigeonhole', 'pigeon hole', 'pigeon', 'permutation', 'combination', 'combinatorics', 'recurrence', 'generating function', 'binomial', 'factorial', 'distinct letters', 'words can be formed', 'arranged', 'selection', 'r-combination', 'inclusion-exclusion', 'inclusion exclusion', 'ways', 'coefficient', 'co-efficient', 'committee', 'expansion', 'recursive', 'how many', 'digits', 'digit', 'numbers', 'subset', 'power set', 'middle term', 'mid term', 'prove that', 'positive integer', 'stamps', 'primes']
     },
     COA: {
       subject: 'Computer Organization & Architecture',
@@ -65,7 +65,7 @@ const SCOPE_MAP = {
       mid1Description: 'Register Transfer Language, Bus and Memory Transfers, Arithmetic/Logic/Shift Micro-operations and the Arithmetic Logic Shift Unit',
       mid2Description: 'Basic Computer Organization and Design: Instruction Codes, Computer Registers, Instruction Cycle, Memory-Reference Instructions, I/O and Interrupt',
       mid1Keywords: ['register transfer', 'rtl', 'bus transfer', 'memory transfer', 'bus and memory', 'micro operation', 'microoperation', 'micro-operation', 'arithmetic micro', 'logic micro', 'shift micro', 'arithmetic logic shift', 'alsu'],
-      mid2Keywords: ['instruction code', 'computer register', 'instruction cycle', 'memory reference', 'timing and control', 'input output', 'input/output', 'interrupt', 'basic computer organization', 'program counter', 'instruction register', 'bidirectional input', 'enable/load']
+      mid2Keywords: ['instruction code', 'computer register', 'instruction cycle', 'memory reference', 'timing and control', 'input output', 'input/output', 'interrupt', 'basic computer organization', 'program counter', 'instruction register', 'bidirectional input', 'enable/load', 'booth', 'multiplication', 'multiplier', 'division', 'restoring', 'non restoring', 'non-restoring', 'floating point', 'floating-point', 'fixed point', 'fixed-point', 'complement', 'compliment', 'subtraction', 'subration', 'addition', 'decimal arithmetic', 'bcd', 'normalization', 'mantissa', 'exponent', 'signed', 'unsigned', 'overflow', 'underflow', 'alu', 'control memory', 'micro programmed', 'hardwired', 'sequencing', 'binary', 'flowchart', 'hardware']
     },
     OOPJ: {
       subject: 'Object-Oriented Programming through Java',
@@ -73,7 +73,7 @@ const SCOPE_MAP = {
       mid1Description: 'Exception Handling: try, catch, throw, throws and finally; Built-in and Custom Exception Subclasses',
       mid2Description: 'Multithreading: Thread Life Cycle, Priorities, Synchronization, Inter-thread Communication, Thread Groups and Daemon Threads',
       mid1Keywords: ['exception', 'try', 'catch', 'finally', 'throw', 'throws', 'throwable', 'checked exception', 'unchecked exception', 'custom exception', 'user-defined exception', 'resumptive', 'termination or resumptive'],
-      mid2Keywords: ['thread', 'multithreading', 'multitasking', 'lightweight process', 'process-based', 'process based', 'runnable', 'synchronization', 'synchronized', 'deadlock', 'inter-thread', 'inter thread', 'wait', 'notify', 'notifyall', 'thread priority', 'life cycle', 'daemon']
+      mid2Keywords: ['thread', 'multithreading', 'multitasking', 'lightweight process', 'process-based', 'process based', 'runnable', 'synchronization', 'synchronized', 'deadlock', 'inter-thread', 'inter thread', 'wait', 'notify', 'notifyall', 'thread priority', 'life cycle', 'daemon', 'stream', 'streams', 'byte stream', 'character stream', 'string', 'stringbuffer', 'stringbuilder', 'console', 'enumeration', 'enumerations', 'enum', 'generic', 'generics', 'autoboxing', 'unboxing', 'collection', 'collections', 'arraylist', 'hashmap', 'vector', 'stack', 'queue', 'iterator']
     },
     DBMS: {
       subject: 'Database Management Systems',
@@ -194,6 +194,9 @@ function matchUnit3Mid1(item) {
 }
 
 function matchUnit3Mid2(item) {
+  if (!item) return false;
+  const subCode = item.subjectId || item.subject || '';
+  if (subCode === 'COA') return true; // All 92 Unit 3 questions in COA belong to Mid-2 computer arithmetic & control bank
   return classifyUnit3(item) === 'mid2';
 }
 
