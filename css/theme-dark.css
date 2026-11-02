@@ -1633,7 +1633,7 @@ html[data-theme="dark"] .fc-counter {
   color: #94a3b8 !important;
 }
 
-/* Practice Session Results View */
+/* Practice Session Results View & Actions */
 html[data-theme="dark"] .session-results-card {
   background: #111a2e !important;
   border-color: #243352 !important;
@@ -1661,10 +1661,80 @@ html[data-theme="dark"] .result-stat-box .stat-lbl {
   color: #94a3b8 !important;
 }
 
+html[data-theme="dark"] .btn-results-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  border: 1px solid rgba(168, 85, 247, 0.4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4) !important;
+}
+
+html[data-theme="dark"] .btn-results-primary:hover {
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5) !important;
+}
+
+html[data-theme="dark"] .btn-results-secondary {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .btn-results-secondary:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* End-of-Chapter Celebration Modal */
 html[data-theme="dark"] .celebration-modal-dialog {
   background: #111a2e !important;
-  border-color: #243352 !important;
+  border: 1.5px solid #243352 !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7) !important;
   color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .celebration-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .celebration-sub {
+  color: #c084fc !important;
+}
+
+html[data-theme="dark"] .celebration-meta {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4) !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-primary:hover {
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.55) !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-notes {
+  background: #162238 !important;
+  border: 1.5px solid #a855f7 !important;
+  color: #c084fc !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-notes:hover {
+  background: rgba(168, 85, 247, 0.2) !important;
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-secondary {
+  background: transparent !important;
+  border: none !important;
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .btn-celebrate-secondary:hover {
+  color: #ffffff !important;
 }
 
 html[data-theme="dark"] .toast-msg {
@@ -1975,4 +2045,510 @@ html[data-theme="dark"] .progress-empty-state {
   .dark-intro-dialog, .dark-intro-stage, .stage-sun-icon, .stage-moon-icon, .stage-stars .star, .mockup-bar, .mockup-line, .theme-btn-pulse {
     animation: none !important;
   }
+}
+
+/* ==========================================================================
+   19. Deep Scan Site-Wide Dark Overrides (Modals, Buttons, Practice, & PWA)
+   ========================================================================== */
+
+/* 19.1 Global Primary Action Buttons (Resolves white-on-white button contrast) */
+html[data-theme="dark"] .btn-action-primary,
+html[data-theme="dark"] .filter-panel-actions .btn-action-primary,
+html[data-theme="dark"] .handoff-actions .btn-action-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  border: 1px solid #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+}
+
+html[data-theme="dark"] .btn-action-primary:hover,
+html[data-theme="dark"] .filter-panel-actions .btn-action-primary:hover,
+html[data-theme="dark"] .handoff-actions .btn-action-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+  border-color: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-secondary-flat {
+  color: #94a3b8 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .btn-secondary-flat:hover {
+  background-color: #162238 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .modal-badge {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .modal-badge.secondary {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99, 102, 241, 0.4) !important;
+}
+
+html[data-theme="dark"] .modal-badge.tertiary {
+  background-color: #162238 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid #243352 !important;
+}
+
+/* 19.2 Practice Mode Selector Modal (#practiceSelectorModal) */
+html[data-theme="dark"] .practice-mode-card {
+  background: #111a2e !important;
+  border: 1.5px solid #243352 !important;
+}
+
+html[data-theme="dark"] .practice-mode-card:hover,
+html[data-theme="dark"] .practice-mode-card.active {
+  background: #162238 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25) !important;
+}
+
+html[data-theme="dark"] .practice-mode-name {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .practice-mode-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .practice-sub-progress {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #86efac !important;
+}
+
+html[data-theme="dark"] .subject-scope-units-badge {
+  background: rgba(99, 102, 241, 0.2) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  color: #a5b4fc !important;
+}
+
+html[data-theme="dark"] .practice-subject-card {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .practice-subject-card:hover {
+  background: #162238 !important;
+  border-color: #6366f1 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .practice-subject-name {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .practice-subject-code {
+  color: #94a3b8 !important;
+}
+
+/* 19.3 Fill-in-the-Blanks Quiz Mode */
+html[data-theme="dark"] .fib-input {
+  background: #162238 !important;
+  border-color: #243352 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .fib-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+html[data-theme="dark"] .fib-input.correct {
+  background: rgba(34, 197, 94, 0.15) !important;
+  border-color: #22c55e !important;
+  color: #86efac !important;
+}
+
+html[data-theme="dark"] .fib-input.wrong {
+  background: rgba(239, 68, 68, 0.15) !important;
+  border-color: #ef4444 !important;
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .btn-fib-submit {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .btn-fib-submit:hover {
+  background: #1d4ed8 !important;
+}
+
+/* 19.4 Notes Reader Modal Missing Elements */
+html[data-theme="dark"] .notes-reader-warning {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border-bottom-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .notes-reader-footer {
+  background: #162238 !important;
+  border-top-color: #243352 !important;
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .notes-reader-top {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+  color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .notes-reader-top:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .notes-reader-show-ocr {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .notes-reader-show-ocr:hover {
+  background: rgba(245, 158, 11, 0.25) !important;
+  border-color: #f59e0b !important;
+}
+
+/* 19.5 Onboarding Tour Tooltip */
+html[data-theme="dark"] .tour-tooltip {
+  background: #111a2e !important;
+  border: 1.5px solid #243352 !important;
+  color: #e6edf7 !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .tour-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .tour-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .tour-step-badge {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  color: #93c5fd !important;
+}
+
+html[data-theme="dark"] .tour-close-btn {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .tour-close-btn:hover {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-tour-secondary {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-tour-secondary:hover:not(:disabled) {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-tour-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+/* 19.6 PWA Install Prompt Bottom Sheet */
+html[data-theme="dark"] .pwa-install-prompt {
+  background: rgba(17, 26, 46, 0.95) !important;
+  border: 1px solid #243352 !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .pwa-prompt-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pwa-prompt-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-later {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-later:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-pwa-close {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-close:hover {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-pwa-install {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+/* 19.7 Question Info Modal Tips & Context */
+html[data-theme="dark"] .modal-tip-box {
+  background-color: rgba(234, 179, 8, 0.12) !important;
+  border: 1px solid rgba(234, 179, 8, 0.35) !important;
+}
+
+html[data-theme="dark"] .tip-header {
+  color: #fde047 !important;
+}
+
+html[data-theme="dark"] .tip-content {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .guideline-lead {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  color: #93c5fd !important;
+}
+
+/* 19.8 Solution Modal Missing State & Paper Notices */
+html[data-theme="dark"] .sol-missing-box {
+  background: #111a2e !important;
+  border: 1px dashed #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .sol-missing-icon {
+  background: rgba(59, 130, 246, 0.15) !important;
+  color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .sol-missing-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .sol-paper-notice {
+  background: rgba(59, 130, 246, 0.12) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  color: #93c5fd !important;
+}
+
+/* 19.9 Question Row Action Buttons & Badges */
+html[data-theme="dark"] .btn-q-info {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-q-info:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-q-ai {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  color: #c084fc !important;
+}
+
+html[data-theme="dark"] .btn-q-ai:hover {
+  background: rgba(168, 85, 247, 0.25) !important;
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-card-tips {
+  background-color: #162238 !important;
+  color: #cbd5e1 !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .btn-card-tips:hover {
+  background-color: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-card-ai {
+  background: linear-gradient(135deg, #1e40af 0%, #4338ca 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .btn-card-sol {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .direct-pdf-badge {
+  background-color: #162238 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid #243352 !important;
+}
+
+/* 19.10 PYQ Filters Panel & Filter Pills */
+html[data-theme="dark"] .year-pill-btn {
+  background-color: #111a2e !important;
+  color: #cbd5e1 !important;
+  border: 1.5px solid #243352 !important;
+}
+
+html[data-theme="dark"] .year-pill-btn:hover,
+html[data-theme="dark"] .year-pill-btn.active {
+  background-color: #162238 !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+}
+
+html[data-theme="dark"] .repeated-filter-btn {
+  background-color: rgba(225, 29, 72, 0.15) !important;
+  border-color: rgba(225, 29, 72, 0.35) !important;
+  color: #fda4af !important;
+}
+
+html[data-theme="dark"] .repeated-filter-btn:hover,
+html[data-theme="dark"] .repeated-filter-btn.active {
+  background-color: rgba(225, 29, 72, 0.25) !important;
+  border-color: #f43f5e !important;
+  color: #ffffff !important;
+}
+
+/* 19.11 Rating Modal & AI Fallback Buttons */
+html[data-theme="dark"] .rating-btn-secondary {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .rating-btn-secondary:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .ai-fallback-copy-btn {
+  background: #162238 !important;
+  color: #60a5fa !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .ai-fallback-copy-btn:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .ai-fallback-btn {
+  border: 1px solid #243352 !important;
+}
+
+/* 19.12 Mode Switches, Part Buttons & Quiz Controls */
+html[data-theme="dark"] .mode-switch-btn,
+html[data-theme="dark"] .part-buttons,
+html[data-theme="dark"] .part-btn,
+html[data-theme="dark"] .part-segmented-btn {
+  background-color: #111a2e !important;
+  border-color: #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .mode-switch-btn:hover,
+html[data-theme="dark"] .mode-switch-btn.active,
+html[data-theme="dark"] .part-btn:hover,
+html[data-theme="dark"] .part-btn.active {
+  background-color: #162238 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .note-summary-kicker {
+  background: rgba(99, 102, 241, 0.2) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  color: #a5b4fc !important;
+}
+
+html[data-theme="dark"] .note-summary-limited {
+  background: rgba(245, 158, 11, 0.12) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fde68a !important;
+}
+
+html[data-theme="dark"] .note-summary-mustknow {
+  background: rgba(234, 179, 8, 0.12) !important;
+  border-color: rgba(234, 179, 8, 0.3) !important;
+  color: #fde047 !important;
+}
+
+html[data-theme="dark"] .btn-quiz-nav {
+  background: #162238 !important;
+  color: #cbd5e1 !important;
+  border: 1.5px solid #243352 !important;
+}
+
+html[data-theme="dark"] .btn-quiz-nav:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .btn-session-next {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html[data-theme="dark"] .practice-fun-btn {
+  background: #162238 !important;
+  color: #a5b4fc !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .btn-progress-shortcut {
+  background: #162238 !important;
+  color: #60a5fa !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .btn-change-mode {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+html[data-theme="dark"] .compact-scroll-window {
+  background: #111a2e !important;
+  border-color: #243352 !important;
+}
+
+html[data-theme="dark"] .rt-inline-code {
+  background: #162238 !important;
+  color: #93c5fd !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .pyq-count-banner {
+  background-color: #111a2e !important;
+  border-color: #243352 !important;
+  color: #86efac !important;
+}
+
+html[data-theme="dark"] .audit-row-flag {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
 }
