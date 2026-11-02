@@ -44,7 +44,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "pyqsUrl": "https://drive.google.com/drive/folders/1r6_ozXzyg84zHCji99-cAujgoie1S7IS",
     "paperCount": 17,
-    "notesCount": 19,
+    "notesCount": 28,
     "chapters": {
       "1": "Boolean Algebra, Logic Gates, Data Representation & Digital Computers",
       "2": "Combinational & Sequential Logic Design",
@@ -849,6 +849,132 @@ const NOTES_DATA = [
     "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "description": "Boolean algebra, logic gates, data representation, binary storage and registers, and the basic digital computer."
   }
+,
+{
+  "id": "NOTE-COA-20",
+  "subjectId": "COA",
+  "chapter": 3,
+  "title": "COA Unit 3: Basic Computer Organization & RTL",
+  "fileName": "COA Unit 3 - Basic Computer Organization.pdf",
+  "fileSize": "4.2 MB",
+  "driveFileId": "1xhpvC4T0M2F3_uN1zsav9yGsm5PQafQP",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Comprehensive Unit 3 notes covering Basic Computer Organization, Instruction Codes, Registers, Timing & Control, Instruction Cycle, Memory-Reference Instructions, and Interrupts."
+},
+{
+  "id": "NOTE-COA-21",
+  "subjectId": "COA",
+  "chapter": 4,
+  "title": "COA Unit 4: Microprogrammed Control, CPU & Arithmetic",
+  "fileName": "COA Unit 4 - Microprogrammed Control, CPU & Arithmetic.pdf",
+  "fileSize": "5.1 MB",
+  "driveFileId": "1WruGyxZOkj6CRDu_3hLEyfCZr124wlkY",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Complete Unit 4 guide covering Microprogrammed Control (control memory, address sequencing), Central Processing Unit (general register organization, addressing modes), and Computer Arithmetic (Booth's multiplication & division)."
+},
+{
+  "id": "NOTE-COA-22",
+  "subjectId": "COA",
+  "chapter": 5,
+  "title": "COA Unit 5: I/O Organization & Memory Hierarchy",
+  "fileName": "COA Unit 5 - IO & Memory Organization.pdf",
+  "fileSize": "4.8 MB",
+  "driveFileId": "1sSN9DCdAt-nHofelFY60ORDB2MPLQaOp",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Complete Unit 5 notes covering Input-Output Organization (peripheral devices, interface, DMA, priority interrupts) and Memory Organization (hierarchy, cache mapping, virtual memory, cache coherence)."
+},
+{
+  "id": "NOTE-COA-23",
+  "subjectId": "COA",
+  "chapter": 5,
+  "title": "COA Unit 5: Input-Output Organization (Detailed Class Notes)",
+  "fileName": "Input Output Organization.pdf",
+  "fileSize": "2.4 MB",
+  "driveFileId": "18dWWsJwuNHhkeiMqM6YDTi_2LCfZ7fsN",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Detailed lecture notes dedicated to Peripheral Devices, I/O Interface Units, Handshaking/Strobe Asynchronous Transfer, Daisy Chain Priority Interrupt, and Direct Memory Access (DMA)."
+},
+{
+  "id": "NOTE-COA-24",
+  "subjectId": "COA",
+  "chapter": 5,
+  "title": "COA Unit 5: Memory Organization (Classroom PPT)",
+  "fileName": "Memory_Organization_Class_PPT.pdf",
+  "fileSize": "3.2 MB",
+  "driveFileId": "10MPj03F-qgsdpkw-YGtLk6HERmg5Se3j",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Classroom slide deck covering Memory Hierarchy, Main Memory RAM/ROM chips, Associative Memory hardware, Cache Memory Direct/Associative/Set-Associative Mapping, and Paging."
+},
+{
+  "id": "NOTE-COA-25",
+  "subjectId": "COA",
+  "chapter": 3,
+  "chapters": [
+    3,
+    4,
+    5
+  ],
+  "title": "COA Mid-2 Assignment 2 & Model Questions",
+  "fileName": "COA ASSIGNMENT 2.pdf",
+  "fileSize": "1.2 MB",
+  "driveFileId": "16ZpwA-M20ubZXURbjleGoTPTA52TmlmS",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Official MGIT Mid-2 Assignment 2 covering high-yield long and short numerical and analytical questions from Units 3, 4, and 5 with step-by-step model solutions."
+},
+{
+  "id": "NOTE-COA-26",
+  "subjectId": "COA",
+  "chapter": 3,
+  "chapters": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "title": "COA Unit-wise Question Bank with Answers (Units 1\u20135)",
+  "fileName": "COA-Unitwise Question Bank with Answers..pdf",
+  "fileSize": "6.5 MB",
+  "driveFileId": "11NPKrShqUBi80IeyziAgL2Mqvutgi2qD",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Comprehensive university question bank containing previous examination questions organized unit-by-unit (Units 1 to 5) with model university exam answers and diagrams."
+},
+{
+  "id": "NOTE-COA-27",
+  "subjectId": "COA",
+  "chapter": 4,
+  "chapters": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "title": "COA Complete Questions Bank (Units 1\u20135)",
+  "fileName": "COA Complete questions.PDF",
+  "fileSize": "2.8 MB",
+  "driveFileId": "1jmdCc6ovYAbW5OviNf2tCxSSzMofQvxw",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Master compilation of external university and mid-exam questions across all five units for comprehensive practice and revision."
+},
+{
+  "id": "NOTE-COA-28",
+  "subjectId": "COA",
+  "chapter": 5,
+  "chapters": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "title": "COA Comprehensive Question Bank (Short & Long)",
+  "fileName": "COA qstn bank.PDF",
+  "fileSize": "3.4 MB",
+  "driveFileId": "1_UgGuGEsdpZsUobfc9MKONgZM2Ru2GXG",
+  "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+  "description": "Question bank covering two-mark and five-mark questions with answers across syllabus units for rapid exam preparation."
+}
 ];
 
 const QUESTIONS_DATABASE = [
