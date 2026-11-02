@@ -43,9 +43,11 @@
         var params = new URLSearchParams(window.location.search);
         if (params.get('theme') === 'reset') {
           localStorage.removeItem('mgit_theme');
+          localStorage.removeItem('mgit-theme');
           localStorage.removeItem('mgit_dark_intro_seen');
+          localStorage.removeItem('mgit-dark-intro');
         }
-        var saved = localStorage.getItem('mgit_theme');
+        var saved = localStorage.getItem('mgit_theme') || localStorage.getItem('mgit-theme');
         if (saved === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
           var meta = document.querySelector('meta[name="theme-color"]');
