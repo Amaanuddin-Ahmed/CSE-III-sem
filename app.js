@@ -580,10 +580,14 @@ Instructions for complete examination answer:
     const askDeeperBtn = document.getElementById('solAskAiDeeperBtn');
     if (askDeeperBtn) {
       askDeeperBtn.onclick = () => {
-        pendingSolutionContext = (bodyEl ? bodyEl.innerText : '').slice(0, 2400);
+        const promptText = buildAskWithAiPrompt(q);
         closeSolutionModal();
-        openAskWithModal(q);
-        pendingSolutionContext = '';
+        openGeminiModal();
+        if (el.geminiQueryInput) {
+          el.geminiQueryInput.value = promptText;
+          el.geminiQueryInput.dispatchEvent(new Event('input'));
+          el.geminiQueryInput.focus();
+        }
       };
     }
 

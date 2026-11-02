@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.02-dark-mode-5';
+const CACHE_NAME = 'mgit-hub-v2026.11.02-dark-mode-6';
 
 const STATIC_ASSETS = [
   './',

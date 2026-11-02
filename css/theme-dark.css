@@ -2552,3 +2552,276 @@ html[data-theme="dark"] .audit-row-flag {
   background-color: rgba(245, 158, 11, 0.12) !important;
   border-color: rgba(245, 158, 11, 0.3) !important;
 }
+
+/* ==========================================================================
+   20. Targeted User Fixes (AI Window, Solution Button, Tables, Notes & WhatsApp)
+   ========================================================================== */
+
+/* 20.1 Glass Panel Dark Token Overrides (Fixes PWA Modal & Translucent White Boxes) */
+html[data-theme="dark"] {
+  --glass-surface: rgba(17, 26, 46, 0.85);
+  --glass-surface-hover: rgba(22, 34, 56, 0.95);
+  --glass-surface-card: rgba(17, 26, 46, 0.92);
+  --glass-border: #243352;
+  --glass-border-subtle: #1e2c47;
+  --glass-shadow: 0 14px 36px -6px rgba(0, 0, 0, 0.5);
+  --glass-shadow-hover: 0 20px 42px -6px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .glass-panel {
+  background: rgba(17, 26, 46, 0.92) !important;
+  border-color: #243352 !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 20.2 PWA Prompt Dark Overrides (Fixes Attachment 2) */
+html[data-theme="dark"] .pwa-install-prompt,
+html[data-theme="dark"] .pwa-install-prompt.glass-panel {
+  background: #111a2e !important;
+  border: 1.5px solid #243352 !important;
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.7) !important;
+}
+
+html[data-theme="dark"] .pwa-prompt-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .pwa-prompt-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-later {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-pwa-later:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* 20.3 WhatsApp & Contribution Modals (Fixes Attachment 1) */
+html[data-theme="dark"] .guideline-soft-banner {
+  background-color: #111a2e !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .guideline-soft-lead {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .guideline-soft-sub {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .guideline-soft-note {
+  background-color: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .guideline-soft-note strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #agreeContribBtn,
+html[data-theme="dark"] .modal-footer-buttons .btn-action-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* 20.4 AI Window Suggestions Background (Fixes Attachment 4) */
+html[data-theme="dark"] .gemini-suggestions-container,
+html[data-theme="dark"] .gemini-suggestions-scroll-box,
+html[data-theme="dark"] .compact-scroll-window,
+html[data-theme="dark"] #geminiModal .gemini-suggestions-container,
+html[data-theme="dark"] #geminiModal .gemini-suggestions-scroll-box,
+html[data-theme="dark"] #geminiModal .compact-scroll-window {
+  background: #111a2e !important;
+  border: 1.5px solid #243352 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+html[data-theme="dark"] .btn-toggle-suggestions,
+html[data-theme="dark"] #geminiModal .btn-toggle-suggestions {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .btn-toggle-suggestions:hover,
+html[data-theme="dark"] #geminiModal .btn-toggle-suggestions:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .compact-scroll-window .gemini-prompt-card,
+html[data-theme="dark"] #geminiModal .compact-scroll-window .gemini-prompt-card {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+}
+
+html[data-theme="dark"] .compact-scroll-window .gemini-prompt-card:hover,
+html[data-theme="dark"] #geminiModal .compact-scroll-window .gemini-prompt-card:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  transform: translateY(-1px) !important;
+}
+
+html[data-theme="dark"] .compact-scroll-window .card-text strong,
+html[data-theme="dark"] #geminiModal .compact-scroll-window .card-text strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .compact-scroll-window .card-text span,
+html[data-theme="dark"] #geminiModal .compact-scroll-window .card-text span {
+  color: #94a3b8 !important;
+}
+
+/* 20.5 Solution Modal Tables & Verification Tables (Fixes Attachment 3) */
+html[data-theme="dark"] .gemini-table-wrapper,
+html[data-theme="dark"] .ai-msg-body .gemini-table-wrapper,
+html[data-theme="dark"] #solutionModal .gemini-table-wrapper {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .gemini-table,
+html[data-theme="dark"] .ai-msg-body table,
+html[data-theme="dark"] #solutionModal table {
+  background: #111a2e !important;
+  color: #e6edf7 !important;
+}
+
+html[data-theme="dark"] .gemini-table th,
+html[data-theme="dark"] .ai-msg-body th,
+html[data-theme="dark"] #solutionModal table th {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #60a5fa !important;
+}
+
+html[data-theme="dark"] .gemini-table td,
+html[data-theme="dark"] .ai-msg-body td,
+html[data-theme="dark"] #solutionModal table td {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .ai-msg-body tr:nth-child(even) td,
+html[data-theme="dark"] .gemini-table tr:nth-child(even) td,
+html[data-theme="dark"] #solutionModal table tr:nth-child(even) td {
+  background: #141f36 !important;
+}
+
+html[data-theme="dark"] .gemini-table th:first-child,
+html[data-theme="dark"] .gemini-table td:first-child,
+html[data-theme="dark"] #geminiModal .ai-msg-body table th:first-child,
+html[data-theme="dark"] #geminiModal .ai-msg-body table td:first-child,
+html[data-theme="dark"] #solutionModal .gemini-table th:first-child,
+html[data-theme="dark"] #solutionModal .gemini-table td:first-child {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+html[data-theme="dark"] .gemini-table td .katex,
+html[data-theme="dark"] .gemini-table th .katex,
+html[data-theme="dark"] .ai-msg-body table .katex,
+html[data-theme="dark"] #solutionModal table .katex {
+  color: #ffffff !important;
+}
+
+/* 20.6 Notes Reader High-Yield Summary Hero Card (Fixes Attachment 5) */
+html[data-theme="dark"] .note-summary-hero {
+  background: linear-gradient(135deg, #162238 0%, #111a2e 100%) !important;
+  border: 1px solid #243352 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .note-summary-kicker {
+  background: rgba(99, 102, 241, 0.2) !important;
+  border: 1px solid rgba(99, 102, 241, 0.4) !important;
+  color: #a5b4fc !important;
+}
+
+html[data-theme="dark"] .note-summary-hero h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .note-summary-hero p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .note-summary-meta {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .note-summary-meta span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .note-summary-topic {
+  background: #111a2e !important;
+  border: 1px solid #243352 !important;
+  border-left: 5px solid var(--topic-accent) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+html[data-theme="dark"] .note-summary-topic p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .note-summary-topic ul {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .note-summary-topic li {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .note-summary-disclaimer {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .notes-reader-footer-info {
+  color: #94a3b8 !important;
+}
+
+/* 20.7 Solution Modal "Still have doubts? Ask with AI" Button Styling */
+html[data-theme="dark"] .sol-ask-ai-btn,
+html[data-theme="dark"] #solAskAiDeeperBtn {
+  background: linear-gradient(135deg, #1e40af 0%, #4338ca 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4) !important;
+}
+
+html[data-theme="dark"] .sol-ask-ai-btn:hover,
+html[data-theme="dark"] #solAskAiDeeperBtn:hover {
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] #solCloseBtn {
+  background: #162238 !important;
+  border: 1px solid #243352 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] #solCloseBtn:hover {
+  background: #1e2c47 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .solution-actions-row {
+  border-top-color: #243352 !important;
+}
