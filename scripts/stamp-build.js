@@ -25,7 +25,8 @@ function shortHash() {
 }
 
 const hash = shortHash();
-const version = `v2026.11.01-${hash}`;
+const today = new Date().toISOString().slice(0, 10).replace(/-/g, '.');
+const version = `v${today}-${hash}`;
 
 // Update sw.js cache name
 const swPath = path.join(root, 'sw.js');
