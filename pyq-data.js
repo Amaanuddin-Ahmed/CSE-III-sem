@@ -65,7 +65,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
     "pyqsUrl": "https://drive.google.com/drive/folders/16QBJQtBuAzWcczlPRReXgeAPXzd0E3Ab",
     "paperCount": 20,
-    "notesCount": 14,
+    "notesCount": 19,
     "chapters": {
       "1": "Object-Oriented Thinking & Java Basics",
       "2": "Inheritance, Packages & Interfaces",
@@ -259,12 +259,12 @@ const NOTES_DATA = [
     "id": "NOTE-OOPJ-01",
     "subjectId": "OOPJ",
     "chapter": 1,
-    "title": "Java Unit 1: OOP Concepts & Language Basics",
+    "title": "Java Unit 1: OOP Concepts, Java Evolution, JVM & Basics",
     "fileName": "unit-1.pdf",
     "fileSize": "1.1 MB",
     "driveFileId": "1lQqinMb9mD3KM_7UONhkY8MR1RoUvFsk",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "JVM architecture, bytecode execution, primitive types, operators, and control flow fundamentals."
+    "description": "Comprehensive faculty lecture notes by Vedavathi Kotagiri covering OOP paradigms, Java history, JVM architecture, bytecode verification, data types, type conversions, and control flow."
   },
   {
     "id": "NOTE-OOPJ-02",
@@ -275,18 +275,18 @@ const NOTES_DATA = [
     "fileSize": "1.2 MB",
     "driveFileId": "1HOofkYifE4QlLHAtM98HxCGO1Z2HqyCX",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Solved Unit 1 2-mark and 5-mark university exam questions with step-by-step solutions."
+    "description": "Official MGIT CSE question bank with model solutions covering 1-mark definitions, JVM component questions, and 5-mark short/long exam problems."
   },
   {
     "id": "NOTE-OOPJ-03",
     "subjectId": "OOPJ",
     "chapter": 2,
-    "title": "Java Unit 2: Classes, Inheritance & Polymorphism",
+    "title": "Java Unit 2: Inheritance, Polymorphism, Packages & Interfaces",
     "fileName": "JUNIT-II.pdf",
-    "fileSize": "496 KB",
+    "fileSize": "0.5 MB",
     "driveFileId": "1WdcR1SZr9tZyC2bbapk5fofi9v0vQWkt",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Method overloading, dynamic method dispatch, abstract classes, super keyword, and interface inheritance."
+    "description": "In-depth faculty lecture notes on class hierarchies, super, method overriding, dynamic method dispatch, abstract classes, package declaration, CLASSPATH, and interfaces."
   },
   {
     "id": "NOTE-OOPJ-04",
@@ -294,68 +294,101 @@ const NOTES_DATA = [
     "chapter": 2,
     "title": "Java Unit 2: Question Bank with Model Answers",
     "fileName": "Microsoft Word - unit2 qb answers.pdf",
-    "fileSize": "902 KB",
+    "fileSize": "0.9 MB",
     "driveFileId": "1zW8RU7veJTGC9tC5GpAtbHYKgcdXfom-",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Solved Unit 2 questions on packages, access protection, interfaces, and inheritance hierarchy."
+    "description": "Departmental solved question bank covering inheritance forms, multiple inheritance via interfaces, access protection levels, and abstract methods."
   },
   {
     "id": "NOTE-OOPJ-05",
     "subjectId": "OOPJ",
     "chapter": 3,
-    "title": "Java Unit 3: Exception Handling & Custom Exceptions",
-    "fileName": "junit3.2.pdf",
-    "fileSize": "696 KB",
-    "driveFileId": "13r6nNSR6-sE9KrZVmuTr8dMatkWXq9D9",
+    "title": "Java Unit 3: Complete Exception Handling & Multithreading",
+    "fileName": "JAVA UNIT-III Notes(Exception Handling and Multi-Threading ).pdf",
+    "fileSize": "0.8 MB",
+    "driveFileId": "1V8H9ph0xOMd3ddVdsUolX69XL698ag7C",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Checked vs unchecked exceptions, try-catch-finally mechanisms, and user-defined exception handling."
+    "description": "Faculty master study guide on Java exception hierarchies, try-catch-finally mechanisms, custom exceptions, Thread lifecycle, and synchronization."
   },
   {
     "id": "NOTE-OOPJ-06",
     "subjectId": "OOPJ",
     "chapter": 3,
-    "title": "Java Unit 3: Multithreading Architecture & Lifecycle",
+    "title": "Java Unit 3: Multithreading Architecture & Concurrency",
     "fileName": "Multithreading unit-3.pdf",
-    "fileSize": "841 KB",
+    "fileSize": "0.8 MB",
     "driveFileId": "1v43TRVNMXfoyM28W_T1Ojtc-v4g5dBBG",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Thread lifecycle states, Thread class vs Runnable, synchronization, locks, and inter-thread communication."
+    "description": "Deep-dive lecture notes on Thread class vs Runnable interface, thread priorities, synchronization, synchronized blocks, and monitor mechanics."
   },
   {
     "id": "NOTE-OOPJ-07",
     "subjectId": "OOPJ",
     "chapter": 3,
-    "title": "Java Unit 3: Question Bank with Model Answers",
-    "fileName": "Microsoft Word - unit-iii qb answers.pdf",
-    "fileSize": "1 MB",
-    "driveFileId": "185UDapyqz1IK2HH7qzwrlHpCVsJ7RSpv",
+    "title": "Java Unit 3: Thread Lifecycle, Priorities & Synchronization",
+    "fileName": "unit3 threads notes.docx.pdf",
+    "fileSize": "0.2 MB",
+    "driveFileId": "1ZN7ovQu-Yx4J5HvxgpXrBLY7A4KkzQrM",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Unit 3 solved university question bank on synchronization, wait/notify, and exception handling blocks."
+    "description": "Lecture handouts covering thread state transitions, sleep, join, yield, daemon threads, race conditions, and thread scheduling."
   },
   {
     "id": "NOTE-OOPJ-08",
     "subjectId": "OOPJ",
-    "chapter": 4,
-    "title": "Java Unit 4: Files, Streams & Serialization",
-    "fileName": "JAVA UNIT-IV Notes.pdf",
-    "fileSize": "2.5 MB",
-    "driveFileId": "1ygw7iLgKfoUpytp81LSmP9A-pVhU6pXJ",
+    "chapter": 3,
+    "title": "Java Unit 3: Inter-Thread Communication & Deadlock Prevention",
+    "fileName": "junit3.2.pdf",
+    "fileSize": "0.7 MB",
+    "driveFileId": "13r6nNSR6-sE9KrZVmuTr8dMatkWXq9D9",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Byte and character streams, File I/O, RandomAccessFile, serialization/deserialization, and transient keyword."
+    "description": "Detailed faculty handouts on wait(), notify(), notifyAll(), Producer-Consumer design pattern with shared queue buffers, and deadlock avoidance."
   },
   {
     "id": "NOTE-OOPJ-09",
     "subjectId": "OOPJ",
-    "chapter": 4,
-    "title": "Java Unit 4: Collections Framework Guide",
-    "fileName": "junit_4.pdf",
-    "fileSize": "831 KB",
-    "driveFileId": "1PaxcAA8nVJY8hHXulsHRZsgEpldV7tYu",
+    "chapter": 3,
+    "title": "Java Unit 3: Question Bank with Model Answers",
+    "fileName": "Microsoft Word - unit-iii qb answers.pdf",
+    "fileSize": "1.0 MB",
+    "driveFileId": "185UDapyqz1IK2HH7qzwrlHpCVsJ7RSpv",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Collection framework hierarchy: List, ArrayList, LinkedList, Set, HashSet, TreeSet, Map, and Iterators."
+    "description": "Official solved question bank for Unit 3 university exam questions on exceptions, nested try blocks, multithreading, and synchronization."
   },
   {
     "id": "NOTE-OOPJ-10",
+    "subjectId": "OOPJ",
+    "chapter": 4,
+    "title": "Java Unit 4: Files, Streams, Generics & Collections Master Notes",
+    "fileName": "JAVA UNIT-IV Notes.pdf",
+    "fileSize": "2.5 MB",
+    "driveFileId": "1ygw7iLgKfoUpytp81LSmP9A-pVhU6pXJ",
+    "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
+    "description": "Comprehensive notes covering byte streams, character streams, File I/O, Object serialization, Generics type safety, and Collections framework."
+  },
+  {
+    "id": "NOTE-OOPJ-11",
+    "subjectId": "OOPJ",
+    "chapter": 4,
+    "title": "Java Unit 4: String Handling, Character Streams & Collections",
+    "fileName": "unit4 notes.docx.pdf",
+    "fileSize": "0.5 MB",
+    "driveFileId": "17jtGuGz9KpWnJS1xnz5C_DsiH60dOvN7",
+    "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
+    "description": "Faculty lecture notes on String immutability, StringBuffer vs StringBuilder, BufferedReader/PrintWriter, and Collection interfaces (List, Set, Map)."
+  },
+  {
+    "id": "NOTE-OOPJ-12",
+    "subjectId": "OOPJ",
+    "chapter": 4,
+    "title": "Java Unit 4: Generics, Wildcards & Event Handling Foundations",
+    "fileName": "junit_4.pdf",
+    "fileSize": "0.8 MB",
+    "driveFileId": "1PaxcAA8nVJY8hHXulsHRZsgEpldV7tYu",
+    "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
+    "description": "Lecture class handouts detailing generic methods, bounded wildcards, type safety, Delegation Event Model, and Event Listener mechanics."
+  },
+  {
+    "id": "NOTE-OOPJ-13",
     "subjectId": "OOPJ",
     "chapter": 4,
     "title": "Java Unit 4: Question Bank with Problem Solutions",
@@ -363,32 +396,43 @@ const NOTES_DATA = [
     "fileSize": "5.1 MB",
     "driveFileId": "1ZAR8Nw-EpAK1mbyelmUm1C7TWcEnlF4A",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Comprehensive question bank with code solutions for file streams, serialization, and collections."
+    "description": "Solved problem set for Unit 4: stream copying, object serialization, ArrayList vs LinkedList, and generic container classes."
   },
   {
-    "id": "NOTE-OOPJ-11",
+    "id": "NOTE-OOPJ-14",
     "subjectId": "OOPJ",
     "chapter": 5,
-    "title": "Java Unit 5: Complete Lecture Notes",
+    "title": "Java Unit 5: Complete Swing GUI, Event Model & JDBC",
     "fileName": "JAVA UNIT-V Notes.pdf",
     "fileSize": "1.8 MB",
     "driveFileId": "1H1n2DKjNepRp_I9NyAYZy6F7GmnUJQ1a",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Full Unit 5 study notes covering AWT, Swing components, layout managers, and delegation event models."
+    "description": "Faculty master guide on Swing architecture, MVC design pattern, JFrame, JPanel, JButton, JTable, event handling, and JDBC 4-tier database connectivity."
   },
   {
-    "id": "NOTE-OOPJ-12",
+    "id": "NOTE-OOPJ-15",
     "subjectId": "OOPJ",
     "chapter": 5,
-    "title": "Java Unit 5: Swing GUI & Event Handling Basics",
-    "fileName": "Java_Swing_Menu_Basics.pdf",
-    "fileSize": "281 KB",
-    "driveFileId": "1MtaafVRuV8H7ag6HvWQG9nES1IIa73Z9",
+    "title": "Java Unit 5: Swing Programming & Component Hierarchies",
+    "fileName": "unit5 notes.docx.pdf",
+    "fileSize": "0.9 MB",
+    "driveFileId": "1MYdN5gmHrgy_cKjAwqiQVV32UHUkYnYc",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Practical guide to JFrame, JPanel, JMenu, ActionListeners, and event adapters."
+    "description": "Lecture notes covering Swing top-level and intermediate containers, Layout Managers (FlowLayout, BorderLayout, GridLayout), and Adapter Classes."
   },
   {
-    "id": "NOTE-OOPJ-13",
+    "id": "NOTE-OOPJ-16",
+    "subjectId": "OOPJ",
+    "chapter": 5,
+    "title": "Java Unit 5: Java Swing Menu Basics & Dialog Controls",
+    "fileName": "Java_Swing_Menu_Basics.pdf",
+    "fileSize": "0.3 MB",
+    "driveFileId": "1MtaafVRuV8H7ag6HvWQG9nES1IIa73Z9",
+    "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
+    "description": "Specialized GUI handouts covering JMenuBar, JMenu, JMenuItem, JCheckBoxMenuItem, JRadioButtonMenuItem, pop-up menus, and modal dialogs."
+  },
+  {
+    "id": "NOTE-OOPJ-17",
     "subjectId": "OOPJ",
     "chapter": 5,
     "title": "Java Unit 5: Question Bank with Model Answers",
@@ -396,18 +440,40 @@ const NOTES_DATA = [
     "fileSize": "1.5 MB",
     "driveFileId": "1fRcScbikC82GF_R73bsQ-K6a5x43scc2",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Solved questions on event-driven programming, mouse events, and GUI components."
+    "description": "Official question bank with model solutions for Unit 5: Swing GUI forms, event listener registration, adapter patterns, and JDBC CRUD operations."
   },
   {
-    "id": "NOTE-OOPJ-14",
+    "id": "NOTE-OOPJ-18",
+    "subjectId": "OOPJ",
+    "chapter": 4,
+    "chapters": [
+      4,
+      5
+    ],
+    "title": "Units 4 & 5: AWT, Swings, Event Handling & Layout Managers",
+    "fileName": "Unit-4 and 5 (awt, swings, event handling and layout manages & components).pdf",
+    "fileSize": "1.2 MB",
+    "driveFileId": "1DLQY-yVR8XUi-qjskntFrzLrwol745Vo",
+    "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
+    "description": "Combined faculty master guide comparing heavyweight AWT with lightweight Swing, in-depth layout manager mechanics, and comprehensive event delegation."
+  },
+  {
+    "id": "NOTE-OOPJ-19",
     "subjectId": "OOPJ",
     "chapter": 1,
-    "title": "Java OOP Concept Overview & Presentation Slides",
+    "chapters": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "title": "Complete Java Architecture & Concepts Master Presentation",
     "fileName": "PowerPoint Presentation.pdf",
     "fileSize": "1.1 MB",
     "driveFileId": "1EgqCprgpm3I7MvxB8v_77VjIJspxKuWJ",
     "folderUrl": "https://drive.google.com/drive/folders/1V066YGywMdVNPIX1JJ1UEvehlS25C9qx",
-    "description": "Visual classroom presentation slides summarizing fundamental OOP principles, classes, and object models."
+    "description": "Master department presentation slides covering the full Java curriculum from OOP foundations to GUI systems and database operations."
   },
   {
     "id": "NOTE-DM-01",

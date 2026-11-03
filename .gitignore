@@ -94,3 +94,4 @@ TASKS.md
 qa-*.js
 qa-*.png
 qa-*.html
+.env*

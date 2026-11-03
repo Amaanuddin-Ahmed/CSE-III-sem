@@ -120,7 +120,7 @@ async function handleGeminiApi(req, res) {
     contents.push({ role: 'user', parts: userParts });
 
     // Try models in cascade
-    const models = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    const models = ['gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.5-flash', 'gemini-3.6-flash'];
     let lastError = null;
 
     for (const model of models) {

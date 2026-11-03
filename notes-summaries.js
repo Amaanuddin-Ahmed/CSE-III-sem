@@ -407,78 +407,94 @@ const NOTE_SUMMARIES = {
   "noteId": "NOTE-OOPJ-01",
   "subjectId": "OOPJ",
   "chapter": 1,
-  "title": "Java Unit 1: OOP Concepts & Language Basics",
-  "pageCount": 35,
+  "title": "Java Unit 1: OOP Concepts, Java Evolution, JVM & Basics",
+  "pageCount": 77,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive foundation guide for Object-Oriented Programming through Java. Details core OOP paradigms (Encapsulation, Inheritance, Polymorphism, Abstraction), JVM Architecture (Class Loader, Execution Engine, JIT Compiler), Bytecode execution, primitive types, operators, and control structures.",
+  "overview": "Authentic faculty lecture notes authored by Vedavathi Kotagiri [Asst. Prof, MGIT CSE]. Covers foundational Object-Oriented Programming (OOP) thinking, the evolution of Java from Oak/Green Project, Java Virtual Machine (JVM) internals, Bytecode execution, lexical structures, primitive data types, type casting, arrays, and control flow statements.",
   "topics": [
    {
-    "title": "Fundamental OOP Principles & Java Buzzwords",
-    "summary": "Core pillars that distinguish Java from procedural languages and the design buzzwords that made Java the industry standard.",
+    "title": "Object-Oriented Thinking & Core Principles",
+    "summary": "Contrasts procedural programming (data moving between functions without protection) with the object-oriented paradigm where data and operations are tightly bound into objects.",
     "points": [
-     "Encapsulation: Bundling data (state) and methods (behavior) together while hiding internal implementation details via private access.",
-     "Inheritance: Mechanism where a child class inherits fields and methods from a parent class using 'extends', fostering code reusability.",
-     "Polymorphism: Ability to take more than one form; static via method overloading and dynamic via method overriding.",
-     "Abstraction: Exposing essential interfaces while concealing complex implementation mechanisms using abstract classes and interfaces.",
-     "Java Buzzwords: Simple, Object-Oriented, Distributed, Interpreted, Robust, Secure, Architecture-Neutral, Portable, High-Performance, Multithreaded, Dynamic."
+     "Abstraction: Representing essential features of an entity without including background implementation details or complexities.",
+     "Encapsulation: Binding data members and manipulating methods into a single protective unit (class), enforcing data hiding via access specifiers.",
+     "Inheritance: The mechanism by which a subclass acquires properties and behaviors from a superclass, fostering modular reusability.",
+     "Polymorphism: The ability of an entity (method or operator) to take multiple forms; manifested as compile-time overloading and runtime dynamic method dispatch."
     ],
     "formulas": [
-     "Bytecode Workflow: Source.java -> javac Compiler -> Bytecode.class -> JVM Interpreter/JIT -> Native Machine Instructions"
+     "class Encapsulated { private int data; public int getData() { return data; } }",
+     "Procedural: Data + Functions separate | OOP: Class = Data + Methods bound together"
     ],
-    "example": "class BankAccount {\n  private double balance;\n  public void deposit(double amt) { if (amt > 0) balance += amt; }\n}"
+    "example": "A Banking Account class encapsulates private balance variable and exposes public deposit() and withdraw() methods to enforce business logic validation."
    },
    {
-    "title": "Java Virtual Machine (JVM) Architecture & Runtime Memory",
-    "summary": "JVM memory specification and execution subsystem architecture enabling 'Write Once, Run Anywhere' (WORA).",
+    "title": "Java Evolution, Buzzwords & Architecture Neutrality",
+    "summary": "Details Java's creation by James Gosling at Sun Microsystems (1991) designed for consumer electronics, later transformed for web and internet computing.",
     "points": [
-     "Class Loader Subsystem: Loads, links, and initializes compiled .class bytecode into memory.",
-     "Method Area: Stores class-level data, static variables, and bytecode instructions.",
-     "Heap Memory: Shared runtime memory where all object instances and arrays are allocated.",
-     "JVM Stack: Thread-private memory containing stack frames for active method calls and local variables.",
-     "Garbage Collection (GC): Automated JVM background process that deallocates memory of unreachable heap objects."
+     "Simple & Familiar: Syntactically derived from C/C++ but eliminates error-prone pointers, explicit memory deallocation, and operator overloading.",
+     "Platform Independent: 'Write Once, Run Anywhere' (WORA). Java compiler compiles source code (.java) into intermediate architectural-neutral Bytecode (.class).",
+     "Robust: Employs strong compile-time and runtime type checking, explicit exception handling, and automatic garbage collection eliminating memory leaks.",
+     "Secure: Executes inside the JVM sandbox with a security manager, bytecode verifier, and absence of raw memory pointers.",
+     "Multithreaded & Dynamic: Built-in native support for concurrent thread execution and dynamic class loading at runtime."
     ],
     "formulas": [
-     "Heap vs Stack: Primitives & reference variables live on Stack; Actual object instances live on Heap."
+     "Source Code (.java) --[javac]--> Bytecode (.class) --[JVM/JIT]--> Native Machine Code",
+     "WORA: Platform Independent Bytecode executed by Platform Specific JVM"
     ],
-    "example": "Student s = new Student(); // 's' reference is on Stack; Student object instance is allocated in Heap"
+    "example": "Compiling on Windows creates bytecode identical to bytecode generated on Linux; each OS runs its respective JVM binary."
    },
    {
-    "title": "Data Types, Type Casting & Operators",
-    "summary": "Classification of Java primitives, precision rules, widening and narrowing type conversions, and precedence.",
+    "title": "JVM Architecture & Memory Allocation Areas",
+    "summary": "Deep architectural breakdown of the Java Virtual Machine subsystem components and runtime memory data areas.",
     "points": [
-     "8 Primitive Types: byte (8-bit), short (16-bit), int (32-bit), long (64-bit), float (32-bit), double (64-bit), char (16-bit Unicode), boolean (1-bit true/false).",
-     "Widening (Implicit) Casting: Small to large data types without loss: byte -> short -> int -> long -> float -> double.",
-     "Narrowing (Explicit) Casting: Large to small types requiring explicit cast: double d = 9.78; int i = (int) d; (truncates fraction).",
-     "Operator Precedence: Unary (++, --) -> Multiplicative (*, /, %) -> Additive (+, -) -> Relational (<, <=) -> Equality (==, !=) -> Logical (&&, ||) -> Assignment (=)."
+     "Class Loader Subsystem: Handles Loading (Bootstrap, Extension, Application), Linking (Verification, Preparation, Resolution), and Initialization.",
+     "Method Area: Shared runtime pool storing class metadata, runtime constant pool, static variables, and method bytecode.",
+     "Heap Area: Shared memory where all instantiated objects and their instance variables are allocated; actively managed by the Garbage Collector.",
+     "JVM Stack & PC Register: Each thread maintains private JVM stack frames (local variables, operand stack, return value) and a Program Counter tracking next instruction.",
+     "Execution Engine: Consists of Interpreter (reads bytecode instruction by instruction), JIT Compiler (compiles hot spots to native code), and Garbage Collector."
     ],
     "formulas": [
-     "Integer Division Rule: 5 / 2 = 2 (integer truncation); 5.0 / 2 = 2.5 (floating-point promotion)"
+     "Runtime Memory = Method Area + Heap + JVM Stacks + PC Registers + Native Stacks",
+     "JIT: Hot-Spot Detection -> Native Machine Code Cache -> Zero Interpreter Overhead"
     ],
-    "example": "int a = 10, b = 20;\nint max = (a > b) ? a : b; // Ternary operator evaluation"
+    "example": "Creating `Student s = new Student();` allocates reference `s` in thread stack frame while the actual object state is allocated in Heap memory."
    },
    {
-    "title": "Constructors & the 'this' Keyword",
-    "summary": "Object instantiation lifecycle, default vs parameterized constructors, and variable shadowing resolution.",
+    "title": "Java Lexical Basics, Types & Control Statements",
+    "summary": "Explores primitive types, explicit and implicit type conversions, array allocation, and structured branching and looping constructs.",
     "points": [
-     "Constructors initialize newly created objects; they share the class name and have no return type.",
-     "Default Constructor: Automatically generated by compiler if and only if no constructor is explicitly declared.",
-     "Constructor Overloading: Multiple constructors with different parameter lists within the same class.",
-     "The 'this' Keyword: Reference to current invoking instance; used to resolve variable shadowing (this.id = id) and constructor chaining (this())."
+     "8 Primitive Types: byte (8-bit), short (16-bit), int (32-bit), long (64-bit), float (32-bit IEEE 754), double (64-bit), char (16-bit Unicode), boolean.",
+     "Type Casting: Widening (Automatic: byte -> short -> int -> long -> float -> double) vs. Narrowing (Explicit: `(target-type) value`, risk of truncation).",
+     "Arrays in Java: First-class objects allocated on heap using `new`. Bound checking prevents buffer overflows (`ArrayIndexOutOfBoundsException`).",
+     "Control Statements: Conditional branching (`if-else`, `switch-case` supporting int, enum, and String), Iteration (`while`, `do-while`, indexed `for`, and enhanced `for-each`)."
     ],
     "formulas": [
-     "Constructor Chaining: this(...) invokes another constructor in the same class and must be statement #1."
+     "Narrowing Cast: int x = (int) 3.14159; // Explicit cast truncates decimal",
+     "Array: int[] arr = new int[5]; // Heap allocation with default 0s"
     ],
-    "example": "public Student(int id, String name) {\n  this.id = id;\n  this.name = name;\n}"
+    "example": "Enhanced loop: `for(int num : arr) { sum += num; }` simplifies traversing collections without counter index variables."
    }
   ],
+  "formulas": [
+   "javac MyClass.java -> MyClass.class",
+   "java MyClass -> JVM Execution Engine",
+   "Type Casting: (int) doubleVal",
+   "Array Instantiation: type[] varName = new type[size];",
+   "Enhanced For Loop: for(type var : collection) { ... }"
+  ],
   "mustKnow": [
-   "Java is architecture-neutral because bytecode executes inside the JVM, not directly on hardware",
-   "Dynamic method dispatch is how Java implements runtime polymorphism",
-   "Widening conversion is automatic; narrowing conversion requires an explicit cast",
-   "The 'this' keyword refers to the current object and resolves parameter shadowing",
-   "Garbage collection in Java is automatic; System.gc() only requests collection and does not guarantee it"
+   "Explain the four foundational principles of Object-Oriented Programming with diagrams.",
+   "List and explain any six Java buzzwords with technical justifications.",
+   "Draw and explain the internal architecture of the Java Virtual Machine (JVM).",
+   "Differentiate between procedural programming and object-oriented programming in tabular form.",
+   "Explain widening and narrowing type conversions in Java with code examples."
+  ],
+  "examTips": [
+   "Always draw the JVM block diagram showing Class Loader, Runtime Data Areas, and Execution Engine for full marks in 5-mark questions.",
+   "When explaining buzzwords, highlight that Java is platform-independent but the JVM itself is platform-dependent.",
+   "In array questions, explicitly mention that arrays in Java are treated as objects allocated dynamically on the heap."
   ]
  },
  "NOTE-OOPJ-02": {
@@ -486,122 +502,147 @@ const NOTE_SUMMARIES = {
   "subjectId": "OOPJ",
   "chapter": 1,
   "title": "Java Unit 1: Question Bank with Model Answers",
-  "pageCount": 28,
+  "pageCount": 17,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Official university examination model answer bank covering high-yield 2-mark and 5-mark Unit 1 questions. Includes verified definitions, JVM component breakdowns, control statement switch expressions, and garbage collection mechanisms.",
+  "overview": "Official MGIT CSE Department examination question bank featuring worked solutions for Unit 1. Covers definitions of abstract classes, JDK vs. JRE vs. JVM distinctions, Bytecode verification, command-line arguments, garbage collection mechanics, and prime/Fibonacci algorithms.",
   "topics": [
    {
-    "title": "High-Yield 2-Mark Question Solutions",
-    "summary": "Concise, precise examination answers for short-answer university questions.",
+    "title": "Core Definitions & 1-Mark Model Solutions",
+    "summary": "Concise, high-yield answers tailored for university evaluation rubrics.",
     "points": [
-     "What is Bytecode? An intermediate, platform-independent instruction set generated by javac that the JVM executes.",
-     "State the role of JIT Compiler: Just-In-Time compiler compiles frequently executed bytecode loops into native machine code at runtime for high execution speed.",
-     "What is garbage collection? Automated memory management in JVM that destroys unreferenced objects and frees heap space.",
-     "Explain 'this' keyword: Reference variable pointing to the current object instance; used for shadowing and constructor chaining."
+     "JDK vs JRE vs JVM: JDK (Java Development Kit = JRE + Compilers/Tools), JRE (Java Runtime Environment = JVM + Core Class Libraries), JVM (Virtual execution engine).",
+     "Main Method Breakdown: `public` (accessible by JVM outside package), `static` (callable without class instance), `void` (no return), `main` (standard entry point), `String[] args` (command-line parameters).",
+     "Default Values: Primitives initialize to `0` (numeric), `false` (boolean), `\\u0000` (char), and references initialize to `null`.",
+     "Bytecode Verifier: Security mechanism inspecting class files prior to execution to confirm valid opcode sequences and stack balance."
     ],
     "formulas": [
-     "Short Answer Formula: State Definition + Technical Characteristic + 1-Line Example"
+     "JDK = JRE + Development Tools (javac, javadoc, jar)",
+     "JRE = JVM + Core Class Libraries (rt.jar)"
     ],
-    "example": "Q: Name primitive data types in Java. A: byte, short, int, long, float, double, char, boolean."
+    "example": "`java App arg1 arg2` passes array `[\"arg1\", \"arg2\"]` to `args` parameter of `main()`."
    },
    {
-    "title": "Detailed 5-Mark Question Solutions",
-    "summary": "Structured academic answers with complete code snippets, diagrams, and explanations.",
+    "title": "Long-Answer Examination Problem Solutions",
+    "summary": "Full academic solutions for core algorithmic and architectural questions.",
     "points": [
-     "JVM Architecture Diagram: Detailed explanation of ClassLoader, Execution Engine, Memory Area (Method, Heap, Stack, PC, Native Stack).",
-     "Features of Java: Detailed exposition of 5 primary buzzwords: Platform Independence, Object-Oriented, Robust, Secure, and Multithreaded.",
-     "Control Flow Structures: If-else-if ladder, Switch-case statements, for loops, while loops, and do-while loops with code examples.",
-     "Method & Constructor Overloading: Demonstration of compile-time polymorphism with variations in parameter count and data types."
+     "Fibonacci & Prime Checking: Step-by-step algorithms utilizing iterative loops and optimized square-root primality tests.",
+     "Garbage Collection Mechanics: Mark-and-sweep algorithm, unreachable objects, calling `System.gc()`, and override of `finalize()` method.",
+     "Command-Line Argument Parsing: Converting String arguments using wrapper class methods `Integer.parseInt(args[0])` with error handling."
     ],
     "formulas": [
-     "Overloading Rule: Methods must differ in argument list (count or type); changing return type alone is invalid."
+     "Primality Condition: for(int i=2; i*i<=n; i++) if(n % i == 0) return false;",
+     "Garbage Collection: obj = null; System.gc();"
     ],
-    "example": "public void print(int a) { ... }\npublic void print(String s) { ... } // Valid Overloading"
+    "example": "Converting args: `int val = Integer.parseInt(args[0]);` allows reading numeric CLI input from the terminal."
    }
   ],
+  "formulas": [
+   "Integer.parseInt(args[0])",
+   "System.gc()",
+   "JDK = JRE + javac",
+   "JRE = JVM + runtime libraries"
+  ],
   "mustKnow": [
-   "JDK contains JRE and development tools (javac); JRE contains JVM and runtime libraries",
-   "Java does not support explicit pointers or multiple inheritance through classes to prevent memory corruption and diamond ambiguity",
-   "Switch statements support int, byte, short, char, String (Java 7+), and enum constants",
-   "Static methods cannot access instance variables or use 'this' directly"
+   "Differentiate between JDK, JRE, and JVM with an architectural Venn diagram.",
+   "Explain the importance of public, static, and void in the main method signature.",
+   "Write a complete Java program to read command-line arguments and find their sum.",
+   "Explain how automatic garbage collection works in Java."
+  ],
+  "examTips": [
+   "When explaining `public static void main`, address each keyword independently in bullet points.",
+   "Always write complete runnable Java code including class headers and import statements rather than fragments."
   ]
  },
  "NOTE-OOPJ-03": {
   "noteId": "NOTE-OOPJ-03",
   "subjectId": "OOPJ",
   "chapter": 2,
-  "title": "Java Unit 2: Classes, Inheritance & Polymorphism",
-  "pageCount": 42,
+  "title": "Java Unit 2: Inheritance, Polymorphism, Packages & Interfaces",
+  "pageCount": 40,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive textbook guide covering the object-oriented inheritance hierarchy, method overriding, dynamic method dispatch, abstract classes, the 'super' keyword, packages (defining, importing, access protection), and interfaces supporting multiple inheritance.",
+  "overview": "Complete faculty lecture notes authored by Vedavathi Kotagiri [Asst. Prof, MGIT CSE]. Covers Class fundamentals, constructors, `this` keyword, Inheritance types (Single, Multilevel, Hierarchical), `super` keyword, Method Overriding, Dynamic Method Dispatch, Abstract classes, `final` keyword, user-defined Packages, CLASSPATH, access protection levels, and Interfaces.",
   "topics": [
    {
-    "title": "Inheritance Types & the 'super' Keyword",
-    "summary": "Class hierarchies in Java, single, multilevel, and hierarchical inheritance, and parent class delegation via super.",
+    "title": "Inheritance Hierarchies & The `super` Keyword",
+    "summary": "Examines class derivation in Java, constructor chaining across class hierarchies, and member disambiguation using `super`.",
     "points": [
-     "Single Inheritance: One subclass derives from one superclass (class B extends A).",
-     "Multilevel Inheritance: Class chain where C extends B and B extends A.",
-     "Hierarchical Inheritance: Multiple subclasses extend the same parent class (B extends A, C extends A).",
-     "Multiple Inheritance: Not supported with classes (diamond problem); supported exclusively through interfaces.",
-     "The 'super' Keyword: Refers to parent class; super() invokes parent constructor (must be line 1); super.method() invokes parent method."
+     "Inheritance Types Supported: Single Inheritance (`A -> B`), Multilevel (`A -> B -> C`), Hierarchical (`A -> B`, `A -> C`). Multiple inheritance of classes is prohibited to prevent the Diamond Problem.",
+     "Role of `super`: Used to invoke superclass constructors (`super(args)` must be first line in subclass constructor), call superclass overridden methods (`super.display()`), and access hidden superclass fields (`super.x`).",
+     "Constructor Execution Order: Base class constructors execute first, progressing down the derivation chain to the most derived subclass."
     ],
     "formulas": [
-     "Constructor Chaining Rule: Subclass constructor automatically invokes super() before its own body executes."
+     "class Sub extends Super { Sub() { super(); } }",
+     "super.memberVariable | super.overriddenMethod()"
     ],
-    "example": "class Sub extends Super {\n  Sub() { super(); System.out.println(\"Sub created\"); }\n}"
+    "example": "A `BoxWeight` class extends `Box`, invoking `super(w, h, d)` to initialize inherited dimensions while initializing its own `weight` field."
    },
    {
-    "title": "Method Overriding & Dynamic Method Dispatch",
-    "summary": "Runtime polymorphism mechanism where a superclass reference variable resolves an overridden method at runtime.",
+    "title": "Dynamic Method Dispatch & Runtime Polymorphism",
+    "summary": "Details how Java implements runtime polymorphism by resolving overridden method calls through superclass reference variables.",
     "points": [
-     "Overriding Rules: Method in subclass must have exact same name, return type, and parameter list as in superclass.",
-     "Access Rule: Overriding method cannot assign more restrictive access (e.g. overriding public with protected is illegal).",
-     "Dynamic Method Dispatch: When an overridden method is called through a superclass reference, Java determines which version to execute at runtime based on the actual object instance being referred to.",
-     "The 'final' Keyword: Applied to variables (constant), methods (prevents overriding), or classes (prevents inheritance)."
+     "Mechanism: When an overridden method is called through a superclass reference, Java determines which version to execute based upon the type of the object being referred to at runtime.",
+     "Method Overriding Rules: Method name, return type, and parameter list must be identical to the superclass method. Access level cannot be more restrictive.",
+     "Static vs Dynamic Binding: Static methods, private methods, and final methods use static binding (compile-time); instance methods use dynamic binding."
     ],
     "formulas": [
-     "Dynamic Method Dispatch: SuperClass ref = new SubClass(); ref.overriddenMethod(); // Executes SubClass method"
+     "SuperRef obj = new SubClass(); obj.overriddenMethod(); // SubClass version executes",
+     "Dynamic Binding: Determined by object instance, NOT reference type"
     ],
-    "example": "Shape s = new Circle(); s.draw(); // Circle's draw() is invoked dynamically"
+    "example": "`Figure f = new Rectangle(10, 20); f.area();` invokes `Rectangle.area()`, not `Figure.area()`."
    },
    {
-    "title": "Abstract Classes vs. Interfaces",
-    "summary": "Comparison of abstract partial abstractions vs pure contract interfaces supporting multiple inheritance.",
+    "title": "Abstract Classes & The `final` Specifier",
+    "summary": "Explores incomplete class templates with abstract methods and unchangeable program elements using `final`.",
     "points": [
-     "Abstract Class: Declared with 'abstract'; can have constructors, instance state variables, concrete methods, and abstract methods.",
-     "Interface: Contract declared with 'interface'; all fields are implicitly 'public static final'; methods are 'public abstract' (plus default/static methods in Java 8+).",
-     "Multiple Inheritance: A class can implement multiple interfaces: class Child implements InterfaceA, InterfaceB.",
-     "Implementation Rule: Non-abstract class implementing an interface must override every abstract method declared in that interface."
+     "Abstract Classes: Declared with `abstract`. Can contain both abstract methods (declaration without body) and concrete methods. Cannot be instantiated directly.",
+     "Subclass Obligation: Any concrete subclass extending an abstract class must provide implementations for all inherited abstract methods or be declared abstract itself.",
+     "Three Uses of `final`: (1) `final` variable creates a constant; (2) `final` method prevents method overriding; (3) `final` class prevents inheritance (e.g., `java.lang.String`)."
     ],
     "formulas": [
-     "Class vs Interface: class extends Class implements Interface1, Interface2"
+     "abstract class Shape { abstract double area(); }",
+     "final class Immutable { } // Cannot be extended"
     ],
-    "example": "interface Drawable { void draw(); }\nclass Canvas implements Drawable, Printable { ... }"
+    "example": "A generic `Shape` class defines `abstract double area();`; subclasses `Circle` and `Triangle` provide concrete mathematical formulas."
    },
    {
     "title": "Packages & Access Protection Matrix",
-    "summary": "Namespaces for grouping related classes, avoiding naming collisions, and the 4-level access control matrix.",
+    "summary": "Architectural principles of organizing classes into modular namespaces, CLASSPATH configuration, and four-tier access visibility.",
     "points": [
-     "Defining Package: 'package mypack;' must be the first non-comment line in the source file.",
-     "Importing: 'import package.name.ClassName;' or 'import package.name.*;'.",
-     "Access Modifiers: public, protected, default (package-private), private."
+     "Defining Packages: `package mypack;` at the top of the source file. Compiled with `javac -d . FileName.java` to generate folder directory hierarchy.",
+     "CLASSPATH Environment: Instructs the JVM where to look on disk for user-defined and third-party `.class` package hierarchies.",
+     "Access Protection: `public` (accessible everywhere), `protected` (same package + subclasses in other packages), default/package-private (same package only), `private` (same class only).",
+     "Interfaces: Declared with `interface`. All fields are implicitly `public static final`; methods are implicitly `public abstract`. Implemented via `implements`."
     ],
     "formulas": [
-     "Access Protection Rule: private (same class only) < default (same package) < protected (same package + subclasses) < public (everywhere)"
+     "Compilation: javac -d . SourceFile.java",
+     "Access Matrix: public > protected > default > private",
+     "class C implements InterfaceA, InterfaceB // Multiple interface inheritance"
     ],
-    "example": "package com.mgit.cs;\nimport java.util.List;"
+    "example": "A class implements multiple interfaces (`implements Printable, Showable`), resolving multiple inheritance without diamond ambiguity."
    }
   ],
+  "formulas": [
+   "class Derived extends Base { ... }",
+   "super(param1, param2);",
+   "abstract class Template { abstract void compute(); }",
+   "final double PI = 3.14159;",
+   "interface Drawable { void draw(); }"
+  ],
   "mustKnow": [
-   "Dynamic method dispatch is how Java achieves runtime polymorphism through late binding",
-   "super() must always be the very first statement inside a subclass constructor",
-   "Abstract classes can have constructors, but interfaces cannot have instance constructors",
-   "Interface fields are implicitly public, static, and final (constants)",
-   "A class can extend only one superclass, but can implement multiple interfaces"
+   "What is Dynamic Method Dispatch? Explain with a working code example and output.",
+   "Differentiate between method overloading and method overriding in tabular format.",
+   "Explain the three uses of the final keyword in Java with examples.",
+   "Draw and explain the Java access protection matrix across same class, package, and subclasses.",
+   "How do interfaces support multiple inheritance in Java? Provide an illustrative program."
+  ],
+  "examTips": [
+   "When explaining Dynamic Method Dispatch, make sure to show a superclass reference variable pointing to a subclass object (`Super s = new Sub()`).",
+   "Memorize the 4x4 access protection table; it appears frequently in university 5-mark and 2-mark questions.",
+   "Explicitly state that `super()` must always be the very first statement inside a subclass constructor."
   ]
  },
  "NOTE-OOPJ-04": {
@@ -609,673 +650,744 @@ const NOTE_SUMMARIES = {
   "subjectId": "OOPJ",
   "chapter": 2,
   "title": "Java Unit 2: Question Bank with Model Answers",
-  "pageCount": 32,
+  "pageCount": 16,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "University examination model solutions bank for Unit 2. Features side-by-side comparison tables, complete Java code implementing multiple interfaces for geometric area and volume calculations, and package access permission matrices.",
+  "overview": "Official MGIT CSE Department examination solutions for Unit 2 question bank. Features model comparisons between overloading and overriding, abstract classes vs interfaces, package creation workflows, and interface inheritance examples.",
   "topics": [
    {
-    "title": "Abstract Class vs. Interface Model Solution",
-    "summary": "Full academic comparative analysis answering university examination questions on abstraction.",
+    "title": "Overloading vs. Overriding Model Solutions",
+    "summary": "Definitive comparative answers contrasting compile-time and runtime polymorphism.",
     "points": [
-     "Speed: Interface method lookups are slightly slower than abstract class method lookups.",
-     "Constructors: Abstract classes have constructors called during subclass instantiation; interfaces have none.",
-     "Multiple Inheritance: Abstract classes permit single inheritance; interfaces permit multiple inheritance.",
-     "State: Abstract classes hold instance fields; interfaces hold constants only."
+     "Definition Comparison: Overloading provides multiple methods with same name but distinct signatures in the same class; Overriding provides a specific implementation in subclass for an inherited method.",
+     "Resolution: Overloading is resolved at compile-time (static binding); Overriding is resolved at runtime (dynamic binding).",
+     "Return Types: In overloading, return type can differ; in overriding, return type must be identical (or covariant).",
+     "Private/Static Methods: Can be overloaded; cannot be overridden."
     ],
     "formulas": [
-     "Abstract Class vs Interface Comparison Table (10/10 Marks Blueprint)"
+     "Overloading: MethodName(int a) vs MethodName(double a) [Compile-Time]",
+     "Overriding: Super.Method() overridden by Sub.Method() [Run-Time]"
     ],
-    "example": "abstract class Shape { int color; Shape() {} abstract double area(); }"
+    "example": "Overloading: `add(int, int)` and `add(double, double)`; Overriding: `Animal.makeSound()` overridden by `Dog.makeSound()`."
    },
    {
-    "title": "Multiple Interfaces Area & Volume Implementation",
-    "summary": "Classic university programming problem demonstrating multiple inheritance through interfaces.",
+    "title": "Abstract Class vs. Interface Model Solutions",
+    "summary": "Detailed criteria-based comparison for software design and architecture.",
     "points": [
-     "Interface 1: 'Area' declaring double getArea().",
-     "Interface 2: 'Volume' declaring double getVolume().",
-     "Implementation Class: 'Cylinder' implementing both Area and Volume with full mathematical calculations.",
-     "Test Program: Initializing cylinder with radius and height and printing calculated surface area and volume."
+     "Instantiation: Neither can be instantiated directly using `new`.",
+     "Methods: Abstract classes can have both abstract and concrete methods with state; standard interfaces contain only abstract methods (prior to Java 8).",
+     "Fields: Abstract classes support instance fields with any access modifier; interface fields are strictly `public static final` constants.",
+     "Inheritance: A class can extend only one abstract class (single inheritance), but can implement multiple interfaces (multiple inheritance)."
     ],
     "formulas": [
-     "Cylinder Formulas: Area = 2*pi*r*h + 2*pi*r^2; Volume = pi*r^2*h"
+     "Abstract Class: class Dog extends Animal { ... }",
+     "Interface: class Dog implements Pet, Mammal { ... }"
     ],
-    "example": "class Cylinder implements Area, Volume { ... }"
+    "example": "An abstract class `Vehicle` maintains a `speed` variable, while `GPS` and `MusicPlayer` interfaces are implemented by `SmartCar`."
    }
   ],
+  "formulas": [
+   "public static final int CONSTANT = 100;",
+   "interface A { void m1(); } interface B extends A { void m2(); }"
+  ],
   "mustKnow": [
-   "Method overloading differs by argument list; method overriding has identical signatures",
-   "The 'final' keyword on a class prevents it from being extended (e.g. java.lang.String is final)",
-   "Protected members are accessible in subclasses outside the package via inheritance",
-   "Variables in interfaces are always public, static, and final"
+   "Differentiate between method overloading and method overriding (minimum 4 differences).",
+   "Compare abstract classes and interfaces in tabular format.",
+   "Explain the steps to create and compile a package with directory structure.",
+   "Can a class implement two interfaces having methods with the same name and signature? Explain."
+  ],
+  "examTips": [
+   "In comparisons, use standard 3-column tables: Parameter | Overloading | Overriding.",
+   "Emphasize that multiple inheritance in Java is achieved exclusively through interfaces to avoid the Diamond Problem."
   ]
  },
  "NOTE-OOPJ-05": {
   "noteId": "NOTE-OOPJ-05",
   "subjectId": "OOPJ",
   "chapter": 3,
-  "title": "Java Unit 3: Exception Handling & Custom Exceptions",
+  "title": "Java Unit 3: Complete Exception Handling & Multithreading",
   "pageCount": 38,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive study guide for Unit 3 (Mid-1 scope: Exception Handling). Covers the Throwable hierarchy, checked vs unchecked exceptions, try-catch-finally control flows, nested try blocks, throw vs throws keyword differences, and creating production-grade user-defined custom exceptions.",
+  "overview": "Comprehensive faculty lecture notes authored by Vedavathi Kotagiri [Asst. Prof, MGIT CSE]. Synthesizes the full scope of Unit 3: Exception Handling architecture (`Throwable`, checked vs. unchecked, `try-catch-finally`, `throw`, `throws`, custom exceptions) and Multithreaded Programming foundations (`Thread`, `Runnable`, lifecycle, scheduling, synchronization, inter-thread communication).",
   "topics": [
    {
-    "title": "Exception Handling Fundamentals & Keywords",
-    "summary": "The structured mechanism for handling runtime errors cleanly without terminating application execution.",
+    "title": "Exception Handling Architecture & Hierarchy",
+    "summary": "Examines Java's structured error handling mechanism designed to maintain normal application execution flow during runtime failures.",
     "points": [
-     "try Block: Encloses code that could throw an exception during execution.",
-     "catch Block: Handles the caught exception; multiple catch blocks allow specific error handling.",
-     "finally Block: Guaranteed execution block used for deterministic resource cleanup (closing streams, files, locks).",
-     "throw Keyword: Explicitly throws an instantiated exception object from method logic.",
-     "throws Keyword: Declares checked exceptions in method signatures, delegating handling responsibility to the caller."
+     "Throwable Hierarchy: `java.lang.Throwable` is the superclass of all errors and exceptions. Branches into `Error` (serious system issues like `OutOfMemoryError`) and `Exception` (catchable application conditions).",
+     "Checked Exceptions: Checked by compiler during compilation; methods must declare via `throws` or handle via `try-catch` (e.g., `IOException`, `SQLException`, `ClassNotFoundException`).",
+     "Unchecked Exceptions: Subclasses of `RuntimeException` occurring at runtime due to programming flaws; compiler does not force handling (e.g., `ArithmeticException`, `NullPointerException`, `ArrayIndexOutOfBoundsException`).",
+     "Exception Propagation: If an exception is unhandled in a method, it is pushed down the call stack until an appropriate catch block is encountered or the default JVM handler terminates the thread."
     ],
     "formulas": [
-     "Catch Ordering Rule: Subclass exception handlers must always appear before superclass exception handlers."
+     "Throwable -> (Error, Exception -> (RuntimeException [Unchecked], Other Exceptions [Checked]))",
+     "Default Handler: Thread prints stack trace and terminates execution"
     ],
-    "example": "try { int x = 10 / 0; } catch (ArithmeticException e) { System.out.println(\"Handled: \" + e); } finally { System.out.println(\"Cleaned\"); }"
+    "example": "Division by zero throws an `ArithmeticException`; reading a non-existent file on disk throws a checked `FileNotFoundException`."
    },
    {
-    "title": "Checked vs. Unchecked Exceptions & Error Hierarchy",
-    "summary": "Detailed classification of the java.lang.Throwable tree and compiler verification rules.",
+    "title": "Exception Control: Try, Catch, Finally & Multi-Catch",
+    "summary": "Syntax and execution semantics for trapping runtime errors, ensuring resource cleanup, and nesting try blocks.",
     "points": [
-     "Throwable Root: Base class for Error and Exception.",
-     "Error: Fatal JVM conditions that applications should not catch (OutOfMemoryError, StackOverflowError).",
-     "Checked Exceptions: Checked by the compiler; must be caught or declared with throws (IOException, SQLException, ClassNotFoundException).",
-     "Unchecked Exceptions: Subclasses of RuntimeException; represent logical bugs (NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException)."
+     "Try & Catch Blocks: Critical statements reside in `try`; errors instantiate exception objects matched against sequential `catch` blocks.",
+     "Catch Order Rule: Subclass exceptions must always be caught before superclass exceptions (`ArithmeticException` before `Exception`); reversing this causes unreachable code compile errors.",
+     "Finally Block Guarantee: Executes unconditionally whether an exception is thrown, caught, or completely absent. Executes even if a `return`, `break`, or `continue` statement is reached in `try`/`catch`.",
+     "Nested Try Blocks: If an inner `try` does not match an exception, the exception falls back to the enclosing outer `try` block's catch handlers."
     ],
     "formulas": [
-     "Hierarchy: Object -> Throwable -> [Error (fatal), Exception -> (Checked Exceptions, RuntimeException (Unchecked))]"
+     "try { ... } catch (ChildException e) { ... } catch (ParentException e) { ... } finally { cleanup(); }",
+     "Order Constraint: Specific Subclass First -> Generic Superclass Last"
     ],
-    "example": "throw new IllegalArgumentException(\"Invalid input\"); // Unchecked\nthrow new IOException(\"File missing\"); // Checked"
+    "example": "Opening a file in `try`, handling `IOException` in `catch`, and closing the file descriptor in `finally` prevents resource leaks."
    },
    {
-    "title": "throw vs. throws Detailed Comparison",
-    "summary": "Critical technical comparison frequently evaluated in university examinations.",
+    "title": "Throw, Throws & Custom User-Defined Exceptions",
+    "summary": "Mechanisms for manually throwing exceptions, declaring method failure contracts, and building enterprise domain exceptions.",
     "points": [
-     "throw: Actively triggers an exception object; placed inside method body; followed by an instance; throws one exception.",
-     "throws: Contractual declaration in method header; followed by exception class names; can declare multiple comma-separated exceptions.",
-     "Propagation: 'throw' initiates the exception event; 'throws' allows exceptions to propagate up the call stack."
+     "Throw vs Throws: `throw` is used inside method body to throw a concrete exception instance (`throw new MyException();`); `throws` is used in method signature to declare exceptions thrown by the method (`void read() throws IOException`).",
+     "Custom Exceptions: Created by extending `java.lang.Exception` (checked) or `java.lang.RuntimeException` (unchecked). Standard practice provides a default constructor and a message-passing constructor (`super(msg)`)."
     ],
     "formulas": [
-     "Syntax: void func() throws IOException { if (err) throw new IOException(); }"
+     "class InsufficientFundsException extends Exception { public InsufficientFundsException(String msg) { super(msg); } }",
+     "void withdraw(int amt) throws InsufficientFundsException { if(amt > bal) throw new InsufficientFundsException(\"Low Balance\"); }"
     ],
-    "example": "public void readFile(String path) throws IOException { throw new IOException(\"Disk unreadable\"); }"
+    "example": "A bank withdrawal method throws custom `InsufficientFundsException` when balance is less than withdrawal amount."
    },
    {
-    "title": "User-Defined & Custom Exception Subclasses",
-    "summary": "Creating domain-specific exceptions for business logic validation.",
+    "title": "Multithreading Foundations & Thread Lifecycle",
+    "summary": "Introduction to concurrent execution units sharing memory space within a single process.",
     "points": [
-     "Extend Exception (for checked custom exceptions) or RuntimeException (for unchecked custom exceptions).",
-     "Constructors: Provide a default constructor and a message constructor passing the string to super(message).",
-     "serialVersionUID: Recommended for serialization stability across networks.",
-     "Domain Rule Validation: Throwing custom exceptions when domain rules fail (e.g. RangeException, InvalidAgeException)."
+     "Process vs Thread: A process is heavyweight with private memory address space; a thread is a lightweight dispatchable sub-process sharing the heap with peer threads.",
+     "5 Lifecycle States: New (created), Runnable (ready/running in CPU pool), Blocked/Waiting (suspended for lock or signal), Timed Waiting (`sleep(ms)`), Terminated (execution complete).",
+     "Two Ways to Create Threads: (1) Extending `Thread` class and overriding `run()`; (2) Implementing `Runnable` interface and passing instance to `new Thread(r)`. Implementing `Runnable` is superior as it allows extending other base classes."
     ],
     "formulas": [
-     "Template: class CustomException extends Exception { public CustomException(String s) { super(s); } }"
+     "Lifecycle: New -> start() -> Runnable <-> Blocked/Waiting -> Terminated",
+     "Runnable: Thread t = new Thread(new MyRunnable()); t.start();"
     ],
-    "example": "class RangeException extends Exception { RangeException(String s) { super(s); } }\nif (marks > 50) throw new RangeException(\"Marks exceed maximum 50\");"
+    "example": "Extending `Thread`: `class Worker extends Thread { public void run() { ... } }` and calling `new Worker().start()` launches a concurrent thread."
    }
   ],
+  "formulas": [
+   "try { ... } catch(Exception e) { ... } finally { ... }",
+   "throw new ArithmeticException(\"/ by zero\");",
+   "void readFile() throws IOException { ... }",
+   "Thread t = new Thread(runnableInstance);",
+   "t.start(); // Invokes run() asynchronously"
+  ],
   "mustKnow": [
-   "The finally block executes whether an exception occurs or not, even if try contains a return statement",
-   "Subclass exception catch blocks must precede superclass catch blocks or a compilation error occurs",
-   "Checked exceptions are verified at compile time; unchecked exceptions extend RuntimeException",
-   "throw is followed by an object instance; throws is followed by class names in the method signature",
-   "Custom exceptions extend java.lang.Exception and call super(message) in their constructors"
+   "Draw and explain the Java Exception hierarchy tree with checked and unchecked branches.",
+   "Explain the purpose and execution guarantees of the finally block with illustrative code.",
+   "Differentiate between throw and throws with syntactical examples.",
+   "How do you design, throw, and catch a user-defined custom exception in Java?",
+   "Compare creating threads by extending Thread class versus implementing Runnable interface."
+  ],
+  "examTips": [
+   "In exception questions, emphasize that `finally` does NOT execute ONLY if `System.exit(0)` is explicitly called.",
+   "In catch blocks, illustrate why catching `Exception` before `ArithmeticException` results in a compilation error.",
+   "Always call `t.start()` and explain that calling `t.run()` executes sequentially on the main thread without creating a new thread."
   ]
  },
  "NOTE-OOPJ-06": {
   "noteId": "NOTE-OOPJ-06",
   "subjectId": "OOPJ",
   "chapter": 3,
-  "title": "Java Unit 3: Multithreading Architecture & Lifecycle",
-  "pageCount": 44,
+  "title": "Java Unit 3: Multithreading Architecture & Concurrency",
+  "pageCount": 40,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive textbook guide for Unit 3 (Mid-2 scope: Multithreading). Explores process-based vs thread-based multitasking, Java thread lifecycle states, extending Thread vs implementing Runnable, thread priorities, synchronization, intrinsic locks (monitors), inter-thread communication (wait, notify, notifyAll), deadlock prevention, and daemon threads.",
+  "overview": "Specialized lecture presentation authored by Vedavathi K [MGIT CSE]. Focuses on Multithreaded Programming architecture, thread states, thread priorities, synchronization, object monitors, mutual exclusion, and thread communication.",
   "topics": [
    {
-    "title": "Multitasking & Thread Concepts",
-    "summary": "Process-based vs thread-based multitasking and why threads are termed lightweight processes.",
+    "title": "Thread Lifecycle & State Transition Diagram",
+    "summary": "Detailed exploration of thread transitions through operating system and JVM scheduler states.",
     "points": [
-     "Process-Based Multitasking: Concurrent execution of separate OS programs; heavy context switching and isolated address spaces.",
-     "Thread-Based Multitasking: Concurrent execution of multiple execution paths within the same program; shared heap and memory.",
-     "Lightweight Process: Threads share code and data segments; allocating a thread requires only a new Program Counter, registers, and stack.",
-     "Advantages: Maximum CPU utilization, responsive user interfaces, and minimal IPC overhead."
+     "New State: Thread object instantiated (`Thread t = new Thread()`), memory allocated, but not yet started.",
+     "Runnable State: `start()` invoked; thread enters the ready pool contending for CPU time slices. Transitions between Ready and Running.",
+     "Blocked/Waiting State: Thread enters waiting pool when waiting for monitor lock (`synchronized`), waiting for notification (`wait()`), or sleeping (`sleep(ms)`).",
+     "Dead/Terminated State: Thread completes execution of `run()` method or encounters an unhandled exception."
     ],
     "formulas": [
-     "Context Switch: Process switch requires MMU page-table swap; Thread switch swaps only PC and register states."
+     "start() -> Runnable | sleep(t)/wait() -> Blocked/Waiting | notify() -> Runnable",
+     "isAlive(): returns boolean indicating whether thread has started and not yet died"
     ],
-    "example": "A word processor printing a document on one thread while accepting user typing on another."
+    "example": "A thread executing `Thread.sleep(1000)` pauses execution for 1000ms without releasing object monitor locks."
    },
    {
-    "title": "Thread Life Cycle & State Transitions",
-    "summary": "The 6 distinct thread states defined in java.lang.Thread.State.",
+    "title": "Thread Priorities & CPU Scheduling",
+    "summary": "How the JVM prioritizes threads during CPU contention.",
     "points": [
-     "NEW: Thread instance created via new Thread(), start() not yet invoked.",
-     "RUNNABLE: Thread is running or ready to run in the OS thread queue.",
-     "BLOCKED: Thread is waiting to acquire a monitor lock held by another synchronized thread.",
-     "WAITING: Thread waiting indefinitely for another thread to call notify() or notifyAll().",
-     "TIMED_WAITING: Thread waiting for a specific timeout period (sleep(ms), wait(timeout), join(timeout)).",
-     "TERMINATED: Thread has finished run() execution or terminated abnormally."
+     "Priority Scale: Integer values from 1 (`MIN_PRIORITY`) to 10 (`MAX_PRIORITY`); default is 5 (`NORM_PRIORITY`).",
+     "Inheritance: Newly spawned threads inherit the priority of the creating thread.",
+     "Preemptive Scheduling: Higher priority threads are generally scheduled ahead of lower priority threads, though actual behavior depends on the underlying OS thread scheduler."
     ],
     "formulas": [
-     "State Transitions: NEW --start()--> RUNNABLE <--notify()-- WAITING; RUNNABLE --sleep()--> TIMED_WAITING"
+     "Thread.MIN_PRIORITY = 1 | Thread.NORM_PRIORITY = 5 | Thread.MAX_PRIORITY = 10",
+     "t.setPriority(Thread.MAX_PRIORITY);"
     ],
-    "example": "thread.getState() // Returns Thread.State enum constant"
+    "example": "Setting `t.setPriority(8)` requests the scheduler to allocate CPU cycles with higher preference."
    },
    {
-    "title": "Thread Creation & Priorities",
-    "summary": "Mechanisms for creating threads and configuring CPU scheduling priorities.",
+    "title": "Thread Synchronization & Object Monitors",
+    "summary": "Enforcing mutual exclusion across concurrent threads sharing common mutable state to prevent race conditions.",
     "points": [
-     "Extending Thread: Simple, but consumes Java's single inheritance capability.",
-     "Implementing Runnable: Recommended clean design; separates task definition from thread execution.",
-     "Thread Priorities: Integer scale from 1 (MIN_PRIORITY) to 10 (MAX_PRIORITY); default is 5 (NORM_PRIORITY).",
-     "Preemptive Scheduling: Higher-priority runnable threads preempt lower-priority threads on supported operating systems."
+     "Race Condition: Occurs when multiple threads read and write shared data simultaneously, producing indeterminate corrupted state.",
+     "Object Monitor: Every object in Java has an associated monitor (mutex lock). A thread acquiring the monitor gains exclusive access.",
+     "Synchronized Methods: `public synchronized void deposit(int amt)` locks the entire method on `this` object monitor.",
+     "Synchronized Statements: `synchronized(accountObj) { ... }` locks only the critical code section on any designated monitor."
     ],
     "formulas": [
-     "Priority Range: Thread.MIN_PRIORITY (1) <= Thread.NORM_PRIORITY (5) <= Thread.MAX_PRIORITY (10)"
+     "Mutual Exclusion: Only 1 thread can hold object monitor at any instant",
+     "synchronized(sharedObject) { /* critical section */ }"
     ],
-    "example": "Thread t = new Thread(new MyRunnable()); t.setPriority(Thread.MAX_PRIORITY); t.start();"
-   },
-   {
-    "title": "Synchronization & Inter-Thread Communication",
-    "summary": "Protecting shared mutable state using object monitors and coordinating threads with wait/notify.",
-    "points": [
-     "Race Condition: Corrupted state when multiple threads concurrently modify shared memory without coordination.",
-     "Synchronized Method & Block: Obtains the object's intrinsic monitor lock, ensuring mutual exclusion (mutex).",
-     "wait(), notify(), notifyAll(): Declared in java.lang.Object; must strictly be called within synchronized contexts.",
-     "Deadlock: Circular dependency where threads block forever waiting for locks held by each other; prevented by global lock ordering."
-    ],
-    "formulas": [
-     "Producer-Consumer: while (hasData) wait(); produce(); hasData = true; notify();"
-    ],
-    "example": "public synchronized void withdraw(int amt) { if (balance >= amt) balance -= amt; }"
+    "example": "A bank withdrawal method marked `synchronized` prevents two ATM cards from deducting from the same balance concurrently."
    }
   ],
+  "formulas": [
+   "t.setPriority(int priority);",
+   "t.join(); // Caller waits for t to terminate",
+   "public synchronized void safeMethod() { ... }",
+   "synchronized(lockObj) { ... }"
+  ],
   "mustKnow": [
-   "Implementing Runnable is preferred over extending Thread because it preserves the single inheritance slot",
-   "Calling run() directly runs on the current thread; calling start() spawns a new OS thread",
-   "wait(), notify(), and notifyAll() belong to java.lang.Object, not Thread, because they operate on monitors",
-   "wait() releases the monitor lock; sleep() does NOT release the monitor lock",
-   "Daemon threads provide background services and are abruptly killed when all user threads finish"
+   "Draw and explain the Thread Lifecycle state transition diagram with all method triggers.",
+   "What is a race condition? How does thread synchronization resolve it in Java?",
+   "Compare synchronized methods and synchronized blocks in terms of performance and lock scope.",
+   "Explain the importance of thread priorities and the methods used to set and get them."
+  ],
+  "examTips": [
+   "Always include a clean ASCII or hand-drawn state machine for the Thread Lifecycle question.",
+   "Clarify that `sleep()` retains locks whereas `wait()` releases the monitor lock."
   ]
  },
  "NOTE-OOPJ-07": {
   "noteId": "NOTE-OOPJ-07",
   "subjectId": "OOPJ",
   "chapter": 3,
-  "title": "Java Unit 3: Question Bank with Model Answers",
-  "pageCount": 35,
+  "title": "Java Unit 3: Thread Lifecycle, Priorities & Synchronization",
+  "pageCount": 13,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Official university examination model answer bank for Unit 3. Contains solved questions for both halves of Unit 3: Exception Handling (try-catch-finally, multiple catch, custom RangeException) and Multithreading (thread lifecycle diagram, Producer-Consumer bounded queue, synchronized bank account, and daemon threads).",
+  "overview": "Classroom lecture handouts from MGIT CSE focusing on thread creation mechanics, `sleep()`, `join()`, `yield()`, daemon threads, and deadlock conditions.",
   "topics": [
    {
-    "title": "Solved Multithreading Long-Answer Problems",
-    "summary": "Full academic solutions for high-weight university examination multithreading questions.",
+    "title": "Thread Control Methods: Sleep, Join & Yield",
+    "summary": "Controlling thread execution flow and inter-thread coordination.",
     "points": [
-     "Thread Lifecycle Diagram: Labelled ASCII state transition sketch showing all 6 states and method transitions.",
-     "Producer-Consumer Solution: Complete Java code implementing synchronized SharedQueue with wait() and notify().",
-     "Synchronized Banking System: Multithreaded withdrawal program eliminating race conditions with synchronized methods.",
-     "Concurrent Even-Odd Thread Problem: Java program running two concurrent threads using Runnable with join() coordination."
+     "Thread.sleep(ms): Temporarily halts execution for specified milliseconds without relinquishing monitor locks. Throws `InterruptedException`.",
+     "join(): Causes current thread to pause execution until the thread on which `join()` was called finishes executing.",
+     "Thread.yield(): Suggests to the scheduler that the current thread is willing to yield its current use of a processor."
     ],
     "formulas": [
-     "Standard Exam Structure: Definition (2M) + Architecture/State Diagram (3M) + Runnable Code (4M) + Summary (1M)"
+     "Thread.sleep(milliseconds);",
+     "t1.join(); // Current thread blocks until t1 dies"
     ],
-    "example": "class ProducerConsumerDemo { ... } // Complete 10-mark university implementation"
+    "example": "A main thread calls `worker.join()` to wait until background calculations complete before printing total."
    },
    {
-    "title": "Solved Exception Handling Long-Answer Problems",
-    "summary": "Complete code solutions for complex exception handling examination scenarios.",
+    "title": "Daemon Threads & JVM Lifecycle",
+    "summary": "Background utility threads providing services to user threads.",
     "points": [
-     "Multiple Catch Block Demonstration: Code catching ArithmeticException, ArrayIndexOutOfBoundsException, and General Exception.",
-     "Custom RangeException Mark Evaluation: Full program reading 6 subject marks from command line, validating bounds 0-50, and calculating percentage.",
-     "throw vs throws Comparison Table: Parameterized matrix covering role, location, syntax, multiplicity, and propagation."
+     "Definition: Service provider threads running in background (e.g., Garbage Collector).",
+     "Setting Daemon: Marked via `t.setDaemon(true)` before `t.start()` is called.",
+     "JVM Termination: When all user threads terminate, the JVM shuts down abruptly, terminating all running daemon threads."
     ],
     "formulas": [
-     "Multiple Catch Rule: Narrow/Subclass catch blocks must precede broad/Superclass catch blocks."
+     "t.setDaemon(true); // Must be set before start()",
+     "t.isDaemon() // Returns boolean"
     ],
-    "example": "catch (ArithmeticException e) { ... } catch (Exception e) { ... }"
+    "example": "A background auto-save or spell-checker thread in a text editor configured as a daemon thread."
+   },
+   {
+    "title": "Deadlock in Multithreading",
+    "summary": "A situation where two or more threads are permanently blocked, each waiting for a lock held by the other.",
+    "points": [
+     "Deadlock Scenario: Thread 1 holds Lock A and waits for Lock B; Thread 2 holds Lock B and waits for Lock A.",
+     "4 Necessary Conditions: Mutual exclusion, Hold and wait, No preemption, Circular wait.",
+     "Prevention: Acquire locks in a globally consistent hierarchical order across all threads."
+    ],
+    "formulas": [
+     "Deadlock: Thread1 -> holds(A), waits(B) | Thread2 -> holds(B), waits(A)",
+     "Prevention Rule: Always acquire Lock A before Lock B"
+    ],
+    "example": "Two threads transferring money between two accounts deadlock if they lock source and destination in opposite order."
    }
   ],
+  "formulas": [
+   "t.setDaemon(true);",
+   "t.join();",
+   "Thread.yield();"
+  ],
   "mustKnow": [
-   "Deadlock occurs when 4 conditions hold simultaneously: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait",
-   "Thread.sleep() throws InterruptedException and keeps lock ownership",
-   "join() causes the calling thread to wait until the referenced worker thread dies",
-   "Nested try blocks allow inner exceptions to be caught locally without aborting outer try blocks"
+   "What is a deadlock? Write a complete Java program that demonstrates a deadlock situation.",
+   "What are daemon threads in Java? Explain their lifecycle with respect to the JVM.",
+   "Differentiate between sleep() and yield() methods."
+  ],
+  "examTips": [
+   "When writing the deadlock program, use two string locks (`String lock1 = \"L1\"; String lock2 = \"L2\";`) with nested synchronized blocks."
   ]
  },
  "NOTE-OOPJ-08": {
   "noteId": "NOTE-OOPJ-08",
   "subjectId": "OOPJ",
-  "chapter": 4,
-  "title": "Java Unit 4: Files, Streams & Serialization",
-  "pageCount": 40,
+  "chapter": 3,
+  "title": "Java Unit 3: Inter-Thread Communication & Deadlock Prevention",
+  "pageCount": 33,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive textbook guide for Unit 4 (Files and Streams). Details the I/O stream abstraction, byte streams vs character streams, file reading/writing with FileReader and BufferedReader, RandomAccessFile direct file seeking, object serialization/deserialization, and the transient keyword.",
+  "overview": "Advanced lecture notes authored by Veda Kotagiri [Asst. Prof, MGIT CSE]. Covers inter-thread communication mechanisms, Producer-Consumer synchronization model, Object class wait/notify contracts, and deprecated thread methods.",
   "topics": [
    {
-    "title": "I/O Streams: Byte Streams vs. Character Streams",
-    "summary": "Architecture of the java.io package and comparison of 8-bit binary vs 16-bit Unicode streams.",
+    "title": "Inter-Thread Communication & Object Class Methods",
+    "summary": "How threads communicate state changes without wasteful CPU polling (busy waiting).",
     "points": [
-     "Stream Abstraction: Ordered sequence of data producing or consuming information.",
-     "Byte Streams: Rooted at InputStream and OutputStream; processes 8-bit bytes for binary media, audio, images, and bytecode.",
-     "Character Streams: Rooted at Reader and Writer; processes 16-bit Unicode characters for internationalized plain text documents.",
-     "Bridge Classes: InputStreamReader and OutputStreamWriter convert between byte streams and character streams."
+     "Why in Object Class: `wait()`, `notify()`, and `notifyAll()` operate on the object's monitor lock, which belongs to any Java object rather than a specific thread.",
+     "wait(): Relinquishes the monitor lock immediately and places calling thread into the object's wait set until another thread calls `notify()`.",
+     "notify(): Wakes up a single arbitrary thread waiting on the object monitor.",
+     "notifyAll(): Wakes up all threads waiting on the object monitor; they compete for the lock.",
+     "Context: Must be called exclusively from within a `synchronized` context; otherwise throws `IllegalMonitorStateException`."
     ],
     "formulas": [
-     "Hierarchy: InputStream/OutputStream (8-bit bytes) vs Reader/Writer (16-bit Unicode characters)"
+     "synchronized(obj) { while(!condition) obj.wait(); /* work */ obj.notify(); }",
+     "wait() -> Releases Lock | notify() -> Does NOT immediately release lock"
     ],
-    "example": "FileInputStream in = new FileInputStream(\"pic.png\");\nFileReader reader = new FileReader(\"notes.txt\");"
+    "example": "A consumer thread calls `wait()` on an empty buffer; producer adds data and calls `notify()` to wake consumer."
    },
    {
-    "title": "File Handling: FileReader, BufferedReader & Word Count",
-    "summary": "High-throughput buffered reading, file copying, and text parsing algorithms.",
+    "title": "The Producer-Consumer Implementation Model",
+    "summary": "Classic concurrency synchronization problem demonstrating coordinated data production and consumption.",
     "points": [
-     "FileReader: Reads text characters directly from disk; unbuffered and prone to slow disk I/O.",
-     "BufferedReader: Wraps around Reader with an 8 KB memory buffer; provides readLine() for line-oriented processing.",
-     "BufferedWriter: Provides newLine() for platform-independent cross-platform line breaks.",
-     "Word Count Algorithm: Reads line-by-line, trims whitespace, splits on \\\\s+, and accumulates counts."
+     "Problem: Producer must not produce when buffer is full; Consumer must not consume when buffer is empty.",
+     "Flag-based Coordination: A boolean `valueSet` flag tracks buffer state.",
+     "Synchronized `put()` and `get()`: Methods check condition in a loop, invoke `wait()`, perform operation, toggle flag, and invoke `notify()`."
     ],
     "formulas": [
-     "Buffering Efficiency: Replaces thousands of single-byte OS disk interrupts with bulk 8 KB block transfers."
+     "Producer: synchronized put(v) { while(valueSet) wait(); val=v; valueSet=true; notify(); }",
+     "Consumer: synchronized get() { while(!valueSet) wait(); valueSet=false; notify(); return val; }"
     ],
-    "example": "BufferedReader br = new BufferedReader(new FileReader(\"data.txt\"));\nString line = br.readLine();"
-   },
-   {
-    "title": "RandomAccessFile Class & Direct Seeking",
-    "summary": "Non-sequential flat-file record manipulation using the file pointer.",
-    "points": [
-     "Hybrid Class: Implements both DataInput and DataOutput interfaces.",
-     "Access Modes: 'r' (read-only) and 'rw' (read-write).",
-     "File Pointer: Movable cursor measuring byte offset from start of file (0).",
-     "Methods: seek(long pos), getFilePointer(), length(), readInt(), writeUTF()."
-    ],
-    "formulas": [
-     "Seeking Formula: raf.seek(recordIndex * recordSizeInBytes)"
-    ],
-    "example": "raf.seek(100); raf.writeInt(999); // Overwrite record at byte 100 directly"
-   },
-   {
-    "title": "Object Serialization & the transient Keyword",
-    "summary": "Object persistence, network transmission, and protecting sensitive state.",
-    "points": [
-     "Serialization: Converting an in-memory object graph into a byte stream via ObjectOutputStream.writeObject().",
-     "Deserialization: Restoring the object from byte stream via ObjectInputStream.readObject().",
-     "Serializable Interface: Marker interface in java.io requiring zero methods.",
-     "transient Keyword: Prevents sensitive fields (passwords, PINs, keys) from being written to byte streams."
-    ],
-    "formulas": [
-     "transient Behavior: During deserialization, transient fields take their default values (null, 0, false)."
-    ],
-    "example": "class User implements Serializable {\n  String username;\n  transient String password;\n}"
+    "example": "A shared `Queue` object with synchronized `produce()` and `consume()` methods preventing buffer overflow or underflow."
    }
   ],
+  "formulas": [
+   "wait(); // Releases lock, suspends thread",
+   "notify(); // Wakes single waiting thread",
+   "notifyAll(); // Wakes all waiting threads"
+  ],
   "mustKnow": [
-   "Character streams handle 16-bit Unicode characters; Byte streams handle 8-bit raw bytes",
-   "BufferedReader wraps FileReader to provide efficient buffering and the readLine() method",
-   "RandomAccessFile supports both reading and writing at arbitrary positions using seek(long pos)",
-   "An object can only be serialized if its class implements the java.io.Serializable marker interface",
-   "Fields marked with the transient keyword are omitted during serialization and restore as null or 0"
+   "Explain Inter-Thread Communication in Java using wait(), notify(), and notifyAll().",
+   "Why are wait() and notify() declared in Object class instead of Thread class?",
+   "Write a complete Java program to implement the Producer-Consumer problem with synchronization.",
+   "What is the cause of IllegalMonitorStateException?"
+  ],
+  "examTips": [
+   "Always enclose `wait()` in a `while` loop, NOT an `if` statement, to guard against spurious wakeups.",
+   "Explicitly mention that `wait()` releases the monitor, which is why it can only be called inside a synchronized block."
   ]
  },
  "NOTE-OOPJ-09": {
   "noteId": "NOTE-OOPJ-09",
   "subjectId": "OOPJ",
-  "chapter": 4,
-  "title": "Java Unit 4: Collections Framework Guide",
-  "pageCount": 46,
+  "chapter": 3,
+  "title": "Java Unit 3: Question Bank with Model Answers",
+  "pageCount": 15,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive textbook guide for Unit 4 (Collections & Generics). Covers the Java Collections Framework (JCF) architecture, List (ArrayList vs LinkedList vs Vector), Set (HashSet vs LinkedHashSet vs TreeSet), Map (HashMap vs TreeMap), Iterators (Iterator vs ListIterator), Generics, and sorting using Comparable vs Comparator.",
+  "overview": "Official MGIT CSE Department examination solutions for Unit 3 question bank. Includes model answers for exception handling, multithreading, thread synchronization, custom exceptions, and producer-consumer implementations.",
   "topics": [
    {
-    "title": "Java Collections Framework Architecture",
-    "summary": "Unified hierarchy of interfaces and classes for storing and manipulating groups of objects.",
+    "title": "Exception Handling Question Bank Solutions",
+    "summary": "Worked answers for 1-mark and 5-mark university questions on exceptions.",
     "points": [
-     "Iterable Root: Base interface allowing collections to be targets of the enhanced for-each loop.",
-     "Collection Interface: Common root for List, Set, and Queue declaring add(), remove(), size(), contains(), clear().",
-     "List Interface: Ordered sequence, indexed access (0 to n-1), permits duplicate elements.",
-     "Set Interface: Mathematical set; unordered, guarantees no duplicate elements.",
-     "Map Interface: Independent key-value mapping hierarchy; unique keys mapping to values."
+     "Multiple Catch Blocks: Illustrating catch ordering from specific subclass to generic superclass.",
+     "Custom Exception Example: `AgeNotValidException` checking voter eligibility with full try-catch code.",
+     "Throws Declaration: Method declaring `throws IOException, ClassNotFoundException`."
     ],
     "formulas": [
-     "Hierarchy: Iterable -> Collection -> [List (ordered), Set (unique), Queue (FIFO)]; Map<K,V> (separate hierarchy)"
+     "if (age < 18) throw new InvalidAgeException(\"Not eligible\");"
     ],
-    "example": "List<String> list = new ArrayList<>();\nSet<Integer> set = new HashSet<>();\nMap<String, Integer> map = new HashMap<>();"
+    "example": "A voter registration check validating age and throwing a custom `InvalidAgeException`."
    },
    {
-    "title": "List Implementations: ArrayList vs. LinkedList vs. Vector",
-    "summary": "Detailed performance comparison of dynamic arrays vs linked node lists.",
+    "title": "Multithreading Question Bank Solutions",
+    "summary": "Worked answers for multithreading code and theory questions.",
     "points": [
-     "ArrayList: Dynamic resizable array; fast O(1) random access by index; slow O(n) insertions/deletions in the middle.",
-     "LinkedList: Doubly-linked list nodes; fast O(1) insertions/deletions at head and tail; slow O(n) index access.",
-     "Vector: Legacy dynamic array with synchronized methods; thread-safe but slower due to locking overhead."
+     "Runnable Implementation: Step-by-step code defining a class implementing `Runnable`, instantiating `Thread`, and calling `start()`.",
+     "Bank Account Synchronization: Complete code demonstrating synchronized `withdraw()` preventing negative balance.",
+     "Thread Priority Demo: Setting and displaying thread priorities for three concurrent threads."
     ],
     "formulas": [
-     "Time Complexity: ArrayList.get(i) = O(1); LinkedList.addFirst(e) = O(1)"
+     "Thread t = new Thread(new MyRunnable()); t.start();",
+     "public synchronized void withdraw(int amt) { ... }"
     ],
-    "example": "LinkedList<String> queue = new LinkedList<>(); queue.addFirst(\"Job1\"); queue.removeLast();"
-   },
-   {
-    "title": "Set & Map Hierarchies: HashSet, TreeSet, HashMap, TreeMap",
-    "summary": "Hash tables vs balanced red-black trees for unique collections and key-value lookups.",
-    "points": [
-     "HashSet / HashMap: Hash-table backed; O(1) average lookup/insertion; unordered; allows 1 null key.",
-     "TreeSet / TreeMap: Red-Black tree backed; O(log n) lookup/insertion; strictly sorted in natural or comparator order; no null keys.",
-     "LinkedHashSet / LinkedHashMap: Maintains doubly-linked list of entries; preserves insertion sequence."
-    ],
-    "formulas": [
-     "Lookup Cost: HashSet / HashMap = O(1); TreeSet / TreeMap = O(log n)"
-    ],
-    "example": "Map<String, Integer> map = new HashMap<>(); map.put(\"Java\", 100);\nSet<String> set = new TreeSet<>(map.keySet()); // Sorted keys"
-   },
-   {
-    "title": "Iterators & Sorting: Comparable vs. Comparator",
-    "summary": "Safe collection traversal and multi-strategy object sorting.",
-    "points": [
-     "Iterator: Forward-only traversal for all collections (hasNext(), next(), remove()).",
-     "ListIterator: Bidirectional traversal exclusively for Lists (hasPrevious(), previous(), set(), add()).",
-     "Comparable Interface (java.lang): Defines single natural ordering via compareTo(T o); modifies original class.",
-     "Comparator Interface (java.util): Defines multiple external sorting strategies via compare(T o1, T o2); leaves original class untouched.",
-     "Collections.sort(): Stable sort implementing modified TimSort algorithm."
-    ],
-    "formulas": [
-     "Comparable: int compareTo(T other); Comparator: int compare(T o1, T o2)"
-    ],
-    "example": "Collections.sort(students); // Comparable\nstudents.sort((s1, s2) -> s1.name.compareTo(s2.name)); // Comparator"
+    "example": "A bank account transaction program where two threads simulate simultaneous withdrawals on a shared account."
    }
   ],
+  "formulas": [
+   "class MyException extends Exception { ... }",
+   "class MyThread implements Runnable { public void run() { ... } }"
+  ],
   "mustKnow": [
-   "ArrayList is backed by a dynamic array (O(1) access); LinkedList is backed by doubly-linked nodes (O(1) insert/delete)",
-   "HashSet and HashMap provide O(1) performance; TreeSet and TreeMap provide O(log n) sorted performance",
-   "Iterator is forward-only for all collections; ListIterator is bidirectional exclusively for List",
-   "Comparable modifies the original class (compareTo); Comparator is external and supports multiple sort strategies",
-   "Modifying a collection during an enhanced for-loop throws ConcurrentModificationException; use Iterator.remove() instead"
+   "Write a complete Java program demonstrating multiple catch blocks.",
+   "Write a Java program to create a custom exception class and throw it.",
+   "Write a Java program to demonstrate thread synchronization using a synchronized method.",
+   "Explain thread life cycle with states and transitions."
+  ],
+  "examTips": [
+   "Ensure custom exception extends `Exception` and calls `super(message)` in its constructor.",
+   "Show both classes (the custom exception and the tester class with `main`) when answering custom exception questions."
   ]
  },
  "NOTE-OOPJ-10": {
   "noteId": "NOTE-OOPJ-10",
   "subjectId": "OOPJ",
   "chapter": 4,
-  "title": "Java Unit 4: Question Bank with Problem Solutions",
-  "pageCount": 36,
+  "title": "Java Unit 4: Files, Streams, Generics & Collections Master Notes",
+  "pageCount": 35,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "University examination model solutions bank for Unit 4. Features complete working Java programs for file copying with BufferedReader/BufferedWriter, word counting in text files, Scanner with LinkedList, unique word extraction with HashSet and TreeSet, and custom object sorting using Comparator.",
+  "overview": "Comprehensive faculty lecture notes from MGIT CSE covering Unit 4. Details Java I/O streams architecture (`java.io`), byte streams vs character streams, buffered I/O, file reading/writing, serialization, generics, and collections framework.",
   "topics": [
    {
-    "title": "Solved File I/O & Streams Problems",
-    "summary": "Complete code implementations for file copying, buffered I/O, and file metadata operations.",
+    "title": "I/O Stream Hierarchies: Byte vs. Character Streams",
+    "summary": "How Java abstracts input and output data transfer via stream pipelines.",
     "points": [
-     "File Copy Program: Using try-with-resources with BufferedReader and BufferedWriter to copy text files line-by-line.",
-     "Word Count Program: Reading text file, counting lines, words, and characters with whitespace regex tokenization.",
-     "RandomAccessFile Solution: Storing employee records, calculating byte offsets, and updating record fields via seek()."
+     "Stream Concept: An ordered sequence of data flowing from a source (InputStream/Reader) to a destination (OutputStream/Writer).",
+     "Byte Streams: Handle raw 8-bit bytes (binary data, images, executables). Root classes: `java.io.InputStream` and `java.io.OutputStream`. Key classes: `FileInputStream`, `FileOutputStream`.",
+     "Character Streams: Handle 16-bit Unicode characters (text files). Root classes: `java.io.Reader` and `java.io.Writer`. Key classes: `FileReader`, `FileWriter`.",
+     "Standard I/O Streams: `System.in` (InputStream), `System.out` (PrintStream), `System.err` (PrintStream)."
     ],
     "formulas": [
-     "File Copying Template: while ((line = br.readLine()) != null) { bw.write(line); bw.newLine(); }"
+     "Byte Stream: InputStream / OutputStream (8-bit bytes)",
+     "Char Stream: Reader / Writer (16-bit Unicode)"
     ],
-    "example": "public class FileCopyProgram { ... } // Full 10-mark university implementation"
+    "example": "Using `FileInputStream` to read binary audio data and `FileReader` to read English/Unicode text files."
    },
    {
-    "title": "Solved Collections & Generics Problems",
-    "summary": "Working code solutions for collection hierarchies, sorting, and generics.",
+    "title": "Buffered I/O & File Operations",
+    "summary": "Optimizing disk I/O performance via in-memory buffering and file management.",
     "points": [
-     "Scanner with LinkedList: Reading student names using Scanner and storing into LinkedList with addFirst() and addLast().",
-     "Unique Word Extraction with HashSet & TreeSet: Parsing text passage and outputting unordered vs alphabetically sorted unique words.",
-     "Comparable vs Comparator Student Sorter: Student class implementing Comparable (sort by roll number) and separate Comparator (sort by name and marks)."
+     "Buffering Concept: `BufferedReader` and `BufferedWriter` reduce expensive physical disk reads by loading memory blocks (default 8KB buffer).",
+     "`readLine()` Method: Reads an entire line of text until newline character `\\n`.",
+     "File Class: `java.io.File` represents file/directory pathnames; methods: `exists()`, `isFile()`, `isDirectory()`, `length()`, `delete()`, `mkdir()`."
     ],
     "formulas": [
-     "Comparator Sorting Syntax: Collections.sort(list, (a, b) -> a.getName().compareTo(b.getName()))"
+     "BufferedReader br = new BufferedReader(new FileReader(\"data.txt\"));",
+     "String line; while((line = br.readLine()) != null) { ... }"
     ],
-    "example": "class StudentSortDemo { ... } // Complete 10-mark university implementation"
+    "example": "Copying a text file line-by-line using `BufferedReader` and `BufferedWriter`."
+   },
+   {
+    "title": "Object Serialization & Transient Keyword",
+    "summary": "Converting object state into a byte stream for storage or network transmission.",
+    "points": [
+     "Serializable Interface: Marker interface (zero methods) in `java.io.Serializable` signaling JVM that class is eligible for serialization.",
+     "Streams: `ObjectOutputStream.writeObject(obj)` serializes; `ObjectInputStream.readObject()` deserializes.",
+     "Transient Keyword: Variables marked `transient` are skipped during serialization, restoring to default values upon deserialization (useful for passwords)."
+    ],
+    "formulas": [
+     "oos.writeObject(studentObj); // Serialization",
+     "Student s = (Student) ois.readObject(); // Deserialization"
+    ],
+    "example": "Serializing a `User` object while marking `private transient String password;` to protect sensitive credentials."
    }
   ],
+  "formulas": [
+   "FileInputStream fis = new FileInputStream(\"input.txt\");",
+   "BufferedReader br = new BufferedReader(new FileReader(\"test.txt\"));",
+   "class Student implements Serializable { transient int pin; }"
+  ],
   "mustKnow": [
-   "Byte streams use InputStream/OutputStream; Character streams use Reader/Writer",
-   "Serialization stores object graphs; transient fields restore as null or 0 during deserialization",
-   "HashMap allows one null key; TreeMap does not allow null keys",
-   "Generics shifts type verification to compile-time, eliminating runtime ClassCastExceptions"
+   "Differentiate between Byte Streams and Character Streams with class hierarchy diagrams.",
+   "Explain the purpose of BufferedReader and BufferedWriter with a file copy program.",
+   "What is Object Serialization? Explain the role of Serializable interface and transient keyword.",
+   "Write a Java program to count characters, words, and lines in a text file."
+  ],
+  "examTips": [
+   "In streams questions, draw the four root classes: `InputStream`, `OutputStream`, `Reader`, and `Writer`.",
+   "Always close I/O streams inside a `finally` block or use Java 7 try-with-resources (`try(FileReader fr = ...)`)."
   ]
  },
  "NOTE-OOPJ-11": {
   "noteId": "NOTE-OOPJ-11",
   "subjectId": "OOPJ",
-  "chapter": 5,
-  "title": "Java Unit 5: Complete Lecture Notes",
-  "pageCount": 48,
+  "chapter": 4,
+  "title": "Java Unit 4: String Handling, Character Streams & Collections",
+  "pageCount": 41,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive textbook guide for Unit 5 (GUI Programming with Swing & Event Handling). Covers AWT limitations, Swing lightweight architecture, Model-View-Controller (MVC) pattern, top-level and intermediate containers, Swing UI components, Layout Managers (FlowLayout, BorderLayout, GridLayout), the Delegation Event Model, Listeners, Adapter Classes, and JDBC architecture.",
+  "overview": "Detailed lecture notes covering String classes (`String`, `StringBuffer`, `StringBuilder`), memory optimization in the String Constant Pool, Generics syntax, and Collections Framework data structures (`List`, `Set`, `Map`).",
   "topics": [
    {
-    "title": "AWT Limitations vs. Swing Advantages",
-    "summary": "Why the Java community transitioned from native AWT peers to pure Java Swing lightweight controls.",
+    "title": "String Immutability & String Constant Pool",
+    "summary": "Memory architecture and immutable design of Java String objects.",
     "points": [
-     "AWT Heavyweight Peers: AWT components (Button, Frame) wrap underlying native C/C++ OS controls, creating OS window handle leaks.",
-     "Swing Lightweight Components: 100% pure Java components painted directly onto canvas surfaces without native OS peer dependencies.",
-     "Pluggable Look-and-Feel (PLAF): Swing interfaces can adopt platform themes (Windows, Metal, Nimbus, Motif) dynamically at runtime.",
-     "Rich Component Set: Swing introduces JTable, JTree, JTabbedPane, JColorChooser, and JToolTip."
+     "String Immutability: Once created in memory, the contents of a `String` object cannot be altered. Modifications create a new String instance.",
+     "String Constant Pool (SCP): Special memory area in heap caching unique string literals. `String s = \"hello\";` reuses pool object.",
+     "Key Methods: `length()`, `charAt()`, `substring()`, `equals()` (content equality) vs `==` (reference equality), `compareTo()`."
     ],
     "formulas": [
-     "Component Naming: AWT Button/Frame vs Swing JButton/JFrame (prefixed with 'J')"
+     "String s1 = \"abc\"; String s2 = \"abc\"; // s1 == s2 is true (SCP)",
+     "String s3 = new String(\"abc\"); // s1 == s3 is false (separate heap object)"
     ],
-    "example": "JFrame frame = new JFrame(\"Swing Window\");\nJButton btn = new JButton(\"Click\");"
+    "example": "`s.concat(\" world\")` does not modify `s`; `s = s.concat(\" world\")` reassigns `s` to the newly allocated object."
    },
    {
-    "title": "Swing Architecture & Model-View-Controller (MVC)",
-    "summary": "Decoupling data models from visual rendering and user interaction.",
+    "title": "StringBuffer vs. StringBuilder",
+    "summary": "Mutable character sequences for high-frequency string concatenation.",
     "points": [
-     "Model: Maintains component state and data (e.g. ButtonModel, TableModel).",
-     "View: Renders visual UI appearance on screen.",
-     "Controller: Handles user gestures (mouse clicks, keystrokes) and updates the Model.",
-     "UI Delegate in Swing: Combines View and Controller into a single ComponentUI delegate object."
+     "Mutability: Both `StringBuffer` and `StringBuilder` allow in-place character updates without reallocating objects.",
+     "Thread Safety: `StringBuffer` methods are `synchronized` (thread-safe, slower); `StringBuilder` is unsynchronized (faster, single-threaded).",
+     "Methods: `append()`, `insert()`, `delete()`, `reverse()`, `capacity()`."
     ],
     "formulas": [
-     "Swing Model-Delegate Pattern: Model <---> UI Delegate (View + Controller)"
+     "StringBuffer: Thread-safe, synchronized, higher overhead",
+     "StringBuilder: Fast, unsynchronized, preferred in single threads"
     ],
-    "example": "DefaultTableModel model = new DefaultTableModel(); JTable table = new JTable(model);"
+    "example": "Reversing a string: `new StringBuilder(str).reverse().toString()` in O(n) without manual loops."
    },
    {
-    "title": "Layout Managers: FlowLayout, BorderLayout & GridLayout",
-    "summary": "Automatic positioning, sizing, and responsive component reflow.",
+    "title": "Java Collections Framework Architecture",
+    "summary": "Unified architecture for representing and manipulating collections of objects.",
     "points": [
-     "FlowLayout: Default for JPanel; arranges components in a directional row; wraps to next row on window resize.",
-     "BorderLayout: Default for JFrame; divides container into 5 regions: NORTH, SOUTH, EAST, WEST, and CENTER.",
-     "GridLayout: Arranges components into a rectangular matrix of equal-sized rows and columns.",
-     "Nesting Panels: Combining panels with different layout managers achieves complex responsive UIs."
+     "Hierarchy: Root interface `java.util.Collection` extended by `List`, `Set`, and `Queue`. `Map` is an independent key-value hierarchy.",
+     "List Interface: Ordered sequence allowing duplicates. `ArrayList` (dynamic resizable array, fast random access O(1)) vs `LinkedList` (doubly-linked list, fast insertions/deletions O(1)).",
+     "Set Interface: Unordered collection prohibiting duplicate elements. `HashSet` (hash table O(1), no order) vs `TreeSet` (Red-Black tree, sorted O(log n)).",
+     "Map Interface: Key-value mapping. `HashMap` (unsorted O(1)) vs `TreeMap` (sorted by keys O(log n)).",
+     "Iteration: Universal traversal via `Iterator` (`hasNext()`, `next()`, `remove()`)."
     ],
     "formulas": [
-     "BorderLayout Cardinal Directions: add(comp, BorderLayout.NORTH); add(comp, BorderLayout.CENTER);"
+     "Collection -> List (ArrayList, LinkedList) | Set (HashSet, TreeSet)",
+     "Map -> HashMap, TreeMap (Key -> Value, unique keys)"
     ],
-    "example": "JPanel p = new JPanel(new GridLayout(4, 4, 5, 5)); // 4x4 calculator grid"
-   },
-   {
-    "title": "The Delegation Event Model & Adapter Classes",
-    "summary": "Standard event-driven architecture and avoiding boilerplate with adapters.",
-    "points": [
-     "Event Source: GUI component generating events (JButton, JTextField).",
-     "Event Object: Encapsulates event data (ActionEvent, MouseEvent, KeyEvent).",
-     "Event Listener: Interface defining handler callback methods (ActionListener, MouseListener).",
-     "Adapter Classes: Abstract classes providing empty method implementations (MouseAdapter, KeyAdapter) so subclasses override only required methods."
-    ],
-    "formulas": [
-     "Workflow: Event Source --registers--> Event Listener; User Action --triggers--> listener.actionPerformed(e)"
-    ],
-    "example": "btn.addActionListener(e -> System.out.println(\"Button Clicked!\"));"
+    "example": "Using `HashMap<Integer, String> map = new HashMap<>(); map.put(101, \"Alice\");` for O(1) student record retrieval."
    }
   ],
+  "formulas": [
+   "String.valueOf(data)",
+   "sb.append(\"text\").reverse();",
+   "List<String> list = new ArrayList<>();",
+   "Set<Integer> set = new HashSet<>();",
+   "Map<K, V> map = new HashMap<>();"
+  ],
   "mustKnow": [
-   "AWT components are heavyweight (native OS peers); Swing components are lightweight (100% pure Java)",
-   "Swing utilizes a Model-Delegate architecture, combining the View and Controller into a ComponentUI delegate",
-   "BorderLayout is the default layout for JFrame; FlowLayout is the default layout for JPanel",
-   "GridLayout forces all cells to have identical width and height regardless of component preferred size",
-   "Adapter classes provide empty implementations of listener interfaces, eliminating boilerplate empty methods"
+   "Compare String, StringBuffer, and StringBuilder in detail with a comparison table.",
+   "Explain the difference between == operator and equals() method for String comparison.",
+   "Explain the Java Collections Framework hierarchy with a block diagram.",
+   "Differentiate between ArrayList and LinkedList with internal data structure details.",
+   "Differentiate between HashSet and TreeSet with time complexity."
+  ],
+  "examTips": [
+   "In String questions, explicitly contrast the String Constant Pool vs Heap memory.",
+   "In Collections questions, always mention time complexities: ArrayList get() is O(1) whereas LinkedList get() is O(n)."
   ]
  },
  "NOTE-OOPJ-12": {
   "noteId": "NOTE-OOPJ-12",
   "subjectId": "OOPJ",
-  "chapter": 5,
-  "title": "Java Unit 5: Swing GUI & Event Handling Basics",
-  "pageCount": 30,
+  "chapter": 4,
+  "title": "Java Unit 4: Generics, Wildcards & Event Handling Foundations",
+  "pageCount": 57,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Practical tutorial guide for building Swing graphical applications. Features detailed explanations of JMenu systems, action listeners, dialog boxes, mouse drag listeners, keyboard adapters, and JDBC database connection workflows.",
+  "overview": "Faculty lecture handouts authored by Vedavathi Kotagiri [Asst. Prof, MGIT CSE]. Covers Generics type safety, bounded type parameters, wildcard arguments, and foundations of the Delegation Event Model, Event Classes, Event Listeners, and Adapter classes.",
   "topics": [
    {
-    "title": "Swing Menus & Dialog Boxes",
-    "summary": "Building desktop menus using JMenuBar, JMenu, JMenuItem, and standard dialogs.",
+    "title": "Generics & Bounded Type Parameters",
+    "summary": "Compile-time type safety preventing `ClassCastException` and eliminating explicit casting.",
     "points": [
-     "JMenuBar: Root menu container set on JFrame via setJMenuBar().",
-     "JMenu: Dropdown menu headers (File, Edit, Help).",
-     "JMenuItem: Individual clickable command items inside a JMenu.",
-     "JOptionPane: Standard modal dialogs for messages, confirmations, and user input."
+     "Motivation: Prior to Generics, collections held raw `Object` references requiring error-prone explicit typecasting at runtime.",
+     "Generic Classes & Methods: Declared with type parameter `<T>`, enabling reuse with any reference type (`MyClass<T>`).",
+     "Bounded Types: Restricting type parameters using `extends` (`<T extends Number>`), allowing only subclasses of specified boundary.",
+     "Wildcards: `<?>` (unbounded), `<? extends Number>` (upper-bounded), `<? super Integer>` (lower-bounded)."
     ],
     "formulas": [
-     "Menu Hierarchy: JFrame -> JMenuBar -> JMenu -> JMenuItem"
+     "class Box<T> { private T val; public void set(T v) { val = v; } }",
+     "void printList(List<? extends Number> list) // Accepts List<Integer>, List<Double>"
     ],
-    "example": "JMenuBar mb = new JMenuBar(); JMenu f = new JMenu(\"File\"); f.add(new JMenuItem(\"Open\")); mb.add(f); setJMenuBar(mb);"
+    "example": "A generic mathematical calculator restricting types using `<T extends Number>`."
    },
    {
-    "title": "Mouse & Keyboard Event Handling",
-    "summary": "Capturing cursor coordinates, mouse clicks, and keyboard strokes.",
+    "title": "Delegation Event Model Architecture",
+    "summary": "The standard modern event handling paradigm in Java GUI applications.",
     "points": [
-     "MouseListener: mouseClicked, mousePressed, mouseReleased, mouseEntered, mouseExited.",
-     "MouseMotionListener: mouseMoved, mouseDragged (tracks coordinate gestures).",
-     "KeyListener: keyPressed, keyReleased, keyTyped.",
-     "Adapter Classes: MouseAdapter and KeyAdapter allow selective method implementation."
+     "Three Core Components: (1) Event Source (GUI component like `JButton`); (2) Event Object (encapsulating event information like `ActionEvent`); (3) Event Listener (interface defining callback methods like `ActionListener`).",
+     "Registration: Event source maintains a listener list and registers listeners using `addXxxListener(this)`.",
+     "Event Dispatching: User action creates event object; source invokes matching method on all registered listeners."
     ],
     "formulas": [
-     "Coordinate Extraction: e.getX() and e.getY() return relative cursor coordinates."
+     "Source --(generates EventObject)--> Listener.eventCallback(e)",
+     "button.addActionListener(listenerInstance);"
     ],
-    "example": "panel.addMouseMotionListener(new MouseMotionAdapter() { public void mouseMoved(MouseEvent e) { ... } });"
+    "example": "Clicking a `JButton` generates `ActionEvent`, invoking `actionPerformed(ActionEvent e)` in registered listener."
    },
    {
-    "title": "Java Database Connectivity (JDBC) Workflow",
-    "summary": "Five standard steps for connecting Java applications to relational databases.",
+    "title": "Event Classes, Listeners & Adapter Classes",
+    "summary": "Mapping user input to event classes and simplifying listeners using adapter classes.",
     "points": [
-     "Step 1: Load Driver via Class.forName(\"com.mysql.cj.jdbc.Driver\").",
-     "Step 2: Establish Connection via DriverManager.getConnection(url, user, pass).",
-     "Step 3: Create Statement via con.createStatement().",
-     "Step 4: Execute SQL via stmt.executeQuery() or stmt.executeUpdate().",
-     "Step 5: Process ResultSet and close resources."
+     "Key Event/Listener Pairs: `ActionEvent` -> `ActionListener` (`actionPerformed`), `MouseEvent` -> `MouseListener` / `MouseMotionListener`, `KeyEvent` -> `KeyListener` (`keyPressed`, `keyReleased`, `keyTyped`), `WindowEvent` -> `WindowListener`.",
+     "Adapter Classes: Abstract classes providing empty default implementations for listener interfaces with multiple methods (`MouseAdapter`, `KeyAdapter`, `WindowAdapter`).",
+     "Subclassing: Programmers extend the adapter class and override only the specific methods needed, eliminating empty boilerplate methods."
     ],
     "formulas": [
-     "JDBC Drivers: Type 1 (ODBC Bridge), Type 2 (Native API), Type 3 (Network Protocol), Type 4 (Pure Java Thin Driver)"
+     "class MyMouseHandler extends MouseAdapter { public void mouseClicked(MouseEvent e) { ... } }",
+     "Adapter eliminates implementing 5 methods in MouseListener"
     ],
-    "example": "Connection conn = DriverManager.getConnection(\"jdbc:mysql://localhost/db\", \"root\", \"pass\");"
+    "example": "Handling window close event by extending `WindowAdapter` and overriding only `windowClosing(WindowEvent e)`."
    }
   ],
+  "formulas": [
+   "class GenericClass<T> { ... }",
+   "button.addActionListener(e -> { ... });",
+   "class MyWinAdapter extends WindowAdapter { ... }"
+  ],
   "mustKnow": [
-   "Type 4 Thin Driver is the industry standard: 100% pure Java, connects directly via database TCP/IP sockets",
-   "Swing components should always be initialized on the Event Dispatch Thread (EDT) via SwingUtilities.invokeLater()",
-   "JOptionPane.showMessageDialog() displays standard information, warning, and error dialogs",
-   "MouseMotionListener is required to track mouse dragging and movement coordinates"
+   "What are Generics in Java? Explain bounded types and wildcards with examples.",
+   "Draw and explain the Delegation Event Model architecture.",
+   "What are adapter classes in Java? Explain their significance with WindowAdapter.",
+   "Write a Java program to handle mouse events and display cursor coordinates."
+  ],
+  "examTips": [
+   "When explaining Delegation Event Model, draw the three-box diagram: Event Source -> Event Object -> Event Listener.",
+   "Emphasize that Adapter classes exist ONLY for listener interfaces that declare more than one method."
   ]
  },
  "NOTE-OOPJ-13": {
   "noteId": "NOTE-OOPJ-13",
   "subjectId": "OOPJ",
-  "chapter": 5,
-  "title": "Java Unit 5: Question Bank with Model Answers",
-  "pageCount": 38,
+  "chapter": 4,
+  "title": "Java Unit 4: Question Bank with Problem Solutions",
+  "pageCount": 39,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "University examination model solutions bank for Unit 5. Features full, runnable Java code for a functional 4-operation Swing Calculator GUI, comprehensive comparison tables for AWT vs Swing, Layout Managers, and JDBC Driver Types (1 to 4), plus interactive Mouse and Keyboard event adapter programs.",
+  "overview": "Official MGIT CSE Department examination solutions for Unit 4 question bank. Features complete worked solutions for 1-mark definitions and 5-mark programming problems covering file copying, character counts, keyboard/mouse event handling, and generic collections.",
   "topics": [
    {
-    "title": "Solved Calculator GUI Problem (10 Marks)",
-    "summary": "Complete, working university examination implementation of a Swing desktop calculator.",
+    "title": "File I/O & Streams Question Bank Solutions",
+    "summary": "Complete code models for stream processing and file manipulation.",
     "points": [
-     "Layout Architecture: BorderLayout with JTextField in NORTH and 4x4 GridLayout of JButtons in CENTER.",
-     "Event Handling: Implements ActionListener to process digits, decimal points, operators (+, -, *, /), and clear (C).",
-     "Arithmetic Engine: Handles floating-point calculations and zero-division protection."
+     "File Copy Program: Reading bytes from `FileInputStream` and writing to `FileOutputStream` using buffer byte arrays.",
+     "Word & Line Counting: Using `BufferedReader.readLine()` and `String.split(\"\\\\s+\")` to count characters, words, and lines.",
+     "Serialization Model: Student class implementing `Serializable`, demonstrating `ObjectOutputStream` and `ObjectInputStream`."
     ],
     "formulas": [
-     "Full 10-Mark University Blueprint: UI Class Definition + Component Layout + ActionListener Implementation + Main Method"
+     "int b; while((b = fis.read()) != -1) fos.write(b);",
+     "int words = line.trim().split(\"\\\\s+\").length;"
     ],
-    "example": "public class CalculatorGUI extends JFrame implements ActionListener { ... }"
+    "example": "A complete Java utility that reads a source file and writes an exact replica to a destination file path."
    },
    {
-    "title": "Solved Comparative Questions & JDBC Drivers",
-    "summary": "Academic comparison tables and JDBC driver evaluation.",
+    "title": "GUI Event Handling Question Bank Solutions",
+    "summary": "Model GUI programs implementing event listeners and adapter classes.",
     "points": [
-     "AWT vs Swing Comparison Table: Detailed evaluation of component weight, look-and-feel, speed, and architecture.",
-     "Layout Managers Comparison Table: Detailed evaluation of FlowLayout, BorderLayout, and GridLayout.",
-     "JDBC Driver Types Matrix: Side-by-side comparison of Type 1, Type 2, Type 3, and Type 4 drivers on purity, performance, installation, and architecture."
+     "Mouse Coordinates Tracker: Implementing `MouseMotionListener` and displaying X, Y coordinates in a label on `mouseMoved`.",
+     "Button Click Action: Appending text to a text area when buttons are clicked using `ActionListener`.",
+     "Key Event Demo: Detecting arrow keys and character keystrokes with `KeyListener`."
     ],
     "formulas": [
-     "Type 4 Driver is 100% Pure Java, requires zero client install, and offers maximum throughput."
+     "label.setText(\"X: \" + e.getX() + \", Y: \" + e.getY());",
+     "public void actionPerformed(ActionEvent e) { ... }"
     ],
-    "example": "Class.forName(\"com.mysql.cj.jdbc.Driver\");"
+    "example": "A GUI window displaying 'Key Pressed: A' whenever the user types on the keyboard."
    }
   ],
+  "formulas": [
+   "fis.read(buffer)",
+   "e.getX(), e.getY()",
+   "e.getActionCommand()"
+  ],
   "mustKnow": [
-   "The Delegation Event Model separates the event source from event listener objects",
-   "Adapter classes prevent writing empty method stubs when implementing multi-method listener interfaces",
-   "Type 4 Thin JDBC Driver executes direct socket I/O without native C client libraries",
-   "Swing components are lightweight because they paint directly into graphics buffers rather than using OS window peers"
+   "Write a Java program to copy one file to another file using FileInputStream and FileOutputStream.",
+   "Write a Java program to count the number of characters, words, and lines in a text file.",
+   "Write a Java program to handle mouse events using MouseListener and MouseMotionListener.",
+   "Explain the Delegation Event Model with an illustrative GUI program."
+  ],
+  "examTips": [
+   "In file handling programs, handle `FileNotFoundException` and `IOException` explicitly.",
+   "For mouse coordinates, remember `e.getX()` and `e.getY()`."
   ]
  },
  "NOTE-OOPJ-14": {
   "noteId": "NOTE-OOPJ-14",
   "subjectId": "OOPJ",
-  "chapter": 1,
-  "title": "Java OOP Concept Overview & Presentation Slides",
-  "pageCount": 24,
+  "chapter": 5,
+  "title": "Java Unit 5: Complete Swing GUI, Event Model & JDBC",
+  "pageCount": 23,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Classroom presentation slide deck summarizing core Object-Oriented Programming paradigms, Java history, language syntax fundamentals, primitive types, JVM execution stack, and class modeling.",
+  "overview": "Comprehensive faculty lecture notes authored by Vedavathi Kotagiri [Asst. Prof, MGIT CSE]. Covers Applet lifecycle (legacy university PYQ topic), Swing architecture, Model-View-Controller (MVC) pattern, lightweight vs. heavyweight components, Swing container hierarchies, Layout Managers, and JDBC 4-tier architecture.",
   "topics": [
    {
-    "title": "Java Language History & Design Goals",
-    "summary": "Historical genesis of Java by James Gosling at Sun Microsystems and its foundational architectural goals.",
+    "title": "Applets Architecture & Life Cycle",
+    "summary": "Review of Java applet execution in browser sandboxes (historical university syllabus topic).",
     "points": [
-     "Originally named Oak in 1991; officially released as Java 1.0 in 1995.",
-     "Primary Goal: Platform independence across consumer electronics and the World Wide Web.",
-     "Elimination of Pointers: Memory safety and zero segmentation faults via JVM garbage collection.",
-     "Unified Type System: Primitives for performance, Wrapper classes and Object for polymorphism."
+     "Applet vs Application: Applications execute via `main()` locally; applets run within a browser/applet viewer without `main()`.",
+     "5 Lifecycle Methods: `init()` (initializes resources), `start()` (starts/resumes execution), `paint(Graphics g)` (renders display), `stop()` (suspends execution), `destroy()` (cleans resources prior to unloading).",
+     "Parameter Passing: Reading `<param name=\"title\" value=\"Java\">` tags via `getParameter(\"title\")`."
     ],
     "formulas": [
-     "Design Philosophy: 'Write Once, Run Anywhere' (WORA)"
+     "Applet Life Cycle: init() -> start() -> paint() <-> stop() -> destroy()",
+     "String param = getParameter(\"paramName\");"
     ],
-    "example": "System.out.println(\"Hello World!\");"
+    "example": "A web banner applet initializing fonts in `init()`, starting animation thread in `start()`, and rendering in `paint()`."
    },
    {
-    "title": "Core Syntax & Primitive Types Quick Reference",
-    "summary": "Concise quick reference covering primitive sizes, default values, and control flow operators.",
+    "title": "Swing Architecture, MVC Pattern & AWT Comparison",
+    "summary": "Modern Java Foundation Classes GUI architecture and design patterns.",
     "points": [
-     "Integer types: byte (1B, -128..127), short (2B), int (4B), long (8B).",
-     "Floating-point types: float (4B, single precision), double (8B, double precision).",
-     "Character & Boolean: char (2B Unicode, 0..65535), boolean (true/false).",
-     "Reference types: Classes, Interfaces, Arrays (default value null)."
+     "AWT Limitations: Heavyweight components reliant on native OS GUI peers; platform-dependent appearance and higher resource consumption.",
+     "Swing Advantages: Lightweight, 100% pure Java, pluggable look-and-feel (Metal, Windows, Motif), rich component set (tables, trees, tabbed panes).",
+     "MVC Architecture: Model (stores state and data), View (renders visual display), Controller (handles user input and updates model). In Swing, View and Controller are combined into a Component UI delegate."
     ],
     "formulas": [
-     "Default Values: numeric = 0, boolean = false, reference = null"
+     "AWT = Heavyweight (Native Peers) | Swing = Lightweight (Pure Java)",
+     "MVC: Model (Data) <-> View (Rendering) <-> Controller (Events)"
     ],
-    "example": "int count = 0; boolean active = false; String title = null;"
+    "example": "A `JButton` uses a data model (`ButtonModel`) and a UI delegate (`ButtonUI`) to support switching look-and-feel on the fly."
+   },
+   {
+    "title": "JDBC Architecture & 7-Step Database Connection",
+    "summary": "Java Database Connectivity API for executing SQL statements across relational databases.",
+    "points": [
+     "4-Tier Architecture: Java Application -> JDBC API (`java.sql`) -> JDBC Driver Manager -> JDBC Drivers -> Relational Database.",
+     "4 Driver Types: Type 1 (JDBC-ODBC Bridge, obsolete), Type 2 (Native-API partly Java), Type 3 (Network-Protocol middleware), Type 4 (Thin Driver, 100% pure Java directly to database socket). Type 4 is industry standard.",
+     "7-Step Workflow: (1) Import `java.sql.*`; (2) Load driver (`Class.forName(\"com.mysql.cj.jdbc.Driver\")`); (3) Establish connection (`DriverManager.getConnection(url, user, pass)`); (4) Create statement (`conn.createStatement()`); (5) Execute query (`stmt.executeQuery(sql)`); (6) Process `ResultSet`; (7) Close connection."
+    ],
+    "formulas": [
+     "Class.forName(\"com.mysql.cj.jdbc.Driver\");",
+     "Connection con = DriverManager.getConnection(url, user, pass);",
+     "ResultSet rs = stmt.executeQuery(\"SELECT * FROM students\");"
+    ],
+    "example": "Connecting to MySQL database, retrieving student records, and iterating with `while(rs.next())`."
    }
   ],
+  "formulas": [
+   "Class.forName(driverClassName);",
+   "Connection con = DriverManager.getConnection(url, u, p);",
+   "Statement stmt = con.createStatement();",
+   "PreparedStatement pstmt = con.prepareStatement(sql);"
+  ],
   "mustKnow": [
-   "Java does not support operator overloading or pointer arithmetic to maintain language simplicity and security",
-   "Bytecode files (.class) are verified by the Bytecode Verifier before execution to protect host security",
-   "Primitive types are stored directly on the stack for high speed; objects are allocated on the heap",
-   "The main method must be public static void main(String[] args)"
+   "Differentiate between AWT and Swing components in tabular format.",
+   "Explain the Applet lifecycle with all state transition methods and a diagram.",
+   "Explain the 4 types of JDBC drivers with architectural block diagrams.",
+   "List and explain the 7 steps to connect to a database using JDBC with code.",
+   "Differentiate between Statement and PreparedStatement in JDBC."
+  ],
+  "examTips": [
+   "In JDBC driver questions, always state that Type 4 (Thin Driver) is preferred because it is 100% pure Java and requires no client-side native libraries.",
+   "In Applet lifecycle questions, explicitly list which methods execute once (`init`, `destroy`) versus multiple times (`start`, `stop`, `paint`)."
   ]
  },
  "NOTE-DM-01": {
@@ -5024,6 +5136,307 @@ const NOTE_SUMMARIES = {
    "Virtual Memory translates logical addresses to physical frames using a Page Table",
    "TLB is a fast hardware cache for page table entries, avoiding extra main memory references",
    "Strobe control lacks acknowledgment; Handshaking guarantees reliable reception with mutual signals"
+  ]
+ },
+ "NOTE-OOPJ-15": {
+  "noteId": "NOTE-OOPJ-15",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "title": "Java Unit 5: Swing Programming & Component Hierarchies",
+  "pageCount": 34,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Faculty lecture notes from MGIT CSE on building desktop GUI applications using Java Swing. Details `JFrame`, `JPanel`, atomic components (`JButton`, `JLabel`, `JTextField`, `JCheckBox`, `JRadioButton`, `JComboBox`), Layout Managers (`FlowLayout`, `BorderLayout`, `GridLayout`), and Dialogs.",
+  "topics": [
+   {
+    "title": "Swing Container Hierarchy: JFrame, JPanel & ContentPane",
+    "summary": "Structural scaffolding of Swing window frames and component containment.",
+    "points": [
+     "Top-Level Containers: `JFrame`, `JDialog`, `JApplet`. Cannot be contained inside other containers; host heavy window peers.",
+     "ContentPane: In Swing, components are added to the frame's content pane (`frame.getContentPane().add(comp)` or `frame.add(comp)` in Java 5+).",
+     "Intermediate Containers: `JPanel` (lightweight grouping container), `JScrollPane` (scrollable viewport), `JTabbedPane`."
+    ],
+    "formulas": [
+     "JFrame frame = new JFrame(\"Title\");",
+     "frame.setSize(400, 300); frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); frame.setVisible(true);"
+    ],
+    "example": "Creating a standard window with close operation set to `JFrame.EXIT_ON_CLOSE` to ensure JVM terminates when window closes."
+   },
+   {
+    "title": "Layout Managers: Flow, Border & Grid",
+    "summary": "Automatic positioning and sizing of GUI components across dynamic window resizing.",
+    "points": [
+     "FlowLayout: Default for `JPanel`. Arranges components in a directional flow (left-to-right), wrapping to next row when space exhausts.",
+     "BorderLayout: Default for `JFrame`. Divides container into 5 regions: `North`, `South`, `East`, `West`, and `Center`. Center expands to take all remaining space.",
+     "GridLayout: Arranges components in an equal-sized two-dimensional grid of rows and columns (`new GridLayout(rows, cols)`).",
+     "CardLayout & GridBagLayout: Tabbed card deck positioning and complex constraint-based table alignment."
+    ],
+    "formulas": [
+     "frame.setLayout(new BorderLayout());",
+     "frame.add(button, BorderLayout.SOUTH);",
+     "panel.setLayout(new GridLayout(4, 4)); // 4x4 calculator grid"
+    ],
+    "example": "Calculator GUI using `BorderLayout` (display screen in `NORTH`, button pad in `CENTER` using a 4x4 `GridLayout`)."
+   },
+   {
+    "title": "Atomic Components & JOptionPane Dialogs",
+    "summary": "Interactive user input components and standard dialog boxes.",
+    "points": [
+     "Input Components: `JTextField` (single-line input), `JPasswordField` (masked text), `JTextArea` (multi-line text), `JComboBox` (dropdown list), `JCheckBox` (independent toggles), `JRadioButton` with `ButtonGroup` (mutually exclusive options).",
+     "JOptionPane Utility: Static methods for modal popups: `showMessageDialog()` (alerts), `showConfirmDialog()` (Yes/No confirmations), `showInputDialog()` (reading user prompt input)."
+    ],
+    "formulas": [
+     "JOptionPane.showMessageDialog(frame, \"Record Saved!\");",
+     "ButtonGroup bg = new ButtonGroup(); bg.add(rbMale); bg.add(rbFemale);"
+    ],
+    "example": "A student registration form with text fields, radio buttons grouped in `ButtonGroup`, and a submit button showing confirmation dialog."
+   }
+  ],
+  "formulas": [
+   "frame.setLayout(new FlowLayout());",
+   "frame.add(new JButton(\"OK\"), BorderLayout.CENTER);",
+   "JOptionPane.showConfirmDialog(null, \"Are you sure?\");"
+  ],
+  "mustKnow": [
+   "Compare FlowLayout, BorderLayout, and GridLayout with region diagrams.",
+   "Write a complete Java Swing program to design a user login window with Username, Password, and Login Button.",
+   "Explain the purpose of ButtonGroup when working with JRadioButton components.",
+   "Explain standard JOptionPane dialog types with code snippets."
+  ],
+  "examTips": [
+   "Always set `frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);` in Swing programs so the application exits cleanly.",
+   "Draw diagrams for `BorderLayout` (showing NORTH, SOUTH, EAST, WEST, CENTER) and `GridLayout` (showing rows and columns)."
+  ]
+ },
+ "NOTE-OOPJ-16": {
+  "noteId": "NOTE-OOPJ-16",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "title": "Java Unit 5: Java Swing Menu Basics & Dialog Controls",
+  "pageCount": 13,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Focused lecture study handouts from MGIT CSE detailing menu system implementation in Java Swing desktop applications. Covers `JMenuBar`, `JMenu`, `JMenuItem`, checkbox/radio menu items, separators, popup menus, mnemonics, and keyboard accelerators.",
+  "topics": [
+   {
+    "title": "Menu Component Hierarchy in Swing",
+    "summary": "How desktop window menus are constructed through container hierarchy.",
+    "points": [
+     "JMenuBar: Top-level horizontal container docked to the `JFrame` using `frame.setJMenuBar(mb)`.",
+     "JMenu: Dropdown menu element added to `JMenuBar` (e.g., 'File', 'Edit', 'View').",
+     "JMenuItem: Selectable leaf item within a `JMenu` (e.g., 'Open', 'Save', 'Exit'). Generates `ActionEvent` when selected.",
+     "Advanced Items: `JCheckBoxMenuItem` (toggleable state item with checkmark), `JRadioButtonMenuItem` (mutually exclusive menu options grouped in `ButtonGroup`), `JSeparator` (horizontal divider line)."
+    ],
+    "formulas": [
+     "JMenuBar mb = new JMenuBar(); JMenu menu = new JMenu(\"File\"); JMenuItem item = new JMenuItem(\"New\");",
+     "menu.add(item); mb.add(menu); frame.setJMenuBar(mb);"
+    ],
+    "example": "Building a 'File' menu with 'New', 'Open', a separator, and 'Exit' that closes the window."
+   },
+   {
+    "title": "Mnemonics, Accelerators & Popup Menus",
+    "summary": "Keyboard shortcuts and context-sensitive right-click menus.",
+    "points": [
+     "Mnemonics: Visual underline shortcut triggered via Alt + Key (`menu.setMnemonic(KeyEvent.VK_F)` triggers File menu via Alt+F).",
+     "Accelerators: Global keyboard shortcut triggered without opening menu via Ctrl + Key (`item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK))` for Ctrl+S Save).",
+     "JPopupMenu: Standalone context menu popped up at mouse coordinates using `popup.show(e.getComponent(), e.getX(), e.getY())` on mouse right-click."
+    ],
+    "formulas": [
+     "item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));",
+     "popup.show(panel, e.getX(), e.getY());"
+    ],
+    "example": "A right-click context popup menu providing 'Copy', 'Cut', and 'Paste' options in a text editing area."
+   }
+  ],
+  "formulas": [
+   "frame.setJMenuBar(menuBar);",
+   "menu.addSeparator();",
+   "item.addActionListener(e -> System.exit(0));"
+  ],
+  "mustKnow": [
+   "Explain the hierarchy of menu components in Java Swing.",
+   "Write a complete Swing program to implement a menu bar with File and Edit menus and items.",
+   "Differentiate between Mnemonics and Accelerators in Java Swing with code.",
+   "How do you implement a context popup menu using JPopupMenu?"
+  ],
+  "examTips": [
+   "Remember that a menu bar is added using `frame.setJMenuBar(mb)`, NOT `frame.add(mb)`."
+  ]
+ },
+ "NOTE-OOPJ-17": {
+  "noteId": "NOTE-OOPJ-17",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "title": "Java Unit 5: Question Bank with Model Answers",
+  "pageCount": 30,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Official MGIT CSE Department examination solutions for Unit 5 question bank. Covers 1-mark definitions and 5-mark programming questions for Swing GUI forms, calculator layouts, Applet lifecycle, and JDBC database operations.",
+  "topics": [
+   {
+    "title": "Swing GUI Programming Question Bank Models",
+    "summary": "Complete code models for interactive Swing applications.",
+    "points": [
+     "Calculator Layout: 16-button calculator grid using `BorderLayout` and `GridLayout` with event handling for arithmetic operations.",
+     "User Registration Form: Window containing Name, Password, Gender (RadioButtons), Branch (JComboBox), and Submit button validating input.",
+     "Color Chooser & Sliders: Code models dynamically updating background color using event listeners."
+    ],
+    "formulas": [
+     "JButton b = new JButton(\"+\"); b.addActionListener(this);",
+     "JComboBox<String> cb = new JComboBox<>(new String[]{\"CSE\", \"IT\", \"ECE\"});"
+    ],
+    "example": "A complete Java Swing program implementing a login authentication form with status feedback."
+   },
+   {
+    "title": "JDBC Database Programming Question Bank Models",
+    "summary": "Complete database access code models using JDBC API.",
+    "points": [
+     "PreparedStatement CRUD: Inserting student records (`INSERT INTO students VALUES(?, ?, ?)`) using parameterized SQL queries to prevent SQL Injection.",
+     "ResultSet Navigation: Iterating across rows using `rs.next()`, extracting columns via `rs.getInt(1)`, `rs.getString(2)`.",
+     "Transaction Management: Disabling auto-commit (`con.setAutoCommit(false)`), executing multi-table updates, and calling `con.commit()` or `con.rollback()` on failure."
+    ],
+    "formulas": [
+     "PreparedStatement ps = con.prepareStatement(\"INSERT INTO emp VALUES(?, ?)\");",
+     "ps.setInt(1, id); ps.setString(2, name); ps.executeUpdate();",
+     "con.setAutoCommit(false); con.commit();"
+    ],
+    "example": "An employee payroll update program using `PreparedStatement` with transaction rollback upon exception."
+   }
+  ],
+  "formulas": [
+   "PreparedStatement pstmt = con.prepareStatement(sql);",
+   "pstmt.executeUpdate();",
+   "while(rs.next()) { System.out.println(rs.getString(\"name\")); }"
+  ],
+  "mustKnow": [
+   "Explain the differences between Statement and PreparedStatement with code examples.",
+   "Write a complete Java program to insert employee records into a database using JDBC.",
+   "Write a Java Swing program to create a functional 4-function calculator GUI.",
+   "Explain transaction management in JDBC using commit() and rollback()."
+  ],
+  "examTips": [
+   "When writing JDBC code in exams, always include `Class.forName()`, `DriverManager.getConnection()`, try-catch block handling `SQLException`, and closing resources.",
+   "Highlight that `PreparedStatement` pre-compiles queries and prevents SQL Injection attacks."
+  ]
+ },
+ "NOTE-OOPJ-18": {
+  "noteId": "NOTE-OOPJ-18",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "chapters": [
+   4,
+   5
+  ],
+  "title": "Units 4 & 5: AWT, Swings, Event Handling & Layout Managers",
+  "pageCount": 44,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Combined master review notes authored by MGIT CSE Faculty synthesizing Units 4 and 5. Provides comprehensive comparative studies of AWT vs. Swing, end-to-end Delegation Event Model architectures, Layout Managers, and advanced Swing component programming.",
+  "topics": [
+   {
+    "title": "Comprehensive AWT vs. Swing Comparative Analysis",
+    "summary": "Detailed structural comparison across 10 architectural parameters.",
+    "points": [
+     "Architecture: AWT components wrap native operating system peers (heavyweight); Swing components are rendered directly in Java (lightweight).",
+     "Look and Feel: AWT enforces native platform look; Swing provides Pluggable Look and Feel (PLAF) supporting consistent cross-platform themes.",
+     "Performance & Components: AWT uses more system resources and offers basic controls; Swing provides rich components (tables, trees, tabbed panes, tooltips).",
+     "Package: AWT resides in `java.awt`; Swing resides in `javax.swing`."
+    ],
+    "formulas": [
+     "AWT: java.awt.Button (Heavyweight, Native OS Peer)",
+     "Swing: javax.swing.JButton (Lightweight, 100% Pure Java)"
+    ],
+    "example": "An AWT button looks like a Windows button on Windows and a Mac button on macOS; a Swing button renders identically across all operating systems."
+   },
+   {
+    "title": "Complete Layout Management Reference",
+    "summary": "Comparative synthesis and code templates for all 5 standard layout managers.",
+    "points": [
+     "FlowLayout: Default for `JPanel`, wraps components naturally like words in a paragraph.",
+     "BorderLayout: Default for `JFrame`, allocates space to 5 geographic zones (North, South, East, West, Center).",
+     "GridLayout: Rigid matrix of M rows by N columns where all cells possess identical dimensions.",
+     "CardLayout: Manages multiple panels stacked like a deck of cards, displaying one panel at a time."
+    ],
+    "formulas": [
+     "BorderLayout: 5 Regions (NORTH, SOUTH, EAST, WEST, CENTER)",
+     "GridLayout: equal width = ContainerWidth / cols, equal height = ContainerHeight / rows"
+    ],
+    "example": "Nesting layout managers: A `JFrame` with `BorderLayout` holds a `JPanel` in `SOUTH` configured with `FlowLayout` to center OK and Cancel buttons."
+   }
+  ],
+  "formulas": [
+   "frame.setLayout(new BorderLayout(hgap, vgap));",
+   "cardLayout.show(cardPanel, \"CardName\");"
+  ],
+  "mustKnow": [
+   "Provide an exhaustive 10-point comparison between AWT and Swing in tabular format.",
+   "Explain how layout managers simplify GUI development across different screen resolutions.",
+   "Explain how nesting panels with different layout managers enables complex desktop application layouts."
+  ],
+  "examTips": [
+   "Draw clean comparative diagrams showing native peer interaction in AWT vs direct rendering in Swing."
+  ]
+ },
+ "NOTE-OOPJ-19": {
+  "noteId": "NOTE-OOPJ-19",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "title": "Complete Java Architecture & Concepts Master Presentation",
+  "pageCount": 36,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Master lecture presentation slides authored by MGIT CSE Faculty covering the complete conceptual architecture of Java, OOP foundations, JVM execution engine, multithreading synchronization, and GUI programming frameworks.",
+  "topics": [
+   {
+    "title": "Java Architectural Paradigm & Platform Independence",
+    "summary": "Executive summary of Java's architecture, bytecode compilation, and security sandbox.",
+    "points": [
+     "Oak Genesis: Designed for embedded systems, adapted for the World Wide Web.",
+     "Compilation & Execution Pipeline: Javac compiler translates high-level Java to intermediate bytecode; JVM interprets or JIT-compiles bytecode into native machine instructions.",
+     "Security Architecture: Bytecode verifier prevents illegal memory access, Class Loader isolates namespaces, Security Manager restricts system resources."
+    ],
+    "formulas": [
+     "Security Sandbox: ClassLoader -> Bytecode Verifier -> SecurityManager -> OS"
+    ],
+    "example": "Applets and web applications executing in restricted sandboxes without read/write access to client disk files."
+   },
+   {
+    "title": "Summary of Core Semester Exam Topics",
+    "summary": "Quick revision guide summarizing high-yield topics across Units 1 to 5.",
+    "points": [
+     "Unit 1: JVM Architecture, OOP Principles, Bytecode, Primitives, Arrays.",
+     "Unit 2: Inheritance, Dynamic Method Dispatch, Abstract Classes, Packages, Interfaces.",
+     "Unit 3: Exception Hierarchy, Checked vs Unchecked, Finally, Multithreading, Synchronization, Deadlock.",
+     "Unit 4: Streams Hierarchy, Character vs Byte, BufferedReader, Serialization, Strings, Collections.",
+     "Unit 5: Swing vs AWT, MVC Pattern, Layout Managers, Delegation Event Model, JDBC Architecture."
+    ],
+    "formulas": [
+     "Semester Formula: OOP Basics -> Concurrency & Robustness -> I/O & Collections -> GUI & JDBC"
+    ],
+    "example": "Synthesizing full semester preparation by mastering the core pillars of Java."
+   }
+  ],
+  "formulas": [
+   "Java = Language + JVM + API Libraries"
+  ],
+  "mustKnow": [
+   "Provide an architectural overview of Java and explain why it remains the premier enterprise language.",
+   "Summarize the key differences between compile-time and runtime polymorphism with examples."
+  ],
+  "examTips": [
+   "Use this master summary slide deck for final 1-hour rapid revision before entering the exam hall."
   ]
  }
 };

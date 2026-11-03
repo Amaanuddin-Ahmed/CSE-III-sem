@@ -80,7 +80,7 @@ export default async function handler(req, res) {
     .trim();
   const now = Date.now();
   const WINDOW_MS = 60_000;
-  const MAX_REQUESTS = 5;
+  const MAX_REQUESTS = 20;
   if (!globalThis.__mgitAiHits) globalThis.__mgitAiHits = new Map();
   const hits = (globalThis.__mgitAiHits.get(ip) || []).filter(t => now - t < WINDOW_MS);
   if (hits.length >= MAX_REQUESTS) {
@@ -140,9 +140,10 @@ export default async function handler(req, res) {
   // The first model gets the longest budget because longer answers take longer
   // to generate; fallbacks use shorter budgets to stay within maxDuration.
   const models = [
-    { name: 'gemini-2.5-flash', timeoutMs: 11000 },
-    { name: 'gemini-2.0-flash', timeoutMs: 8000 },
-    { name: 'gemini-1.5-flash', timeoutMs: 6000 }
+    { name: 'gemini-3.5-flash-lite', timeoutMs: 24000 },
+    { name: 'gemini-flash-lite-latest', timeoutMs: 22000 },
+    { name: 'gemini-3.5-flash', timeoutMs: 20000 },
+    { name: 'gemini-3.6-flash', timeoutMs: 18000 }
   ];
   let lastStatus = 502;
 
@@ -164,7 +165,7 @@ export default async function handler(req, res) {
             systemInstruction: { parts: [{ text: systemInstruction }] },
             generationConfig: {
               temperature: 0.3,
-              maxOutputTokens: 8192,
+              maxOutputTokens: 2500,
               topP: 0.9
             },
           }),
