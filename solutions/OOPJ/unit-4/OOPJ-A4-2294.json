@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-2294",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Explain the purpose of the Comparable interface in Java.",
+  "answerMd": "### Comparable vs. Comparator in Java\n\n| Comparison Parameter | `Comparable` (`java.lang`) | `Comparator` (`java.util`) |\n| :--- | :--- | :--- |\n| **Package** | `java.lang` | `java.util` |\n| **Method** | `int compareTo(T other)` | `int compare(T o1, T o2)` |\n| **Modification** | Modifies the **original class** definition. | Creates a **separate class / lambda** (original class untouched). |\n| **Sorting Strategies** | Provides **single natural sorting order**. | Provides **multiple custom sorting orders** (by name, age, marks). |\n| **Invocation** | `Collections.sort(list)` | `Collections.sort(list, comparator)` |\n\n$$\\therefore \\text{Comparable defines natural ordering; Comparator defines flexible custom sorting strategies.}$$"
+}

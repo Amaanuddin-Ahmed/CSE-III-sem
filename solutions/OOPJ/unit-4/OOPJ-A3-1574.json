@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1574",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "What is Iterator?",
+  "answerMd": "### Iterator vs. ListIterator in Java\n\n| Comparison Parameter | `Iterator` | `ListIterator` |\n| :--- | :--- | :--- |\n| **Applicability** | Traverses **any Collection** (List, Set, Queue).| Traverses **List collections only** (ArrayList, LinkedList). |\n| **Direction** | **Forward only** (`hasNext()`, `next()`). | **Bidirectional** (Forward & Backward). |\n| **Modification Methods** | Can only **remove** elements (`remove()`). | Can **remove**, **set (replace)**, and **add** elements. |\n| **Index Access** | Cannot retrieve index. | Provides `nextIndex()` and `previousIndex()`. |\n\n$$\\therefore \\text{ListIterator enables full bidirectional traversal and in-place element mutation on lists.}$$"
+}

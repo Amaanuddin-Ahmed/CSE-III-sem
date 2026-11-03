@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-1782",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Draw the life cycle of an applet.",
+  "answerMd": "### Java Thread Life Cycle & States\n\nA thread in Java progresses through **six distinct states** defined in `java.lang.Thread.State`:\n\n1. **NEW:** Thread created via `new Thread()` but `start()` has not yet been invoked.\n2. **RUNNABLE:** Thread is executing in the JVM or waiting for OS CPU scheduling.\n3. **BLOCKED:** Thread is waiting to acquire an intrinsic monitor lock held by another thread.\n4. **WAITING:** Thread is waiting indefinitely for another thread to perform a particular action (e.g., waiting for `notify()` after calling `wait()`).\n5. **TIMED_WAITING:** Thread is waiting for a specified interval (e.g., `sleep(ms)`, `wait(timeout)`).\n6. **TERMINATED:** Thread has finished executing its `run()` method or terminated abruptly due to an uncaught exception.\n\n```\n [New] --start()--> [Runnable] <--yield()-- [Running on CPU]\n                       |    ^\n           sleep()/wait()   | timeout/notify()\n                       v    |\n                 [Waiting / Timed Waiting]\n```\n\n$$\\therefore \\text{Understanding thread states enables developers to diagnose deadlocks and thread starvation.}$$"
+}

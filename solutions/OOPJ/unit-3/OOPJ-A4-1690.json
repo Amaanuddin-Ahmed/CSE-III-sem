@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-1690",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Provide an example of a process in a computer system.",
+  "answerMd": "### Process-Based vs. Thread-Based Multitasking\n\n| Comparison Parameter | Process-Based Multitasking | Thread-Based Multitasking |\n| :--- | :--- | :--- |\n| **Definition** | Concurrent execution of multiple distinct **programs** (processes). | Concurrent execution of multiple execution **paths** within the same program. |\n| **Memory Space** | Each process has its own **separate, isolated address space**. | All threads in a process share the **same heap and memory**. |\n| **Context Switch Overhead** | **Heavyweight:** Involves OS virtual memory page table swaps. | **Lightweight:** Minimal overhead (only register and stack swap). |\n| **Inter-communication (IPC)** | Expensive; requires sockets, pipes, or shared OS memory. | Inexpensive; communicate directly via shared objects and `wait()`/`notify()`. |\n\n$$\\therefore \\text{Threads are termed 'lightweight processes' because they execute within a shared memory context.}$$"
+}

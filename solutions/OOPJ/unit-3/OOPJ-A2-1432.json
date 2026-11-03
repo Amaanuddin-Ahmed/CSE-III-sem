@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1432",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Illustrate the use of throws keyword in exception handling.",
+  "answerMd": "### Exception Handling in Java: try-catch-finally\n\n**Core Concept:**\nException handling in Java is an architectural mechanism to handle runtime errors cleanly, maintaining normal program flow without abnormal application termination.\n\n#### Key Keywords & Roles:\n- **`try` block:** Encloses statements that might throw an exception.\n- **`catch` block:** Intercepts and handles specific exceptions thrown in the preceding `try` block.\n- **`finally` block:** Always executes after `try` and `catch`, irrespective of whether an exception occurred or was handled. Used strictly for cleanup (closing streams, database connections).\n\n```java\ntry {\n    int result = 10 / 0; // Throws ArithmeticException\n} catch (ArithmeticException e) {\n    System.out.println(\"Caught: Division by zero is undefined.\");\n} finally {\n    System.out.println(\"Cleanup: Execution completed safely.\");\n}\n```\n\n$$\\therefore \\text{try-catch-finally guarantees graceful error recovery and deterministic resource reclamation.}$$"
+}

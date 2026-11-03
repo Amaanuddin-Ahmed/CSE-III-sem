@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1463",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "Write the differences between throw and throws clauses.",
+  "answerMd": "### Difference Between 'throw' and 'throws' in Java\n\n| Parameter | `throw` Keyword | `throws` Keyword |\n| :--- | :--- | :--- |\n| **Purpose** | Used to **explicitly instantiate and throw** an exception. | Used to **declare** that a method may throw exceptions. |\n| **Location** | Written **inside** the method body. | Appended to the **method signature** header. |\n| **Syntax** | Followed by an **instance** (`throw new Exception();`). | Followed by class **types** (`throws IOException, SQLException`). |\n| **Multiplicity** | Can throw only **one** exception object at a time. | Can declare **multiple** comma-separated exception classes. |\n\n```java\n// 'throws' in method declaration\npublic static void checkEligibility(int age) throws IllegalArgumentException {\n    if (age < 18) {\n        // 'throw' inside method body\n        throw new IllegalArgumentException(\"Age must be >= 18\");\n    }\n}\n```\n\n$$\\therefore \\text{'throw' acts (causes the error), while 'throws' declares (warns the caller).}$$"
+}

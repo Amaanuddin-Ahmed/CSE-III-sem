@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1433",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "What is autoboxing in Java?",
+  "answerMd": "### Generics and Autoboxing in Java\n\n- **Generics:** Allows classes, interfaces, and methods to operate on parameterized types (`<T>`), providing **compile-time type safety** and eliminating explicit casts.\n- **Autoboxing:** Automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes (e.g., `int` $\\rightarrow$ `Integer`).\n- **Unboxing:** The reverse process of converting an object wrapper to its primitive value (e.g., `Integer` $\\rightarrow$ `int`).\n\n```java\n// Autoboxing: primitive 25 converted to Integer\nInteger num = 25; \n\n// Unboxing: Integer unboxed to primitive int\nint val = num; \n\n// Generics: Type-safe List\nList<String> names = new ArrayList<>();\nnames.add(\"Amaan\");\nString first = names.get(0); // No cast needed!\n```\n\n$$\\therefore \\text{Generics and autoboxing prevent ClassCastExceptions at runtime through compile-time type verification.}$$"
+}

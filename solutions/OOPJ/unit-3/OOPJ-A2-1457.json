@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1457",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 1,
+  "question": "Differentiate Built-in and custom exception in Java?",
+  "answerMd": "### Custom (User-Defined) Exceptions in Java\n\n**Concept:**\nWhen built-in Java exceptions do not adequately describe a domain-specific business error, developers create **user-defined custom exceptions** by extending `java.lang.Exception` (for checked exceptions) or `java.lang.RuntimeException` (for unchecked exceptions).\n\n#### Implementation Steps:\n1. Define a class that extends `Exception`.\n2. Provide a default constructor and a parameterized message constructor passing the string to `super(message)`.\n3. Throw using `throw new CustomException(\"...\")` and handle via `catch`.\n\n```java\nclass InvalidAgeException extends Exception {\n    public InvalidAgeException(String message) {\n        super(message);\n    }\n}\n```\n\n$$\\therefore \\text{Custom exceptions encapsulate domain-specific business rules with full stack trace support.}$$"
+}

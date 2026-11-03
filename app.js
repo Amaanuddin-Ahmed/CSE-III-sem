@@ -3508,7 +3508,48 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     });
   }
 
-  function formatGeminiResponse(rawText) {
+    function highlightCodeSyntax(rawCode, lang) {
+    if (!rawCode) return '';
+    const tokenRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/|#[^\n]*)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(@[A-Za-z_]\w*)|(\b0x[0-9a-fA-F]+\b|\b\d+(?:\.\d+)?(?:[eE][+-]?\d+)?[fFdDlL]?\b)|(\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|native|new|package|private|protected|public|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|transient|try|void|volatile|while|record|sealed|permits|yield|var|true|false|null|def|self|lambda|function|let|async|await|SELECT|FROM|WHERE|INSERT|INTO|UPDATE|DELETE|CREATE|TABLE|DROP|ALTER|PRIMARY|KEY|FOREIGN|JOIN|GROUP|BY|ORDER|HAVING|VALUES|select|from|where|insert|into|update|delete|create|table|drop|alter|primary|key|foreign|join|group|by|order|having|values)\b)|(\b[A-Z][a-zA-Z0-9_]*\b)|(\b[a-z_][a-zA-Z0-9_]*(?=\s*\())|([{}()\[\];,])/g;
+
+    let lastIndex = 0;
+    let result = '';
+    let match;
+
+    while ((match = tokenRegex.exec(rawCode)) !== null) {
+      if (match.index > lastIndex) {
+        result += escapeHtml(rawCode.slice(lastIndex, match.index));
+      }
+      const [full, comment, string, annotation, number, keyword, type, method, punct] = match;
+      if (comment) {
+        result += '<span class="token-comment">' + escapeHtml(comment) + '</span>';
+      } else if (string) {
+        result += '<span class="token-string">' + escapeHtml(string) + '</span>';
+      } else if (annotation) {
+        result += '<span class="token-annotation">' + escapeHtml(annotation) + '</span>';
+      } else if (number) {
+        result += '<span class="token-number">' + escapeHtml(number) + '</span>';
+      } else if (keyword) {
+        result += '<span class="token-keyword">' + escapeHtml(keyword) + '</span>';
+      } else if (type) {
+        result += '<span class="token-type">' + escapeHtml(type) + '</span>';
+      } else if (method) {
+        result += '<span class="token-method">' + escapeHtml(method) + '</span>';
+      } else if (punct) {
+        result += '<span class="token-punct">' + escapeHtml(punct) + '</span>';
+      } else {
+        result += escapeHtml(full);
+      }
+      lastIndex = tokenRegex.lastIndex;
+    }
+
+    if (lastIndex < rawCode.length) {
+      result += escapeHtml(rawCode.slice(lastIndex));
+    }
+    return result;
+  }
+
+function formatGeminiResponse(rawText) {
     rawText = convertLatexArraysToHumanText(rawText);
     if (!rawText) return '';
     let text = rawText.trim();
@@ -3563,19 +3604,25 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
 
-    // Wrap <pre><code> blocks
+        // Wrap and highlight <pre><code> blocks
     tempDiv.querySelectorAll('pre').forEach(pre => {
-      if (pre.parentElement && pre.parentElement.classList.contains('gemini-code-block')) return;
-
       const code = pre.querySelector('code');
       const langClass = code ? Array.from(code.classList).find(c => c.startsWith('language-')) : null;
-      const lang = langClass ? langClass.replace('language-', '') : 'CODE';
+      const rawLang = langClass ? langClass.replace('language-', '').toLowerCase() : 'java';
+      const displayLang = (langClass ? langClass.replace('language-', '') : 'JAVA').toUpperCase();
+
+      if (code && !code.querySelector('.token-keyword, .token-string, .token-comment')) {
+        const rawCode = code.textContent || code.innerText || '';
+        code.innerHTML = highlightCodeSyntax(rawCode, rawLang);
+      }
+
+      if (pre.parentElement && pre.parentElement.classList.contains('gemini-code-block')) return;
 
       const wrapper = document.createElement('div');
       wrapper.className = 'gemini-code-block';
       wrapper.innerHTML = `
         <div class="gemini-code-header">
-          <span class="code-lang"><i class="fa-solid fa-code"></i> ${lang}</span>
+          <span class="code-lang"><i class="fa-solid fa-code"></i> ${displayLang}</span>
           <button type="button" class="gemini-copy-btn" onclick="copyGeminiCodeSnippet(this)">
             <i class="fa-regular fa-copy"></i> Copy
           </button>
@@ -3615,9 +3662,11 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   function customMarkdownFallback(raw) {
     let text = raw;
 
-    // Code blocks
+        // Code blocks with syntax highlighting
     text = text.replace(/```([a-z0-9_-]*)\n([\s\S]*?)```/g, (match, lang, code) => {
-      return `<div class="gemini-code-block"><div class="gemini-code-header"><span class="code-lang"><i class="fa-solid fa-code"></i> ${lang || 'CODE'}</span><button type="button" class="gemini-copy-btn" onclick="copyGeminiCodeSnippet(this)"><i class="fa-regular fa-copy"></i> Copy</button></div><pre><code>${escapeHtml(code)}</code></pre></div>`;
+      const displayLang = (lang || 'JAVA').toUpperCase();
+      const highlighted = highlightCodeSyntax(code, (lang || 'java').toLowerCase());
+      return `<div class="gemini-code-block"><div class="gemini-code-header"><span class="code-lang"><i class="fa-solid fa-code"></i> ${displayLang}</span><button type="button" class="gemini-copy-btn" onclick="copyGeminiCodeSnippet(this)"><i class="fa-regular fa-copy"></i> Copy</button></div><pre><code>${highlighted}</code></pre></div>`;
     });
 
     // Inline code

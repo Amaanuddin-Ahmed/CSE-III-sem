@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-2298",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "Discuss the advantages of using the Delegation event model over other event handling models.",
+  "answerMd": "### The Delegation Event Model in Java\n\n**Concept:**\nIntroduced in Java 1.1, the **Delegation Event Model** is standard architecture where an **Event Source** generates an event and delegates its processing to one or more registered **Event Listeners**.\n\n#### Three Core Components:\n1. **Event Source:** The GUI component where the interaction occurs (e.g. `JButton`).\n2. **Event Object:** Encapsulates information about the event (extends `java.util.EventObject`, e.g. `ActionEvent`).\n3. **Event Listener:** An interface defining handler methods (extends `java.util.EventListener`, e.g. `ActionListener`).\n\n```\n  [Event Source: JButton] --(Event Occurs: Click)--> Creates [ActionEvent Object]\n                                                               |\n                                            Delivered via actionPerformed()\n                                                               v\n                                                [Listener: ActionListener]\n```\n\n$$\\therefore \\text{The Delegation Event Model completely decouples user interface design from event processing logic.}$$"
+}

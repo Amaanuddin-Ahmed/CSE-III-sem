@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1561",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Explain the usage of Console class in Java with an example.",
+  "answerMd": "### Java Utility Classes: StringTokenizer, Formatter, Scanner & Console\n\n- **`StringTokenizer` (`java.util`):** Breaks a string into tokens based on specified delimiters (default whitespace). Methods: `hasMoreTokens()`, `nextToken()`, `countTokens()`.\n- **`Formatter` (`java.util`):** Formats text using C-style `printf` specifiers (`%s`, `%d`, `%f`, `%t`).\n- **`Scanner` (`java.util`):** Parses primitive types and strings using regular expressions from console or files (`nextInt()`, `nextLine()`).\n- **`Console` (`java.io`):** Directly accesses system console with password masking (`readPassword()`).\n\n```java\nStringTokenizer st = new StringTokenizer(\"Java,OOPJ,2026\", \",\");\nwhile (st.hasMoreTokens()) {\n    System.out.println(st.nextToken());\n}\n```\n\n$$\\therefore \\text{Utility classes provide parsing, text formatting, and secure terminal interaction.}$$"
+}

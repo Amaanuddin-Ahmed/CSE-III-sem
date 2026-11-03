@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-1698",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "What is an adapter class?",
+  "answerMd": "### Event Listeners vs. Adapter Classes in Java\n\n- **Listener Interface:** An interface defining event handler callback methods (e.g. `MouseListener` has 5 methods: `mouseClicked`, `mousePressed`, `mouseReleased`, `mouseEntered`, `mouseExited`). A class implementing this interface is **forced to override all 5 methods**, creating bloated empty methods.\n- **Adapter Class:** An abstract class that provides empty default implementations for all methods in a listener interface (e.g. `MouseAdapter`). Developers extend the adapter and override **only the specific method needed**.\n\n```java\n// Extending Adapter: Only override mouseClicked!\npanel.addMouseListener(new MouseAdapter() {\n    public void mouseClicked(MouseEvent e) {\n        System.out.println(\"Clicked at: \" + e.getX() + \", \" + e.getY());\n    }\n});\n```\n\n$$\\therefore \\text{Adapter classes eliminate empty boilerplate methods when handling multi-method event interfaces.}$$"
+}

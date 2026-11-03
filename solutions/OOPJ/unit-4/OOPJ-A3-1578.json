@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1578",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Write down the advantages of Java Serialization.",
+  "answerMd": "### Object Serialization & transient Keyword in Java\n\n- **Serialization:** Converting an object's in-memory state into a byte stream via `ObjectOutputStream.writeObject(obj)`.\n- **Deserialization:** Reconstructing the object from the byte stream into memory via `ObjectInputStream.readObject()`.\n- **`java.io.Serializable`:** A marker interface (has no methods) that must be implemented to allow an object to be serialized.\n- **`transient` Keyword:** Field modifier that prevents sensitive or non-persistable fields (e.g. passwords) from being serialized. During deserialization, transient fields take their default values (`null` or `0`).\n\n```java\nclass User implements Serializable {\n    String username;\n    transient String password; // Will NOT be serialized!\n}\n```\n\n$$\\therefore \\text{Serialization enables cross-network object transfer and persistent caching.}$$"
+}

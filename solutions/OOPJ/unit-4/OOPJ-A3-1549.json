@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1549",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Differentiate between byte stream and character stream.",
+  "answerMd": "### Byte Streams vs. Character Streams in Java\n\n| Comparison Parameter | Byte Streams | Character Streams |\n| :--- | :--- | :--- |\n| **Data Unit** | Operates on **8-bit bytes** (binary data). | Operates on **16-bit Unicode characters** (text). |\n| **Root Abstract Classes** | `InputStream` and `OutputStream` | `Reader` and `Writer` |\n| **Standard Implementations** | `FileInputStream`, `FileOutputStream` | `FileReader`, `FileWriter` |\n| **Primary Use Cases** | Images, audio, video, raw binary files, PDF. | Text files, source code, internationalized text (UTF-8). |\n\n```java\n// Reading with Byte Stream\nFileInputStream in = new FileInputStream(\"image.png\");\nint byteData = in.read();\n\n// Reading with Character Stream\nFileReader reader = new FileReader(\"notes.txt\");\nint charData = reader.read();\n```\n\n$$\\therefore \\text{Character streams handle 16-bit Unicode internationalization automatically without encoding errors.}$$"
+}

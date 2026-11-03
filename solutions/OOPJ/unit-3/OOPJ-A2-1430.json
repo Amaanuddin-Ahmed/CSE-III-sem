@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A2-1430",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "part": "A",
+  "marks": 2,
+  "question": "What is an exception? How does it differ from an error?",
+  "answerMd": "### Checked vs. Unchecked Exceptions vs. Errors\n\n#### The `Throwable` Class Hierarchy:\n- `Object` $\\rightarrow$ `Throwable`\n  - **`Error`:** Serious hardware/JVM system problems; applications should not attempt to catch (e.g. `OutOfMemoryError`, `StackOverflowError`).\n  - **`Exception`:** Conditions that a reasonable application might want to catch.\n    - **Checked Exceptions:** Direct subclasses of `Exception` (excluding `RuntimeException`). Checked at compile-time (`IOException`, `SQLException`).\n    - **Unchecked Exceptions:** Subclasses of `RuntimeException`. Checked at runtime (`NullPointerException`, `ArithmeticException`).\n\n| Parameter | Checked Exception | Unchecked Exception | JVM Error |\n| :--- | :--- | :--- | :--- |\n| **Check Time** | Compile-Time | Run-Time | Run-Time |\n| **Recovery** | Recoverable | Recoverable (logic fix) | Unrecoverable |\n| **Base Class** | `java.lang.Exception` | `java.lang.RuntimeException` | `java.lang.Error` |\n\n$$\\therefore \\text{Checked exceptions enforce compile-time safety, whereas unchecked exceptions signify logic defects.}$$"
+}

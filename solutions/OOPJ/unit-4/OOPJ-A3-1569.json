@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1569",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Differentiate between equals() method and == while comparing two Strings.",
+  "answerMd": "### String vs. StringBuffer vs. StringBuilder in Java\n\n| Comparison Parameter | `String` | `StringBuffer` | `StringBuilder` |\n| :--- | :--- | :--- | :--- |\n| **Mutability** | **Immutable** (cannot be modified). | **Mutable** (modifies in place). | **Mutable** (modifies in place). |\n| **Thread Safety** | **Thread-safe** (inherent to immutability). | **Thread-safe** (synchronized methods). | **Not Thread-safe** (unsynchronized). |\n| **Performance** | Slow for frequent concatenations (creates new objects). | Slower (synchronization overhead). | **Fastest** (highest performance). |\n| **Storage Location** | String Constant Pool (SCP) & Heap. | Heap memory. | Heap memory. |\n\n- **`equals()` vs `==`:** `==` compares memory object references; `equals()` compares actual character sequence values.\n\n$$\\therefore \\text{Use StringBuilder for local single-threaded modifications, and StringBuffer only when thread safety is strictly required.}$$"
+}

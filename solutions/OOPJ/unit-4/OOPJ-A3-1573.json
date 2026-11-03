@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1573",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Show the hierarchy of Collection framework.",
+  "answerMd": "### Java Collections Framework Hierarchy\n\nThe **Java Collections Framework (JCF)** is a unified architecture for representing and manipulating groups of objects.\n\n#### Core Interface Hierarchy:\n- **`Iterable<T>`** (Root)\n  - **`Collection<E>`**\n    - **`List<E>`:** Ordered, index-based, allows duplicates (`ArrayList`, `LinkedList`, `Vector`).\n    - **`Set<E>`:** Unordered, unique elements only (`HashSet`, `LinkedHashSet`, `TreeSet`).\n    - **`Queue<E>`:** FIFO order (`PriorityQueue`, `ArrayDeque`).\n- **`Map<K, V>`:** Separate hierarchy for Key-Value pairs; keys are unique (`HashMap`, `TreeMap`, `LinkedHashMap`).\n\n$$\\therefore \\text{JCF standardizes data structure implementations across the Java runtime.}$$"
+}

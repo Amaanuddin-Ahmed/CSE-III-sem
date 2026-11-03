@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-2292",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Name the classes used for file handling in Java.",
+  "answerMd": "### File Handling in Java: FileReader and BufferedReader\n\n- **`FileReader`:** Character stream class for reading text files character-by-character.\n- **`BufferedReader`:** Wraps around a `Reader` to buffer characters, providing efficient reading of characters, arrays, and whole lines via `readLine()`.\n\n```java\ntry (BufferedReader br = new BufferedReader(new FileReader(\"input.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        System.out.println(line);\n    }\n}\n```\n\n$$\\therefore \\text{Buffering significantly reduces physical disk I/O operations, multiplying read throughput.}$$"
+}

@@ -140,10 +140,9 @@ export default async function handler(req, res) {
   // The first model gets the longest budget because longer answers take longer
   // to generate; fallbacks use shorter budgets to stay within maxDuration.
   const models = [
-    { name: 'gemini-3.5-flash', timeoutMs: 11000 },
-    { name: 'gemini-3.5-flash-lite', timeoutMs: 6000 },
-    { name: 'gemini-3.6-flash', timeoutMs: 5000 },
-    { name: 'gemini-3.8-flash', timeoutMs: 4000 }
+    { name: 'gemini-2.5-flash', timeoutMs: 11000 },
+    { name: 'gemini-2.0-flash', timeoutMs: 8000 },
+    { name: 'gemini-1.5-flash', timeoutMs: 6000 }
   ];
   let lastStatus = 502;
 

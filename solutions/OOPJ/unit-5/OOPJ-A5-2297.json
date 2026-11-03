@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-2297",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "Explain the limitations of AWT in comparison to Swing.",
+  "answerMd": "### AWT vs. Swing in Java\n\n| Comparison Parameter | Abstract Window Toolkit (AWT) | Swing (JFC) |\n| :--- | :--- | :--- |\n| **Component Weight** | **Heavyweight:** Relies on native OS GUI peers. | **Lightweight:** Written 100% in pure Java. |\n| **Look and Feel** | **Platform-dependent:** Looks different on Windows vs Linux. | **Pluggable Look-and-Feel (PLAF):** Uniform or customizable. |\n| **Component Richness**| Basic controls (Button, Label, Checkbox). | Rich set: JTable, JTree, JTabbedPane, JColorChooser. |\n| **Component Prefix** | None (`Button`, `Frame`, `Label`). | Prefixed with `J` (`JButton`, `JFrame`, `JLabel`). |\n| **Architecture** | Simple procedural/event wrapper. | Adheres to **Model-View-Controller (MVC)** design. |\n\n$$\\therefore \\text{Swing components are 100% pure Java lightweight controls providing cross-platform visual consistency.}$$"
+}

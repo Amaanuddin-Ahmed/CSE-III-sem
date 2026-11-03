@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A5-2296",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "part": "A",
+  "marks": 1,
+  "question": "Explain the purpose of JDBC drivers in Java Database Connectivity.",
+  "answerMd": "### Java Database Connectivity (JDBC) & Driver Types\n\n**Definition:**\nJDBC is a standard Java API that defines how Java applications connect to relational databases to execute SQL queries and updates.\n\n#### Four Types of JDBC Drivers:\n1. **Type 1 (JDBC-ODBC Bridge):** Translates JDBC calls to ODBC calls. Requires ODBC configuration on client machine (deprecated).\n2. **Type 2 (Native-API Driver):** Converts JDBC calls into vendor-specific native C/C++ client database library calls.\n3. **Type 3 (Network-Protocol Driver):** All-Java middleware server translates JDBC calls into generic network protocol.\n4. **Type 4 (Thin / Direct Native-Protocol Driver):** **100% pure Java driver** that connects directly to the database via native TCP/IP sockets (fastest, standard industry choice).\n\n#### Five Steps to Connect:\n1. Load Driver: `Class.forName(\"com.mysql.cj.jdbc.Driver\");`\n2. Establish Connection: `Connection con = DriverManager.getConnection(url, user, pass);`\n3. Create Statement: `Statement stmt = con.createStatement();`\n4. Execute SQL: `ResultSet rs = stmt.executeQuery(\"SELECT * FROM students\");`\n5. Close Resources: `con.close();`\n\n$$\\therefore \\text{Type 4 Thin Driver is the fastest, pure-Java cross-platform database connection driver.}$$"
+}

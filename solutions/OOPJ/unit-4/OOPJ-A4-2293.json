@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A4-2293",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 1,
+  "question": "Name the utility classes in Java.",
+  "answerMd": "### Java Utility Classes: StringTokenizer, Formatter, Scanner & Console\n\n- **`StringTokenizer` (`java.util`):** Breaks a string into tokens based on specified delimiters (default whitespace). Methods: `hasMoreTokens()`, `nextToken()`, `countTokens()`.\n- **`Formatter` (`java.util`):** Formats text using C-style `printf` specifiers (`%s`, `%d`, `%f`, `%t`).\n- **`Scanner` (`java.util`):** Parses primitive types and strings using regular expressions from console or files (`nextInt()`, `nextLine()`).\n- **`Console` (`java.io`):** Directly accesses system console with password masking (`readPassword()`).\n\n```java\nStringTokenizer st = new StringTokenizer(\"Java,OOPJ,2026\", \",\");\nwhile (st.hasMoreTokens()) {\n    System.out.println(st.nextToken());\n}\n```\n\n$$\\therefore \\text{Utility classes provide parsing, text formatting, and secure terminal interaction.}$$"
+}

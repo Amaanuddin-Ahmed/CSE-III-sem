@@ -1,0 +1,9 @@
+{
+  "id": "OOPJ-A3-1566",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "part": "A",
+  "marks": 2,
+  "question": "Explain Enumerations in Java.",
+  "answerMd": "### Java Enumerations (`enum`)\n\n**Definition:**\nAn **`enum`** in Java is a specialized class type whose fields consist of a fixed set of predefined constants.\n\n#### Key Characteristics:\n- Extends `java.lang.Enum` implicitly (cannot extend other classes).\n- Type-safe: Prevents passing invalid arbitrary integer constants.\n- Enums can have **constructors, instance variables, and methods**.\n- Directly supported as switch selectors in `switch` statements.\n\n```java\nenum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }\n\nDay today = Day.FRIDAY;\nswitch (today) {\n    case FRIDAY -> System.out.println(\"Weekend ahead!\");\n    default -> System.out.println(\"Weekday\");\n}\n```\n\n$$\\therefore \\text{Enums replace error-prone integer constants with compile-time type safety.}$$"
+}
