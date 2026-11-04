@@ -3452,33 +3452,8 @@ html[data-theme="dark"] .notes-unit-accordion-card.open .chapter-accordion-heade
 }
 
 
-/* Dark Mode styles for Question Importance Dots & Legend */
+/* Dark Mode styles for Question Importance Dot */
 [data-theme="dark"] .q-importance-dot.dot-red {
-  border-color: #0f172a;
-  box-shadow: 0 0 8px rgba(239, 68, 68, 0.9);
-}
-
-[data-theme="dark"] .q-importance-dot.dot-orange {
-  border-color: #0f172a;
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.9);
-}
-
-[data-theme="dark"] .pyq-importance-legend {
-  background: #1e293b !important;
-  border-color: #334155 !important;
-  color: #cbd5e1 !important;
-}
-
-[data-theme="dark"] .pyq-importance-legend .legend-title {
-  color: #f1f5f9 !important;
-}
-
-[data-theme="dark"] .pyq-importance-legend .legend-item {
-  color: #94a3b8 !important;
-}
-
-[data-theme="dark"] .q-meta-chip.important-chip {
-  background: rgba(239, 68, 68, 0.15) !important;
-  color: #fca5a5 !important;
-  border-color: rgba(239, 68, 68, 0.3) !important;
+  background-color: #f87171;
+  box-shadow: 0 0 6px rgba(248, 113, 113, 0.7);
 }

@@ -2227,16 +2227,15 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     const freq = q.frequency || (q.years ? q.years.length : 1);
     let importanceDot = '';
-    if (freq >= 4) {
-      importanceDot = `<span class="q-importance-dot dot-red" title="Very Important: Appeared in ${freq} exams (High Yield)" aria-label="Very Important (${freq} exams)"></span>`;
-    } else if (freq >= 2) {
-      importanceDot = `<span class="q-importance-dot dot-orange" title="Frequently Asked: Repeated in ${freq} exams" aria-label="Frequently Asked (${freq} exams)"></span>`;
+    if (freq > 5) {
+      importanceDot = `<span class="q-importance-dot dot-red" title="Repeated ${freq} times in exams" aria-label="Repeated ${freq} times"></span>`;
     }
 
     row.innerHTML = `
       <div class="q-compact-header" role="button" tabindex="0" aria-expanded="false" title="Click to view question options">
-        <span class="q-compact-num">${escapeHtml(qNum)}${importanceDot}</span>
+        <span class="q-compact-num">${escapeHtml(qNum)}</span>
         <div class="q-compact-text">${escapeHtml(cleanText)}</div>
+        ${importanceDot}
         <div class="q-compact-toggle">
           <i class="fa-solid fa-chevron-down q-compact-chevron" aria-hidden="true"></i>
         </div>
@@ -2246,11 +2245,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           <span class="q-meta-chip part-chip">Part ${q.part || 'A'} · ${marksLabel(q.marks)}</span>
           <span class="q-meta-chip unit-chip">Unit ${q.chapter || 1}</span>
           ${(q.years && q.years.length) ? `<span class="q-meta-chip year-chip"><i class="fa-regular fa-calendar"></i> Asked in: ${escapeHtml(q.years.join(', '))}</span>` : ''}
-          ${freq >= 4
-            ? `<span class="q-meta-chip rep-chip important-chip"><i class="fa-solid fa-fire"></i> High Yield · ${freq}x Repeated</span>`
-            : (freq >= 2
-                ? `<span class="q-meta-chip rep-chip"><i class="fa-solid fa-fire"></i> Repeated ${freq}x</span>`
-                : '')}
+          ${q.frequency > 1 ? `<span class="q-meta-chip rep-chip"><i class="fa-solid fa-fire"></i> Repeated ${q.frequency}x</span>` : ''}
         </div>
         <div class="q-compact-actions">
           <a href="${directPdfUrl}" target="_blank" rel="noopener noreferrer" class="btn-q-drive" title="Directly open original ${escapeHtml(q.paperName || 'paper')} in Google Drive">
