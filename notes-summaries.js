@@ -356,51 +356,83 @@ const NOTE_SUMMARIES = {
  "NOTE-DBMS-01": {
   "noteId": "NOTE-DBMS-01",
   "subjectId": "DBMS",
-  "chapter": 1,
+  "subject": "Database Management Systems",
   "title": "DBMS Comprehensive Lecture Notes: Units 1, 2 & 3",
-  "pageCount": 45,
-  "quality": "good",
-  "limited": false,
-  "limitedReason": "",
-  "overview": "Comprehensive lecture summary for Database Management Systems covering relational modeling, ER diagrams, SQL queries, relational algebra, and normalization up to BCNF.",
+  "overview": "Comprehensive faculty lecture notes covering DBMS architecture, Three-Schema Architecture, Data Independence, Entity-Relationship (ER) Modeling, Relational Model, Relational Algebra, Relational Calculus, SQL DDL/DML, Constraints, Triggers, and Schema Refinement (Normalization from 1NF to BCNF).",
   "topics": [
    {
-    "title": "ER Modeling & Relational Concepts",
-    "summary": "Entity-Relationship modeling designs conceptual schemas using entities, attributes, and relationships.",
-    "points": [
-     "Entity Types: Strong entity (has primary key) vs Weak entity (identifying relationship, discriminator).",
-     "Attributes: Simple vs Composite, Single-valued vs Multi-valued (double oval), Derived (dashed oval).",
-     "Integrity Constraints: Entity integrity (Primary key cannot be NULL), Referential integrity (Foreign key must match valid primary key or be NULL).",
-     "Relational Algebra Operators: Select (σ), Project (π), Union (∪), Cartesian Product (×), Natural Join (⨝)."
+    "name": "1. Database System Architecture & ER Data Modeling (Unit 1)",
+    "subtopics": [
+     "File Processing Systems vs. DBMS: Data redundancy, data inconsistency, isolation, concurrent access anomalies, and security constraints",
+     "Three-Schema ANSI/SPARC Architecture: External (View) Level, Conceptual (Logical) Level, and Internal (Physical) Level",
+     "Data Independence: Logical Data Independence vs. Physical Data Independence",
+     "Entity-Relationship (ER) Modeling: Entity sets, Attribute types (Simple/Composite, Single/Multi-valued, Stored/Derived, Key), Relationship sets, Mapping Cardinalities (1:1, 1:N, N:1, M:N), Existence Dependencies",
+     "Strong Entity Sets vs. Weak Entity Sets: Identifying relationships, partial keys (discriminator), double-rectangle and double-diamond notation",
+     "Extended ER (EER) Features: Specialization, Generalization, Attribute Inheritance, Aggregation, and Disjoint/Overlapping constraints"
     ],
-    "formulas": [
-     "Selection: σ_condition(R)",
-     "Projection: π_attribute_list(R)",
-     "Natural Join: R ⨝ S = π_attributes(σ_R.A=S.A(R × S))"
-    ],
-    "example": "Find names of students in CSE: π_name(σ_dept=\"CSE\"(STUDENT))."
+    "keyTakeaway": "DBMS overcomes traditional file system deficiencies by centralizing data control, guaranteeing atomicity and integrity, and enforcing data independence across views. In ER modeling, strong entities have an intrinsic primary key, while weak entities depend on an identifying relationship and a discriminator (partial key). ER diagrams cleanly translate into relational schemas where multi-valued attributes map to separate tables and M:N relationships become junction tables."
    },
    {
-    "title": "Functional Dependencies & Normalization (1NF to BCNF)",
-    "summary": "Normalization systematically eliminates data redundancy, insertion anomalies, deletion anomalies, and update anomalies.",
-    "points": [
-     "1NF: Every attribute column must contain atomic (indivisible) values; no repeating groups.",
-     "2NF: In 1NF and contains no partial functional dependency (no non-prime attribute depends on a proper subset of candidate key).",
-     "3NF: In 2NF and contains no transitive functional dependency (for every X → Y, either X is a superkey or Y is a prime attribute).",
-     "BCNF: Boyce-Codd Normal Form; for every non-trivial functional dependency X → Y, X must strictly be a Super Key."
+    "name": "2. Relational Model, Relational Algebra & Relational Calculus (Unit 2)",
+    "subtopics": [
+     "Relational Model Concepts: Relations (tables), Tuples (rows), Attributes (columns), Cardinality, Degree (Arity), Domain constraints",
+     "Keys in Relational Model: Super Key, Candidate Key, Primary Key, Alternate Key, and Foreign Key (Referential Integrity)",
+     "Fundamental Relational Algebra Operators: Selection (σ), Projection (π), Union (∪), Set Difference (-), Cartesian Product (×), and Rename (ρ)",
+     "Additional / Derived Relational Operators: Natural Join (⨝), Theta Join (⨝_θ), Equi-Join, Outer Joins (Left ⟕, Right ⟖, Full ⟗), Division (÷)",
+     "Tuple Relational Calculus (TRC): Non-procedural query language based on first-order logic; format { t | P(t) }, existential (∃) and universal (∀) quantifiers",
+     "Domain Relational Calculus (DRC): Format { <x1, x2, ..., xn> | P(x1, x2, ..., xn) }; Domain Variables and Safety of Expressions"
     ],
-    "formulas": [
-     "Armstrong's Axioms: Reflexivity (Y ⊆ X ⟹ X → Y), Augmentation (X → Y ⟹ XZ → YZ), Transitivity (X → Y and Y → Z ⟹ X → Z)."
+    "keyTakeaway": "Relational Algebra is procedural (specifies how to retrieve data step-by-step), whereas Relational Calculus is declarative (specifies what data to retrieve without execution details). Codd's Theorem proves that basic Relational Algebra, safe TRC, and safe DRC are mathematically equivalent in expressive power (relational completeness)."
+   },
+   {
+    "name": "3. Structured Query Language (SQL), Constraints & Triggers (Unit 3 - Part 1)",
+    "subtopics": [
+     "SQL Architecture: Data Definition Language (DDL - CREATE, ALTER, DROP, TRUNCATE), Data Manipulation Language (DML - SELECT, INSERT, UPDATE, DELETE), and DCL/TCL",
+     "Integrity Constraints in SQL: NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY (ON DELETE CASCADE / ON UPDATE SET NULL), CHECK, and DEFAULT",
+     "Complex Queries & Set Operations: UNION, INTERSECT, EXCEPT (MINUS) and UNION ALL (preserving duplicate tuples)",
+     "Nested Subqueries: Correlated subqueries, IN, NOT IN, EXISTS, NOT EXISTS, ALL, ANY / SOME",
+     "Aggregate Functions & Grouping: COUNT(), SUM(), AVG(), MIN(), MAX(), with GROUP BY and HAVING clauses (difference between WHERE and HAVING)",
+     "Views and Triggers: Virtual tables, view updatability criteria, Active Databases, Event-Condition-Action (ECA) rule paradigm, BEFORE vs. AFTER triggers"
     ],
-    "example": "Relation R(A, B, C) with FD A → B and B → C: A is candidate key. B → C is a transitive dependency (B is not superkey, C is not prime). Violates 3NF. Decomposed into R1(A, B) and R2(B, C)."
+    "keyTakeaway": "SQL provides a standard declarative language for relational databases. WHERE filters individual tuples before aggregation, while HAVING filters aggregated groups after GROUP BY. Triggers enforce complex business rules automatically upon INSERT, UPDATE, or DELETE events, serving as the foundation of active database management."
+   },
+   {
+    "name": "4. Schema Refinement, Functional Dependencies & Normalization (Unit 3 - Part 2)",
+    "subtopics": [
+     "Pitfalls in Relational Database Design: Data Redundancy, Update Anomalies, Insertion Anomalies, and Deletion Anomalies",
+     "Functional Dependencies (FDs): Formal definition α → β, Trivial vs. Non-trivial FDs, Full functional dependency vs. Partial dependency",
+     "Armstrong's Axioms: Reflexivity, Augmentation, Transitivity, and Secondary Rules (Union, Decomposition, Pseudo-transitivity)",
+     "Closure Algorithms: Attribute Closure (X+), Minimal / Canonical Cover of FDs, determining Candidate Keys algorithmically",
+     "Normal Forms Hierarchy: 1NF (atomic attributes), 2NF (no partial dependency), 3NF (no transitive dependency: for α → β, α is superkey OR β is prime), BCNF (for every non-trivial α → β, α must be superkey)",
+     "Decomposition Properties: Lossless-Join Decomposition (R1 ∩ R2 → R1 or R1 ∩ R2 → R2) and Dependency Preservation"
+    ],
+    "keyTakeaway": "Normalization systematically eliminates update anomalies by decomposing relations into higher normal forms. BCNF strictly eliminates all functional redundancy but does not always guarantee dependency preservation. 3NF guarantees both lossless join and dependency preservation, making it the most practical standard in enterprise application design."
    }
   ],
-  "mustKnow": [
-   "Entity integrity: Primary key cannot accept NULL values",
-   "Referential integrity enforced via foreign keys",
-   "2NF eliminates partial dependency; 3NF eliminates transitive dependency",
-   "In BCNF, every determinant X in X → Y must strictly be a super key",
-   "ACID properties: Atomicity, Consistency, Isolation, Durability"
+  "formulas": [
+   "Selection Operator: \\(\\sigma_{p}(R) = \\{ t \\in R \\mid p(t) = \\text{true} \\}\\)",
+   "Projection Operator: \\(\\pi_{A_1, A_2, ..., A_k}(R)\\) (automatically eliminates duplicate tuples)",
+   "Natural Join: \\(R \\bowtie S = \\pi_{\\text{schema}(R) \\cup \\text{schema}(S)}(\\sigma_{R.A_1 = S.A_1 \\land ...}(R \\times S))\\)",
+   "Relational Division: \\(R \\div S = \\pi_{R - S}(R) - \\pi_{R - S}((\\pi_{R - S}(R) \\times S) - R)\\)",
+   "Armstrong's Reflexivity: \\(\\text{If } \\beta \\subseteq \\alpha\\text{, then } \\alpha \\to \\beta\\)",
+   "Armstrong's Augmentation: \\(\\text{If } \\alpha \\to \\beta\\text{, then } \\gamma\\alpha \\to \\gamma\\beta\\)",
+   "Armstrong's Transitivity: \\(\\text{If } \\alpha \\to \\beta\\text{ and } \\beta \\to \\gamma\\text{, then } \\alpha \\to \\gamma\\)",
+   "Lossless Join Condition: \\(R_1 \\bowtie R_2 = R \\iff (R_1 \\cap R_2 \\to R_1) \\in F^+\\text{ or }(R_1 \\cap R_2 \\to R_2) \\in F^+\\)",
+   "BCNF Condition: \\(\\forall (\\alpha \\to \\beta) \\in F^+,\\text{ either } \\beta \\subseteq \\alpha\\text{ (trivial) or } \\alpha\\text{ is a superkey of } R\\)",
+   "3NF Condition: \\(\\forall (\\alpha \\to \\beta) \\in F^+,\\text{ either } \\beta \\subseteq \\alpha\\text{, or } \\alpha\\text{ is superkey, or every } B \\in (\\beta - \\alpha)\\text{ is prime}\\)"
+  ],
+  "mustKnowQuestions": [
+   "Compare and contrast traditional File Processing Systems with Database Management Systems across 6 standard criteria.",
+   "Explain the Three-Schema ANSI/SPARC Architecture. Differentiate between Logical Data Independence and Physical Data Independence with diagrams.",
+   "Differentiate between Strong Entity Sets and Weak Entity Sets. How are Weak Entity Sets represented in ER diagrams and converted to relational tables?",
+   "Given the Sailors-Boats-Reserves schema, write queries in Relational Algebra and SQL using Joins, Subqueries, and Aggregate Functions.",
+   "State Armstrong's Axioms. Given relation R(A, B, C, D, E) and functional dependencies, compute attribute closure (AB)+ and find all Candidate Keys.",
+   "Compare 3NF and BCNF with concrete counterexamples. Why is BCNF strictly stronger than 3NF, and what is the trade-off regarding dependency preservation?"
+  ],
+  "examTips": [
+   "When drawing ER diagrams, always mark primary keys with underlines, partial keys with dashed underlines, weak entities with double rectangles, and identifying relationships with double diamonds.",
+   "For normalization proofs, always test the lossless-join condition: the intersection of the two decomposed schemas must functionally determine at least one of the schemas.",
+   "Remember that BCNF requires the LHS of every functional dependency to be a superkey, whereas 3NF permits the RHS to be a prime attribute."
   ]
  },
  "NOTE-OOPJ-01": {
@@ -5603,6 +5635,285 @@ const NOTE_SUMMARIES = {
   ],
   "examTips": [
    "Use this master summary slide deck for final 1-hour rapid revision before entering the exam hall."
+  ]
+ },
+ "NOTE-DBMS-02": {
+  "noteId": "NOTE-DBMS-02",
+  "subjectId": "DBMS",
+  "subject": "Database Management Systems",
+  "title": "DBMS Unit 4 Lecture Notes: Transactions, Concurrency & Recovery",
+  "overview": "Comprehensive faculty lecture notes covering Transaction Management, ACID properties, Transaction States, Schedules, Conflict and View Serializability, Concurrency Control Protocols (2PL, Strict 2PL, Timestamp Ordering), Deadlock Management, and Database Recovery Systems (WAL, Checkpointing, Shadow Paging, ARIES).",
+  "topics": [
+   {
+    "name": "1. Transaction Concept, States & ACID Properties",
+    "subtopics": [
+     "Transaction Definition: A logical unit of database processing that includes one or more database access operations (read, write)",
+     "ACID Properties: Atomicity (all-or-nothing), Consistency (preserves database invariants), Isolation (transactions execute independently), Durability (committed changes persist)",
+     "Transaction State Diagram: Active, Partially Committed, Failed, Aborted (Rollback), and Committed",
+     "Concurrent Executions & Anomalies: Lost Update problem, Temporary Update (Dirty Read) problem, Unrepeatable Read problem, and Phantom Read problem",
+     "Transaction Schedules: Serial Schedules vs. Concurrent (Non-serial) Schedules"
+    ],
+    "keyTakeaway": "A transaction must maintain all ACID properties. Concurrency anomalies occur when multiple transactions interleave execution without proper isolation. Serial schedules execute transactions sequentially without interleaving, ensuring consistency but suffering from very low CPU throughput and long response times."
+   },
+   {
+    "name": "2. Serializability: Conflict Serializability & View Serializability",
+    "subtopics": [
+     "Conflicting Operations: Two operations conflict if they belong to different transactions, access the exact same data item, and at least one operation is a WRITE",
+     "Conflict Serializability: A schedule S is conflict serializable if it can be transformed into a serial schedule via non-conflicting operation swaps",
+     "Precedence Graph (Serialization Graph): Directed graph G = (V, E) where transactions are vertices; directed edge Ti → Tj exists if Ti performs an operation conflicting with a subsequent operation in Tj",
+     "Testing Conflict Serializability: A schedule is conflict serializable if and only if its Precedence Graph is acyclic (contains no cycles); topological sort provides equivalent serial order",
+     "View Serializability: Weaker condition based on initial read, updated read, and final write equivalence; View serializable without conflict serializability requires blind writes",
+     "Recoverable Schedules and Cascadeless Schedules: Schedules that avoid cascading rollbacks by ensuring Ti commits before Tj reads data written by Ti"
+    ],
+    "keyTakeaway": "Conflict serializability is the standard correctness criterion enforced by concurrency control managers. Testing acyclicity via Precedence Graphs is computationally efficient (O(V + E)), whereas testing view serializability is NP-complete in the general case."
+   },
+   {
+    "name": "3. Concurrency Control Protocols: Two-Phase Locking & Timestamps",
+    "subtopics": [
+     "Lock-Based Protocols: Shared locks (S-lock / Read lock) and Exclusive locks (X-lock / Write lock); Lock compatibility matrix",
+     "Two-Phase Locking (2PL): Growing Phase (acquiring locks, no locks released) and Shrinking Phase (releasing locks, no new locks acquired); guarantees conflict serializability",
+     "Variations of 2PL: Strict 2PL (holds all exclusive locks until commit/abort to ensure cascadelessness) and Rigorous 2PL (holds all S and X locks until commit to ensure strict serializability)",
+     "Deadlocks in Locking Protocols: Conditions for deadlock; Prevention schemes (Wait-Die non-preemptive vs. Wound-Wait preemptive using timestamps); Detection via Wait-For Graphs (WFG) and victim selection",
+     "Timestamp-Based Concurrency Control: Read-Timestamp R-TS(Q) and Write-Timestamp W-TS(Q); Thomas' Write Rule for obsolete write suppression"
+    ],
+    "keyTakeaway": "Basic 2PL guarantees conflict serializability but is vulnerable to cascading aborts and deadlocks. Strict 2PL eliminates cascading rollbacks by holding exclusive locks until transaction completion, making it the de facto protocol in commercial relational database engines."
+   },
+   {
+    "name": "4. Database Recovery Systems & Fault Tolerance",
+    "subtopics": [
+     "Failure Classification: Transaction failure (logical error, internal abort), System crash (power failure, OS panic), and Disk failure (head crash, bad blocks)",
+     "Write-Ahead Logging (WAL) Protocol: Log records must be flushed to persistent non-volatile disk before corresponding dirty data blocks are written to disk",
+     "Log-Based Recovery Schemes: Deferred Database Modification (NO-UNDO/REDO) vs. Immediate Database Modification (UNDO/REDO)",
+     "Checkpointing: Periodically flushing dirty memory buffers and recording checkpoint logs to limit log traversal time during crash restart",
+     "Shadow Paging: Alternative recovery technique maintaining two page tables (Current and Shadow) eliminating the need for REDO/UNDO logs",
+     "ARIES Recovery Algorithm: Advanced industrial recovery protocol executing three passes: Analysis Pass, Redo Pass (Repeating History), and Undo Pass"
+    ],
+    "keyTakeaway": "Database recovery ensures the Atomicity and Durability of transactions despite hardware crashes. The WAL protocol prevents unrecoverable disk states. Checkpoints bound the recovery duration so the system only needs to process log records since the most recent checkpoint rather than scanning the entire log from the beginning of time."
+   }
+  ],
+  "formulas": [
+   "Conflict Serializability: \\(\\text{Schedule } S \\text{ is conflict serializable} \\iff \\text{Precedence Graph } G(S) \\text{ is acyclic}\\)",
+   "Lock Compatibility: \\(\\text{Compatible}(S, S) = \\text{True},\\text{ Compatible}(S, X) = \\text{False},\\text{ Compatible}(X, X) = \\text{False}\\)",
+   "Wait-Die Scheme (Non-preemptive): \\(\\text{If } T_i \\text{ requests lock held by } T_j\\text{: if } TS(T_i) < TS(T_j) \\text{ then Wait, else Die (rollback)}\\)",
+   "Wound-Wait Scheme (Preemptive): \\(\\text{If } T_i \\text{ requests lock held by } T_j\\text{: if } TS(T_i) < TS(T_j) \\text{ then Wound (abort } T_j\\text{), else Wait}\\)",
+   "Timestamp Ordering Read Rule: \\(\\text{If } TS(T) < W\\text{-}TS(Q)\\text{, reject and rollback } T\\text{; else allow read and set } R\\text{-}TS(Q) = \\max(R\\text{-}TS(Q), TS(T))\\)",
+   "Timestamp Ordering Write Rule: \\(\\text{If } TS(T) < R\\text{-}TS(Q) \\text{ or } TS(T) < W\\text{-}TS(Q)\\text{, reject and rollback } T\\text{; else allow write and set } W\\text{-}TS(Q) = TS(T)\\)",
+   "Thomas' Write Rule: \\(\\text{If } TS(T) < W\\text{-}TS(Q)\\text{, ignore the obsolete write and continue without aborting}\\)"
+  ],
+  "mustKnowQuestions": [
+   "Explain the ACID properties of transactions. How does the DBMS enforce each individual property?",
+   "What is Conflict Serializability? Construct the Precedence Graph for a given concurrent schedule and determine whether it is serializable.",
+   "Explain the Two-Phase Locking (2PL) protocol. Differentiate between Basic 2PL, Strict 2PL, and Rigorous 2PL with lock conversion diagrams.",
+   "Compare Wait-Die and Wound-Wait deadlock prevention algorithms with concrete timestamp scenarios.",
+   "Explain Log-Based Recovery with Immediate and Deferred Database Modification schemes. How do Checkpoints accelerate crash recovery?",
+   "Describe the ARIES recovery algorithm detailing the Analysis, Redo, and Undo passes."
+  ],
+  "examTips": [
+   "In precedence graphs, always draw edges between different transactions accessing the same item where at least one operation is a Write: Read-Write, Write-Read, or Write-Write.",
+   "Remember that Strict 2PL holds exclusive locks until commit/abort, while Rigorous 2PL holds BOTH shared and exclusive locks until commit.",
+   "In log-based recovery with immediate modification: if a transaction has a START but no COMMIT log before the crash, it must be UNDONE; if it has both START and COMMIT, it must be REDONE."
+  ]
+ },
+ "NOTE-DBMS-03": {
+  "noteId": "NOTE-DBMS-03",
+  "subjectId": "DBMS",
+  "subject": "Database Management Systems",
+  "title": "DBMS Unit 5 Lecture Notes: File Organization, Indexing & B+ Trees",
+  "overview": "Comprehensive faculty lecture notes covering Physical Storage Media hierarchy, Record and Page formats, File Organization (Heap, Sorted, Hash), Indexing fundamentals, Primary vs. Secondary indices, Dense vs. Sparse indices, Multi-level Indexing, B-Trees and B+ Trees (Structure, Search, Insertion, Deletion, Fan-out, Height), and Static vs. Dynamic Hashing (Extendible and Linear Hashing).",
+  "topics": [
+   {
+    "name": "1. Storage Media, Record Formats & File Organization",
+    "subtopics": [
+     "Storage Device Hierarchy: Primary storage (Cache, Main Memory), Secondary storage (Flash, Magnetic Disks), Tertiary storage (Optical, Tape)",
+     "Disk Architecture: Platters, Tracks, Sectors, Cylinders, Read/Write heads, Seek time, Rotational latency, and Transfer rate",
+     "Buffer Management: Buffer Pool, Frame Table, Replacement Policies (LRU, Clock, Pinning dirty pages)",
+     "Record Organization: Fixed-Length Records vs. Variable-Length Records (Null Bitmaps, Offset arrays, Slotted-Page Architecture)",
+     "File Organization Methods: Heap Files (unordered), Sorted / Sequential Files, and Hashed Files; Comparison of I/O cost for Scan, Equality Search, Range Search, Insert, and Delete"
+    ],
+    "keyTakeaway": "Databases minimize costly mechanical disk I/O through disciplined page formatting and buffer management. Slotted-page architecture enables variable-length records with pointer arrays. Heap files are optimal for fast bulk inserts (O(1)), while sorted files excel at range queries and binary search at the expense of high insertion overhead."
+   },
+   {
+    "name": "2. Indexing Fundamentals: Primary, Secondary, Dense & Sparse Indices",
+    "subtopics": [
+     "Index Concept: An auxiliary data file containing ordered (Search-Key, Pointer) pairs to speed up records retrieval without full table scan",
+     "Ordered Index Taxonomy: Primary Index (built on primary key of a sequentially ordered data file), Clustered Index (built on non-key ordering attribute), and Secondary Index (built on non-ordering attributes)",
+     "Dense Index: Contains an index entry for every single search-key value in the data file (mandatory for secondary indices)",
+     "Sparse Index: Contains index entries for only some search-key values (typically one entry per physical disk block of ordered data)",
+     "Comparison: Dense indices consume more disk storage but locate records faster; Sparse indices have smaller memory footprint but require searching within the block",
+     "Multilevel Indexing: Creating a sparse outer index over an inner index when the primary index itself exceeds main memory capacity"
+    ],
+    "keyTakeaway": "An index drastically reduces the number of block accesses required to satisfy queries. A primary index can be sparse because the underlying data file is sorted on the search key, whereas a secondary index MUST be dense because data records are scattered across unordered disk blocks."
+   },
+   {
+    "name": "3. Tree-Structured Indexing: B-Trees and B+ Trees",
+    "subtopics": [
+     "Limitations of Binary Search Trees on Disk: Low fan-out leads to deep trees requiring excessive disk seeks",
+     "B-Tree Structure: Balanced multi-way search tree where internal nodes store both search keys and data record pointers",
+     "B+ Tree Architecture: Standard balanced tree where all data record pointers reside strictly in the leaf nodes, connected horizontally via bidirectional pointers as a doubly linked list",
+     "B+ Tree Node Properties: Parameter p (order / fan-out); Internal nodes contain at most p child pointers and p - 1 search keys; Leaf nodes contain at least ⌈(p - 1)/2⌉ search keys",
+     "B+ Tree Operations: Search (O(log_B N)), Insertion with node splitting and key promotion, and Deletion with underflow merging / redistribution",
+     "Why B+ Trees are Superior to B-Trees for Databases: Higher fan-out reduces tree height; leaf-level linked list enables blazing-fast sequential range scans"
+    ],
+    "keyTakeaway": "The B+ Tree is the most widely implemented index structure in relational databases. Because internal nodes only store navigation keys and no data pointers, the fan-out is very large (typically 100 to 200), keeping tree height at 3 or 4 levels even for millions of records, guaranteeing data retrieval in at most 3 to 4 disk reads."
+   },
+   {
+    "name": "4. Hash-Based Indexing: Static Hashing vs. Dynamic Hashing",
+    "subtopics": [
+     "Hash Function: Mapping search keys uniformly and randomly across a fixed range of bucket addresses h(K) → Bucket Address",
+     "Static Hashing: Fixed number of buckets; bucket overflow handled via Overflow Chaining (linked lists of overflow buckets) or Open Addressing; suffers when database size fluctuates dramatically",
+     "Dynamic Hashing: Adapts dynamically to database growth and shrinkage without rehashing the entire file",
+     "Extendible Hashing: Uses a directory of bucket pointers with Global Depth (d) and Local Depth (d_local) for each bucket; bucket splits double directory size only when local depth equals global depth",
+     "Linear Hashing: Systematically splits buckets in round-robin order using a split pointer without requiring a global directory structure",
+     "Comparison of Hash-Based vs. Tree-Based Indexing: Hash indexes provide O(1) equality searches but cannot support range queries; B+ Trees support both equality and range queries in O(log N)"
+    ],
+    "keyTakeaway": "Hash indexing provides instantaneous O(1) point lookups based on exact key matching. Static hashing degrades severely with overflow chains under heavy data growth. Extendible hashing gracefully doubles directory pointers while maintaining O(1) lookups. However, for general relational database workloads with range scans, B+ Trees remain superior."
+   }
+  ],
+  "formulas": [
+   "Disk Access Time: \\(\\text{Access Time} = \\text{Seek Time} + \\text{Rotational Latency} + \\text{Transfer Time}\\)",
+   "Rotational Latency: \\(\\text{Average Latency} = \\frac{1}{2 \\times \\text{RPM}} \\times 60\\text{ seconds}\\)",
+   "B+ Tree Order (Fan-out) Calculation: \\(p \\times P_{\\text{ptr}} + (p - 1) \\times K_{\\text{size}} \\le B_{\\text{size}}\\) (where \\(B\\) is block size, \\(P\\) is pointer size, \\(K\\) is key size)",
+   "B+ Tree Height Bound: \\(\\text{Height} \\le \\lceil \\log_{\\lceil p/2 \\rceil} (N) \\rceil\\) (where \\(N\\) is total leaf records)",
+   "Extendible Hashing Directory Size: \\(\\text{Directory Size} = 2^{d}\\) (where \\(d\\) is Global Depth)",
+   "Extendible Hashing Bucket Splitting Condition: \\(\\text{Directory doubles when a bucket overflows and } d_{\\text{local}} = d\\)"
+  ],
+  "mustKnowQuestions": [
+   "Compare and contrast Primary Index, Secondary Index, and Clustered Index with clear diagrams.",
+   "Differentiate between Dense Index and Sparse Index. Why can a primary index be sparse while a secondary index must be dense?",
+   "Explain the structure of a B+ Tree. Given block size, key size, and pointer size, calculate the maximum fan-out and maximum height of a B+ tree.",
+   "Show step-by-step insertion of keys into a B+ Tree of order 4, illustrating node splits, key promotions, and leaf chaining.",
+   "Explain Extendible Hashing. Illustrate bucket splits and directory doubling when inserting records into an extendible hash table.",
+   "Compare B+ Tree Indexing with Hash Indexing. Under what conditions is a B+ Tree preferred over a Hash Index?"
+  ],
+  "examTips": [
+   "When calculating B+ tree fan-out: remember that a node with p pointers holds p - 1 search keys. Solve p * PointerSize + (p - 1) * KeySize <= BlockSize for integer p.",
+   "In B+ tree node splits: when a leaf splits, the middle key is copied up into the parent AND retained in the right leaf; when an internal node splits, the middle key is promoted to the parent and NOT retained in the child.",
+   "Remember that Hash indices CANNOT handle range queries (`BETWEEN`, `>`, `<`); whenever an exam question asks about range performance, B+ tree is always the answer."
+  ]
+ },
+ "NOTE-DBMS-04": {
+  "noteId": "NOTE-DBMS-04",
+  "subjectId": "DBMS",
+  "subject": "Database Management Systems",
+  "title": "DBMS Concurrency Control & Two-Phase Locking Architecture Slides",
+  "overview": "Official university lecture slides explaining Lock-Based Protocols, Shared/Exclusive Locks, Two-Phase Locking (2PL), Strict 2PL, Rigorous 2PL, Lock Conversions, Deadlock prevention (Wait-Die, Wound-Wait) and detection via Wait-For Graphs.",
+  "topics": [
+   {
+    "name": "1. Lock-Based Protocols & Lock Conversions",
+    "subtopics": [
+     "Lock Modes: Shared (S) lock for reading; Exclusive (X) lock for reading and writing",
+     "Lock Compatibility Matrix: Only (S, S) requests are compatible concurrently; all other combinations block",
+     "Lock Conversion Mechanism: Upgrading a Shared lock to Exclusive lock during growing phase; Downgrading an Exclusive lock to Shared lock during shrinking phase",
+     "Pitfalls of Locking: Starvation (transactions indefinitely delayed waiting for locks) and Deadlock (circular blocking)"
+    ],
+    "keyTakeaway": "Locks prevent concurrent transactions from corrupting data items. Upgrading locks allows transactions to read without blocking other readers until a write is strictly necessary, optimizing concurrency."
+   },
+   {
+    "name": "2. Two-Phase Locking (2PL) Protocol Taxonomy",
+    "subtopics": [
+     "Basic 2PL: Guarantees conflict serializability; transactions acquire all locks during Growing phase and release during Shrinking phase",
+     "Strict 2PL: Holds all Exclusive locks until commit/abort; eliminates cascading aborts and ensures cascadeless schedules",
+     "Rigorous 2PL: Holds both Shared and Exclusive locks until transaction completion; ensures strict serializability and identical serialization order to commit order",
+     "Conservative 2PL (Static 2PL): Pre-declares and locks all required data items before transaction starts; prevents deadlocks but reduces concurrency"
+    ],
+    "keyTakeaway": "Basic 2PL ensures serializability but can suffer from cascading aborts. Strict 2PL is the industry standard because holding write locks until commit ensures that uncommitted data is never read by other transactions."
+   },
+   {
+    "name": "3. Deadlock Handling Strategies in DBMS",
+    "subtopics": [
+     "Deadlock Conditions: Mutual exclusion, Hold-and-wait, No preemption, and Circular wait",
+     "Deadlock Prevention: Eliminates conditions before deadlocks can form; uses transaction timestamps (Wait-Die vs. Wound-Wait)",
+     "Wait-Die Protocol (Non-preemptive): Older transaction waits for younger; younger transaction requesting lock held by older dies and rolls back",
+     "Wound-Wait Protocol (Preemptive): Older transaction wounds (preempts and aborts) younger transaction; younger transaction waits for older",
+     "Deadlock Detection: Constructing dynamic Wait-For Graphs (WFG); cycle detection using depth-first search; victim selection based on rollback cost"
+    ],
+    "keyTakeaway": "Wait-Die and Wound-Wait prevent deadlocks using timestamps. Wound-Wait minimizes rollbacks because older transactions preempt younger ones without unnecessary aborts."
+   },
+   {
+    "name": "4. Multiple Granularity Locking & Intent Locks",
+    "subtopics": [
+     "Granularity Hierarchy: Database → Area → File → Page → Record",
+     "Intent Locks: Intention-Shared (IS), Intention-Exclusive (IX), and Shared-Intention-Exclusive (SIX)",
+     "Locking Protocol Rules: To lock a child node in S or X mode, the parent must be locked in IS or IX mode respectively",
+     "Advantages: Allows coarse-grained transactions (table scans) to lock tables without setting millions of record locks"
+    ],
+    "keyTakeaway": "Multiple granularity locking allows transactions operating on large sets of records to acquire high-level locks efficiently while allowing fine-grained record locks for point queries, maximizing throughput."
+   }
+  ],
+  "formulas": [
+   "Lock Compatibility Matrix: \\(\\text{Compatible}(S, S) = \\text{True}\\text{; all others False}\\)",
+   "Wait-Die Condition: \\(\\text{If } TS(T_i) < TS(T_j) \\implies \\text{Wait; else Die}\\)",
+   "Wound-Wait Condition: \\(\\text{If } TS(T_i) < TS(T_j) \\implies \\text{Wound; else Wait}\\)",
+   "Deadlock Cycle Criterion: \\(\\text{Deadlock exists} \\iff \\text{Wait-For Graph contains a directed cycle}\\)"
+  ],
+  "mustKnowQuestions": [
+   "Explain the Two-Phase Locking (2PL) protocol. How does it guarantee conflict serializability?",
+   "Compare Strict 2PL and Rigorous 2PL. Why does Strict 2PL avoid cascading rollbacks?",
+   "Explain Wait-Die and Wound-Wait deadlock prevention algorithms with example transaction scenarios.",
+   "Describe Multiple Granularity Locking and explain the purpose of Intent Locks (IS, IX, SIX)."
+  ],
+  "examTips": [
+   "Remember the mnemonic for deadlock prevention: In Wait-Die, Old waits and Young dies. In Wound-Wait, Old wounds and Young waits.",
+   "Strict 2PL is the most asked topic in Unit 4; always emphasize that holding exclusive locks until commit prevents cascading aborts."
+  ]
+ },
+ "NOTE-DBMS-05": {
+  "noteId": "NOTE-DBMS-05",
+  "subjectId": "DBMS",
+  "subject": "Database Management Systems",
+  "title": "DBMS Recovery Systems & Log-Based Checkpointing Architecture Slides",
+  "overview": "Official university lecture slides covering WAL (Write-Ahead Logging), Deferred vs. Immediate Database Modification, Checkpoints, Shadow Paging, and the industrial ARIES Recovery Algorithm.",
+  "topics": [
+   {
+    "name": "1. Write-Ahead Logging (WAL) & Log Records",
+    "subtopics": [
+     "Log File Structure: Append-only sequential file on persistent disk storage recording every state-changing database event",
+     "Log Record Anatomy: <T_id, Variable, Old_Value, New_Value>, <T_id, START>, <T_id, COMMIT>, <T_id, ABORT>",
+     "WAL Rules: 1. Before an updated data page is written to disk, the corresponding log record must be flushed. 2. A transaction is committed only when its <COMMIT> log record is persistently written to disk."
+    ],
+    "keyTakeaway": "Write-Ahead Logging ensures Atomicity and Durability by ensuring that sufficient historical state is preserved on non-volatile disk before dirty memory blocks overwrite persistent database files."
+   },
+   {
+    "name": "2. Deferred vs. Immediate Database Modification",
+    "subtopics": [
+     "Deferred Database Modification: All writes are buffered in memory and log files; database disk files are updated ONLY after transaction commits (NO-UNDO / REDO scheme)",
+     "Immediate Database Modification: Updates to disk can happen while transaction is still active before commit; requires both UNDO (using old values) and REDO (using new values)",
+     "Crash Recovery Rules: Immediate modification requires UNDO for uncommitted transactions and REDO for committed transactions"
+    ],
+    "keyTakeaway": "Deferred modification eliminates the need for UNDO operations because uncommitted writes never reach the database disk. Immediate modification allows higher buffer utilization but mandates robust UNDO logging."
+   },
+   {
+    "name": "3. Checkpointing Architectures",
+    "subtopics": [
+     "Checkpoint Mechanism: Periodic flushing of all dirty buffer blocks and active log records to persistent disk",
+     "Checkpoint Log Format: <CHECKPOINT (T1, T2, ..., Tn)> listing all active transactions at the time of the checkpoint",
+     "Recovery Optimization: During system crash, recovery only needs to scan backwards to the most recent checkpoint rather than the beginning of the log"
+    ],
+    "keyTakeaway": "Checkpoints bound the recovery time of enterprise databases, guaranteeing that crash recovery finishes in seconds rather than hours."
+   },
+   {
+    "name": "4. Industrial ARIES Recovery Algorithm",
+    "subtopics": [
+     "ARIES Core Concepts: Log Sequence Numbers (LSNs), PageLSN, FlushedLSN, Transaction Table, and Dirty Page Table (DPT)",
+     "Three Recovery Passes: 1. Analysis Pass (determines state of buffer and transactions at crash). 2. Redo Pass (repeats history starting from oldest unwritten page). 3. Undo Pass (rolls back uncommitted transactions using Compensation Log Records - CLRs)",
+     "Compensation Log Records (CLRs): Ensure that undo actions are never repeated even if the system crashes repeatedly during the recovery process itself"
+    ],
+    "keyTakeaway": "ARIES is the gold standard recovery algorithm in IBM DB2, Microsoft SQL Server, and PostgreSQL. By repeating history during the Redo pass and logging CLRs during Undo, ARIES guarantees fast, non-repeating fault recovery."
+   }
+  ],
+  "formulas": [
+   "Write-Ahead Logging Rule: \\(\\text{PageLSN} \\le \\text{FlushedLSN}\\)",
+   "Immediate Modification Undo/Redo: \\(\\text{If } \\langle T, \\text{COMMIT} \\rangle \\in \\text{Log} \\implies \\text{REDO}(T);\\text{ else } \\text{UNDO}(T)\\)",
+   "Deferred Modification Redo Only: \\(\\text{If } \\langle T, \\text{COMMIT} \\rangle \\in \\text{Log} \\implies \\text{REDO}(T);\\text{ else Ignore}\\)"
+  ],
+  "mustKnowQuestions": [
+   "Explain Log-Based Recovery with Immediate and Deferred Database Modification schemes.",
+   "What are Checkpoints? How do checkpoints minimize recovery overhead after a system crash?",
+   "Describe the ARIES Recovery Algorithm detailing the Analysis, Redo, and Undo passes."
+  ],
+  "examTips": [
+   "In crash recovery questions, look at the log: if a transaction has a START but no COMMIT, it is an active loser that must be UNDONE; if it has a COMMIT, it is a winner that must be REDONE.",
+   "Checkpoints always define the oldest log record needed for recovery."
   ]
  }
 };

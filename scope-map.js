@@ -80,8 +80,8 @@ const SCOPE_MAP = {
       unit3Title: 'SQL, Constraints, Triggers and Schema Refinement (Normalization)',
       mid1Description: 'SQL: Basic Queries, UNION/INTERSECT/EXCEPT, Nested Queries, Aggregation, NULLs, Constraints and Triggers',
       mid2Description: 'Schema Refinement: Redundancy, Decompositions, Functional Dependencies, 1NF–BCNF, Lossless Join, Multivalued Dependencies, 4NF and 5NF',
-      mid1Keywords: ['sql', 'select', 'union', 'intersect', 'except', 'nested quer', 'aggregation', 'null value', 'trigger', 'active database', 'integrity constraint', 'constraint', 'types of joins', 'stored procedure'],
-      mid2Keywords: ['redundancy', 'decomposition', 'functional dependenc', '1nf', '2nf', '3nf', 'bcnf', 'lossless', 'multivalued dependenc', 'multi valued dependenc', 'join dependency', '4nf', '5nf', 'normal form', 'normalization', 'canonical cover', 'attribute closure', 'closure of', 'armstrong', 'prime attribute', 'anomaly', 'schema refinement']
+      mid1Keywords: ['sql', 'select', 'union', 'intersect', 'except', 'nested quer', 'aggregation', 'null value', 'trigger', 'active database', 'integrity constraint', 'constraint', 'types of joins', 'stored procedure', 'sailors', 'sailor', 'boats', 'reserved', 'reserve', 'find the ids', 'find the names', 'find the sids', 'query', 'queries', 'views'],
+      mid2Keywords: ['redundancy', 'decomposition', 'functional dependenc', 'functional', 'trivial', "l'unctional", '1nf', '2nf', '3nf', 'bcnf', '3npf', 'bcnp', 'lossless', 'multivalued dependenc', 'multi valued dependenc', 'multivalued', 'multi-valued', 'join dependency', '4nf', '5nf', 'normal form', 'normalization', 'canonical cover', 'attribute closure', 'closure of', 'closure {', 'closure', 'armstrong', 'prime attribute', 'anomaly', 'schema refinement', 'dependency?', 'dependency', 'dependencies', 'relation r(', 'relation r with', 'attributes {ssn', 'ssn', 'primary key, ename', 'lossless join', 'given the relation r']
     },
     SE: {
       subject: 'Software Engineering',
