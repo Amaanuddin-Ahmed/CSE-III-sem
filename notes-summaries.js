@@ -2149,240 +2149,406 @@ const NOTE_SUMMARIES = {
   "noteId": "NOTE-SE-01",
   "subjectId": "SE",
   "chapter": 1,
-  "title": "SE Unit 1: Software Process & Agile Engineering",
-  "pageCount": 28,
+  "title": "SE Unit 1: Software Process, Agile & Process Models",
+  "pageCount": 22,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Software Engineering lecture guide (Unit 1). Covers SDLC processes, agile engineering, requirements elicitation, architectural design, software metrics, and verification testing.",
+  "overview": "Comprehensive faculty lecture notes covering the nature of software, software engineering layered technology, generic process framework activities, CMMI maturity levels, traditional process models (Waterfall, Incremental, RAD, Evolutionary/Spiral), and Agile development frameworks (Scrum, XP, Agile Manifesto).",
   "topics": [
    {
-    "title": "Unit 1 Process & Architecture",
-    "summary": "Comprehensive lecture notes on Software Process Models, Waterfall, Agile Scrum, Sprint lifecycles, and Requirements Engineering.",
+    "title": "Software Engineering Layered Technology & Process Framework",
+    "summary": "Software engineering is a disciplined, layered technology based on Quality Focus, Processes, Methods, and Tools. Generic framework activities define the roadmap for software delivery.",
     "points": [
-     "SDLC phases: Inception, Requirements Analysis, System Design, Coding, Testing, Deployment, Maintenance.",
-     "Waterfall Model: Sequential linear progression; suitable only when requirements are rigid and stable.",
-     "Spiral Model: Risk-driven iterative model consisting of 4 quadrants (Objectives, Risk Analysis, Development, Review).",
-     "Agile & Scrum: Iterative delivery, sprints (2-4 weeks), daily standup, sprint backlog, product owner role."
+     "Layered Technology: Quality Focus (bedrock foundation) -> Process (glue binding all layers) -> Methods (technical 'how-to' for analysis, design, coding, testing) -> Tools (automated/semi-automated CASE support).",
+     "Generic Framework Activities: 1) Communication (customer requirements), 2) Planning (estimation, scheduling, risk analysis), 3) Modeling (analysis and design models), 4) Construction (code generation and testing), 5) Deployment (delivery, feedback, support).",
+     "Umbrella Activities: Software project tracking and control, risk management, software quality assurance (SQA), formal technical reviews (FTR), measurement, configuration management (SCM), and reusability management.",
+     "CMMI (Capability Maturity Model Integration): Five maturity levels: Level 1 (Initial - ad-hoc/chaotic), Level 2 (Managed - basic project tracking), Level 3 (Defined - standardized institutional process), Level 4 (Quantitatively Managed - measured with statistical metrics), Level 5 (Optimizing - continuous process improvement via feedback)."
     ],
     "formulas": [
-     "COCOMO Basic Effort Equation: Effort = a × (KLOC)^b person-months"
+     "Layered Model: Quality Focus -> Process -> Methods -> Tools",
+     "CMMI Hierarchy: Level 1 (Initial) -> 2 (Managed) -> 3 (Defined) -> 4 (Quantitatively Managed) -> 5 (Optimizing)"
     ],
-    "example": "Requirements traceability matrix maps each business requirement to its corresponding design component and test cases."
+    "example": "A banking core transaction system demands CMMI Level 4/5 with formal SQA umbrella tracking, whereas a startup mobile MVP can operate with an agile communication-construction loop."
    },
    {
-    "title": "Design Principles, Metrics & Testing",
-    "summary": "Software quality assurance, modular coupling and cohesion, and testing methodologies.",
+    "title": "Traditional & Prescriptive Process Models",
+    "summary": "Prescriptive models bring order and structure to software development, each tailored to specific project stability, complexity, and delivery constraints.",
     "points": [
-     "Cohesion: Strength of functional relationship among elements within a module (Aim for High Functional Cohesion).",
-     "Coupling: Degree of interdependence between different modules (Aim for Low / Loose Coupling).",
-     "White-Box Testing: Evaluates internal code logic; basis path testing, branch coverage, cyclomatic complexity.",
-     "Black-Box Testing: Evaluates functional inputs and outputs; Equivalence Partitioning and Boundary Value Analysis (BVA)."
+     "Waterfall Model (Classic Life Cycle): Sequential, linear flow (Communication -> Planning -> Modeling -> Construction -> Deployment). Best for well-understood, stable requirements. Weakness: Working software appears late; high risk of blocking states.",
+     "Incremental Model: Delivers operational software in successive increments (core product delivered first in Increment 1, then enhanced in Increments 2, 3, etc.). Combines linear waterfall elements with prototyping iterations.",
+     "RAD (Rapid Application Development): High-speed adaptation of the linear sequential model using component-based construction. Target cycle: 60 to 90 days. Requires heavy resource commitment and modular system architecture.",
+     "Prototyping Model: Customer defines general objectives without detailed requirements. A 'quick design' produces a prototype evaluated by stakeholders to refine requirements before full-scale development.",
+     "Spiral Model (Boehm): Evolutionary process model combining iterative prototyping with systematic waterfall control. Distinctive feature: explicit, formal risk analysis at every spiral loop (Objective Setting, Risk Assessment, Development/Validation, Planning)."
     ],
     "formulas": [
-     "McCabe's Cyclomatic Complexity: V(G) = E - N + 2P  (or Predicate Nodes + 1)"
+     "Spiral Quadrants: Determine Objectives -> Identify & Resolve Risks -> Develop & Verify Next-Level Product -> Plan Next Phase",
+     "RAD Delivery Constraint: 60 - 90 Days Development Horizon"
     ],
-    "example": "For a control flow graph with 8 edges and 6 nodes: V(G) = 8 - 6 + 2 = 4 independent execution paths."
+    "example": "For developing an air traffic control radar system with critical safety risks, Boehm's Spiral Model is selected to analyze hardware-software interface risks at each revolution."
+   },
+   {
+    "title": "Agile Development, Principles & Scrum Framework",
+    "summary": "Agile software engineering values working software and customer collaboration over comprehensive documentation and rigid contract negotiations.",
+    "points": [
+     "Agile Manifesto Core Values: 1) Individuals and interactions over processes and tools, 2) Working software over comprehensive documentation, 3) Customer collaboration over contract negotiation, 4) Responding to change over following a plan.",
+     "Agility Principles: Highest priority is satisfying customer through early and continuous delivery; welcome changing requirements even late in development; deliver working software frequently (weeks rather than months).",
+     "Scrum Framework: Iterative and incremental agile methodology based on time-boxed Sprints (typically 2 to 4 weeks).",
+     "Scrum Roles & Artifacts: Roles: Product Owner (manages Product Backlog), Scrum Master (removes impediments), Development Team (self-organizing cross-functional developers). Artifacts: Product Backlog, Sprint Backlog, Burn-down Chart.",
+     "Scrum Ceremonies: Sprint Planning, Daily Scrum (15-minute standup: What did you do yesterday? What will you do today? What blockers exist?), Sprint Review (demo to stakeholders), and Sprint Retrospective (team reflection for continuous improvement)."
+    ],
+    "formulas": [
+     "Sprint Timebox: 2 to 4 Weeks",
+     "Daily Standup: 15 Minutes (3 Questions: Yesterday, Today, Impediments)"
+    ],
+    "example": "In an e-commerce website redesign, user stories from the Product Backlog are prioritized by the Product Owner and broken down into 2-week Sprint Backlog tasks tracked via daily burn-down charts."
+   },
+   {
+    "title": "Software Myths & Engineering Realities",
+    "summary": "Beliefs held by managers, customers, and practitioners that lead to false expectations and project disasters.",
+    "points": [
+     "Management Myths: Myth: 'We have books full of standards and procedures, so our team knows everything needed.' Reality: Standards are often outdated, incomplete, and unenforced. Myth: 'If we fall behind schedule, we can add more programmers.' Reality: Brooks' Law states that 'adding manpower to a late software project makes it later.'",
+     "Customer Myths: Myth: 'A general statement of objectives is enough to begin writing programs; we can detail specs later.' Reality: Unclear initial definitions cause continuous scope creep, architectural rework, and schedule blowouts.",
+     "Practitioner Myths: Myth: 'Once the code is written and works, our job is done.' Reality: 60% to 80% of all software effort occurs post-delivery during maintenance. Myth: 'Software engineering generates unnecessary paperwork that slows coding.' Reality: Engineering produces quality models that drastically reduce defect-remediation costs."
+    ],
+    "formulas": [
+     "Brooks' Law: Adding manpower to a late software project makes it later",
+     "Maintenance Ratio: 60% - 80% of total lifecycle effort occurs post-delivery"
+    ],
+    "example": "Applying Brooks' Law: Adding 5 new developers to a delayed billing module requires existing senior engineers to spend weeks training them, temporarily reducing net team productivity and worsening the delay."
    }
   ],
   "mustKnow": [
-   "High Cohesion and Low Coupling is the golden principle of modular software design",
-   "Cyclomatic Complexity V(G) = E - N + 2P equals the number of independent test paths",
-   "Boundary Value Analysis tests inputs at extremes: min, min+, nom, max-, max",
-   "Waterfall model is linear; Spiral model is risk-driven iterative",
-   "Verification answers \"Are we building the product right?\"; Validation answers \"Are we building the right product?\""
+   "Software Engineering Layered Technology: Quality Focus -> Process -> Methods -> Tools",
+   "Brooks' Law: Adding manpower to a late software project makes it later due to increased communication overhead",
+   "Spiral Model is distinguished from all other models by its explicit, cyclic Risk Analysis stage",
+   "Scrum ceremonies: Sprint Planning, Daily Standup (15 min), Sprint Review, Sprint Retrospective",
+   "Waterfall model suits stable, well-understood requirements; Spiral suits high-risk, complex enterprise software"
   ]
  },
  "NOTE-SE-02": {
   "noteId": "NOTE-SE-02",
   "subjectId": "SE",
   "chapter": 2,
-  "title": "SE Unit 2: Requirements Analysis & Specification",
-  "pageCount": 28,
+  "title": "SE Unit 2: Requirements Engineering & Specification",
+  "pageCount": 18,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Software Engineering lecture guide (Unit 2). Covers SDLC processes, agile engineering, requirements elicitation, architectural design, software metrics, and verification testing.",
+  "overview": "Comprehensive faculty lecture notes covering requirements engineering processes, feasibility studies, functional and non-functional requirements, requirement elicitation techniques, requirements modeling (context and behavioral models), Software Requirements Specification (SRS) IEEE 830 standards, and requirements validation and management.",
   "topics": [
    {
-    "title": "Unit 2 Process & Architecture",
-    "summary": "Requirements engineering lifecycle, elicitation, functional & non-functional requirements, use-case models, and SRS documentation standards.",
+    "title": "Requirements Engineering Process & Feasibility Studies",
+    "summary": "Requirements engineering provides the bridge between user operational needs and technical software design through a systematic 5-stage lifecycle.",
     "points": [
-     "SDLC phases: Inception, Requirements Analysis, System Design, Coding, Testing, Deployment, Maintenance.",
-     "Waterfall Model: Sequential linear progression; suitable only when requirements are rigid and stable.",
-     "Spiral Model: Risk-driven iterative model consisting of 4 quadrants (Objectives, Risk Analysis, Development, Review).",
-     "Agile & Scrum: Iterative delivery, sprints (2-4 weeks), daily standup, sprint backlog, product owner role."
+     "5 Core Phases: 1) Feasibility Study, 2) Requirements Elicitation & Analysis, 3) Requirements Specification, 4) Requirements Validation, 5) Requirements Management.",
+     "Feasibility Studies: Evaluates whether the proposed system is worth building before funds are committed. Assesses: Technical Feasibility (available technology/skills), Economic Feasibility (cost-benefit analysis, ROI), Operational Feasibility (organizational culture, user acceptance), and Legal/Contractual Feasibility.",
+     "Requirements Elicitation Techniques: Stakeholder interviews (structured & unstructured), questionnaires/surveys, observation (ethnography/work shadowing), brainstorming workshops, JAD (Joint Application Development) sessions, and rapid prototyping.",
+     "Elicitation Challenges: Problems of Scope (boundary of system ill-defined), Problems of Understanding (customers unsure of actual needs, domain jargon barrier), and Problems of Volatility (requirements shift continuously over time)."
     ],
     "formulas": [
-     "COCOMO Basic Effort Equation: Effort = a × (KLOC)^b person-months"
+     "Lifecycle: Feasibility -> Elicitation -> Specification -> Validation -> Management",
+     "Feasibility Quad: Technical + Economic + Operational + Legal"
     ],
-    "example": "Requirements traceability matrix maps each business requirement to its corresponding design component and test cases."
+    "example": "For a hospital management system, economic feasibility determines if cloud server costs offset administrative staffing savings, while technical feasibility evaluates biometric sensor compatibility."
    },
    {
-    "title": "Design Principles, Metrics & Testing",
-    "summary": "Software quality assurance, modular coupling and cohesion, and testing methodologies.",
+    "title": "Functional vs. Non-Functional Requirements & SRS Standards",
+    "summary": "Requirements specify what the system must perform (functional) and the constraints/quality attributes under which it must operate (non-functional).",
     "points": [
-     "Cohesion: Strength of functional relationship among elements within a module (Aim for High Functional Cohesion).",
-     "Coupling: Degree of interdependence between different modules (Aim for Low / Loose Coupling).",
-     "White-Box Testing: Evaluates internal code logic; basis path testing, branch coverage, cyclomatic complexity.",
-     "Black-Box Testing: Evaluates functional inputs and outputs; Equivalence Partitioning and Boundary Value Analysis (BVA)."
+     "Functional Requirements: Statements of services the system should provide, how the system reacts to particular inputs, and how the system behaves in specific situations (e.g., 'The system shall calculate monthly interest on loan balances at 23:59 on the last day of each month').",
+     "Non-Functional Requirements (NFRs): Constraints on the services or functions offered by the system. Categories: Product Requirements (performance, memory, usability, reliability), Organizational Requirements (environmental, operational standards), and External Requirements (regulatory, legislative, privacy/GDPR).",
+     "Metrics for Quantifying NFRs: Speed (transactions/sec, response time), Size (MB/GB memory limit), Ease of Use (training time, help clicks), Reliability (MTBF, rate of failure occurrence), Robustness (time to restart, failure probability), Portability (percentage of target-dependent code).",
+     "IEEE 830 SRS Document Structure: 1. Introduction (Purpose, Scope, Definitions), 2. Overall Description (Product perspective, user characteristics, constraints), 3. Specific Requirements (Functional, non-functional, interface specs: UI, Hardware, Software, Comm interfaces).",
+     "Desirable Characteristics of Good SRS: Correct, Unambiguous (single interpretation), Complete, Consistent (no conflicting statements), Ranked for importance/stability, Verifiable (testable via demonstration or measurement), Modifiable, and Traceable."
     ],
     "formulas": [
-     "McCabe's Cyclomatic Complexity: V(G) = E - N + 2P  (or Predicate Nodes + 1)"
+     "Availability Metric: A = MTTF / (MTTF + MTTR)",
+     "Performance Metric: Response Time <= 2 seconds for 95% of queries under peak load"
     ],
-    "example": "For a control flow graph with 8 edges and 6 nodes: V(G) = 8 - 6 + 2 = 4 independent execution paths."
+    "example": "Functional: 'User can transfer funds up to $5,000 via NEFT.' Non-functional: 'Funds transfer transaction must execute within 1.5 seconds and adhere to 256-bit AES encryption standards.'"
+   },
+   {
+    "title": "Requirements Analysis Modeling: Context, Data & Behavioral Models",
+    "summary": "Requirements analysis translates customer needs into operational models representing data flow, structural entities, and system behavioral states.",
+    "points": [
+     "Context Models: Illustrate the operational environment showing the boundary between the target system and surrounding external entities (systems, devices, users). Represented via Level-0 Data Flow Diagrams (Context Diagrams).",
+     "Data Modeling (ER Diagrams): Defines data objects, attributes, and relationships. Data Flow Diagrams (DFDs) track information flow: External Entity (square), Process (circle/bubble), Data Store (parallel open lines), Data Flow (directed arrow).",
+     "Behavioral Modeling (State Transition Diagrams): Represents how the system behaves in response to external events. Depicts States (system modes of operation) and Transitions triggered by events with optional guard conditions and actions.",
+     "Use Case Modeling: Captures functional requirements from the perspective of an external actor interacting with system use cases enclosed in a system boundary."
+    ],
+    "formulas": [
+     "DFD Level Hierarchy: Level 0 (Context Diagram) -> Level 1 (Subsystem Decomp) -> Level 2 (Detailed Process Flow)"
+    ],
+    "example": "In an ATM system Context Model, the ATM is the central system interacting with external entities: Cardholder, Banking Host Network, and Cash Dispenser Maintenance Technician."
+   },
+   {
+    "title": "Requirements Validation & Requirements Management",
+    "summary": "Validation ensures the specification represents customer intent, while management controls evolving changes throughout the system lifecycle.",
+    "points": [
+     "Requirements Validation Checks: Validity checks (does system provide functions matching customer needs?), Consistency checks (are there conflicting requirements?), Completeness checks (are all scenarios included?), Realism checks (can it be implemented within budget/technology?), Verifiability (can a test case be written to prove compliance?).",
+     "Validation Techniques: Requirements Reviews (formal inspection by multidisciplinary team), Prototyping (demonstrating model to users), and Test-Case Generation (if a requirement cannot be tested, it is ambiguous).",
+     "Requirements Management: The process of managing changing requirements during requirements engineering and system development.",
+     "Traceability Matrix: Cross-references requirements with system architecture, components, source code modules, and test cases. Types: Source Traceability (links requirement to stakeholder origin), Requirement Traceability (links dependent requirements), Design/Component Traceability (links requirement to software modules)."
+    ],
+    "formulas": [
+     "Traceability Chain: Stakeholder Need <-> SRS Requirement <-> Design Module <-> Code Function <-> Unit Test Case"
+    ],
+    "example": "A Requirements Traceability Matrix (RTM) maps Requirement 'REQ-042: Two-Factor Authentication' directly to Design Class 'AuthService', Code file 'auth_service.py', and Test Case 'TC-AUTH-004'."
    }
   ],
   "mustKnow": [
-   "High Cohesion and Low Coupling is the golden principle of modular software design",
-   "Cyclomatic Complexity V(G) = E - N + 2P equals the number of independent test paths",
-   "Boundary Value Analysis tests inputs at extremes: min, min+, nom, max-, max",
-   "Waterfall model is linear; Spiral model is risk-driven iterative",
-   "Verification answers \"Are we building the product right?\"; Validation answers \"Are we building the right product?\""
+   "Requirements Engineering 5-stage lifecycle: Feasibility -> Elicitation -> Specification (SRS) -> Validation -> Management",
+   "Functional requirements describe *what* the system does; Non-functional requirements describe constraints, quality, and performance",
+   "IEEE 830 specifies essential SRS qualities: Correct, Unambiguous, Complete, Consistent, Verifiable, Modifiable, Traceable",
+   "Non-functional requirements must be quantified using testable metrics (e.g., response time < 2s, 99.9% uptime) to avoid ambiguity",
+   "Requirements Traceability Matrix (RTM) tracks requirements backwards to customer origins and forwards to code and test cases"
   ]
  },
  "NOTE-SE-03": {
   "noteId": "NOTE-SE-03",
   "subjectId": "SE",
   "chapter": 3,
-  "title": "SE Unit 3: Software Design Engineering & Architecture",
-  "pageCount": 28,
+  "title": "SE Unit 3: Design Engineering, Architecture & UML Modeling",
+  "pageCount": 25,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Software Engineering lecture guide (Unit 3). Covers SDLC processes, agile engineering, requirements elicitation, architectural design, software metrics, and verification testing.",
+  "overview": "Comprehensive faculty lecture notes covering software design concepts (abstraction, modularity, architecture, cohesion, coupling), architectural design styles and patterns (Data-centered, Data-flow/Pipe-and-Filter, Call-and-Return, Layered), User Interface Design, and complete Unified Modeling Language (UML) structural and behavioral diagrams (Class, Sequence, Collaboration, Use Case, Component diagrams).",
   "topics": [
    {
-    "title": "Unit 3 Process & Architecture",
-    "summary": "Design concepts, modular decomposition, coupling & cohesion analysis, architectural patterns, and structural UML modeling.",
+    "title": "Software Design Principles & Modularity: Cohesion & Coupling",
+    "summary": "Software design translates the analysis model into a data, architectural, interface, and component-level blueprint governed by fundamental engineering principles.",
     "points": [
-     "SDLC phases: Inception, Requirements Analysis, System Design, Coding, Testing, Deployment, Maintenance.",
-     "Waterfall Model: Sequential linear progression; suitable only when requirements are rigid and stable.",
-     "Spiral Model: Risk-driven iterative model consisting of 4 quadrants (Objectives, Risk Analysis, Development, Review).",
-     "Agile & Scrum: Iterative delivery, sprints (2-4 weeks), daily standup, sprint backlog, product owner role."
+     "Core Design Principles: 1) Abstraction (data & procedural hiding of low-level details), 2) Modularity (decomposing system into independently named and addressable components), 3) Information Hiding (modules conceal internal algorithms/data structures behind public interfaces - David Parnas), 4) Functional Independence.",
+     "Functional Independence is measured using two qualitative criteria: Cohesion and Coupling. High cohesion and low coupling represent the gold standard of modular design.",
+     "Cohesion (Internal module strength): Degree to which tasks performed by a single module are functionally related. Ranking (Best to Worst): Functional Cohesion (module performs single well-defined task) -> Sequential -> Communicational -> Procedural -> Temporal -> Logical -> Coincidental Cohesion (random unrelated functions lumped together).",
+     "Coupling (Inter-module dependency): Degree of interdependence between modules. Ranking (Best to Worst / Loosest to Tightest): Data Coupling (modules communicate via simple atomic data parameters) -> Stamp/Data-Structure Coupling -> Control Coupling (passing flags that dictate internal execution) -> Common Coupling (modules share global data variables) -> Content Coupling (one module directly modifies code or internal data of another)."
     ],
     "formulas": [
-     "COCOMO Basic Effort Equation: Effort = a × (KLOC)^b person-months"
+     "Golden Rule of Modular Design: High Cohesion + Loose Coupling",
+     "Cohesion Hierarchy (Best to Worst): Functional > Sequential > Communicational > Procedural > Temporal > Logical > Coincidental",
+     "Coupling Hierarchy (Best to Worst): Data < Stamp < Control < Common < Content"
     ],
-    "example": "Requirements traceability matrix maps each business requirement to its corresponding design component and test cases."
+    "example": "A module 'CalculateMonthlyTax(salary)' exhibits pure Functional Cohesion and Data Coupling, whereas a module sharing a global static array and setting control flags exhibits dangerous Common and Control Coupling."
    },
    {
-    "title": "Design Principles, Metrics & Testing",
-    "summary": "Software quality assurance, modular coupling and cohesion, and testing methodologies.",
+    "title": "Architectural Design Styles & Patterns",
+    "summary": "Architectural styles define a family of systems in terms of structural patterns, components, connectors, and semantic constraints.",
     "points": [
-     "Cohesion: Strength of functional relationship among elements within a module (Aim for High Functional Cohesion).",
-     "Coupling: Degree of interdependence between different modules (Aim for Low / Loose Coupling).",
-     "White-Box Testing: Evaluates internal code logic; basis path testing, branch coverage, cyclomatic complexity.",
-     "Black-Box Testing: Evaluates functional inputs and outputs; Equivalence Partitioning and Boundary Value Analysis (BVA)."
+     "Data-Centered Architecture (Repository / Blackboard): Centralized data store (database or blackboard) accessed by multiple independent client components. Clients perform operations independently on shared data. Advantage: Data integrity and easy client addition. Disadvantage: Central store bottleneck and single point of failure.",
+     "Data-Flow Architecture (Pipes and Filters): Transforms input data into output through a sequence of processing components (Filters) connected by transmission channels (Pipes). Advantage: High reusability, easy maintenance, concurrent filter execution (e.g., Unix pipelines: cat file | grep 'err' | sort).",
+     "Call-and-Return Architecture: Traditional hierarchical control structure. Categories: Main program/subprogram architecture (hierarchical decomposition with single control thread) and Remote Procedure Call (RPC) architectures.",
+     "Layered Architecture: Organizes software into concentric layers where Layer N provides services to Layer N+1 and requests services from Layer N-1. Layers typically comprise: Presentation/UI Layer -> Application/Business Logic Layer -> Domain/Service Layer -> Database/Persistence Layer. Advantage: Modifiability and clear separation of concerns."
     ],
     "formulas": [
-     "McCabe's Cyclomatic Complexity: V(G) = E - N + 2P  (or Predicate Nodes + 1)"
+     "Data-Flow Model: Input -> [Filter 1] ===Pipe===> [Filter 2] ===Pipe===> [Filter 3] -> Output",
+     "Layered Chain: UI Layer -> Business Logic Layer -> Data Access Layer -> Database"
     ],
-    "example": "For a control flow graph with 8 edges and 6 nodes: V(G) = 8 - 6 + 2 = 4 independent execution paths."
+    "example": "A compiler architecture uses a Pipe-and-Filter style: Lexical Analyzer ===> Syntax Analyzer ===> Semantic Analyzer ===> Intermediate Code Generator ===> Code Optimizer."
+   },
+   {
+    "title": "UML Conceptual Model & Structural Diagrams: Class & Component Diagrams",
+    "summary": "Unified Modeling Language (UML) provides standard graphical notations for visualizing, specifying, constructing, and documenting software artifacts.",
+    "points": [
+     "UML Building Blocks: Things (Structural, Behavioral, Grouping, Annotational), Relationships (Association, Generalization/Inheritance, Dependency, Realization), and Diagrams.",
+     "Class Diagrams: Static structural diagrams showing classes, attributes, operations, visibility (+ Public, - Private, # Protected, ~ Package), and relationships.",
+     "Class Relationships: 1) Association (structural connection with multiplicity e.g. 1..*), 2) Aggregation (weak 'has-a' whole-part relationship denoted by hollow diamond; parts can exist independently), 3) Composition (strong whole-part relationship denoted by filled solid diamond; if whole is deleted, parts die), 4) Generalization ('is-a' inheritance denoted by hollow triangle pointing to superclass), 5) Dependency (dashed arrow showing one class uses another).",
+     "Component Diagrams: Illustrate the organization and dependencies among software modules, libraries, executables, and deployable packages. Show wiring via provided interfaces (lollipops) and required interfaces (sockets)."
+    ],
+    "formulas": [
+     "Visibility: + Public | - Private | # Protected | ~ Package",
+     "Multiplicity Notations: 1 (exactly one), 0..1 (zero or one), * or 0..* (zero to many), 1..* (one to many)"
+    ],
+    "example": "In a Hotel Management System Class Diagram, 'Hotel' has a Composition relationship with 'Room' (filled diamond: if Hotel is demolished, Rooms cease to exist) and an Association with 'Customer' (1..*)."
+   },
+   {
+    "title": "UML Behavioral & Interaction Diagrams: Use Case, Sequence & Collaboration",
+    "summary": "Dynamic behavioral modeling captures system interactions, time-ordered message exchanges, and object collaboration flows.",
+    "points": [
+     "Use Case Diagrams: Describe functional requirements from the perspective of external Actors. Key elements: System boundary, Actors (stick figures), Use Cases (ellipses). Relationships: <<include>> (mandatory common behavior that is always executed) and <<extend>> (optional/conditional behavior executed under specific triggers).",
+     "Interaction Diagrams: Model dynamic message flow between objects. Two isomorphic forms: Sequence Diagrams and Collaboration (Communication) Diagrams.",
+     "Sequence Diagrams: Emphasize time ordering of messages along vertical lifelines. Elements: Object boxes, dashed vertical Lifelines, vertical Activation rectangles (execution focus), horizontal arrows for Synchronous calls (solid arrowhead), Asynchronous signals (open arrowhead), and Return messages (dashed arrow).",
+     "Collaboration / Communication Diagrams: Emphasize structural object organization and links. Messages are numbered hierarchically (1, 1.1, 1.2, 2) along connecting links to indicate execution sequence without a dedicated time axis."
+    ],
+    "formulas": [
+     "Use Case Stereotypes: <<include>> = Mandatory sub-routine | <<extend>> = Optional / Conditional hook",
+     "Sequence vs Collaboration: Sequence highlights Time Ordering; Collaboration highlights Structural Layout"
+    ],
+    "example": "ATM Cash Withdrawal Sequence: Customer inserts card -> ATM reads data -> CardReader sends 'verifyPIN(pin)' to BankServer -> BankServer returns 'authOK' -> ATM displays account options."
    }
   ],
   "mustKnow": [
-   "High Cohesion and Low Coupling is the golden principle of modular software design",
-   "Cyclomatic Complexity V(G) = E - N + 2P equals the number of independent test paths",
-   "Boundary Value Analysis tests inputs at extremes: min, min+, nom, max-, max",
-   "Waterfall model is linear; Spiral model is risk-driven iterative",
-   "Verification answers \"Are we building the product right?\"; Validation answers \"Are we building the right product?\""
+   "Golden rule of modular design: High Functional Cohesion + Loose Data Coupling",
+   "David Parnas' Information Hiding principle conceals module implementation details behind stable public interfaces",
+   "Architectural Styles: Data-Centered (Blackboard), Data-Flow (Pipes and Filters), Call-and-Return, Layered Architecture",
+   "Aggregation (hollow diamond) represents weak part-whole relationship; Composition (solid diamond) represents life-dependent ownership",
+   "Use Case <<include>> is mandatory execution; <<extend>> is conditional hook upon specific trigger conditions",
+   "Sequence diagrams emphasize time sequencing; Collaboration diagrams emphasize structural object links with numbered message labels"
   ]
  },
  "NOTE-SE-04": {
   "noteId": "NOTE-SE-04",
   "subjectId": "SE",
   "chapter": 4,
-  "title": "SE Unit 4: Software Testing Strategies & Metrics",
-  "pageCount": 28,
+  "title": "SE Unit 4: Testing Strategies, Test Techniques & Metrics",
+  "pageCount": 23,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Software Engineering lecture guide (Unit 4). Covers SDLC processes, agile engineering, requirements elicitation, architectural design, software metrics, and verification testing.",
+  "overview": "Comprehensive faculty lecture notes covering the software testing lifecycle, testing strategies (Unit Testing, Integration Testing, Validation Testing, System Testing), test case design methodologies (White-Box Testing, Basis Path, Cyclomatic Complexity vs Black-Box Testing, Boundary Value Analysis, Equivalence Partitioning), debugging tactics, and software product and quality metrics.",
   "topics": [
    {
-    "title": "Unit 4 Process & Architecture",
-    "summary": "Software testing techniques, White-box basis path testing, cyclomatic complexity calculations, Black-box equivalence partitioning, and boundary value analysis.",
+    "title": "Strategic Approach to Software Testing & Testing Levels",
+    "summary": "Testing begins 'in the small' at module level and progresses outward 'in the large' to complete integrated system validation.",
     "points": [
-     "SDLC phases: Inception, Requirements Analysis, System Design, Coding, Testing, Deployment, Maintenance.",
-     "Waterfall Model: Sequential linear progression; suitable only when requirements are rigid and stable.",
-     "Spiral Model: Risk-driven iterative model consisting of 4 quadrants (Objectives, Risk Analysis, Development, Review).",
-     "Agile & Scrum: Iterative delivery, sprints (2-4 weeks), daily standup, sprint backlog, product owner role."
+     "Testing Hierarchy (V-Model Alignment): Unit Testing (module level) -> Integration Testing (subsystem interfaces) -> Validation Testing (customer requirements) -> System Testing (entire environment).",
+     "Unit Testing: Verifies the smallest testable units (functions/classes). Tests: Component interface, local data structures, boundary conditions, independent paths, and error handling paths. Requires Driver (calling harness) and Stubs (mock dependencies).",
+     "Integration Testing: Assembles components to uncover interface defects. Strategies: Big Bang (integrate everything at once - disaster prone), Incremental: Top-Down (uses stubs, verifies high-level control early), Bottom-Up (uses drivers, verifies low-level utility clusters first), and Sandwich/Hybrid Testing.",
+     "Validation Testing (Alpha & Beta): Validates compliance with SRS. Alpha Testing: Conducted at developer's site by customer in a controlled environment. Beta Testing: Conducted at end-user sites in live operational environments without developer intervention.",
+     "System Testing: Verifies system integration in target environment. Types: Recovery Testing (tests auto-recovery from crashes), Security Testing (verifies resistance to unauthorized penetration), Stress Testing (executes system under peak/abnormal loads e.g. 10x traffic), Performance Testing (measures response time and throughput)."
     ],
     "formulas": [
-     "COCOMO Basic Effort Equation: Effort = a × (KLOC)^b person-months"
+     "Testing Hierarchy: Unit -> Integration -> Validation (Alpha/Beta) -> System (Security, Stress, Performance, Recovery)",
+     "Verification ('Are we building the product right?') vs. Validation ('Are we building the right product?')"
     ],
-    "example": "Requirements traceability matrix maps each business requirement to its corresponding design component and test cases."
+    "example": "In a flight booking system, Unit testing tests 'calculateFare()', Integration testing tests payment gateway API handshakes, Alpha testing lets airline staff test reservations, and Stress testing bombards the system with 50,000 concurrent ticket requests."
    },
    {
-    "title": "Design Principles, Metrics & Testing",
-    "summary": "Software quality assurance, modular coupling and cohesion, and testing methodologies.",
+    "title": "White-Box Testing: Basis Path & Cyclomatic Complexity",
+    "summary": "Glass-box testing derives test cases by examining internal control logic and guaranteeing code execution coverage.",
     "points": [
-     "Cohesion: Strength of functional relationship among elements within a module (Aim for High Functional Cohesion).",
-     "Coupling: Degree of interdependence between different modules (Aim for Low / Loose Coupling).",
-     "White-Box Testing: Evaluates internal code logic; basis path testing, branch coverage, cyclomatic complexity.",
-     "Black-Box Testing: Evaluates functional inputs and outputs; Equivalence Partitioning and Boundary Value Analysis (BVA)."
+     "White-Box Testing (Structural Testing): Analyzes internal logic, conditions, loops, and data flow of source code.",
+     "Basis Path Testing (Tom McCabe): Derives test cases guaranteeing that every independent execution path through the program is traversed at least once, executing every statement at least once.",
+     "Control Flow Graph (CFG): Represents control flow using Nodes (procedural statements/decisions) and Edges (transfer of control). Predicate Nodes are decision points with multiple outgoing edges.",
+     "Cyclomatic Complexity (V(G)): Quantitative metric measuring the logical complexity of a program and defining the upper bound on the number of independent test paths.",
+     "Methods to Compute V(G): 1) V(G) = E - N + 2P, where E = edges, N = nodes, P = connected components (usually 1). 2) V(G) = Pred + 1, where Pred is the count of predicate decision nodes. 3) V(G) = R, where R is the number of closed regions plus the unbounded outer region."
     ],
     "formulas": [
-     "McCabe's Cyclomatic Complexity: V(G) = E - N + 2P  (or Predicate Nodes + 1)"
+     "V(G) = E - N + 2P",
+     "V(G) = Predicate Nodes + 1",
+     "V(G) = Number of Regions (including outer region)"
     ],
-    "example": "For a control flow graph with 8 edges and 6 nodes: V(G) = 8 - 6 + 2 = 4 independent execution paths."
+    "example": "For a CFG with 14 edges and 10 nodes (P=1): V(G) = 14 - 10 + 2(1) = 6. The tester must formulate exactly 6 independent test cases to achieve 100% basis path coverage."
+   },
+   {
+    "title": "Black-Box Testing: Boundary Value Analysis & Equivalence Partitioning",
+    "summary": "Behavioral testing derives test cases directly from input/output specifications without reference to internal source code structure.",
+    "points": [
+     "Black-Box Testing (Functional Testing): Examines functional behavior against specifications, discovering interface errors, data structure access errors, behavior/performance errors, and initialization/termination errors.",
+     "Equivalence Partitioning: Divides input domain into equivalence classes of valid and invalid data where all values in a partition are presumed to be processed identically by the program. Test cases are selected from each partition.",
+     "Boundary Value Analysis (BVA): Testing technique focusing on the extremes of input domains, as defects congregate disproportionately at boundary edges rather than in the interior. For range [min, max], tests: min - 1, min, min + 1, nominal, max - 1, max, max + 1.",
+     "Comparison Testing: For critical redundant systems (e.g. avionics fly-by-wire), multiple independent teams develop software from the same spec; test inputs are executed across all versions to detect discrepancies."
+    ],
+    "formulas": [
+     "BVA Test Suite for [a, b]: {a - 1, a, a + 1, nominal, b - 1, b, b + 1}",
+     "Equivalence Classes: Valid Class (inside specification) vs. Invalid Classes (below min, above max, invalid format)"
+    ],
+    "example": "For an employee age input field valid between 18 and 60: Valid equivalence class: [18, 60]. Invalid classes: (< 18) and (> 60). BVA test inputs: 17, 18, 19, 35, 59, 60, 61."
+   },
+   {
+    "title": "Software Metrics & Measurement Framework",
+    "summary": "Measurement provides quantitative indicators of process effectiveness, project progress, and product architectural quality.",
+    "points": [
+     "Metric vs Measurement vs Indicator: Measurement is direct act of assigning a number to an attribute. Metric is a quantitative measure of the degree to which a system/process possesses a given attribute. Indicator provides insight to guide project decisions.",
+     "McCall's Quality Factors: Categorized into 3 dimensions: Product Operation (Correctness, Reliability, Efficiency, Integrity, Usability), Product Revision (Maintainability, Flexibility, Testability), and Product Transition (Portability, Reusability, Interoperability).",
+     "Metrics for Design Model: High-level architectural metrics assessing structural complexity, module size, cohesion, coupling, and fan-in / fan-out (Fan-in: number of modules calling a module; Fan-out: number of modules called by a module).",
+     "Metrics for Source Code: Halstead Software Science metrics (n1 distinct operators, n2 distinct operands, length N, volume V), Cyclomatic complexity V(G), defect density per KLOC."
+    ],
+    "formulas": [
+     "Defect Density = Total Defects / KLOC",
+     "McCall's Quality Triangle: Operation (Correctness, Usability) + Revision (Maintainability) + Transition (Portability)"
+    ],
+    "example": "A module with Fan-in = 8 (high reuse) and Fan-out = 2 (low calling complexity) indicates good architectural balance, whereas Fan-out = 15 indicates an overly complex coordinating module."
    }
   ],
   "mustKnow": [
-   "High Cohesion and Low Coupling is the golden principle of modular software design",
-   "Cyclomatic Complexity V(G) = E - N + 2P equals the number of independent test paths",
-   "Boundary Value Analysis tests inputs at extremes: min, min+, nom, max-, max",
-   "Waterfall model is linear; Spiral model is risk-driven iterative",
-   "Verification answers \"Are we building the product right?\"; Validation answers \"Are we building the right product?\""
+   "Verification asks 'Are we building the product right?' (process check); Validation asks 'Are we building the right product?' (customer needs check)",
+   "Three formulas for Cyclomatic Complexity: V(G) = E - N + 2P = Predicate Nodes + 1 = Enclosed Regions",
+   "Boundary Value Analysis (BVA) tests extremes (min-1, min, min+1, max-1, max, max+1) because defects congregate disproportionately at boundary edges",
+   "Alpha testing is conducted at developer's site in controlled settings; Beta testing is conducted at client sites in uncontrolled live operational environments",
+   "Bottom-up integration uses Drivers; Top-down integration uses Stubs"
   ]
  },
  "NOTE-SE-05": {
   "noteId": "NOTE-SE-05",
   "subjectId": "SE",
   "chapter": 5,
-  "title": "SE Unit 5: Quality Assurance, COCOMO & Maintenance",
-  "pageCount": 28,
+  "title": "SE Unit 5: Risk Management, Quality Assurance & Maintenance",
+  "pageCount": 9,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Software Engineering lecture guide (Unit 5). Covers SDLC processes, agile engineering, requirements elicitation, architectural design, software metrics, and verification testing.",
+  "overview": "Comprehensive faculty lecture notes covering risk management strategies (Reactive vs Proactive), risk analysis (identification, projection, refinement), Risk Exposure formula, Risk Mitigation, Monitoring, and Management (RMMM Plan), Software Quality Assurance (SQA) activities, Formal Technical Reviews (FTR), Software Reliability (MTBF, MTTF, MTTR), and ISO 9000 quality standards.",
   "topics": [
    {
-    "title": "Unit 5 Process & Architecture",
-    "summary": "Software quality assurance (SQA), ISO 9000 & CMMI frameworks, COCOMO effort estimation formulas, risk management, and software maintenance.",
+    "title": "Risk Strategies: Reactive vs. Proactive & Risk Identification",
+    "summary": "Risk management identifies potential problems before they occur, allowing software teams to avoid crises rather than continually firefighting disasters.",
     "points": [
-     "SDLC phases: Inception, Requirements Analysis, System Design, Coding, Testing, Deployment, Maintenance.",
-     "Waterfall Model: Sequential linear progression; suitable only when requirements are rigid and stable.",
-     "Spiral Model: Risk-driven iterative model consisting of 4 quadrants (Objectives, Risk Analysis, Development, Review).",
-     "Agile & Scrum: Iterative delivery, sprints (2-4 weeks), daily standup, sprint backlog, product owner role."
+     "Reactive Risk Strategy ('Firefighting'): Team does nothing about risks until they manifest as active disasters. Resources are scrambled in crisis mode to patch failures after schedule or budget is destroyed.",
+     "Proactive Risk Strategy: Begins formal risk identification before technical work starts. Potential risks are identified, probability and impact are assessed, and rank-ordered contingency plans are pre-established.",
+     "Software Risk Categories: 1) Project Risks (threaten project schedule and resources e.g. budget cuts, staff turnover), 2) Technical Risks (threaten quality and timeliness e.g. unproven technology, specification ambiguity), 3) Business Risks (threaten market viability e.g. building product nobody wants, competitor release).",
+     "Risk Item Checklist: Product size risks, business impact risks, customer characteristics risks, process definition risks, development environment risks, staff experience/talent risks."
     ],
     "formulas": [
-     "COCOMO Basic Effort Equation: Effort = a × (KLOC)^b person-months"
+     "Risk = Likelihood (Probability P) * Consequence (Impact C)",
+     "Strategy Contrast: Reactive (Crisis Management) vs. Proactive (Formal Risk Planning & Early Avoidance)"
     ],
-    "example": "Requirements traceability matrix maps each business requirement to its corresponding design component and test cases."
+    "example": "Reactive: Senior developer quits, project stops for 3 weeks while scrambling to find a replacement. Proactive: Cross-training and pair programming are instituted from Day 1 so no single person holds a monopoly on knowledge."
    },
    {
-    "title": "Design Principles, Metrics & Testing",
-    "summary": "Software quality assurance, modular coupling and cohesion, and testing methodologies.",
+    "title": "Risk Projection, Risk Table & Risk Exposure (RE)",
+    "summary": "Risk projection assesses the likelihood and severity of each risk, ranking them into an actionable project risk table.",
     "points": [
-     "Cohesion: Strength of functional relationship among elements within a module (Aim for High Functional Cohesion).",
-     "Coupling: Degree of interdependence between different modules (Aim for Low / Loose Coupling).",
-     "White-Box Testing: Evaluates internal code logic; basis path testing, branch coverage, cyclomatic complexity.",
-     "Black-Box Testing: Evaluates functional inputs and outputs; Equivalence Partitioning and Boundary Value Analysis (BVA)."
+     "Risk Projection (Estimation): 1) Establish Risk Likelihood/Probability (P between 0 and 1.0 or percentage), 2) Estimate consequences and impact (C on scale of 1 to 5: Catastrophic, Critical, Marginal, Negligible).",
+     "Risk Table: Formulated with columns: Risk Description, Category (PR/TR/BR), Probability (P), Impact (C), and RMMM pointer. Sorted descending by risk priority.",
+     "Risk Exposure (RE / Risk Impact Value): Quantitative metric calculated as: RE = P * C, where P is probability and C is cost/impact if the risk occurs.",
+     "Risk Refinement: Decomposing a broad risk into detailed constituent sub-risks using Condition-Transition-Consequence (CTC) format."
     ],
     "formulas": [
-     "McCabe's Cyclomatic Complexity: V(G) = E - N + 2P  (or Predicate Nodes + 1)"
+     "RE = P * C",
+     "where RE = Risk Exposure ($ or cost impact), P = Probability of occurrence (0.0 to 1.0), C = Cost / Impact severity to project"
     ],
-    "example": "For a control flow graph with 8 edges and 6 nodes: V(G) = 8 - 6 + 2 = 4 independent execution paths."
+    "example": "If database corruption probability is P = 0.20 and recovery cost is C = $100,000, then Risk Exposure RE = 0.20 * $100,000 = $20,000. Spending $5,000 on redundant hot-backups is economically justified."
+   },
+   {
+    "title": "RMMM Plan (Risk Mitigation, Monitoring & Management)",
+    "summary": "The RMMM plan documents detailed operational procedures to avoid risks, track warning signs, and manage crises if mitigation fails.",
+    "points": [
+     "Risk Mitigation (Avoidance): Proactive steps taken to prevent the risk from occurring (e.g., to mitigate high staff turnover: provide competitive incentives, conduct cross-training, maintain comprehensive modular documentation).",
+     "Risk Monitoring: Systematic surveillance tracking leading indicator metrics that suggest whether a risk is becoming more or less probable (e.g., monitor developer morale, overtime hours, defect injection rates).",
+     "Risk Management (Contingency Planning): Operational actions executed if mitigation steps fail and the risk becomes a live problem (e.g., if key developer quits: immediately activate external pre-contracted technical consultants).",
+     "RMMM Document: Formal section of the Project Plan outlining mitigation strategies, responsible personnel, monitoring intervals, and trigger points for contingency execution."
+    ],
+    "formulas": [
+     "RMMM Triad: Mitigation (Prevent before) -> Monitoring (Track leading indicators) -> Management (Execute contingency when triggered)"
+    ],
+    "example": "For staff turnover risk: Mitigation = competitive compensation and documented knowledge transfer. Monitoring = quarterly satisfaction surveys. Management = contractual agreement with a specialist staffing firm for emergency coverage."
+   },
+   {
+    "title": "Software Quality Assurance (SQA), FTR & Software Reliability",
+    "summary": "SQA provides management with visibility into process compliance and product conformance to specified standards.",
+    "points": [
+     "Software Quality: Conformance to explicitly stated functional and performance requirements, documented development standards, and implicit characteristics expected of professional software.",
+     "SQA Activities: Applying effective technical methods, conducting formal technical reviews (FTR), implementing a multi-tiered testing strategy, enforcing process standards, managing changes via SCM, tracking software measurement, and maintaining audit records.",
+     "Formal Technical Review (FTR): Peer review meeting conducted by software engineers. Objectives: Uncover defects in function, logic, or implementation; verify software meets requirements; ensure standards compliance; achieve manageable development. Rules: Review the product, not the producer; set an agenda and maintain it; limit debate (max 2 hours); limit participants (3 to 5 people); record defects in Review Summary Report.",
+     "Software Reliability: Probability of failure-free operation for a specified time in a specified environment. Primary metrics: Mean Time To Failure (MTTF), Mean Time To Repair (MTTR), and Mean Time Between Failures (MTBF = MTTF + MTTR). Software Availability: A = [MTTF / (MTTF + MTTR)] * 100%.",
+     "ISO 9000 Quality Standards: International quality assurance framework. ISO 9001 applies to software engineering (design, development, production, installation, and servicing)."
+    ],
+    "formulas": [
+     "MTBF = MTTF + MTTR",
+     "Availability A = [MTTF / (MTTF + MTTR)] * 100%",
+     "FTR Constraints: Max 2 hours duration, 3 to 5 reviewers, review product not producer"
+    ],
+    "example": "A medical ventilator system has MTTF = 5,000 hours and MTTR = 2 hours. MTBF = 5,002 hours. Availability A = (5000 / 5002) * 100% = 99.96%, satisfying critical safety reliability standards."
    }
   ],
   "mustKnow": [
-   "High Cohesion and Low Coupling is the golden principle of modular software design",
-   "Cyclomatic Complexity V(G) = E - N + 2P equals the number of independent test paths",
-   "Boundary Value Analysis tests inputs at extremes: min, min+, nom, max-, max",
-   "Waterfall model is linear; Spiral model is risk-driven iterative",
-   "Verification answers \"Are we building the product right?\"; Validation answers \"Are we building the right product?\""
+   "Risk Exposure formula: RE = P * C (Probability * Cost/Impact). Used to prioritize which risks justify mitigation investments",
+   "RMMM stands for Risk Mitigation (avoidance), Monitoring (tracking indicators), and Management (contingency execution)",
+   "FTR Golden Rule: Review the product, not the producer; limit meeting to max 2 hours and 3 to 5 participants",
+   "Software Reliability formula: MTBF = MTTF + MTTR; Availability A = MTTF / (MTTF + MTTR) * 100%",
+   "Reactive risk management ('firefighting') responds only when crises hit; Proactive risk management plans avoidance before project kickoff"
   ]
  },
  "NOTE-DM-06": {

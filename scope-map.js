@@ -88,8 +88,8 @@ const SCOPE_MAP = {
       unit3Title: 'Design Engineering, Architectural Design and UML Modeling',
       mid1Description: 'Design Process and Quality, Design Concepts and the Design Model, Software Architecture, Data Design, Architectural Styles and Patterns',
       mid2Description: 'UML Conceptual Model, Structural Modeling, Use Case, Class, Sequence, Collaboration, Activity and Component Diagrams',
-      mid1Keywords: ['design process', 'design quality', 'design concept', 'design model', 'design principle', 'design strateg', 'software architecture', 'data design', 'architectural style', 'architectural pattern', 'architectural design', 'architecture', 'modularity', 'abstraction', 'refinement', 'cohesion', 'coupling', 'component level design', 'data flow'],
-      mid2Keywords: ['uml', 'use case', 'class diagram', 'sequence diagram', 'collaboration diagram', 'activity diagram', 'component diagram', 'structural modeling', 'unified modeling', 'class based model', 'object model', 'behavioural model', 'behavioral model', 'static diagram', 'generalization relationship']
+      mid1Keywords: ['design process', 'design quality', 'quality of a software design', 'design concept', 'design model', 'design principle', 'design strateg', 'pattern based', 'pattern-based', 'user interface', 'ui design', 'interface design', 'software architecture', 'data design', 'architectural style', 'architectural pattern', 'architectural design', 'architecture', 'modularity', 'abstraction', 'refinement', 'cohesion', 'coupling', 'component in a software', 'component level design', 'data flow', 'requirement review', 'design evaluation'],
+      mid2Keywords: ['uml', 'use case', 'class diagram', 'sequence diagram', 'collaboration diagram', 'activity diagram', 'component diagram', 'structural system analysis', 'structural analysis', 'railway reservation', 'reservation system', 'atm system', 'interaction diagram', 'structural modeling', 'unified modeling', 'class based model', 'object model', 'behavioural model', 'behavioral model', 'static diagram', 'generalization relationship', 'statechart', 'state machine']
     },
     ES: {
       subject: 'Environmental Studies',
