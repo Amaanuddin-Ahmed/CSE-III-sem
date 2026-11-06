@@ -81,7 +81,7 @@ non-localhost hosts, so the final console log is clean (0 errors, 0 page errors)
 | A24 | Fixed | Single-popup coordinator (3.5 s gap, suppressed during tour/modal/practice/AI) and a generic rating prompt. |
 | A25 | Fixed | 54-character title, `summary_large_image`, 1200×630 `assets/og-image.png`, `viewport-fit=cover`, updated Apple title. |
 | A26 | Fixed | Empty quiz/deck states replace the template placeholders before any session is shown. |
-| A27 | **Content gap** | IE has 0 PYQs but one verified Unit 5 note; ES has 24 PYQs (Units 1–2 only) and notes for Units 1–5; DM and COA now have five notes each. SE still has no notes. Reported in `docs/CONTENT_REVIEW.md`; no question rows invented. |
+| A27 | **Content gap** | IE has 0 PYQs but one verified Unit 5 note; ES has 24 PYQs (Units 1-2 only) and notes for Units 1-5; all seven subjects now have verified notes (88 total). Remaining risk is label accuracy, especially ES and COA. Reported in `docs/CONTENT_REVIEW.md`; no question rows invented. |
 | A28 | **Content gap** | Decks are 16 / 140 / 154 cards, not 20 per unit. Reported with the per-exam distribution; no cards invented. |
 
 ## Final verification

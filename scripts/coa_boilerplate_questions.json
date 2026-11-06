@@ -1,0 +1,5164 @@
+[
+  {
+    "id": "COA-A1-0003",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Define machine instruction what are the elements of machine instruction?",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0004",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Explain various types of Shift operations?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0005",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Give an overview of the Instruction formats.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0007",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Draw the block diagram of digital computer.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0010",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Draw the instruction word format and indicate the number of bits in each part.",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0011",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Give examples for conditional and unconditional transfer instructions.",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0012",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "List any two arithmetic micro-operations.",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0013",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "What are different types of buses used in computers? Why is the address bus unidirectional?",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0014",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "List out the difference between computer organization and] 2. architecture.",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0015",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Specify types on of addressing mode in instruction execution?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0016",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Draw the block diagram to depict P: R2 R1.",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0017",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "What is the role of PC and IR?",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0019",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "What is one address, two address and three address instruction formats?",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0020",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Draw the block diagram of Computer?",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0021",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "List out the arithmetic micro-operations.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0022",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Write about hierarchy of buses, bus signals and its functionalities.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0024",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "What is the role of AR and DR registers?",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0025",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "In which addressing mode, the actual operand is given in the instruction?",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0026",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Define interrupt?",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0027",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "What is the use of load and store memory reference instruction?",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0028",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "Draw the instruction format for memory reference and register reference instructions.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0029",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "List four shift micro operations.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0030",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "What is the difference between computer design and computer architecture?",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0032",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1",
+    "question": "What are the basic functional units of a computer?",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A1-0033",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1",
+    "question": "Explain arithmetic, logical and shift operations with examples.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0034",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025,
+      2024
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Demonstrate the functional units and components that are used for Understanding of computer Organization with neat sketch.",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0035",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Explain role of different computer registers with respect to instruction Fetch cycle and execution. Give example.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0036",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Construct a circuit to addition, subtraction for 4 bit register using full adders and explain control logic?",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0037",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Identify different types of instructions and describe their formats with their Constituent Fields?",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0039",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 10,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Design a circuit transferring data from a 4 bit register uses multiplexer's to another register? And use selection circuit to select any of four 4-bit registers content as to bus. Give full explanation?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 10,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0041",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Design a combinational circuit to addition, subtraction, increment and decrement for 4 bit register using full adders and explain control logic?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0042",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Draw and explain the functional blocks of a Digital computer.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0043",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Write a short note on ALU design.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0045",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Illustrate about tri-state buffer. Justify why tristate buffers are used widely in Bus system.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0048",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Design a 4-bit combinational decrementer using 4 full adder circuits.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0049",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "With neat diagram, explain the operation of input-output configuration in digital computer.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0050",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the block diagram of digital computer 4bit arithmetic circuit?",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0051",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Describe the various registers in a typical CPU with a neat diagram.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0052",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain the following. i) Conditional branching micro program. ii) Micro instruction instruction format.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0053",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Draw and explain single bus structure.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0054",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "[xplain about various functional units of a basic computer with the help of block diagram.",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0056",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain about various conditional branch instructions in a general- purpose computer.",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0057",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "What is an interrupt? Explain briefly about different program interrupts and what are the sequence of events involved in handling an IRQ?",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0058",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the basic operational concepts of a computer with the help of a suitable diagram.",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0059",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Explain the bus structure in detail with a neat diagram. Discuss its types and significance in the context of computer architecture.",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0060",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Draw the schematic diagram of an Arithmetic Logic Shift Unit (ALU) and explain its working.",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0062",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Design a 4 bit arithmetic combinational arithmetic circuit which} implements addition, subtraction, increment, and decrement operations?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0063",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Brief discussion about BUS Organization and construction of bus and] its operations with neat sketch?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0064",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "How to represent an instruction? Explain instruction parts based on bits available in instruction code?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0065",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "The initial values of 8-bit registers R1, R2, R3, R4 are given below. R1=11110000, R2=11111111, R3=10111001, R4=11101010 Determine the values of the registers R1, R2, R3, R4 after execution of the following operations.",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0067",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Consider the register R=11011101. Determine the value of R after performing the following operations in sequence. i. Logical shift left ii. Circular shift right iii. Logical shift right iv. Circular shift left",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0068",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Draw the common bus structure to connect basic computer registers.",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0069",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the components of the Computer system.",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0070",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "List and explain the steps involved in the execution of a complete instruction.",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0071",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "What is Micro operation? Briefly explain the arithmetic micro operations?",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0072",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "With neat sketch explain the process of transferring the data between various registers of computer using bus structures.",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0073",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Elaborate the memory-reference instructions with an example.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0074",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain Arithmetic, logic and shift micro operations with example.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0075",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "With a neat diagram explain basic functional units of computers.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0076",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the basic components of Generic Computer system regardless of its internal architecture.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0077",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Sketch the general register organization of CPU with its functionalities and block diagram.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0078",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Elaborate how CPU is concordant with its Input & Output devices and explain the interfacing modules involved?",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0079",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "With the help of examples explain logical micro operations.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0080",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the functionality of 4-bit combinational circuit shifter with a neat block diagram.",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0081",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "What is an interrupt? Draw the flowchart of interrupt cycle?",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0082",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Design a 4-bit Arthmetic circuit using full adders.",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0083",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Describe the following memory reference instructions with examples. i. AND ii. ADD iii. Load",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0084",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Analyse the Basic Operational concepts of Computers.",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0086",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Contrast memory reference instructions with respect to register}; reference instructions.",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0087",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Define bus structures. Explain about the bus structures of computers.",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0089",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Explain about three state bus buffers.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0090",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain about hardware implementation of 4 bit combinational Arithmetic unit.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0091",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Discuss about some logic micro operations.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0092",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "Explain the basic computer organization with block diagram.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0093",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1",
+    "question": "Explain the various types of micro-operations.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0094",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Explain the function of arithmetic logic shift unit with neat diagram.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0095",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1",
+    "question": "Write short notes on bus and memory transfer operations.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0096",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1",
+    "question": "With the help of block diagram, explain common bus system.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B1-0098",
+    "subjectId": "COA",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1",
+    "question": "Design a 4 bit Arithmetic Circuit.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0101",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "How to map micro operation to a micro instruction address.",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0102",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Explain RTL statements?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0103",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Outline the need of data manipulation instructions?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0104",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "List logical Microoperations.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0107",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Discuss about any two types of instruction formats.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0108",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Explain in-detail about all data transfer and manipulation instructions.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0109",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Explain basic organization of control unit with diagram.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0110",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "What do you mean by microprogram? What are the different types of microprograms?",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0111",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Differentiate between a direct and an indirect address instruction?",
+    "paperName": "August 2024 supple.pdf",
+    "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0112",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "What are the advantages of microprogrammed control unit?",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0113",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "What is the purpose of Program Control instructions in a processor?",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0114",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Need of addressing mode in an instruction execution?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0115",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Define micro word, micro instruction and micro program? Give the flow chart of restoring algorithm.",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0116",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "What is the role of micro programmed control unit?",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0117",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "What is the difference between ADD and ADDC instructions?",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0119",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "What is Register Indirect Addressing mode? Give an example?",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0120",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Distinguish the differences between micro programmed Control and Hardwired control.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0122",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Distinguish between High level and low level languages.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0123",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "What is an Interrupt?",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0124",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Describe ASHL and SHRA operations.",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0126",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Differentiate hardwired control and micro-programmed control.",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0127",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Draw the micro instruction format.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0129",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2",
+    "question": "Define addressing mode with an example.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-A2-0130",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "A",
+    "marks": 2,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2",
+    "question": "Write the differences between Hardwired Control and micro programmed control.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 2,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0132",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Explain the various instruction formats with an example.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "August 2024 supple.pdf",
+        "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0133",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026,
+      2024
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Write the assembly language program to evaluate A= (B*C)/(D-E) using three address instruction format.",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0134",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026,
+      2024
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the block diagram for micro programmed control unit.",
+    "paperName": "January 2026.pdf",
+    "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular/Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Regular/Supplementary",
+        "examType": "Regular/Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Regular/Supplementary",
+        "paperName": "January 2026.pdf",
+        "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0135",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "With the diagram explain the basic organization of micro programmed control unit.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0136",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "What are the major design considerations in microinstruction sequencing?",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0137",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "What are the design goals for a designer while deciding a hardwired or micro-programmed CU for a CPU?",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0138",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain about microinstruction sequencing techniques, specifically variable format address microinstruction.",
+    "paperName": "2025 Supple july.pdf",
+    "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "2025 Supple july.pdf",
+        "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0140",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "How do we classify CPU's instructions based on their register organizations? In which Organizations zero address instructions are used? Mention few zero address Instructions And their actual execution in practice?",
+    "paperName": "Aug 2023 reg.pdf",
+    "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Regular",
+        "examType": "Regular",
+        "semester": "IV",
+        "label": "Sep 2023 Regular",
+        "paperName": "Aug 2023 reg.pdf",
+        "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0142",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Define the following (a) Microoperation b) Micro instruction (c) Microprogram (d) subroutine.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0143",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "With the help of a neat sketch explain general register organization.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0144",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain different instruction formats with examples.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0145",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Differentiate between the direct and indirect addressing with examples.",
+    "paperName": "Aug 2023.pdf",
+    "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 9,
+        "session": "Sep 2023 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Sep 2023 Supplementary",
+        "paperName": "Aug 2023.pdf",
+        "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0148",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Discuss the elements of micro-programmed control organization.",
+    "paperName": "Aug 2024 supple.pdf",
+    "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024 supple.pdf",
+        "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0150",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the concept of micro programmed control unit.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0151",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Explain the design of Control unit with a neat diagram.",
+    "paperName": "Aug 2024.pdf",
+    "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 8,
+        "session": "Aug 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Aug 2024 Supplementary",
+        "paperName": "Aug 2024.pdf",
+        "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0155",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Compare the hard-wired control unit and micro programmed control unit",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0156",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Explain address sequencing process of a microprogrammed control unit with a suitable block diagram?",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0157",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the different types of data transfer and data manipulation instructions in computer with suitable examples.",
+    "paperName": "dec 2024.pdf",
+    "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "dec 2024.pdf",
+        "driveFileId": "1gzaZcnOwAIrkp01nWpc_-9W9X-USw5GD",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0159",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 10,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Write notes on three addresses, two addresses, and one address zero address instructions. And write an assembly language program for x=(a+b) * (ct+d) by using two, three and one address instructions?",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 10,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0160",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the general register organization in computer.",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0161",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Analyze the functions BUN and BSA instructions.",
+    "paperName": "Feb 2024 supple.pdf",
+    "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Jan 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2024 Supplementary",
+        "paperName": "Feb 2024 supple.pdf",
+        "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0163",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the fields of microinstruction instruction format.",
+    "paperName": "Jan 2024 reg.pdf",
+    "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Feb 2024 Regular",
+        "paperName": "Jan 2024 reg.pdf",
+        "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0165",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Explain the three basic types of data manipulation instructions.",
+    "paperName": "Jan 2024 supp.pdf",
+    "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 2,
+        "session": "Feb 2024 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Feb 2024 Supplementary",
+        "paperName": "Jan 2024 supp.pdf",
+        "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0168",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Registers R1 and R2 of a computer contain the decimal values 1200, 4600.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0169",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "With the diagram explain the basic organization of address sequencing.",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0170",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "What are the basic differences between a branch instruction, a call subroutine instruction and a program interrupt?",
+    "paperName": "Jan 2025 supple.pdf",
+    "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 1,
+        "session": "Jan 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2025 Supplementary",
+        "paperName": "Jan 2025 supple.pdf",
+        "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0171",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "With a neat schematic, explain the steps involved in fetch and decode phases using register transfer instructions.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0172",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "With a neat flowchart, explain how the control unit determines the instruction after decoding an instruction.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0173",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Implement 4-bit Binary Adder-Subtractor and Binary Incrementor.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0174",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Explain the logical micro operations which manipulates individual bits of word in register with examples.",
+    "paperName": "Jan 2026.pdf",
+    "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "Jan 2026.pdf",
+        "driveFileId": "1uLr58-ui-dPl5LYUaIw76rMI9alyECuc",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0177",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Explain Address sequencing in micro programmed control unit?",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0178",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Illustrate the micro-programmed control unit (MCU) with a neat diagram and how instructions will be processed in MCU?",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0180",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Define an instruction format? Explain different types of instruction formats in detail.",
+    "paperName": "July 2025 supple.pdf",
+    "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "III",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "July 2025 supple.pdf",
+        "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0181",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Explain about Micro program sequencer for a control unit.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0182",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Briefly explain the data transfer instructions with an example.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0183",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2023
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain the working of control unit of basic computer system with a suitable diagram.",
+    "paperName": "march 2023.pdf",
+    "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Regular",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 3,
+        "session": "Mar 2023 Regular",
+        "examType": "Regular",
+        "semester": "III",
+        "label": "Mar 2023 Regular",
+        "paperName": "march 2023.pdf",
+        "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0185",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2",
+    "question": "Explain the design of a microprogrammed control unit.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0186",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Discuss various types of instruction formats.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0187",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2",
+    "question": "Explain in detail about data transfer and manipulation instructions.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0188",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Explain the role of a sequencer in a control unit.",
+    "paperName": "mr 21 25 supple.pdf",
+    "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 1,
+        "session": "Jan 2026 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jan 2026 Supplementary",
+        "paperName": "mr 21 25 supple.pdf",
+        "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0190",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2",
+    "question": "Explain direct addressing mode and indirect addressing mode with an example.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "COA-B2-0191",
+    "subjectId": "COA",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2025
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2",
+    "question": "Give the instruction format of different instruction of computing system.",
+    "paperName": "Supple july 25.pdf",
+    "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+    "pageNumber": 1,
+    "semester": "IV",
+    "examType": "Supplementary",
+    "appearances": [
+      {
+        "year": 2025,
+        "month": 7,
+        "session": "Jul 2025 Supplementary",
+        "examType": "Supplementary",
+        "semester": "IV",
+        "label": "Jul 2025 Supplementary",
+        "paperName": "Supple july 25.pdf",
+        "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  }
+]

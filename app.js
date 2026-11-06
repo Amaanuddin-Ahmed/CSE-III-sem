@@ -1,5 +1,5 @@
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.06-sem-end-sync-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -31,9 +31,9 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
     activeExam: (function() {
       try {
         const saved = localStorage.getItem('mgit_active_exam');
-        return ['mid1', 'mid2', 'sem'].includes(saved) ? saved : 'mid2';
+        return ['mid1', 'mid2', 'sem'].includes(saved) ? saved : 'sem';
       } catch (e) {
-        return 'mid2';
+        return 'sem';
       }
     })(),
     currentView: 'home',
@@ -257,7 +257,7 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
     if (!el.subjectsGrid) return;
     el.subjectsGrid.innerHTML = '';
 
-    const examKey = state.activeExam || 'mid2';
+    const examKey = state.activeExam || 'sem';
     const examConfig = getExamConfig(examKey);
 
     const subjectKeys = Object.keys(SUBJECTS_DATA);
@@ -273,7 +273,7 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.01-0f53b11%c', 'background: #4f46e
       card.style.setProperty('--sub-bg', sub.bgColor);
 
       // Notes count is exam-scoped (Mid-1: Units 1-3, Mid-2: Units 3-5, Sem: Units 1-5)
-      const examKey = state.activeExam || 'mid2';
+      const examKey = state.activeExam || 'sem';
       const nTotal = NOTES_DATA.filter(n => n.subjectId === sub.id && (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true)).length;
 
       card.innerHTML = `
@@ -724,7 +724,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     // Update counts on the Mode Choice Cards. Notes are scoped per target exam and
     // are always shown in full; only PYQs are scoped to the active exam.
-    const examKey = state.activeExam || 'mid2';
+    const examKey = state.activeExam || 'sem';
     const allNotes = NOTES_DATA.filter(n => n.subjectId === sub.id && (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true));
     const scopedQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === sub.id && (!window.isItemInScope || window.isItemInScope(q, examKey)));
     if (el.modeNotesCountText) {
@@ -881,7 +881,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       mid2: { name: 'Mid-2', bannerSubtitle: "Only what’s in your Mid-2 syllabus", unitsLabel: 'Unit 3 (2nd half) + Units 4–5' },
       sem: { name: 'Semester End', bannerSubtitle: "Complete semester-end syllabus", unitsLabel: 'All 5 Units' }
     };
-    return Object.assign({ id: examId, bannerSubtitle: "Only what’s in your syllabus" }, fallbackLabels[examId] || fallbackLabels.mid2);
+    return Object.assign({ id: examId, bannerSubtitle: "Only what’s in your syllabus" }, fallbackLabels[examId] || fallbackLabels.sem);
   }
 
   function updateBreadcrumb() {
@@ -1022,7 +1022,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   }
 
   function setExam(examId, navigateToSubjects, options) {
-    if (!['mid1', 'mid2', 'sem'].includes(examId)) examId = 'mid2';
+    if (!['mid1', 'mid2', 'sem'].includes(examId)) examId = 'sem';
     const opts = options || {};
     const changed = state.activeExam !== examId || state.currentView !== 'exam';
 
@@ -1162,21 +1162,39 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   // -------------------------------------------------------------
   // Division 1: Notes Rendering
   // -------------------------------------------------------------
+  function noteSeriesPart(note) {
+    const text = ((note.title || '') + ' ' + (note.fileName || '')).toLowerCase();
+    if (/\bpart\s*-?\s*(a|1)\b/.test(text)) return 1;
+    if (/\bpart\s*-?\s*(b|2)\b/.test(text)) return 2;
+    if (/\bpart\s*-?\s*(c|3)\b/.test(text)) return 3;
+    return 0;
+  }
+
+  function noteKindRank(note) {
+    const text = ((note.title || '') + ' ' + (note.fileName || '')).toLowerCase();
+    const isRevision = /\b(question bank|q\.?b\.?|assignment|important question|mcq|model question|summary|revision map)\b/.test(text);
+    const isSlides = /\.(ppt|pptx)$/.test(text) || /\b(slides|presentation)\b/.test(text);
+    if (isRevision) return 3;
+    if (isSlides) return 2;
+    return 1;
+  }
+
   function sortNotes(list) {
     return list.slice().sort((a, b) => {
       const uA = (window.getNoteUnits ? window.getNoteUnits(a) : [Number(a.chapter)])[0] || 99;
       const uB = (window.getNoteUnits ? window.getNoteUnits(b) : [Number(b.chapter)])[0] || 99;
       if (uA !== uB) return uA - uB;
 
+      // Keep multi-part lecture series in A -> B -> C order after the
+      // general unit notes, then surface question banks/slides last.
+      const partDiff = noteSeriesPart(a) - noteSeriesPart(b);
+      if (partDiff !== 0) return partDiff;
+
+      const kindDiff = noteKindRank(a) - noteKindRank(b);
+      if (kindDiff !== 0) return kindDiff;
+
       const aTitle = (a.title || a.fileName || '').toLowerCase();
       const bTitle = (b.title || b.fileName || '').toLowerCase();
-      const aPartA = aTitle.includes('part a') || aTitle.includes('part-a') || aTitle.includes('part 1');
-      const bPartA = bTitle.includes('part a') || bTitle.includes('part-a') || bTitle.includes('part 1');
-      const aPartB = aTitle.includes('part b') || aTitle.includes('part-b') || aTitle.includes('part 2');
-      const bPartB = bTitle.includes('part b') || bTitle.includes('part-b') || bTitle.includes('part 2');
-      if (aPartA && bPartB) return -1;
-      if (aPartB && bPartA) return 1;
-
       return aTitle.localeCompare(bTitle, undefined, { numeric: true, sensitivity: 'base' });
     });
   }
@@ -1264,7 +1282,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     const sub = state.currentSubject;
     const subId = sub.id;
-    const examKey = state.activeExam || 'mid2';
+    const examKey = state.activeExam || 'sem';
 
     // Track unit open/collapsed state
     if (!state.expandedNotesUnits) {
@@ -1614,17 +1632,23 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
   function renderNoteSummary(summary, driveLink) {
     const topics = Array.isArray(summary.topics) ? summary.topics : [];
-    const mustKnow = Array.isArray(summary.mustKnow) ? summary.mustKnow : [];
+    const mustKnow = Array.isArray(summary.mustKnow)
+      ? summary.mustKnow
+      : (Array.isArray(summary.mustKnowQuestions) ? summary.mustKnowQuestions : []);
+    const formulas = Array.isArray(summary.formulas) ? summary.formulas.filter(Boolean) : [];
+    const examTips = Array.isArray(summary.examTips) ? summary.examTips.filter(Boolean) : [];
 
     const topicHtml = topics.map((topic, i) => {
-      const points = (topic.points || []).filter(Boolean);
-      const formulas = (topic.formulas || []).filter(Boolean);
+      const topicTitle = topic.title || topic.name || `Key Concept ${i + 1}`;
+      const topicSummary = topic.summary || topic.keyTakeaway || '';
+      const points = (topic.points || topic.subtopics || []).filter(Boolean);
+      const topicFormulas = (topic.formulas || []).filter(Boolean);
       return `
         <section class="note-summary-topic note-topic-${i % 5}">
-          <h3><span class="note-topic-number">${String(i + 1).padStart(2, '0')}</span>${escapeHtml(topic.title)}</h3>
-          ${topic.summary ? `<p>${escapeHtml(topic.summary)}</p>` : ''}
+          <h3><span class="note-topic-number">${String(i + 1).padStart(2, '0')}</span>${escapeHtml(topicTitle)}</h3>
+          ${topicSummary ? `<p>${escapeHtml(topicSummary)}</p>` : ''}
           ${points.length ? `<ul>${points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
-          ${formulas.length ? `<div class="note-summary-formulas">${formulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
+          ${topicFormulas.length ? `<div class="note-summary-formulas">${topicFormulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
           ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${escapeHtml(topic.example)}</div>` : ''}
         </section>`;
     }).join('');
@@ -1895,7 +1919,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
   function updateApplyFilterCount() {
     if (!el.applyFilterCountText || !state.currentSubject) return;
-    const examKey = state.activeExam || 'mid2';
+    const examKey = state.activeExam || 'sem';
     const allSubQuestions = QUESTIONS_DATABASE.filter(q =>
       q.subjectId === state.currentSubject.id && (!window.isItemInScope || window.isItemInScope(q, examKey))
     );
@@ -2000,7 +2024,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     }
 
     // Filter questions for current subject & active exam scope
-    const examKey = state.activeExam || 'mid2';
+    const examKey = state.activeExam || 'sem';
     const allSubQuestions = QUESTIONS_DATABASE.filter(q => q.subjectId === subId && (!window.isItemInScope || window.isItemInScope(q, examKey)));
 
     // Build the year filter checkboxes from the years actually present in this subject

@@ -1,0 +1,142 @@
+{
+  "COA-A3-0192": {
+    "id": "COA-A3-0192",
+    "question": "What is meant by normalization in floating point representation?",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Normalization in Floating-Point Representation\n\n**Definition:**\nA floating-point number is said to be **normalized** if the most significant digit (MSB) of the mantissa is non-zero. \n\nIn binary floating-point representation, a normalized number takes the form:\n$$\\pm (1.b_1 b_2 b_3 \\dots b_k)_2 \\times 2^e \\quad \\text{or} \\quad \\pm (0.1 b_2 b_3 \\dots b_k)_2 \\times 2^e$$\n\n#### Key Reasons for Normalization:\n1. **Uniqueness:** It ensures that every real number has a single, unique binary representation (avoiding ambiguity like $0.01 \\times 2^3 = 0.1 \\times 2^2$).\n2. **Maximum Precision:** Shifting leading zeros out of the mantissa preserves the maximum number of significant precision bits in a fixed-size register.\n3. **Hidden Bit Optimization:** In IEEE 754, since the leading bit before the binary point is always $1$ ($1.M$), it is omitted from storage (the \"hidden bit\"), providing an extra bit of precision for free."
+  },
+  "COA-A3-0193": {
+    "id": "COA-A3-0193",
+    "question": "Do the subtraction using 2s complements 1010-1010011.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Subtraction Using 2's Complement: $1010_2 - 1010011_2$\n\n#### Step 1: Equalize Word Lengths\n- Minuend ($A$) = $1010_2$ (4 bits)\n- Subtrahend ($B$) = $1010011_2$ (7 bits)\n- Pad Minuend with leading zeros to 7 bits: $A = 0001010_2$ ($+10_{10}$)\n- Subtrahend $B = 1010011_2$ ($+83_{10}$)\n\n#### Step 2: Find 2's Complement of Subtrahend ($B$)\n1. 1's complement of $1010011$: Invert all bits $\\rightarrow 0101100$\n2. 2's complement: Add $1$:\n   $$0101100 + 1 = 0101101_2$$\n\n#### Step 3: Add Minuend ($A$) and 2's Complement of $B$\n$$\\begin{array}{r@{\\quad}l}\n  0001010 & (A) \\\\\n+ 0101101 & (\\text{2's complement of } B) \\\\\n\\hline\n  0110111 & (\\text{Sum})\n\\end{array}$$\n\n#### Step 4: Interpret the Result\n- **Carry-out = 0:** The absence of an end carry indicates the result is **negative** and is in 2's complement form.\n- Magnitude: Take 2's complement of $0110111$:\n  - 1's complement: $1001000$\n  - Add 1: $1001001_2 = 73_{10}$\n- **Final Answer:** $-0110111_2$ (or in decimal: $10 - 83 = -73_{10}$)."
+  },
+  "COA-A3-0194": {
+    "id": "COA-A3-0194",
+    "question": "What are the various ways to represent the negative value in fixed point numbers?",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Representation of Negative Numbers in Fixed-Point Format\n\nIn computer arithmetic, negative fixed-point numbers are represented using three primary conventions:\n\n| Representation | Format Description | Zero Representation | Example ($-5$ in 4-bit) |\n| :--- | :--- | :--- | :--- |\n| **Signed Magnitude** | MSB is sign bit ($0 = +, 1 = -$), remaining bits represent magnitude. | Two zeros ($+0 = 0000, -0 = 1000$) | `1101` |\n| **Signed 1's Complement** | Negative numbers formed by inverting every bit of the positive value. | Two zeros ($+0 = 0000, -0 = 1111$) | `1010` |\n| **Signed 2's Complement** | Formed by taking 1's complement and adding $1$. Standard in modern ALUs. | **Single zero** ($0000$) | `1011` |\n\n#### Architectural Advantage of 2's Complement:\n- Eliminates dual zero representation.\n- Subtraction is executed using standard addition circuitry without needing end-around carry correction."
+  },
+  "COA-A3-0195": {
+    "id": "COA-A3-0195",
+    "question": "Find the largest and smallest values that could be stored in an 8 bit signed register & unsigned register?",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Register Value Ranges for 8-Bit Storage\n\n#### 1. Unsigned 8-Bit Register:\nAll 8 bits are used solely for numeric magnitude ($2^7$ to $2^0$).\n- **Formula:** Range is $0$ to $2^n - 1$ where $n = 8$.\n- **Smallest Value:** $00000000_2 = \\mathbf{0}$\n- **Largest Value:** $11111111_2 = 2^8 - 1 = \\mathbf{+255}$\n\n#### 2. Signed 8-Bit Register (2's Complement):\nMSB is the sign bit ($0$ for positive, $1$ for negative); remaining 7 bits denote value.\n- **Formula:** Range is $-2^{n-1}$ to $+2^{n-1} - 1$.\n- **Smallest (Most Negative) Value:** $10000000_2 = -2^7 = \\mathbf{-128}$\n- **Largest (Most Positive) Value:** $01111111_2 = 2^7 - 1 = \\mathbf{+127}$\n\n#### Summary Table:\n| Register Type | Smallest Stored Value | Largest Stored Value | Total Combinations |\n| :--- | :--- | :--- | :--- |\n| **Unsigned 8-bit** | $0$ | $+255$ | $256$ |\n| **Signed 8-bit (2's Comp)** | $-128$ | $+127$ | $256$ |"
+  },
+  "COA-A3-0196": {
+    "id": "COA-A3-0196",
+    "question": "What is meant by normalization in floating point representation? Why do we need it?",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Floating-Point Normalization & Its Necessity\n\n#### Definition:\nA floating-point number is **normalized** when its mantissa is shifted such that the most significant non-zero bit immediately follows (or precedes) the radix point:\n$$N = \\pm M \\times r^E \\quad \\text{where } \\frac{1}{r} \\le |M| < 1 \\text{ (fractional)} \\quad \\text{or} \\quad 1.0 \\le |M| < 2.0 \\text{ (IEEE 754)}$$\n\n#### Why Normalization is Required in Computer Architecture:\n1. **Ensures Unique Representation:** Without normalization, a number like $0.5_{10}$ could be written ambiguously as $0.5 \\times 10^0 = 0.05 \\times 10^1 = 0.005 \\times 10^2$. Normalization enforces a single canonical bit pattern.\n2. **Maximizes Numeric Precision:** By stripping leading zeros, all available mantissa register bits store significant data rather than useless padding.\n3. **Hidden Bit (Implicit Leading 1):** In IEEE 754 formats, since the first bit is always $1$, it is not stored in memory, providing an extra bit of precision for arithmetic calculations."
+  },
+  "COA-A3-0197": {
+    "id": "COA-A3-0197",
+    "question": "Write about Floating point representation with an example.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Floating-Point Representation\n\nIn computer systems, real numbers with fractional parts or very large/small magnitudes are stored using scientific floating-point notation:\n$$N = \\pm M \\times r^E$$\nWhere:\n- **Sign ($S$):** 1-bit indicator ($0 = \\text{positive}$, $1 = \\text{negative}$).\n- **Mantissa / Significand ($M$):** Represents the precision bits of the number.\n- **Base / Radix ($r$):** The base (typically $2$ for binary).\n- **Exponent ($E$):** Indicates the position of the binary radix point.\n\n#### Concrete Example:\nRepresent $+13.625_{10}$ in binary floating-point format:\n1. Integer part: $13_{10} = 1101_2$\n2. Fractional part: $0.625_{10} = 0.101_2$ (since $0.5 + 0.125 = 2^{-1} + 2^{-3}$)\n3. Complete binary value: $1101.101_2$\n4. **Normalized Form:** Shift binary point 3 places left:\n   $$+1.101101_2 \\times 2^3$$\n   - **Sign bit:** $0$ (positive)\n   - **Biased Exponent (single precision, bias 127):** $E = 3 + 127 = 130_{10} = 10000010_2$\n   - **Mantissa bits stored:** $10110100000000000000000$"
+  },
+  "COA-A3-0198": {
+    "id": "COA-A3-0198",
+    "question": "Explain signed magnitude representation of fixed point numbers.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Signed Magnitude Representation\n\nIn signed magnitude representation, an $n$-bit register divides the word into two distinct fields:\n1. **Sign Bit (MSB):** \n   - $0$ denotes a **positive** number.\n   - $1$ denotes a **negative** number.\n2. **Magnitude Bits ($n-1$ bits):** Directly store the absolute binary value of the number.\n\n```\n       1 bit               (n - 1) bits\n+-----------------+-------------------------------+\n| Sign Bit (MSB)  |       Magnitude Field         |\n+-----------------+-------------------------------+\n```\n\n#### Example (8-bit word):\n- $+25_{10}$: Magnitude $25 = 0011001_2 \\rightarrow \\mathbf{00011001_2}$\n- $-25_{10}$: Magnitude $25 = 0011001_2 \\rightarrow \\mathbf{10011001_2}$\n\n#### Limitations in Hardware:\n- **Two representations of Zero:** $+0 = 00000000$ and $-0 = 10000000$, wasting a code point.\n- Addition and subtraction require separate comparison circuits to determine which magnitude is larger."
+  },
+  "COA-A3-0199": {
+    "id": "COA-A3-0199",
+    "question": "Give the example to represent floating point numbers.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Example of Floating-Point Number Representation\n\nConsider representing the real number $\\mathbf{-22.75_{10}}$ in binary floating-point form:\n\n#### Step 1: Convert to Fixed Binary\n- Integer part: $22_{10} = 10110_2$\n- Fractional part: $0.75_{10} = 0.5 + 0.25 = 2^{-1} + 2^{-2} = (0.11)_2$\n- Combined binary: $-(10110.11)_2$\n\n#### Step 2: Normalize\nShift the radix point 4 positions left to obtain a leading 1:\n$$-(1.011011)_2 \\times 2^4$$\n\n#### Step 3: Extract Fields for 32-bit Storage (IEEE 754 Single Precision)\n- **Sign Bit ($S$):** $1$ (negative)\n- **Exponent Field ($E$):** Real exponent $+4$, add bias $127 \\rightarrow 4 + 127 = 131_{10} = 10000011_2$\n- **Fraction/Mantissa ($M$):** Stored fractional bits: `01101100000000000000000`\n\n#### Final Stored 32-Bit Word:\n`1 | 10000011 | 01101100000000000000000`\n(Hexadecimal: `0xC1B60000`)"
+  },
+  "COA-A3-0200": {
+    "id": "COA-A3-0200",
+    "question": "What is circular shift? Explain with example.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Circular Shift (Rotate Operation)\n\n**Definition:**\nA **circular shift** (also called a **rotate**) circulates the bits of a register around the two ends without losing any data. The bit shifted out of one end is circulated back into the opposite end.\n\n#### Types of Circular Shift:\n1. **Circular Shift Left (ROL):** Bits shift left by 1 position; MSB circulates into LSB.\n2. **Circular Shift Right (ROR):** Bits shift right by 1 position; LSB circulates into MSB.\n\n```\nCircular Shift Right (ROR):\n      +-------------------------------------------+\n      |                                           |\n      v                                           |\n  +-------+-------+-------+-------+               |\n  | Bit 3 | Bit 2 | Bit 1 | Bit 0 | --------------+\n  +-------+-------+-------+-------+\n```\n\n#### Concrete Example:\nLet an 8-bit register contain $R = 10110001_2$:\n- **After Circular Shift Right (ROR):**\n  - Bit 0 ($1$) rotates into Bit 7 position.\n  - Result: $\\mathbf{11011000_2}$\n- **After Circular Shift Left (ROL):**\n  - Bit 7 ($1$) rotates into Bit 0 position.\n  - Result: $\\mathbf{01100011_2}$"
+  },
+  "COA-A3-0201": {
+    "id": "COA-A3-0201",
+    "question": "Explain 2's complement.",
+    "marks": 1,
+    "chapter": 3,
+    "answerMd": "### 2's Complement Representation\n\n**Definition:**\nThe 2's complement of an $n$-bit binary number $N$ is defined mathematically as:\n$$\\text{2's Complement}(N) = 2^n - N = (\\text{1's Complement}(N)) + 1$$\n\n#### Method to Obtain 2's Complement:\n1. Invert all bits ($0 \\rightarrow 1$ and $1 \\rightarrow 0$).\n2. Add $1$ to the least significant bit (LSB).\n\n*Example:* For $N = 101100_2$:\n- 1's complement = $010011_2$\n- Adding 1: $010011 + 1 = \\mathbf{010100_2}$\n\n**Primary Advantage:** Allows subtraction to be carried out using ordinary binary addition circuits ($A - B = A + \\text{2's comp}(B)$) without requiring end-around carry."
+  },
+  "COA-A3-0202": {
+    "id": "COA-A3-0202",
+    "question": "Explain Decimal Arithmetic unit.",
+    "marks": 1,
+    "chapter": 3,
+    "answerMd": "### Decimal Arithmetic Unit\n\n**Definition:**\nA **Decimal Arithmetic Unit** is a dedicated digital hardware circuit that performs arithmetic operations (addition, subtraction, multiplication, division) directly on numbers represented in **Binary Coded Decimal (BCD)** format.\n\n#### Core Operation Principle:\n1. When two BCD digits (each 4 bits, range $0000$ to $1001$) are added using a binary adder, the sum can exceed $9$ ($1001_2$).\n2. **BCD Correction Rule:** If the binary sum $> 9$ or generates an output carry ($C_{out} = 1$), the result is invalid in BCD.\n3. The circuit automatically adds **binary $6$ ($0110_2$)** to skip the 6 invalid 4-bit states ($1010$ through $1111$) and produce the correct BCD digit and carry."
+  },
+  "COA-A3-0203": {
+    "id": "COA-A3-0203",
+    "question": "Perform 2's complement of (i) 10010010 Gi) 01101100.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Performing 2's Complement\n\nTo obtain the 2's complement of any binary number:\n1. Invert all bits (take 1's complement).\n2. Add binary $1$ to the LSB.\n\n---\n\n#### (i) Given Number: $10010010_2$\n1. **1's Complement:** Invert all bits:\n   $$01101101_2$$\n2. **Add 1:**\n   $$\\begin{array}{r@{\\quad}l}\n     01101101 \\\\\n   +        1 \\\\\n   \\hline\n     \\mathbf{01101110_2}\n   \\end{array}$$\n*(Shortcut verification: Copy bits right-to-left up to and including the first '1': `...10`, then invert remaining bits $\\rightarrow 01101110_2$).*\n\n---\n\n#### (ii) Given Number: $01101100_2$\n1. **1's Complement:** Invert all bits:\n   $$10010011_2$$\n2. **Add 1:**\n   $$\\begin{array}{r@{\\quad}l}\n     10010011 \\\\\n   +        1 \\\\\n   \\hline\n     \\mathbf{10010100_2}\n   \\end{array}$$\n*(Shortcut verification: Retain trailing `...100`, invert remaining bits $\\rightarrow 10010100_2$).*"
+  },
+  "COA-A3-0204": {
+    "id": "COA-A3-0204",
+    "question": "Identify the two types of data types used in computer arithmetic.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Two Fundamental Data Types in Computer Arithmetic\n\nComputer hardware architectures fundamentally classify numerical data into two core data types:\n\n| Data Type | Description | Hardware Representation | Primary Use Case |\n| :--- | :--- | :--- | :--- |\n| **1. Fixed-Point Numbers** | The radix point has a permanently fixed position (either at the extreme right for **integers** or extreme left for **fractions**). | Stored as signed magnitude, 1's complement, or 2's complement binary integers. | Loop counters, address calculations, integer operations in ALUs. |\n| **2. Floating-Point Numbers** | The radix point can \"float\" dynamically using scientific notation: $N = \\pm M \\times r^E$ (Mantissa and Exponent). | Formatted according to the **IEEE 754 standard** (Sign, Biased Exponent, Fraction). | Scientific computing, graphics rendering, simulations requiring very large dynamic range. |"
+  },
+  "COA-A3-0205": {
+    "id": "COA-A3-0205",
+    "question": "Define fixed-point representation used in data representation.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Fixed-Point Representation\n\n**Definition:**\n**Fixed-point representation** is a method of storing numerical data where the binary radix point occupies a predetermined, fixed position within the binary register.\n\n#### Two Standard Conventions:\n1. **Fixed-Point Integer:** The binary point is assumed to be at the extreme right of the least significant bit (LSB).\n   $$N = (b_{n-1} b_{n-2} \\dots b_1 b_0.)_2$$\n2. **Fixed-Point Fraction:** The binary point is assumed to be at the immediate right of the sign bit (extreme left).\n   $$N = (0. b_{-1} b_{-2} \\dots b_{-m})_2$$\n\n#### Register Format (Signed Integer):\n```\n+-------------+------------------------------------+\n| Sign (1 bit)|       Magnitude (n - 1 bits)       | . (Implicit point)\n+-------------+------------------------------------+\n  MSB                                            LSB\n```\n- **Positive:** $0$ in MSB followed by binary magnitude.\n- **Negative:** Represented standardly in **signed 2's complement** form."
+  },
+  "COA-A3-0206": {
+    "id": "COA-A3-0206",
+    "question": "Give the flow chart of restoring algorithm.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Flowchart of Restoring Division Algorithm\n\nIn restoring division for unsigned binary numbers:\n- **Registers:** $A$ (Accumulator, initialized to $0$), $Q$ (Dividend, contains dividend bits), $M$ (Divisor), $n$ (Sequence Counter = word length).\n\n```\n                 +-----------------------+\n                 | Start: A = 0, Q = Div |\n                 | M = Divisor, Count = n|\n                 +-----------------------+\n                             |\n                             v\n                 +-----------------------+\n                 | Shift Left (A, Q)     |\n                 | A = A - M             |\n                 +-----------------------+\n                             |\n                 +-----------v-----------+\n                 |     Is Sign of A      |\n                 |    Negative (A < 0)?  |\n                 +-----------------------+\n                    /                 \\\n            YES    /                   \\   NO\n                  v                     v\n        +-------------------+  +-------------------+\n        | Q[0] = 0          |  | Q[0] = 1          |\n        | Restore: A = A + M|  | (No restore needed|\n        +-------------------+  +-------------------+\n                  \\                     /\n                   \\                   /\n                    v                 v\n                 +-----------------------+\n                 | Count = Count - 1     |\n                 +-----------------------+\n                             |\n                 +-----------v-----------+\n                 |      Count == 0?      |\n                 +-----------------------+\n                    /                 \\\n             NO    /                   \\   YES\n                  +                     v\n         (Loop back to shift)  +-------------------+\n                               | End: Q = Quotient |\n                               |      A = Remainder|\n                               +-------------------+\n```"
+  },
+  "COA-A3-0207": {
+    "id": "COA-A3-0207",
+    "question": "Apply i) 10010 ii) 111000 iii) 0101010 iv) 111111. - Classify the cache mapping techniques.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Classification of Cache Mapping Techniques & Bit Field Partitioning\n\nCache mapping defines how a main memory address is mapped into cache memory lines. Given memory address bit-strings:\n`i) 10010 (5-bit)` `ii) 111000 (6-bit)` `iii) 0101010 (7-bit)` `iv) 111111 (6-bit)`\n\n#### Three Cache Mapping Classifications:\n1. **Direct Mapping:**\n   - Each memory block maps to exactly one cache line: $\\text{Line} = \\text{Block} \\pmod{\\text{Total Lines}}$.\n   - Address partitioned into: `[ TAG | LINE/INDEX | WORD OFFSET ]`.\n   - *Application on `ii) 111000`:* If 2 bits offset, 2 bits line index $\\rightarrow$ `TAG = 11`, `LINE = 10`, `WORD = 00`.\n2. **Associative Mapping (Fully Associative):**\n   - Any memory block can be loaded into any vacant cache line.\n   - Address partitioned into: `[ TAG | WORD OFFSET ]`.\n   - *Application on `iv) 111111`:* If 2-bit word offset $\\rightarrow$ `TAG = 1111`, `WORD = 11`.\n3. **Set-Associative Mapping ($k$-way):**\n   - Cache divided into sets of $k$ lines. Block maps to set: $\\text{Set} = \\text{Block} \\pmod{\\text{Total Sets}}$.\n   - Address partitioned into: `[ TAG | SET INDEX | WORD OFFSET ]`.\n   - *Application on `iii) 0101010`:* `TAG = 010`, `SET = 10`, `OFFSET = 10`."
+  },
+  "COA-A3-0208": {
+    "id": "COA-A3-0208",
+    "question": "Convert the following into binary numbers: i.",
+    "marks": 1,
+    "chapter": 3,
+    "answerMd": "### Binary Number Conversion\n\n#### Standard Conversions for Fundamental Decimal/Hex/Octal Values:\n\n1. **Decimal to Binary Conversion (Example: $45_{10}$):**\n   - Divide by 2 repeatedly and record remainders:\n     - $45 / 2 = 22$ rem **1** (LSB)\n     - $22 / 2 = 11$ rem **0**\n     - $11 / 2 = 5$ rem **1**\n     - $5 / 2 = 2$ rem **1**\n     - $2 / 2 = 1$ rem **0**\n     - $1 / 2 = 0$ rem **1** (MSB)\n   - Reading bottom-up: $45_{10} = \\mathbf{101101_2}$\n\n2. **Fractional Conversion (Example: $0.625_{10}$):**\n   - $0.625 \\times 2 = 1.25$ (integer **1**)\n   - $0.25 \\times 2 = 0.5$ (integer **0**)\n   - $0.5 \\times 2 = 1.0$ (integer **1**)\n   - Result: $0.625_{10} = \\mathbf{0.101_2}$"
+  },
+  "COA-A3-0209": {
+    "id": "COA-A3-0209",
+    "question": "Draw the hardware configuration for signed-magnitude addition and subtraction.",
+    "marks": 1,
+    "chapter": 3,
+    "answerMd": "### Hardware Configuration for Signed-Magnitude Addition & Subtraction\n\nIn signed-magnitude arithmetic, numbers are stored in registers with separate magnitude and sign flip-flops:\n- **Accumulator Register $A$** with Sign flip-flop $A_s$.\n- **B Register $B$** with Sign flip-flop $B_s$.\n- **Parallel Adder** with control logic and an output carry bit $E$.\n\n```\n              +---------------+           +---------------+\n              | A_s (Sign A)  |           | B_s (Sign B)  |\n              +-------+-------+           +-------+-------+\n                      |                           |\n                      +------------+--------------+\n                                   |\n                                   v\n                         [ Sign Control Logic ]\n                                   |\n                      +------------+------------+\n                      |                         |\n                      v                         v\n              +---------------+         +---------------+\n              |   A Register  |<========|   B Register  |\n              |  (Magnitude)  |         |  (Magnitude)  |\n              +-------+-------+         +-------+-------+\n                      |                         |\n                      v                         v\n                 +-----------------------------------+\n                 |         Parallel Adder            |\n                 +-----------------+-----------------+\n                                   |\n                                   v\n                             [ Sum to A ]\n```"
+  },
+  "COA-A3-0210": {
+    "id": "COA-A3-0210",
+    "question": "Solve (1001101 - 10101001) using 2's complement.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Solving $(1001101_2 - 10101001_2)$ Using 2's Complement\n\n#### Step 1: Equalize Word Lengths\n- Minuend ($A$) = $1001101_2$ (7 bits) $\\rightarrow$ pad to 8 bits: $A = 01001101_2$ ($+77_{10}$)\n- Subtrahend ($B$) = $10101001_2$ (8 bits) $\\rightarrow B = 10101001_2$ ($+169_{10}$ unsigned)\n\n#### Step 2: Compute 2's Complement of $B$\n1. 1's complement of $10101001$: Invert bits $\\rightarrow 01010110$\n2. Add 1: $01010110 + 1 = \\mathbf{01010111_2}$\n\n#### Step 3: Add Minuend ($A$) and 2's Complement of $B$\n$$\\begin{array}{r@{\\quad}l}\n  01001101 & (A) \\\\\n+ 01010111 & (\\text{2's comp of } B) \\\\\n\\hline\n  10100100 & (\\text{Sum})\n\\end{array}$$\n\n#### Step 4: Interpret the Result\n- **Carry-out = 0:** No end carry means the result is **negative** and is in 2's complement form.\n- Magnitude: Take 2's complement of $10100100$:\n  - Invert bits: $01011011$\n  - Add 1: $01011011 + 1 = 01011100_2 = 92_{10}$\n- **Final Result:** $\\mathbf{-01011100_2}$ (in decimal: $77 - 169 = \\mathbf{-92_{10}}$)."
+  },
+  "COA-A3-0211": {
+    "id": "COA-A3-0211",
+    "question": "Add given signed decimal number +86 and -17.",
+    "marks": 2,
+    "chapter": 3,
+    "answerMd": "### Adding Signed Numbers: $(+86) + (-17)$ Using 8-Bit Binary 2's Complement\n\n#### Step 1: Convert Numbers to 8-Bit Binary\n1. **Represent $+86_{10}$:**\n   - $86 = 64 + 16 + 4 + 2 = (01010110)_2$\n2. **Represent $-17_{10}$:**\n   - $+17 = (00010001)_2$\n   - 1's complement = $11101110$\n   - 2's complement = $11101110 + 1 = (11101111)_2$\n\n#### Step 2: Perform Binary Addition\n$$\\begin{array}{r@{\\quad}l@{\\quad}l}\n  01010110 & (+86) \\\\\n+ 11101111 & (-17) \\\\\n\\hline\n(1)\\, 01000101 & (\\text{End carry discarded in 2's complement})\n\\end{array}$$\n\n#### Step 3: Verification\n- Result: $01000101_2$\n- Since MSB is $0$, the result is positive.\n- Value = $64 + 4 + 1 = \\mathbf{+69_{10}}$.\n- Verification: $86 + (-17) = \\mathbf{+69_{10}}$ (Exact match)."
+  }
+}

@@ -1,8 +1,9 @@
 # CONTENT REVIEW — scope, gaps and data flags
 
-**Status:** updated after the correction pass. No question, paper or practice row was
-changed; the verified Drive notes for DM, COA, ES, DBMS and I&E were added or re-scoped.
-This file records what the app can and cannot claim honestly for **MR-25, CSE Semester III**.
+**Status:** updated after the full Drive note sync (92 notes across all seven subjects).
+No question, paper or practice row was changed; only verified Drive notes were added or
+re-scoped. This file records what the app can and cannot claim honestly for **MR-25, CSE
+Semester III**.
 
 Scope rules used by the app:
 
@@ -23,29 +24,32 @@ Counts below are from the shipped data, filtered with `isItemInScope` and
 
 | Subject | Mid-1 PYQs | Mid-2 PYQs | Semester End PYQs | Mid-1 notes | Mid-2 notes | Sem notes |
 |---|---:|---:|---:|---:|---:|---:|
-| DM | 209 | 198 | 471 | 4 | 3 | 5 |
-| COA | 193 | 195 | 477 | 2 | 3 | 5 |
-| OOPJ | 250 | 274 | 574 | 8 | 9 | 14 |
-| DBMS | 159 | 197 | 363 | 1 | 1 | 1 |
-| SE | 191 | 181 | 379 | 0 | 0 | 0 |
+| DM | 207 | 260 | 471 | 9 | 18 | 22 |
+| COA | 193 | 286 | 477 | 16 | 21 | 29 |
+| OOPJ | 334 | 269 | 603 | 10 | 15 | 19 |
+| DBMS | 160 | 203 | 363 | 1 | 11 | 11 |
+| SE | 196 | 183 | 379 | 3 | 3 | 5 |
 | ES | 24 | 0 | 24 | 3 | 3 | 5 |
 | IE | 0 | 0 | 0 | 0 | 1 | 1 |
-| **Total** | **1,026** | **1,045** | **2,288** | **18** | **20** | **31** |
+| **Total** | **1,114** | **1,201** | **2,317** | **42** | **68** | **88** |
+
+Note totals count a multi-unit resource once per exam it appears in, so the columns are
+not additive; the shipped library currently holds **92 unique notes**.
 
 Known gaps:
 
-- **IE** has no PYQ rows. It now has one verified note, `Unit 5.docx`, scoped to Mid-2 and
+- **IE** has no PYQ rows. It has one verified note, `Unit 5.docx`, scoped to Mid-2 and
   Semester End. Its subject screen must keep showing the honest empty states for Units
   1–4 and for PYQs; practice content is still the main IE material.
-- **ES** has 24 PYQs, all in Units 1–2. Mid-2 and Semester End now have notes, but there
-  are no additional genuine ES PYQs to add.
-- **DM** now has five notes (Units 1–4 plus a complete-notes file); **COA** has five
-  (Units 1, 4 and 5); **DBMS** has one note covering Units 1–3; **SE** still has no notes.
+- **ES** has 24 PYQs, all in Units 1–2. Its five notes cover Units 1–5, but there are no
+  additional genuine ES PYQs to add.
+- **Note coverage is now complete at the subject level:** DM 21, COA 29, OOPJ 19, DBMS 8,
+  SE 5, ES 5, IE 1. Remaining work is verification of labels, not missing folders.
 - **ES notes** are tagged Units 1–5, but the older data labels describe ecosystems,
   natural resources, pollution and global challenges. The MR-25 Unit 3 is biodiversity
   and biotic resources. The notes are not relabelled because their content has not been
   re-verified against MR-25.
-- **COA note mapping** uses the actual MR-25 homes for the three uploaded PPTs:
+- **COA note mapping** now follows the actual MR-25 homes for the uploaded decks:
   Computer Arithmetic → Unit 4, Memory Organization → Unit 5, I/O Organization → Unit 5.
   The PYQ chapter tags still follow the older order described in Section 3.
 
@@ -54,20 +58,20 @@ Known gaps:
 ## 2. Unit 3 split
 
 `classifyUnit3()` uses the scope tags first and then subject-specific syllabus keywords.
-The table shows how the 455 Unit 3-tagged questions split.
+The table shows how the 438 Unit 3-tagged questions split.
 
 | Subject | Unit 3 questions | Mid-1 half | Mid-2 half | Unclassified (Semester End only) |
 |---|---:|---:|---:|---:|
-| DM | 97 | 21 | 12 | 64 |
-| COA | 92 | 2 | 1 | 89 |
-| OOPJ | 117 | 19 | 48 | 50 |
-| DBMS | 74 | 13 | 54 | 7 |
-| SE | 75 | 41 | 27 | 7 |
+| DM | 97 | 19 | 74 | 4 |
+| COA | 92 | 2 | 82 | 8 |
+| OOPJ | 100 | 45 | 55 | 0 |
+| DBMS | 74 | 14 | 60 | 0 |
+| SE | 75 | 46 | 29 | 0 |
 | ES | 0 | 0 | 0 | 0 |
 | IE | 0 | 0 | 0 | 0 |
-| **Total** | **455** | **96** | **142** | **217** |
+| **Total** | **438** | **126** | **300** | **12** |
 
-The 217 unclassified items are deliberately visible only in Semester End. They are
+The 12 unclassified items are deliberately visible only in Semester End. They are
 listed below by subject so the owner can re-tag them.
 
 ---
@@ -177,10 +181,11 @@ has 38 in the Semester End bank.
 1. **Re-tag COA** against MR-25 before quoting its Unit 1–2 counts. This is the only
    content issue that changes what a student sees in a mid-term for reasons unrelated to
    the Unit 3 split.
-2. Manually review the 217 Unit 3 items listed by `classifyUnit3() === null` and add
+2. Manually review the 12 Unit 3 items listed by `classifyUnit3() === null` and add
    `scope: 'mid1'` or `scope: 'mid2'` where known.
-3. Upload the remaining missing notes (SE Units 1–5, COA Units 2–3, DBMS Units 4–5,
-   IE Units 1–4) and verify the existing ES/DBMS note labels.
+3. Verify the labels on the newly synced notes (especially the ES unit labels and the
+   COA unit mapping) and decide whether the DBMS `.docx`/`.ppt` question banks should be
+   added as non-PDF resources.
 4. Add verified ES Unit 3–5 and IE questions only from real papers.
 5. Expand flashcard decks to 20 per unit only with sourced content.
 6. Confirm whether the DM “groups/subgroups” material is examinable in MR-25 Unit 3.

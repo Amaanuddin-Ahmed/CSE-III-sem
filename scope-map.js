@@ -8,7 +8,7 @@
  */
 
 const EXAM_CONFIG = {
-  upcoming: 'mid2',
+  upcoming: 'sem',
   exams: {
     mid1: {
       id: 'mid1',
@@ -27,8 +27,8 @@ const EXAM_CONFIG = {
       name: 'Mid-2',
       title: 'Mid-Term 2',
       unitsLabel: 'Unit 3 (2nd half) + Units 4–5',
-      badge: 'Ongoing',
-      description: 'Focus on the Ongoing internal examination.',
+      badge: null,
+      description: 'Revise the second internal examination syllabus.',
       bannerSubtitle: "Only what’s in your Mid-2 syllabus",
       units: [3, 4, 5],
       unit3Scope: 'mid2',
@@ -39,8 +39,8 @@ const EXAM_CONFIG = {
       name: 'Semester End',
       title: 'Semester End Examination',
       unitsLabel: 'All 5 Units',
-      badge: null,
-      description: 'Prepare across the complete semester syllabus.',
+      badge: 'Upcoming',
+      description: 'Your upcoming end-semester examination — prepare across the complete syllabus.',
       bannerSubtitle: "Complete semester-end syllabus",
       units: [1, 2, 3, 4, 5],
       unit3Scope: 'both',

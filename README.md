@@ -22,13 +22,13 @@ The platform strictly covers all **7 syllabus subjects**, each organized with de
 
 | Subject | Short Code | Verified Past Papers | Notes & Materials | Direct Drive Links |
 | :--- | :---: | :---: | :---: | :---: |
-| Discrete Mathematics | `DM` | 24 Papers (PDF/Scanned) | Ready for Contributions | Dedicated Notes & PYQs Folders |
-| Computer Organization & Architecture | `COA` | 21 Past Papers | 2 Verified Unit Notes | Dedicated Notes & PYQs Folders |
-| Object-Oriented Programming through Java | `OOPJ` | 20 Past Papers | 14 Verified Notes & Question Banks | Dedicated Notes & PYQs Folders |
-| Database Management Systems | `DBMS` | 12 Past Papers | 1 Comprehensive Units 1–3 Guide | Dedicated Notes & PYQs Folders |
-| Software Engineering | `SE` | 17 Past Papers | Ready for Contributions | Dedicated Notes & PYQs Folders |
-| Environmental Studies | `ES` | 3 Papers & Solution Keys | 4 Comprehensive Unit Notes | Dedicated Notes & PYQs Folders |
-| Innovation and Entrepreneurship | `I&E` | Drive Bank Initialized | Ready for Contributions | Dedicated Notes & PYQs Folders |
+| Discrete Mathematics | `DM` | 24 Papers (PDF/Scanned) | 22 Unit Notes & Slide Decks | Dedicated Notes & PYQs Folders |
+| Computer Organization & Architecture | `COA` | 21 Past Papers | 29 Unit Notes, Slides & Revision Guides | Dedicated Notes & PYQs Folders |
+| Object-Oriented Programming through Java | `OOPJ` | 20 Past Papers | 19 Verified Notes & Question Banks | Dedicated Notes & PYQs Folders |
+| Database Management Systems | `DBMS` | 12 Past Papers | 11 Unit Notes, Slides & Question Banks | Dedicated Notes & PYQs Folders |
+| Software Engineering | `SE` | 17 Past Papers | 5 Unit Notes & Slides | Dedicated Notes & PYQs Folders |
+| Environmental Studies | `ES` | 3 Papers & Solution Keys | 5 Comprehensive Unit Notes | Dedicated Notes & PYQs Folders |
+| Innovation and Entrepreneurship | `I&E` | Drive Bank Initialized | 1 Verified Unit 5 Note | Dedicated Notes & PYQs Folders |
 
 ---
 

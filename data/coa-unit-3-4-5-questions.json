@@ -1,0 +1,2576 @@
+[
+  {
+    "id": "COA-A3-0192",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What is meant by normalization in floating point representation?",
+    "normKey": "coa|what is meant by normalization in floating point representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0193",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Do the subtraction using 2s complements 1010-1010011.",
+    "normKey": "coa|do the subtraction using 2s complements 1010 1010011",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0194",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What are the various ways to represent the negative value in fixed point numbers?",
+    "normKey": "coa|what are the various ways to represent the negative value in fixed point numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0195",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Find the largest and smallest values that could be stored in an 8 bit signed register & unsigned register?",
+    "normKey": "coa|find the largest and smallest values that could be stored in an 8 bit signed register unsigned register",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0196",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What is meant by normalization in floating point representation? Why do we need it?",
+    "normKey": "coa|what is meant by normalization in floating point representation why do we need it",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0197",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Write about Floating point representation with an example.",
+    "normKey": "coa|write about floating point representation with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0198",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain signed magnitude representation of fixed point numbers.",
+    "normKey": "coa|explain signed magnitude representation of fixed point numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0199",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Give the example to represent floating point numbers.",
+    "normKey": "coa|give the example to represent floating point numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0200",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What is circular shift? Explain with example.",
+    "normKey": "coa|what is circular shift explain with example",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0201",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain 2's complement.",
+    "normKey": "coa|explain 2 s complement",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0202",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain Decimal Arithmetic unit.",
+    "normKey": "coa|explain decimal arithmetic unit",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0203",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Perform 2's complement of (i) 10010010 Gi) 01101100.",
+    "normKey": "coa|perform 2 s complement of i 10010010 gi 01101100",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0204",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Identify the two types of data types used in computer arithmetic.",
+    "normKey": "coa|identify the two types of data types used in computer arithmetic",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0205",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Define fixed-point representation used in data representation.",
+    "normKey": "coa|define fixed point representation used in data representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0206",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Give the flow chart of restoring algorithm.",
+    "normKey": "coa|give the flow chart of restoring algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0207",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Apply i) 10010 ii) 111000 iii) 0101010 iv) 111111. - Classify the cache mapping techniques.",
+    "normKey": "coa|apply i 10010 ii 111000 iii 0101010 iv 111111 classify the cache mapping techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0208",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Convert the following into binary numbers: i.",
+    "normKey": "coa|convert the following into binary numbers i",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0209",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Draw the hardware configuration for signed-magnitude addition and subtraction.",
+    "normKey": "coa|draw the hardware configuration for signed magnitude addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0210",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Solve (1001101 - 10101001) using 2's complement.",
+    "normKey": "coa|solve 1001101 10101001 using 2 s complement",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0211",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Add given signed decimal number +86 and -17.",
+    "normKey": "coa|add given signed decimal number 86 and 17",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0212",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Draw the hardware implementation of fixed point addition subtraction.",
+    "normKey": "coa|draw the hardware implementation of fixed point addition subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0213",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Draw block diagram for a bidirectional input/output device with its interface and enable/load logic?",
+    "normKey": "coa|draw block diagram for a bidirectional input output device with its interface and enable load logic",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0214",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the Register transfer notations for Arithmetic Micro Operations.",
+    "normKey": "coa|list out the register transfer notations for arithmetic micro operations",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0215",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Convert the following numbers.",
+    "normKey": "coa|convert the following numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0216",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Draw the hardware configuration for signed 2's complement addition and subtraction.",
+    "normKey": "coa|draw the hardware configuration for signed 2 s complement addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0217",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Draw the flow chart for the add and subtract operations.",
+    "normKey": "coa|draw the flow chart for the add and subtract operations",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0218",
+    "chapter": 3,
+    "marks": 1,
+    "part": "A",
+    "question": "Write about various decimal arithmetic micro operation symbols.",
+    "normKey": "coa|write about various decimal arithmetic micro operation symbols",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0219",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare restoring and non restoring methods.",
+    "normKey": "coa|compare restoring and non restoring methods",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0220",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What is the range of numbers that can be represented in a fixed point format using 16 bits of a signed integer?",
+    "normKey": "coa|what is the range of numbers that can be represented in a fixed point format using 16 bits of a signed integer",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0221",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Define 1's and 2's complements.",
+    "normKey": "coa|define 1 s and 2 s complements",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0222",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "What is the difference between fixed-point and floating-point representation?",
+    "normKey": "coa|what is the difference between fixed point and floating point representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-A3-0223",
+    "chapter": 3,
+    "marks": 2,
+    "part": "A",
+    "question": "Elaborate on floating point-addition and subtraction.",
+    "normKey": "coa|elaborate on floating point addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0224",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Give and explain the hardware implementation of the signed magnitude addition and subtraction.",
+    "normKey": "coa|give and explain the hardware implementation of the signed magnitude addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0225",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform the arithmetic operations (+42) +(-13) and (-42) -(-13) in binary using signed 2's complement representation for negative numbers.",
+    "normKey": "coa|perform the arithmetic operations 42 13 and 42 13 in binary using signed 2 s complement representation for negative numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0226",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Design the flowchart of floating point addition and subtraction in computer arithmetics with an example.",
+    "normKey": "coa|design the flowchart of floating point addition and subtraction in computer arithmetics with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0227",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about sign magnitude and 2's complement approaches for representation fixed point numbers?",
+    "normKey": "coa|explain about sign magnitude and 2 s complement approaches for representation fixed point numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0228",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "What is overflow and underflow? If the computer is considered as infinite system does still have these problems?",
+    "normKey": "coa|what is overflow and underflow if the computer is considered as infinite system does still have these problems",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0229",
+    "chapter": 3,
+    "marks": 10,
+    "part": "B",
+    "question": "Perform 10111 * 10111 using 2's complement algorithm.",
+    "normKey": "coa|perform 10111 10111 using 2 s complement algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0230",
+    "chapter": 3,
+    "marks": 10,
+    "part": "B",
+    "question": "Given Booth's algorithm to multiply two binary numbers, explain the working of the algorithm with neat flowchart?",
+    "normKey": "coa|given booth s algorithm to multiply two binary numbers explain the working of the algorithm with neat flowchart",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0231",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Construct the flowchart for Restore division operation for Signed numbers?",
+    "normKey": "coa|construct the flowchart for restore division operation for signed numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0232",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Solve a restore division operation between 25 as Dividend and 6 as a Divisor? And show the remainder and quotient in their respective registers?",
+    "normKey": "coa|solve a restore division operation between 25 as dividend and 6 as a divisor and show the remainder and quotient in their respective registers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0233",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate the various representations of the signed numbers.",
+    "normKey": "coa|illustrate the various representations of the signed numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0234",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "With the help of a block diagram explain Decimal Arithmetic Unit.",
+    "normKey": "coa|with the help of a block diagram explain decimal arithmetic unit",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0235",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare signed and unsigned binary numbers with table.",
+    "normKey": "coa|compare signed and unsigned binary numbers with table",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0236",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain decimal arithmetic operations with examples.",
+    "normKey": "coa|explain decimal arithmetic operations with examples",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0237",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Solve a step-by-step multiplication of (+15) X (-13) using Booth's algorithm.",
+    "normKey": "coa|solve a step by step multiplication of 15 x 13 using booth s algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0238",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the difference between micro programmed control and hardwired control.",
+    "normKey": "coa|explain the difference between micro programmed control and hardwired control",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0239",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the fixed and floating type numbers that are represented in computers with example.",
+    "normKey": "coa|explain the fixed and floating type numbers that are represented in computers with example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0240",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Suppose two numbers located in memory are to be added. What are the functional units of digital computer system will carry out this? Explain.",
+    "normKey": "coa|suppose two numbers located in memory are to be added what are the functional units of digital computer system will carry out this explain",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0241",
+    "chapter": 3,
+    "marks": 10,
+    "part": "B",
+    "question": "What is floating point representation? Explain the IEEE standard for floating point representation with examples. 4A.b) Explain about Booth's Multiplier with flowchart.",
+    "normKey": "coa|what is floating point representation explain the ieee standard for floating point representation with examples 4a b explain about booth s multiplier with flowchart",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0242",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Build an algorithm in flowchart form for adding and subtracting two fixed point binary numbers when negative numbers are in signed 1's complement representation.",
+    "normKey": "coa|build an algorithm in flowchart form for adding and subtracting two fixed point binary numbers when negative numbers are in signed 1 s complement representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0243",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Construct a Decimal Arithmetic Unit to perform BCD addition and BCD Subtraction.",
+    "normKey": "coa|construct a decimal arithmetic unit to perform bcd addition and bcd subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0244",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the concept of floating-point representation and how it differs from fixed-point representation. Discuss its advantages and disadvantages.",
+    "normKey": "coa|explain the concept of floating point representation and how it differs from fixed point representation discuss its advantages and disadvantages",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0245",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain how complements are used in binary arithmetic for subtraction, with suitable example.",
+    "normKey": "coa|explain how complements are used in binary arithmetic for subtraction with suitable example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0246",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw and explain a flowchart for a multiplication algorithm.",
+    "normKey": "coa|draw and explain a flowchart for a multiplication algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0247",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Describe the decimal arithmetic operations used in computers. Explain the role of a decimal arithmetic unit in performing these operations effectively in digital systems.",
+    "normKey": "coa|describe the decimal arithmetic operations used in computers explain the role of a decimal arithmetic unit in performing these operations effectively in digital systems",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0248",
+    "chapter": 3,
+    "marks": 10,
+    "part": "B",
+    "question": "What are the steps involved in addition / subtraction of two floating-Point Numbers? Explain the operation through a flow chart. With an example.",
+    "normKey": "coa|what are the steps involved in addition subtraction of two floating point numbers explain the operation through a flow chart with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0249",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw an H/W circuit for fixed point Number ADD/SUB?",
+    "normKey": "coa|draw an h w circuit for fixed point number add sub",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0250",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Construct a flowchart for 2's Complement multiplication algorithm and Perform multiplication between 10111 * 10011.",
+    "normKey": "coa|construct a flowchart for 2 s complement multiplication algorithm and perform multiplication between 10111 10011",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0251",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform the subtraction with the following unsigned binary numbers: i.",
+    "normKey": "coa|perform the subtraction with the following unsigned binary numbers i",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0252",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the flow chart for decimal division and explain division of 23 with 4.",
+    "normKey": "coa|draw the flow chart for decimal division and explain division of 23 with 4",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0253",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the flow chart of floating point addition operation?",
+    "normKey": "coa|draw the flow chart of floating point addition operation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0254",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the flow chart for Booth multiplication and explain multiplication of 12 with 13.",
+    "normKey": "coa|draw the flow chart for booth multiplication and explain multiplication of 12 with 13",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0255",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss about fixed point and floating-point representations.",
+    "normKey": "coa|discuss about fixed point and floating point representations",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0256",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform and explain arithmetic addition, subtraction, and overflow detection using fixed point representation.",
+    "normKey": "coa|perform and explain arithmetic addition subtraction and overflow detection using fixed point representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0257",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform floating point addition using the numbers 0.",
+    "normKey": "coa|perform floating point addition using the numbers 0",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0258",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the multiplication of positive numbers using a booth multiplier with a neat sketch.",
+    "normKey": "coa|explain the multiplication of positive numbers using a booth multiplier with a neat sketch",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0259",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "List out the steps in non restoring division method to perform 8/3.",
+    "normKey": "coa|list out the steps in non restoring division method to perform 8 3",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0260",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform booth multiplication on the following numbers 13(multiplicand), +11 (multiplier).",
+    "normKey": "coa|perform booth multiplication on the following numbers 13 multiplicand 11 multiplier",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0261",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about address sequencing in control memory with neat diagrams?",
+    "normKey": "coa|explain about address sequencing in control memory with neat diagrams",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0262",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Apply 2's compliment method to perform subration between two given binary numbers 1010 1110 - 1100 0011. Elaborate the steps involved.",
+    "normKey": "coa|apply 2 s compliment method to perform subration between two given binary numbers 1010 1110 1100 0011 elaborate the steps involved",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0263",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Design a 4-bit ALU which performs arithmetic, Logical and shift operations.",
+    "normKey": "coa|design a 4 bit alu which performs arithmetic logical and shift operations",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0264",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Write about hardware organization of micro programmed control unit.",
+    "normKey": "coa|write about hardware organization of micro programmed control unit",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0265",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform the following arithmetic operations.",
+    "normKey": "coa|perform the following arithmetic operations",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0266",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the flow chart for Booth multiplication algorithm and multiply 13 with -7 using Booth multiplication algorithm.",
+    "normKey": "coa|draw the flow chart for booth multiplication algorithm and multiply 13 with 7 using booth multiplication algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0267",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the flowchart of floating point addition/subtraction operation.",
+    "normKey": "coa|explain the flowchart of floating point addition subtraction operation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0268",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Divide 13 with 7 using binary division.",
+    "normKey": "coa|divide 13 with 7 using binary division",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0269",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "With a neat Flowchart analyse Floating-Point Addition and} Subtraction.",
+    "normKey": "coa|with a neat flowchart analyse floating point addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0270",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Elaborate steps used in Booth algorithm for multiplying following binary numbers (+15) * (-13).",
+    "normKey": "coa|elaborate steps used in booth algorithm for multiplying following binary numbers 15 13",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0271",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Demonstrate division algorithm for fixed point numbers with the help of a flow chart.",
+    "normKey": "coa|demonstrate division algorithm for fixed point numbers with the help of a flow chart",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0272",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform signed multiplication of -3 and 7 using booth multiplication algorithm. Represent the numbers in 5 bits including sign bit. Represent the step by step multiplication process.",
+    "normKey": "coa|perform signed multiplication of 3 and 7 using booth multiplication algorithm represent the numbers in 5 bits including sign bit represent the step by step multiplication process",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0273",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain restoring division algorithm for fixed point numbers with suitable example.",
+    "normKey": "coa|explain restoring division algorithm for fixed point numbers with suitable example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0274",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Briefly explain about IEEE floating point representation and perform addition of two floating numbers.",
+    "normKey": "coa|briefly explain about ieee floating point representation and perform addition of two floating numbers",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0275",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw flow chart for decimal division and explain.",
+    "normKey": "coa|draw flow chart for decimal division and explain",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0276",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain signed and unsigned number representation.",
+    "normKey": "coa|explain signed and unsigned number representation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0277",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Describe the steps involved in floating-point addition and subtraction.",
+    "normKey": "coa|describe the steps involved in floating point addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0278",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain multiplication and division algorithms with examples.",
+    "normKey": "coa|explain multiplication and division algorithms with examples",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0279",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss decimal arithmetic operations and hardware implementation.",
+    "normKey": "coa|discuss decimal arithmetic operations and hardware implementation",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0280",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Briefly discuss the hardware implementation of Booth algorithm.",
+    "normKey": "coa|briefly discuss the hardware implementation of booth algorithm",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0281",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain fixed point addition and subtraction in computer arithmetics with an example.",
+    "normKey": "coa|explain fixed point addition and subtraction in computer arithmetics with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0282",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Perform the following using Booth algorithm 13 x -5.",
+    "normKey": "coa|perform the following using booth algorithm 13 x 5",
+    "instances": 1
+  },
+  {
+    "id": "COA-B3-0283",
+    "chapter": 3,
+    "marks": 5,
+    "part": "B",
+    "question": "Write a short note on floating point addition of numbers with an example.",
+    "normKey": "coa|write a short note on floating point addition of numbers with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0284",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare synchronous and Asynchronous serial data transmission.",
+    "normKey": "coa|compare synchronous and asynchronous serial data transmission",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0285",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Differentiate between Write through a cache policy and Write backa cache policy?",
+    "normKey": "coa|differentiate between write through a cache policy and write backa cache policy",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0286",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What are the various I/O commands used in Input/output interface?",
+    "normKey": "coa|what are the various i o commands used in input output interface",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0287",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "How to calculate the hit-ratio in cache memory organization?",
+    "normKey": "coa|how to calculate the hit ratio in cache memory organization",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0288",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What is polling?",
+    "normKey": "coa|what is polling",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0289",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Distinguish between the asynchronous and synchronous data transfer.",
+    "normKey": "coa|distinguish between the asynchronous and synchronous data transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0290",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Define the Read Only Memory. What is its use?",
+    "normKey": "coa|define the read only memory what is its use",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0291",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "How does SRAM differ from ordinary DRAM?",
+    "normKey": "coa|how does sram differ from ordinary dram",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0292",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain types of memories.",
+    "normKey": "coa|explain types of memories",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0293",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "Differentiate Synchronous and Asynchronous data transmission (any 2 differences).",
+    "normKey": "coa|differentiate synchronous and asynchronous data transmission any 2 differences",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0294",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Why are read and write control lines in a DMA controller bidirectional?",
+    "normKey": "coa|why are read and write control lines in a dma controller bidirectional",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0295",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "An address space is specified by 24bits and the corresponding memory space by 16 bits. How many words are there in the address space?",
+    "normKey": "coa|an address space is specified by 24bits and the corresponding memory space by 16 bits how many words are there in the address space",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0296",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What is a cache memory? What is its use?",
+    "normKey": "coa|what is a cache memory what is its use",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0297",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What are advantages of DMA control?",
+    "normKey": "coa|what are advantages of dma control",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0298",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain I/O Bus Vs Memory Bus.",
+    "normKey": "coa|explain i o bus vs memory bus",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0299",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain switch logic behind the implementation of crossbar switch?",
+    "normKey": "coa|explain switch logic behind the implementation of crossbar switch",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0300",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "What is pipelining?",
+    "normKey": "coa|what is pipelining",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0301",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "Define mapping in cache memory?",
+    "normKey": "coa|define mapping in cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0302",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What is interrupt? Give the steps for handling interrupt?",
+    "normKey": "coa|what is interrupt give the steps for handling interrupt",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0303",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What is Auxiliary memory?",
+    "normKey": "coa|what is auxiliary memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0304",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare any 2 points for main memory and auxiliary memory.",
+    "normKey": "coa|compare any 2 points for main memory and auxiliary memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0305",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the 2 types of memory techniques and explain any one memory technique of mapping.",
+    "normKey": "coa|list out the 2 types of memory techniques and explain any one memory technique of mapping",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0306",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the importance of interfacing.",
+    "normKey": "coa|list out the importance of interfacing",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0307",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the methodologies involved in handling Priority Interrupt.",
+    "normKey": "coa|list out the methodologies involved in handling priority interrupt",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0308",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "What are different modes of data transfer?",
+    "normKey": "coa|what are different modes of data transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0309",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "How EEPROM differs from PROM?",
+    "normKey": "coa|how eeprom differs from prom",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0310",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "Define burst transfer.",
+    "normKey": "coa|define burst transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0311",
+    "chapter": 4,
+    "marks": 1,
+    "part": "A",
+    "question": "Define Hit ratio and Miss ratio.",
+    "normKey": "coa|define hit ratio and miss ratio",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0312",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare isolated and memory mapped I/O.",
+    "normKey": "coa|compare isolated and memory mapped i o",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0313",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Define the performance of cache memory in terms of hit ratio with suitable example.",
+    "normKey": "coa|define the performance of cache memory in terms of hit ratio with suitable example",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0314",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What is DMA? Why is it used?",
+    "normKey": "coa|what is dma why is it used",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0315",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "What are different types of mapping in cache memory?",
+    "normKey": "coa|what are different types of mapping in cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0316",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain the types of modes of transfer with an example.",
+    "normKey": "coa|explain the types of modes of transfer with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-A4-0317",
+    "chapter": 4,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the types of memory techniques.",
+    "normKey": "coa|list out the types of memory techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0318",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Analyze the hierarchical memory systems are employed to achieve optimal performance by a computer system.",
+    "normKey": "coa|analyze the hierarchical memory systems are employed to achieve optimal performance by a computer system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0319",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss the Memory hierarchy with a neat diagram.",
+    "normKey": "coa|discuss the memory hierarchy with a neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0320",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "With the neat diagram explain the concepts of Direct Memory Access (DMA).",
+    "normKey": "coa|with the neat diagram explain the concepts of direct memory access dma",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0321",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Design working principle of DMA controller with a neat diagram.",
+    "normKey": "coa|design working principle of dma controller with a neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0322",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain interrupt initiated I/O in detail.",
+    "normKey": "coa|explain interrupt initiated i o in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0323",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "What is a cache mapping function and explain various mapping techniques in cache memory organization.",
+    "normKey": "coa|what is a cache mapping function and explain various mapping techniques in cache memory organization",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0324",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss about cache memory and how its supports to enhance the performance of a computer?",
+    "normKey": "coa|discuss about cache memory and how its supports to enhance the performance of a computer",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0325",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Given the main memory access time is 1200ns and cache access time is 100ns. The average memory access time is not to exceed 120 ns. Determine the hit ratio for the cache?",
+    "normKey": "coa|given the main memory access time is 1200ns and cache access time is 100ns the average memory access time is not to exceed 120 ns determine the hit ratio for the cache",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0326",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare and Contrast between Memory mapped I/O and isolated I/O",
+    "normKey": "coa|compare and contrast between memory mapped i o and isolated i o",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0327",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss the design of typical input/output interface?",
+    "normKey": "coa|discuss the design of typical input output interface",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0328",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about the various cache memory techniques.",
+    "normKey": "coa|explain about the various cache memory techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0329",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain daisy chaining with a neat sketch.",
+    "normKey": "coa|explain daisy chaining with a neat sketch",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0330",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw and explain DMA with a neat sketch.",
+    "normKey": "coa|draw and explain dma with a neat sketch",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0331",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain in detail about the memory hierarchy in the processor.",
+    "normKey": "coa|explain in detail about the memory hierarchy in the processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0332",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about Secondary or Auxiliary Memory.",
+    "normKey": "coa|explain about secondary or auxiliary memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0333",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the block diagram of a typical DMA controller and explain.",
+    "normKey": "coa|draw the block diagram of a typical dma controller and explain",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0334",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about isolated and memory mapped I/O.",
+    "normKey": "coa|explain about isolated and memory mapped i o",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0335",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain input/output operations of computer architecture.",
+    "normKey": "coa|explain input output operations of computer architecture",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0336",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss the different mapping techniques used in cache memories and their relative merits and demerits.",
+    "normKey": "coa|discuss the different mapping techniques used in cache memories and their relative merits and demerits",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0337",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "How can you enhance the speed and capacity of memories? Explain.",
+    "normKey": "coa|how can you enhance the speed and capacity of memories explain",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0338",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the Direct Memory Access. How it improves the performance of the system?",
+    "normKey": "coa|explain the direct memory access how it improves the performance of the system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0339",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "With the help of block diagram of interface between processor and peripheral devices explain its operations.",
+    "normKey": "coa|with the help of block diagram of interface between processor and peripheral devices explain its operations",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0340",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Describe the DMA operation with neat diagram.",
+    "normKey": "coa|describe the dma operation with neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0341",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "List out different types of memory. Explain the functionality of RAM and ROM chips with the help of function table.",
+    "normKey": "coa|list out different types of memory explain the functionality of ram and rom chips with the help of function table",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0342",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Distinguish between Direct mapping, Set-Associative mapping and Associate mapping of cache memory.",
+    "normKey": "coa|distinguish between direct mapping set associative mapping and associate mapping of cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0343",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the need for input-output interface and discuss asynchronous data transfer in detail.",
+    "normKey": "coa|explain the need for input output interface and discuss asynchronous data transfer in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0344",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate interrupt priority schemes with a neat diagram. Explain how these schemes are utilized in managing interrupts.",
+    "normKey": "coa|illustrate interrupt priority schemes with a neat diagram explain how these schemes are utilized in managing interrupts",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0345",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the following Auxiliary memory devices with suitable diagrams: i. Magnetic Disks ii.",
+    "normKey": "coa|explain the following auxiliary memory devices with suitable diagrams i magnetic disks ii",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0346",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw and explain the memory hierarchy in a computer system with necessary block diagrams.",
+    "normKey": "coa|draw and explain the memory hierarchy in a computer system with necessary block diagrams",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0347",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "In a computer, the number of cache hits are 7 and cache miss are 3, then determine the hit ratio of cache memory.",
+    "normKey": "coa|in a computer the number of cache hits are 7 and cache miss are 3 then determine the hit ratio of cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0348",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Sketch the block diagram of DMA in a computer system and discuss the working principle of DMA?",
+    "normKey": "coa|sketch the block diagram of dma in a computer system and discuss the working principle of dma",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0349",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain Hand Shaking method of data transfer?",
+    "normKey": "coa|explain hand shaking method of data transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0350",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "explain the working of DMA controller.",
+    "normKey": "coa|explain the working of dma controller",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0351",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "A cache memory consists of size of 256X16 and 8 blocks. The main memory contains memory size of 4096X16. Find out how many bits are there in Index, Tag, Block and Word fields in the case of direct mapping.",
+    "normKey": "coa|a cache memory consists of size of 256x16 and 8 blocks the main memory contains memory size of 4096x16 find out how many bits are there in index tag block and word fields in the case of direct mapping",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0352",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss daisy-chain priority interrupt using neat diagram.",
+    "normKey": "coa|discuss daisy chain priority interrupt using neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0353",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the classification diagram of semiconductor memory and explain briefly about ROM, PROM, EEPROM and Flash memory.",
+    "normKey": "coa|draw the classification diagram of semiconductor memory and explain briefly about rom prom eeprom and flash memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0354",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the READ and WRITE operations in Associative Memory.",
+    "normKey": "coa|explain the read and write operations in associative memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0355",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the block diagram of a DMA controller and explain its functioning?",
+    "normKey": "coa|draw the block diagram of a dma controller and explain its functioning",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0356",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain in detail parallel priority interrupt hardware?",
+    "normKey": "coa|explain in detail parallel priority interrupt hardware",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0357",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain direct mapping technique in in cache memory?",
+    "normKey": "coa|explain direct mapping technique in in cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0358",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "With a neat diagram explain the memory hierarchy in a process.",
+    "normKey": "coa|with a neat diagram explain the memory hierarchy in a process",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0359",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "What is cache memory? What is locality of reference? With neat Diagrams explain the cache memory mapping functions.",
+    "normKey": "coa|what is cache memory what is locality of reference with neat diagrams explain the cache memory mapping functions",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0360",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "With the neat diagram explain the block diagram of Input-Output interface.",
+    "normKey": "coa|with the neat diagram explain the block diagram of input output interface",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0361",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss the Memory Hierarchy in computer system with regard to Speed, Size and Cost?",
+    "normKey": "coa|discuss the memory hierarchy in computer system with regard to speed size and cost",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0362",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the mechanism involved in Magnetic Disks and Magnetic Tapes.",
+    "normKey": "coa|explain the mechanism involved in magnetic disks and magnetic tapes",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0363",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about DMA controller and its mode of data transfer.",
+    "normKey": "coa|explain about dma controller and its mode of data transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0364",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Contrast Daisy-Chaining priority and Parallel priority Interrupt with its hardware diagram.",
+    "normKey": "coa|contrast daisy chaining priority and parallel priority interrupt with its hardware diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0365",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare Isolated I/O and Memory mapped I/O.",
+    "normKey": "coa|compare isolated i o and memory mapped i o",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0366",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Write short notes on S 3 i. ROM li. RAM iii. DMA iv. Cache memory.",
+    "normKey": "coa|write short notes on s 3 i rom li ram iii dma iv cache memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0367",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain source-initiated asynchronous data transfer using handshaking method.",
+    "normKey": "coa|explain source initiated asynchronous data transfer using handshaking method",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0368",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Describe the structure of the magnetic disk with neat diagram.",
+    "normKey": "coa|describe the structure of the magnetic disk with neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0369",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "What is auxiliary memory? Explain the various memory components used as auxiliary memory 1n computer systems.",
+    "normKey": "coa|what is auxiliary memory explain the various memory components used as auxiliary memory 1n computer systems",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0370",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the following with respect to asynchronous data transfer. i) Strobe control 11) Handshaking iii) Asynchronous serial transfer.",
+    "normKey": "coa|explain the following with respect to asynchronous data transfer i strobe control 11 handshaking iii asynchronous serial transfer",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0371",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the Daisy Chaining priority with neat diagram.",
+    "normKey": "coa|explain the daisy chaining priority with neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0372",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain DMA Controller in detail with neat diagram?",
+    "normKey": "coa|explain dma controller in detail with neat diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0373",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Briefly explain various modes of data transfer in input output devices",
+    "normKey": "coa|briefly explain various modes of data transfer in input output devices",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0374",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the block diagram of a asynchronous communication interface and explain.",
+    "normKey": "coa|draw the block diagram of a asynchronous communication interface and explain",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0375",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "With neat sketches explain Associative memory.",
+    "normKey": "coa|with neat sketches explain associative memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0376",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate Daisy chain priority interrupt with diagram.",
+    "normKey": "coa|illustrate daisy chain priority interrupt with diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0377",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain different modes of data transfer in I/O systems.",
+    "normKey": "coa|explain different modes of data transfer in i o systems",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0378",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain cache memory organization and mapping techniques.",
+    "normKey": "coa|explain cache memory organization and mapping techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0379",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw and explain the working of a DMA controller.",
+    "normKey": "coa|draw and explain the working of a dma controller",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0380",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain priority interrupt and its control mechanism.",
+    "normKey": "coa|explain priority interrupt and its control mechanism",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0381",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "List and explain different types of cache memory mapping techniques.",
+    "normKey": "coa|list and explain different types of cache memory mapping techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-B4-0382",
+    "chapter": 4,
+    "marks": 5,
+    "part": "B",
+    "question": "Differentiate between RAM and ROM.",
+    "normKey": "coa|differentiate between ram and rom",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0383",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain the cache incoherence.",
+    "normKey": "coa|explain the cache incoherence",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0384",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain parallel processing.",
+    "normKey": "coa|explain parallel processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0385",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "List the characteristics of CISC architecture.",
+    "normKey": "coa|list the characteristics of cisc architecture",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0386",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "cache policy? 1.1) Compare RISC & CISC design philosophy?",
+    "normKey": "coa|cache policy 1 1 compare risc cisc design philosophy",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0387",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain the static Inter process arbitration process?",
+    "normKey": "coa|explain the static inter process arbitration process",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0388",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Differentiate between RISC and CISC architectures.",
+    "normKey": "coa|differentiate between risc and cisc architectures",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0389",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Illustrate the terms Multiprocessors and Multi Computers?",
+    "normKey": "coa|illustrate the terms multiprocessors and multi computers",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0390",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Distinguish between loosely coupled and tightly coupled multiprocessors.",
+    "normKey": "coa|distinguish between loosely coupled and tightly coupled multiprocessors",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0391",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "How a vector processor operation is different from conventional scalar processor?",
+    "normKey": "coa|how a vector processor operation is different from conventional scalar processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0392",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Differentiate tightly coupled and loosely coupled systems.",
+    "normKey": "coa|differentiate tightly coupled and loosely coupled systems",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0393",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain Pipelining.",
+    "normKey": "coa|explain pipelining",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0394",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "space? 1.1) Howdo branch instructions cause problems ina pipelined processor? 1.4) List out replacement algorithms.",
+    "normKey": "coa|space 1 1 howdo branch instructions cause problems ina pipelined processor 1 4 list out replacement algorithms",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0395",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "List out replacement algorithms.",
+    "normKey": "coa|list out replacement algorithms",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0396",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "What is vector processing, and how does it improve computational performance?",
+    "normKey": "coa|what is vector processing and how does it improve computational performance",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0397",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "List and explain the key characteristics of a multiprocessor system.",
+    "normKey": "coa|list and explain the key characteristics of a multiprocessor system",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0398",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain processors?",
+    "normKey": "coa|explain processors",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0399",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain array processors?",
+    "normKey": "coa|explain array processors",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0400",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "Write the classification of parallel processing.",
+    "normKey": "coa|write the classification of parallel processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0401",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare RISC and CISC?",
+    "normKey": "coa|compare risc and cisc",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0402",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Explain the principle characteristics of multiprocessors. List its advantages.",
+    "normKey": "coa|explain the principle characteristics of multiprocessors list its advantages",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0403",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Illustrate the classification of pipelining.",
+    "normKey": "coa|illustrate the classification of pipelining",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0404",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Write about pipelining and its importance in high speed applications.",
+    "normKey": "coa|write about pipelining and its importance in high speed applications",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0405",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "List out the general aspects of ROM, RAM and IO interfacing modules.",
+    "normKey": "coa|list out the general aspects of rom ram and io interfacing modules",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0406",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "Write the formula to calculate speedup of a pipelined processor over an equivalent non-pipeline processor.",
+    "normKey": "coa|write the formula to calculate speedup of a pipelined processor over an equivalent non pipeline processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0407",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "What is Microprocessor?",
+    "normKey": "coa|what is microprocessor",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0408",
+    "chapter": 5,
+    "marks": 1,
+    "part": "A",
+    "question": "Explain the advantages of pipelining.",
+    "normKey": "coa|explain the advantages of pipelining",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0409",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Draw 8x8 omega switching network.",
+    "normKey": "coa|draw 8x8 omega switching network",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0410",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "List the pipeline conflicts.",
+    "normKey": "coa|list the pipeline conflicts",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0411",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Mention any two characteristics of RISC processor.",
+    "normKey": "coa|mention any two characteristics of risc processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0412",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Compare RISC & CISC characteristics.",
+    "normKey": "coa|compare risc cisc characteristics",
+    "instances": 1
+  },
+  {
+    "id": "COA-A5-0413",
+    "chapter": 5,
+    "marks": 2,
+    "part": "A",
+    "question": "Discuss the difference between tightly coupled multiprocessor and loosely coupled multiprocessor.",
+    "normKey": "coa|discuss the difference between tightly coupled multiprocessor and loosely coupled multiprocessor",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0414",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the characteristics of multiprocessors.",
+    "normKey": "coa|explain the characteristics of multiprocessors",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0415",
+    "chapter": 5,
+    "marks": 10,
+    "part": "B",
+    "question": "Explain inter processor communication and synchronization in a shared multiprocessor environment.",
+    "normKey": "coa|explain inter processor communication and synchronization in a shared multiprocessor environment",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0416",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain Matrix multiplication in related with Vector Processing.",
+    "normKey": "coa|explain matrix multiplication in related with vector processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0417",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "List and explain various types of solutions for handling pipeline Hazards.",
+    "normKey": "coa|list and explain various types of solutions for handling pipeline hazards",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0418",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Design Time Shared common bus structure for multiprocessors with a neat sketch.",
+    "normKey": "coa|design time shared common bus structure for multiprocessors with a neat sketch",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0419",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Distinguish between tightly coupled microprocessors and tightly coupled Microprocessors.",
+    "normKey": "coa|distinguish between tightly coupled microprocessors and tightly coupled microprocessors",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0420",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain inter-process arbitration? Give various arbitration techniques with neat sketch and explain in detail.",
+    "normKey": "coa|explain inter process arbitration give various arbitration techniques with neat sketch and explain in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0421",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Write about Time shared common bus and multiport memory.",
+    "normKey": "coa|write about time shared common bus and multiport memory",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0422",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain four segment pipelines with neat sketch and show the pipeline flow of execution through space time diagram.",
+    "normKey": "coa|explain four segment pipelines with neat sketch and show the pipeline flow of execution through space time diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0423",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What are the various conflicts raised in the pipeline processing and give various solutions to handle conflicts.",
+    "normKey": "coa|what are the various conflicts raised in the pipeline processing and give various solutions to handle conflicts",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0424",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Distinguish between RISC and CISC processor.",
+    "normKey": "coa|distinguish between risc and cisc processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0425",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about the arithmetic pipeline.",
+    "normKey": "coa|explain about the arithmetic pipeline",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0426",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain vector processing.",
+    "normKey": "coa|explain vector processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0427",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Write a short note on I/O processor.",
+    "normKey": "coa|write a short note on i o processor",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0428",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about arithmetic pipeline with an example.",
+    "normKey": "coa|explain about arithmetic pipeline with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0429",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What is the Inter processor Synchronization? Explain the Synchronization techniques.",
+    "normKey": "coa|what is the inter processor synchronization explain the synchronization techniques",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0430",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain various interconnection structures of a multiprocessor system with neat diagrams.",
+    "normKey": "coa|explain various interconnection structures of a multiprocessor system with neat diagrams",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0431",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss the working and the importance of RISC architecture.",
+    "normKey": "coa|discuss the working and the importance of risc architecture",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0432",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Differentiate CISC and RISC Architectures.",
+    "normKey": "coa|differentiate cisc and risc architectures",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0433",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain Arithmetic pipeline with suitable diagram.",
+    "normKey": "coa|explain arithmetic pipeline with suitable diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0434",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain in-detail about vector processing and array processing.",
+    "normKey": "coa|explain in detail about vector processing and array processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0435",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate between Array processor and Vector Processor. State the advantages, disadvantages and applications of vector processors.",
+    "normKey": "coa|illustrate between array processor and vector processor state the advantages disadvantages and applications of vector processors",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0436",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare and contrast between parallel processing and pipeline processing with suitable examples.",
+    "normKey": "coa|compare and contrast between parallel processing and pipeline processing with suitable examples",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0437",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What is pipelining? Demonstrate the pipeline organization with an example.",
+    "normKey": "coa|what is pipelining demonstrate the pipeline organization with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0438",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Analyze the concurrent access to memory and cache coherency.",
+    "normKey": "coa|analyze the concurrent access to memory and cache coherency",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0439",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Differentiate CISC and RISC computer characteristics?",
+    "normKey": "coa|differentiate cisc and risc computer characteristics",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0440",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "List various parallel processing challenges. Draw the block diagram of 5 stage pipeline system.",
+    "normKey": "coa|list various parallel processing challenges draw the block diagram of 5 stage pipeline system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0441",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the implementation of Arithmetic and Instructional pipeline.",
+    "normKey": "coa|explain the implementation of arithmetic and instructional pipeline",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0442",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the Need of pipeline technique? Implement an Pipeline for floating point addition and subtraction.",
+    "normKey": "coa|explain the need of pipeline technique implement an pipeline for floating point addition and subtraction",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0443",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare and contrast between RISC and CISC architectures. computer",
+    "normKey": "coa|compare and contrast between risc and cisc architectures computer",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0444",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Define cache coherence and why is it important in shared Multiprocessor systems? Give any solution to the overcome problem?",
+    "normKey": "coa|define cache coherence and why is it important in shared multiprocessor systems give any solution to the overcome problem",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0445",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain vector instructions and how it will be helpful for performance point of view?",
+    "normKey": "coa|explain vector instructions and how it will be helpful for performance point of view",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0446",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain in detail about RISC instruction pipeline with data conflicts 5 2 4 problem?",
+    "normKey": "coa|explain in detail about risc instruction pipeline with data conflicts 5 2 4 problem",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0447",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss about the following interconnection structures: i. Time-shared common bus ii. Crossbar switch.",
+    "normKey": "coa|discuss about the following interconnection structures i time shared common bus ii crossbar switch",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0448",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about vector processiup,?",
+    "normKey": "coa|explain about vector processiup",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0449",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the instruction pipeline processing in RISC architecture.",
+    "normKey": "coa|explain the instruction pipeline processing in risc architecture",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0450",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Elucidate array processor in detail",
+    "normKey": "coa|elucidate array processor in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0451",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What are the various forms available for establishing an interconnection network in a multi-processor system?",
+    "normKey": "coa|what are the various forms available for establishing an interconnection network in a multi processor system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0452",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Does pipelining get affected by data dependencies among the}",
+    "normKey": "coa|does pipelining get affected by data dependencies among the",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0453",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain 8x8 omega switching network for multistage switching networks to control processor-memory communication in a tightly coupled multiprocessor system.",
+    "normKey": "coa|explain 8x8 omega switching network for multistage switching networks to control processor memory communication in a tightly coupled multiprocessor system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0454",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Draw the block diagram of Parallel Processing.",
+    "normKey": "coa|draw the block diagram of parallel processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0455",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain in brief the serial arbitration (daily-chain) procedure.",
+    "normKey": "coa|explain in brief the serial arbitration daily chain procedure",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0456",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the functionality of arithmetic pipeline with an example.",
+    "normKey": "coa|explain the functionality of arithmetic pipeline with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0457",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain four segment CPU pipeline and Timing of instruction pipeline.",
+    "normKey": "coa|explain four segment cpu pipeline and timing of instruction pipeline",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0458",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate serial and parallel arbitration produces in a shared multiprocessor environment.",
+    "normKey": "coa|illustrate serial and parallel arbitration produces in a shared multiprocessor environment",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0459",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain RISC instruction pipeline in detail?",
+    "normKey": "coa|explain risc instruction pipeline in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0460",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Discuss about the following Interconnection structures i. Multiport memory ii. Hypercube system.",
+    "normKey": "coa|discuss about the following interconnection structures i multiport memory ii hypercube system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0461",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about instruction pipeline in detail.",
+    "normKey": "coa|explain about instruction pipeline in detail",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0462",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "With a neat diagram, explain parallel arbitration circuit.",
+    "normKey": "coa|with a neat diagram explain parallel arbitration circuit",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0463",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What is meant by instruction pipeline? Explain four segment Instruction Pipeline. Give its timing diagram.",
+    "normKey": "coa|what is meant by instruction pipeline explain four segment instruction pipeline give its timing diagram",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0464",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "What are the different major conflicts arising in pipelined execution.",
+    "normKey": "coa|what are the different major conflicts arising in pipelined execution",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0465",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "In detail describe multiport memory, cross bar switch and switching networks used for interconnecting multiprocessors.",
+    "normKey": "coa|in detail describe multiport memory cross bar switch and switching networks used for interconnecting multiprocessors",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0466",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Define Parallel processing and what are the different types of parallel processing? How parallelism can be achieved in uni-processor system?",
+    "normKey": "coa|define parallel processing and what are the different types of parallel processing how parallelism can be achieved in uni processor system",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0467",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about parallel arbitration logic.",
+    "normKey": "coa|explain about parallel arbitration logic",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0468",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about memory interleaving concept in vector processing.",
+    "normKey": "coa|explain about memory interleaving concept in vector processing",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0469",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain about four segment CPU pipeline with the help of flow chart.",
+    "normKey": "coa|explain about four segment cpu pipeline with the help of flow chart",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0470",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Compare and contrast RISC and CISC architectures.",
+    "normKey": "coa|compare and contrast risc and cisc architectures",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0471",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain instruction pipeline and its advantages.",
+    "normKey": "coa|explain instruction pipeline and its advantages",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0472",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain characteristics of multiprocessor systems.",
+    "normKey": "coa|explain characteristics of multiprocessor systems",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0473",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain vector processing and array processors.",
+    "normKey": "coa|explain vector processing and array processors",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0474",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "With the diagram explain the crossbar switch interconnection structure for 8 CPUs and its memory module.",
+    "normKey": "coa|with the diagram explain the crossbar switch interconnection structure for 8 cpus and its memory module",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0475",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "With the neat diagram explain the concepts of pipelining with an example.",
+    "normKey": "coa|with the neat diagram explain the concepts of pipelining with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0476",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Illustrate multistage switching network with an example.",
+    "normKey": "coa|illustrate multistage switching network with an example",
+    "instances": 1
+  },
+  {
+    "id": "COA-B5-0477",
+    "chapter": 5,
+    "marks": 5,
+    "part": "B",
+    "question": "Explain the concept of cache coherence problem and its solution.",
+    "normKey": "coa|explain the concept of cache coherence problem and its solution",
+    "instances": 1
+  }
+]

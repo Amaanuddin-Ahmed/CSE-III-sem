@@ -11400,3 +11400,130 @@ body.notes-reader-open {
   background-color: #ef4444;
   box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
 }
+
+/* ==========================================================================
+   Smooth interaction polish (exam cards, notes cards, accordions)
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+.exam-card {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+  will-change: transform;
+}
+
+.exam-card:hover,
+.exam-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #c7d2fe;
+  box-shadow: 0 18px 40px -8px rgba(59, 130, 246, 0.22), 0 4px 14px -4px rgba(124, 58, 237, 0.16);
+}
+
+.exam-card:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+.exam-card:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+.exam-card-upcoming:hover,
+.exam-card-upcoming:focus-visible {
+  animation: none;
+  border-color: #c084fc;
+  box-shadow: 0 20px 44px -8px rgba(168, 85, 247, 0.32), 0 0 0 1.5px rgba(168, 85, 247, 0.5);
+}
+
+.exam-card-icon-wrap {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exam-card:hover .exam-card-icon-wrap,
+.exam-card:focus-visible .exam-card-icon-wrap {
+  transform: scale(1.07) rotate(-2deg);
+}
+
+.exam-card-footer i {
+  transition: transform 0.25s ease;
+}
+
+.exam-upcoming-badge {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exam-card-upcoming:hover .exam-upcoming-badge {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(244, 63, 94, 0.4);
+}
+
+@keyframes accordionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chapter-accordion-card {
+  will-change: transform, box-shadow;
+}
+
+.chapter-accordion-card.open > .chapter-accordion-body {
+  animation: accordionReveal 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.note-item-card {
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.note-item-card:hover,
+.note-item-card:focus-within {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 10px 24px -8px rgba(37, 99, 235, 0.22);
+  background-color: #fbfdff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .exam-card,
+  .exam-card-icon-wrap,
+  .exam-card-footer i,
+  .exam-upcoming-badge,
+  .note-item-card,
+  .chapter-accordion-card {
+    transition: none !important;
+  }
+
+  .exam-card:hover,
+  .exam-card:focus-visible,
+  .exam-card:active,
+  .note-item-card:hover,
+  .note-item-card:focus-within {
+    transform: none !important;
+  }
+
+  .chapter-accordion-card.open > .chapter-accordion-body {
+    animation: none !important;
+  }
+
+  .exam-card-upcoming {
+    animation: none !important;
+  }
+}

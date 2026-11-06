@@ -17,7 +17,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "pyqsUrl": "https://drive.google.com/drive/folders/1R2m69P_aU-IM6wEwIsbwGjKisdk5_xwY",
     "paperCount": 18,
-    "notesCount": 16,
+    "notesCount": 22,
     "chapters": {
       "1": "Mathematical Logic: Statements, Connectives, Truth Tables & Normal Forms (PDNF/PCNF)",
       "2": "Set Theory: Relations, Functions, Equivalence Relations & Partial Ordering",
@@ -41,7 +41,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "pyqsUrl": "https://drive.google.com/drive/folders/1r6_ozXzyg84zHCji99-cAujgoie1S7IS",
     "paperCount": 17,
-    "notesCount": 28,
+    "notesCount": 29,
     "chapters": {
       "1": "Boolean Algebra, Logic Gates, Data Representation & Digital Computers",
       "2": "Combinational & Sequential Logic Design",
@@ -89,7 +89,7 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "pyqsUrl": "https://drive.google.com/drive/folders/1z13uEkpnbrP3vcKzdHp1VXzekcYx1oCk",
     "paperCount": 14,
-    "notesCount": 5,
+    "notesCount": 11,
     "chapters": {
       "1": "Introduction to DBMS & ER Design",
       "2": "Relational Model, Relational Algebra & Relational Calculus",
@@ -1102,6 +1102,169 @@ const NOTES_DATA = [
     "driveFileId": "1ZrHoQ2ptMJenyZQNS3ccdTE7tWRooIwX",
     "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "description": "Official university lecture slides covering Write-Ahead Logging (WAL), Deferred vs Immediate DB Modification, Checkpoints, Shadow Paging, and the ARIES Recovery Algorithm."
+  }
+,
+  {
+    "id": "NOTE-DM-17",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: Trees, Traversals & Applications (Part 2)",
+    "fileName": "DM-Unit-5-Trees.pdf",
+    "fileSize": "5.5 MB",
+    "driveFileId": "1phjS-KcA4Z6KQWzIvx_Lnd4LGw71Sbr3",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 5 lecture deck (Sections 5.1-5.3): tree and forest definitions, rooted-tree terminology, m-ary and binary trees, tree properties and counting formulas, balanced trees, binary search trees, decision trees, prefix/Huffman codes, universal addresses, and preorder/inorder/postorder traversal with expression-tree notation."
+  },
+  {
+    "id": "NOTE-DM-18",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Permutations (Part B)",
+    "fileName": "DM-Unit-IV-Permutations-Part-B.pdf",
+    "fileSize": "2.1 MB",
+    "driveFileId": "1A2oRe5Wa04tc2UDbs8IE-co6dEa7yl5E",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 4 lecture deck on permutations: ordered selections, r-permutations with and without repetition, constrained repetitions, and the permutation-versus-combination decision rule, with worked examples such as MONDAY and MISSISSIPPI."
+  },
+  {
+    "id": "NOTE-DM-19",
+    "subjectId": "DM",
+    "chapter": 5,
+    "title": "DM Unit 5: Graph Fundamentals (Part 1)",
+    "fileName": "DM-Unit-V-Part-1.pdf",
+    "fileSize": "4.4 MB",
+    "driveFileId": "13hE1uIJYvi04gADBulBNVi3XfxaEuZok",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 5 Part 1 lecture deck: graph definitions and terminology, simple/multi/pseudo/directed graphs, vertex degree and the Handshaking Theorem, special graphs (Kn, Cn, Wn, Qn and bipartite graphs), adjacency/incidence representations, and graph isomorphism."
+  },
+  {
+    "id": "NOTE-DM-20",
+    "subjectId": "DM",
+    "chapter": 3,
+    "title": "DM Unit 3: Lattice & Boolean Algebra Slides",
+    "fileName": "Lattices.pdf",
+    "fileSize": "1.3 MB",
+    "driveFileId": "1hhaORwCQz1SVRkn2Sc7uBz7p617FEiiU",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Diagram-heavy Unit 3 slide deck on lattices: partially ordered sets, GLB/LUB, lattice properties, sublattices, distributive and complemented lattices, and Boolean algebra. The PDF has very little selectable text, so use the Drive slides for the worked Hasse diagrams."
+  },
+  {
+    "id": "NOTE-DM-21",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Combinations (Part C)",
+    "fileName": "Unit-IV-Combinations-Part-C.pdf",
+    "fileSize": "1.5 MB",
+    "driveFileId": "1e8qaSMXNI-PmDctvTTq4UizTTY5pKrvF",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 4 lecture deck on combinations: r-combinations with and without repetition, C(n,r) identities, stars-and-bars counting, integer solutions, distributions into boxes, and ordered partitions with constrained repetitions."
+  },
+  {
+    "id": "NOTE-COA-29",
+    "subjectId": "COA",
+    "chapter": 3,
+    "chapters": [
+      3,
+      4,
+      5
+    ],
+    "title": "COA Units 3-5: Complete Exam Preparation Guide",
+    "fileName": "COA.pdf",
+    "fileSize": "76 KB",
+    "driveFileId": "1z9wvjYZ7HHfijUjz_8_yfGwLywmEawC9",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Student-compiled exam preparation guide for COA Units 3-5, with definitions, RTL and addressing-mode tables, microprogrammed control, CPU arithmetic, I/O and DMA, the memory hierarchy and cache, high-yield questions, MCQs and fill-in-the-blanks. Use it for revision; the original faculty slides remain the primary source."
+  },
+  {
+    "id": "NOTE-DBMS-06",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: One-Page Transaction Management Revision Map",
+    "fileName": "DBMS summary.pdf",
+    "fileSize": "33 KB",
+    "driveFileId": "1AWEyHKxNS7j3YhMXBF75Sv4KtOAhovyp",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "One-page revision map for DBMS Unit 4 covering transactions and operations, ACID properties, transaction states, concurrency anomalies, serializability, locking/2PL, deadlock handling and log-based recovery. Best used as a final-day checklist."
+  },
+  {
+    "id": "NOTE-DBMS-07",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: Detailed Transaction Management Notes",
+    "fileName": "DBMS-UNIT-4.pdf",
+    "fileSize": "984 KB",
+    "driveFileId": "1IrBJfA_YECjZGHhfI7id6ngAYyIdG48s",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Detailed 61-page Unit 4 notes covering transaction concepts and states, atomicity/durability implementation, schedules and conflict/view serializability, recoverability, lock-based and timestamp/validation protocols, multiple granularity, deadlocks, and log-based recovery with checkpoints."
+  },
+  {
+    "id": "NOTE-DBMS-08",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: Concise Revision Notes",
+    "fileName": "DBMS-Unit4.pdf",
+    "fileSize": "509 KB",
+    "driveFileId": "1F6TETGwa-9gUhAGYjEXULQGU0M0LihC6",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Concise 12-page Unit 4 revision notes covering transaction states, ACID, isolation levels, lock granularity and 2PL variants, timestamp ordering and Thomas' write rule, deadlock prevention/detection, and undo/redo recovery with checkpoints."
+  },
+  {
+    "id": "NOTE-DM-22",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Unit 4: Basics of Counting (Part A Alternate)",
+    "fileName": "Elementary combinatorics-Unit-IV-Basics of Counting-Part-A.pdf",
+    "fileSize": "2.2 MB",
+    "driveFileId": "1Td2zWkBVV6cQDcyPtzB9e9aJKlU-C442",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Unit 4 lecture deck focusing on the sum rule, product rule, subtraction rule (inclusion-exclusion principle), division rule, and Pigeonhole Principle with worked combinatorial examples."
+  },
+  {
+    "id": "NOTE-DBMS-09",
+    "subjectId": "DBMS",
+    "chapter": 5,
+    "title": "DBMS Unit 5: Hashing, Indexing & B+ Trees (Lecture Slides)",
+    "fileName": "Unit 5 Hashing,B+ Tress.ppt",
+    "fileSize": "3.8 MB",
+    "driveFileId": "1FOJmovEWb5u_9QViyMkkmrJh9rp2LIbZ",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "University lecture presentation on file organization, static vs extendible hashing, linear hashing, primary and secondary indexes, dense vs sparse indexes, and B+ tree search, insert, and delete operations."
+  },
+  {
+    "id": "NOTE-DBMS-10",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "chapters": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "title": "DBMS Comprehensive Unit-wise Question Bank (Units 1–5)",
+    "fileName": "DBMS_Important_QuestionBank.docx",
+    "fileSize": "240 KB",
+    "driveFileId": "1g-nBIf98gWHRdRKDaZSPEYoLYyx3QDof",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Official department question bank with high-yield exam questions, conceptual derivations, ER modeling problems, normalization exercises, and transaction schedules."
+  },
+  {
+    "id": "NOTE-DBMS-11",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "chapters": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "title": "DBMS Objective Question Bank: MCQs & Fill-in-the-Blanks",
+    "fileName": "MCQS and Blanks.docx",
+    "fileSize": "180 KB",
+    "driveFileId": "1_ZsydtyJ0rptHOv8v4yuuHZx6kd_pmbu",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Curated bank of multiple-choice questions, fill-in-the-blanks, and terminology definitions designed for rapid mid-term and semester-end objective tests."
   }
 ];
 
