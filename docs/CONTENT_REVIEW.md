@@ -29,9 +29,9 @@ Counts below are from the shipped data, filtered with `isItemInScope` and
 | OOPJ | 334 | 269 | 603 | 10 | 15 | 19 |
 | DBMS | 160 | 203 | 363 | 1 | 11 | 11 |
 | SE | 196 | 183 | 379 | 3 | 3 | 5 |
-| ES | 24 | 0 | 24 | 3 | 3 | 5 |
+| ES | 35 | 18 | 77 | 3 | 3 | 5 |
 | IE | 0 | 0 | 0 | 0 | 1 | 1 |
-| **Total** | **1,114** | **1,201** | **2,317** | **42** | **68** | **88** |
+| **Total** | **1,125** | **1,219** | **2,370** | **42** | **68** | **88** |
 
 Note totals count a multi-unit resource once per exam it appears in, so the columns are
 not additive; the shipped library currently holds **92 unique notes**.
@@ -41,8 +41,7 @@ Known gaps:
 - **IE** has no PYQ rows. It has one verified note, `Unit 5.docx`, scoped to Mid-2 and
   Semester End. Its subject screen must keep showing the honest empty states for Units
   1–4 and for PYQs; practice content is still the main IE material.
-- **ES** has 24 PYQs, all in Units 1–2. Its five notes cover Units 1–5, but there are no
-  additional genuine ES PYQs to add.
+- **ES** has 77 verified PYQs across Units 1–5 (23 in U1, 22 in U2, 11 in U3, 11 in U4, 10 in U5) with 100% verified model solutions in data/solutions/ES.json.
 - **Note coverage is now complete at the subject level:** DM 21, COA 29, OOPJ 19, DBMS 8,
   SE 5, ES 5, IE 1. Remaining work is verification of labels, not missing folders.
 - **ES notes** are tagged Units 1–5, but the older data labels describe ecosystems,
@@ -67,7 +66,7 @@ The table shows how the 438 Unit 3-tagged questions split.
 | OOPJ | 100 | 45 | 55 | 0 |
 | DBMS | 74 | 14 | 60 | 0 |
 | SE | 75 | 46 | 29 | 0 |
-| ES | 0 | 0 | 0 | 0 |
+| ES | 11 | 0 | 11 | 0 |
 | IE | 0 | 0 | 0 | 0 |
 | **Total** | **438** | **126** | **300** | **12** |
 

@@ -366234,6 +366234,1871 @@ const QUESTIONS_DATABASE = [
     "scope": "sem",
     "conceptId": "U5_EVENT_HANDLING_ADAPTERS",
     "conceptTitle": "Mouse & Keyboard Event Handling using Event Listeners and Adapter Classes"
+  },
+  {
+    "id": "ES-A1-001",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.a",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Define the term ecological pyramid.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.a",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A1-002",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "What are the characteristics of energy flow in the ecosystem?",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-003",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.c",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Minerals play a very important role in our life - Justify your answer.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.c",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A2-004",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.d",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "'Ground water is under serious threat of overuse in many parts of the country' - Why?",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.d",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-005",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.e",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Differentiate between genetic and species diversity.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.e",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A3-006",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.f",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Mention two examples of ex-situ conservation of biodiversity.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.f",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-007",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.g",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Define the concept of bioremediation.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.g",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A4-008",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.h",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "What is ODS (Ozone Depleting Substance)? Give example.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.h",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-009",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.i",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "What is green chemistry principle?",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.i",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-A5-010",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "A",
+    "marks": 1,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q1.j",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "Explain how the concept of green building can lead us towards sustainability.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "1.j",
+        "marks": 1,
+        "part": "A"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-011",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Enumerate about the structures of ecosystem with suitable examples.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "2.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-012",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Explain Biomagnification with a suitable case study.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "2.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-013",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.c",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Evaluate with proper diagram how bacteria play a very important role in nitrogen cycle and decomposition.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "2.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-014",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q2.d",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Discuss the various ecological services obtained from ecosystem.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "2.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-015",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Summarize the cause, effect and socio-economic impacts of drought.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "3.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-016",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Define dam with example. Give a detail account of various problems associated with the construction of dams.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "3.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-017",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.c",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Explain how solar energy can solve global energy requirement utilizing modern solar harvesting devices.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "3.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-018",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q3.d",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "List out the causes and major consequences of deforestation.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 1,
+        "qno": "3.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-019",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Write a note on different values of biodiversity.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "4.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-020",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Discuss about the major threats to biodiversity caused by human activities? Find out its solution.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "4.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-021",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.c",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Define biodiversity. Give example. Enlist the importance of biodiversity in human life.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "4.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-022",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q4.d",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Give a detail account of in-situ conservation of biodiversity.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "4.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-023",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.a",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Analyse how modern agricultural practice is affecting the environment of our country.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "5.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-024",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Explain different types of air pollutants with suitable examples.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "5.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-025",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.c",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Mention the salient features of earth summit. Discuss the theme of Montreal protocol.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "5.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-026",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q5.d",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Enumerate various steps involved to remove contaminants from municipal waste water.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "5.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-027",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "What do you understand by sustainable development? Explain how a true sustainability can be achieved.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "6.a",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-028",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "Give a brief account of Environment (Protection) Act, 1986.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "6.b",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-029",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.c",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "Discuss the effects of environment on human health.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "6.c",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-030",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024
+    ],
+    "frequency": 1,
+    "questionNumber": "Q6.d",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "What is EIA? Why should we have EIA for any development project? Draw a flow chart of EIA methodology.",
+    "paperName": "ES-model question paper for end exam.pdf",
+    "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Sem",
+    "appearances": [
+      {
+        "year": 2024,
+        "month": 1,
+        "session": "Semester End Examination",
+        "examType": "Sem",
+        "semester": "I",
+        "label": "Semester End Examination",
+        "paperName": "ES-model question paper for end exam.pdf",
+        "driveFileId": "1kd6Gl4qewEPM1nlDkxoeTvaRSPAy3lNF",
+        "page": 2,
+        "qno": "6.d",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-031",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Enumerate the reason for recognizing hot spots of biodiversity in India. Name four hot spots of biodiversity and briefly describe along with major animals conserved.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U3.Q1",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-032",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Elucidate about the effects of modern agriculture on the soil and environment.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U3.Q2",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-033",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Identify and explain the present-day major threats to biodiversity of India. Evaluate the efforts taken towards the ex-situ conservation of biodiversity in India. List out the differences between a national park, biosphere reserve and wildlife sanctuaries.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U3.Q3",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-034",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Illustrate the objectives of Air (Prevention and Control of Pollution) Act and Water (Prevention and Control of Pollution) Act.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U4.Q1",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-035",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Write a short note on: a) Low carbon life style b) The concept of green building.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U4.Q2",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-036",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Illustrate the steps involved in the treatment of wastewater with a flow diagram.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U4.Q3",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-037",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "Distinguish between Primary and Secondary air pollutants with suitable examples.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U4.Q4",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B4-038",
+    "subjectId": "ES",
+    "chapter": 4,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5",
+    "topicTag": "Unit 4: Environmental Pollution",
+    "question": "What is Ozone depletion? Mention the causes and effects of ozone depletion. List out Ozone depleting substances (ODS).",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U4.Q5",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-039",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "Evaluate Kyoto Protocol and Montreal Protocol agreements with their differences, similarities and efforts to protect against climate change.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U5.Q1",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-040",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "What is EIA? Mention benefits and structure of EIA.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U5.Q2",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-041",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "What is sustainable development? Mention the threats involved against sustainable development. How to achieve sustainable development?",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U5.Q3",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B5-042",
+    "subjectId": "ES",
+    "chapter": 5,
+    "part": "B",
+    "marks": 5,
+    "years": [
+      2024,
+      2026
+    ],
+    "frequency": 2,
+    "questionNumber": "Q4",
+    "topicTag": "Unit 5: Policy & Sustainability",
+    "question": "Evaluate the role of 12 green chemistry principles to prevent environmental pollution.",
+    "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+    "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+    "pageNumber": 1,
+    "semester": "III",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2026,
+        "month": 10,
+        "session": "October 2026 Assignment II",
+        "examType": "Mid",
+        "semester": "III",
+        "label": "October 2026 Assignment II",
+        "paperName": "ASSIGNMENTS-2 - ES-CSE-1.pdf",
+        "driveFileId": "1vfNsng54TZErtdNsjerc5GU09iRvVG1u",
+        "page": 1,
+        "qno": "U5.Q4",
+        "marks": 5,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-043",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 2,
+    "questionNumber": "Q1.b",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Explain the impacts of over-utilization of groundwater.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 1,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 1,
+        "qno": "1.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-044",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q2.a",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Why is the pyramid of energy always upright?",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 2,
+        "qno": "2.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-045",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 2,
+    "questionNumber": "Q2.b",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Briefly explain solar energy and its applications.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 2,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 2,
+        "qno": "2.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-046",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q3.a",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "How does nitrogen (N2) cycle maintain proper functioning of the ecosystem?",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 3,
+        "qno": "3.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-047",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 2,
+    "questionNumber": "Q3.b",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Explain desertification and its causes.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 3,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 3,
+        "qno": "3.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-048",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q4.a",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "Summarize the major environmental effects of over-exploitation of minerals.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 4,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 4,
+        "qno": "4.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-049",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023,
+      2024
+    ],
+    "frequency": 3,
+    "questionNumber": "Q4.b",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Differentiate biomagnification and bioaccumulation.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 5,
+        "qno": "4.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-050",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023,
+      2024
+    ],
+    "frequency": 3,
+    "questionNumber": "Q5.a",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Define biodiversity. Give various levels of biodiversity.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 5,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 5,
+        "qno": "5.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B1-051",
+    "subjectId": "ES",
+    "chapter": 1,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 2,
+    "questionNumber": "Q5.b",
+    "topicTag": "Unit 1: Ecosystems",
+    "question": "Why is food web more important ecologically than the concept of simple food chain?",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 6,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 6,
+        "qno": "5.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B3-052",
+    "subjectId": "ES",
+    "chapter": 3,
+    "part": "B",
+    "marks": 3,
+    "years": [
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q6.a",
+    "topicTag": "Unit 3: Biodiversity",
+    "question": "Discuss the consumptive, productive and social values of biodiversity.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 7,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 7,
+        "qno": "6.a",
+        "marks": 3,
+        "part": "B"
+      }
+    ]
+  },
+  {
+    "id": "ES-B2-053",
+    "subjectId": "ES",
+    "chapter": 2,
+    "part": "B",
+    "marks": 2,
+    "years": [
+      2023
+    ],
+    "frequency": 3,
+    "questionNumber": "Q6.b",
+    "topicTag": "Unit 2: Natural Resources",
+    "question": "List out renewable energy resources and their significance.",
+    "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+    "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+    "pageNumber": 8,
+    "semester": "I",
+    "examType": "Mid",
+    "appearances": [
+      {
+        "year": 2023,
+        "month": 1,
+        "session": "January 2023 Internal Examination 1",
+        "examType": "Mid",
+        "semester": "I",
+        "label": "Internal Examination 1",
+        "paperName": "MR-22 IE-1-ES-PART-B - Descriptive Q.P -ES-Answer key.pdf",
+        "driveFileId": "1yAnL_pxm6oSGEJW6dEDMHyJ-SmAphnna",
+        "page": 8,
+        "qno": "6.b",
+        "marks": 2,
+        "part": "B"
+      }
+    ]
   }
 ];
 
