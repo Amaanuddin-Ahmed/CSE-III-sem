@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-ai-notes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-hierarchical-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1285,6 +1285,62 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     });
   }
 
+  
+  function toggleTejaMain() {
+    state.tejaMainOpen = !state.tejaMainOpen;
+    const wrapper = document.getElementById('tejaAiNotesWrapper');
+    if (!wrapper) return;
+    const container = document.getElementById('tejaChaptersContainer');
+    const mainRow = document.getElementById('tejaMainRow');
+
+    if (state.tejaMainOpen) {
+      wrapper.classList.add('open');
+      if (container) container.style.display = 'block';
+      if (mainRow) mainRow.setAttribute('aria-expanded', 'true');
+    } else {
+      wrapper.classList.remove('open');
+      if (container) container.style.display = 'none';
+      if (mainRow) mainRow.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function closeTejaMain() {
+    state.tejaMainOpen = false;
+    const wrapper = document.getElementById('tejaAiNotesWrapper');
+    if (!wrapper) return;
+    const container = document.getElementById('tejaChaptersContainer');
+    const mainRow = document.getElementById('tejaMainRow');
+
+    wrapper.classList.remove('open');
+    if (container) container.style.display = 'none';
+    if (mainRow) mainRow.setAttribute('aria-expanded', 'false');
+
+    if (mainRow) {
+      mainRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  function toggleTejaChapter(uKey) {
+    if (!state.tejaOpenChapters) state.tejaOpenChapters = {};
+    state.tejaOpenChapters[uKey] = !state.tejaOpenChapters[uKey];
+
+    const item = document.getElementById(`tejaChapterItem-${uKey}`);
+    if (!item) return;
+    const body = document.getElementById(`tejaChapterBody-${uKey}`);
+    const row = item.querySelector('.teja-chapter-row');
+    const isOpen = state.tejaOpenChapters[uKey];
+
+    if (isOpen) {
+      item.classList.add('open');
+      if (body) body.style.display = 'block';
+      if (row) row.setAttribute('aria-expanded', 'true');
+    } else {
+      item.classList.remove('open');
+      if (body) body.style.display = 'none';
+      if (row) row.setAttribute('aria-expanded', 'false');
+    }
+  }
+
   function toggleNotesUnitAccordion(unitKey) {
     if (!state.expandedNotesUnits) state.expandedNotesUnits = {};
     state.expandedNotesUnits[unitKey] = !state.expandedNotesUnits[unitKey];
@@ -1450,58 +1506,182 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
     });
 
-    // Render "AI notes (by teja)" Accordion Card (Teja AI Notes)
+    // Render "AI Notes by Teja" Hierarchical Dropdown Component
     const tejaNotes = NOTES_DATA.filter(n => n.subjectId === subId && n.isTejaAiNotes);
     if (tejaNotes.length > 0) {
-      const isExpanded = Boolean(state.expandedNotesUnits['teja']);
-      const tejaCard = document.createElement('div');
-      tejaCard.className = 'notes-unit-accordion-card chapter-accordion-card teja-ai-accordion-card' + (isExpanded ? ' open' : '');
-      tejaCard.id = 'notesUnitAccordion-teja';
+      if (!state.tejaOpenChapters) state.tejaOpenChapters = {};
+      const isMainOpen = Boolean(state.tejaMainOpen);
+      const subChapters = (sub && sub.chapters) || {};
+
+      const tejaWrapper = document.createElement('div');
+      tejaWrapper.className = 'teja-ai-wrapper' + (isMainOpen ? ' open' : '');
+      tejaWrapper.id = 'tejaAiNotesWrapper';
 
       const folderUrl = subId === 'COA'
         ? 'https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR'
         : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-';
 
-      tejaCard.innerHTML = `
-        <div class="chapter-accordion-header teja-accordion-header" role="button" tabindex="0" data-notes-unit="teja" aria-expanded="${isExpanded}">
-          <div class="ch-header-left">
-            <span class="ch-badge teja-badge">
-              <i class="fa-solid fa-wand-magic-sparkles"></i> AI Notes
-            </span>
-            <span class="notes-unit-title">AI notes (by teja)</span>
+      tejaWrapper.innerHTML = `
+        <div class="teja-main-row" id="tejaMainRow" role="button" tabindex="0" aria-expanded="${isMainOpen}">
+          <div class="teja-main-left">
+            <span class="teja-title-text">AI Notes</span>
+            <span class="teja-author-text">by Teja</span>
           </div>
-          <div class="ch-header-right">
-            <span class="ch-count-badge teja-count-badge">${tejaNotes.length} Note${tejaNotes.length === 1 ? '' : 's'}</span>
-            <i class="fa-solid fa-chevron-down ch-chevron"></i>
+          <div class="teja-main-right">
+            <i class="fa-solid fa-chevron-down teja-main-chevron"></i>
           </div>
         </div>
-        <div class="chapter-accordion-body teja-accordion-body" style="display: ${isExpanded ? 'block' : 'none'};">
+
+        <div class="teja-chapters-container" id="tejaChaptersContainer" style="display: ${isMainOpen ? 'block' : 'none'};">
           <div class="teja-folder-bar">
             <a href="${folderUrl}" target="_blank" rel="noopener noreferrer" class="teja-drive-folder-link">
               <i class="fa-brands fa-google-drive"></i>
-              <span>Open ${escapeHtml(subId)} AI Notes Google Drive Folder</span>
+              <span>Open ${escapeHtml(subId)} Google Drive Folder</span>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
-          <div class="notes-unit-list" id="notesUnitList-teja"></div>
+
+          <div class="teja-chapter-rows-list" id="tejaChapterRowsList"></div>
+
+          <div class="teja-collapse-bar">
+            <button type="button" class="teja-collapse-btn" id="tejaCollapseAllBtn" title="Collapse AI Notes">
+              <i class="fa-solid fa-chevron-up"></i>
+              <span>Collapse AI Notes</span>
+            </button>
+          </div>
         </div>
       `;
 
-      const listContainer = tejaCard.querySelector('#notesUnitList-teja');
-      tejaNotes.forEach(note => {
-        listContainer.appendChild(createNoteItemCard(note));
-      });
+      const rowsList = tejaWrapper.querySelector('#tejaChapterRowsList');
 
-      const headerEl = tejaCard.querySelector('.chapter-accordion-header');
-      headerEl.addEventListener('click', () => toggleNotesUnitAccordion('teja'));
-      headerEl.addEventListener('keydown', (e) => {
+      // Build 5 Unit rows
+      for (let u = 1; u <= 5; u++) {
+        const uTitle = subChapters[u] || `Unit ${u}`;
+
+        // Find normal note and question bank for this unit
+        let uNormalNote = tejaNotes.find(n => {
+          const ch = Number(n.chapter);
+          return ch === u && !n.id.includes('QB') && !n.id.includes('CRASH');
+        });
+        let uQbNote = tejaNotes.find(n => {
+          const ch = Number(n.chapter);
+          return ch === u && (n.id.includes('QB') || (n.fileName || '').toLowerCase().includes('question bank'));
+        });
+
+        // Fallback for COA: assign comprehensive Question Bank if no unit-specific QB
+        if (!uQbNote && subId === 'COA') {
+          uQbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
+        }
+
+        const unitNotesList = [uNormalNote, uQbNote].filter(Boolean);
+        const isChapterOpen = Boolean(state.tejaOpenChapters[u]);
+
+        const chapterItem = document.createElement('div');
+        chapterItem.className = 'teja-chapter-item' + (isChapterOpen ? ' open' : '');
+        chapterItem.id = `tejaChapterItem-${u}`;
+
+        chapterItem.innerHTML = `
+          <div class="teja-chapter-row" role="button" tabindex="0" data-chapter="${u}" aria-expanded="${isChapterOpen}">
+            <div class="teja-chapter-left">
+              <span class="teja-chapter-num">Unit ${u}</span>
+              <span class="teja-chapter-name">${escapeHtml(uTitle)}</span>
+            </div>
+            <div class="teja-chapter-right">
+              <span class="teja-chapter-count">${unitNotesList.length} Notes</span>
+              <i class="fa-solid fa-chevron-down teja-chapter-chevron"></i>
+            </div>
+          </div>
+          <div class="teja-chapter-notes-body" id="tejaChapterBody-${u}" style="display: ${isChapterOpen ? 'block' : 'none'};"></div>
+        `;
+
+        const bodyEl = chapterItem.querySelector(`#tejaChapterBody-${u}`);
+        unitNotesList.forEach(note => {
+          bodyEl.appendChild(createNoteItemCard(note));
+        });
+
+        // Toggle individual chapter dropdown
+        const rowEl = chapterItem.querySelector('.teja-chapter-row');
+        rowEl.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleTejaChapter(u);
+        });
+        rowEl.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleTejaChapter(u);
+          }
+        });
+
+        rowsList.appendChild(chapterItem);
+      }
+
+      // If COA has Crash Pack, add Semester End row
+      if (subId === 'COA') {
+        const crashNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-CRASH');
+        const qbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
+        if (crashNote) {
+          const isCrashOpen = Boolean(state.tejaOpenChapters['sem']);
+          const semItem = document.createElement('div');
+          semItem.className = 'teja-chapter-item' + (isCrashOpen ? ' open' : '');
+          semItem.id = 'tejaChapterItem-sem';
+
+          semItem.innerHTML = `
+            <div class="teja-chapter-row" role="button" tabindex="0" data-chapter="sem" aria-expanded="${isCrashOpen}">
+              <div class="teja-chapter-left">
+                <span class="teja-chapter-num" style="background: #fdf2f8; color: #db2777;">All Units</span>
+                <span class="teja-chapter-name">Semester Crash Pack &amp; Question Bank</span>
+              </div>
+              <div class="teja-chapter-right">
+                <span class="teja-chapter-count">2 Notes</span>
+                <i class="fa-solid fa-chevron-down teja-chapter-chevron"></i>
+              </div>
+            </div>
+            <div class="teja-chapter-notes-body" id="tejaChapterBody-sem" style="display: ${isCrashOpen ? 'block' : 'none'};"></div>
+          `;
+
+          const semBody = semItem.querySelector('#tejaChapterBody-sem');
+          [crashNote, qbNote].filter(Boolean).forEach(note => {
+            semBody.appendChild(createNoteItemCard(note));
+          });
+
+          const semRowEl = semItem.querySelector('.teja-chapter-row');
+          semRowEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleTejaChapter('sem');
+          });
+          semRowEl.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleTejaChapter('sem');
+            }
+          });
+
+          rowsList.appendChild(semItem);
+        }
+      }
+
+      // Main row click handler
+      const mainRowEl = tejaWrapper.querySelector('#tejaMainRow');
+      mainRowEl.addEventListener('click', () => toggleTejaMain());
+      mainRowEl.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          toggleNotesUnitAccordion('teja');
+          toggleTejaMain();
         }
       });
 
-      el.notesListContainer.appendChild(tejaCard);
+      // Collapse button handler
+      const collapseBtn = tejaWrapper.querySelector('#tejaCollapseAllBtn');
+      if (collapseBtn) {
+        collapseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeTejaMain();
+        });
+      }
+
+      el.notesListContainer.appendChild(tejaWrapper);
     }
 
     const activeUnits = false
