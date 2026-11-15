@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-hierarchical-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-ocr-fixes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1328,11 +1328,11 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     if (!item) return;
     const body = document.getElementById(`tejaChapterBody-${uKey}`);
     const row = item.querySelector('.teja-chapter-row');
-    const isOpen = state.tejaOpenChapters[uKey];
+    const isOpen = Boolean(state.tejaOpenChapters[uKey]);
 
     if (isOpen) {
       item.classList.add('open');
-      if (body) body.style.display = 'block';
+      if (body) body.style.display = 'flex';
       if (row) row.setAttribute('aria-expanded', 'true');
     } else {
       item.classList.remove('open');
@@ -1399,7 +1399,6 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     item.innerHTML = `
       <div class="note-info">
         <div class="note-title">${escapeHtml(note.title)}</div>
-        <div class="note-desc">${escapeHtml(note.description || '')}</div>
         <div class="note-meta">
           <span><i class="${iconClass}" style="color: ${iconColor};"></i> ${escapeHtml(note.fileName)}</span> &bull; 
           <span>${escapeHtml(note.fileSize)}</span> &bull; 
@@ -1591,7 +1590,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
               <i class="fa-solid fa-chevron-down teja-chapter-chevron"></i>
             </div>
           </div>
-          <div class="teja-chapter-notes-body" id="tejaChapterBody-${u}" style="display: ${isChapterOpen ? 'block' : 'none'};"></div>
+          <div class="teja-chapter-notes-body" id="tejaChapterBody-${u}" style="display: ${isChapterOpen ? 'flex' : 'none'};"></div>
         `;
 
         const bodyEl = chapterItem.querySelector(`#tejaChapterBody-${u}`);
@@ -1637,7 +1636,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
                 <i class="fa-solid fa-chevron-down teja-chapter-chevron"></i>
               </div>
             </div>
-            <div class="teja-chapter-notes-body" id="tejaChapterBody-sem" style="display: ${isCrashOpen ? 'block' : 'none'};"></div>
+            <div class="teja-chapter-notes-body" id="tejaChapterBody-sem" style="display: ${isCrashOpen ? 'flex' : 'none'};"></div>
           `;
 
           const semBody = semItem.querySelector('#tejaChapterBody-sem');

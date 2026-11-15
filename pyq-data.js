@@ -1359,7 +1359,7 @@ const NOTES_DATA = [
     "driveFileId": "169KY1-9IjRSiTMyJWANinmTnxlthGgeP",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Digital logic fundamentals, Boolean algebra laws and theorems, simplification of Boolean functions, logic gates and truth tables, number representation systems (fixed-point, floating-point, sign-magnitude, 1's and 2's complements), binary codes, error detection and correction codes (Hamming code), and block diagram of digital computers."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-U2",
@@ -1371,7 +1371,7 @@ const NOTES_DATA = [
     "driveFileId": "1UtfCcH10x-WzyCMJzWwfiwMdJ6zXQQOq",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Combinational circuit design (half/full adders, half/full subtractors, carry lookahead adder, code converters, decoders, encoders, multiplexers, demultiplexers), sequential circuits (latches, flip-flops: SR, JK, D, T, master-slave flip-flops, race-around condition), excitation tables, shift registers, and synchronous & asynchronous binary counters."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-U3",
@@ -1383,7 +1383,7 @@ const NOTES_DATA = [
     "driveFileId": "132cGG9YWN_lVflXIcmzTG8pC0Qs_C96z",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Register Transfer Language (RTL), common bus system with multiplexers and three-state bus buffers, memory transfers, arithmetic, logic, and shift micro-operations, basic computer instructions and instruction formats, timing and control unit, instruction cycle execution phases (fetch, decode, execute), memory-reference instructions, I/O and interrupt cycles."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-U4",
@@ -1395,7 +1395,7 @@ const NOTES_DATA = [
     "driveFileId": "1DA1PcdK4g9IX-CDmeGKRUntCHfBHgnWV",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Microprogrammed control memory, address sequencing, design of control unit, general register CPU organization, stack organization, instruction formats (three, two, one, zero-address), addressing modes with examples, RISC vs CISC architecture comparison, and computer arithmetic: Booth's signed 2's complement multiplication, array multiplier, restoring & non-restoring division, floating-point arithmetic operations."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-U5",
@@ -1407,7 +1407,7 @@ const NOTES_DATA = [
     "driveFileId": "1c7VLXcxmbpb8dv1hMhIVUJfm54fLPdlk",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Peripheral devices, I/O interface, asynchronous data transfer (strobe and handshaking), modes of transfer (programmed I/O, interrupt-driven I/O, DMA transfer), Direct Memory Access controller (DMAC), priority interrupts (daisy-chaining, parallel priority), memory hierarchy, main memory (RAM, ROM), associative memory, cache memory mapping techniques (direct, associative, set-associative, cache replacement policies, write policies), and virtual memory with paging and translation lookaside buffer (TLB)."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-CRASH",
@@ -1420,7 +1420,7 @@ const NOTES_DATA = [
     "driveFileId": "1zCjRZ_srKuwEs3xj7lztDRCh7FpSHcUH",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Fast-track semester-end revision crash pack covering all high-yield exam derivations, architecture diagrams, algorithms (Booth's, Carry Lookahead Adder, DMA, Cache mapping), and model exam solutions across Units 1–5."
+    "description": ""
   },
   {
     "id": "NOTE-COA-TEJA-QB",
@@ -1433,7 +1433,7 @@ const NOTES_DATA = [
     "driveFileId": "1cwwUreIjH9CA4nCoZ0M8SpI0Fhdoausm",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
-    "description": "Semester-end comprehensive university exam question bank with unit-wise short and essay questions, expected numericals, and model marks distribution across all 5 units."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-U1",
@@ -1445,7 +1445,7 @@ const NOTES_DATA = [
     "driveFileId": "1xGXe2MyW2_Thyn140t3y55f74yMT8rem",
     "folderUrl": "https://drive.google.com/drive/folders/12NiMXtf_5yoIGBwOTwe8fXvUVxXHMByi",
     "isTejaAiNotes": true,
-    "description": "Propositional logic, logical connectives, truth tables, tautologies, contradictions, contingency, logical equivalences, Principal Conjunctive & Disjunctive Normal Forms (PCNF, PDNF), predicate calculus, quantifiers (universal and existential), free and bound variables, rules of inference, and valid argument derivations."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-U2",
@@ -1457,7 +1457,7 @@ const NOTES_DATA = [
     "driveFileId": "1tWudthtd8MBf3umi5h4UvhNkYHBa2vu6",
     "folderUrl": "https://drive.google.com/drive/folders/12NiMXtf_5yoIGBwOTwe8fXvUVxXHMByi",
     "isTejaAiNotes": true,
-    "description": "Basic set concepts, operations, Venn diagrams, Cartesian products, binary relations, representation via matrices and directed graphs, properties of relations (reflexive, symmetric, anti-symmetric, transitive), equivalence relations, equivalence classes, partial order relations, Posets, Hasse diagrams, functions: injective, surjective, bijective, inverse functions, and function compositions."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-U3",
@@ -1469,7 +1469,7 @@ const NOTES_DATA = [
     "driveFileId": "1jE51oII0eeQ6dnlT0TE_yuNBMOdYssEV",
     "folderUrl": "https://drive.google.com/drive/folders/12NiMXtf_5yoIGBwOTwe8fXvUVxXHMByi",
     "isTejaAiNotes": true,
-    "description": "Algebraic systems, binary operations and properties, semigroups, monoids, groups, abelian groups, subgroups, cosets, Lagrange's Theorem and its applications, group homomorphism and isomorphism, lattices as partially ordered sets, properties of lattices, modular, distributive, bounded, complemented lattices, and Boolean algebra."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-U4",
@@ -1481,7 +1481,7 @@ const NOTES_DATA = [
     "driveFileId": "1eMIIEw4tjfR3zkyy1YY_aEHNZ23NsYYm",
     "folderUrl": "https://drive.google.com/drive/folders/12NiMXtf_5yoIGBwOTwe8fXvUVxXHMByi",
     "isTejaAiNotes": true,
-    "description": "Basic counting principles (sum rule, product rule), permutations and combinations, combinations with repetition, Pigeonhole Principle and its generalized forms, binomial coefficients, Pascal's identity, generating functions of sequences, and solving linear recurrence relations with constant coefficients (homogeneous and non-homogeneous methods)."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-U5",
@@ -1493,7 +1493,7 @@ const NOTES_DATA = [
     "driveFileId": "1fFOZfqOGf_-UPTgJQTuH_J9nKH0XmYvx",
     "folderUrl": "https://drive.google.com/drive/folders/12NiMXtf_5yoIGBwOTwe8fXvUVxXHMByi",
     "isTejaAiNotes": true,
-    "description": "Basic graph definitions, vertex degrees, Handshaking Lemma, subgraphs, paths, cycles, connected components, Eulerian and Hamiltonian paths and circuits, planar graphs, Euler's formula (V - E + R = 2), graph coloring, chromatic number, trees and their properties, spanning trees, and Minimum Spanning Tree algorithms (Kruskal's and Prim's)."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-QB-U1",
@@ -1505,7 +1505,7 @@ const NOTES_DATA = [
     "driveFileId": "1AZOVH_X2sL2qku7FGKx6ZMZMKKImECHw",
     "folderUrl": "https://drive.google.com/drive/folders/1sTxf8LH7ay_8tRkyokMVNZJB0AntD8Xt",
     "isTejaAiNotes": true,
-    "description": "Unit 1 examination question bank: truth table constructions, equivalence verification, PCNF and PDNF derivations, predicate symbolism, and rule of inference deductions."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-QB-U2",
@@ -1517,7 +1517,7 @@ const NOTES_DATA = [
     "driveFileId": "12jKTxx4nTAoyYXo81fkGcj5dje5GBUO0",
     "folderUrl": "https://drive.google.com/drive/folders/1sTxf8LH7ay_8tRkyokMVNZJB0AntD8Xt",
     "isTejaAiNotes": true,
-    "description": "Unit 2 examination question bank: relation properties testing (reflexive, symmetric, transitive), equivalence classes, Poset and Hasse diagram drawing, and bijection proofs."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-QB-U3",
@@ -1529,7 +1529,7 @@ const NOTES_DATA = [
     "driveFileId": "1eoVAVHms1IYGHI8Mup6IcGrcbv_iOBS2",
     "folderUrl": "https://drive.google.com/drive/folders/1sTxf8LH7ay_8tRkyokMVNZJB0AntD8Xt",
     "isTejaAiNotes": true,
-    "description": "Unit 3 examination question bank: abelian group proofs, modular arithmetic groups, subgroup verification, Lagrange's theorem numericals, and lattice properties."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-QB-U4",
@@ -1541,7 +1541,7 @@ const NOTES_DATA = [
     "driveFileId": "160SdH3lVCa3hmpZ6xjR_L4B4opApuLRi",
     "folderUrl": "https://drive.google.com/drive/folders/1sTxf8LH7ay_8tRkyokMVNZJB0AntD8Xt",
     "isTejaAiNotes": true,
-    "description": "Unit 4 examination question bank: permutations and combinations word problems, Pigeonhole Principle proofs, generating function derivations, and recurrence relation solutions."
+    "description": ""
   },
   {
     "id": "NOTE-DM-TEJA-QB-U5",
@@ -1553,7 +1553,7 @@ const NOTES_DATA = [
     "driveFileId": "1LA9EeSqySKAogwlxcpw-WoYGYINR0Ef9",
     "folderUrl": "https://drive.google.com/drive/folders/1sTxf8LH7ay_8tRkyokMVNZJB0AntD8Xt",
     "isTejaAiNotes": true,
-    "description": "Unit 5 examination question bank: Handshaking Lemma applications, planar graph regions using Euler's formula, chromatic numbers, Kruskal's & Prim's minimum spanning tree step-by-step algorithms."
+    "description": ""
   }
 ];
 

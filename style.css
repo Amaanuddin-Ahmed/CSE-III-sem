@@ -11855,13 +11855,24 @@ html {
   color: #4f46e5 !important;
 }
 
-/* Notes Body inside chapter */
+/* Notes Body inside chapter - DEFAULT STRICTLY COLLAPSED */
 .teja-chapter-notes-body {
+  display: none !important;
   padding: 12px 14px !important;
   background: #faf8ff !important;
-  display: flex !important;
   flex-direction: column !important;
   gap: 10px !important;
+}
+
+/* OPEN CHAPTER ITEM SHOWS NOTES BODY */
+.teja-chapter-item.open .teja-chapter-notes-body {
+  display: flex !important;
+}
+
+/* Remove verbose description from all note cards */
+.note-item-card .note-desc,
+.note-desc {
+  display: none !important;
 }
 
 .teja-chapter-notes-body .note-item-card {

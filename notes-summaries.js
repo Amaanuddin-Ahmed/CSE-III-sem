@@ -7028,60 +7028,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 1,
   "title": "COA Unit 1: Boolean Algebra, Data Representation & Digital Computers",
-  "pageCount": 24,
+  "pageCount": 20,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive AI-curated study material for COA Unit 1 covering foundational Boolean algebra, logic gates, minimization theorems, fixed-point and floating-point data representations, complements, error-correcting codes, and computer organization block diagrams.",
+  "overview": "COA Unit 1 · Boolean Algebra, Data · Representation & Digital Computers · Sem · 5-mark answers · most likely first",
   "topics": [
    {
-    "title": "Boolean Algebra Laws & Logic Gates",
-    "summary": "Mathematical framework governing two-valued logic systems, identity, distributive, absorption, and De Morgan's laws.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Unit 1: Boolean Algebra, Data Representation & Digital Computers identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "De Morgan's Laws: (A + B)' = A' · B' and (A · B)' = A' + B'",
-     "Universal Gates: NAND and NOR can synthesize any Boolean function without other gate types.",
-     "Canonical Forms: SOP (Sum of Min-terms, Σm) and POS (Product of Max-terms, ΠM)."
+     "Explain the basic organization of a digital computer with a neat block diagram.",
+     "Explain the representation of signed and unsigned fixed-point numbers.",
+     "Subtract (10110110)₂ − (01101101)₂ using 2's complement.",
+     "Differentiate between computer organization and computer architecture.",
+     "Explain floating-point representation of binary numbers with an example.",
+     "Explain 1's and 2's complement representation; represent +12 and −14 in 8-bit format."
     ],
     "formulas": [
-     "A + A'B = A + B",
-     "AB + A'C + BC = AB + A'C (Consensus Theorem)"
+     "(+42) + (−13) = 00101010 + 11110011 = 1 00011101 → 00011101 = +29",
+     "0.6875 × 2 = 1.375 → 1, 0.375 × 2 = 0.75 → 0, 0.75 × 2 = 1.5 → 1, 0.5 × 2 = 1.0 → 1",
+     "V = Cₙ ⊕ Cₙ₋₁"
     ],
-    "example": "F(A,B,C) = A'B + AB' can be implemented using only 4 NAND gates."
+    "example": "Standard university question: Explain the basic organization of a digital computer with a neat block diagram."
    },
    {
-    "title": "Data Representation & Complements",
-    "summary": "Binary representation of signed numbers, fixed-point and IEEE 754 floating-point standards.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "r's and (r-1)'s Complements: Radix complements enable binary subtraction via addition.",
-     "2's Complement: Computed as 1's complement + 1; provides unique representation for zero and simple arithmetic hardware.",
-     "IEEE 754 Single Precision: 32 bits = 1 sign bit + 8 exponent bits (bias 127) + 23 mantissa bits."
+     "Perform (110011)₂ + (101101)₂ and (1110101)₂ + (101111)₂ and verify the results in decimal.",
+     "Explain the classification of binary codes: weighted, non-weighted, reflective and error- detecting codes.",
+     "Explain the BCD code and convert (593)₁₀ into BCD.",
+     "Explain the Excess-3 code for the decimal digits 0 to 9. Why is it called a non-weighted code?",
+     "Explain Gray code and the conversion between binary and Gray code with examples.",
+     "Convert the Gray code 1101011 into binary and find its decimal value."
     ],
     "formulas": [
-     "Value = (-1)^s × 1.M × 2^(E - 127)",
-     "2's complement of N = 2^n - N"
+     "V = Cn ⊕ Cn−1 (V = 1 means overflow)",
+     "C7 = 0, C6 = 1 → V = 1 → overflow (150 > +127)",
+     "Gate form of De Morgan's theorems: a bubbled output equals bubbled inputs with AND ↔ OR"
     ],
-    "example": "Subtracting 5 from 9 in 4-bit binary: 9 + (2's comp of 5) = 1001 + 1011 = 10100 -> discard carry -> 0100 (+4)."
+    "example": "Practice problem: Perform (110011)₂ + (101101)₂ and (1110101)₂ + (101111)₂ and verify the results in decimal."
    },
    {
-    "title": "Error Detection & Hamming Codes",
-    "summary": "Parity bits and forward error-correcting Hamming codes for reliable memory and transmission.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Parity Bit: Appended to detect single-bit errors; fails for even number of bit errors.",
-     "Hamming (7, 4) Code: Uses 3 parity bits at bit positions 1, 2, 4 to protect 4 data bits.",
-     "Parity Bit Calculation: 2^p ≥ m + p + 1 where m is data bits and p is parity bits."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "2^p ≥ m + p + 1",
-     "Syndrome word S = P3 P2 P1 indicates exact faulty bit position."
+     "(+42) + (−13) = 00101010 + 11110011 = 1 00011101 → 00011101 = +29",
+     "0.6875 × 2 = 1.375 → 1, 0.375 × 2 = 0.75 → 0, 0.75 × 2 = 1.5 → 1, 0.5 × 2 = 1.0 → 1",
+     "V = Cₙ ⊕ Cₙ₋₁",
+     "V = Cn ⊕ Cn−1 (V = 1 means overflow)",
+     "C7 = 0, C6 = 1 → V = 1 → overflow (150 > +127)",
+     "Gate form of De Morgan's theorems: a bubbled output equals bubbled inputs with AND ↔ OR"
     ],
-    "example": "For 4 data bits, 2^3 = 8 ≥ 4 + 3 + 1 = 8, exactly 3 parity bits are required."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "De Morgan's theorem statements and dual logic circuit diagrams",
-   "Why 2's complement is universally preferred in modern ALUs over 1's complement",
-   "IEEE 754 single-precision format layout and bit calculations",
-   "Hamming code parity bit assignment and syndrome decoding formula"
   ]
  },
  "NOTE-COA-TEJA-U2": {
@@ -7089,63 +7095,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 2,
   "title": "COA Unit 2: Combinational & Sequential Logic",
-  "pageCount": 28,
+  "pageCount": 23,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "In-depth treatment of combinational logic design (Adders, Subtractors, CLA, Multiplexers, Decoders) and clocked sequential circuits (Flip-Flops, Race-Around Condition, Registers, and Counters).",
+  "overview": "COA Unit 2 · Combinational & Sequential Logic · Sem · 5-mark answers · most likely first · 1. Explain the design of a full adder with its truth table and logic diagram, and derive Sum and",
   "topics": [
    {
-    "title": "Adders & Carry Lookahead Logic (CLA)",
-    "summary": "Fast addition circuits overcoming ripple carry propagation delays through parallel generate and propagate terms.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Unit 2: Combinational & Sequential Logic identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Half Adder: Sum = A ⊕ B, Carry = AB.",
-     "Full Adder: Sum = A ⊕ B ⊕ Cin, Carry Cout = AB + Cin(A ⊕ B).",
-     "Carry Lookahead Adder: Computes Gi = AiBi (generate) and Pi = Ai ⊕ Bi (propagate) simultaneously.",
-     "Total addition delay in CLA is independent of the word length n."
+     "Explain the design of a full adder with its truth table and logic diagram, and derive Sum and Carry.",
+     "Design a 4-bit binary parallel adder using full adders and explain its operation.",
+     "Explain how a 4-bit parallel adder is modified to perform both addition and subtraction.",
+     "Explain decoders and encoders with block diagrams and truth tables.",
+     "Explain the SR, JK, D and T flip-flops with their characteristic tables.",
+     "Design a 3-bit synchronous binary counter using JK flip-flops."
     ],
     "formulas": [
-     "Ci+1 = Gi + Pi Ci",
-     "C1 = G0 + P0 C0",
-     "C2 = G1 + P1 G0 + P1 P0 C0"
+     "g ≡ e, then f ≡ d ⟹ 5 states State",
+     "Q3 (ring) or Q3' (Johnson) 2",
+     "Sum = A ⊕ B ⊕ Cin, Cout = AB + Cin(A ⊕ B)"
     ],
-    "example": "A 4-bit ripple carry adder has 8 gate delays, while a 4-bit CLA generates all carries in just 2 gate delays."
+    "example": "Standard university question: Explain the design of a full adder with its truth table and logic diagram, and derive Sum and Carry."
    },
    {
-    "title": "Multiplexers & Decoders",
-    "summary": "Standard MSI components for data selection, address decoding, and universal Boolean function implementation.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Multiplexer (MUX): Selects 1 of 2^n inputs using n select lines.",
-     "Decoder: Decodes n binary input bits into 2^n unique output lines.",
-     "Function Realization: Any n-variable Boolean function can be implemented using a 2^(n-1)-to-1 MUX by connecting one variable to inputs."
+     "Explain the design and operation of a half adder with its truth table and logic diagram.",
+     "Explain the half subtractor and full subtractor with truth tables and logic circuits.",
+     "Design a 2-bit binary multiplier and explain its logic diagram.",
+     "Implement a full adder using a 3-to-8 decoder.",
+     "Design a 2-bit magnitude comparator and derive the expressions for A > B, A = B and A < B.",
+     "Design a 3-to-8 decoder and explain it with its truth table and logic diagram."
     ],
     "formulas": [
-     "MUX selection: Y = Σ (m_k · I_k)",
-     "Decoder output: D_i = minterm_i"
+     "Sum = Σm(1, 2, 4, 7) = A ⊕ B ⊕ Cin",
+     "Cout = Σm(3, 5, 6, 7) = AB + BCin + ACin = AB + Cin(A ⊕ B)",
+     "A = 1, B = 1, Cin = 1: Sum = 1 ⊕ 1 ⊕ 1 = 1, Cout = 1 (1 + 1 + 1 = 11)"
     ],
-    "example": "Implementing XOR using 2-to-1 MUX: Set select S = A, inputs I0 = B, I1 = B' -> Y = A'B + AB'."
+    "example": "Practice problem: Explain the design and operation of a half adder with its truth table and logic diagram."
    },
    {
-    "title": "Sequential Logic & Flip-Flops",
-    "summary": "Bistable memory circuits, characteristic equations, excitation tables, and timing constraints.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "SR Flip-Flop: Undefined for S = R = 1.",
-     "JK Flip-Flop: Toggles on J = K = 1; subject to race-around condition if clock pulse width tp > propagation delay tpd.",
-     "Master-Slave Flip-Flop: Eliminates race-around by clocking master on positive edge and slave on negative edge.",
-     "D & T Flip-Flops: D stores input bit (Q_next = D); T toggles state on each clock pulse (Q_next = T ⊕ Q)."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "JK Characteristic: Q_next = J Q' + K' Q",
-     "T Characteristic: Q_next = T ⊕ Q"
+     "g ≡ e, then f ≡ d ⟹ 5 states State",
+     "Q3 (ring) or Q3' (Johnson) 2",
+     "Sum = A ⊕ B ⊕ Cin, Cout = AB + Cin(A ⊕ B)",
+     "Sum = Σm(1, 2, 4, 7) = A ⊕ B ⊕ Cin",
+     "Cout = Σm(3, 5, 6, 7) = AB + BCin + ACin = AB + Cin(A ⊕ B)",
+     "A = 1, B = 1, Cin = 1: Sum = 1 ⊕ 1 ⊕ 1 = 1, Cout = 1 (1 + 1 + 1 = 11)"
     ],
-    "example": "In a 4-bit asynchronous ripple counter, each flip-flop's Q output triggers the clock input of the succeeding stage."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Derivation of Carry Lookahead Adder carry equations C1, C2, C3, C4",
-   "Full subtractor implementation using two half subtractors and an OR gate",
-   "Race-around condition in JK flip-flop and Master-Slave resolution",
-   "State diagram, state table, and excitation table for 3-bit synchronous up/down counter"
   ]
  },
  "NOTE-COA-TEJA-U3": {
@@ -7153,61 +7162,64 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 3,
   "title": "COA Unit 3: Register Transfer & Basic Computer Organization",
-  "pageCount": 26,
+  "pageCount": 20,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Detailed study of Register Transfer Language (RTL), common bus architectures, micro-operations, computer instruction formats, instruction cycle timing, and control logic design.",
+  "overview": "COA Unit 3 · Register Transfer & Basic · Computer Organization · Sem · 5-mark answers · most likely first",
   "topics": [
    {
-    "title": "Register Transfer Language & Bus System",
-    "summary": "Symbolic notation for transfer of binary information between processor registers and memory.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Unit 3: Register Transfer & Basic Computer Organization identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "RTL Statement: P: R2 ← R1 denotes that data from R1 is transferred to R2 if control signal P = 1.",
-     "Common Bus System: Allows multiple registers to share a single set of wires; constructed using MUXs or Three-State Buffers.",
-     "Three-State Buffer: Outputs logic 0, logic 1, or high-impedance (Hi-Z) when control enable E = 0."
+     "Explain the phases of the instruction cycle with a flowchart and register transfers.",
+     "Explain the common bus system for transferring information between registers using multiplexers.",
+     "Design a 4-bit arithmetic circuit using full adders and explain its operations.",
+     "Explain the functions of the major registers of the basic computer.",
+     "Explain instruction codes and the instruction format of the basic computer.",
+     "Explain the interrupt cycle of the basic computer and how the return address is saved."
     ],
     "formulas": [
-     "Number of MUXs = bit size of registers (n)",
-     "MUX size = 2^k × 1 where 2^k ≥ number of registers"
+     "11011101 → 10111010 cir R: 10111010 → 01011101",
+     "01011101 → 00101110 cil R: 00101110 → 01011100",
+     "239 − 168 = 71 = 01000111 ✓ 23. Explain the BUN and BSA instructions. ★★"
     ],
-    "example": "For four 4-bit registers (A, B, C, D), a common bus requires four 4-to-1 multiplexers."
+    "example": "Standard university question: Explain the phases of the instruction cycle with a flowchart and register transfers."
    },
    {
-    "title": "Micro-operations: Arithmetic, Logic & Shift",
-    "summary": "Elementary operations executed on data stored in registers within a single clock pulse.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Arithmetic Micro-operations: Add, Subtract, Increment, Decrement; implemented via 4-bit Arithmetic Circuit.",
-     "Logic Micro-operations: Bitwise AND, OR, XOR, NOT; used for bit manipulation (selective set, clear, complement).",
-     "Shift Micro-operations: Logical shift (zeros inserted), Circular shift (bits rotate), Arithmetic shift (preserves sign bit)."
+     "Explain the 4-bit combinational shifter.",
+     "R = 11011101: find its contents after logical shift left, circular shift right, logical shift right and circular shift left.",
+     "Find R1 to R4 after R1 ← R1 + R2, R3 ← R3 ∧ R4, R2 ← R2 + 1 and R1 ← R1 − R",
+     "Explain the BUN and BSA instructions."
     ],
     "formulas": [
-     "Arithmetic Shift Left: Multiplies by 2; detects overflow if Rn-1 ⊕ Rn-2 = 1",
-     "Arithmetic Shift Right: Divides by 2, copies sign bit"
+     "D4T4: PC ← AR, SC ← 0 BSA: D5T4: M[AR] ← PC, AR ← AR + 1; D5T5: PC ← AR, SC ← 0",
+     "C ← A: S1S0 = 00 (A on bus), LOAD(C) = 1 → C gets A",
+     "A = 0110: S1S0Cin = 101 → D = A + 1 = 0111 (increment)"
     ],
-    "example": "Selective Clear: Performing A ← A ∧ B' clears bits in register A wherever register B has a 1."
+    "example": "Practice problem: Explain the 4-bit combinational shifter."
    },
    {
-    "title": "Basic Computer Instruction Cycle",
-    "summary": "Phased execution loop executed by the CPU for every instruction fetched from memory.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Fetch Phase (T0, T1): T0: AR ← PC; T1: IR ← M[AR], PC ← PC + 1.",
-     "Decode Phase (T2): Decodes opcode bits 12-14 via 3-to-8 decoder, checks addressing mode bit 15 (I), loads AR with address bits 0-11.",
-     "Execute Phase (T3 - T6): Executes memory-reference, register-reference, or input-output instruction based on decoded control signals.",
-     "Interrupt Cycle: Saves return address PC to memory location 0, clears IEN, loads PC with address 1."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Direct addressing: I = 0, Effective Address EA = IR(0-11)",
-     "Indirect addressing: I = 1, EA = M[IR(0-11)]"
+     "11011101 → 10111010 cir R: 10111010 → 01011101",
+     "01011101 → 00101110 cil R: 00101110 → 01011100",
+     "239 − 168 = 71 = 01000111 ✓ 23. Explain the BUN and BSA instructions. ★★",
+     "D4T4: PC ← AR, SC ← 0 BSA: D5T4: M[AR] ← PC, AR ← AR + 1; D5T5: PC ← AR, SC ← 0",
+     "C ← A: S1S0 = 00 (A on bus), LOAD(C) = 1 → C gets A",
+     "A = 0110: S1S0Cin = 101 → D = A + 1 = 0111 (increment)"
     ],
-    "example": "BSA (Branch and Save Return Address): M[AR] ← PC, PC ← AR + 1."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Bus construction using Three-State Bus Buffers and active-high enable control lines",
-   "Arithmetic micro-operations truth table with mode select bits S1, S0 and Cin",
-   "Step-by-step instruction cycle flow chart: Fetch, Decode, Effective Address, Execution",
-   "Hardware implementation and control timing of Interrupt Cycle"
   ]
  },
  "NOTE-COA-TEJA-U4": {
@@ -7215,61 +7227,62 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 4,
   "title": "COA Unit 4: Microprogrammed Control, CPU & Computer Arithmetic",
-  "pageCount": 30,
+  "pageCount": 24,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Microprogrammed control unit design, processor register organization, addressing modes, RISC vs CISC principles, and hardware algorithms for multiplication (Booth's) and division.",
+  "overview": "COA Unit 4 · Microprogrammed Control, CPU & · Computer Arithmetic · Sem · 5-mark answers · most likely first",
   "topics": [
    {
-    "title": "Microprogrammed Control Unit",
-    "summary": "Control unit architecture storing control words in a read-only Control Memory (ROM).",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Unit 4: Microprogrammed Control, CPU & Computer Arithmetic identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Control Word: Bit string specifying micro-operations to be initiated during a clock cycle.",
-     "Microprogram Sequencer: Generates next address for control ROM based on branch logic, subroutine registers, and mapping logic.",
-     "Mapping: Converts 4-bit opcode into 7-bit microinstruction starting address in control memory."
+     "Explain immediate, direct, indirect, register and register-indirect addressing modes.",
+     "Explain the organization of a microprogrammed control unit with a block diagram.",
+     "Multiply (+15) × (−13) using Booth's algorithm, showing all steps.",
+     "Differentiate between hardwired and microprogrammed control.",
+     "Explain the instruction formats used in a CPU with examples.",
+     "Explain signed-magnitude addition and subtraction with its hardware and flowchart."
     ],
     "formulas": [
-     "Next address generation: CAR ← CAR + 1 (increment) or CAR ← Target (branch/call)"
+     "the fetch routine is used by every instruction, and the indirect-address routine is called as a subroutine.",
+     "ORG 64 PCTAR",
+     "0.4375 × 103 = 0.04375 × 104 Now the exponents are equal, so the mantissas are added:"
     ],
-    "example": "Opcode 0011 mapped with 0-prefix and 00-suffix yields starting control address 0001100."
+    "example": "Standard university question: Explain immediate, direct, indirect, register and register-indirect addressing modes."
    },
    {
-    "title": "CPU Organization & Addressing Modes",
-    "summary": "Instruction formats, operand addressing techniques, and architectural trade-offs.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Addressing Modes: Immediate, Direct, Indirect, Register, Register Indirect, Relative, Indexed, Base Register.",
-     "Relative Addressing: Effective Address EA = PC + Address Field (vital for position-independent code).",
-     "Indexed Addressing: EA = Index Register XR + Address Field (ideal for array indexing).",
-     "RISC vs CISC: RISC has fixed-length instructions, single-cycle execution, and load-store architecture; CISC has complex variable-length instructions."
+     "Differentiate between branch, subroutine call and program interrupt.",
+     "Add 0.256 × 10⁴ and 0.4375 × 10³ using floating-point addition."
     ],
     "formulas": [
-     "Relative EA = PC + Relative_offset",
-     "Indexed EA = XR + Address_base"
+     "Result = 0.29975 × 104 = 2997.5 (check: 2560 + 437.5 = 2997.5 ✓)",
+     "control word → signals",
+     "IR + SC → decoders → logic gates → signals"
     ],
-    "example": "If PC = 500 and address field = +20, the relative branch address is 500 + 20 = 520."
+    "example": "Practice problem: Differentiate between branch, subroutine call and program interrupt."
    },
    {
-    "title": "Computer Arithmetic: Booth's Multiplication",
-    "summary": "High-speed hardware algorithm for signed 2's complement multiplication.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Booth's Recoding Rule: Examines bit pair (Q_0, Q_{-1}):",
-     "10 -> Subtract Multiplicand (A ← A - B), then Arithmetic Shift Right (ASHR).",
-     "01 -> Add Multiplicand (A ← A + B), then ASHR.",
-     "00 or 11 -> No arithmetic, ASHR only.",
-     "Count: Repeated n times for n-bit multiplier."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Booth rule: 10: A ← A - M; 01: A ← A + M; both: ASHR(A, Q, Q-1)"
+     "the fetch routine is used by every instruction, and the indirect-address routine is called as a subroutine.",
+     "ORG 64 PCTAR",
+     "0.4375 × 103 = 0.04375 × 104 Now the exponents are equal, so the mantissas are added:",
+     "Result = 0.29975 × 104 = 2997.5 (check: 2560 + 437.5 = 2997.5 ✓)",
+     "control word → signals",
+     "IR + SC → decoders → logic gates → signals"
     ],
-    "example": "Multiplying (+7) × (-3): Using 4 bits, M = 0111, Q = 1101, Q-1 = 0; Booth steps yield product 11101011 (-21)."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Block diagram and sequencing logic of Microprogram Sequencer",
-   "Comprehensive definition and numerical calculation of all 8 Addressing Modes",
-   "Booth's multiplication algorithm flowchart and complete trace table",
-   "Restoring vs Non-restoring division algorithm comparisons"
   ]
  },
  "NOTE-COA-TEJA-U5": {
@@ -7277,58 +7290,64 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 5,
   "title": "COA Unit 5: Input-Output & Memory Organization",
-  "pageCount": 32,
+  "pageCount": 21,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exhaustive coverage of I/O interfacing, asynchronous data transfer, DMA transfer, priority interrupts, memory hierarchy, cache mapping techniques, and virtual memory paging.",
+  "overview": "COA Unit 5 · Input-Output & Memory · Sem · 5-mark answers · most likely first · 1. Explain DMA transfer with a block diagram. ★★★",
   "topics": [
    {
-    "title": "Asynchronous Data Transfer & I/O Modes",
-    "summary": "Techniques for synchronizing data transfers between independent clock domains.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Unit 5: Input-Output & Memory Organization identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Strobe Method: Single control line; no acknowledgment, susceptible to lost data.",
-     "Handshaking Method: Two control lines (Data Ready and Data Accepted); fully handshake-verified protocol.",
-     "Modes of Transfer: Programmed I/O (CPU polling), Interrupt-driven I/O (device notifies CPU), DMA (hardware bypasses CPU)."
+     "Explain DMA transfer with a block diagram.",
+     "Explain the cache mapping techniques: direct, associative and set-associative mapping.",
+     "Explain the organization of a DMA controller and its registers.",
+     "Explain the memory hierarchy and the need for different levels of memory.",
+     "Explain the organization of an I/O interface between the CPU and peripheral devices.",
+     "Explain programmed I/O, interrupt-initiated I/O and DMA, and compare them."
     ],
     "formulas": [
-     "Handshake sequence: Source activates Ready → Destination accepts and activates Accepted → Source deactivates Ready → Destination deactivates Accepted."
+     "1. The index selects one cache line. 2. The tag stored in that line is compared with the tag of the address.",
+     "a conflict miss, the main drawback of direct mapping, whose advantage is very simple, cheap hardware.",
+     "Device ↔ CPU ↔ memory"
     ],
-    "example": "In DMA burst transfer, the DMA controller takes complete control of the system bus and transfers an entire block of data."
+    "example": "Standard university question: Explain DMA transfer with a block diagram."
    },
    {
-    "title": "Direct Memory Access (DMA) & Interrupts",
-    "summary": "Specialized high-speed hardware transfer and hardware priority arbitration.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "DMA Controller Registers: Address Register, Word Count Register, Control/Status Register.",
-     "Bus Request (BR) and Bus Grant (BG): CPU yields control of Address and Data buses to DMAC.",
-     "Daisy-Chaining Priority: Hardware series connection; device closest to CPU has highest priority for interrupt acknowledgment."
+     "Explain the parallel priority interrupt hardware.",
+     "Explain direct mapping in cache memory.",
+     "A 256 × 16 cache has 8 blocks and main memory is 4096 × 16. Find the tag, block and word fields for direct mapping.",
+     "Compare the strobe-control and handshaking methods."
     ],
     "formulas": [
-     "Word count register decrements on each byte transfer; generates interrupt when WC = 0."
+     "Device ↔ CPU ↔",
+     "Device ↔ memory",
+     "Devices 2 and 3 request: device 1 passes PO = 1; device 2 sets PO = 0 → device 2 served first"
     ],
-    "example": "Daisy chain: CPU asserts Interrupt Acknowledge (INTA); passes through Dev 1, Dev 2 until requesting device intercepts it."
+    "example": "Practice problem: Explain the parallel priority interrupt hardware."
    },
    {
-    "title": "Cache & Virtual Memory Organization",
-    "summary": "High-speed SRAM caching and secondary-storage virtual memory bridging the memory speed-capacity gap.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Cache Mapping: Direct Mapping (Block k maps to Slot k mod N), Fully Associative (any line), Set-Associative (maps to any line within set).",
-     "Hit Ratio: h = Hits / (Hits + Misses); Average Access Time T_avg = h · T_c + (1 - h) · T_m.",
-     "Virtual Memory: Paging breaks logical address into Page Number and Offset; translated via Page Table / TLB to Physical Frame Number."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "T_avg = T_cache + (1 - h) × Miss_Penalty",
-     "Number of sets in set-associative cache = Total cache lines / k"
+     "1. The index selects one cache line. 2. The tag stored in that line is compared with the tag of the address.",
+     "a conflict miss, the main drawback of direct mapping, whose advantage is very simple, cheap hardware.",
+     "Device ↔ CPU ↔ memory",
+     "Device ↔ CPU ↔",
+     "Device ↔ memory",
+     "Devices 2 and 3 request: device 1 passes PO = 1; device 2 sets PO = 0 → device 2 served first"
     ],
-    "example": "If cache access is 2 ns, main memory access is 50 ns, and hit ratio is 0.95: T_avg = 2 + 0.05 × 50 = 4.5 ns."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Handshaking timing waveforms: Source-initiated vs Destination-initiated transfers",
-   "DMA controller internal block diagram and CPU-DMA handshaking signals (BR, BG)",
-   "Daisy-chain priority interrupt hardware connection and polling comparisons",
-   "Cache mapping formulas and numerical calculations for Direct, Associative, and Set-Associative caches"
   ]
  },
  "NOTE-COA-TEJA-CRASH": {
@@ -7336,60 +7355,63 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 3,
   "title": "COA Semester End Crash Pack",
-  "pageCount": 45,
+  "pageCount": 73,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "High-yield semester-end revision crash pack summarizing the entire COA syllabus across Units 1–5: essential formulas, key circuit schematics, algorithm steps (Booth's, CLA, DMA), and predicted 10-mark essay derivations.",
+  "overview": "COA Sem · Crash Pack · Top questions with full answers · Unit 1 · Boolean Algebra, Data Representation & Digital",
   "topics": [
    {
-    "title": "Units 1 & 2 Core Synthesis: Logic, CLA & Counters",
-    "summary": "Quick recap of Boolean minimization, Carry Lookahead logic, and sequential flip-flop design.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Semester End Crash Pack identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "CLA Carry equations: C1 = G0 + P0 C0, C2 = G1 + P1 G0 + P1 P0 C0.",
-     "Master-Slave JK eliminates race-around.",
-     "Synchronous counter design recipe: State table → Flip-flop excitation table → K-maps → Logic gates."
+     "Explain the basic organization of a digital computer with a neat block diagram.",
+     "Explain the representation of signed and unsigned fixed-point numbers.",
+     "Subtract (10110110)₂ − (01101101)₂ using 2's complement.",
+     "Differentiate between computer organization and computer architecture.",
+     "Explain floating-point representation of binary numbers with an example.",
+     "Explain 1's and 2's complement representation; represent +12 and −14 in 8-bit format."
     ],
     "formulas": [
-     "Gi = AiBi, Pi = Ai ⊕ Bi",
-     "JK excitation: Q(t)→Q(t+1) = 0→0: J=0, K=X; 0→1: J=1, K=X; 1→0: J=X, K=1; 1→1: J=X, K=0"
+     "RS1 RS0 Register selected",
+     "CS = 1, RS1 RS0 = 00, WR = 1 → port A ← data bus",
+     "(+42) + (−13) = 00101010 + 11110011 = 1 00011101 → 00011101 = +29"
     ],
-    "example": "3-bit binary counter requires 3 T flip-flops with inputs T1 = 1, T2 = Q1, T3 = Q1Q2."
+    "example": "Standard university question: Explain the basic organization of a digital computer with a neat block diagram."
    },
    {
-    "title": "Units 3 & 4 Core Synthesis: Instruction Cycle & Booth's",
-    "summary": "Processor timing, control unit microsequencing, and Booth's signed multiplication.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Instruction Cycle: Fetch (T0, T1), Decode (T2), Effective address, Execute.",
-     "Booth's Algorithm: 10: subtract; 01: add; 00/11: shift.",
-     "Addressing modes: Immediate, Direct, Indirect, Relative (PC-based), Indexed (XR-based)."
+     "Secondary analytical topics, auxiliary definitions, and edge-case verifications.",
+     "Algorithm traces, truth tables, state transition tables, and circuit/graph diagrams.",
+     "Short-answer definitions and standard 2-mark conceptual questions."
     ],
     "formulas": [
-     "Booth ASHR preserves sign bit in A",
-     "Effective Address EA = PC + Relative_offset"
+     "0.6875 × 2 = 1.375 → 1, 0.375 × 2 = 0.75 → 0, 0.75 × 2 = 1.5 → 1, 0.5 × 2 = 1.0 → 1",
+     "V = Cₙ ⊕ Cₙ₋₁",
+     "V = Cn ⊕ Cn−1 (V = 1 means overflow)"
     ],
-    "example": "Multiplication of negative binary numbers using Booth's requires sign extension."
+    "example": "Practice problem: Secondary analytical topics, auxiliary definitions, and edge-case verifications."
    },
    {
-    "title": "Unit 5 Core Synthesis: DMA, Cache & Virtual Memory",
-    "summary": "I/O interfacing protocols, DMA controller operations, cache mapping formulas, and paging.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "DMA Controller: Bypasses CPU for bulk block transfers between memory and I/O.",
-     "Cache: T_avg = h · T_c + (1 - h) · T_m.",
-     "Paging: Logical address (Page, Offset) translated by Page Table to Physical Address (Frame, Offset)."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Direct map tag bits = Memory bits - Index bits - Offset bits",
-     "Hit ratio h = Hits / Total_accesses"
+     "RS1 RS0 Register selected",
+     "CS = 1, RS1 RS0 = 00, WR = 1 → port A ← data bus",
+     "(+42) + (−13) = 00101010 + 11110011 = 1 00011101 → 00011101 = +29",
+     "0.6875 × 2 = 1.375 → 1, 0.375 × 2 = 0.75 → 0, 0.75 × 2 = 1.5 → 1, 0.5 × 2 = 1.0 → 1",
+     "V = Cₙ ⊕ Cₙ₋₁",
+     "V = Cn ⊕ Cn−1 (V = 1 means overflow)"
     ],
-    "example": "A 64 KB cache with 16-byte blocks has 4096 lines; index requires 12 bits, offset requires 4 bits."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Carry Lookahead Adder full 4-bit schematic and delay comparison",
-   "Booth's multiplication trace table for positive × negative numbers",
-   "Instruction cycle state diagram with all phase transitions",
-   "Direct vs Set-Associative cache numerical analysis and hit ratio formulas"
   ]
  },
  "NOTE-COA-TEJA-QB": {
@@ -7397,50 +7419,60 @@ const NOTE_SUMMARIES = {
   "subjectId": "COA",
   "chapter": 3,
   "title": "COA Semester End Question Bank",
-  "pageCount": 20,
+  "pageCount": 5,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Curated collection of university semester-end examination questions across Units 1 to 5, organized by short questions (Part A, 2 Marks) and essay questions (Part B, 5 & 10 Marks).",
+  "overview": "COA Sem · Question Bank · 5-mark questions · most likely first · ★★★ very likely · ★★ likely · ★ possible · Unit 1 · Boolean Algebra, Data Representation & Digital",
   "topics": [
    {
-    "title": "High-Frequency Part-A 2-Mark Conceptual Questions",
-    "summary": "Key definitions, laws, equations, and short conceptual distinctions.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for COA Semester End Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "State De Morgan's laws and duality theorem.",
-     "What is the race-around condition in JK flip-flops?",
-     "Distinguish between micro-operations and microinstructions.",
-     "Define hit ratio and write the average memory access time formula.",
-     "What is DMA burst transfer vs cycle stealing?"
+     "Explain the basic organization of a digital computer with a neat block diagram.",
+     "Explain the representation of signed and unsigned fixed-point numbers.",
+     "Subtract (10110110)₂ − (01101101)₂ using 2's complement.",
+     "Differentiate between computer organization and computer architecture.",
+     "Explain floating-point representation of binary numbers with an example.",
+     "Explain 1's and 2's complement representation; represent +12 and −14 in 8-bit format."
     ],
     "formulas": [
-     "h = Hits / (Hits + Misses)",
-     "2's complement of N = 2^n - N"
+     "direct, associative and set-associative mapping. ★★★",
+     "magnetic disks and magnetic tapes. ★★★ 8. Explain main memory: RAM and ROM chips and the memory address map. ★★★"
     ],
-    "example": "Difference between static RAM (bistable latch) and dynamic RAM (capacitor refresh)."
+    "example": "Standard university question: Explain the basic organization of a digital computer with a neat block diagram."
    },
    {
-    "title": "High-Frequency Part-B 5 & 10-Mark University Essay Problems",
-    "summary": "Complete derivations, algorithm implementations, and hardware architectures.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Design a 4-bit Carry Lookahead Adder and analyze its gate delay.",
-     "Multiply (-9) × (+6) using Booth's multiplication algorithm with step-by-step table.",
-     "Explain the Instruction Cycle with detailed timing diagrams (Fetch, Decode, Execute).",
-     "Explain Daisy Chaining priority interrupt hardware and handshaking.",
-     "Compare Direct Mapping, Associative Mapping, and Set-Associative Mapping with numerical example."
+     "Explain the 4-bit combinational shifter.",
+     "R = 11011101: find its contents after logical shift left, circular shift right, logical shift right and circular shift left.",
+     "Find R1 to R4 after R1 ← R1 + R2, R3 ← R3 ∧ R4, R2 ← R2 + 1 and R1 ← R1 − R",
+     "Explain the BUN and BSA instructions.",
+     "Differentiate between branch, subroutine call and program interrupt.",
+     "Add 0.256 × 10⁴ and 0.4375 × 10³ using floating-point addition."
     ],
     "formulas": [
-     "Booth: 10 -> A - B, 01 -> A + B, ASHR",
-     "Ci+1 = Gi + Pi Ci"
+     "direct, associative and set-associative mapping. ★★★",
+     "magnetic disks and magnetic tapes. ★★★ 8. Explain main memory: RAM and ROM chips and the memory address map. ★★★"
     ],
-    "example": "Designing a common bus system for eight 16-bit registers using three-state buffers."
+    "example": "Practice problem: Explain the 4-bit combinational shifter."
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "direct, associative and set-associative mapping. ★★★",
+     "magnetic disks and magnetic tapes. ★★★ 8. Explain main memory: RAM and ROM chips and the memory address map. ★★★"
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Full Carry Lookahead Adder derivation and logic circuit diagram",
-   "Booth's multiplication step-by-step execution table",
-   "DMA controller internal structure and handshaking lines (BR, BG)",
-   "Cache memory mapping address breakdown (Tag, Set, Word offset)"
   ]
  },
  "NOTE-DM-TEJA-U1": {
@@ -7448,64 +7480,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 1,
   "title": "DM Unit 1: Mathematical Logic",
-  "pageCount": 26,
+  "pageCount": 23,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Core lecture notes on Propositional Logic, connectives, truth tables, PCNF/PDNF canonical expansions, Predicate Logic, quantifiers, rules of inference, and formal mathematical proofs.",
+  "overview": "DM Unit 1 · Mathematical Logic · Notes · syllabus topics in order · solved questions per topic · formula sheet at the end · ★★★ very likely · ★★ likely · ★ possible",
   "topics": [
    {
-    "title": "Propositional Logic & Logical Connectives",
-    "summary": "Declarative statements, truth values, compound propositions, and connective definitions.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 1: Mathematical Logic identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Connectives: Negation (¬), Conjunction (∧), Disjunction (∨), Implication (→), Biconditional (↔).",
-     "Conditional Truth: p → q is FALSE if and only if p is True and q is False.",
-     "Converse, Inverse & Contrapositive: For p → q, Converse is q → p, Inverse is ¬p → ¬q, Contrapositive is ¬q → ¬p (logically equivalent to p → q).",
-     "Tautology: Always True; Contradiction: Always False; Contingency: Neither."
+     "Explain in detail about logical connectives with examples.",
+     "Construct the truth table for the statement (P → Q) ∨ (¬P → R).",
+     "Write the converse and the contrapositive of the statement “If x is odd, then x² is odd.”",
+     "Obtain the PCNF of (¬P → R) ∧ (Q ↔ P).",
+     "Show that R → S can be derived from the premises P → (Q → S), ¬R ∨ P and Q.",
+     "What are the two types of quantifiers? Explain with examples."
     ],
     "formulas": [
-     "p → q ≡ ¬p ∨ q",
-     "p ↔ q ≡ (p → q) ∧ (q → p)"
+     "swap ∧ ↔ ∨ and T ↔ F. If A ⇔ B, then dual(A) ⇔ dual(B). Tautological implications (used with Rule T)",
+     "reduce it to T, or assume A true and show B true (or B false ⇒ A false) Normal forms",
+     "In the conditional P → Q, P is the antecedent (hypothesis) and Q is the consequent (conclusion). It"
     ],
-    "example": "If p = 'It rains' and q = 'Ground is wet', contrapositive is 'If ground is not wet, it does not rain'."
+    "example": "Standard university question: Explain in detail about logical connectives with examples."
    },
    {
-    "title": "Normal Forms: PCNF & PDNF",
-    "summary": "Canonical standardized Boolean representations using Minterms and Maxterms.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Minterm: Conjunction of all literals; exactly 1 in truth table for one row.",
-     "Maxterm: Disjunction of all literals; exactly 0 in truth table for one row.",
-     "PDNF (Principal Disjunctive Normal Form): Sum of all minterms where expression evaluates to True.",
-     "PCNF (Principal Conjunctive Normal Form): Product of all maxterms where expression evaluates to False."
+     "Show that (p → q) ∧ (q → p) is logically equivalent to p ↔ q.",
+     "Show that P → (Q → R) ⇔ P → (¬Q ∨ R) ⇔ (P ∧ Q) → R.",
+     "Show the following implication without constructing the truth table: (p → q) → q ⇒ p ∨ q.",
+     "Obtain the PDNF of (¬P → R) ∧ (Q ↔ P) using its truth table.",
+     "Show that ¬p follows from the premises r → ¬q, r ∨ s, s → ¬q, p → q using the indirect method of proof.",
+     "Which of the following are statements? Give the truth value of each statement. (i) 7 is a prime number. (ii) Close the window. (iii) x + 3 = 10. (iv) 5 > 9. (v) Is it raining?"
     ],
     "formulas": [
-     "PDNF ≡ Σm(rows where F=1)",
-     "PCNF ≡ ΠM(rows where F=0)"
+     "related statements: the converse Q → P, the inverse ¬P → ¬Q and the contrapositive ¬Q → ¬P. The",
+     "(P → Q) ∨ (¬P → R). Brackets are used so that every formula has only one meaning (a well-formed",
+     "NAND (¬(P ∧ Q), written P↑Q) and NOR (¬(P ∨ Q), written P↓Q) are also used. A set of connectives is"
     ],
-    "example": "For p ∧ q, PDNF is (p ∧ q); PCNF is (p ∨ q) ∧ (p ∨ ¬q) ∧ (¬p ∨ q)."
+    "example": "Practice problem: Show that (p → q) ∧ (q → p) is logically equivalent to p ↔ q."
    },
    {
-    "title": "Predicate Logic & Rules of Inference",
-    "summary": "Quantified statements over domains and formal deduction systems for valid arguments.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Quantifiers: Universal quantifier (∀x, for all x) and Existential quantifier (∃x, there exists x).",
-     "Negation of Quantifiers: ¬(∀x P(x)) ≡ ∃x ¬P(x) and ¬(∃x P(x)) ≡ ∀x ¬P(x).",
-     "Modus Ponens: From p and p → q, infer q.",
-     "Modus Tollens: From ¬q and p → q, infer ¬p.",
-     "Hypothetical Syllogism: From p → q and q → r, infer p → r."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Modus Ponens: ((p → q) ∧ p) ⇒ q",
-     "Disjunctive Syllogism: ((p ∨ q) ∧ ¬p) ⇒ q"
+     "swap ∧ ↔ ∨ and T ↔ F. If A ⇔ B, then dual(A) ⇔ dual(B). Tautological implications (used with Rule T)",
+     "reduce it to T, or assume A true and show B true (or B false ⇒ A false) Normal forms",
+     "In the conditional P → Q, P is the antecedent (hypothesis) and Q is the consequent (conclusion). It",
+     "related statements: the converse Q → P, the inverse ¬P → ¬Q and the contrapositive ¬Q → ¬P. The",
+     "(P → Q) ∨ (¬P → R). Brackets are used so that every formula has only one meaning (a well-formed",
+     "NAND (¬(P ∧ Q), written P↑Q) and NOR (¬(P ∨ Q), written P↓Q) are also used. A set of connectives is"
     ],
-    "example": "Valid argument: 'All men are mortal' (∀x(M(x) → O(x))), 'Socrates is a man' (M(s)) ∴ 'Socrates is mortal' (O(s))."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Prove logical equivalence of conditional and contrapositive: (p → q) ≡ (¬q → ¬p)",
-   "Convert arbitrary propositional formulas into PCNF and PDNF without truth tables",
-   "Negation of nested quantified expressions: ¬(∀x ∃y (P(x,y) → Q(x,y)))",
-   "Step-by-step deductive proof using Rules of Inference (P, T, CP)"
   ]
  },
  "NOTE-DM-TEJA-U2": {
@@ -7513,63 +7547,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 2,
   "title": "DM Unit 2: Set Theory, Relations & Functions",
-  "pageCount": 28,
+  "pageCount": 25,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Comprehensive coverage of set operations, binary relations, equivalence relations, equivalence classes, partial ordering relations (posets), Hasse diagrams, and functions (injective, surjective, bijective).",
+  "overview": "DM Unit 2 · Set Theory · Notes · syllabus topics in order · solved questions per topic · formula sheet at the end · ★★★ very likely · ★★ likely · ★ possible",
   "topics": [
    {
-    "title": "Binary Relations & Fundamental Properties",
-    "summary": "Subsets of Cartesian product A × A and essential relational properties.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 2: Set Theory, Relations & Functions identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Reflexive: (a, a) ∈ R for all a ∈ A.",
-     "Symmetric: (a, b) ∈ R ⟹ (b, a) ∈ R.",
-     "Anti-symmetric: (a, b) ∈ R and (b, a) ∈ R ⟹ a = b.",
-     "Transitive: (a, b) ∈ R and (b, c) ∈ R ⟹ (a, c) ∈ R.",
-     "Equivalence Relation: Reflexive, Symmetric, and Transitive."
+     "Explain the properties of binary relations with examples.",
+     "Given the relation matrix MR = [[1, 0, 1], [1, 1, 0], [1, 1, 1]] of a relation R on {1, 2, 3}, find the matrices of R² = R ∘ R and R³ = R ∘ R ∘ R.",
+     "Find the transitive closure of the relation R = {(1, 2), (2, 3), (3, 4), (4, 1)} on A = {1, 2, 3, 4}. Show the powers Rⁱ that give new elements.",
+     "Let A = {1, 2, 3, 4, 6, 8, 12, 24}. Show that the relation “divides” is a partial ordering on A and draw the Hasse diagram.",
+     "Draw the Hasse diagram of the partial ordering ⊆ on the power set P(S), where S = {a, b, c}. Find the maximal, minimal, greatest and least elements.",
+     "Let f, g, h be functions from ℝ to ℝ defined by f(x) = x², g(x) = x + 5 and h(x) = 3x. Find g ∘ f, f ∘ g, f ∘ f, g ∘ g, h ∘ f and g ∘ h."
     ],
     "formulas": [
-     "Equivalence class [a] = {x ∈ A | (x, a) ∈ R}",
-     "Relation composition: R ∘ S"
+     "rows with 1 in column k get row k OR- ed in",
+     "are equal, A = B, exactly when A ⊆ B and B ⊆ A; this is the usual way to prove two sets equal. The",
+     "{x | x ∈ A or x ∈ B}"
     ],
-    "example": "Equality relation (=) on integers is an equivalence relation. The relation (≤) is a partial order."
+    "example": "Standard university question: Explain the properties of binary relations with examples."
    },
    {
-    "title": "Partially Ordered Sets (Posets) & Hasse Diagrams",
-    "summary": "Relations that are Reflexive, Anti-symmetric, and Transitive, visualized via Hasse diagrams.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Hasse Diagram: Eliminates self-loops (reflexivity) and transitive edges, displaying poset hierarchy from bottom to top.",
-     "Maximal & Minimal Elements: Elements with no successor or no predecessor.",
-     "Greatest & Least Elements: Unique top or bottom element if it exists.",
-     "LUB (Least Upper Bound / Supremum) and GLB (Greatest Lower Bound / Infimum)."
+     "Let A = {1, 2, 3, 4}, B = {3, 4, 5, 6} and C = {1, 3, 5}. Find (a) A ∪ B (b) A ∩ B (c) (A ∪ B) ∩ C (d) A ∪ B ∪ C (e) A ∩ B ∩ C.",
+     "Show that for any two sets A and B, A − (A ∩ B) = A − B.",
+     "If A = {a, b, c} and B = {1, 2}, find A × B and B × A. Are they equal?",
+     "Explain about storage structures.",
+     "Let X = {1, 2, 3, 4, 5, 6, 7} and R = {(x, y) | x − y is divisible by 3}. Show that R is an equivalence relation and find its equivalence classes.",
+     "Show that f(x) = 4x + 2 on the set of real numbers is bijective, and find its inverse."
     ],
     "formulas": [
-     "Poset denoted as (P, ≤)",
-     "Divisibility poset: (D_n, |) where a ≤ b iff a divides b."
+     "{x | x ∈ A and x ∈",
+     "{x | x ∈ A and x ∉",
+     "Set identities. The operations obey the same laws as the logical connectives (∪ behaves like ∨, ∩"
     ],
-    "example": "For D_12 = {1, 2, 3, 4, 6, 12}: Least element is 1, greatest element is 12."
+    "example": "Practice problem: Let A = {1, 2, 3, 4}, B = {3, 4, 5, 6} and C = {1, 3, 5}. Find (a) A ∪ B (b) A ∩ B (c) (A ∪ B) ∩ C (d) A ∪ B ∪ C (e) A ∩ B ∩ C."
    },
    {
-    "title": "Functions & Bijections",
-    "summary": "Mappings between sets, classifications, invertibility, and compositions.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Injective (One-to-One): f(x1) = f(x2) ⟹ x1 = x2.",
-     "Surjective (Onto): For every y ∈ B, there exists x ∈ A such that f(x) = y (Range = Codomain).",
-     "Bijective: Both Injective and Surjective; a function has an inverse f^(-1) if and only if it is Bijective.",
-     "Composition: (g ∘ f)(x) = g(f(x))."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "f: R → R, f(x) = 2x + 5 is bijective with inverse f^(-1)(y) = (y - 5) / 2"
+     "rows with 1 in column k get row k OR- ed in",
+     "are equal, A = B, exactly when A ⊆ B and B ⊆ A; this is the usual way to prove two sets equal. The",
+     "{x | x ∈ A or x ∈ B}",
+     "{x | x ∈ A and x ∈",
+     "{x | x ∈ A and x ∉",
+     "Set identities. The operations obey the same laws as the logical connectives (∪ behaves like ∨, ∩"
     ],
-    "example": "f: Z → Z defined by f(x) = x^2 is NOT injective (f(-2) = f(2) = 4) and NOT surjective (no integer gives -1)."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Prove whether a given relation is an Equivalence Relation and find all equivalence classes",
-   "Draw Hasse diagram for divisibility relations (e.g. D_24 or D_30) and identify maximal/minimal elements",
-   "Formal proof of injectivity, surjectivity, and bijectivity for given functions",
-   "Compute composite function (g ∘ f)(x) and show that (g ∘ f)^(-1) = f^(-1) ∘ g^(-1)"
   ]
  },
  "NOTE-DM-TEJA-U3": {
@@ -7577,64 +7614,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 3,
   "title": "DM Unit 3: Algebraic Structures & Lattices",
-  "pageCount": 30,
+  "pageCount": 18,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Algebraic structures hierarchy (Semigroups, Monoids, Groups, Abelian Groups), Lagrange's theorem, Subgroups, Homomorphism, Lattices as posets, and Boolean algebra.",
+  "overview": "DM Unit 3 · Algebraic Structures · Notes · syllabus topics in order · solved questions per topic · formula sheet at the end · ★★★ very likely · ★★ likely · ★ possible",
   "topics": [
    {
-    "title": "Groups, Abelian Groups & Subgroups",
-    "summary": "Sets equipped with closed binary operations satisfying associativity, identity, and inverses.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 3: Algebraic Structures & Lattices identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Semigroup: Closure + Associativity.",
-     "Monoid: Semigroup + Identity element e (a * e = a).",
-     "Group: Monoid + Inverse element a^(-1) for every a (a * a^(-1) = e).",
-     "Abelian Group: Group where binary operation is commutative (a * b = b * a).",
-     "Subgroup: A non-empty subset H ⊆ G that is itself a group under the same operation."
+     "Define an algebraic system. Give two examples of algebraic systems, one with a single binary operation and another with two binary operations.",
+     "On the set ℚ of all rational numbers, the operation ∗ is defined by a ∗ b = a + b − ab. Show that under this operation ℚ forms a commutative monoid.",
+     "Let G = {1, −1, i, −i}. Show that G forms an abelian group under usual multiplication, and find the order of every element.",
+     "Prove that in a group (G, ∗) the identity element and the inverse of each element are unique. Hence show that (a ∗ b)⁻¹ = b⁻¹ ∗ a⁻¹ for all a, b ∈ G.",
+     "Prove that the set of even integers forms a group under addition.",
+     "In a lattice (L, ≤, ∧, ∨), state and prove the idempotent, commutative, associative and absorption laws."
     ],
     "formulas": [
-     "Two-step subgroup test: a, b ∈ H ⟹ a * b^(-1) ∈ H",
-     "Order of group |G|"
+     "Examples with two binary operations: (ℤ, +, ×), (P(A), ∪, ∩), ({0, 1}, ∨, ∧).",
+     "General properties that an operation ∗ on S may have (for all a, b, c ∈ S): closure a ∗ b ∈ S;",
+     "Other examples: (ℕ, ×), (strings, concatenation) with one operation; (ℤ, +, ×) and ({0, 1}, ∨, ∧)"
     ],
-    "example": "(Z, +) is an abelian group with identity 0 and inverse -a. (Z, ×) is only a monoid because non-unit integers lack multiplicative inverses."
+    "example": "Standard university question: Define an algebraic system. Give two examples of algebraic systems, one with a single binary operation and another with two binary operations."
    },
    {
-    "title": "Lagrange's Theorem & Cosets",
-    "summary": "Foundational theorem connecting the order of a subgroup to the order of a finite group.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Cosets: For subgroup H ⊆ G, left coset aH = {ah | h ∈ H}; right coset Ha = {ha | h ∈ H}.",
-     "Lagrange's Theorem: The order of every subgroup H of a finite group G divides the order of G.",
-     "Corollary: If |G| = n and a ∈ G, then the order of element a divides |G|, and a^n = e.",
-     "Groups of prime order: Every group of prime order is cyclic and abelian."
+     "Give an example of an algebraic system that is associative but not commutative. Prove both properties using examples.",
+     "The set A = {2, 4, 5, 6, 8, 9} has the operation a ∗ b = minimum of a and b. Find whether (A, ∗) is a semigroup or a monoid.",
+     "Discuss homomorphism of semigroups and monoids with an example.",
+     "Let A = {1, 2, 3, 6} with the partial order of divisibility (a ≤ b ⇔ a | b). Prove that (A, ≤) is a lattice by showing that the LUB (join) and GLB (meet) exist for all pairs.",
+     "Summarize Boolean algebra and its properties, and explain the complement of an element with an example.",
+     "Q12. Apply Boolean simplification to minimise the expression F = AB + A′C + BC."
     ],
     "formulas": [
-     "|G| = |H| × [G : H] where [G : H] is the index of H in G."
+     "Subsemigroups and submonoids. If (S, ∗) is a semigroup and T ⊆ S is closed under ∗, then (T, ∗) is",
+     "under ∗ and e ∈ T, then (T, ∗, e) is a submonoid. For example, the even natural numbers form a",
+     "submonoid of (ℕ, +, 0), and for any a ∈ M the set of powers {e, a, a², …} is a submonoid."
     ],
-    "example": "If |G| = 12, possible subgroup orders are strictly divisors of 12: {1, 2, 3, 4, 6, 12}."
+    "example": "Practice problem: Give an example of an algebraic system that is associative but not commutative. Prove both properties using examples."
    },
    {
-    "title": "Lattices as Posets & Properties",
-    "summary": "Posets where every pair of elements has a unique Least Upper Bound (join, ∨) and Greatest Lower Bound (meet, ∧).",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Lattice Definition: (L, ≤) is a lattice if ∀ a, b ∈ L, a ∨ b = LUB(a, b) and a ∧ b = GLB(a, b) exist.",
-     "Bounded Lattice: Possesses least element 0 and greatest element 1.",
-     "Distributive Lattice: a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c).",
-     "Complemented Lattice: Bounded lattice where every element a has a complement a' such that a ∨ a' = 1 and a ∧ a' = 0.",
-     "Boolean Algebra: A complemented, distributive lattice."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Absorption Laws: a ∨ (a ∧ b) = a and a ∧ (a ∨ b) = a",
-     "De Morgan in Lattices: (a ∨ b)' = a' ∧ b'"
+     "Examples with two binary operations: (ℤ, +, ×), (P(A), ∪, ∩), ({0, 1}, ∨, ∧).",
+     "General properties that an operation ∗ on S may have (for all a, b, c ∈ S): closure a ∗ b ∈ S;",
+     "Other examples: (ℕ, ×), (strings, concatenation) with one operation; (ℤ, +, ×) and ({0, 1}, ∨, ∧)",
+     "Subsemigroups and submonoids. If (S, ∗) is a semigroup and T ⊆ S is closed under ∗, then (T, ∗) is",
+     "under ∗ and e ∈ T, then (T, ∗, e) is a submonoid. For example, the even natural numbers form a",
+     "submonoid of (ℕ, +, 0), and for any a ∈ M the set of powers {e, a, a², …} is a submonoid."
     ],
-    "example": "The power set lattice (P(S), ⊆) is a Boolean algebra where join is union (∪) and meet is intersection (∩)."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Prove that the set of non-zero reals under multiplication forms an abelian group",
-   "Statement and formal proof of Lagrange's Theorem for finite groups",
-   "Show that the intersection of two subgroups is also a subgroup",
-   "Prove absorption laws and distributive property in lattices"
   ]
  },
  "NOTE-DM-TEJA-U4": {
@@ -7642,64 +7681,65 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 4,
   "title": "DM Unit 4: Elementary Combinatorics & Recurrences",
-  "pageCount": 32,
+  "pageCount": 22,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Permutations, combinations, Pigeonhole Principle, generating functions, and solution of linear homogeneous and non-homogeneous recurrence relations with constant coefficients.",
+  "overview": "DM Unit 4 · Elementary Combinatorics · Notes · syllabus topics in order · solved questions per topic · formula sheet at the end · ★★★ very likely · ★★ likely · ★ possible",
   "topics": [
    {
-    "title": "Permutations, Combinations & Pigeonhole Principle",
-    "summary": "Counting arrangements, selections, and existence guarantees via Dirichlet's box principle.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 4: Elementary Combinatorics & Recurrences identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Permutations P(n, r): Ordered arrangements: P(n, r) = n! / (n - r)!.",
-     "Combinations C(n, r): Unordered selections: C(n, r) = n! / (r!(n - r)!).",
-     "Permutations with Repetition: n! / (n1! n2! ... nk!).",
-     "Pigeonhole Principle (PHP): If n items are put into k containers with n > k, at least one container has ≥ 2 items.",
-     "Generalized PHP: At least one container holds ≥ ⌈n / k⌉ items."
+     "Find the number of 5-letter words which contain three different consonants and two different vowels of the English alphabet.",
+     "How many permutations can be made with the letters of the word ENGINEERING?",
+     "State and prove the binomial theorem.",
+     "Find the coefficient of x³y³z² in (2x − 3y + 5z)⁸.",
+     "What is the coefficient of x³y⁷ in (x + y)¹⁰ and in (2x − 9y)¹⁰?"
     ],
     "formulas": [
-     "C(n, r) = C(n, n-r)",
-     "⌈n / k⌉ items minimum in one box"
+     "⌊N/LCM(a, b)⌋ use LCM, not just the product",
+     "P(n, 4) = 42 · P(n, 2), with n ≥ 4.",
+     "divide both sides by n(n − 1) ≠ 0,"
     ],
-    "example": "In a group of 367 people, since there are 366 possible birthdays, at least 2 people must share a birthday."
+    "example": "Standard university question: Find the number of 5-letter words which contain three different consonants and two different vowels of the English alphabet."
    },
    {
-    "title": "Generating Functions",
-    "summary": "Formal power series encoding sequences of numbers as polynomial coefficients.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Generating Function Definition: G(x) = Σ a_n x^n = a0 + a1 x + a2 x^2 + ...",
-     "Standard Series: 1 / (1 - x) = Σ x^n (all 1s); 1 / (1 - ax) = Σ a^n x^n.",
-     "Shift Property: G(x) represents sequence {a_n}; x G(x) represents sequence shifted by 1."
+     "How many 4-digit numbers can be formed using the digits 2, 3, 5, 6, 8 and 9 if repetitions are allowed?",
+     "State the pigeonhole principle. How many persons must be chosen so that at least five of them have birthdays in the same calendar month?",
+     "If P(n, 4) = 42 · P(n, 2), find the value of n.",
+     "In how many ways can 6 men and 6 women be seated in a row (i) if any person may sit next to any other (ii) if men and women must occupy alternate seats?",
+     "How many integral solutions are there to x₁ + x₂ + x₃ + x₄ + x₅ = 20, where x₁ ≥ −3, x₂ ≥ 0, x₃ ≥ 4, x₄ ≥ 2 and x₅ ≥ 2?",
+     "Compute the number of ways to distribute 10 identical balls into 4 boxes such that no box is empty."
     ],
     "formulas": [
-     "1 / (1 - x) = 1 + x + x^2 + ...",
-     "1 / (1 - x)^2 = Σ (n + 1) x^n"
+     "empty” means every xᵢ ≥ 1, giving C(r − 1, n − 1). Upper bounds (xᵢ ≤ bᵢ) are handled by inclusion–",
+     "x₂ ≥ 0, x₃ ≥ 4, x₄ ≥ 2 and x₅ ≥ 2? ★★",
+     "(ii) T, I, U must be in positions p, p + 3, p + 6 (two letters between each); p + 6 ≤ 9 gives"
     ],
-    "example": "Generating function for sequence 1, 2, 4, 8, ... (2^n) is G(x) = 1 / (1 - 2x)."
+    "example": "Practice problem: How many 4-digit numbers can be formed using the digits 2, 3, 5, 6, 8 and 9 if repetitions are allowed?"
    },
    {
-    "title": "Recurrence Relations & Solving Techniques",
-    "summary": "Equations expressing a term in terms of preceding terms, solved via characteristic roots.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Linear Homogeneous: a_n - c1 a_{n-1} - c2 a_{n-2} = 0.",
-     "Characteristic Equation: r^2 - c1 r - c2 = 0.",
-     "Distinct Real Roots (r1 ≠ r2): General solution a_n = A (r1)^n + B (r2)^n.",
-     "Repeated Roots (r1 = r2 = r): General solution a_n = (A + B n) r^n.",
-     "Non-Homogeneous: a_n = a_n^(h) + a_n^(p) where a_n^(p) is particular solution matching the driving term."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Fibonacci recurrence: F_n = F_{n-1} + F_{n-2} with F0=0, F1=1",
-     "r = (1 ± √5) / 2"
+     "⌊N/LCM(a, b)⌋ use LCM, not just the product",
+     "P(n, 4) = 42 · P(n, 2), with n ≥ 4.",
+     "divide both sides by n(n − 1) ≠ 0,",
+     "empty” means every xᵢ ≥ 1, giving C(r − 1, n − 1). Upper bounds (xᵢ ≤ bᵢ) are handled by inclusion–",
+     "x₂ ≥ 0, x₃ ≥ 4, x₄ ≥ 2 and x₅ ≥ 2? ★★",
+     "(ii) T, I, U must be in positions p, p + 3, p + 6 (two letters between each); p + 6 ≤ 9 gives"
     ],
-    "example": "Solve a_n - 5a_{n-1} + 6a_{n-2} = 0: Roots are r = 2, 3 ⟹ a_n = A 2^n + B 3^n."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Pigeonhole principle problems: Minimum cards drawn to guarantee 3 of the same suit",
-   "Permutations of repeated letters: e.g. permutations of 'ENGINEERING' or 'ASSASSINATION'",
-   "Solve second-order linear recurrence relations with initial conditions using characteristic roots",
-   "Solve recurrence relations using Generating Functions method"
   ]
  },
  "NOTE-DM-TEJA-U5": {
@@ -7707,65 +7747,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 5,
   "title": "DM Unit 5: Graph Theory, Trees & Spanning Trees",
-  "pageCount": 34,
+  "pageCount": 36,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Graph terminology, Handshaking Lemma, Euler & Hamiltonian graphs, Planar graphs, Euler's formula, Chromatic number, Trees, and Minimum Spanning Tree algorithms (Kruskal's & Prim's).",
+  "overview": "DM Unit 5 · Graph Theory · Notes · syllabus topics in order · solved questions per topic · formula sheet at the end · ★★★ very likely · ★★ likely · ★ possible",
   "topics": [
    {
-    "title": "Graph Fundamentals & Handshaking Lemma",
-    "summary": "Vertices, edges, degrees, adjacency, and the foundational handshaking theorem.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 5: Graph Theory, Trees & Spanning Trees identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Handshaking Lemma: In any undirected graph G = (V, E), Σ deg(v) = 2 |E|.",
-     "Corollary: Every graph has an even number of vertices of odd degree.",
-     "Complete Graph K_n: Has n vertices and n(n - 1) / 2 edges.",
-     "Bipartite Graph: Vertices can be partitioned into V1, V2 such that every edge connects V1 to V2."
+     "State and prove the fundamental theorem of graph theory. Hence show that the number of vertices of odd degree is even.",
+     "How do we determine whether two graphs are isomorphic or not? Explain with an example.",
+     "Explain Kruskal's algorithm and use it to construct the minimal spanning tree of the given weighted graph.",
+     "Find a minimal spanning tree of the given weighted graph using Prim's algorithm.",
+     "Explain the tree traversal algorithms with an example.",
+     "What is the significance of planar graphs? Show that K₅ and K₃,₃ are not planar."
     ],
     "formulas": [
-     "Σ deg(v) = 2 |E|",
-     "K_n edges = n(n - 1) / 2",
-     "Complete bipartite K_{m,n} edges = m × n"
+     "Cycle Cₙ (n ≥ 3)",
+     "Σv∈V deg(v) = 2 + 2 + … + 2 (|E| times) = 2|E|",
+     "Σv∈V₁ deg(v) + Σv∈V₂ deg(v) = 2|E|"
     ],
-    "example": "A graph with 10 vertices each of degree 3: Sum of degrees = 30 = 2|E| ⟹ |E| = 15 edges."
+    "example": "Standard university question: State and prove the fundamental theorem of graph theory. Hence show that the number of vertices of odd degree is even."
    },
    {
-    "title": "Eulerian, Hamiltonian & Planar Graphs",
-    "summary": "Path traversal theorems and planar graph topological embeddings.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Euler Circuit: Closed walk traversing every EDGE exactly once; exists iff every vertex has even degree.",
-     "Euler Path: Open walk traversing every edge once; exists iff graph has exactly 0 or 2 vertices of odd degree.",
-     "Hamiltonian Cycle: Closed walk visiting every VERTEX exactly once (NP-complete in general).",
-     "Planar Graph: Graph embeddable in the plane such that no two edges cross.",
-     "Euler's Formula: For any connected planar graph, V - E + R = 2 (where R is regions/faces)."
+     "A simple graph contains 35 edges, four vertices of degree 5, five vertices of degree 4 and four vertices of degree 3. Find the number of vertices of degree",
+     "Show that two graphs with the same number of vertices, edges and degrees need not be isomorphic.",
+     "Show that a tree with n vertices has exactly n − 1 edges.",
+     "Write short notes on DFS and BFS, and find spanning trees of the given graph by both methods starting at a.",
+     "Prove that the complete graph Kₙ is planar if and only if n ≤",
+     "Find the number of regions of a connected planar graph G with 20 vertices, each of degree"
     ],
     "formulas": [
-     "Euler's planar formula: V - E + R = 2",
-     "Planar edge bound: E ≤ 3V - 6 (for V ≥ 3)"
+     "Σv∈V₁ deg(v) = even",
+     "Subgraphs. H = (V′, E′) is a subgraph of G = (V, E) if V′ ⊆ V and E′ ⊆ E (every edge of H has both",
+     "G₁ and G₂ are isomorphic if there is a one-to-one, onto map f: V₁ → V₂ such that {u, v} is an"
     ],
-    "example": "K_5 has V=5, E=10. Since 3V - 6 = 3(5) - 6 = 9 < 10, K_5 is non-planar."
+    "example": "Practice problem: A simple graph contains 35 edges, four vertices of degree 5, five vertices of degree 4 and four vertices of degree 3. Find the number of vertices of degree"
    },
    {
-    "title": "Trees & Minimum Spanning Trees (MST)",
-    "summary": "Connected acyclic graphs, tree characterizations, Kruskal's and Prim's greedy algorithms.",
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
     "points": [
-     "Tree Properties: Connected and acyclic; a tree with n vertices has exactly n - 1 edges.",
-     "Spanning Tree: Subgraph of G that is a tree containing all vertices of G.",
-     "Kruskal's Algorithm: Sorts edges in non-decreasing order of weights and adds edge if it does not form a cycle (greedy edge-by-edge).",
-     "Prim's Algorithm: Grows tree from an initial vertex by repeatedly adding the minimum-weight incident edge."
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
     ],
     "formulas": [
-     "Edges in tree: |E| = |V| - 1",
-     "Cayley's formula: n^(n-2) labeled trees on n vertices"
+     "Cycle Cₙ (n ≥ 3)",
+     "Σv∈V deg(v) = 2 + 2 + … + 2 (|E| times) = 2|E|",
+     "Σv∈V₁ deg(v) + Σv∈V₂ deg(v) = 2|E|",
+     "Σv∈V₁ deg(v) = even",
+     "Subgraphs. H = (V′, E′) is a subgraph of G = (V, E) if V′ ⊆ V and E′ ⊆ E (every edge of H has both",
+     "G₁ and G₂ are isomorphic if there is a one-to-one, onto map f: V₁ → V₂ such that {u, v} is an"
     ],
-    "example": "A connected graph with 8 vertices and 7 edges with no cycles is strictly a tree."
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Handshaking lemma proof and odd-degree vertex count theorem",
-   "Euler graph conditions (necessary and sufficient) and Fleury's algorithm",
-   "Euler's formula proof (V - E + R = 2) for planar graphs by induction on edges",
-   "Step-by-step Kruskal's and Prim's MST execution on a weighted graph with edge cost calculation"
   ]
  },
  "NOTE-DM-TEJA-QB-U1": {
@@ -7773,42 +7814,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 1,
   "title": "DM Unit 1: Question Bank",
-  "pageCount": 14,
+  "pageCount": 28,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exam question bank for Mathematical Logic with high-probability university questions covering truth tables, PCNF/PDNF, quantifiers, and rule of inference deductions.",
+  "overview": "DM Unit 1 · Question Bank · 24 solved questions · grouped by syllabus topic · most likely first · ★★★ set: every Unit 1 question asked in two or more of the 21 previous papers (MR22 and MR21)",
   "topics": [
    {
-    "title": "Truth Tables & Equivalence Proofs",
-    "summary": "Constructing truth tables to prove tautology and equivalence without truth tables using algebraic laws.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 1: Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Prove (p → (q → r)) ≡ ((p ∧ q) → r).",
-     "Show that ((p ∨ q) ∧ ¬(¬p ∧ (¬q ∨ ¬r))) ∨ (¬p ∧ ¬q) ∨ (¬p ∧ ¬r) is a tautology.",
-     "Distinguish between converse, inverse, and contrapositive with examples."
+     "Write the following statement in symbolic form: “If either Jerry takes Calculus or Ken takes Sociology, then Larry will take English.”",
+     "Connectives Q2. Explain in detail about logical connectives with examples.",
+     "Define tautology with a suitable example.",
+     "What is a well-formed formula? Give examples.",
+     "Show that (¬P ∧ (¬Q ∧ R)) ∨ (Q ∧ R) ∨ (P ∧ R) ⇔ R without using the truth table.",
+     "Show that (P → R) ∧ (Q → R) ⇔ (P ∨ Q) → R without using the truth table."
     ],
     "formulas": [
-     "p → q ≡ ¬p ∨ q"
+     "two sides equal ⇒ angles equal; sides not equal; therefore angles not equal. ★★",
+     "All dogs are carnivorous; some animals are dogs; therefore some animals are carnivorous. ★★",
+     "what conclusions follow? ★★ July 2025 (MR21) 1b"
     ],
-    "example": "Verify contrapositive equivalence using truth tables with 4 rows."
+    "example": "Standard university question: Write the following statement in symbolic form: “If either Jerry takes Calculus or Ken takes Sociology, then Larry will take English.”"
    },
    {
-    "title": "Canonical Normal Forms (PCNF & PDNF)",
-    "summary": "Step-by-step algebraic methods for expanding propositions into minterms and maxterms.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Find the PDNF and PCNF of (p ∧ q) ∨ (¬p ∧ r).",
-     "Obtain PCNF for the formula (¬p → r) ∧ (q ↔ p).",
-     "Determine whether two formulas are equivalent by comparing their canonical forms."
+     "Define a proposition (statement) and give an example.",
+     "Construct a truth table to show that (p ∧ q) → p is a tautology.",
+     "Is P → (P ∨ Q) a tautology or a contradiction?",
+     "Construct the truth table of (P ↔ Q) ↔ ((P ∧ Q) ∨ (¬P ∧ ¬R)).",
+     "Construct the truth table of (p ↔ q) ⊕ (¬p ↔ ¬r).",
+     "Write the contrapositive of p → q, p: 2 + 2 = 4, q: I am not the Prime Minister of India."
     ],
     "formulas": [
-     "Expand missing literals using (x ∨ ¬x) = 1"
+     "Jerry takes Calculus or Ken takes Sociology ⟹ J ∨ K",
+     "(J ∨ K) → L",
+     "The symbolic form is (J ∨ K) → L ."
     ],
-    "example": "To expand p ∧ q for 3 variables: (p ∧ q ∧ r) ∨ (p ∧ q ∧ ¬r)."
+    "example": "Practice problem: Define a proposition (statement) and give an example."
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "two sides equal ⇒ angles equal; sides not equal; therefore angles not equal. ★★",
+     "All dogs are carnivorous; some animals are dogs; therefore some animals are carnivorous. ★★",
+     "what conclusions follow? ★★ July 2025 (MR21) 1b",
+     "Jerry takes Calculus or Ken takes Sociology ⟹ J ∨ K",
+     "(J ∨ K) → L",
+     "The symbolic form is (J ∨ K) → L ."
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "PCNF and PDNF algebraic derivation without using truth tables",
-   "Rule of inference derivation showing validity of conclusion"
   ]
  },
  "NOTE-DM-TEJA-QB-U2": {
@@ -7816,43 +7881,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 2,
   "title": "DM Unit 2: Question Bank",
-  "pageCount": 16,
+  "pageCount": 18,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exam question bank for Set Theory, Relations, Posets, and Functions containing expected numerical and proof-based university questions.",
+  "overview": "DM Unit 2 · Question Bank · 14 solved questions · grouped by syllabus topic · most likely first · ★★★ set: every Unit 2 question asked in two or more of the 21 previous papers (MR22 and MR21)",
   "topics": [
    {
-    "title": "Equivalence Relations & Closures",
-    "summary": "Verifying reflexivity, symmetry, transitivity, and constructing transitive closures via Warshall's algorithm.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 2: Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Let R be a relation on Z where a R b iff a - b is divisible by 5. Prove R is an equivalence relation.",
-     "Find the equivalence classes for congruence modulo m.",
-     "Compute the transitive closure using Warshall's algorithm on a 4×4 binary relation matrix."
+     "Relations and their Properties Q1. Explain the properties of binary relations with examples.",
+     "Given the relation matrix MR = [[1, 0, 1], [1, 1, 0], [1, 1, 1]] of a relation R on {1, 2, 3}, find the matrices of R² = R ∘ R and R³ = R ∘ R ∘ R.",
+     "Define a binary relation. Give an example.",
+     "Find the transitive closure of the relation R = {(1, 2), (2, 3), (3, 4), (4, 1)} on A = {1, 2, 3, 4}. Show the powers Rⁱ that give new elements.",
+     "Equivalence and Compatibility Relations Q5. Define an equivalence relation with an example.",
+     "What is a compatibility relation? Write the procedure to find maximal compatibility blocks."
     ],
     "formulas": [
-     "Warshall step: W_k[i, j] = W_{k-1}[i, j] ∨ (W_{k-1}[i, k] ∧ W_{k-1}[k, j])"
+     "show R is an equivalence relation. ★★ July 2025 (CSB) 3d",
+     "is R an equivalence relation? ★★ July 2025 IT (MR21) 3a",
+     "show compatibility, find maximal blocks. ★★"
     ],
-    "example": "Equivalence classes of mod 5 are [0], [1], [2], [3], [4]."
+    "example": "Standard university question: Relations and their Properties Q1. Explain the properties of binary relations with examples."
    },
    {
-    "title": "Posets, Hasse Diagrams & Bijections",
-    "summary": "Drawing visual Hasse diagrams and proving one-to-one and onto function mappings.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Draw the Hasse diagram for the divisibility relation on D_36.",
-     "Find maximal, minimal, greatest, and least elements in (P(S), ⊆).",
-     "Prove that f: R → R defined by f(x) = (3x + 7) / 2 is bijective and find its inverse."
+     "Define a set and give two examples.",
+     "Recall the formula for the number of subsets of a set with n elements.",
+     "What is a power set?",
+     "What is the difference between a subset and a proper subset?",
+     "Discuss inclusion and equality of sets.",
+     "Define Venn diagram with an example."
     ],
     "formulas": [
-     "f(x1) = f(x2) ⟹ x1 = x2 (Injective)",
-     "∀ y, ∃ x: f(x) = y (Surjective)"
+     "show R is an equivalence relation. ★★ Mar 2023 (MR21) 3d",
+     "draw the Hasse diagram. ★★ Jan 2026 (MR21) 3b",
+     "find f∘g, g∘f, f∘g∘h, g∘h∘f. ★★ July 2025 3c"
     ],
-    "example": "Hasse diagram of D_36 has 1 at the bottom and 36 at the top."
+    "example": "Practice problem: Define a set and give two examples."
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "show R is an equivalence relation. ★★ July 2025 (CSB) 3d",
+     "is R an equivalence relation? ★★ July 2025 IT (MR21) 3a",
+     "show compatibility, find maximal blocks. ★★",
+     "show R is an equivalence relation. ★★ Mar 2023 (MR21) 3d",
+     "draw the Hasse diagram. ★★ Jan 2026 (MR21) 3b",
+     "find f∘g, g∘f, f∘g∘h, g∘h∘f. ★★ July 2025 3c"
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Congruence modulo m equivalence relation proof",
-   "Hasse diagram construction and GLB/LUB determination"
   ]
  },
  "NOTE-DM-TEJA-QB-U3": {
@@ -7860,42 +7948,66 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 3,
   "title": "DM Unit 3: Question Bank",
-  "pageCount": 15,
+  "pageCount": 14,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exam question bank for Algebraic Structures and Lattices focusing on group tests, subgroup proofs, Lagrange's Theorem, and lattice properties.",
+  "overview": "DM Unit 3 · Question Bank · 12 solved questions · grouped by syllabus topic · most likely first · ★★★ set: every Unit 3 question asked in two or more of the 21 previous papers (MR22 and MR21)",
   "topics": [
    {
-    "title": "Group & Abelian Group Verifications",
-    "summary": "Proving four group axioms (closure, associativity, identity, inverse) for modular and matrix sets.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 3: Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "Show that the set G = {1, 2, 3, 4, 5, 6} under multiplication modulo 7 forms an abelian group.",
-     "Prove that identity element and inverses in a group are unique.",
-     "Show that (ab)^(-1) = b^(-1) a^(-1) for all elements in a group."
+     "Define an algebraic system. Give two examples of algebraic systems, one with a single binary operation and another with two binary operations.",
+     "Semigroups and Monoids Q2. Define a monoid and state its properties.",
+     "Define a semigroup. Give an example.",
+     "On the set ℚ of all rational numbers, the operation ∗ is defined by a ∗ b = a + b − ab. Show that under this operation ℚ forms a commutative monoid.",
+     "Groups Q5. Prove that the set of even integers forms a group under addition.",
+     "Let G = {1, −1, i, −i}. Show that G forms an abelian group under usual multiplication, and find the order of every element."
     ],
     "formulas": [
-     "Inverse of product: (ab)^(-1) = b^(-1) a^(-1)"
+     "is (R, ∗) a monoid? ★★ July 2025 (CSB) 4d",
+     "semigroup or monoid? (solved in the notes) ★★ Dec 2024 4c",
+     "find the order of every element. (solved in the notes) ★★"
     ],
-    "example": "Multiplication modulo 7 table (Cayley table) confirms closure and identity = 1."
+    "example": "Standard university question: Define an algebraic system. Give two examples of algebraic systems, one with a single binary operation and another with two binary operations."
    },
    {
-    "title": "Lagrange's Theorem & Lattices",
-    "summary": "Subgroup order divisibility and lattice algebraic identities.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "State and prove Lagrange's Theorem for finite groups.",
-     "Show that if a lattice is distributive, complement of any element is unique.",
-     "Prove that every chain is a distributive lattice."
+     "Write the properties of an algebraic system with an example.",
+     "Explain identity and inverse elements in algebraic systems with examples.",
+     "Give an algebraic system that is associative but not commutative; prove both with examples. (solved in the notes)",
+     "Describe the concepts subalgebra and direct product.",
+     "On R, a ∗ b = a + b + 2ab: is (R, ∗) a monoid?",
+     "S = N × N, (a,b) ∗ (c,d) = (ac, bd): show S is a semigroup."
     ],
     "formulas": [
-     "|G| = |H| × [G : H]"
+     "does Q form a group? ★★ Jan 2024 4c",
+     "prove (A, |) is a lattice (LUB and GLB of all pairs). (solved in the notes) ★★",
+     "Other examples: (ℕ, ×), (strings, concatenation) with one operation; (ℤ, +, ×) and ({0, 1}, ∨, ∧)"
     ],
-    "example": "A group of order 7 can have only trivial subgroups of order 1 and 7."
+    "example": "Practice problem: Write the properties of an algebraic system with an example."
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "is (R, ∗) a monoid? ★★ July 2025 (CSB) 4d",
+     "semigroup or monoid? (solved in the notes) ★★ Dec 2024 4c",
+     "find the order of every element. (solved in the notes) ★★",
+     "does Q form a group? ★★ Jan 2024 4c",
+     "prove (A, |) is a lattice (LUB and GLB of all pairs). (solved in the notes) ★★",
+     "Other examples: (ℕ, ×), (strings, concatenation) with one operation; (ℤ, +, ×) and ({0, 1}, ∨, ∧)"
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Lagrange's Theorem proof and its direct corollaries",
-   "Proof that a complemented distributive lattice has unique complements"
   ]
  },
  "NOTE-DM-TEJA-QB-U4": {
@@ -7903,42 +8015,64 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 4,
   "title": "DM Unit 4: Question Bank",
-  "pageCount": 16,
+  "pageCount": 17,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exam question bank for Combinatorics and Recurrence Relations with analytical problem sets on arrangements, Pigeonhole Principle, and characteristic roots.",
+  "overview": "DM Unit 4 · Question Bank · 14 solved questions · grouped by syllabus topic · most likely first · ★★★ set: every Unit 4 question asked in two or more of the 21 previous papers (MR22 and MR21)",
   "topics": [
    {
-    "title": "Combinatorial Permutation & Pigeonhole Problems",
-    "summary": "Standard university word problems on selections, arrangements, and existence theorems.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 4: Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "How many arrangements can be formed from 'MATHEMATICS' such that vowels always appear together?",
-     "Show that in any set of 5 integers, there are two whose difference is divisible by 4.",
-     "Find the number of non-negative integer solutions to x1 + x2 + x3 + x4 = 17."
+     "State and prove the pigeonhole principle. Discuss it with a suitable example and its applications.",
+     "Write the statement of the pigeonhole principle.",
+     "Define combination.",
+     "Find the number of 5-letter words which contain three different consonants and two different vowels of the English alphabet.",
+     "In how many ways can a committee of 5 ladies and 4 gents be chosen from 9 ladies and 15 gents, if gent A refuses to take part when lady B is on the committee?",
+     "Find the number of ways in which the letters of the word MATHEMATICS can be arranged."
     ],
     "formulas": [
-     "Stars and Bars: C(n + r - 1, r - 1) solutions"
+     "arrangements; T, I, U separated by exactly 2 letters; 6-letter words with no N. (solved in the notes) ★★",
+     "25 know Java, 28 Oracle, 7 neither: how many know both? ★★ Feb 2024 IT (MR21) 3a",
+     "total objects ≤ 1 + 1 + … + 1 (m boxes) = m"
     ],
-    "example": "For x1 + x2 + x3 + x4 = 17: C(17 + 4 - 1, 4 - 1) = C(20, 3) = 1140 solutions."
+    "example": "Standard university question: State and prove the pigeonhole principle. Discuss it with a suitable example and its applications."
    },
    {
-    "title": "Solving Recurrence Relations",
-    "summary": "Solving linear homogeneous and non-homogeneous recurrence relations.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Solve a_n - 6a_{n-1} + 9a_{n-2} = 0 with a0 = 1, a1 = 6.",
-     "Solve a_n - 4a_{n-1} + 4a_{n-2} = 2^n using characteristic roots.",
-     "Solve a_n = 2a_{n-1} + 1 with a0 = 0 using Generating Functions."
+     "How many 4-digit numbers from 2,3,5,6,8,9 with repetition allowed? (solved in the notes)",
+     "How many 5-letter words have vowels as first and last letters (repetition allowed)?",
+     "In how many ways can we draw a heart or a king from a pack of cards?",
+     "How many ways to get a sum of 8 when two indistinguishable dice are rolled?",
+     "How many ways to get an odd sum when two distinguishable dice are rolled?",
+     "Explain the practical importance of combinatorial analysis in algorithm design."
     ],
     "formulas": [
-     "Repeated root solution: a_n = (c1 + c2 n) r^n"
+     "n ≤ m and n > m — a contradiction",
+     "total ≤ m(⌈n/m⌉ − 1) < m(n/m + 1 − 1) = n"
     ],
-    "example": "Roots of r^2 - 6r + 9 = 0 are r = 3, 3; general solution a_n = (c1 + c2 n) 3^n."
+    "example": "Practice problem: How many 4-digit numbers from 2,3,5,6,8,9 with repetition allowed? (solved in the notes)"
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "arrangements; T, I, U separated by exactly 2 letters; 6-letter words with no N. (solved in the notes) ★★",
+     "25 know Java, 28 Oracle, 7 neither: how many know both? ★★ Feb 2024 IT (MR21) 3a",
+     "total objects ≤ 1 + 1 + … + 1 (m boxes) = m",
+     "n ≤ m and n > m — a contradiction",
+     "total ≤ m(⌈n/m⌉ − 1) < m(n/m + 1 − 1) = n"
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Complete solution of non-homogeneous recurrence relations",
-   "Generating functions step-by-step resolution for first and second order recurrences"
   ]
  },
  "NOTE-DM-TEJA-QB-U5": {
@@ -7946,49 +8080,73 @@ const NOTE_SUMMARIES = {
   "subjectId": "DM",
   "chapter": 5,
   "title": "DM Unit 5: Question Bank",
-  "pageCount": 16,
+  "pageCount": 32,
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Exam question bank for Graph Theory, Planarity, Coloring, and Trees containing classic examination graph problems and MST algorithms.",
+  "overview": "DM Unit 5 · Question Bank · 28 solved questions · grouped by syllabus topic · most likely first · ★★★ set: every Unit 5 question asked in two or more of the 21 previous papers (MR22 and MR21)",
   "topics": [
    {
-    "title": "Degrees, Handshaking & Planarity Problems",
-    "summary": "Numerical graph topology, Handshaking theorem calculations, and Euler's formula proofs.",
+    "title": "★★★ High-Yield Exam Questions (Most Likely)",
+    "summary": "Crucial university examination questions for DM Unit 5: Question Bank identified with maximum historical recurrence and 3-star rating.",
     "points": [
-     "A connected planar graph has 20 vertices and each vertex has degree 3. Find the number of regions.",
-     "Show that K_{3,3} is non-planar using Euler's inequality E ≤ 2V - 4.",
-     "Prove that the chromatic number of any bipartite graph with at least one edge is 2."
+     "State and prove the fundamental theorem of graph theory. Hence show that the number of vertices of odd degree is even.",
+     "Name and draw the graphs K₅, C₅, W₅, K₃,₃ and K₄,₄.",
+     "Show that the given pair of graphs G (a pentagon) and H (a pentagram) are isomorphic.",
+     "How do we determine whether two graphs are isomorphic or not? Explain with an example.",
+     "Define subgraphs with suitable examples.",
+     "Trees and their Properties Q7. List the applications of trees."
     ],
     "formulas": [
-     "Handshaking: 2|E| = Σ deg(v)",
-     "Regions R = E - V + 2"
+     "Kruskal's minimal spanning tree. ★★★ Aug 2023 (MR21) 6d, July 2025 (MR21) 6d — figures in the paper",
+     "Prim's minimal spanning tree. ★★★ June 2026 6c, Feb 2024 IT (MR21) 6c — figures in the paper",
+     "spanning tree using BFS. ★★★ Mar 2023 (MR21) 6a, Aug 2024 (MR21) 6b — figures in the paper (method solved above)"
     ],
-    "example": "20 vertices with degree 3: 2E = 20 × 3 = 60 ⟹ E = 30. R = 30 - 20 + 2 = 12 regions."
+    "example": "Standard university question: State and prove the fundamental theorem of graph theory. Hence show that the number of vertices of odd degree is even."
    },
    {
-    "title": "Minimum Spanning Tree Execution",
-    "summary": "Running Kruskal's and Prim's algorithms on given weighted graphs with full tracing.",
+    "title": "★★ Core Numerical & Analytical Practice Problems",
+    "summary": "Step-by-step problem-solving questions testing computational logic, circuit reduction, and algebraic proofs.",
     "points": [
-     "Trace Kruskal's algorithm on a given 7-vertex weighted graph and compute total MST weight.",
-     "Trace Prim's algorithm starting from vertex A and show step-by-step vertex/edge selection.",
-     "Prove that adding any edge to a tree creates a unique simple cycle."
+     "Define order and size of a graph.",
+     "What is the degree of a graph (vertex)?",
+     "Maximum number of edges in a simple undirected graph with n vertices.",
+     "Define bipartite graph.",
+     "Define degree sequence with an example.",
+     "Is there a simple graph with degree sequence (1,1,3,3,3,4,6,7)?"
     ],
     "formulas": [
-     "Total MST edges = |V| - 1"
+     "20 vertices, each of degree 3: number of regions. (solved in the notes) ★★ Dec 2025 6c",
+     "number of regions. (solved in the notes) ★★ July 2025 (CSB) 6a",
+     "Σv∈V deg(v) = 2 + 2 + … + 2 (|E| times) = 2|E|"
     ],
-    "example": "Kruskal's sorts edges by weight and rejects any edge that closes a cycle."
+    "example": "Practice problem: Define order and size of a graph."
+   },
+   {
+    "title": "Exam Quick-Revision Cheat Sheet & Formulae",
+    "summary": "Essential formulas, identities, inference rules, and standard theorems extracted directly from the notes summary sheet.",
+    "points": [
+     "Always state definitions and boundary conditions before starting calculations.",
+     "Use standard tabular format for truth tables, state tables, and Karnaugh maps.",
+     "Cross-verify intermediate results using algebraic identities and normal forms."
+    ],
+    "formulas": [
+     "Kruskal's minimal spanning tree. ★★★ Aug 2023 (MR21) 6d, July 2025 (MR21) 6d — figures in the paper",
+     "Prim's minimal spanning tree. ★★★ June 2026 6c, Feb 2024 IT (MR21) 6c — figures in the paper",
+     "spanning tree using BFS. ★★★ Mar 2023 (MR21) 6a, Aug 2024 (MR21) 6b — figures in the paper (method solved above)",
+     "20 vertices, each of degree 3: number of regions. (solved in the notes) ★★ Dec 2025 6c",
+     "number of regions. (solved in the notes) ★★ July 2025 (CSB) 6a",
+     "Σv∈V deg(v) = 2 + 2 + … + 2 (|E| times) = 2|E|"
+    ],
+    "example": "Rapid verification using reference identities."
    }
-  ],
-  "mustKnow": [
-   "Euler's planar graph formula proof: V - E + R = 2",
-   "Kruskal's and Prim's algorithm step-by-step execution on university exam graph problems"
   ]
  }
 };
 
 if (typeof window !== 'undefined') {
   window.NOTE_SUMMARIES = NOTE_SUMMARIES;
+  window.NOTES_CONTENT_INDEX = NOTE_SUMMARIES;
 }
 
 if (typeof module !== 'undefined' && module.exports) {
