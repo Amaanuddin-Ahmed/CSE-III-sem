@@ -11699,12 +11699,9 @@ html {
   letter-spacing: -0.3px !important;
 }
 
-/* Small font for "by Teja" */
+/* Author text hidden */
 .teja-author-text {
-  font-size: 13.5px !important;
-  font-weight: 600 !important;
-  color: #6366f1 !important;
-  letter-spacing: -0.1px !important;
+  display: none !important;
 }
 
 .teja-main-chevron {

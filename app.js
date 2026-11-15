@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-ocr-fixes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-ai-notes-title-clean-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1524,7 +1524,6 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         <div class="teja-main-row" id="tejaMainRow" role="button" tabindex="0" aria-expanded="${isMainOpen}">
           <div class="teja-main-left">
             <span class="teja-title-text">AI Notes</span>
-            <span class="teja-author-text">by Teja</span>
           </div>
           <div class="teja-main-right">
             <i class="fa-solid fa-chevron-down teja-main-chevron"></i>
