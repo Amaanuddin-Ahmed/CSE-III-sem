@@ -11638,3 +11638,109 @@ html {
     justify-content: space-between !important;
   }
 }
+
+
+/* ==============================================================
+   AI Notes (by teja) Dropdown Accordion Component
+   ============================================================== */
+.teja-ai-accordion-card {
+  border: 1.5px solid #c7d2fe !important;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%) !important;
+  margin-bottom: 20px !important;
+  border-radius: var(--radius-md, 12px) !important;
+  overflow: hidden !important;
+  box-shadow: 0 3px 12px rgba(99, 102, 241, 0.08) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.teja-ai-accordion-card:hover {
+  border-color: #818cf8 !important;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.14) !important;
+}
+
+.teja-ai-accordion-card.open {
+  border-color: #6366f1 !important;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18) !important;
+}
+
+.teja-accordion-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 14px 18px !important;
+  background: linear-gradient(90deg, #ffffff 0%, #f5f3ff 100%) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: background 0.15s ease !important;
+}
+
+.teja-ai-accordion-card.open .teja-accordion-header {
+  background: #f5f3ff !important;
+  border-bottom: 1.5px solid #e0e7ff !important;
+}
+
+.teja-accordion-header:hover {
+  background: linear-gradient(90deg, #faf5ff 0%, #ede9fe 100%) !important;
+}
+
+.teja-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.28) !important;
+  flex-shrink: 0 !important;
+}
+
+.teja-count-badge {
+  background: #ede9fe !important;
+  color: #6d28d9 !important;
+  border: 1px solid #ddd6fe !important;
+  font-weight: 700 !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.teja-ai-accordion-card .ch-chevron {
+  color: #7c3aed !important;
+}
+
+.teja-folder-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-bottom: 14px !important;
+  padding: 10px 14px !important;
+  background: #f8fafc !important;
+  border-radius: 8px !important;
+  border: 1px dashed #cbd5e1 !important;
+}
+
+.teja-drive-folder-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #4f46e5 !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+}
+
+.teja-drive-folder-link:hover {
+  color: #3730a3 !important;
+  text-decoration: underline !important;
+}
+
+.teja-drive-folder-link i.fa-brands.fa-google-drive {
+  color: #0f9d58 !important;
+  font-size: 17px !important;
+}

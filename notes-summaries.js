@@ -6973,57 +6973,1018 @@ const NOTE_SUMMARIES = {
    "Two-Phase Locking (2PL) ensures conflict serializability but does NOT prevent deadlocks.",
    "Primary index is created on ordered key attribute; secondary index on non-ordered attribute."
   ]
- }
-,
-  "NOTE-DM-QB-01": {
+ },
+ "NOTE-DM-QB-01": {
   "noteId": "NOTE-DM-QB-01",
   "subjectId": "DM",
   "chapter": 4,
   "title": "DM Master Unit-Wise Question Bank with Analytical Solutions",
   "summary": "Comprehensive 5-unit master question bank for Discrete Mathematics. Covers Mathematical Logic (truth tables, PDNF, PCNF, valid arguments), Set Theory & Relations (Hasse diagrams, poset, lattices), Algebraic Structures (semigroups, monoids, groups, Lagrange's Theorem), Elementary Combinatorics (Pigeonhole principle, permutations, combinations, recurrence relations), and Graph Theory (Eulerian & Hamiltonian graphs, trees, chromatic numbers, planar graphs)."
-},
-  "NOTE-COA-ANS-01": {
+ },
+ "NOTE-COA-ANS-01": {
   "noteId": "NOTE-COA-ANS-01",
   "subjectId": "COA",
   "chapter": 1,
   "title": "COA Part-A Model Short Answers & Formulations",
   "summary": "Official MGIT model short answer key for 2-mark Part-A questions. Contains concise answers for Boolean algebra theorems, canonical forms, register transfer statements, bus interconnection, computer instructions, addressing modes, pipeline hazards, memory hierarchy, cache hit/miss formulas, and interrupt handling cycles."
-},
-  "NOTE-COA-ANS-02": {
+ },
+ "NOTE-COA-ANS-02": {
   "noteId": "NOTE-COA-ANS-02",
   "subjectId": "COA",
   "chapter": 3,
   "title": "COA Part-B Comprehensive Essay & Architecture Solutions",
   "summary": "In-depth Part-B academic answer bank with full circuit block diagrams. Highlights Booth's multiplication algorithm with step-by-step register tracing, restoring and non-restoring division, microprogram sequencer architecture, hardwired vs microprogrammed control unit comparison, vector processing, and memory interleaving."
-},
-  "NOTE-DBMS-REC-01": {
+ },
+ "NOTE-DBMS-REC-01": {
   "noteId": "NOTE-DBMS-REC-01",
   "subjectId": "DBMS",
   "chapter": 4,
   "title": "DBMS Unit 4: Database Recovery Systems Architecture",
   "summary": "Detailed lecture slides on failure classification (transaction failure, system crash, disk failure), storage structure (volatile, non-volatile, stable), recovery and atomicity, log-based recovery schemes (deferred vs immediate database modification), checkpoints, shadow paging, and the ARIES recovery algorithm (Analysis, Redo, Undo passes)."
-},
-  "NOTE-DBMS-CONC-01": {
+ },
+ "NOTE-DBMS-CONC-01": {
   "noteId": "NOTE-DBMS-CONC-01",
   "subjectId": "DBMS",
   "chapter": 4,
   "title": "DBMS Unit 4: Advanced Concurrency Control & Two-Phase Locking",
   "summary": "Comprehensive guide to concurrency control protocols in multi-user DBMS environments. Details Lock-Based Protocols (Shared vs Exclusive locks, Two-Phase Locking Protocol - Basic 2PL, Strict 2PL, Rigorous 2PL), Timestamp-Based Ordering protocols, Thomas' Write Rule, Validation-Based protocols, Multi-version schemes, and Deadlock Prevention & Detection strategies (Wait-Die, Wound-Wait, Wait-For Graphs)."
-},
-  "NOTE-DBMS-TXN-01": {
+ },
+ "NOTE-DBMS-TXN-01": {
   "noteId": "NOTE-DBMS-TXN-01",
   "subjectId": "DBMS",
   "chapter": 4,
   "title": "DBMS Unit 4: ACID Transactions & Serializability",
   "summary": "Foundational slides covering Transaction Concept and ACID Properties (Atomicity, Consistency, Isolation, Durability). Analyzes transaction execution states (Active, Partially Committed, Committed, Failed, Aborted), concurrent executions, serial vs concurrent schedules, conflict serializability, precedence graphs (cycle detection), and view serializability."
-},
-  "NOTE-DBMS-TXN-02": {
+ },
+ "NOTE-DBMS-TXN-02": {
   "noteId": "NOTE-DBMS-TXN-02",
   "subjectId": "DBMS",
   "chapter": 4,
   "title": "DBMS Unit 4: Transaction Processing & Conflict Equivalence",
   "summary": "Updated 7th edition transaction management notes exploring transaction isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable), dirty reads, non-repeatable reads, phantom phenomenon, and testing for conflict equivalence using topological sorting of precedence graphs."
-}
+ },
+ "NOTE-COA-TEJA-U1": {
+  "noteId": "NOTE-COA-TEJA-U1",
+  "subjectId": "COA",
+  "chapter": 1,
+  "title": "COA Unit 1: Boolean Algebra, Data Representation & Digital Computers (AI Notes by Teja)",
+  "pageCount": 24,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Comprehensive AI-curated study material for COA Unit 1 covering foundational Boolean algebra, logic gates, minimization theorems, fixed-point and floating-point data representations, complements, error-correcting codes, and computer organization block diagrams.",
+  "topics": [
+   {
+    "title": "Boolean Algebra Laws & Logic Gates",
+    "summary": "Mathematical framework governing two-valued logic systems, identity, distributive, absorption, and De Morgan's laws.",
+    "points": [
+     "De Morgan's Laws: (A + B)' = A' · B' and (A · B)' = A' + B'",
+     "Universal Gates: NAND and NOR can synthesize any Boolean function without other gate types.",
+     "Canonical Forms: SOP (Sum of Min-terms, Σm) and POS (Product of Max-terms, ΠM)."
+    ],
+    "formulas": [
+     "A + A'B = A + B",
+     "AB + A'C + BC = AB + A'C (Consensus Theorem)"
+    ],
+    "example": "F(A,B,C) = A'B + AB' can be implemented using only 4 NAND gates."
+   },
+   {
+    "title": "Data Representation & Complements",
+    "summary": "Binary representation of signed numbers, fixed-point and IEEE 754 floating-point standards.",
+    "points": [
+     "r's and (r-1)'s Complements: Radix complements enable binary subtraction via addition.",
+     "2's Complement: Computed as 1's complement + 1; provides unique representation for zero and simple arithmetic hardware.",
+     "IEEE 754 Single Precision: 32 bits = 1 sign bit + 8 exponent bits (bias 127) + 23 mantissa bits."
+    ],
+    "formulas": [
+     "Value = (-1)^s × 1.M × 2^(E - 127)",
+     "2's complement of N = 2^n - N"
+    ],
+    "example": "Subtracting 5 from 9 in 4-bit binary: 9 + (2's comp of 5) = 1001 + 1011 = 10100 -> discard carry -> 0100 (+4)."
+   },
+   {
+    "title": "Error Detection & Hamming Codes",
+    "summary": "Parity bits and forward error-correcting Hamming codes for reliable memory and transmission.",
+    "points": [
+     "Parity Bit: Appended to detect single-bit errors; fails for even number of bit errors.",
+     "Hamming (7, 4) Code: Uses 3 parity bits at bit positions 1, 2, 4 to protect 4 data bits.",
+     "Parity Bit Calculation: 2^p ≥ m + p + 1 where m is data bits and p is parity bits."
+    ],
+    "formulas": [
+     "2^p ≥ m + p + 1",
+     "Syndrome word S = P3 P2 P1 indicates exact faulty bit position."
+    ],
+    "example": "For 4 data bits, 2^3 = 8 ≥ 4 + 3 + 1 = 8, exactly 3 parity bits are required."
+   }
+  ],
+  "mustKnow": [
+   "De Morgan's theorem statements and dual logic circuit diagrams",
+   "Why 2's complement is universally preferred in modern ALUs over 1's complement",
+   "IEEE 754 single-precision format layout and bit calculations",
+   "Hamming code parity bit assignment and syndrome decoding formula"
+  ]
+ },
+ "NOTE-COA-TEJA-U2": {
+  "noteId": "NOTE-COA-TEJA-U2",
+  "subjectId": "COA",
+  "chapter": 2,
+  "title": "COA Unit 2: Combinational & Sequential Logic (AI Notes by Teja)",
+  "pageCount": 28,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "In-depth treatment of combinational logic design (Adders, Subtractors, CLA, Multiplexers, Decoders) and clocked sequential circuits (Flip-Flops, Race-Around Condition, Registers, and Counters).",
+  "topics": [
+   {
+    "title": "Adders & Carry Lookahead Logic (CLA)",
+    "summary": "Fast addition circuits overcoming ripple carry propagation delays through parallel generate and propagate terms.",
+    "points": [
+     "Half Adder: Sum = A ⊕ B, Carry = AB.",
+     "Full Adder: Sum = A ⊕ B ⊕ Cin, Carry Cout = AB + Cin(A ⊕ B).",
+     "Carry Lookahead Adder: Computes Gi = AiBi (generate) and Pi = Ai ⊕ Bi (propagate) simultaneously.",
+     "Total addition delay in CLA is independent of the word length n."
+    ],
+    "formulas": [
+     "Ci+1 = Gi + Pi Ci",
+     "C1 = G0 + P0 C0",
+     "C2 = G1 + P1 G0 + P1 P0 C0"
+    ],
+    "example": "A 4-bit ripple carry adder has 8 gate delays, while a 4-bit CLA generates all carries in just 2 gate delays."
+   },
+   {
+    "title": "Multiplexers & Decoders",
+    "summary": "Standard MSI components for data selection, address decoding, and universal Boolean function implementation.",
+    "points": [
+     "Multiplexer (MUX): Selects 1 of 2^n inputs using n select lines.",
+     "Decoder: Decodes n binary input bits into 2^n unique output lines.",
+     "Function Realization: Any n-variable Boolean function can be implemented using a 2^(n-1)-to-1 MUX by connecting one variable to inputs."
+    ],
+    "formulas": [
+     "MUX selection: Y = Σ (m_k · I_k)",
+     "Decoder output: D_i = minterm_i"
+    ],
+    "example": "Implementing XOR using 2-to-1 MUX: Set select S = A, inputs I0 = B, I1 = B' -> Y = A'B + AB'."
+   },
+   {
+    "title": "Sequential Logic & Flip-Flops",
+    "summary": "Bistable memory circuits, characteristic equations, excitation tables, and timing constraints.",
+    "points": [
+     "SR Flip-Flop: Undefined for S = R = 1.",
+     "JK Flip-Flop: Toggles on J = K = 1; subject to race-around condition if clock pulse width tp > propagation delay tpd.",
+     "Master-Slave Flip-Flop: Eliminates race-around by clocking master on positive edge and slave on negative edge.",
+     "D & T Flip-Flops: D stores input bit (Q_next = D); T toggles state on each clock pulse (Q_next = T ⊕ Q)."
+    ],
+    "formulas": [
+     "JK Characteristic: Q_next = J Q' + K' Q",
+     "T Characteristic: Q_next = T ⊕ Q"
+    ],
+    "example": "In a 4-bit asynchronous ripple counter, each flip-flop's Q output triggers the clock input of the succeeding stage."
+   }
+  ],
+  "mustKnow": [
+   "Derivation of Carry Lookahead Adder carry equations C1, C2, C3, C4",
+   "Full subtractor implementation using two half subtractors and an OR gate",
+   "Race-around condition in JK flip-flop and Master-Slave resolution",
+   "State diagram, state table, and excitation table for 3-bit synchronous up/down counter"
+  ]
+ },
+ "NOTE-COA-TEJA-U3": {
+  "noteId": "NOTE-COA-TEJA-U3",
+  "subjectId": "COA",
+  "chapter": 3,
+  "title": "COA Unit 3: Register Transfer & Basic Computer Organization (AI Notes by Teja)",
+  "pageCount": 26,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Detailed study of Register Transfer Language (RTL), common bus architectures, micro-operations, computer instruction formats, instruction cycle timing, and control logic design.",
+  "topics": [
+   {
+    "title": "Register Transfer Language & Bus System",
+    "summary": "Symbolic notation for transfer of binary information between processor registers and memory.",
+    "points": [
+     "RTL Statement: P: R2 ← R1 denotes that data from R1 is transferred to R2 if control signal P = 1.",
+     "Common Bus System: Allows multiple registers to share a single set of wires; constructed using MUXs or Three-State Buffers.",
+     "Three-State Buffer: Outputs logic 0, logic 1, or high-impedance (Hi-Z) when control enable E = 0."
+    ],
+    "formulas": [
+     "Number of MUXs = bit size of registers (n)",
+     "MUX size = 2^k × 1 where 2^k ≥ number of registers"
+    ],
+    "example": "For four 4-bit registers (A, B, C, D), a common bus requires four 4-to-1 multiplexers."
+   },
+   {
+    "title": "Micro-operations: Arithmetic, Logic & Shift",
+    "summary": "Elementary operations executed on data stored in registers within a single clock pulse.",
+    "points": [
+     "Arithmetic Micro-operations: Add, Subtract, Increment, Decrement; implemented via 4-bit Arithmetic Circuit.",
+     "Logic Micro-operations: Bitwise AND, OR, XOR, NOT; used for bit manipulation (selective set, clear, complement).",
+     "Shift Micro-operations: Logical shift (zeros inserted), Circular shift (bits rotate), Arithmetic shift (preserves sign bit)."
+    ],
+    "formulas": [
+     "Arithmetic Shift Left: Multiplies by 2; detects overflow if Rn-1 ⊕ Rn-2 = 1",
+     "Arithmetic Shift Right: Divides by 2, copies sign bit"
+    ],
+    "example": "Selective Clear: Performing A ← A ∧ B' clears bits in register A wherever register B has a 1."
+   },
+   {
+    "title": "Basic Computer Instruction Cycle",
+    "summary": "Phased execution loop executed by the CPU for every instruction fetched from memory.",
+    "points": [
+     "Fetch Phase (T0, T1): T0: AR ← PC; T1: IR ← M[AR], PC ← PC + 1.",
+     "Decode Phase (T2): Decodes opcode bits 12-14 via 3-to-8 decoder, checks addressing mode bit 15 (I), loads AR with address bits 0-11.",
+     "Execute Phase (T3 - T6): Executes memory-reference, register-reference, or input-output instruction based on decoded control signals.",
+     "Interrupt Cycle: Saves return address PC to memory location 0, clears IEN, loads PC with address 1."
+    ],
+    "formulas": [
+     "Direct addressing: I = 0, Effective Address EA = IR(0-11)",
+     "Indirect addressing: I = 1, EA = M[IR(0-11)]"
+    ],
+    "example": "BSA (Branch and Save Return Address): M[AR] ← PC, PC ← AR + 1."
+   }
+  ],
+  "mustKnow": [
+   "Bus construction using Three-State Bus Buffers and active-high enable control lines",
+   "Arithmetic micro-operations truth table with mode select bits S1, S0 and Cin",
+   "Step-by-step instruction cycle flow chart: Fetch, Decode, Effective Address, Execution",
+   "Hardware implementation and control timing of Interrupt Cycle"
+  ]
+ },
+ "NOTE-COA-TEJA-U4": {
+  "noteId": "NOTE-COA-TEJA-U4",
+  "subjectId": "COA",
+  "chapter": 4,
+  "title": "COA Unit 4: Microprogrammed Control, CPU & Computer Arithmetic (AI Notes by Teja)",
+  "pageCount": 30,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Microprogrammed control unit design, processor register organization, addressing modes, RISC vs CISC principles, and hardware algorithms for multiplication (Booth's) and division.",
+  "topics": [
+   {
+    "title": "Microprogrammed Control Unit",
+    "summary": "Control unit architecture storing control words in a read-only Control Memory (ROM).",
+    "points": [
+     "Control Word: Bit string specifying micro-operations to be initiated during a clock cycle.",
+     "Microprogram Sequencer: Generates next address for control ROM based on branch logic, subroutine registers, and mapping logic.",
+     "Mapping: Converts 4-bit opcode into 7-bit microinstruction starting address in control memory."
+    ],
+    "formulas": [
+     "Next address generation: CAR ← CAR + 1 (increment) or CAR ← Target (branch/call)"
+    ],
+    "example": "Opcode 0011 mapped with 0-prefix and 00-suffix yields starting control address 0001100."
+   },
+   {
+    "title": "CPU Organization & Addressing Modes",
+    "summary": "Instruction formats, operand addressing techniques, and architectural trade-offs.",
+    "points": [
+     "Addressing Modes: Immediate, Direct, Indirect, Register, Register Indirect, Relative, Indexed, Base Register.",
+     "Relative Addressing: Effective Address EA = PC + Address Field (vital for position-independent code).",
+     "Indexed Addressing: EA = Index Register XR + Address Field (ideal for array indexing).",
+     "RISC vs CISC: RISC has fixed-length instructions, single-cycle execution, and load-store architecture; CISC has complex variable-length instructions."
+    ],
+    "formulas": [
+     "Relative EA = PC + Relative_offset",
+     "Indexed EA = XR + Address_base"
+    ],
+    "example": "If PC = 500 and address field = +20, the relative branch address is 500 + 20 = 520."
+   },
+   {
+    "title": "Computer Arithmetic: Booth's Multiplication",
+    "summary": "High-speed hardware algorithm for signed 2's complement multiplication.",
+    "points": [
+     "Booth's Recoding Rule: Examines bit pair (Q_0, Q_{-1}):",
+     "10 -> Subtract Multiplicand (A ← A - B), then Arithmetic Shift Right (ASHR).",
+     "01 -> Add Multiplicand (A ← A + B), then ASHR.",
+     "00 or 11 -> No arithmetic, ASHR only.",
+     "Count: Repeated n times for n-bit multiplier."
+    ],
+    "formulas": [
+     "Booth rule: 10: A ← A - M; 01: A ← A + M; both: ASHR(A, Q, Q-1)"
+    ],
+    "example": "Multiplying (+7) × (-3): Using 4 bits, M = 0111, Q = 1101, Q-1 = 0; Booth steps yield product 11101011 (-21)."
+   }
+  ],
+  "mustKnow": [
+   "Block diagram and sequencing logic of Microprogram Sequencer",
+   "Comprehensive definition and numerical calculation of all 8 Addressing Modes",
+   "Booth's multiplication algorithm flowchart and complete trace table",
+   "Restoring vs Non-restoring division algorithm comparisons"
+  ]
+ },
+ "NOTE-COA-TEJA-U5": {
+  "noteId": "NOTE-COA-TEJA-U5",
+  "subjectId": "COA",
+  "chapter": 5,
+  "title": "COA Unit 5: Input-Output & Memory Organization (AI Notes by Teja)",
+  "pageCount": 32,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exhaustive coverage of I/O interfacing, asynchronous data transfer, DMA transfer, priority interrupts, memory hierarchy, cache mapping techniques, and virtual memory paging.",
+  "topics": [
+   {
+    "title": "Asynchronous Data Transfer & I/O Modes",
+    "summary": "Techniques for synchronizing data transfers between independent clock domains.",
+    "points": [
+     "Strobe Method: Single control line; no acknowledgment, susceptible to lost data.",
+     "Handshaking Method: Two control lines (Data Ready and Data Accepted); fully handshake-verified protocol.",
+     "Modes of Transfer: Programmed I/O (CPU polling), Interrupt-driven I/O (device notifies CPU), DMA (hardware bypasses CPU)."
+    ],
+    "formulas": [
+     "Handshake sequence: Source activates Ready → Destination accepts and activates Accepted → Source deactivates Ready → Destination deactivates Accepted."
+    ],
+    "example": "In DMA burst transfer, the DMA controller takes complete control of the system bus and transfers an entire block of data."
+   },
+   {
+    "title": "Direct Memory Access (DMA) & Interrupts",
+    "summary": "Specialized high-speed hardware transfer and hardware priority arbitration.",
+    "points": [
+     "DMA Controller Registers: Address Register, Word Count Register, Control/Status Register.",
+     "Bus Request (BR) and Bus Grant (BG): CPU yields control of Address and Data buses to DMAC.",
+     "Daisy-Chaining Priority: Hardware series connection; device closest to CPU has highest priority for interrupt acknowledgment."
+    ],
+    "formulas": [
+     "Word count register decrements on each byte transfer; generates interrupt when WC = 0."
+    ],
+    "example": "Daisy chain: CPU asserts Interrupt Acknowledge (INTA); passes through Dev 1, Dev 2 until requesting device intercepts it."
+   },
+   {
+    "title": "Cache & Virtual Memory Organization",
+    "summary": "High-speed SRAM caching and secondary-storage virtual memory bridging the memory speed-capacity gap.",
+    "points": [
+     "Cache Mapping: Direct Mapping (Block k maps to Slot k mod N), Fully Associative (any line), Set-Associative (maps to any line within set).",
+     "Hit Ratio: h = Hits / (Hits + Misses); Average Access Time T_avg = h · T_c + (1 - h) · T_m.",
+     "Virtual Memory: Paging breaks logical address into Page Number and Offset; translated via Page Table / TLB to Physical Frame Number."
+    ],
+    "formulas": [
+     "T_avg = T_cache + (1 - h) × Miss_Penalty",
+     "Number of sets in set-associative cache = Total cache lines / k"
+    ],
+    "example": "If cache access is 2 ns, main memory access is 50 ns, and hit ratio is 0.95: T_avg = 2 + 0.05 × 50 = 4.5 ns."
+   }
+  ],
+  "mustKnow": [
+   "Handshaking timing waveforms: Source-initiated vs Destination-initiated transfers",
+   "DMA controller internal block diagram and CPU-DMA handshaking signals (BR, BG)",
+   "Daisy-chain priority interrupt hardware connection and polling comparisons",
+   "Cache mapping formulas and numerical calculations for Direct, Associative, and Set-Associative caches"
+  ]
+ },
+ "NOTE-COA-TEJA-CRASH": {
+  "noteId": "NOTE-COA-TEJA-CRASH",
+  "subjectId": "COA",
+  "chapter": 3,
+  "title": "COA Semester End Crash Pack (AI Notes by Teja)",
+  "pageCount": 45,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "High-yield semester-end revision crash pack summarizing the entire COA syllabus across Units 1–5: essential formulas, key circuit schematics, algorithm steps (Booth's, CLA, DMA), and predicted 10-mark essay derivations.",
+  "topics": [
+   {
+    "title": "Units 1 & 2 Core Synthesis: Logic, CLA & Counters",
+    "summary": "Quick recap of Boolean minimization, Carry Lookahead logic, and sequential flip-flop design.",
+    "points": [
+     "CLA Carry equations: C1 = G0 + P0 C0, C2 = G1 + P1 G0 + P1 P0 C0.",
+     "Master-Slave JK eliminates race-around.",
+     "Synchronous counter design recipe: State table → Flip-flop excitation table → K-maps → Logic gates."
+    ],
+    "formulas": [
+     "Gi = AiBi, Pi = Ai ⊕ Bi",
+     "JK excitation: Q(t)→Q(t+1) = 0→0: J=0, K=X; 0→1: J=1, K=X; 1→0: J=X, K=1; 1→1: J=X, K=0"
+    ],
+    "example": "3-bit binary counter requires 3 T flip-flops with inputs T1 = 1, T2 = Q1, T3 = Q1Q2."
+   },
+   {
+    "title": "Units 3 & 4 Core Synthesis: Instruction Cycle & Booth's",
+    "summary": "Processor timing, control unit microsequencing, and Booth's signed multiplication.",
+    "points": [
+     "Instruction Cycle: Fetch (T0, T1), Decode (T2), Effective address, Execute.",
+     "Booth's Algorithm: 10: subtract; 01: add; 00/11: shift.",
+     "Addressing modes: Immediate, Direct, Indirect, Relative (PC-based), Indexed (XR-based)."
+    ],
+    "formulas": [
+     "Booth ASHR preserves sign bit in A",
+     "Effective Address EA = PC + Relative_offset"
+    ],
+    "example": "Multiplication of negative binary numbers using Booth's requires sign extension."
+   },
+   {
+    "title": "Unit 5 Core Synthesis: DMA, Cache & Virtual Memory",
+    "summary": "I/O interfacing protocols, DMA controller operations, cache mapping formulas, and paging.",
+    "points": [
+     "DMA Controller: Bypasses CPU for bulk block transfers between memory and I/O.",
+     "Cache: T_avg = h · T_c + (1 - h) · T_m.",
+     "Paging: Logical address (Page, Offset) translated by Page Table to Physical Address (Frame, Offset)."
+    ],
+    "formulas": [
+     "Direct map tag bits = Memory bits - Index bits - Offset bits",
+     "Hit ratio h = Hits / Total_accesses"
+    ],
+    "example": "A 64 KB cache with 16-byte blocks has 4096 lines; index requires 12 bits, offset requires 4 bits."
+   }
+  ],
+  "mustKnow": [
+   "Carry Lookahead Adder full 4-bit schematic and delay comparison",
+   "Booth's multiplication trace table for positive × negative numbers",
+   "Instruction cycle state diagram with all phase transitions",
+   "Direct vs Set-Associative cache numerical analysis and hit ratio formulas"
+  ]
+ },
+ "NOTE-COA-TEJA-QB": {
+  "noteId": "NOTE-COA-TEJA-QB",
+  "subjectId": "COA",
+  "chapter": 3,
+  "title": "COA Semester End Question Bank (AI Notes by Teja)",
+  "pageCount": 20,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Curated collection of university semester-end examination questions across Units 1 to 5, organized by short questions (Part A, 2 Marks) and essay questions (Part B, 5 & 10 Marks).",
+  "topics": [
+   {
+    "title": "High-Frequency Part-A 2-Mark Conceptual Questions",
+    "summary": "Key definitions, laws, equations, and short conceptual distinctions.",
+    "points": [
+     "State De Morgan's laws and duality theorem.",
+     "What is the race-around condition in JK flip-flops?",
+     "Distinguish between micro-operations and microinstructions.",
+     "Define hit ratio and write the average memory access time formula.",
+     "What is DMA burst transfer vs cycle stealing?"
+    ],
+    "formulas": [
+     "h = Hits / (Hits + Misses)",
+     "2's complement of N = 2^n - N"
+    ],
+    "example": "Difference between static RAM (bistable latch) and dynamic RAM (capacitor refresh)."
+   },
+   {
+    "title": "High-Frequency Part-B 5 & 10-Mark University Essay Problems",
+    "summary": "Complete derivations, algorithm implementations, and hardware architectures.",
+    "points": [
+     "Design a 4-bit Carry Lookahead Adder and analyze its gate delay.",
+     "Multiply (-9) × (+6) using Booth's multiplication algorithm with step-by-step table.",
+     "Explain the Instruction Cycle with detailed timing diagrams (Fetch, Decode, Execute).",
+     "Explain Daisy Chaining priority interrupt hardware and handshaking.",
+     "Compare Direct Mapping, Associative Mapping, and Set-Associative Mapping with numerical example."
+    ],
+    "formulas": [
+     "Booth: 10 -> A - B, 01 -> A + B, ASHR",
+     "Ci+1 = Gi + Pi Ci"
+    ],
+    "example": "Designing a common bus system for eight 16-bit registers using three-state buffers."
+   }
+  ],
+  "mustKnow": [
+   "Full Carry Lookahead Adder derivation and logic circuit diagram",
+   "Booth's multiplication step-by-step execution table",
+   "DMA controller internal structure and handshaking lines (BR, BG)",
+   "Cache memory mapping address breakdown (Tag, Set, Word offset)"
+  ]
+ },
+ "NOTE-DM-TEJA-U1": {
+  "noteId": "NOTE-DM-TEJA-U1",
+  "subjectId": "DM",
+  "chapter": 1,
+  "title": "DM Unit 1: Mathematical Logic (AI Notes by Teja)",
+  "pageCount": 26,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Core lecture notes on Propositional Logic, connectives, truth tables, PCNF/PDNF canonical expansions, Predicate Logic, quantifiers, rules of inference, and formal mathematical proofs.",
+  "topics": [
+   {
+    "title": "Propositional Logic & Logical Connectives",
+    "summary": "Declarative statements, truth values, compound propositions, and connective definitions.",
+    "points": [
+     "Connectives: Negation (¬), Conjunction (∧), Disjunction (∨), Implication (→), Biconditional (↔).",
+     "Conditional Truth: p → q is FALSE if and only if p is True and q is False.",
+     "Converse, Inverse & Contrapositive: For p → q, Converse is q → p, Inverse is ¬p → ¬q, Contrapositive is ¬q → ¬p (logically equivalent to p → q).",
+     "Tautology: Always True; Contradiction: Always False; Contingency: Neither."
+    ],
+    "formulas": [
+     "p → q ≡ ¬p ∨ q",
+     "p ↔ q ≡ (p → q) ∧ (q → p)"
+    ],
+    "example": "If p = 'It rains' and q = 'Ground is wet', contrapositive is 'If ground is not wet, it does not rain'."
+   },
+   {
+    "title": "Normal Forms: PCNF & PDNF",
+    "summary": "Canonical standardized Boolean representations using Minterms and Maxterms.",
+    "points": [
+     "Minterm: Conjunction of all literals; exactly 1 in truth table for one row.",
+     "Maxterm: Disjunction of all literals; exactly 0 in truth table for one row.",
+     "PDNF (Principal Disjunctive Normal Form): Sum of all minterms where expression evaluates to True.",
+     "PCNF (Principal Conjunctive Normal Form): Product of all maxterms where expression evaluates to False."
+    ],
+    "formulas": [
+     "PDNF ≡ Σm(rows where F=1)",
+     "PCNF ≡ ΠM(rows where F=0)"
+    ],
+    "example": "For p ∧ q, PDNF is (p ∧ q); PCNF is (p ∨ q) ∧ (p ∨ ¬q) ∧ (¬p ∨ q)."
+   },
+   {
+    "title": "Predicate Logic & Rules of Inference",
+    "summary": "Quantified statements over domains and formal deduction systems for valid arguments.",
+    "points": [
+     "Quantifiers: Universal quantifier (∀x, for all x) and Existential quantifier (∃x, there exists x).",
+     "Negation of Quantifiers: ¬(∀x P(x)) ≡ ∃x ¬P(x) and ¬(∃x P(x)) ≡ ∀x ¬P(x).",
+     "Modus Ponens: From p and p → q, infer q.",
+     "Modus Tollens: From ¬q and p → q, infer ¬p.",
+     "Hypothetical Syllogism: From p → q and q → r, infer p → r."
+    ],
+    "formulas": [
+     "Modus Ponens: ((p → q) ∧ p) ⇒ q",
+     "Disjunctive Syllogism: ((p ∨ q) ∧ ¬p) ⇒ q"
+    ],
+    "example": "Valid argument: 'All men are mortal' (∀x(M(x) → O(x))), 'Socrates is a man' (M(s)) ∴ 'Socrates is mortal' (O(s))."
+   }
+  ],
+  "mustKnow": [
+   "Prove logical equivalence of conditional and contrapositive: (p → q) ≡ (¬q → ¬p)",
+   "Convert arbitrary propositional formulas into PCNF and PDNF without truth tables",
+   "Negation of nested quantified expressions: ¬(∀x ∃y (P(x,y) → Q(x,y)))",
+   "Step-by-step deductive proof using Rules of Inference (P, T, CP)"
+  ]
+ },
+ "NOTE-DM-TEJA-U2": {
+  "noteId": "NOTE-DM-TEJA-U2",
+  "subjectId": "DM",
+  "chapter": 2,
+  "title": "DM Unit 2: Set Theory, Relations & Functions (AI Notes by Teja)",
+  "pageCount": 28,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Comprehensive coverage of set operations, binary relations, equivalence relations, equivalence classes, partial ordering relations (posets), Hasse diagrams, and functions (injective, surjective, bijective).",
+  "topics": [
+   {
+    "title": "Binary Relations & Fundamental Properties",
+    "summary": "Subsets of Cartesian product A × A and essential relational properties.",
+    "points": [
+     "Reflexive: (a, a) ∈ R for all a ∈ A.",
+     "Symmetric: (a, b) ∈ R ⟹ (b, a) ∈ R.",
+     "Anti-symmetric: (a, b) ∈ R and (b, a) ∈ R ⟹ a = b.",
+     "Transitive: (a, b) ∈ R and (b, c) ∈ R ⟹ (a, c) ∈ R.",
+     "Equivalence Relation: Reflexive, Symmetric, and Transitive."
+    ],
+    "formulas": [
+     "Equivalence class [a] = {x ∈ A | (x, a) ∈ R}",
+     "Relation composition: R ∘ S"
+    ],
+    "example": "Equality relation (=) on integers is an equivalence relation. The relation (≤) is a partial order."
+   },
+   {
+    "title": "Partially Ordered Sets (Posets) & Hasse Diagrams",
+    "summary": "Relations that are Reflexive, Anti-symmetric, and Transitive, visualized via Hasse diagrams.",
+    "points": [
+     "Hasse Diagram: Eliminates self-loops (reflexivity) and transitive edges, displaying poset hierarchy from bottom to top.",
+     "Maximal & Minimal Elements: Elements with no successor or no predecessor.",
+     "Greatest & Least Elements: Unique top or bottom element if it exists.",
+     "LUB (Least Upper Bound / Supremum) and GLB (Greatest Lower Bound / Infimum)."
+    ],
+    "formulas": [
+     "Poset denoted as (P, ≤)",
+     "Divisibility poset: (D_n, |) where a ≤ b iff a divides b."
+    ],
+    "example": "For D_12 = {1, 2, 3, 4, 6, 12}: Least element is 1, greatest element is 12."
+   },
+   {
+    "title": "Functions & Bijections",
+    "summary": "Mappings between sets, classifications, invertibility, and compositions.",
+    "points": [
+     "Injective (One-to-One): f(x1) = f(x2) ⟹ x1 = x2.",
+     "Surjective (Onto): For every y ∈ B, there exists x ∈ A such that f(x) = y (Range = Codomain).",
+     "Bijective: Both Injective and Surjective; a function has an inverse f^(-1) if and only if it is Bijective.",
+     "Composition: (g ∘ f)(x) = g(f(x))."
+    ],
+    "formulas": [
+     "f: R → R, f(x) = 2x + 5 is bijective with inverse f^(-1)(y) = (y - 5) / 2"
+    ],
+    "example": "f: Z → Z defined by f(x) = x^2 is NOT injective (f(-2) = f(2) = 4) and NOT surjective (no integer gives -1)."
+   }
+  ],
+  "mustKnow": [
+   "Prove whether a given relation is an Equivalence Relation and find all equivalence classes",
+   "Draw Hasse diagram for divisibility relations (e.g. D_24 or D_30) and identify maximal/minimal elements",
+   "Formal proof of injectivity, surjectivity, and bijectivity for given functions",
+   "Compute composite function (g ∘ f)(x) and show that (g ∘ f)^(-1) = f^(-1) ∘ g^(-1)"
+  ]
+ },
+ "NOTE-DM-TEJA-U3": {
+  "noteId": "NOTE-DM-TEJA-U3",
+  "subjectId": "DM",
+  "chapter": 3,
+  "title": "DM Unit 3: Algebraic Structures & Lattices (AI Notes by Teja)",
+  "pageCount": 30,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Algebraic structures hierarchy (Semigroups, Monoids, Groups, Abelian Groups), Lagrange's theorem, Subgroups, Homomorphism, Lattices as posets, and Boolean algebra.",
+  "topics": [
+   {
+    "title": "Groups, Abelian Groups & Subgroups",
+    "summary": "Sets equipped with closed binary operations satisfying associativity, identity, and inverses.",
+    "points": [
+     "Semigroup: Closure + Associativity.",
+     "Monoid: Semigroup + Identity element e (a * e = a).",
+     "Group: Monoid + Inverse element a^(-1) for every a (a * a^(-1) = e).",
+     "Abelian Group: Group where binary operation is commutative (a * b = b * a).",
+     "Subgroup: A non-empty subset H ⊆ G that is itself a group under the same operation."
+    ],
+    "formulas": [
+     "Two-step subgroup test: a, b ∈ H ⟹ a * b^(-1) ∈ H",
+     "Order of group |G|"
+    ],
+    "example": "(Z, +) is an abelian group with identity 0 and inverse -a. (Z, ×) is only a monoid because non-unit integers lack multiplicative inverses."
+   },
+   {
+    "title": "Lagrange's Theorem & Cosets",
+    "summary": "Foundational theorem connecting the order of a subgroup to the order of a finite group.",
+    "points": [
+     "Cosets: For subgroup H ⊆ G, left coset aH = {ah | h ∈ H}; right coset Ha = {ha | h ∈ H}.",
+     "Lagrange's Theorem: The order of every subgroup H of a finite group G divides the order of G.",
+     "Corollary: If |G| = n and a ∈ G, then the order of element a divides |G|, and a^n = e.",
+     "Groups of prime order: Every group of prime order is cyclic and abelian."
+    ],
+    "formulas": [
+     "|G| = |H| × [G : H] where [G : H] is the index of H in G."
+    ],
+    "example": "If |G| = 12, possible subgroup orders are strictly divisors of 12: {1, 2, 3, 4, 6, 12}."
+   },
+   {
+    "title": "Lattices as Posets & Properties",
+    "summary": "Posets where every pair of elements has a unique Least Upper Bound (join, ∨) and Greatest Lower Bound (meet, ∧).",
+    "points": [
+     "Lattice Definition: (L, ≤) is a lattice if ∀ a, b ∈ L, a ∨ b = LUB(a, b) and a ∧ b = GLB(a, b) exist.",
+     "Bounded Lattice: Possesses least element 0 and greatest element 1.",
+     "Distributive Lattice: a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c).",
+     "Complemented Lattice: Bounded lattice where every element a has a complement a' such that a ∨ a' = 1 and a ∧ a' = 0.",
+     "Boolean Algebra: A complemented, distributive lattice."
+    ],
+    "formulas": [
+     "Absorption Laws: a ∨ (a ∧ b) = a and a ∧ (a ∨ b) = a",
+     "De Morgan in Lattices: (a ∨ b)' = a' ∧ b'"
+    ],
+    "example": "The power set lattice (P(S), ⊆) is a Boolean algebra where join is union (∪) and meet is intersection (∩)."
+   }
+  ],
+  "mustKnow": [
+   "Prove that the set of non-zero reals under multiplication forms an abelian group",
+   "Statement and formal proof of Lagrange's Theorem for finite groups",
+   "Show that the intersection of two subgroups is also a subgroup",
+   "Prove absorption laws and distributive property in lattices"
+  ]
+ },
+ "NOTE-DM-TEJA-U4": {
+  "noteId": "NOTE-DM-TEJA-U4",
+  "subjectId": "DM",
+  "chapter": 4,
+  "title": "DM Unit 4: Elementary Combinatorics & Recurrences (AI Notes by Teja)",
+  "pageCount": 32,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Permutations, combinations, Pigeonhole Principle, generating functions, and solution of linear homogeneous and non-homogeneous recurrence relations with constant coefficients.",
+  "topics": [
+   {
+    "title": "Permutations, Combinations & Pigeonhole Principle",
+    "summary": "Counting arrangements, selections, and existence guarantees via Dirichlet's box principle.",
+    "points": [
+     "Permutations P(n, r): Ordered arrangements: P(n, r) = n! / (n - r)!.",
+     "Combinations C(n, r): Unordered selections: C(n, r) = n! / (r!(n - r)!).",
+     "Permutations with Repetition: n! / (n1! n2! ... nk!).",
+     "Pigeonhole Principle (PHP): If n items are put into k containers with n > k, at least one container has ≥ 2 items.",
+     "Generalized PHP: At least one container holds ≥ ⌈n / k⌉ items."
+    ],
+    "formulas": [
+     "C(n, r) = C(n, n-r)",
+     "⌈n / k⌉ items minimum in one box"
+    ],
+    "example": "In a group of 367 people, since there are 366 possible birthdays, at least 2 people must share a birthday."
+   },
+   {
+    "title": "Generating Functions",
+    "summary": "Formal power series encoding sequences of numbers as polynomial coefficients.",
+    "points": [
+     "Generating Function Definition: G(x) = Σ a_n x^n = a0 + a1 x + a2 x^2 + ...",
+     "Standard Series: 1 / (1 - x) = Σ x^n (all 1s); 1 / (1 - ax) = Σ a^n x^n.",
+     "Shift Property: G(x) represents sequence {a_n}; x G(x) represents sequence shifted by 1."
+    ],
+    "formulas": [
+     "1 / (1 - x) = 1 + x + x^2 + ...",
+     "1 / (1 - x)^2 = Σ (n + 1) x^n"
+    ],
+    "example": "Generating function for sequence 1, 2, 4, 8, ... (2^n) is G(x) = 1 / (1 - 2x)."
+   },
+   {
+    "title": "Recurrence Relations & Solving Techniques",
+    "summary": "Equations expressing a term in terms of preceding terms, solved via characteristic roots.",
+    "points": [
+     "Linear Homogeneous: a_n - c1 a_{n-1} - c2 a_{n-2} = 0.",
+     "Characteristic Equation: r^2 - c1 r - c2 = 0.",
+     "Distinct Real Roots (r1 ≠ r2): General solution a_n = A (r1)^n + B (r2)^n.",
+     "Repeated Roots (r1 = r2 = r): General solution a_n = (A + B n) r^n.",
+     "Non-Homogeneous: a_n = a_n^(h) + a_n^(p) where a_n^(p) is particular solution matching the driving term."
+    ],
+    "formulas": [
+     "Fibonacci recurrence: F_n = F_{n-1} + F_{n-2} with F0=0, F1=1",
+     "r = (1 ± √5) / 2"
+    ],
+    "example": "Solve a_n - 5a_{n-1} + 6a_{n-2} = 0: Roots are r = 2, 3 ⟹ a_n = A 2^n + B 3^n."
+   }
+  ],
+  "mustKnow": [
+   "Pigeonhole principle problems: Minimum cards drawn to guarantee 3 of the same suit",
+   "Permutations of repeated letters: e.g. permutations of 'ENGINEERING' or 'ASSASSINATION'",
+   "Solve second-order linear recurrence relations with initial conditions using characteristic roots",
+   "Solve recurrence relations using Generating Functions method"
+  ]
+ },
+ "NOTE-DM-TEJA-U5": {
+  "noteId": "NOTE-DM-TEJA-U5",
+  "subjectId": "DM",
+  "chapter": 5,
+  "title": "DM Unit 5: Graph Theory, Trees & Spanning Trees (AI Notes by Teja)",
+  "pageCount": 34,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Graph terminology, Handshaking Lemma, Euler & Hamiltonian graphs, Planar graphs, Euler's formula, Chromatic number, Trees, and Minimum Spanning Tree algorithms (Kruskal's & Prim's).",
+  "topics": [
+   {
+    "title": "Graph Fundamentals & Handshaking Lemma",
+    "summary": "Vertices, edges, degrees, adjacency, and the foundational handshaking theorem.",
+    "points": [
+     "Handshaking Lemma: In any undirected graph G = (V, E), Σ deg(v) = 2 |E|.",
+     "Corollary: Every graph has an even number of vertices of odd degree.",
+     "Complete Graph K_n: Has n vertices and n(n - 1) / 2 edges.",
+     "Bipartite Graph: Vertices can be partitioned into V1, V2 such that every edge connects V1 to V2."
+    ],
+    "formulas": [
+     "Σ deg(v) = 2 |E|",
+     "K_n edges = n(n - 1) / 2",
+     "Complete bipartite K_{m,n} edges = m × n"
+    ],
+    "example": "A graph with 10 vertices each of degree 3: Sum of degrees = 30 = 2|E| ⟹ |E| = 15 edges."
+   },
+   {
+    "title": "Eulerian, Hamiltonian & Planar Graphs",
+    "summary": "Path traversal theorems and planar graph topological embeddings.",
+    "points": [
+     "Euler Circuit: Closed walk traversing every EDGE exactly once; exists iff every vertex has even degree.",
+     "Euler Path: Open walk traversing every edge once; exists iff graph has exactly 0 or 2 vertices of odd degree.",
+     "Hamiltonian Cycle: Closed walk visiting every VERTEX exactly once (NP-complete in general).",
+     "Planar Graph: Graph embeddable in the plane such that no two edges cross.",
+     "Euler's Formula: For any connected planar graph, V - E + R = 2 (where R is regions/faces)."
+    ],
+    "formulas": [
+     "Euler's planar formula: V - E + R = 2",
+     "Planar edge bound: E ≤ 3V - 6 (for V ≥ 3)"
+    ],
+    "example": "K_5 has V=5, E=10. Since 3V - 6 = 3(5) - 6 = 9 < 10, K_5 is non-planar."
+   },
+   {
+    "title": "Trees & Minimum Spanning Trees (MST)",
+    "summary": "Connected acyclic graphs, tree characterizations, Kruskal's and Prim's greedy algorithms.",
+    "points": [
+     "Tree Properties: Connected and acyclic; a tree with n vertices has exactly n - 1 edges.",
+     "Spanning Tree: Subgraph of G that is a tree containing all vertices of G.",
+     "Kruskal's Algorithm: Sorts edges in non-decreasing order of weights and adds edge if it does not form a cycle (greedy edge-by-edge).",
+     "Prim's Algorithm: Grows tree from an initial vertex by repeatedly adding the minimum-weight incident edge."
+    ],
+    "formulas": [
+     "Edges in tree: |E| = |V| - 1",
+     "Cayley's formula: n^(n-2) labeled trees on n vertices"
+    ],
+    "example": "A connected graph with 8 vertices and 7 edges with no cycles is strictly a tree."
+   }
+  ],
+  "mustKnow": [
+   "Handshaking lemma proof and odd-degree vertex count theorem",
+   "Euler graph conditions (necessary and sufficient) and Fleury's algorithm",
+   "Euler's formula proof (V - E + R = 2) for planar graphs by induction on edges",
+   "Step-by-step Kruskal's and Prim's MST execution on a weighted graph with edge cost calculation"
+  ]
+ },
+ "NOTE-DM-TEJA-QB-U1": {
+  "noteId": "NOTE-DM-TEJA-QB-U1",
+  "subjectId": "DM",
+  "chapter": 1,
+  "title": "DM Unit 1: Question Bank (AI Notes by Teja)",
+  "pageCount": 14,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exam question bank for Mathematical Logic with high-probability university questions covering truth tables, PCNF/PDNF, quantifiers, and rule of inference deductions.",
+  "topics": [
+   {
+    "title": "Truth Tables & Equivalence Proofs",
+    "summary": "Constructing truth tables to prove tautology and equivalence without truth tables using algebraic laws.",
+    "points": [
+     "Prove (p → (q → r)) ≡ ((p ∧ q) → r).",
+     "Show that ((p ∨ q) ∧ ¬(¬p ∧ (¬q ∨ ¬r))) ∨ (¬p ∧ ¬q) ∨ (¬p ∧ ¬r) is a tautology.",
+     "Distinguish between converse, inverse, and contrapositive with examples."
+    ],
+    "formulas": [
+     "p → q ≡ ¬p ∨ q"
+    ],
+    "example": "Verify contrapositive equivalence using truth tables with 4 rows."
+   },
+   {
+    "title": "Canonical Normal Forms (PCNF & PDNF)",
+    "summary": "Step-by-step algebraic methods for expanding propositions into minterms and maxterms.",
+    "points": [
+     "Find the PDNF and PCNF of (p ∧ q) ∨ (¬p ∧ r).",
+     "Obtain PCNF for the formula (¬p → r) ∧ (q ↔ p).",
+     "Determine whether two formulas are equivalent by comparing their canonical forms."
+    ],
+    "formulas": [
+     "Expand missing literals using (x ∨ ¬x) = 1"
+    ],
+    "example": "To expand p ∧ q for 3 variables: (p ∧ q ∧ r) ∨ (p ∧ q ∧ ¬r)."
+   }
+  ],
+  "mustKnow": [
+   "PCNF and PDNF algebraic derivation without using truth tables",
+   "Rule of inference derivation showing validity of conclusion"
+  ]
+ },
+ "NOTE-DM-TEJA-QB-U2": {
+  "noteId": "NOTE-DM-TEJA-QB-U2",
+  "subjectId": "DM",
+  "chapter": 2,
+  "title": "DM Unit 2: Question Bank (AI Notes by Teja)",
+  "pageCount": 16,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exam question bank for Set Theory, Relations, Posets, and Functions containing expected numerical and proof-based university questions.",
+  "topics": [
+   {
+    "title": "Equivalence Relations & Closures",
+    "summary": "Verifying reflexivity, symmetry, transitivity, and constructing transitive closures via Warshall's algorithm.",
+    "points": [
+     "Let R be a relation on Z where a R b iff a - b is divisible by 5. Prove R is an equivalence relation.",
+     "Find the equivalence classes for congruence modulo m.",
+     "Compute the transitive closure using Warshall's algorithm on a 4×4 binary relation matrix."
+    ],
+    "formulas": [
+     "Warshall step: W_k[i, j] = W_{k-1}[i, j] ∨ (W_{k-1}[i, k] ∧ W_{k-1}[k, j])"
+    ],
+    "example": "Equivalence classes of mod 5 are [0], [1], [2], [3], [4]."
+   },
+   {
+    "title": "Posets, Hasse Diagrams & Bijections",
+    "summary": "Drawing visual Hasse diagrams and proving one-to-one and onto function mappings.",
+    "points": [
+     "Draw the Hasse diagram for the divisibility relation on D_36.",
+     "Find maximal, minimal, greatest, and least elements in (P(S), ⊆).",
+     "Prove that f: R → R defined by f(x) = (3x + 7) / 2 is bijective and find its inverse."
+    ],
+    "formulas": [
+     "f(x1) = f(x2) ⟹ x1 = x2 (Injective)",
+     "∀ y, ∃ x: f(x) = y (Surjective)"
+    ],
+    "example": "Hasse diagram of D_36 has 1 at the bottom and 36 at the top."
+   }
+  ],
+  "mustKnow": [
+   "Congruence modulo m equivalence relation proof",
+   "Hasse diagram construction and GLB/LUB determination"
+  ]
+ },
+ "NOTE-DM-TEJA-QB-U3": {
+  "noteId": "NOTE-DM-TEJA-QB-U3",
+  "subjectId": "DM",
+  "chapter": 3,
+  "title": "DM Unit 3: Question Bank (AI Notes by Teja)",
+  "pageCount": 15,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exam question bank for Algebraic Structures and Lattices focusing on group tests, subgroup proofs, Lagrange's Theorem, and lattice properties.",
+  "topics": [
+   {
+    "title": "Group & Abelian Group Verifications",
+    "summary": "Proving four group axioms (closure, associativity, identity, inverse) for modular and matrix sets.",
+    "points": [
+     "Show that the set G = {1, 2, 3, 4, 5, 6} under multiplication modulo 7 forms an abelian group.",
+     "Prove that identity element and inverses in a group are unique.",
+     "Show that (ab)^(-1) = b^(-1) a^(-1) for all elements in a group."
+    ],
+    "formulas": [
+     "Inverse of product: (ab)^(-1) = b^(-1) a^(-1)"
+    ],
+    "example": "Multiplication modulo 7 table (Cayley table) confirms closure and identity = 1."
+   },
+   {
+    "title": "Lagrange's Theorem & Lattices",
+    "summary": "Subgroup order divisibility and lattice algebraic identities.",
+    "points": [
+     "State and prove Lagrange's Theorem for finite groups.",
+     "Show that if a lattice is distributive, complement of any element is unique.",
+     "Prove that every chain is a distributive lattice."
+    ],
+    "formulas": [
+     "|G| = |H| × [G : H]"
+    ],
+    "example": "A group of order 7 can have only trivial subgroups of order 1 and 7."
+   }
+  ],
+  "mustKnow": [
+   "Lagrange's Theorem proof and its direct corollaries",
+   "Proof that a complemented distributive lattice has unique complements"
+  ]
+ },
+ "NOTE-DM-TEJA-QB-U4": {
+  "noteId": "NOTE-DM-TEJA-QB-U4",
+  "subjectId": "DM",
+  "chapter": 4,
+  "title": "DM Unit 4: Question Bank (AI Notes by Teja)",
+  "pageCount": 16,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exam question bank for Combinatorics and Recurrence Relations with analytical problem sets on arrangements, Pigeonhole Principle, and characteristic roots.",
+  "topics": [
+   {
+    "title": "Combinatorial Permutation & Pigeonhole Problems",
+    "summary": "Standard university word problems on selections, arrangements, and existence theorems.",
+    "points": [
+     "How many arrangements can be formed from 'MATHEMATICS' such that vowels always appear together?",
+     "Show that in any set of 5 integers, there are two whose difference is divisible by 4.",
+     "Find the number of non-negative integer solutions to x1 + x2 + x3 + x4 = 17."
+    ],
+    "formulas": [
+     "Stars and Bars: C(n + r - 1, r - 1) solutions"
+    ],
+    "example": "For x1 + x2 + x3 + x4 = 17: C(17 + 4 - 1, 4 - 1) = C(20, 3) = 1140 solutions."
+   },
+   {
+    "title": "Solving Recurrence Relations",
+    "summary": "Solving linear homogeneous and non-homogeneous recurrence relations.",
+    "points": [
+     "Solve a_n - 6a_{n-1} + 9a_{n-2} = 0 with a0 = 1, a1 = 6.",
+     "Solve a_n - 4a_{n-1} + 4a_{n-2} = 2^n using characteristic roots.",
+     "Solve a_n = 2a_{n-1} + 1 with a0 = 0 using Generating Functions."
+    ],
+    "formulas": [
+     "Repeated root solution: a_n = (c1 + c2 n) r^n"
+    ],
+    "example": "Roots of r^2 - 6r + 9 = 0 are r = 3, 3; general solution a_n = (c1 + c2 n) 3^n."
+   }
+  ],
+  "mustKnow": [
+   "Complete solution of non-homogeneous recurrence relations",
+   "Generating functions step-by-step resolution for first and second order recurrences"
+  ]
+ },
+ "NOTE-DM-TEJA-QB-U5": {
+  "noteId": "NOTE-DM-TEJA-QB-U5",
+  "subjectId": "DM",
+  "chapter": 5,
+  "title": "DM Unit 5: Question Bank (AI Notes by Teja)",
+  "pageCount": 16,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "Exam question bank for Graph Theory, Planarity, Coloring, and Trees containing classic examination graph problems and MST algorithms.",
+  "topics": [
+   {
+    "title": "Degrees, Handshaking & Planarity Problems",
+    "summary": "Numerical graph topology, Handshaking theorem calculations, and Euler's formula proofs.",
+    "points": [
+     "A connected planar graph has 20 vertices and each vertex has degree 3. Find the number of regions.",
+     "Show that K_{3,3} is non-planar using Euler's inequality E ≤ 2V - 4.",
+     "Prove that the chromatic number of any bipartite graph with at least one edge is 2."
+    ],
+    "formulas": [
+     "Handshaking: 2|E| = Σ deg(v)",
+     "Regions R = E - V + 2"
+    ],
+    "example": "20 vertices with degree 3: 2E = 20 × 3 = 60 ⟹ E = 30. R = 30 - 20 + 2 = 12 regions."
+   },
+   {
+    "title": "Minimum Spanning Tree Execution",
+    "summary": "Running Kruskal's and Prim's algorithms on given weighted graphs with full tracing.",
+    "points": [
+     "Trace Kruskal's algorithm on a given 7-vertex weighted graph and compute total MST weight.",
+     "Trace Prim's algorithm starting from vertex A and show step-by-step vertex/edge selection.",
+     "Prove that adding any edge to a tree creates a unique simple cycle."
+    ],
+    "formulas": [
+     "Total MST edges = |V| - 1"
+    ],
+    "example": "Kruskal's sorts edges by weight and rejects any edge that closes a cycle."
+   }
+  ],
+  "mustKnow": [
+   "Euler's planar graph formula proof: V - E + R = 2",
+   "Kruskal's and Prim's algorithm step-by-step execution on university exam graph problems"
+  ]
+ }
 };
 
 if (typeof window !== 'undefined') {

@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-dm-fixes-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-teja-ai-notes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1449,6 +1449,60 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         });
       }
     });
+
+    // Render "AI notes (by teja)" Accordion Card (Teja AI Notes)
+    const tejaNotes = NOTES_DATA.filter(n => n.subjectId === subId && n.isTejaAiNotes);
+    if (tejaNotes.length > 0) {
+      const isExpanded = Boolean(state.expandedNotesUnits['teja']);
+      const tejaCard = document.createElement('div');
+      tejaCard.className = 'notes-unit-accordion-card chapter-accordion-card teja-ai-accordion-card' + (isExpanded ? ' open' : '');
+      tejaCard.id = 'notesUnitAccordion-teja';
+
+      const folderUrl = subId === 'COA'
+        ? 'https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR'
+        : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-';
+
+      tejaCard.innerHTML = `
+        <div class="chapter-accordion-header teja-accordion-header" role="button" tabindex="0" data-notes-unit="teja" aria-expanded="${isExpanded}">
+          <div class="ch-header-left">
+            <span class="ch-badge teja-badge">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> AI Notes
+            </span>
+            <span class="notes-unit-title">AI notes (by teja)</span>
+          </div>
+          <div class="ch-header-right">
+            <span class="ch-count-badge teja-count-badge">${tejaNotes.length} Note${tejaNotes.length === 1 ? '' : 's'}</span>
+            <i class="fa-solid fa-chevron-down ch-chevron"></i>
+          </div>
+        </div>
+        <div class="chapter-accordion-body teja-accordion-body" style="display: ${isExpanded ? 'block' : 'none'};">
+          <div class="teja-folder-bar">
+            <a href="${folderUrl}" target="_blank" rel="noopener noreferrer" class="teja-drive-folder-link">
+              <i class="fa-brands fa-google-drive"></i>
+              <span>Open ${escapeHtml(subId)} AI Notes Google Drive Folder</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="notes-unit-list" id="notesUnitList-teja"></div>
+        </div>
+      `;
+
+      const listContainer = tejaCard.querySelector('#notesUnitList-teja');
+      tejaNotes.forEach(note => {
+        listContainer.appendChild(createNoteItemCard(note));
+      });
+
+      const headerEl = tejaCard.querySelector('.chapter-accordion-header');
+      headerEl.addEventListener('click', () => toggleNotesUnitAccordion('teja'));
+      headerEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleNotesUnitAccordion('teja');
+        }
+      });
+
+      el.notesListContainer.appendChild(tejaCard);
+    }
 
     const activeUnits = false
       ? [parseInt(state.notesChapterFilter, 10)]
