@@ -311,10 +311,17 @@
     },
 
     openSelectorModalFor(mode) {
+      const modal = document.getElementById('practiceSelectorModal');
+      if (!modal) return;
+      const active = document.activeElement;
+      if (active && active !== document.body && active !== document.documentElement &&
+          document.contains(active) && active.getClientRects().length) {
+        this._returnFocus = active;
+      }
       const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
       const actualMode = (activeExam === 'sem') ? 'flashcards' : mode;
-      this.openSelectorModal();
       this.goToSubjectSelection(actualMode);
+      modal.style.display = 'flex';
     },
 
     restoreFocus() {
