@@ -1,5 +1,5 @@
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-audit-fixes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-ongoing-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1002,7 +1002,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       if (funTitle) funTitle.textContent = 'Fast Recap';
       if (funHook) funHook.textContent = 'Revise key concepts, definitions & formulas rapidly.';
       if (funSub) funSub.textContent = 'Master high-yield theory, theorems & recurring patterns across all 5 units.';
-      if (hintTag) hintTag.textContent = 'Fast-track revision with flashcards for your upcoming semester end exam';
+      if (hintTag) hintTag.textContent = 'Fast-track revision with flashcards for your ongoing semester end exam';
       if (flashBtn) {
         flashBtn.innerHTML = `
           <span class="quiz-choice-icon"><i class="fa-solid fa-bolt"></i></span>
