@@ -6974,6 +6974,56 @@ const NOTE_SUMMARIES = {
    "Primary index is created on ordered key attribute; secondary index on non-ordered attribute."
   ]
  }
+,
+  "NOTE-DM-QB-01": {
+  "noteId": "NOTE-DM-QB-01",
+  "subjectId": "DM",
+  "chapter": 4,
+  "title": "DM Master Unit-Wise Question Bank with Analytical Solutions",
+  "summary": "Comprehensive 5-unit master question bank for Discrete Mathematics. Covers Mathematical Logic (truth tables, PDNF, PCNF, valid arguments), Set Theory & Relations (Hasse diagrams, poset, lattices), Algebraic Structures (semigroups, monoids, groups, Lagrange's Theorem), Elementary Combinatorics (Pigeonhole principle, permutations, combinations, recurrence relations), and Graph Theory (Eulerian & Hamiltonian graphs, trees, chromatic numbers, planar graphs)."
+},
+  "NOTE-COA-ANS-01": {
+  "noteId": "NOTE-COA-ANS-01",
+  "subjectId": "COA",
+  "chapter": 1,
+  "title": "COA Part-A Model Short Answers & Formulations",
+  "summary": "Official MGIT model short answer key for 2-mark Part-A questions. Contains concise answers for Boolean algebra theorems, canonical forms, register transfer statements, bus interconnection, computer instructions, addressing modes, pipeline hazards, memory hierarchy, cache hit/miss formulas, and interrupt handling cycles."
+},
+  "NOTE-COA-ANS-02": {
+  "noteId": "NOTE-COA-ANS-02",
+  "subjectId": "COA",
+  "chapter": 3,
+  "title": "COA Part-B Comprehensive Essay & Architecture Solutions",
+  "summary": "In-depth Part-B academic answer bank with full circuit block diagrams. Highlights Booth's multiplication algorithm with step-by-step register tracing, restoring and non-restoring division, microprogram sequencer architecture, hardwired vs microprogrammed control unit comparison, vector processing, and memory interleaving."
+},
+  "NOTE-DBMS-REC-01": {
+  "noteId": "NOTE-DBMS-REC-01",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "title": "DBMS Unit 4: Database Recovery Systems Architecture",
+  "summary": "Detailed lecture slides on failure classification (transaction failure, system crash, disk failure), storage structure (volatile, non-volatile, stable), recovery and atomicity, log-based recovery schemes (deferred vs immediate database modification), checkpoints, shadow paging, and the ARIES recovery algorithm (Analysis, Redo, Undo passes)."
+},
+  "NOTE-DBMS-CONC-01": {
+  "noteId": "NOTE-DBMS-CONC-01",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "title": "DBMS Unit 4: Advanced Concurrency Control & Two-Phase Locking",
+  "summary": "Comprehensive guide to concurrency control protocols in multi-user DBMS environments. Details Lock-Based Protocols (Shared vs Exclusive locks, Two-Phase Locking Protocol - Basic 2PL, Strict 2PL, Rigorous 2PL), Timestamp-Based Ordering protocols, Thomas' Write Rule, Validation-Based protocols, Multi-version schemes, and Deadlock Prevention & Detection strategies (Wait-Die, Wound-Wait, Wait-For Graphs)."
+},
+  "NOTE-DBMS-TXN-01": {
+  "noteId": "NOTE-DBMS-TXN-01",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "title": "DBMS Unit 4: ACID Transactions & Serializability",
+  "summary": "Foundational slides covering Transaction Concept and ACID Properties (Atomicity, Consistency, Isolation, Durability). Analyzes transaction execution states (Active, Partially Committed, Committed, Failed, Aborted), concurrent executions, serial vs concurrent schedules, conflict serializability, precedence graphs (cycle detection), and view serializability."
+},
+  "NOTE-DBMS-TXN-02": {
+  "noteId": "NOTE-DBMS-TXN-02",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "title": "DBMS Unit 4: Transaction Processing & Conflict Equivalence",
+  "summary": "Updated 7th edition transaction management notes exploring transaction isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable), dirty reads, non-repeatable reads, phantom phenomenon, and testing for conflict equivalence using topological sorting of precedence graphs."
+}
 };
 
 if (typeof window !== 'undefined') {

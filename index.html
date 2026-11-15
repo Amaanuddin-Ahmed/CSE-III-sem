@@ -191,7 +191,7 @@
         
         <div id="continueExamChipWrap" class="continue-chip-wrap" style="display: none;">
           <button type="button" class="continue-exam-chip" id="continueExamChip">
-            <i class="fa-solid fa-bolt"></i> <span id="continueChipText">Resume Mid-2</span> <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-bolt"></i> <span id="continueChipText">Resume Semester End</span> <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
@@ -244,9 +244,9 @@
     <!-- Active Exam Banner (Shown when an exam is active) -->
     <div class="exam-active-banner glass-panel" id="examActiveBanner" style="display: none;">
       <div class="active-banner-content">
-        <span class="active-banner-tag" id="bannerExamTag">Mid-2</span>
+        <span class="active-banner-tag" id="bannerExamTag">Semester End</span>
         <span class="active-banner-divider">•</span>
-        <span class="active-banner-sub" id="bannerExamSubtitle">Only what’s in your Mid-2 syllabus</span>
+        <span class="active-banner-sub" id="bannerExamSubtitle">Your upcoming exam: complete syllabus coverage across all 5 units</span>
       </div>
       <button type="button" class="btn-switch-exam" id="bannerChangeExamBtn" title="Switch Examination Target">
         <i class="fa-solid fa-repeat"></i>
@@ -272,20 +272,20 @@
         <div class="practice-fun-shine"></div>
         <div class="practice-fun-content">
           <div class="practice-hint-tag">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Practice with interactive quiz games to memorize your fundamentals</span>
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Fast-track revision with flashcards for your upcoming semester end exam</span>
           </div>
-          <h3 class="practice-fun-title">Quiz Time</h3>
-          <p class="practice-fun-hook">Learn it. Play it. Remember it.</p>
-          <p class="practice-fun-sub">Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.</p>
+          <h3 class="practice-fun-title">Fast Recap</h3>
+          <p class="practice-fun-hook">Revise key concepts, definitions &amp; formulas rapidly.</p>
+          <p class="practice-fun-sub">Master high-yield theory, theorems &amp; recurring patterns across all 5 units.</p>
           <div class="quiz-time-choices">
-            <button type="button" class="quiz-time-choice" id="quizTimeQuizBtn">
+            <button type="button" class="quiz-time-choice" id="quizTimeQuizBtn" style="display: none;">
               <span class="quiz-choice-icon"><i class="fa-solid fa-circle-question"></i></span>
               <span class="quiz-choice-text"><strong>Quiz Mode</strong><small>MCQs, fill in the blanks &amp; instant feedback</small></span>
               <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
             </button>
             <button type="button" class="quiz-time-choice" id="quizTimeFlashBtn">
-              <span class="quiz-choice-icon"><i class="fa-solid fa-layer-group"></i></span>
-              <span class="quiz-choice-text"><strong>Revise with Flash Cards</strong><small>Definitions, formulas &amp; high-yield recall</small></span>
+              <span class="quiz-choice-icon"><i class="fa-solid fa-bolt"></i></span>
+              <span class="quiz-choice-text"><strong>Fast Recap</strong><small>High-yield definitions, formulas &amp; rapid recall</small></span>
               <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
             </button>
           </div>
@@ -410,7 +410,7 @@
 
 
 
-        <div class="division-controls">
+        <div class="division-controls" style="display: none;" aria-hidden="true">
           <label for="notesChapterSelect" class="control-label">Select Chapter / Unit:</label>
           <select id="notesChapterSelect" class="form-select">
             <option value="all">All units</option>
@@ -780,11 +780,24 @@
         <div class="solution-model-answer ai-msg-body" id="solAnswerBody">
           <!-- Populated dynamically with verified structured model answer -->
         </div>
-        <div class="solution-actions-row">
-          <button type="button" class="btn-action-primary sol-ask-ai-btn" id="solAskAiDeeperBtn">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Still have doubts? Ask with AI</span>
-          </button>
-          <button type="button" class="btn-secondary-flat" id="solCloseBtn">Close</button>
+        <div class="solution-actions-row" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 18px;">
+          <div class="sol-nav-group" style="display: flex; gap: 8px;">
+            <button type="button" class="btn-secondary-flat" id="solPrevQuestionBtn" title="Previous question" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
+              <i class="fa-solid fa-chevron-left"></i> <span>Prev</span>
+            </button>
+            <button type="button" class="btn-secondary-flat" id="solNextQuestionBtn" title="Next question" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
+              <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button type="button" class="btn-secondary-flat" id="solCopyBtn" title="Copy solution markdown" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
+              <i class="fa-regular fa-copy"></i> <span id="solCopyBtnText">Copy</span>
+            </button>
+          </div>
+          <div class="sol-action-right" style="display: flex; gap: 8px;">
+            <button type="button" class="btn-action-primary sol-ask-ai-btn" id="solAskAiDeeperBtn">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ask AI</span>
+            </button>
+            <button type="button" class="btn-secondary-flat" id="solCloseBtn">Close</button>
+          </div>
         </div>
       </div>
     </div>

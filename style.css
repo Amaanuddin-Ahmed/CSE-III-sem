@@ -661,7 +661,10 @@ body {
 }
 
 /* Division Controls (Dropdown for Notes) */
+.notes-division .division-controls,
 .division-controls {
+  display: none !important;
+
   margin-bottom: 16px;
   display: flex;
   align-items: center;

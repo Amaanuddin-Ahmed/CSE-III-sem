@@ -101,7 +101,14 @@
       // 4. Back to Mode Button
       const backToModeBtn = document.getElementById('backToModeBtn');
       if (backToModeBtn) {
-        backToModeBtn.addEventListener('click', () => this.goToModeSelection());
+        backToModeBtn.addEventListener('click', () => {
+          const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+          if (activeExam === 'sem') {
+            this.closeSelectorModal();
+          } else {
+            this.goToModeSelection();
+          }
+        });
       }
       const backToSubjectBtn = document.getElementById('backToSubjectBtn');
       if (backToSubjectBtn) {
@@ -287,6 +294,11 @@
 
     // Modal Navigation
     openSelectorModal() {
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+      if (activeExam === 'sem') {
+        this.openSelectorModalFor('flashcards');
+        return;
+      }
       const modal = document.getElementById('practiceSelectorModal');
       if (!modal) return;
       const active = document.activeElement;
@@ -299,8 +311,10 @@
     },
 
     openSelectorModalFor(mode) {
+      const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+      const actualMode = (activeExam === 'sem') ? 'flashcards' : mode;
       this.openSelectorModal();
-      this.goToSubjectSelection(mode);
+      this.goToSubjectSelection(actualMode);
     },
 
     restoreFocus() {

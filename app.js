@@ -1,5 +1,5 @@
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.06-sem-end-sync-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-audit-fixes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -240,6 +240,7 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.06-sem-end-sync-2%c', 'background:
   function init() {
     localStorage.removeItem('mgit_user_gemini_key');
     initExamSelector();
+    updatePracticeButtonsForExam(state.activeExam);
     renderSubjectsGrid();
     setupEventListeners();
     loadGeminiChats();
@@ -461,7 +462,45 @@ Instructions for complete examination answer:
     // 5. Open modal only after the copy attempt.
     const modal = document.getElementById('askWithModal');
     if (modal) {
-      modal.style.display = 'flex';
+      
+    // Solution Modal Navigation & Copy Handlers
+    const prevBtn = document.getElementById('solPrevQuestionBtn');
+    const nextBtn = document.getElementById('solNextQuestionBtn');
+    const copyBtn = document.getElementById('solCopyBtn');
+    const copyBtnText = document.getElementById('solCopyBtnText');
+
+    if (prevBtn && nextBtn && state.currentQuestion) {
+      const qList = (state.filteredQuestions && state.filteredQuestions.length > 0)
+        ? state.filteredQuestions
+        : (QUESTIONS_DATABASE.filter(x => x.subjectId === state.currentQuestion.subjectId));
+      const curIdx = qList.findIndex(x => x.id === state.currentQuestion.id);
+      
+      prevBtn.disabled = (curIdx <= 0);
+      nextBtn.disabled = (curIdx < 0 || curIdx >= qList.length - 1);
+      
+      prevBtn.onclick = () => {
+        if (curIdx > 0) openSolutionModal(qList[curIdx - 1]);
+      };
+      nextBtn.onclick = () => {
+        if (curIdx >= 0 && curIdx < qList.length - 1) openSolutionModal(qList[curIdx + 1]);
+      };
+    }
+
+    if (copyBtn && bodyEl) {
+      copyBtn.onclick = async () => {
+        try {
+          const textToCopy = bodyEl.innerText || bodyEl.textContent || '';
+          await navigator.clipboard.writeText(textToCopy);
+          if (copyBtnText) copyBtnText.textContent = 'Copied!';
+          if (typeof showToast === 'function') showToast('Solution copied to clipboard!', 'success');
+          setTimeout(() => { if (copyBtnText) copyBtnText.textContent = 'Copy'; }, 2000);
+        } catch (e) {
+          if (typeof showToast === 'function') showToast('Unable to copy to clipboard', 'info');
+        }
+      };
+    }
+
+    modal.style.display = 'flex';
       modal.style.zIndex = '100003';
       const closeBtn = document.getElementById('closeAskWithModalBtn');
       if (closeBtn) closeBtn.focus();
@@ -947,6 +986,50 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     });
   }
 
+  
+  function updatePracticeButtonsForExam(examId) {
+    const quizBtn = document.getElementById('quizTimeQuizBtn');
+    const flashBtn = document.getElementById('quizTimeFlashBtn');
+    const funTitle = document.querySelector('.practice-fun-title');
+    const funHook = document.querySelector('.practice-fun-hook');
+    const funSub = document.querySelector('.practice-fun-sub');
+    const hintTag = document.querySelector('.practice-hint-tag span');
+    const modeQuiz = document.getElementById('modeCardQuiz');
+    const modeFcTitle = document.querySelector('#modeCardFlashcards .practice-mode-name');
+
+    if (examId === 'sem') {
+      if (quizBtn) quizBtn.style.display = 'none';
+      if (funTitle) funTitle.textContent = 'Fast Recap';
+      if (funHook) funHook.textContent = 'Revise key concepts, definitions & formulas rapidly.';
+      if (funSub) funSub.textContent = 'Master high-yield theory, theorems & recurring patterns across all 5 units.';
+      if (hintTag) hintTag.textContent = 'Fast-track revision with flashcards for your upcoming semester end exam';
+      if (flashBtn) {
+        flashBtn.innerHTML = `
+          <span class="quiz-choice-icon"><i class="fa-solid fa-bolt"></i></span>
+          <span class="quiz-choice-text"><strong>Fast Recap</strong><small>High-yield definitions, formulas &amp; rapid recall</small></span>
+          <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
+        `;
+      }
+      if (modeQuiz) modeQuiz.style.display = 'none';
+      if (modeFcTitle) modeFcTitle.textContent = 'Fast Recap';
+    } else {
+      if (quizBtn) quizBtn.style.display = 'flex';
+      if (funTitle) funTitle.textContent = 'Quiz Time';
+      if (funHook) funHook.textContent = 'Learn it. Play it. Remember it.';
+      if (funSub) funSub.textContent = 'Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.';
+      if (hintTag) hintTag.textContent = 'Practice with interactive quiz games to memorize your fundamentals';
+      if (flashBtn) {
+        flashBtn.innerHTML = `
+          <span class="quiz-choice-icon"><i class="fa-solid fa-layer-group"></i></span>
+          <span class="quiz-choice-text"><strong>Revise with Flash Cards</strong><small>Definitions, formulas &amp; high-yield recall</small></span>
+          <i class="fa-solid fa-arrow-right quiz-choice-arrow" aria-hidden="true"></i>
+        `;
+      }
+      if (modeQuiz) modeQuiz.style.display = 'flex';
+      if (modeFcTitle) modeFcTitle.textContent = 'Revise with Flash Cards';
+    }
+  }
+
   function applyExamSelection(examId, navigateToSubjects, options) {
     const opts = options || {};
     const cfg = getExamConfig(examId);
@@ -1316,7 +1399,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         opts += `<option value="${ch}">Unit ${ch}</option>`;
       });
       el.notesChapterSelect.innerHTML = opts;
-      if (state.notesChapterFilter !== 'all' && !availableUnits.has(Number(state.notesChapterFilter))) {
+      if (false && !availableUnits.has(Number(state.notesChapterFilter))) {
         state.notesChapterFilter = 'all';
       }
       el.notesChapterSelect.value = state.notesChapterFilter;
@@ -1324,7 +1407,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     // If filtered by specific chapter dropdown
     let filteredNotes = notes;
-    if (state.notesChapterFilter !== 'all') {
+    if (false) {
       const chNum = parseInt(state.notesChapterFilter, 10);
       filteredNotes = notes.filter(n => {
         const units = window.getNoteUnits ? window.getNoteUnits(n) : [Number(n.chapter)];
@@ -1364,7 +1447,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
     });
 
-    const activeUnits = state.notesChapterFilter !== 'all'
+    const activeUnits = false
       ? [parseInt(state.notesChapterFilter, 10)]
       : inScopeChapters.filter(u => unitGroups[u] && unitGroups[u].length > 0);
 
@@ -1373,7 +1456,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       const uNotes = unitGroups[u] || [];
       if (uNotes.length === 0) return;
 
-      const isExpanded = state.notesChapterFilter !== 'all' ? true : Boolean(state.expandedNotesUnits[u]);
+      const isExpanded = false ? true : Boolean(state.expandedNotesUnits[u]);
       const subChapters = (sub && sub.chapters) || {};
       const unitTitle = subChapters[u] || `Unit ${u}`;
 

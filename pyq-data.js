@@ -6,7 +6,7 @@ const SUBJECTS_DATA = {
     "id": "DM",
     "shortName": "DM",
     "title": "Discrete Mathematics",
-    "code": "",
+    "code": "MA301BS",
     "icon": "fa-solid fa-calculator",
     "accentColor": "#2563eb",
     "bgColor": "#eff6ff",
@@ -17,20 +17,21 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
     "pyqsUrl": "https://drive.google.com/drive/folders/1R2m69P_aU-IM6wEwIsbwGjKisdk5_xwY",
     "paperCount": 18,
-    "notesCount": 22,
+    "notesCount": 23,
     "chapters": {
       "1": "Mathematical Logic: Statements, Connectives, Truth Tables & Normal Forms (PDNF/PCNF)",
       "2": "Set Theory: Relations, Functions, Equivalence Relations & Partial Ordering",
       "3": "Algebraic Structures: Semigroups, Monoids, Lattices & Boolean Algebra",
       "4": "Elementary Combinatorics: Permutations, Combinations & the Principle of Inclusion–Exclusion",
       "5": "Graph Theory: Paths, Connectivity, Euler & Hamiltonian Graphs, Trees & Isomorphism"
-    }
+    },
+    "questionCount": 471
   },
   "COA": {
     "id": "COA",
     "shortName": "COA",
     "title": "Computer Organization & Architecture",
-    "code": "",
+    "code": "CS302PC",
     "icon": "fa-solid fa-microchip",
     "accentColor": "#059669",
     "bgColor": "#ecfdf5",
@@ -41,20 +42,21 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
     "pyqsUrl": "https://drive.google.com/drive/folders/1r6_ozXzyg84zHCji99-cAujgoie1S7IS",
     "paperCount": 17,
-    "notesCount": 29,
+    "notesCount": 31,
     "chapters": {
       "1": "Boolean Algebra, Logic Gates, Data Representation & Digital Computers",
       "2": "Combinational & Sequential Logic Design",
       "3": "Register Transfer Language, Micro-operations & Basic Computer Organization",
       "4": "Microprogrammed Control, CPU Organization & Computer Arithmetic",
       "5": "Input-Output Organization & Memory Organization"
-    }
+    },
+    "questionCount": 477
   },
   "OOPJ": {
     "id": "OOPJ",
     "shortName": "OOPJ",
     "title": "Object-Oriented Programming through Java",
-    "code": "",
+    "code": "CS303PC",
     "icon": "fa-solid fa-code",
     "accentColor": "#d97706",
     "bgColor": "#fffbeb",
@@ -72,13 +74,14 @@ const SUBJECTS_DATA = {
       "3": "Exception Handling & Multithreading",
       "4": "String, Object, java.util, java.io, Event Handling, Graphics & Layouts",
       "5": "Swing GUI Components & Menu Systems"
-    }
+    },
+    "questionCount": 603
   },
   "DBMS": {
     "id": "DBMS",
     "shortName": "DBMS",
     "title": "Database Management Systems",
-    "code": "",
+    "code": "CS304PC",
     "icon": "fa-solid fa-database",
     "accentColor": "#0284c7",
     "bgColor": "#f0f9ff",
@@ -89,20 +92,21 @@ const SUBJECTS_DATA = {
     "notesUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "pyqsUrl": "https://drive.google.com/drive/folders/1z13uEkpnbrP3vcKzdHp1VXzekcYx1oCk",
     "paperCount": 14,
-    "notesCount": 11,
+    "notesCount": 15,
     "chapters": {
       "1": "Introduction to DBMS & ER Design",
       "2": "Relational Model, Relational Algebra & Relational Calculus",
       "3": "SQL, Constraints, Triggers & Schema Refinement (Normalization)",
       "4": "Transactions, Concurrency Control & Recovery",
       "5": "Storage, File Organization & Indexing (B & B+ Trees)"
-    }
+    },
+    "questionCount": 363
   },
   "SE": {
     "id": "SE",
     "shortName": "SE",
     "title": "Software Engineering",
-    "code": "",
+    "code": "CS305PC",
     "icon": "fa-solid fa-laptop-code",
     "accentColor": "#7c3aed",
     "bgColor": "#f5f3ff",
@@ -120,13 +124,14 @@ const SUBJECTS_DATA = {
       "3": "Design Engineering, Software Architecture & UML",
       "4": "Testing Strategies & Software Metrics",
       "5": "Risk Management & Quality Management"
-    }
+    },
+    "questionCount": 379
   },
   "ES": {
     "id": "ES",
     "shortName": "ES",
     "title": "Environmental Studies",
-    "code": "",
+    "code": "MC301BS",
     "icon": "fa-solid fa-leaf",
     "accentColor": "#15803d",
     "bgColor": "#f0fdf4",
@@ -136,7 +141,7 @@ const SUBJECTS_DATA = {
     "driveUrl": "https://drive.google.com/drive/folders/1jQq2Qr0cTHYbun0gyx1yU7wmRkwjxYi0",
     "notesUrl": "https://drive.google.com/drive/folders/12C_bD_zCLFly1EobW9cFsmZ5PlW9PN3A",
     "pyqsUrl": "https://drive.google.com/drive/folders/1FCUxrLxzXfxVwUAoVCZyERUemeR46S15",
-    "paperCount": 3,
+    "paperCount": 5,
     "notesCount": 5,
     "chapters": {
       "1": "Ecosystems: Structure, Function, Food Chains & Energy Flow",
@@ -144,13 +149,14 @@ const SUBJECTS_DATA = {
       "3": "Biodiversity & Biotic Resources: Levels, Values, Threats & Conservation",
       "4": "Environmental Pollution & Control Technologies",
       "5": "Environmental Policy, Legislation & EIA"
-    }
+    },
+    "questionCount": 77
   },
   "IE": {
     "id": "IE",
     "shortName": "I&E",
     "title": "Innovation and Entrepreneurship",
-    "code": "",
+    "code": "MB301HS",
     "icon": "fa-solid fa-lightbulb",
     "accentColor": "#be185d",
     "bgColor": "#fdf2f8",
@@ -168,7 +174,8 @@ const SUBJECTS_DATA = {
       "3": "Opportunity Assessment & Prototype Development",
       "4": "Business & Financial Models",
       "5": "Startups & Intellectual Property Rights (IPR)"
-    }
+    },
+    "questionCount": 0
   }
 };
 
@@ -1102,8 +1109,7 @@ const NOTES_DATA = [
     "driveFileId": "1ZrHoQ2ptMJenyZQNS3ccdTE7tWRooIwX",
     "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "description": "Official university lecture slides covering Write-Ahead Logging (WAL), Deferred vs Immediate DB Modification, Checkpoints, Shadow Paging, and the ARIES Recovery Algorithm."
-  }
-,
+  },
   {
     "id": "NOTE-DM-17",
     "subjectId": "DM",
@@ -1265,6 +1271,83 @@ const NOTES_DATA = [
     "driveFileId": "1_ZsydtyJ0rptHOv8v4yuuHZx6kd_pmbu",
     "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
     "description": "Curated bank of multiple-choice questions, fill-in-the-blanks, and terminology definitions designed for rapid mid-term and semester-end objective tests."
+  },
+  {
+    "id": "NOTE-DM-QB-01",
+    "subjectId": "DM",
+    "chapter": 4,
+    "title": "DM Master Unit-Wise Question Bank with Analytical Solutions",
+    "fileName": "Question Bank-DM.pdf",
+    "fileSize": "3.8 MB",
+    "driveFileId": "1SL84-FWTnUXhDvRqRMZ9HAu1HGa0YsL4",
+    "folderUrl": "https://drive.google.com/drive/folders/1XXvoFAhADv1nh8oteiHOTj1mZ2f72fIM",
+    "description": "Comprehensive semester question bank covering Mathematical Logic, Set Theory, Algebraic Structures, Combinatorics and Graph Theory with full step-by-step model answers."
+  },
+  {
+    "id": "NOTE-COA-ANS-01",
+    "subjectId": "COA",
+    "chapter": 1,
+    "title": "COA Part-A Model Short Answers & Formulations",
+    "fileName": "COA_Part_A_Answers.pdf",
+    "fileSize": "1.9 MB",
+    "driveFileId": "1MIHAVS6koANMs3BI9RaF3tWB1bGTTPzg",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Faculty verified concise Part-A answers covering Boolean logic, RTL micro-operations, CPU registers, pipelining, cache memory and I/O interrupts."
+  },
+  {
+    "id": "NOTE-COA-ANS-02",
+    "subjectId": "COA",
+    "chapter": 3,
+    "title": "COA Part-B Comprehensive Essay & Architecture Solutions",
+    "fileName": "COA_Part_B_Answers.pdf",
+    "fileSize": "4.2 MB",
+    "driveFileId": "1zCGYDUr9zib3MKEYV3h9xZvQTDrEbdAE",
+    "folderUrl": "https://drive.google.com/drive/folders/1MmMPtCuHP-4M5HcofAwPSVCIXW0Bt55x",
+    "description": "Detailed 5-mark and 10-mark solutions with full hardware circuit diagrams for Booth's algorithm, microprogrammed control units, DMA controllers, and associative memory."
+  },
+  {
+    "id": "NOTE-DBMS-REC-01",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: Database Recovery Systems Architecture",
+    "fileName": "Chapter17.ppt",
+    "fileSize": "2.4 MB",
+    "driveFileId": "13KYViTxWR_cVkvMZm5M2js-unxjAG-70",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Failure classification, log-based recovery (deferred vs immediate modification), checkpointing strategies, ARIES recovery algorithm, and shadow paging."
+  },
+  {
+    "id": "NOTE-DBMS-CONC-01",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: Advanced Concurrency Control & Two-Phase Locking",
+    "fileName": "Concurrency Control-6th edition.ppt",
+    "fileSize": "2.9 MB",
+    "driveFileId": "1KoqwBurBgcBHuCLimFi8mA_g0FVdGF4c",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Lock-based protocols (Shared/Exclusive), Two-Phase Locking (2PL, Strict 2PL, Rigorous 2PL), Timestamp-ordering, validation protocols, and deadlock handling."
+  },
+  {
+    "id": "NOTE-DBMS-TXN-01",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: ACID Transactions & Serializability",
+    "fileName": "Transaction Management_5th Edition.ppt",
+    "fileSize": "2.1 MB",
+    "driveFileId": "17J7bRNQCUrhu4CwVbHyUf4QdI9K_Gng_",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Transaction concepts, ACID properties, transaction states, conflict and view serializability, precedence graphs, and recoverability of schedules."
+  },
+  {
+    "id": "NOTE-DBMS-TXN-02",
+    "subjectId": "DBMS",
+    "chapter": 4,
+    "title": "DBMS Unit 4: Transaction Processing & Conflict Equivalence",
+    "fileName": "Transaction Management_7th Edition.ppt.ppt",
+    "fileSize": "3.1 MB",
+    "driveFileId": "10TUnXTNixp-zieeqWgKlsQndDiC_xwV_",
+    "folderUrl": "https://drive.google.com/drive/folders/1DCTxebYJ3A3H2MMmZxNQEdYP-PS6w7jJ",
+    "description": "Updated 7th edition lecture slides on transaction isolation levels (Read Uncommitted to Serializable), dirty reads, non-repeatable reads, and phantom phenomena."
   }
 ];
 
@@ -8073,7 +8156,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0192",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8082,7 +8165,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What is meant by normalization in floating point representation?",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
@@ -8172,7 +8255,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0194",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8180,7 +8263,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What are the various ways to represent the negative value in fixed point numbers?",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
@@ -8242,7 +8325,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0196",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8250,7 +8333,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What is meant by normalization in floating point representation? Why do we need it?",
     "paperName": "Aug 2023 reg.pdf",
     "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
@@ -8277,7 +8360,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0197",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8285,7 +8368,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Write about Floating point representation with an example.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
@@ -8312,7 +8395,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0198",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8320,7 +8403,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Explain signed magnitude representation of fixed point numbers.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1P1gU7ff2wcpcyeKTNa1PqaS0OIgGaScX",
@@ -8417,7 +8500,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0201",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 1,
     "years": [
@@ -8425,7 +8508,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Explain 2's complement.",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "1oprRpRBPvrIwD688nKCaRbOxqscyGEMo",
@@ -8487,7 +8570,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0203",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8495,8 +8578,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
-    "question": "Perform 2's complement of (i) 10010010 Gi) 01101100.",
+    "topicTag": "Unit 4",
+    "question": "Perform 2's complement of (i) $10010010_2$ and (ii) $01101100_2$.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
     "pageNumber": 1,
@@ -8697,7 +8780,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0209",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 1,
     "years": [
@@ -8705,7 +8788,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Draw the hardware configuration for signed-magnitude addition and subtraction.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
@@ -8732,7 +8815,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0210",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8740,7 +8823,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Solve (1001101 - 10101001) using 2's complement.",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
@@ -8802,7 +8885,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0212",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -8810,7 +8893,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Draw the hardware implementation of fixed point addition subtraction.",
     "paperName": "Jan 2025 supple.pdf",
     "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
@@ -8942,7 +9025,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0216",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 1,
     "years": [
@@ -8950,7 +9033,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Draw the hardware configuration for signed 2's complement addition and subtraction.",
     "paperName": "January 2026.pdf",
     "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
@@ -9082,7 +9165,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0220",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "A",
     "marks": 2,
     "years": [
@@ -9090,7 +9173,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What is the range of numbers that can be represented in a fixed point format using 16 bits of a signed integer?",
     "paperName": "march 2023.pdf",
     "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
@@ -9117,7 +9200,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-A3-0221",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -9125,7 +9208,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Define 1's and 2's complements.",
     "paperName": "mr 21 25 supple.pdf",
     "driveFileId": "1XvT4d9ve46JPW-nAxLKTVxahW6gNaGTn",
@@ -9222,7 +9305,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0224",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
@@ -9231,7 +9314,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Give and explain the hardware implementation of the signed magnitude addition and subtraction.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
@@ -9272,7 +9355,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0225",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -9280,7 +9363,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Perform the arithmetic operations (+42) +(-13) and (-42) -(-13) in binary using signed 2's complement representation for negative numbers.",
     "paperName": "Aug 2024 supple.pdf",
     "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
@@ -9370,7 +9453,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0227",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -9378,7 +9461,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Explain about sign magnitude and 2's complement approaches for representation fixed point numbers?",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
@@ -9440,7 +9523,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0229",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 10,
     "years": [
@@ -9448,7 +9531,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Perform 10111 * 10111 using 2's complement algorithm.",
     "paperName": "2025 Supple july.pdf",
     "driveFileId": "1aN0lCoMii8Z1CxXQbsVtqoMIIruqjFyI",
@@ -9475,7 +9558,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0230",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 10,
     "years": [
@@ -9483,7 +9566,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Given Booth's algorithm to multiply two binary numbers, explain the working of the algorithm with neat flowchart?",
     "paperName": "Aug 2023 reg.pdf",
     "driveFileId": "1ZXkGeglj8UqLuKb_D8BRd77CwSIpPE6a",
@@ -9720,7 +9803,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0237",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -9728,7 +9811,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Solve a step-by-step multiplication of (+15) X (-13) using Booth's algorithm.",
     "paperName": "Aug 2024 supple.pdf",
     "driveFileId": "1M4BRLx_IaLNll0IkLBbYYyUvLShp6pH3",
@@ -9860,7 +9943,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0241",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 10,
     "years": [
@@ -9868,7 +9951,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "What is floating point representation? Explain the IEEE standard for floating point representation with examples. 4A.b) Explain about Booth's Multiplier with flowchart.",
     "paperName": "August 2024 supple.pdf",
     "driveFileId": "1mVcgHcTCwq1YP4YtSOdTwuw9CJaLdetB",
@@ -10175,7 +10258,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0250",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10183,7 +10266,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Construct a flowchart for 2's Complement multiplication algorithm and Perform multiplication between 10111 * 10011.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "12t2XfJy2vBT83Eb--y6P0zHk1AK9tyoy",
@@ -10315,7 +10398,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0254",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10323,7 +10406,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Draw the flow chart for Booth multiplication and explain multiplication of 12 with 13.",
     "paperName": "Jan 2024 reg.pdf",
     "driveFileId": "1L5kLMO22UOu7Bvbq9_mWhCE0mwj_3cPp",
@@ -10455,7 +10538,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0258",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10463,7 +10546,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Explain the multiplication of positive numbers using a booth multiplier with a neat sketch.",
     "paperName": "Jan 2024 supp.pdf",
     "driveFileId": "1tILFYlmmv-YqkJCKuVE3Wy1anRE-XCby",
@@ -10525,7 +10608,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0260",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10533,7 +10616,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Perform booth multiplication on the following numbers 13(multiplicand), +11 (multiplier).",
     "paperName": "Jan 2025 supple.pdf",
     "driveFileId": "1owKZjMLyZyjZq2AOr8r4FiSjuJFgAtsj",
@@ -10735,7 +10818,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0266",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10743,7 +10826,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Draw the flow chart for Booth multiplication algorithm and multiply 13 with -7 using Booth multiplication algorithm.",
     "paperName": "January 2026.pdf",
     "driveFileId": "1wAPw2Qf11myD8UFFJECSd8oX7P6LrkJl",
@@ -10875,7 +10958,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0270",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10883,7 +10966,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Elaborate steps used in Booth algorithm for multiplying following binary numbers (+15) * (-13).",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1v1I6YqelPOGDb5eLP-pycEaFSPRUc24g",
@@ -10945,7 +11028,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0272",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -10953,7 +11036,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Perform signed multiplication of -3 and 7 using booth multiplication algorithm. Represent the numbers in 5 bits including sign bit. Represent the step by step multiplication process.",
     "paperName": "march 2023.pdf",
     "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
@@ -11015,7 +11098,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0274",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 1,
     "part": "B",
     "marks": 5,
     "years": [
@@ -11023,7 +11106,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 1",
     "question": "Briefly explain about IEEE floating point representation and perform addition of two floating numbers.",
     "paperName": "march 2023.pdf",
     "driveFileId": "1oOXzUdvUvOFhJl2ilYzC90rR2M_nNuxb",
@@ -11225,7 +11308,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0280",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -11233,7 +11316,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Briefly discuss the hardware implementation of Booth algorithm.",
     "paperName": "Supple july 25.pdf",
     "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
@@ -11295,7 +11378,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "COA-B3-0282",
     "subjectId": "COA",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -11303,7 +11386,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Perform the following using Booth algorithm 13 x -5.",
     "paperName": "Supple july 25.pdf",
     "driveFileId": "1aDkAi8cm68CrUzF1tzCHQkQhwjPAMpMm",
@@ -18283,7 +18366,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Write about data models?",
@@ -18897,7 +18980,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "List the applications of Database systems?",
@@ -19511,7 +19594,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "What is the Data Model?",
@@ -20125,7 +20208,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What is Database Design?",
@@ -20739,7 +20822,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "What is the Difference between the Candidate Key and Super Key?",
@@ -21353,7 +21436,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What is Weak Entity? How it is different from Strong Entity?",
@@ -21687,7 +21770,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Write about the Database languages.",
@@ -22301,7 +22384,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What is a weak entity set? How do you represent it using ER diagram?",
@@ -22635,7 +22718,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Illustrate different types of Attributes.",
@@ -22969,7 +23052,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "List different types of data models.",
@@ -23583,7 +23666,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Explain Entity set with suitable example.",
@@ -23917,7 +24000,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What are the most common errors you can potentially face in data} modeling?",
@@ -24531,7 +24614,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "EmployeeDetails Raja Kolkata rolkata Identify Candidate Key from the above relation.",
@@ -25145,7 +25228,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "Write Database system Applications.",
@@ -25981,7 +26064,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What is Composite Attribute? Give an example.",
@@ -26595,7 +26678,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Differentiate between DBMS and RDBMS.",
@@ -27209,7 +27292,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "What is a weak entity set? How do you convert it into a relation?",
@@ -27543,7 +27626,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "What is a weak entity set in ER -Diagram? Quote suitable example.",
@@ -27877,7 +27960,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "Explain the roles of a data base administrator.",
@@ -28491,7 +28574,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Define a Database and Database Management System.",
@@ -29549,7 +29632,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "Name the applications of database system.",
@@ -30163,7 +30246,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q1.a",
     "topicTag": "Unit 1",
     "question": "Define schema and instance?",
@@ -30777,7 +30860,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q1.b",
     "topicTag": "Unit 1",
     "question": "List Various Types of Attributes?",
@@ -31111,7 +31194,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Discuss about different types of integrity constraints?",
@@ -31725,7 +31808,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Explain the Architecture of the database?",
@@ -32339,7 +32422,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Explain about additional features of ER Model.",
@@ -32673,7 +32756,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "What is E-R diagram and explain its Symbols?",
@@ -33229,7 +33312,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Explain the structure of a DBMS in detail.",
@@ -34065,7 +34148,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "With a neat diagram explain Structure of a DBMS.",
@@ -34679,7 +34762,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Describe about entity, entity set, Relationship and Relationship Sets.",
@@ -35013,7 +35096,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Draw the Architecture of DBMS and explain about its various! components.",
@@ -35627,7 +35710,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Illustrate with an example E-R diagram.",
@@ -36183,7 +36266,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Differentiate between Total Participation and Partial Participation.",
@@ -37019,7 +37102,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "What are speciality databases? Explain.",
@@ -37633,7 +37716,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Draw an ER diagram for an Airline Reservation system.",
@@ -38247,7 +38330,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Write about the Integrity constraints over Relations with examples.",
@@ -38861,7 +38944,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Summarize the major disadvantages of file-processing system.",
@@ -39475,7 +39558,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Design an ER diagram for a bank management system that includes entities such as bank, employees, branch, customer, loan and account. Specify the relationships between these entities and their attributes.",
@@ -39809,7 +39892,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Outline Database - System Applications in detail.",
@@ -40645,7 +40728,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Compare Weak Entity Set and Strong Entity Set with example.",
@@ -40979,7 +41062,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Id) Desion an ER diagram for a Hosptlal management system that) S includes entitics such as patients, employecs, doctors, nurses, room, receptionist, test report, and billing. Specify - the relationships between these entities and their attributes.",
@@ -41535,7 +41618,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Design an E-R Diagram for Airline Reservation System.",
@@ -41869,7 +41952,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Design an E-R diagram for keeping track of the exploits of your favourite sports team. You should store the matches played, the scores in each match, the players in each match and individual player statistics for each match. Summary statistics should be modelled as derived attributes.",
@@ -42425,7 +42508,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Explain Data Abstraction. Why is it important?",
@@ -43039,7 +43122,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "What is ER diagram? Discuss various symbols used in ER diagram.",
@@ -43653,7 +43736,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Explain the Advantages of Database management system over File} System.",
@@ -44267,7 +44350,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Draw and Explain the ER diagram for Library Management System.",
@@ -44881,7 +44964,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Explain the Architecture of DBMS with a neat sketch.",
@@ -45717,7 +45800,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Draw an ER diagram for a banking enterprise and convert it into a set of relations",
@@ -46051,7 +46134,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "What is storage manager and query processor? Explain it with a neat diagram.",
@@ -46665,7 +46748,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Construct the Aggregation diagram and prove how it is better than ternary relationship.",
@@ -46999,7 +47082,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Draw an E-R diagram for a university database, contains information about professors (identified by social security number, or SSN) and courses (identified by courseid). Professors teach courses; For each situation, draw an ER diagram that describes it offering must be recorded.",
@@ -47333,7 +47416,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "What are the extended ER features and explain.",
@@ -47947,7 +48030,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Explain the significance of conceptual design using ER Model?",
@@ -48503,7 +48586,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Illustrate mapping cardinalities and participation of entities in a relationship with suitable example.",
@@ -49117,7 +49200,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.a",
     "topicTag": "Unit 1",
     "question": "Draw the architecture of a DBMS and describe the components of database architecture.",
@@ -49953,7 +50036,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.c",
     "topicTag": "Unit 1",
     "question": "Answer each of the following questions. The questions are based on the following relational schema",
@@ -50567,7 +50650,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Inspect the mechanism for creating and modifying the relations using SQL.",
@@ -51181,7 +51264,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 39,
+    "frequency": 14,
     "questionNumber": "Q2.b",
     "topicTag": "Unit 1",
     "question": "Compare different data modes?",
@@ -51795,7 +51878,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 21,
+    "frequency": 14,
     "questionNumber": "Q2.d",
     "topicTag": "Unit 1",
     "question": "Explain about the E-R diagram concept?",
@@ -52129,7 +52212,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "Discuss the use of Rename operation?",
@@ -52743,7 +52826,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Write about the basic form of SQL query?",
@@ -53357,7 +53440,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "What is Domain relational calculus?",
@@ -54165,7 +54248,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "What is Functional Dependency? Give an example.",
@@ -55001,7 +55084,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "What are the SQL statements used to retrieve and modify the database?",
@@ -55837,7 +55920,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "Describe the properties of relation model.",
@@ -56451,7 +56534,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Explain relation algebra operators.",
@@ -57065,7 +57148,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "List the constraints in relation model.",
@@ -58095,7 +58178,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Construct SQL queries that are equivalent to each of the following i) ii) RxS Where relational schemas are R=(A,B,C) S=(D,E,F)",
@@ -58709,7 +58792,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "Compare Procedural and Non- Procedural Query Languages.",
@@ -59323,7 +59406,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "What is the purpose of Join operations?",
@@ -60159,7 +60242,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "How do you create and modify the database?",
@@ -60995,7 +61078,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Write a query in relation algebra Account (acc_no,acc_name, bal). Find all the accounts where balance is greater than 50,000.",
@@ -61609,7 +61692,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "Define a constraint and list types of constraints.",
@@ -62223,7 +62306,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "List any two DDL commands.",
@@ -62837,7 +62920,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.c",
     "topicTag": "Unit 2",
     "question": "List out the standard operations on sets.",
@@ -63451,7 +63534,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q1.d",
     "topicTag": "Unit 2",
     "question": "Define Join and name various types of join operations.",
@@ -64259,7 +64342,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Define trigger and explain all the three parts of it with an example?",
@@ -65067,7 +65150,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Discuss about Tuple relational calculus in detail?",
@@ -65903,7 +65986,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Consider the following relations: Hotel (hotelNo, name, address) Room (roomNo, hotelNo, type, price) Booking (hotelNo, guestNo, dateFrom, dateTo, roomNo) Guest (guestNo, name, address) Write the SQL statements for the following: i) List all family rooms with a price below Rs.400, in ascending order of price. ii) Display the number of hotels. iii) Display guestNo, name, address and roomNo details of guests booked room from 01-Jan-23. iv) Display hotelNo and the number of rooms in each hotel.",
@@ -67377,7 +67460,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Employee (emp_id, emp name, gender, salary) Work For(emp_id, project_id) Project (project_id, project name, duration _in_ months) Write the following queries in SQL.",
@@ -67991,7 +68074,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Consider the following relations: Employee (emp_id, gender, salary) Work For(emp_id, project_id) Project (project_id, project_name, duration_in_ months) Write the following queries in SQL. i) Get the details of Employees having salary >10000. il) Get the names of Employees working for pid 20. iil) Get the strength of Male and Female Employees. iv) List project_ids in the descending order of their duration.",
@@ -68799,7 +68882,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "What is a view? Can you create view on multiple tables? Illustrate With examples. 3. ) Consider the following schema",
@@ -69413,7 +69496,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Consider the following schema: Suppliers(sid: integer, sname: string, address: string) Parts(pid: integer, pname: string, color: string) Catalog(sid: integer, pid: integer, cost: real) The Catalog relation lists the prices charged for parts by Suppliers. Write the following queries in SQL 1. Find the pnames of parts for which there is some supplier. 2. Find the snames of suppliers who supply every part. 3. Find the pnames of parts supplied by Acme Widget Suppliers and by no one else. 4. Find the sids of suppliers who charge more for some part than the average cost of that part (averaged over all the suppliers who supply that part). 5. For each part, find the sname of the supplier who charges the most for that par.",
@@ -70027,7 +70110,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "What is trigger? [*xplain how to implement triggers in SQL?",
@@ -70863,7 +70946,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Explain Domain Relational Calculus with example.",
@@ -71477,7 +71560,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Write the given queries in SQL. products(Product-Name, Product-Id, Price) i. Sort the products from highest to lowest price. ii. Sort the products alphabetically by Product-Name. iii. Select all Product-Name, Product-Id with Price greater than 80.",
@@ -72091,7 +72174,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Develop Salesman Table (salesperson ID, name, city and commission). ii. Create a view to locate the salespeople in the city 'New York'.",
@@ -72705,7 +72788,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
     "question": "Describe constraints on a single relationship.",
@@ -73319,7 +73402,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Explain Tuple Relation Calculus with example.",
@@ -73933,7 +74016,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Write the given queries in SQL student(Roll-number, Name, Address, Age, Phone) i. Select names of all students who stay in Delhi. ii. Find the name, Roll-number of all students in ascending order by age. iii. Select Name, Address, AVG (age) from student based on Address.",
@@ -74547,7 +74630,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Develop Salesman Table (salesperson ID, name, city and commission). ii. Create a view to Update the city name which salesperson ID is '5007'.\".",
@@ -75355,7 +75438,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Write SQL Queries for the given Schemas Employee: (Emp_id, Ename, office, Age) Books: (isbn, title, author, publisher) Loan: (Emp_id, isbn, date) (i) Print the names of employees who have borrowed any book published by Pearson publisher. (ii) Print the names of employees who have borrowed all books published by Pearson publisher.",
@@ -76191,7 +76274,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Consider the following Relational Database and write SQL queries: employee (person_name, street, city) works (person_name, company name, salary) company (company_name, city) a. Find the names of all employees who live in city \"Miami\". b. Find the names of all employees whose salary is greater than $10,000. c. Find the names of all employees who live in \"Miami\" and whose salary is greater than $500,000.",
@@ -76805,7 +76888,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
     "question": "Lxplain the Dilference between Nested Queries and Correlated Queries. Explain with the help of an example.",
@@ -77641,7 +77724,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.a",
     "topicTag": "Unit 2",
     "question": "Write about SQL. data types and different types of constraints that can be applied on data.",
@@ -78255,7 +78338,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Explain the following Operators in SQL with examples: 5 i) SOME, ti) IN: tii) EXCEPT iv) UNION\" v) ALTER",
@@ -78869,7 +78952,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Explain DDL and DMI, commands with examples.",
@@ -79483,7 +79566,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Write the aggregate opcrators in SQL.",
@@ -80485,7 +80568,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Write SQL Queries for the given Employee schema 5 3 2 1,2 List employee numbers, name sal, DA(15% OF SAL), and PF (10% of sal) •List the numbers of people and average salary in deptno 30 List manager names and their joining dates completely spelled in alphabetical order of name Employee(eno, ename, job,mgr,hirdate,sal,comm,deptno).",
@@ -81931,7 +82014,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "Differentiate Tuple relational calculus and domain relational calculus.",
@@ -82739,7 +82822,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Interpret the approach of aggregate operators supported by SQL.",
@@ -83353,7 +83436,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.d",
     "topicTag": "Unit 2",
     "question": "efine the Dept relation in SQL so that every department is guaranteed to have a manager. 4. Write an SQL statement to add John Doe as an employee with eid 101, age = 32 and salary = 15,000.",
@@ -83967,7 +84050,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Illustrate the features of tuple relational calculus and Domain relational calculus.",
@@ -84775,7 +84858,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.b",
     "topicTag": "Unit 2",
     "question": "Discuss about domain relational calculus in detail?",
@@ -85389,7 +85472,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 46,
+    "frequency": 14,
     "questionNumber": "Q3.c",
     "topicTag": "Unit 2",
     "question": "Explain all the aggregate functions with example?",
@@ -86003,7 +86086,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "List out the properties of decomposition?",
@@ -86491,7 +86574,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "What is redundancy and write about the problems with it?",
@@ -86895,7 +86978,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "What is trivial l'unctional Dependency?",
@@ -87713,7 +87796,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "What is Functional Dependency? Give an example.",
@@ -88117,7 +88200,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "What is Redundancy and why do we want to avoid it when creating a database?",
@@ -88521,7 +88604,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "What is schema refinement?",
@@ -89009,7 +89092,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Define multi valued dependency and Join dependency.",
@@ -89413,7 +89496,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "Discuss lossless join decomposition.",
@@ -90522,7 +90605,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "Define and explain First Normal Form with an example.",
@@ -91010,7 +91093,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "List the problems caused by Redundancy.",
@@ -91414,7 +91497,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Decomposition is important? Also Explain the types of Decomposition.",
@@ -91902,7 +91985,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "lc) Detine Functional dependency and Multivalued dependency.",
@@ -92306,7 +92389,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "When do you say that a relation is in 2NF?",
@@ -92794,7 +92877,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Define attribute closure with an example.",
@@ -93405,7 +93488,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Define Normalization.",
@@ -93893,7 +93976,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "What are functional dependencies?",
@@ -94297,7 +94380,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Mention the problems caused by redundancy.",
@@ -94701,7 +94784,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.e",
     "topicTag": "Unit 3",
     "question": "Write about functional dependency?",
@@ -95105,7 +95188,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q1.f",
     "topicTag": "Unit 3",
     "question": "Define redundancy and list the problems with it?",
@@ -95509,7 +95592,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Discuss about trival and non trival functional dependencies?",
@@ -95913,7 +95996,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Illustrate the closure of attributes?",
@@ -96317,7 +96400,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "What is decomposition and explain its properties?",
@@ -96805,7 +96888,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Explain about First and Second normal forms",
@@ -97293,7 +97376,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "What are Fourth normal form and Fifth normal form in Data bases?",
@@ -97781,7 +97864,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Analyse about BCNF, lossless join decomposition.",
@@ -98269,7 +98352,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Explain about multivalued dependencies.",
@@ -98964,7 +99047,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "What is Normalization? Why do we need to Normalize our database?",
@@ -99452,7 +99535,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Explain 1NF, 2NF, 3NF, BCNF Normal Forms by taking proper examples.",
@@ -99940,7 +100023,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Given the Relation R(A,B.",
@@ -100428,7 +100511,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Explain in detail about 1NF, 2NF and 3NF with suitable examples.",
@@ -100916,7 +100999,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Find the highest normal form in R(A, B, C, D, E) under functional dependencies.",
@@ -101320,7 +101403,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "What are the properties of Decomposition. Explain.",
@@ -101808,7 +101891,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Suppose that we decompose the schema R (A, B, C, D, E) (A, B, C) and R2 (A, D, E). Determine that this decomposition lossless-join decomposition or dependency preserving if the set F of functional dependencies holds: A - BC, CD - E,B E.- A,",
@@ -102626,7 +102709,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Illustrate First and Second Normal form with example.",
@@ -103114,7 +103197,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Discuss the problems caused by redundancy in Schema refinement.",
@@ -103932,7 +104015,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Discuss about Third and BCNF Normal form with example.",
@@ -104420,7 +104503,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Discuss the problems caused by decomposition in Schema] refinement.",
@@ -104908,7 +104991,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Define Normalization and write the importance of Normalization.",
@@ -105396,7 +105479,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Explain different types of joins with examples.",
@@ -105884,7 +105967,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Write rules to find closure set of functional dependencies. Given relation schema r (A, B, C, G, H, I) and the set of functional dependencies: AB A-C CGH CGI B→H Compute at least one super for the above schema (Hint: use attribute closure).",
@@ -106288,7 +106371,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "What is Normalization? Differentiate between BCNF and 3 NF with proper example.",
@@ -106776,7 +106859,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Ab) What do you mean by redundancy? Discuss about insertion, updation and deletion anomalies.",
@@ -107180,7 +107263,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Given R (A, B, C, D, E, F) and the set of FDs: {A - BC,E - CF, B- E, CD - EF}. Compute the CLOSURE {A, B}' under the given set of FD's. Show that an FD: AB --> BCE_ hold for R.",
@@ -107584,7 +107667,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Compute the closure of the following set of functional dependencies for a relation scheme.",
@@ -107988,7 +108071,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Explain 3NPF and BCNP with examples. What is the difference between them?",
@@ -108476,7 +108559,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Write the need for schema refinement in relational database design.",
@@ -108964,7 +109047,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Define MVD? Explain 4NF with an example.",
@@ -109452,7 +109535,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Lots(Property_id#, County_name, Lot#, Area, Price, Tax_rate) Apply second normal form and third normal form FD1: Property_id# → County_name Lot# Area Price Tax_rate FD2: County_name, Lot# → Property_id#, Price, Tax_rate FD3: County_name → Tax_rate FD4: Area → Price.",
@@ -109940,7 +110023,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Explain 4NF and 5NF with suitable examples.",
@@ -110428,7 +110511,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Suppose that we decompose the schema R = (A, B, C, D, E) into (A, B, C) (A, D, E). Show that this decomposition is a lossless-join decomposition if the following set F of functional dependencies holds: A BC CDE BD EA",
@@ -110832,7 +110915,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Explain loss less join and loss less decomposition with examples.",
@@ -111320,7 +111403,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Consider a relation R with following attributes {SSN,ENAME, PNAME,PLOC,HOURS} where SSN is Social Security number and it is primary key, Ename is employee name, PNUMBER is project number, PNAME is project name, PLOC is project location and HOURS is number of working hours per day.",
@@ -111808,7 +111891,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "What is attribute closure? Explain how to find attribute closure with an example?",
@@ -112626,7 +112709,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Define Armstrong's Axioms. Llucidate the closure of a set of dependencics.",
@@ -113030,7 +113113,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Assess the functionality of first, second and third normal forms.",
@@ -113434,7 +113517,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Discuss the concept of 'Trivial and Non-Trivial functional dependencies",
@@ -113838,7 +113921,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Infer the strategy followed in BCNF and fourth normal form.",
@@ -114326,7 +114409,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.a",
     "topicTag": "Unit 3",
     "question": "Illustrate dependency? And explain the problems caused by it?",
@@ -114730,7 +114813,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.b",
     "topicTag": "Unit 3",
     "question": "Define normalization and explain 1st and 2st normal forms with an example?",
@@ -115218,7 +115301,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 33,
+    "frequency": 14,
     "questionNumber": "Q4.c",
     "topicTag": "Unit 3",
     "question": "Define and Compare BCNF with 3\" Normal forms?",
@@ -115706,7 +115789,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 28,
+    "frequency": 14,
     "questionNumber": "Q4.d",
     "topicTag": "Unit 3",
     "question": "Illustrate multivalued dependency and 4st normal form with an example?",
@@ -116110,7 +116193,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Explain about transaction states?",
@@ -116598,7 +116681,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Write about serializability?",
@@ -117086,7 +117169,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Define implementation of Isolation.",
@@ -117504,7 +117587,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Define Log-Bases Recovery.",
@@ -117922,7 +118005,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "et the details of Employees having salary >10000. il) Get the names of Employees working for pid = 20. itl) Get the strength of Male and Female Employees. iv) List project_ids in the descending order of their duration.",
@@ -118340,7 +118423,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "What are Check Points? What is the use of it?",
@@ -118758,7 +118841,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "What are the properties of Transaction?",
@@ -119246,7 +119329,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "When do you say that two schedules are conflict serializable and View serializable?",
@@ -119734,7 +119817,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Define Transaction State.",
@@ -120222,7 +120305,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "What is time stamp ordering protocol?",
@@ -120640,7 +120723,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Name the disadvantages of Time stamp protocol.",
@@ -121558,7 +121641,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Write Transaction properties?",
@@ -122046,7 +122129,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Define a Schedule? Give an Example.",
@@ -122464,7 +122547,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "l.h) = What is 'Transaction? ['xplain with example. 2?",
@@ -122952,7 +123035,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Mention different transaction states.",
@@ -123440,7 +123523,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "What is Atomicity and Isolation property of transactions.",
@@ -123928,7 +124011,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "What is transaction? What are the properties of transactions?",
@@ -124416,7 +124499,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Draw the transaction state diagram.",
@@ -124904,7 +124987,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "What is atomicity?",
@@ -125322,7 +125405,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "List various transaction states.",
@@ -125810,7 +125893,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "ive an example of a foreign key constraint that involves the Dept relation. What are the options for enforcing this constraint when a user attempts to delete a Dept tuple? 2. Write the SQL statements required to create the preceding relations, including appropriate versions of all primary and foreign key integrity constraints.",
@@ -126228,7 +126311,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q1.h",
     "topicTag": "Unit 4",
     "question": "Show the technique used 1n log-based recovery.",
@@ -126646,7 +126729,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q1.g",
     "topicTag": "Unit 4",
     "question": "Demonstrate conflict serializability?",
@@ -127134,7 +127217,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "List and explain ACID properties in detail?",
@@ -127872,7 +127955,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "What is recovery and explain about log-based recovery with example?",
@@ -128290,7 +128373,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Explain the process of achieving implementation of atomicity and durability?",
@@ -128958,7 +129041,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "Explain Conflict Serializable schedule. Consider the precedence graph of Figure verify the corresponding schedule Conflict Serializable or not.",
@@ -129446,7 +129529,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Explain about Transaction concept and Transaction state.",
@@ -129934,7 +130017,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Describe about implementation of Atomicity and Durability.",
@@ -130352,7 +130435,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Describe about Concurrent Execution and Serializability.",
@@ -131090,7 +131173,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "What is transaction? Give an example. Explain ACID propertics in} DBMS with the help of examples.",
@@ -131578,7 +131661,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Discuss about Log Based Recovery Techniques. Illustrate with an} example.",
@@ -131996,7 +132079,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "How do you implement atomicity property of transactions?",
@@ -132484,7 +132567,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "[:xplain the concept of Sertalizability.",
@@ -132902,7 +132985,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "How do you test for the Serializbility property of transactions?",
@@ -133390,7 +133473,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Outline ACID properties of transaction.",
@@ -133878,7 +133961,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Explain serializability concept with example.",
@@ -134366,7 +134449,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Demonstrate Validation-Based protocols.",
@@ -134784,7 +134867,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "Interpret the procedures used to recover data from a DBMS.",
@@ -135702,7 +135785,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "What is the Distinction between a Deferred and an Immediate} Update?",
@@ -136120,7 +136203,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "Describe recovery algorithm using log records from transaction failure.",
@@ -136538,7 +136621,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Compare Conflict Serializability and View Serializability with an example.",
@@ -137026,7 +137109,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Describe the anomalies in concurrent execution of Transactions.",
@@ -138014,7 +138097,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Discuss the various States of a Transaction with the help of a neat diagram.",
@@ -138502,7 +138585,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "Discuss about Conflict Serializability with an example.",
@@ -138990,7 +139073,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Explain Time stamp based protocol.",
@@ -139408,7 +139491,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Explain Log based recovery",
@@ -139826,7 +139909,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "ye) Explain Vransaction concept.",
@@ -140244,7 +140327,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "What is ARIES algorithm? Explain.",
@@ -141162,7 +141245,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.d",
     "topicTag": "Unit 4",
     "question": "Consider a file system such as the one on your favourite operating system. a. What are the steps involved in creation and deletion of files, and in writing data to a file? b. Explain how the issues of atomicity and durability are relevant to the creation and deletion of files and to writing data to files.",
@@ -141580,7 +141663,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Illustrate implementation of Atomicity and Durability properties.",
@@ -141998,7 +142081,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.b",
     "topicTag": "Unit 4",
     "question": "Let's say two transactions T1 and T2 want to update the same bank account balance at a time. T1: Reads balance, adds 100, writes it back. • T2: Reads balance, deducts ₹50, writes it back. Analyse and critique what would happen with and without mutual exclusion.",
@@ -142486,7 +142569,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Mutual exclusion is a mechanism to achieve serializability. Justify?",
@@ -142974,7 +143057,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 29,
+    "frequency": 14,
     "questionNumber": "Q5.a",
     "topicTag": "Unit 4",
     "question": "Diagnose the important propertics of transactions to maintain data in the face of concurrent access and system failures.",
@@ -143712,7 +143795,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 26,
+    "frequency": 14,
     "questionNumber": "Q5.c",
     "topicTag": "Unit 4",
     "question": "Llaborate the impact of various anomalies due to interleaved >xecution.",
@@ -145016,7 +145099,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "Discuss about cluster indexes.",
@@ -145630,7 +145713,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "What do you mean by Indexing?",
@@ -146244,7 +146327,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "What 1s hash File Organization?",
@@ -146592,7 +146675,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "Differentiate between Primary Indexing and Secondary Indexing.",
@@ -147206,7 +147289,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "Write the differences between tree based and Hash based indexes.",
@@ -147554,7 +147637,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "Define Global depth and Local depth in hashing.",
@@ -147902,7 +147985,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "Explain Tree based Indexing.",
@@ -148902,7 +148985,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "Construct the B+ tree for the following set of key values with order 3.",
@@ -149516,7 +149599,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "What is Dense Index? Give an Example.",
@@ -150130,7 +150213,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "What is Sparse index? Give an example.",
@@ -150744,7 +150827,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "Classify the Hash Indexing techniques.",
@@ -151092,7 +151175,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "How is data organized in a hash based index?",
@@ -151633,7 +151716,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "What is indexing and what are the different types of indices.",
@@ -152247,7 +152330,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "Differentiate between open indexing and closed indexing.",
@@ -152861,7 +152944,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "List any two types of database indices.",
@@ -153209,7 +153292,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "What is hashing?",
@@ -153557,7 +153640,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "Summarize the characteristics of a B+ tree. 1.3) Label the main alternatives for what to store as a data entry inan index.",
@@ -154171,7 +154254,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.i",
     "topicTag": "Unit 5",
     "question": "Discuss about data on external storage? 1.}) Define tree indexing?",
@@ -154785,7 +154868,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q1.j",
     "topicTag": "Unit 5",
     "question": "}) Define tree indexing?",
@@ -155399,7 +155482,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Explain about B+ tree indexing with an example?",
@@ -156013,7 +156096,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Explain the concept of cluster indexes with example",
@@ -156627,7 +156710,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Explain about tree based indexing with an example?",
@@ -157241,7 +157324,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Explain in detail about ISAM?",
@@ -157589,7 +157672,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Analyse about Tree based Indexing and comparison of File Organizations.",
@@ -158203,7 +158286,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Explain about Index data structures and Hash based Indexing.",
@@ -158551,7 +158634,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Explain about B+ Trees with respect to dynamic index structure.",
@@ -159165,7 +159248,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Discuss about Intuitions for tree indexes and ISAM.",
@@ -159972,7 +160055,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Distinguish hetween Sparse and Dense Index illustrating with an example.",
@@ -160586,7 +160669,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "What is transaction? Give an example. Explain ACID propertics in} DBMS with the help of examples.",
@@ -160934,7 +161017,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "How does Extendable hashing use a directory of buckets? How does tt handle the insert and delete operations?",
@@ -161282,7 +161365,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Compare and contrast Hash based indexing and tree based indexing.",
@@ -161630,7 +161713,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Describe the Insertion and Deletion Operations in B+ trees with an example.",
@@ -162244,7 +162327,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Make a comparison between the primary index and a secondary index.",
@@ -162858,7 +162941,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Explain Primary and Secondary indexes with example.",
@@ -163472,7 +163555,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Illustrate the factors that support to evaluate Hashing and Indexing.",
@@ -163820,7 +163903,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Discuss about B\" tree in detail with example.",
@@ -164168,7 +164251,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Illustrate Indexed Sequential Access Methods.",
@@ -164782,7 +164865,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Differentiate Static Hashing and Dynamic Hashing.",
@@ -165130,7 +165213,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Compare Ordered indexing and Hashing.",
@@ -165478,7 +165561,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Explain Clustered Index and Non-Clustered Index with example.",
@@ -166285,7 +166368,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Write short notes on Indexing Techniques.",
@@ -166899,7 +166982,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Construct a B+ tree with fan-out (no of pointers per node) is 3 for the following search key values 80, 50, 30, 70, 30, 100, 90. Assume that the tree is initially empty, and the values are added in the order given. a) Show the tree after insertion of 10, after insertion of 30, and after insertion of 90. b) Show the tree after deletion of 30, 10.",
@@ -167513,7 +167596,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Explain File Organization and Indexing.",
@@ -168127,7 +168210,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Show the Extendable Hash structure for the file which contains records with the following search key values: 2 3 17 19 23 Where Hash Function is h(x)=x mod 8 and bucket size is 3.",
@@ -168475,7 +168558,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "What is Multi-Level Indexing? How does Multi-Level Indexing improve the efficiency of searching an index file?",
@@ -169089,7 +169172,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Distinguish between Primary Index and Secondary Index. Illustrate with an example.",
@@ -170089,7 +170172,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Compare static hashing and Extendible hashing.",
@@ -170437,7 +170520,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Construct a B+ tree to insert the following key elements (order tree is 3) 6, 11, 12, 19, 21, 25, 32, 36, 38, 42, 51, 55, 67, 70.",
@@ -171051,7 +171134,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Explain cluster Index.",
@@ -171665,7 +171748,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Suppose we are using extendable hashing on a file that contains records with the following search key values Show the extendable hash structure for this file if the hash function is h(x)=x mod 8 and buckets can hold three records.",
@@ -172013,7 +172096,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Explain B+ tree insertion and deletion with an example.",
@@ -172627,7 +172710,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Construct a B+ tree for the following set of key values. (2,3,5,7,11,17,19,23,2,31).Assume that the tree is initially empty and values are added in ascending order.",
@@ -173241,7 +173324,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Explain open hashing with suitable example.",
@@ -173589,7 +173672,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Discuss file organization and importance of indexing.",
@@ -174203,7 +174286,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Illustrate B+ trees.",
@@ -174817,7 +174900,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Demonstrate Index Sequential Access Method (ISAM).",
@@ -175431,7 +175514,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Explain cluster index in detail.",
@@ -176045,7 +176128,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "Show the process of Hash-Based indexing with a suitable example.",
@@ -176393,7 +176476,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "Label the [ISAM index structure and interpret the operations performed on ISAM.",
@@ -177007,7 +177090,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "With an appropriate cxample, discuss the procedure used in Tree- Based indexing.",
@@ -177621,7 +177704,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "How does a B+ tree index handle search, insert, and delete? Explain.",
@@ -178235,7 +178318,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.a",
     "topicTag": "Unit 5",
     "question": "I'xplain about B+ tree indexing with an example?",
@@ -178849,7 +178932,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 42,
+    "frequency": 14,
     "questionNumber": "Q6.b",
     "topicTag": "Unit 5",
     "question": "L'xplain about cluster, primary and secondary indexes with example?",
@@ -179463,7 +179546,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.c",
     "topicTag": "Unit 5",
     "question": "Lixplain about hash based indexing with an example?",
@@ -179811,7 +179894,7 @@ const QUESTIONS_DATABASE = [
       2024,
       2023
     ],
-    "frequency": 23,
+    "frequency": 14,
     "questionNumber": "Q6.d",
     "topicTag": "Unit 5",
     "question": "Ixplain in detail and ISAM?",
@@ -187129,7 +187212,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-A3-1029",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -187138,7 +187221,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "What is the principle of Mathematical induction?",
     "paperName": "January 2026.pdf",
     "driveFileId": "1j7aIm-H0xsOdPrGDQdWyvGQzqMygu8QJ",
@@ -187279,7 +187362,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-A3-1032",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -187287,7 +187370,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.e",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "In how many ways can the letters of the word 'MATHEMATICS' be arranged?",
     "paperName": "Aug 2024 supp.pdf",
     "driveFileId": "16uAkxDmx-0XWxidp81tM9pWUPKTh7uje",
@@ -187559,7 +187642,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-A3-1040",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -187567,7 +187650,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "How many words can be formed by using the letters from the word \"DRIVER\" such that all the vowels are always together?",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "12OLmokD7NCErl0ZKnnbn_IkzNSfEOQ3G",
@@ -188084,7 +188167,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-A3-1055",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "A",
     "marks": 2,
     "years": [
@@ -188092,7 +188175,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q1.f",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "Find the number of permutations of letters of \"Mathematics\".",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1PFdxJYI9JSpTd5DVmogy-RqXHnBfzc6o",
@@ -188329,7 +188412,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1062",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188338,8 +188421,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "Using the principle of mathematical induction, prove that 12+23+3 4 +.",
+    "topicTag": "Unit 4",
+    "question": "Using the principle of mathematical induction, prove that $1\\cdot 2 + 2\\cdot 3 + 3\\cdot 4 + \\dots + n(n+1) = \\frac{n(n+1)(n+2)}{3}$ for all integers $n \\ge 1$.",
     "paperName": "Aug 2024 supp.pdf",
     "driveFileId": "16uAkxDmx-0XWxidp81tM9pWUPKTh7uje",
     "pageNumber": 1,
@@ -188379,7 +188462,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1063",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188388,8 +188471,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "Use mathematical induction to show that 1+2+22+33 +.",
+    "topicTag": "Unit 4",
+    "question": "Use mathematical induction to show that $1 + 2 + 2^2 + 2^3 + \\dots + 2^n = 2^{n+1} - 1$ for all integers $n \\ge 0$.",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1PFdxJYI9JSpTd5DVmogy-RqXHnBfzc6o",
     "pageNumber": 2,
@@ -188429,7 +188512,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1064",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188438,8 +188521,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "By using mathematical induction prove that the given equation is true for all positive integers.",
+    "topicTag": "Unit 4",
+    "question": "By using mathematical induction prove that $1^2 + 2^2 + 3^2 + \\dots + n^2 = \\frac{n(n+1)(2n+1)}{6}$ for all positive integers $n \\ge 1$.",
     "paperName": "Supple July 2025.pdf",
     "driveFileId": "18k9VUVZGVITQMSwFLAsEJF_T3Wa9RmeH",
     "pageNumber": 1,
@@ -188529,7 +188612,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1066",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188538,7 +188621,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 2,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "In how many ways can a committee of 5 ladies and 4 gents be chosen from 9 ladies and 15 gents, if gent A refuses to take part if lady B is on the committee?",
     "paperName": "mr 21 supple.pdf",
     "driveFileId": "1eB-kfW8nJbSQXJuwpPmqshc-mJ4jVUMd",
@@ -188614,7 +188697,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1068",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188622,7 +188705,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "A committee of 5 people is to be formed from a group of 4 men and 7 women. How many possible committee can be formed if at least 3 women are on the committee?",
     "paperName": "Aug 2024 supp.pdf",
     "driveFileId": "16uAkxDmx-0XWxidp81tM9pWUPKTh7uje",
@@ -188964,7 +189047,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1078",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -188972,8 +189055,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.c",
-    "topicTag": "Unit 3",
-    "question": "Use mathematical induction to show that 1+2+22+.+ 2\"=2\"+1_1 for all positive integers n.",
+    "topicTag": "Unit 4",
+    "question": "Use mathematical induction to show that $1 + 2 + 2^2 + \\dots + 2^n = 2^{n+1} - 1$ for all positive integers $n \\ge 1$.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
     "pageNumber": 1,
@@ -188999,7 +189082,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1079",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -189007,8 +189090,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
-    "question": "Write the 3-combinations and 3-permutations of {3.",
+    "topicTag": "Unit 4",
+    "question": "Write the 3-combinations and 3-permutations of the set $\\{a, b, c, d\\}$.",
     "paperName": "Aug 2023.pdf",
     "driveFileId": "1asz9j6VtgxNBG7i94T3JPHCzOnEqLdtA",
     "pageNumber": 1,
@@ -189034,7 +189117,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1080",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -189042,8 +189125,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.a",
-    "topicTag": "Unit 3",
-    "question": "Use mathematical induction to prove that 1+2+3 +.",
+    "topicTag": "Unit 4",
+    "question": "Use mathematical induction to prove that $1 + 2 + 3 + \\dots + n = \\frac{n(n+1)}{2}$ for all positive integers $n \\ge 1$.",
     "paperName": "Aug 2024.pdf",
     "driveFileId": "12OLmokD7NCErl0ZKnnbn_IkzNSfEOQ3G",
     "pageNumber": 1,
@@ -189349,7 +189432,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1089",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -189357,8 +189440,8 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
-    "question": "Find the number of permutations that can be made out of the letter I in word ASSASSINATION.",
+    "topicTag": "Unit 4",
+    "question": "Find the number of permutations that can be made out of the letters in the word ASSASSINATION.",
     "paperName": "Feb 2024 supple.pdf",
     "driveFileId": "1m9JX9ySXBWdMhIablsxRF0UtG0Pw6D2L",
     "pageNumber": 2,
@@ -189979,7 +190062,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1107",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -189987,7 +190070,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.d",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "A class consists of 6 girls and 10 boys. If a committee of 3 is chosen at random from the class, find the probability that (i) 3 boys are selected (ii) exactly 2 girls are selected.",
     "paperName": "January 2026.pdf",
     "driveFileId": "1j7aIm-H0xsOdPrGDQdWyvGQzqMygu8QJ",
@@ -190294,7 +190377,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": "DM-B3-1116",
     "subjectId": "DM",
-    "chapter": 3,
+    "chapter": 4,
     "part": "B",
     "marks": 5,
     "years": [
@@ -190302,7 +190385,7 @@ const QUESTIONS_DATABASE = [
     ],
     "frequency": 1,
     "questionNumber": "Q4.b",
-    "topicTag": "Unit 3",
+    "topicTag": "Unit 4",
     "question": "How many Permutations can be made with the letters of the word \"ENGINEERING\".",
     "paperName": "July 2025 supple.pdf",
     "driveFileId": "1PFdxJYI9JSpTd5DVmogy-RqXHnBfzc6o",
@@ -368109,9 +368192,5 @@ if (typeof window !== 'undefined') {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    SUBJECTS_DATA,
-    NOTES_DATA,
-    QUESTIONS_DATABASE
-  };
+  module.exports = { SUBJECTS_DATA, NOTES_DATA, QUESTIONS_DATABASE };
 }

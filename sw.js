@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.07-es-solutions-complete-1';
+const CACHE_NAME = 'mgit-hub-v2026.11.15-audit-fixes-1';
 
 const STATIC_ASSETS = [
   './',
@@ -17,6 +17,7 @@ const STATIC_ASSETS = [
   'css/theme-dark.css',
   'theme.js',
   'app.js',
+  'popup-manager.js',
   'scope-map.js',
   'rich-text.js',
   'mascot.js',
@@ -29,6 +30,12 @@ const STATIC_ASSETS = [
   'data/mid2-practice.js',
   'data/sem-practice.js',
   'data/mid1-practice.js',
+  'data/solutions/DM.json',
+  'data/solutions/COA.json',
+  'data/solutions/OOPJ.json',
+  'data/solutions/DBMS.json',
+  'data/solutions/SE.json',
+  'data/solutions/ES.json',
   'manifest.webmanifest',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',
