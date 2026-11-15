@@ -1505,7 +1505,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
     });
 
-    // Render "AI Notes by Teja" Hierarchical Dropdown Component
+    // Render "AI Notes" Hierarchical Dropdown Component
     const tejaNotes = NOTES_DATA.filter(n => n.subjectId === subId && n.isTejaAiNotes);
     if (tejaNotes.length > 0) {
       if (!state.tejaOpenChapters) state.tejaOpenChapters = {};
