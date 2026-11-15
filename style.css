@@ -1176,6 +1176,11 @@ body {
    Modals & Dialogs
    ========================================================================== */
 
+body.modal-scroll-locked {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -11528,5 +11533,108 @@ html {
 
   .exam-card-upcoming {
     animation: none !important;
+  }
+}
+
+
+/* Solution Actions Row: Prev on left, Centered Ask AI, Next on right */
+.solution-actions-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  margin-top: 20px !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--border-subtle, #e2e8f0) !important;
+}
+
+.solution-actions-row .sol-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  background: var(--bg-card, #ffffff) !important;
+  border: 1.5px solid var(--border-subtle, #e2e8f0) !important;
+  color: var(--text-primary, #1e293b) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.solution-actions-row .sol-nav-btn:hover:not(:disabled) {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.solution-actions-row .sol-nav-btn:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+}
+
+.solution-actions-row .sol-ask-ai-btn.sol-center-ai-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 9px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.28) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin: 0 auto !important;
+}
+
+.solution-actions-row .sol-ask-ai-btn.sol-center-ai-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.38) !important;
+}
+
+.solution-actions-row .sol-right-group {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.solution-actions-row .sol-close-btn {
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  background: transparent !important;
+  border: 1.5px solid var(--border-subtle, #e2e8f0) !important;
+  color: var(--text-muted, #64748b) !important;
+  cursor: pointer !important;
+}
+
+.solution-actions-row .sol-close-btn:hover {
+  background: #f1f5f9 !important;
+  color: var(--text-primary, #1e293b) !important;
+}
+
+@media (max-width: 640px) {
+  .solution-actions-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .solution-actions-row .sol-ask-ai-btn.sol-center-ai-btn {
+    width: 100% !important;
+    order: 1 !important;
+  }
+  .solution-actions-row .sol-prev-btn {
+    order: 2 !important;
+    flex: 1 !important;
+  }
+  .solution-actions-row .sol-right-group {
+    order: 3 !important;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 }

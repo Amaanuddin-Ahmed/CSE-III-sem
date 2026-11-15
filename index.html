@@ -733,7 +733,7 @@
             <div class="ask-with-icon"><i class="fa-brands fa-google"></i></div>
             <div class="ask-with-info">
               <strong>Google Gemini</strong>
-              <span id="geminiSub">Opens gemini.google.com</span>
+              <span id="geminiSub"><strong>Copy question, open Gemini and paste</strong></span>
             </div>
             <i class="fa-solid fa-arrow-up-right-from-square ask-ext-icon"></i>
           </a>
@@ -748,7 +748,7 @@
             </div>
             <div class="ask-with-info">
               <strong>In-Built Study Assistant</strong>
-              <span>Instant exam answer &bull; Powered by Gemini</span>
+              <span>Pre-typed question &bull; Instant answer powered by Gemini</span>
             </div>
             <i class="fa-solid fa-arrow-right ask-ext-icon"></i>
           </button>
@@ -780,30 +780,26 @@
         <div class="solution-model-answer ai-msg-body" id="solAnswerBody">
           <!-- Populated dynamically with verified structured model answer -->
         </div>
-        <div class="solution-actions-row" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 18px;">
-          <div class="sol-nav-group" style="display: flex; gap: 8px;">
-            <button type="button" class="btn-secondary-flat" id="solPrevQuestionBtn" title="Previous question" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
-              <i class="fa-solid fa-chevron-left"></i> <span>Prev</span>
-            </button>
-            <button type="button" class="btn-secondary-flat" id="solNextQuestionBtn" title="Next question" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
+        <div class="solution-actions-row" id="solActionsRow">
+          <button type="button" class="btn-secondary-flat sol-nav-btn sol-prev-btn" id="solPrevQuestionBtn" title="Previous question">
+            <i class="fa-solid fa-chevron-left"></i> <span>Prev</span>
+          </button>
+          
+          <button type="button" class="btn-action-primary sol-ask-ai-btn sol-center-ai-btn" id="solAskAiDeeperBtn" title="Ask with ChatGPT, Gemini or In-Built AI">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ask with AI</span>
+          </button>
+
+          <div class="sol-right-group">
+            <button type="button" class="btn-secondary-flat sol-nav-btn sol-next-btn" id="solNextQuestionBtn" title="Next question">
               <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
             </button>
-            <button type="button" class="btn-secondary-flat" id="solCopyBtn" title="Copy solution markdown" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;">
-              <i class="fa-regular fa-copy"></i> <span id="solCopyBtnText">Copy</span>
-            </button>
-          </div>
-          <div class="sol-action-right" style="display: flex; gap: 8px;">
-            <button type="button" class="btn-action-primary sol-ask-ai-btn" id="solAskAiDeeperBtn">
-              <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ask AI</span>
-            </button>
-            <button type="button" class="btn-secondary-flat" id="solCloseBtn">Close</button>
+            <button type="button" class="btn-secondary-flat sol-close-btn" id="solCloseBtn">Close</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL: Contribution Warning Modal -->
   <!-- ============================================================== -->
   <div class="modal-backdrop" id="contribWarningModal" style="display: none;" role="dialog" aria-modal="true">
     <div class="modal-dialog small-dialog">

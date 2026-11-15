@@ -1,5 +1,21 @@
+
+  function lockModalScroll() {
+    document.body.classList.add('modal-scroll-locked');
+  }
+
+  function unlockModalScroll() {
+    const modals = ['solutionModal', 'askWithModal', 'questionModal', 'geminiModal', 'notesReaderModal'];
+    const anyOpen = modals.some(id => {
+      const el = document.getElementById(id);
+      return el && el.style.display !== 'none' && el.style.display !== '';
+    });
+    if (!anyOpen) {
+      document.body.classList.remove('modal-scroll-locked');
+    }
+  }
+
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.15-ongoing-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.15-dm-fixes-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -395,12 +411,12 @@ Instructions for complete examination answer:
     pendingAiQuestion = q;
     const promptText = buildAskWithAiPrompt(q);
 
-    // 1. Copy immediately and synchronously on tap. No await before this point.
+    // 1. Copy immediately and synchronously on tap
     const copyOk = copyTextSynchronous(promptText);
     setAskCopyStatus(copyOk, promptText);
-    showToast(copyOk ? '✓ Question copied to clipboard' : "Couldn't copy automatically — select the text below", { duration: 2600 });
+    showToast(copyOk ? '✓ Question copied to clipboard' : "Couldn't copy automatically — select the text below", { duration: 2400 });
 
-    // 2. Configure ChatGPT and Gemini <a> tags with real hrefs.
+    // 2. Configure ChatGPT
     const chatgptAnchor = document.getElementById('askOptionChatgpt');
     if (chatgptAnchor) {
       const chatgptUrl = `https://chatgpt.com/?q=${encodeURIComponent(promptText)}`;
@@ -408,27 +424,27 @@ Instructions for complete examination answer:
       chatgptAnchor.onclick = () => {
         copyTextSynchronous(promptText);
         pendingAskProvider = 'ChatGPT';
-        const sub = document.getElementById('chatgptSub');
-        if (sub) sub.textContent = 'Opening ChatGPT… paste if the box is empty';
+        showToast('✓ Question copied to clipboard! Opening ChatGPT...', { duration: 2500 });
       };
     }
 
+    // 3. Configure Gemini
     const geminiAnchor = document.getElementById('askOptionGemini');
     if (geminiAnchor) {
       geminiAnchor.href = 'https://gemini.google.com/app';
       geminiAnchor.onclick = () => {
         copyTextSynchronous(promptText);
         pendingAskProvider = 'Gemini';
-        const sub = document.getElementById('geminiSub');
-        if (sub) sub.textContent = 'Opening Gemini… paste the prompt';
+        showToast('✓ Question copied to clipboard! Opening Google Gemini...', { duration: 3000 });
       };
     }
 
-    // 3. Configure In-Built AI Assistant.
+    // 4. Configure In-Built AI Assistant
     const builtinBtn = document.getElementById('askOptionBuiltin');
     if (builtinBtn) {
       builtinBtn.onclick = () => {
         closeAskWithModal();
+        closeSolutionModal();
         openGeminiModal();
         if (el.geminiQueryInput) {
           el.geminiQueryInput.value = promptText;
@@ -440,7 +456,7 @@ Instructions for complete examination answer:
       };
     }
 
-    // 4. Manual fallback if the browser refused both copy methods.
+    // 5. Manual fallback if the browser refused copy
     const fallbackBtn = document.getElementById('askCopyFallbackBtn');
     if (fallbackBtn) {
       fallbackBtn.onclick = () => {
@@ -459,49 +475,12 @@ Instructions for complete examination answer:
       };
     }
 
-    // 5. Open modal only after the copy attempt.
+    // 6. Open modal with scroll locking
     const modal = document.getElementById('askWithModal');
     if (modal) {
-      
-    // Solution Modal Navigation & Copy Handlers
-    const prevBtn = document.getElementById('solPrevQuestionBtn');
-    const nextBtn = document.getElementById('solNextQuestionBtn');
-    const copyBtn = document.getElementById('solCopyBtn');
-    const copyBtnText = document.getElementById('solCopyBtnText');
-
-    if (prevBtn && nextBtn && state.currentQuestion) {
-      const qList = (state.filteredQuestions && state.filteredQuestions.length > 0)
-        ? state.filteredQuestions
-        : (QUESTIONS_DATABASE.filter(x => x.subjectId === state.currentQuestion.subjectId));
-      const curIdx = qList.findIndex(x => x.id === state.currentQuestion.id);
-      
-      prevBtn.disabled = (curIdx <= 0);
-      nextBtn.disabled = (curIdx < 0 || curIdx >= qList.length - 1);
-      
-      prevBtn.onclick = () => {
-        if (curIdx > 0) openSolutionModal(qList[curIdx - 1]);
-      };
-      nextBtn.onclick = () => {
-        if (curIdx >= 0 && curIdx < qList.length - 1) openSolutionModal(qList[curIdx + 1]);
-      };
-    }
-
-    if (copyBtn && bodyEl) {
-      copyBtn.onclick = async () => {
-        try {
-          const textToCopy = bodyEl.innerText || bodyEl.textContent || '';
-          await navigator.clipboard.writeText(textToCopy);
-          if (copyBtnText) copyBtnText.textContent = 'Copied!';
-          if (typeof showToast === 'function') showToast('Solution copied to clipboard!', 'success');
-          setTimeout(() => { if (copyBtnText) copyBtnText.textContent = 'Copy'; }, 2000);
-        } catch (e) {
-          if (typeof showToast === 'function') showToast('Unable to copy to clipboard', 'info');
-        }
-      };
-    }
-
-    modal.style.display = 'flex';
-      modal.style.zIndex = '100003';
+      modal.style.display = 'flex';
+      modal.style.zIndex = '100005';
+      lockModalScroll();
       const closeBtn = document.getElementById('closeAskWithModalBtn');
       if (closeBtn) closeBtn.focus();
     }
@@ -510,6 +489,7 @@ Instructions for complete examination answer:
   function closeAskWithModal() {
     const modal = document.getElementById('askWithModal');
     if (modal) modal.style.display = 'none';
+    unlockModalScroll();
   }
 
   const solutionsCache = {};
@@ -590,6 +570,7 @@ Instructions for complete examination answer:
   async function openSolutionModal(q) {
     const modal = document.getElementById('solutionModal');
     if (!modal || !q) return;
+    lockModalScroll();
 
     const subBadge = document.getElementById('solSubjectBadge');
     const marksBadge = document.getElementById('solMarksBadge');
@@ -623,10 +604,31 @@ Instructions for complete examination answer:
     const askDeeperBtn = document.getElementById('solAskAiDeeperBtn');
     if (askDeeperBtn) {
       askDeeperBtn.onclick = () => {
-        closeSolutionModal();
         openAskWithModal(q);
       };
     }
+
+    // Solution Modal Navigation Handlers
+    const prevBtn = document.getElementById('solPrevQuestionBtn');
+    const nextBtn = document.getElementById('solNextQuestionBtn');
+
+    if (prevBtn && nextBtn) {
+      const qList = (state.filteredQuestions && state.filteredQuestions.length > 0)
+        ? state.filteredQuestions
+        : (QUESTIONS_DATABASE.filter(x => x.subjectId === (q.subjectId || 'DM')));
+      const curIdx = qList.findIndex(x => (q.id && x.id === q.id) || (x.question === q.question));
+      
+      prevBtn.disabled = (curIdx <= 0);
+      nextBtn.disabled = (curIdx < 0 || curIdx >= qList.length - 1);
+      
+      prevBtn.onclick = () => {
+        if (curIdx > 0) openSolutionModal(qList[curIdx - 1]);
+      };
+      nextBtn.onclick = () => {
+        if (curIdx >= 0 && curIdx < qList.length - 1) openSolutionModal(qList[curIdx + 1]);
+      };
+    }
+
 
     const subId = (q.subjectId || 'CSE').toUpperCase();
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -703,6 +705,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   function closeSolutionModal() {
     const modal = document.getElementById('solutionModal');
     if (modal) modal.style.display = 'none';
+    unlockModalScroll();
   }
 
   // Global helper to jump to a specific subject's unit notes
