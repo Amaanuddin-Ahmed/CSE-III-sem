@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.19-oopj-complete-audit-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.19-oopj-ai-notes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1518,7 +1518,9 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
       const folderUrl = subId === 'COA'
         ? 'https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR'
-        : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-';
+        : (subId === 'OOPJ'
+          ? 'https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP'
+          : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-');
 
       tejaWrapper.innerHTML = `
         <div class="teja-main-row" id="tejaMainRow" role="button" tabindex="0" aria-expanded="${isMainOpen}">

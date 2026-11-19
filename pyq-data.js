@@ -1555,6 +1555,127 @@ const NOTES_DATA = [
     "isTejaAiNotes": true,
     "description": ""
   }
+,
+  {
+      "id": "NOTE-OOPJ-TEJA-U1",
+      "subjectId": "OOPJ",
+      "chapter": 1,
+      "title": "OOPJ Unit 1: Object Oriented Thinking and Java Basics",
+      "fileName": "OOPJ Unit 1 - Object Oriented Thinking and Java Basics.pdf",
+      "fileSize": "1.1 MB",
+      "driveFileId": "1TnYgU31PF5ZiaXoDaK2Uq0fPfb-v3-Mz",
+      "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-U2",
+      "subjectId": "OOPJ",
+      "chapter": 2,
+      "title": "OOPJ Unit 2: Inheritance, Packages and Interfaces",
+      "fileName": "OOPJ Unit 2 - Inheritance, Packages and Interfaces.pdf",
+      "fileSize": "898 KB",
+      "driveFileId": "1WN-MAcgOm7tXhREcdig4SMIOr3fjUwDJ",
+      "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-U3",
+      "subjectId": "OOPJ",
+      "chapter": 3,
+      "title": "OOPJ Unit 3: Exception Handling and Multithreading",
+      "fileName": "OOPJ Unit 3 - Exception Handling and Multithreading.pdf",
+      "fileSize": "833 KB",
+      "driveFileId": "1blRyljFoproi2WGFCSXdk29XlKfy-TP4",
+      "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-U4",
+      "subjectId": "OOPJ",
+      "chapter": 4,
+      "title": "OOPJ Unit 4: Library Classes, Event Handling and Layout Managers",
+      "fileName": "OOPJ Unit 4 - Library Classes, Event Handling and Layout Managers.pdf",
+      "fileSize": "1.1 MB",
+      "driveFileId": "1dTtjFoI-gGITjWOiR2g24dtQ4YnmYtWq",
+      "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-U5",
+      "subjectId": "OOPJ",
+      "chapter": 5,
+      "title": "OOPJ Unit 5: Swing",
+      "fileName": "OOPJ Unit 5 - Swing.pdf",
+      "fileSize": "562 KB",
+      "driveFileId": "1ncOx9xgc94jX7lUw_CoVuTY1R013-bAK",
+      "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-QB-U1",
+      "subjectId": "OOPJ",
+      "chapter": 1,
+      "title": "OOPJ Unit 1: Question Bank with Model Answers",
+      "fileName": "Microsoft Word - unit 1 qb answers.pdf",
+      "fileSize": "1.2 MB",
+      "driveFileId": "1HOofkYifE4QlLHAtM98HxCGO1Z2HqyCX",
+      "folderUrl": "https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-QB-U2",
+      "subjectId": "OOPJ",
+      "chapter": 2,
+      "title": "OOPJ Unit 2: Question Bank with Model Answers",
+      "fileName": "Microsoft Word - unit2 qb answers.pdf",
+      "fileSize": "923 KB",
+      "driveFileId": "1zW8RU7veJTGC9tC5GpAtbHYKgcdXfom-",
+      "folderUrl": "https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-QB-U3",
+      "subjectId": "OOPJ",
+      "chapter": 3,
+      "title": "OOPJ Unit 3: Question Bank with Model Answers",
+      "fileName": "Microsoft Word - unit-iii qb answers.pdf",
+      "fileSize": "1.0 MB",
+      "driveFileId": "185UDapyqz1IK2HH7qzwrlHpCVsJ7RSpv",
+      "folderUrl": "https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-QB-U4",
+      "subjectId": "OOPJ",
+      "chapter": 4,
+      "title": "OOPJ Unit 4: Question Bank with Problem Solutions",
+      "fileName": "Microsoft Word - UNIT-IV QB.pdf",
+      "fileSize": "5.3 MB",
+      "driveFileId": "1ZAR8Nw-EpAK1mbyelmUm1C7TWcEnlF4A",
+      "folderUrl": "https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+      "isTejaAiNotes": true,
+      "description": ""
+  },
+  {
+      "id": "NOTE-OOPJ-TEJA-QB-U5",
+      "subjectId": "OOPJ",
+      "chapter": 5,
+      "title": "OOPJ Unit 5: Question Bank with Model Answers",
+      "fileName": "Microsoft Word - unit5 Qb.pdf",
+      "fileSize": "1.5 MB",
+      "driveFileId": "1fRcScbikC82GF_R73bsQ-K6a5x43scc2",
+      "folderUrl": "https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP",
+      "isTejaAiNotes": true,
+      "description": ""
+  }
 ];
 
 const QUESTIONS_DATABASE = [

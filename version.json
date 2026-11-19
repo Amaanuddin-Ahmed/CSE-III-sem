@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.19-oopj-complete-audit-1",
-  "commit": "fix-all-oopj-solutions-complete-audit",
-  "generatedAt": "2026-11-19T14:25:00.000Z"
+  "version": "v2026.11.19-oopj-ai-notes-1",
+  "commit": "feat(oopj): add AI notes dropdown with Unit 1-5 notes, question banks, and OCR summaries",
+  "generatedAt": "2026-11-19T15:20:00.000Z"
 }

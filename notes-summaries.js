@@ -8142,6 +8142,666 @@ const NOTE_SUMMARIES = {
    }
   ]
  }
+
+ ,"NOTE-OOPJ-TEJA-U1": {
+  "noteId": "NOTE-OOPJ-TEJA-U1",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "title": "OOPJ Unit 1: Object Oriented Thinking and Java Basics",
+  "pageCount": 41,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 1: Object Oriented Thinking and Java Basics · Verified study material · 41 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ High-Yield Exam Questions (Most Likely)",
+      "summary": "Top university examination questions for OOPJ Unit 1: Object Oriented Thinking and Java Basics identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "What are Java buzzwords? Explain them in detail.",
+        "Illustrate the constructor overloading concept with an example program.",
+        "Explain the important principles (concepts) of the object-oriented programming paradigm.",
+        "What is a constructor? Explain the types of constructors in Java with examples.",
+        "Explain the control statements in Java with examples.",
+        "Explain the concept of garbage collection in Java. Why is it important?",
+        "What are the drawbacks of procedural languages? Explain the need for object- oriented programming.",
+        "Explain the uses of the this keyword in Java with an example."
+      ],
+      "formulas": [
+        "Understand fundamental syntax rules and signature definitions.",
+        "Ensure standard exception handling or memory lifecycle constraints are adhered to.",
+        "Verify return types and access modifiers (public, protected, private, package-private)."
+      ],
+      "example": "Core question: What are Java buzzwords? Explain them in detail."
+    },
+    {
+      "title": "★★ Important Preparation Questions (Likely)",
+      "summary": "Step-by-step problem-solving and conceptual design questions likely to appear in university examinations.",
+      "points": [
+        "What is the need for the static keyword? Explain why the main method is static.",
+        "Describe the various methods of parameter passing with examples.",
+        "Explain the advantages and disadvantages of object-oriented programming.",
+        "What is method overloading? Explain with an example program.",
+        "Demonstrate the nested and inner class concept with an example.",
+        "Describe the terms messages, methods and classes in detail."
+      ],
+      "formulas": [
+        "Always check compile-time vs runtime binding conditions.",
+        "Trace execution paths and identify thrown exception classes.",
+        "Use standard conventions (camelCase variables, PascalCase classes)."
+      ],
+      "example": "Practical problem: What is the need for the static keyword? Explain why the main method is static."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class concept with an example. ★★ 21. Describe the terms messages, methods and classes in detail. ★★ 22. Explain the scope and lifetime of variables with examples. ★ 23. What are the responsibilities of an agent? ★ 24. W"
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-U2": {
+  "noteId": "NOTE-OOPJ-TEJA-U2",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "title": "OOPJ Unit 2: Inheritance, Packages and Interfaces",
+  "pageCount": 32,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 2: Inheritance, Packages and Interfaces · Verified study material · 32 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ High-Yield Exam Questions (Most Likely)",
+      "summary": "Top university examination questions for OOPJ Unit 2: Inheritance, Packages and Interfaces identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Discuss how to define and import a package. Explain with an example.",
+        "Explain how Java implements run-time polymorphism (method overriding) with an example.",
+        "Explain with an example how multiple inheritance is achieved in Java.",
+        "What is an interface? Explain how to implement an interface in Java.",
+        "Differentiate between an abstract class and an interface.",
+        "What are the benefits of inheritance? Explain the various forms of inheritance with suitable code segments.",
+        "Differentiate between method overloading and method overriding.",
+        "Discuss the variables in interfaces and extending interfaces with example code."
+      ],
+      "formulas": [
+        "Understand fundamental syntax rules and signature definitions.",
+        "Ensure standard exception handling or memory lifecycle constraints are adhered to.",
+        "Verify return types and access modifiers (public, protected, private, package-private)."
+      ],
+      "example": "Core question: Discuss how to define and import a package. Explain with an example."
+    },
+    {
+      "title": "★★ Important Preparation Questions (Likely)",
+      "summary": "Step-by-step problem-solving and conceptual design questions likely to appear in university examinations.",
+      "points": [
+        "Explain nested interfaces with an example Java program.",
+        "Discuss the basic in-built packages in Java and their uses. Which package is the default package?",
+        "Explain the uses of the super keyword with an example.",
+        "What are the differences between classes and interfaces?"
+      ],
+      "formulas": [
+        "Always check compile-time vs runtime binding conditions.",
+        "Trace execution paths and identify thrown exception classes.",
+        "Use standard conventions (camelCase variables, PascalCase classes)."
+      ],
+      "example": "Practical problem: Explain nested interfaces with an example Java program."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: interface in Java. ★★★ 5. Differentiate between an abstract class and an interface. ★★★ 6. What are the benefits of inheritance? Explain the various forms of inheritance with suitable code segments. ★★★ 7. Differentiate "
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-U3": {
+  "noteId": "NOTE-OOPJ-TEJA-U3",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "title": "OOPJ Unit 3: Exception Handling and Multithreading",
+  "pageCount": 32,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 3: Exception Handling and Multithreading · Verified study material · 32 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ High-Yield Exam Questions (Most Likely)",
+      "summary": "Top university examination questions for OOPJ Unit 3: Exception Handling and Multithreading identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain how to create your own (user-defined) exception in a Java program with an example.",
+        "What is synchronization? How is synchronization implemented in Java?",
+        "What is an exception? How are exceptions handled in Java?",
+        "Distinguish between thread-based and process-based multitasking.",
+        "Describe the complete life cycle of a thread.",
+        "Explain multithreading. In how many ways does Java implement multithreading? Explain one with an example.",
+        "Explain multiple catch blocks with an example program.",
+        "Explain checked exceptions and unchecked exceptions with examples."
+      ],
+      "formulas": [
+        "Understand fundamental syntax rules and signature definitions.",
+        "Ensure standard exception handling or memory lifecycle constraints are adhered to.",
+        "Verify return types and access modifiers (public, protected, private, package-private)."
+      ],
+      "example": "Core question: Explain how to create your own (user-defined) exception in a Java program with an example."
+    },
+    {
+      "title": "★★ Important Preparation Questions (Likely)",
+      "summary": "Step-by-step problem-solving and conceptual design questions likely to appear in university examinations.",
+      "points": [
+        "Explain the concept of Java built-in exceptions with an example.",
+        "Explain the commonly used methods of the Thread class.",
+        "Compare and contrast the throw and throws keywords with examples.",
+        "What are the advantages of using the exception handling mechanism in a program?"
+      ],
+      "formulas": [
+        "Always check compile-time vs runtime binding conditions.",
+        "Trace execution paths and identify thrown exception classes.",
+        "Use standard conventions (camelCase variables, PascalCase classes)."
+      ],
+      "example": "Practical problem: Explain the concept of Java built-in exceptions with an example."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class AgeException extends Exception throw new AgeException(msg) catch (AgeException e) 2 Explanation Built-in exceptions cover general errors such as division by zero, but application rules (minimum voting age, maximum "
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-U4": {
+  "noteId": "NOTE-OOPJ-TEJA-U4",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "title": "OOPJ Unit 4: Library Classes, Event Handling and Layout Managers",
+  "pageCount": 42,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 4: Library Classes, Event Handling and Layout Managers · Verified study material · 42 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ High-Yield Exam Questions (Most Likely)",
+      "summary": "Top university examination questions for OOPJ Unit 4: Library Classes, Event Handling and Layout Managers identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "List and explain the different types of layout managers with suitable examples.",
+        "Explain the process of event handling through the delegation event model.",
+        "What is the role of event listeners in event handling? List the Java event listeners.",
+        "Explain the procedure to handle mouse events in Java with an example program.",
+        "How can mouse and keyboard events be handled? Explain with an example.",
+        "Discuss the AWT component classes (Label, Button, TextField, TextArea) with a suitable example program.",
+        "What is an Iterator? Demonstrate how to access a collection using an Iterator.",
+        "What is an adapter class? Demonstrate its role in event handling."
+      ],
+      "formulas": [
+        "Understand fundamental syntax rules and signature definitions.",
+        "Ensure standard exception handling or memory lifecycle constraints are adhered to.",
+        "Verify return types and access modifiers (public, protected, private, package-private)."
+      ],
+      "example": "Core question: List and explain the different types of layout managers with suitable examples."
+    },
+    {
+      "title": "★★ Important Preparation Questions (Likely)",
+      "summary": "Step-by-step problem-solving and conceptual design questions likely to appear in university examinations.",
+      "points": [
+        "Explain the HashSet, LinkedHashSet and TreeSet classes with examples.",
+        "Illustrate the use of GridBagLayout.",
+        "Explain the BorderLayout manager with the help of a suitable program.",
+        "Explain the File class and its methods.",
+        "Discuss various AWT containers with examples.",
+        "Explain file handling using the FileReader and BufferedReader classes."
+      ],
+      "formulas": [
+        "Always check compile-time vs runtime binding conditions.",
+        "Trace execution paths and identify thrown exception classes.",
+        "Use standard conventions (camelCase variables, PascalCase classes)."
+      ],
+      "example": "Practical problem: Explain the HashSet, LinkedHashSet and TreeSet classes with examples."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class with an example program. ★★★ 11. What is the Java Collections Framework? List its basic interfaces and benefits. ★★★ 12. Describe the different methods of the String class with examples. ★★★ 13. Explain the Scanner"
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-U5": {
+  "noteId": "NOTE-OOPJ-TEJA-U5",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "title": "OOPJ Unit 5: Swing",
+  "pageCount": 15,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 5: Swing · Verified study material · 15 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ High-Yield Exam Questions (Most Likely)",
+      "summary": "Top university examination questions for OOPJ Unit 5: Swing identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain the Model-View-Controller (MVC) architecture in Swing.",
+        "Compare AWT and Swing.",
+        "Explain the important Swing components and containers such as JFrame, JComponent, JLabel, ImageIcon, JTextField and JButton.",
+        "Explain Tabbed Panes, Scroll Panes, Trees and Tables.",
+        "List and explain the limitations of AWT.",
+        "Explain menu basics and the menu-related classes JMenuBar, JMenu, JMenuItem, JCheckBoxMenuItem and JRadioButtonMenuItem.",
+        "Discuss how layout managers affect the design and responsiveness of a Swing GUI."
+      ],
+      "formulas": [
+        "Understand fundamental syntax rules and signature definitions.",
+        "Ensure standard exception handling or memory lifecycle constraints are adhered to.",
+        "Verify return types and access modifiers (public, protected, private, package-private)."
+      ],
+      "example": "Core question: Explain the Model-View-Controller (MVC) architecture in Swing."
+    },
+    {
+      "title": "★★ Important Preparation Questions (Likely)",
+      "summary": "Step-by-step problem-solving and conceptual design questions likely to appear in university examinations.",
+      "points": [
+        "Explain JCheckBox, JRadioButton, JList and JComboBox with suitable examples."
+      ],
+      "formulas": [
+        "Always check compile-time vs runtime binding conditions.",
+        "Trace execution paths and identify thrown exception classes.",
+        "Use standard conventions (camelCase variables, PascalCase classes)."
+      ],
+      "example": "Practical problem: Explain JCheckBox, JRadioButton, JList and JComboBox with suitable examples."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: interface presentation and its interaction logic. Swing uses a modified MVC. Model (data) View (display) Controller (user input) updates notifies user actions / view updates 2 Explanation 1. Model Holds the data and logi"
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-QB-U1": {
+  "noteId": "NOTE-OOPJ-TEJA-QB-U1",
+  "subjectId": "OOPJ",
+  "chapter": 1,
+  "title": "OOPJ Unit 1: Question Bank with Model Answers",
+  "pageCount": 17,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 1: Question Bank with Model Answers · Verified study material · 17 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ Core Examination Questions & Model Answers",
+      "summary": "Frequently repeated examination questions and high-yield conceptual points from OOPJ Unit 1: Question Bank with Model Answers.",
+      "points": [
+        "What is abstract class?",
+        "Explain the use of ‘for’ statement in Java with an example.",
+        "Explain the purpose of this keyword in Java.",
+        "Why is Java called platform-independent?",
+        "Apply if-else control structure to check if a number is positive or negative.",
+        "What is variable?",
+        "Differentiate between class and object.",
+        "Why is abstraction important in object-oriented programming?"
+      ],
+      "formulas": [
+        "State concise definitions followed by exact keyword requirements.",
+        "Provide brief, working code templates with appropriate access levels.",
+        "Include contrast tables (e.g., overloading vs overriding, AWT vs Swing) for 5-mark clarity."
+      ],
+      "example": "Standard question: What is abstract class?"
+    },
+    {
+      "title": "★★ Core Technical Concepts & Implementation Points",
+      "summary": "Detailed technical mechanisms, operational semantics, and core definitions for this unit.",
+      "points": [
+        "Write a simple Java program to print the sum of two numbers.",
+        "What are the responsibilities of an agent?",
+        "What is the purpose of constructor in Java programming?",
+        "How does polymorphism promote extensibility?",
+        "What are the primitive data types available in Java?",
+        "Explain control statements in Java.",
+        "What is polymorphism?",
+        "What is method overloading?"
+      ],
+      "formulas": [
+        "Always write complete syntactic signatures when answering technical questions.",
+        "Explain the role of underlying runtime structures (JVM heap, stack, delegation model).",
+        "Mention real-world use cases and standard Java library classes."
+      ],
+      "example": "Concept: Write a simple Java program to print the sum of two numbers."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: abstract class in Java is a class that cannot be instantiated directly. It is declared using the keyword abstract. It can have both abstract methods (without body) and non-abstract methods (with body). It is used to prov"
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-QB-U2": {
+  "noteId": "NOTE-OOPJ-TEJA-QB-U2",
+  "subjectId": "OOPJ",
+  "chapter": 2,
+  "title": "OOPJ Unit 2: Question Bank with Model Answers",
+  "pageCount": 16,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 2: Question Bank with Model Answers · Verified study material · 16 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ Core Examination Questions & Model Answers",
+      "summary": "Frequently repeated examination questions and high-yield conceptual points from OOPJ Unit 2: Question Bank with Model Answers.",
+      "points": [
+        "Define a Package?",
+        "How to Create and Use a Package in Java Program?",
+        "Compile with javac -d . ClassName.java (creates package folder).",
+        "Use in another program with: import packname.",
+        "Run with java packname.ClassName.",
+        "What is an Abstract Class?",
+        "What is Inheritance in Java?",
+        "What is inheritance and how does it help to create new classes quickly?"
+      ],
+      "formulas": [
+        "State concise definitions followed by exact keyword requirements.",
+        "Provide brief, working code templates with appropriate access levels.",
+        "Include contrast tables (e.g., overloading vs overriding, AWT vs Swing) for 5-mark clarity."
+      ],
+      "example": "Standard question: Define a Package?"
+    },
+    {
+      "title": "★★ Core Technical Concepts & Implementation Points",
+      "summary": "Detailed technical mechanisms, operational semantics, and core definitions for this unit.",
+      "points": [
+        "Code Reusability – Common functionality need not be rewritten.",
+        "What is an interface?",
+        "Both can contain methods and variables.",
+        "Both are used to define types and provide structure to programs.",
+        "Both support inheritance (class extends class, interface extends interface).",
+        "Both are compiled into .class files.",
+        "How can you extend one interface by the other interface?",
+        "Discuss how to define and import a package?"
+      ],
+      "formulas": [
+        "Always write complete syntactic signatures when answering technical questions.",
+        "Explain the role of underlying runtime structures (JVM heap, stack, delegation model).",
+        "Mention real-world use cases and standard Java library classes."
+      ],
+      "example": "Concept: Code Reusability – Common functionality need not be rewritten."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class provides a new implementation for a method already defined in the parent class.  Binding: o Overloading: Resolved at compile time (static binding). o Overriding: Resolved at runtime (dynamic binding). 2. Define a "
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-QB-U3": {
+  "noteId": "NOTE-OOPJ-TEJA-QB-U3",
+  "subjectId": "OOPJ",
+  "chapter": 3,
+  "title": "OOPJ Unit 3: Question Bank with Model Answers",
+  "pageCount": 15,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 3: Question Bank with Model Answers · Verified study material · 15 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ Core Examination Questions & Model Answers",
+      "summary": "Frequently repeated examination questions and high-yield conceptual points from OOPJ Unit 3: Question Bank with Model Answers.",
+      "points": [
+        "Define exception in Java.",
+        "What is the purpose of the finally block in exception handling?",
+        "What is autoboxing in Java?",
+        "Which method is used to start a thread?",
+        "Explain the role of the throws keyword.",
+        "What is the use of annotations in Java?",
+        "Define multitasking.",
+        "Process-based multitasking – running multiple programs simultaneously."
+      ],
+      "formulas": [
+        "State concise definitions followed by exact keyword requirements.",
+        "Provide brief, working code templates with appropriate access levels.",
+        "Include contrast tables (e.g., overloading vs overriding, AWT vs Swing) for 5-mark clarity."
+      ],
+      "example": "Standard question: Define exception in Java."
+    },
+    {
+      "title": "★★ Core Technical Concepts & Implementation Points",
+      "summary": "Detailed technical mechanisms, operational semantics, and core definitions for this unit.",
+      "points": [
+        "Thread-based multitasking – running multiple threads within a single program.",
+        "Write the complete life cycle of a thread.",
+        "New: Thread object created but not started.",
+        "Runnable: Thread is ready to run but waiting for CPU scheduling.",
+        "Running: Thread is executing its run() method.",
+        "Blocked/Waiting: Thread is temporarily inactive (e.g.",
+        "Terminated: Thread has completed execution or stopped.",
+        "Which method would you use to pause a thread for 2 seconds?"
+      ],
+      "formulas": [
+        "Always write complete syntactic signatures when answering technical questions.",
+        "Explain the role of underlying runtime structures (JVM heap, stack, delegation model).",
+        "Mention real-world use cases and standard Java library classes."
+      ],
+      "example": "Concept: Thread-based multitasking – running multiple threads within a single program."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class is used to start a thread in Java. When start() is called, a new thread begins execution, and the JVM calls the thread’s run() method automatically. Example: MyThread t = new MyThread(); t.start(); // starts the th"
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-QB-U4": {
+  "noteId": "NOTE-OOPJ-TEJA-QB-U4",
+  "subjectId": "OOPJ",
+  "chapter": 4,
+  "title": "OOPJ Unit 4: Question Bank with Problem Solutions",
+  "pageCount": 39,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 4: Question Bank with Problem Solutions · Verified study material · 39 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ Core Examination Questions & Model Answers",
+      "summary": "Frequently repeated examination questions and high-yield conceptual points from OOPJ Unit 4: Question Bank with Problem Solutions.",
+      "points": [
+        "What is the purpose of an Event Listener?",
+        "Identify the class used to handle mouse events.",
+        "Mention one difference between Checkbox and CheckboxGroup.",
+        "Which layout manager displays components in a single line?",
+        "Which method is invoked when a button is clicked in AWT?",
+        "What is the use of ScrollPane in Java AWT?",
+        "Choose a suitable layout for components arranged in rows and columns.",
+        "Which AWT component is used to display a static text?"
+      ],
+      "formulas": [
+        "State concise definitions followed by exact keyword requirements.",
+        "Provide brief, working code templates with appropriate access levels.",
+        "Include contrast tables (e.g., overloading vs overriding, AWT vs Swing) for 5-mark clarity."
+      ],
+      "example": "Standard question: What is the purpose of an Event Listener?"
+    },
+    {
+      "title": "★★ Core Technical Concepts & Implementation Points",
+      "summary": "Detailed technical mechanisms, operational semantics, and core definitions for this unit.",
+      "points": [
+        "Which listener interface handles window closing events?",
+        "Explain checkbox groups.",
+        "Import java.awt.event.",
+        "Override necessary methods such as mouseClicked(), mousePressed(), etc.",
+        "Explain the process of event handling through delegation model.",
+        "Event Source: The GUI component that generates an event (e.g., Button).",
+        "Event Object: Contains information about the event (e.g., ActionEvent).",
+        "Event Listener: The object that receives and handles the event."
+      ],
+      "formulas": [
+        "Always write complete syntactic signatures when answering technical questions.",
+        "Explain the role of underlying runtime structures (JVM heap, stack, delegation model).",
+        "Mention real-world use cases and standard Java library classes."
+      ],
+      "example": "Concept: Which listener interface handles window closing events?"
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: class used to handle mouse events. The class used to handle mouse events is MouseAdapter or an interface like MouseListener and MouseMotionListener. 3. Mention one difference between Checkbox and CheckboxGroup. Checkbox "
+    }
+  ]
+}
+ ,"NOTE-OOPJ-TEJA-QB-U5": {
+  "noteId": "NOTE-OOPJ-TEJA-QB-U5",
+  "subjectId": "OOPJ",
+  "chapter": 5,
+  "title": "OOPJ Unit 5: Question Bank with Model Answers",
+  "pageCount": 30,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "OOPJ Unit 5: Question Bank with Model Answers · Verified study material · 30 pages · Structured syllabus topics in order · Solved questions & model answers · High-yield exam focus.",
+  "topics": [
+    {
+      "title": "★★★ Core Examination Questions & Model Answers",
+      "summary": "Frequently repeated examination questions and high-yield conceptual points from OOPJ Unit 5: Question Bank with Model Answers.",
+      "points": [
+        "What is an applet in Java?",
+        "Write the full form of MVC in Swing architecture.",
+        "What is the use of the JLabel component in Swing?",
+        "Name the container used to hold multiple tabs in Swing.",
+        "Name any two types of applets.",
+        "Local Applet – stored and executed from the local machine.",
+        "Remote Applet – downloaded and run from a web server over the internet.",
+        "Explain how the parameters are passing to an applet."
+      ],
+      "formulas": [
+        "State concise definitions followed by exact keyword requirements.",
+        "Provide brief, working code templates with appropriate access levels.",
+        "Include contrast tables (e.g., overloading vs overriding, AWT vs Swing) for 5-mark clarity."
+      ],
+      "example": "Standard question: What is an applet in Java?"
+    },
+    {
+      "title": "★★ Core Technical Concepts & Implementation Points",
+      "summary": "Detailed technical mechanisms, operational semantics, and core definitions for this unit.",
+      "points": [
+        "Discuss about different applet display methods in brief.",
+        "Create a simple applet to display a smiley picture using Graphics class methods.",
+        "Explain the concept of MVC architecture in Java Swing.",
+        "User clicks a cell in JTable (Controller handles click).",
+        "Controller modifies TableModel (Model).",
+        "TableModel fires a change event.",
+        "JTable (View) receives event and repaints cell."
+      ],
+      "formulas": [
+        "Always write complete syntactic signatures when answering technical questions.",
+        "Explain the role of underlying runtime structures (JVM heap, stack, delegation model).",
+        "Mention real-world use cases and standard Java library classes."
+      ],
+      "example": "Concept: Discuss about different applet display methods in brief."
+    },
+    {
+      "title": "Exam Quick-Revision Cheat Sheet & Key Rules",
+      "summary": "Essential formulas, identities, keyword rules, and standard templates extracted from the notes.",
+      "points": [
+        "Always state definitions and boundary conditions before writing implementation code.",
+        "Ensure class names match file names for public classes in user packages.",
+        "Remember exact keywords: static, final, super, this, synchronized, volatile, transient."
+      ],
+      "formulas": [
+        "Compile with javac -d . ClassName.java for package management",
+        "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
+        "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
+      ],
+      "example": "Syntax template: interface remains usable and visually consistent across different screen sizes and resolutions. Layout managers also ensure platform independence, as components adjust themselves without relying on pixel values. More adv"
+    }
+  ]
+}
 };
 
 if (typeof window !== 'undefined') {
