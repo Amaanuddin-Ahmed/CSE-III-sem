@@ -11927,7 +11927,11 @@ html {
 
 /* Hide floating AI button when notes reader modal is active */
 .notes-reader-open .ai-chat-floating-btn,
-body.notes-reader-open .ai-chat-floating-btn {
+body.notes-reader-open .ai-chat-floating-btn,
+.notes-reader-open .floating-gemini-btn,
+body.notes-reader-open .floating-gemini-btn,
+.notes-reader-open #floatingGeminiBtn,
+body.notes-reader-open #floatingGeminiBtn {
   display: none !important;
 }
 

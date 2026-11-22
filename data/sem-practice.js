@@ -187,7 +187,7 @@ const SEM_PRACTICE = {
         "unit": 1,
         "scope": "sem",
         "topic": "PDNF",
-        "question": "With standard variable order (p, q) where p is the high bit, the principal disjunctive normal form (PDNF) of $p \to q$ is:",
+        "question": "With standard variable order (p, q) where p is the high bit, the principal disjunctive normal form (PDNF) of $p \\to q$ is:",
         "options": [
           "$\\Sigma m(1,2,3)$",
           "$\\Sigma m(0,1,3)$",
@@ -196,7 +196,7 @@ const SEM_PRACTICE = {
         ],
         "answerIndex": 1,
         "difficulty": "medium",
-        "explanation": "$p \to q \equiv \neg p \lor q$ evaluates to true for variable assignments (p=0, q=0) -> m0, (p=0, q=1) -> m1, and (p=1, q=1) -> m3, giving minterm sum \Sigma m(0, 1, 3).",
+        "explanation": "$p \\to q \\equiv \\neg p \\lor q$ evaluates to true for variable assignments (p=0, q=0) -> m0, (p=0, q=1) -> m1, and (p=1, q=1) -> m3, giving minterm sum \\Sigma m(0, 1, 3).",
         "source": "syllabus"
       },
       {
@@ -4883,7 +4883,7 @@ const SEM_PRACTICE = {
         "unit": 3,
         "scope": "sem",
         "topic": "Dependency Preservation",
-        "question": "Which of the following normal forms guarantees both lossless-join decomposition AND dependency preservation simultaneously?",
+        "question": "Under functional dependencies, which target normal form is always guaranteed to admit a decomposition that is simultaneously lossless-join and dependency-preserving?",
         "options": [
           "4NF",
           "5NF",
@@ -5051,7 +5051,7 @@ const SEM_PRACTICE = {
         "unit": 3,
         "scope": "sem",
         "topic": "Second Normal Form (2NF)",
-        "question": "A relation is in 2NF if it is in 1NF and contains no _______ functional dependencies.",
+        "question": "A relation is in 2NF if it is in 1NF and contains no _______ functional dependencies (every non-prime attribute is fully dependent on every candidate key).",
         "accepted": [
           "partial",
           "partial functional dependencies",
@@ -6228,8 +6228,8 @@ const SEM_PRACTICE = {
         "unit": 2,
         "scope": "sem",
         "topic": "SRS Document Standard",
-        "question": "Which 1998 IEEE recommended practice described the format and content of Software Requirements Specification (SRS) documents (superseded by ISO/IEC/IEEE 29148)?",
-        "accepted": ["830", "ieee 830", "29148", "ieee 29148"],
+        "question": "Which 1998 IEEE recommended practice described the format and content of Software Requirements Specification (SRS) documents?",
+        "accepted": ["830", "ieee 830"],
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "IEEE 830 (now ISO/IEC/IEEE 29148) provides standard guidelines for drafting complete, unambiguous SRS documents."
@@ -7205,7 +7205,7 @@ const SEM_PRACTICE = {
         "unit": 1,
         "scope": "sem",
         "topic": "Ecosystem Trophic Levels",
-        "question": "In a terrestrial ecosystem, green plants and phytoplankton occupy which trophic level?",
+        "question": "Across terrestrial and aquatic ecosystems, green plants and phytoplankton occupy which trophic level?",
         "options": [
           "Secondary Consumers",
           "Decomposers",

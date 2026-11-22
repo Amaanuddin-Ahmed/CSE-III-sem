@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.23-exam-week-audit-repair-1",
-  "commit": "fix(audit): complete exam-week audit repairs across SE, DBMS, IE, DM, COA, OOPJ, ES, and core app engine",
-  "generatedAt": "2026-11-23T02:20:00.000Z"
+  "version": "v2026.11.23-exam-week-audit-repair-2",
+  "commit": "fix(audit): resolve read button TDZ regression, isolate AI drafts provenance, repair SE/DBMS solutions and empty-state routing",
+  "generatedAt": "2026-11-23T03:20:00.000Z"
 }

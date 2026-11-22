@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -40,7 +40,10 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-1%c', 'b
       const raw = localStorage.getItem(key);
       if (!raw) return fallback;
       const parsed = JSON.parse(raw);
-      return (parsed !== null && parsed !== undefined) ? parsed : fallback;
+      if (parsed === null || parsed === undefined) return fallback;
+      if (Array.isArray(fallback) && !Array.isArray(parsed)) return fallback;
+      if (typeof fallback === 'object' && !Array.isArray(fallback) && (typeof parsed !== 'object' || Array.isArray(parsed))) return fallback;
+      return parsed;
     } catch (err) {
       console.warn(`[Storage] Failed to parse ${key}:`, err);
       return fallback;
@@ -48,6 +51,7 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-1%c', 'b
   }
 
   const solutionsInFlight = {};
+  const aiDraftsCache = {};
   let currentSolutionRequestId = 0;
   let activeSolutionAbortController = null;
 
@@ -540,7 +544,7 @@ Instructions for complete examination answer:
     if (!q || !q.subjectId) return null;
     const subId = q.subjectId.toUpperCase();
 
-    // 1. Check in-memory cache with in-flight request sharing and standard caching
+    // 1. Check published solutions bank with in-flight request sharing and standard caching
     if (!solutionsCache[subId]) {
       if (!solutionsInFlight[subId]) {
         solutionsInFlight[subId] = fetch(`data/solutions/${subId}.json`)
@@ -553,7 +557,8 @@ Instructions for complete examination answer:
             return solutionsCache[subId];
           })
           .catch(err => {
-            console.warn(`[Solutions Cache] Failed to load solutions for ${subId}:`, err);
+            console.warn(`[Solutions Cache] Failed to load published solutions for ${subId}:`, err);
+            // Do not permanently cache failure so future network retries succeed
             return null;
           })
           .finally(() => {
@@ -566,23 +571,54 @@ Instructions for complete examination answer:
     const subSolutions = solutionsCache[subId] || {};
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
     
-    // Priority P0: Check exact ID first, then fall back to normalized text key
+    // Priority P0: Check exact ID first, then fall back to normalized text key in PUBLISHED solutions
     const candidate = (q.id && subSolutions[q.id]) ? subSolutions[q.id] : (subSolutions[normKey] || null);
     if (candidate) {
       const text = typeof candidate === 'string' ? candidate : (candidate.answerMd || candidate.solution || candidate.answer || '');
       if (text && !isStaleFallbackSolution(text)) {
-        return { answerMd: text, question: q.question, subjectId: q.subjectId, isModelAcademic: true };
+        return {
+          answerMd: text,
+          question: q.question,
+          subjectId: q.subjectId,
+          isReviewed: true,
+          provenance: 'reviewed',
+          isModelAcademic: true
+        };
       }
     }
 
-    // Check localStorage cache for previously AI-generated answers
+    // 2. Check in-memory AI drafts cache (strictly unreviewed / AI-assisted)
+    const subDrafts = aiDraftsCache[subId] || {};
+    const draftCandidate = (q.id && subDrafts[q.id]) ? subDrafts[q.id] : (subDrafts[normKey] || null);
+    if (draftCandidate) {
+      const draftText = typeof draftCandidate === 'string' ? draftCandidate : (draftCandidate.answerMd || '');
+      if (draftText && !isStaleFallbackSolution(draftText)) {
+        return {
+          answerMd: draftText,
+          question: q.question,
+          subjectId: q.subjectId,
+          isReviewed: false,
+          provenance: 'ai_draft',
+          isModelAcademic: false
+        };
+      }
+    }
+
+    // 3. Check localStorage cache for previously AI-generated answers
     try {
       const localStored = localStorage.getItem('mgit_sol_' + normKey);
       if (localStored) {
         const parsed = JSON.parse(localStored);
         const text = parsed ? (typeof parsed === 'string' ? parsed : (parsed.answerMd || parsed.solution || parsed.answer || '')) : '';
         if (text && !isStaleFallbackSolution(text)) {
-          return { answerMd: text, question: q.question, subjectId: q.subjectId, isModelAcademic: false };
+          return {
+            answerMd: text,
+            question: q.question,
+            subjectId: q.subjectId,
+            isReviewed: false,
+            provenance: 'ai_draft',
+            isModelAcademic: false
+          };
         } else {
           localStorage.removeItem('mgit_sol_' + normKey);
         }
@@ -616,7 +652,9 @@ Instructions for complete examination answer:
     if (marksBadge) marksBadge.textContent = marksLabel(q.marks);
     if (unitBadge) unitBadge.textContent = 'Unit ' + (q.chapter || 1);
     if (titleEl) titleEl.innerHTML = cleanHumanFriendlyQuestion(q.question);
-    if (statusChip) statusChip.textContent = 'Model Academic Solution (Reviewed)';
+    
+    // Explicit initial status while loading answer
+    if (statusChip) statusChip.textContent = 'Loading answer…';
     if (paperNotice) paperNotice.style.display = 'none';
 
     modal.style.display = 'flex';
@@ -626,8 +664,8 @@ Instructions for complete examination answer:
       bodyEl.innerHTML = `
         <div class="sol-loading-container" style="padding: 30px 0; text-align: center; color: #475569;">
           <div class="spinner-border" style="display: inline-block; width: 32px; height: 32px; border: 3px solid #e2e8f0; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 14px;"></div>
-          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1e293b;">Loading verified examination solution…</p>
-          <p style="margin: 6px 0 0; font-size: 13px; color: #64748b;">Checking solution library and saved answers</p>
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #1e293b;">Loading examination solution…</p>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #64748b;">Checking published solutions and saved answers</p>
         </div>
       `;
     }
@@ -678,7 +716,7 @@ Instructions for complete examination answer:
     if (solutionText && !isStaleFallbackSolution(solutionText)) {
       if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(solutionText);
       if (statusChip) {
-        statusChip.textContent = preSolution.isModelAcademic
+        statusChip.textContent = preSolution.isReviewed
           ? 'Model Academic Solution (Reviewed)'
           : 'AI-Assisted Solution';
       }
@@ -725,11 +763,22 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         if (text && bodyEl) {
           bodyEl.innerHTML = formatGeminiResponse(text);
           if (statusChip) statusChip.textContent = 'AI-Assisted Solution';
-          // Cache in local memory for instant future loads
+          
+          // STRICT SEPARATION: Save into aiDraftsCache and localStorage ONLY (never solutionsCache!)
           try {
-            localStorage.setItem('mgit_sol_' + normKey, JSON.stringify({ answerMd: text, question: q.question, subjectId: q.subjectId, chapter: q.chapter, marks: q.marks }));
-            if (!solutionsCache[subId]) solutionsCache[subId] = {};
-            solutionsCache[subId][normKey] = { answerMd: text, question: q.question };
+            const draftObj = {
+              answerMd: text,
+              question: q.question,
+              subjectId: q.subjectId,
+              chapter: q.chapter,
+              marks: q.marks,
+              isReviewed: false,
+              provenance: 'ai_draft'
+            };
+            localStorage.setItem('mgit_sol_' + normKey, JSON.stringify(draftObj));
+            if (!aiDraftsCache[subId]) aiDraftsCache[subId] = {};
+            aiDraftsCache[subId][normKey] = draftObj;
+            if (q.id) aiDraftsCache[subId][q.id] = draftObj;
           } catch (e) {}
           return;
         }
@@ -762,11 +811,20 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const sub = SUBJECTS_DATA[subjectId];
     if (sub) {
       selectSubject(sub);
-      switchSubjectTab('notes');
+      showNotesView();
       state.notesChapterFilter = String(unit);
       if (el.notesChapterSelect) el.notesChapterSelect.value = String(unit);
+      if (!state.expandedNotesUnits) state.expandedNotesUnits = {};
+      state.expandedNotesUnits[unit] = true;
       renderNotesDivision();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      requestAnimationFrame(() => {
+        const accordion = document.getElementById('notesUnitAccordion-' + unit);
+        if (accordion) {
+          const header = accordion.querySelector('.chapter-accordion-header');
+          if (header) header.focus();
+          accordion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
     }
   };
 
@@ -1530,16 +1588,40 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           <h5>No notes uploaded yet for ${escapeHtml(chLabel)}</h5>
           <p>Don't worry—you can still practice high-yield questions, or switch exam scope to view notes from all units.</p>
           <div class="empty-notes-actions" style="margin-top: 16px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            <button type="button" class="btn btn-outline-primary empty-act-btn" onclick="switchSubjectTab('practice')">
+            <button type="button" class="btn btn-outline-primary empty-act-btn" id="emptyNotesPracticeBtn">
               <i class="fa-solid fa-bolt"></i> Practice Quiz &amp; Flashcards
             </button>
             ${examKey !== 'sem' ? `
-            <button type="button" class="btn btn-primary empty-act-btn" onclick="setExamMode('sem')">
+            <button type="button" class="btn btn-primary empty-act-btn" id="emptyNotesAllSyllabusBtn">
               <i class="fa-solid fa-book-open"></i> View All Syllabus Notes
             </button>` : ''}
           </div>
         </div>
       `;
+
+      const practiceBtn = el.notesListContainer.querySelector('#emptyNotesPracticeBtn');
+      if (practiceBtn) {
+        practiceBtn.addEventListener('click', () => {
+          if (window.PracticeRunner) {
+            window.PracticeRunner.openSelectorModal();
+            if (state.currentSubject) {
+              window.PracticeRunner.goToUnitSelection(state.currentSubject.id);
+            }
+          }
+        });
+      }
+
+      const allSyllabusBtn = el.notesListContainer.querySelector('#emptyNotesAllSyllabusBtn');
+      if (allSyllabusBtn) {
+        allSyllabusBtn.addEventListener('click', () => {
+          const curSub = state.currentSubject;
+          setExam('sem', false);
+          if (curSub) {
+            selectSubject(curSub);
+            showNotesView();
+          }
+        });
+      }
       return;
     }
 
@@ -1563,8 +1645,13 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
     });
 
-    // Render "AI Notes" Hierarchical Dropdown Component
-    const tejaNotes = NOTES_DATA.filter(n => n.subjectId === subId && n.isTejaAiNotes);
+    // Render "AI Notes" Hierarchical Dropdown Component - SCOPED TO ACTIVE EXAM
+    const tejaNotes = NOTES_DATA.filter(n =>
+      n.subjectId === subId &&
+      n.isTejaAiNotes &&
+      (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true)
+    );
+
     if (tejaNotes.length > 0) {
       if (!state.tejaOpenChapters) state.tejaOpenChapters = {};
       const isMainOpen = Boolean(state.tejaMainOpen);
@@ -1612,8 +1699,8 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
       const rowsList = tejaWrapper.querySelector('#tejaChapterRowsList');
 
-      // Build 5 Unit rows
-      for (let u = 1; u <= 5; u++) {
+      // Build Unit rows strictly for in-scope chapters of the active exam
+      inScopeChapters.forEach(u => {
         const uTitle = subChapters[u] || `Unit ${u}`;
 
         // Find normal note and question bank for this unit
@@ -1672,10 +1759,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         });
 
         rowsList.appendChild(chapterItem);
-      }
+      });
 
       // If COA has Crash Pack, add Semester End row
-      if (subId === 'COA') {
+      if (subId === 'COA' && examKey === 'sem') {
         const crashNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-CRASH');
         const qbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
         if (crashNote) {
@@ -1876,7 +1963,9 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const note = NOTES_DATA.find(n => n.id === noteId);
     if (!note || !el.notesReaderModal) return;
 
-    const index = (window.NOTES_CONTENT_INDEX || {})[noteId] || null;
+    // Fast resolution: resolve summary immediately at entry point
+    const instantSummary = (window.NOTE_SUMMARIES && window.NOTE_SUMMARIES[noteId]) || null;
+    const index = (window.NOTES_CONTENT_INDEX && window.NOTES_CONTENT_INDEX[noteId]) || null;
     const sub = SUBJECTS_DATA[note.subjectId] || {};
     const units = window.getNoteUnits ? window.getNoteUnits(note) : [Number(note.chapter)];
     const unitLabel = units.length > 1 ? `Units ${units.join(', ')}` : `Unit ${units[0] || note.chapter}`;
@@ -1884,13 +1973,15 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       ? `https://drive.google.com/file/d/${note.driveFileId}/view?usp=sharing`
       : (note.folderUrl || DRIVE_ROOT_URL);
 
-    el.notesReaderBadge.textContent = `${sub.shortName || note.subjectId} · ${unitLabel}`;
-    el.notesReaderTitle.textContent = note.title;
+    // Validate page count as positive integer from verified sources, omit if unknown
     const rawPageCount = (index && (index.pages || index.pageCount)) || note.pages || (instantSummary && instantSummary.pageCount) || null;
-    const pageCountNum = Number(rawPageCount);
+    const pageCountNum = parseInt(rawPageCount, 10);
     const pagesMeta = (Number.isFinite(pageCountNum) && pageCountNum > 0)
       ? ` · ${pageCountNum} page${pageCountNum === 1 ? '' : 's'}`
       : '';
+
+    el.notesReaderBadge.textContent = `${sub.shortName || note.subjectId} · ${unitLabel}`;
+    el.notesReaderTitle.textContent = note.title;
     el.notesReaderMeta.textContent = `${note.fileName} · ${note.fileSize}${pagesMeta}`;
     el.notesReaderDriveLink.href = driveLink;
     if (el.notesReaderWarning) el.notesReaderWarning.hidden = true;
@@ -1903,8 +1994,6 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     document.documentElement.classList.add('notes-reader-open');
     notesReaderState.currentId = noteId;
 
-    // Fast path: if structured summary already exists in window.NOTE_SUMMARIES, render immediately!
-    const instantSummary = (window.NOTE_SUMMARIES || {})[noteId];
     if (instantSummary) {
       renderNoteSummary(instantSummary, driveLink);
       return;
@@ -2023,7 +2112,12 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const noteDescription = summary.summary || summary.description || summary.overview || '';
 
     let topicsOrBriefHtml = '';
+    let heroOverviewText = summary.overview || '';
+
     if (topics.length > 0) {
+      if (!heroOverviewText) {
+        heroOverviewText = summary.summary || 'Comprehensive structured summary covering definitions, formulas, and examination principles.';
+      }
       topicsOrBriefHtml = `<div class="note-summary-topics">` + topics.map((topic, i) => {
         const topicTitle = topic.title || topic.name || `Key Concept ${i + 1}`;
         const topicSummary = topic.summary || topic.keyTakeaway || '';
@@ -2039,12 +2133,19 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           </section>`;
       }).join('') + `</div>`;
     } else if (noteDescription) {
+      // Brief-only note: Render brief text once in About card, keep hero subtitle concise
+      if (!heroOverviewText) {
+        heroOverviewText = 'High-yield syllabus reference and examination study material.';
+      }
       topicsOrBriefHtml = `
         <div class="note-summary-brief-card">
           <h3><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About this Study Material</h3>
           <p>${escapeHtml(noteDescription)}</p>
         </div>`;
     } else {
+      if (!heroOverviewText) {
+        heroOverviewText = 'High-yield syllabus reference and examination study material.';
+      }
       topicsOrBriefHtml = `<div class="note-summary-topics"><p class="note-summary-empty">No structured topics could be loaded for this note. Open the original PDF to read it.</p></div>`;
     }
 
@@ -2053,7 +2154,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         <div class="note-summary-hero">
           <span class="note-summary-kicker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Exam High-Yield Summary</span>
           <h3>${escapeHtml(summary.title || 'Core Syllabus Breakdown')}</h3>
-          <p>${escapeHtml(summary.overview || summary.summary || 'Comprehensive structured summary covering definitions, formulas, and examination principles.')}</p>
+          <p>${escapeHtml(heroOverviewText)}</p>
           <div class="note-summary-meta">
             ${summary.pageCount ? `<span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> ${summary.pageCount} pages</span>` : ''}
             ${topics.length > 0 ? `<span><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${topics.length} key topic${topics.length === 1 ? '' : 's'}</span>` : ''}
@@ -2986,14 +3087,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   // Gemini AI App State & Chat Session Management
   // -------------------------------------------------------------
   function loadGeminiChats() {
-    try {
-      const stored = localStorage.getItem('mgit_gemini_chats');
-      state.geminiChats = stored ? JSON.parse(stored) : [];
-    } catch (e) {
-      state.geminiChats = [];
-    }
+    const loaded = safeLoadJson('mgit_gemini_chats', []);
+    state.geminiChats = Array.isArray(loaded) ? loaded.filter(c => c && typeof c === 'object' && c.id) : [];
 
-    if (!Array.isArray(state.geminiChats) || state.geminiChats.length === 0) {
+    if (state.geminiChats.length === 0) {
       createNewGeminiChat();
     } else {
       state.activeChatId = state.geminiChats[0].id;

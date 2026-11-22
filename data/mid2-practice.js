@@ -2612,7 +2612,7 @@ const MID2_PRACTICE = {
         "unit": 3,
         "scope": "mid2",
         "topic": "Dependency Preservation",
-        "question": "Under functional dependencies, which target normal form is always guaranteed to admit a decomposition that is simultaneously lossless-join AND dependency-preserving (via 3NF synthesis)?",
+        "question": "Under functional dependencies, which target normal form is always guaranteed to admit a decomposition that is simultaneously lossless-join and dependency-preserving?",
         "options": [
           "4NF",
           "5NF",
@@ -2690,7 +2690,7 @@ const MID2_PRACTICE = {
         "unit": 3,
         "scope": "mid2",
         "topic": "Second Normal Form (2NF)",
-        "question": "A relation is in 2NF if it is in 1NF and contains no _______ functional dependencies.",
+        "question": "A relation is in 2NF if it is in 1NF and contains no _______ functional dependencies (every non-prime attribute is fully dependent on every candidate key).",
         "accepted": [
           "partial",
           "partial functional dependencies",

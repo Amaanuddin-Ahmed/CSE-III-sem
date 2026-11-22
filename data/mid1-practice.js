@@ -2821,7 +2821,7 @@ const MID1_PRACTICE = {
         "unit": 2,
         "scope": "mid1",
         "topic": "SRS Document Standard",
-        "question": "The Software Requirements Specification (SRS) document standard is defined by IEEE Standard _______.",
+        "question": "Which 1998 IEEE recommended practice described the format and content of Software Requirements Specification (SRS) documents?",
         "accepted": [
           "830",
           "ieee 830"
