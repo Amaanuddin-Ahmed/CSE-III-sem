@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.19-oopj-ai-notes-1';
+const CACHE_NAME = 'mgit-hub-v2026.11.23-exam-week-audit-repair-1';
 
 const STATIC_ASSETS = [
   './',
@@ -49,7 +49,15 @@ const NETWORK_FIRST_DESTINATIONS = new Set(['document', 'script', 'style']);
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
+    caches.open(CACHE_NAME).then((cache) => {
+      return Promise.allSettled(
+        STATIC_ASSETS.map((url) =>
+          cache.add(url).catch((err) => {
+            console.warn('[SW Precache Failed]', url, err);
+          })
+        )
+      );
+    })
   );
 });
 

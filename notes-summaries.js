@@ -18,12 +18,12 @@ const NOTE_SUMMARIES = {
      "Grouping Rules: Groups must be powers of 2 (1, 2, 4, 8, 16 cells); cells are arranged in Gray code order.",
      "Adjacent cells differ by exactly one variable.",
      "Don't Care conditions (X): Can be treated as 1 to enlarge groups for simpler terms, or 0 if not helpful.",
-     "Minimal SOP: Sum of all Essential Prime Implicants."
+     "Minimal SOP: Sum of all Essential Prime Implicants (EPIs) plus a minimal selection of Prime Implicants required to cover all remaining 1-minterms."
     ],
     "formulas": [
      "Cell coordinates use Gray code: 00, 01, 11, 10"
     ],
-    "example": "In a 4-variable K-map, grouping 4 adjacent corner cells eliminates 2 variables, yielding a 2-literal product term."
+    "example": "In a 4-variable K-map, all Essential Prime Implicants are included first; if minterms remain uncovered (e.g. cyclic tables), choose the minimal additional prime implicants that cover all remaining 1-cells."
    },
    {
     "title": "Combinational Circuits: Adders & Subtractors",
@@ -2187,7 +2187,7 @@ const NOTE_SUMMARIES = {
   "quality": "good",
   "limited": false,
   "limitedReason": "",
-  "overview": "Industry & Entrepreneurship examination revision guide. Covers startup lifecycle stages, business model canvas, venture capital funding rounds, and Intellectual Property Rights (IPR).",
+  "overview": "Innovation and Entrepreneurship examination revision guide. Covers startup lifecycle stages, business model canvas, venture capital funding rounds, and Intellectual Property Rights (IPR).",
   "topics": [
    {
     "title": "Entrepreneurship Lifecycle & Venture Funding",
@@ -3798,12 +3798,12 @@ const NOTE_SUMMARIES = {
      "Grouping Rules: Groups must be powers of 2 (1, 2, 4, 8, 16 cells); cells are arranged in Gray code order.",
      "Adjacent cells differ by exactly one variable.",
      "Don't Care conditions (X): Can be treated as 1 to enlarge groups for simpler terms, or 0 if not helpful.",
-     "Minimal SOP: Sum of all Essential Prime Implicants."
+     "Minimal SOP: Sum of all Essential Prime Implicants (EPIs) plus a minimal selection of Prime Implicants required to cover all remaining 1-minterms."
     ],
     "formulas": [
      "Cell coordinates use Gray code: 00, 01, 11, 10"
     ],
-    "example": "In a 4-variable K-map, grouping 4 adjacent corner cells eliminates 2 variables, yielding a 2-literal product term."
+    "example": "In a 4-variable K-map, all Essential Prime Implicants are included first; if minterms remain uncovered (e.g. cyclic tables), choose the minimal additional prime implicants that cover all remaining 1-cells."
    },
    {
     "title": "Combinational Circuits: Adders & Subtractors",
@@ -3959,12 +3959,12 @@ const NOTE_SUMMARIES = {
      "Grouping Rules: Groups must be powers of 2 (1, 2, 4, 8, 16 cells); cells are arranged in Gray code order.",
      "Adjacent cells differ by exactly one variable.",
      "Don't Care conditions (X): Can be treated as 1 to enlarge groups for simpler terms, or 0 if not helpful.",
-     "Minimal SOP: Sum of all Essential Prime Implicants."
+     "Minimal SOP: Sum of all Essential Prime Implicants (EPIs) plus a minimal selection of Prime Implicants required to cover all remaining 1-minterms."
     ],
     "formulas": [
      "Cell coordinates use Gray code: 00, 01, 11, 10"
     ],
-    "example": "In a 4-variable K-map, grouping 4 adjacent corner cells eliminates 2 variables, yielding a 2-literal product term."
+    "example": "In a 4-variable K-map, all Essential Prime Implicants are included first; if minterms remain uncovered (e.g. cyclic tables), choose the minimal additional prime implicants that cover all remaining 1-cells."
    },
    {
     "title": "Combinational Circuits: Adders & Subtractors",
@@ -4120,12 +4120,12 @@ const NOTE_SUMMARIES = {
      "Grouping Rules: Groups must be powers of 2 (1, 2, 4, 8, 16 cells); cells are arranged in Gray code order.",
      "Adjacent cells differ by exactly one variable.",
      "Don't Care conditions (X): Can be treated as 1 to enlarge groups for simpler terms, or 0 if not helpful.",
-     "Minimal SOP: Sum of all Essential Prime Implicants."
+     "Minimal SOP: Sum of all Essential Prime Implicants (EPIs) plus a minimal selection of Prime Implicants required to cover all remaining 1-minterms."
     ],
     "formulas": [
      "Cell coordinates use Gray code: 00, 01, 11, 10"
     ],
-    "example": "In a 4-variable K-map, grouping 4 adjacent corner cells eliminates 2 variables, yielding a 2-literal product term."
+    "example": "In a 4-variable K-map, all Essential Prime Implicants are included first; if minterms remain uncovered (e.g. cyclic tables), choose the minimal additional prime implicants that cover all remaining 1-cells."
    },
    {
     "title": "Combinational Circuits: Adders & Subtractors",
@@ -4202,12 +4202,12 @@ const NOTE_SUMMARIES = {
      "Grouping Rules: Groups must be powers of 2 (1, 2, 4, 8, 16 cells); cells are arranged in Gray code order.",
      "Adjacent cells differ by exactly one variable.",
      "Don't Care conditions (X): Can be treated as 1 to enlarge groups for simpler terms, or 0 if not helpful.",
-     "Minimal SOP: Sum of all Essential Prime Implicants."
+     "Minimal SOP: Sum of all Essential Prime Implicants (EPIs) plus a minimal selection of Prime Implicants required to cover all remaining 1-minterms."
     ],
     "formulas": [
      "Cell coordinates use Gray code: 00, 01, 11, 10"
     ],
-    "example": "In a 4-variable K-map, grouping 4 adjacent corner cells eliminates 2 variables, yielding a 2-literal product term."
+    "example": "In a 4-variable K-map, all Essential Prime Implicants are included first; if minterms remain uncovered (e.g. cyclic tables), choose the minimal additional prime implicants that cover all remaining 1-cells."
    },
    {
     "title": "Combinational Circuits: Adders & Subtractors",
@@ -8459,7 +8459,7 @@ const NOTE_SUMMARIES = {
         "JVM executes bytecode (.class) via dynamic ClassLoader and JIT execution",
         "Thread lifecycle: New -> Runnable -> Running -> Blocked/Waiting -> Terminated"
       ],
-      "example": "Syntax template: interface presentation and its interaction logic. Swing uses a modified MVC. Model (data) View (display) Controller (user input) updates notifies user actions / view updates 2 Explanation 1. Model Holds the data and logi"
+      "example": "In Swing, MVC separates state from presentation:\n```java\n// Java Swing MVC Example (JDK 8+)\nimport javax.swing.*;\nimport java.awt.FlowLayout;\n\npublic class SwingDemo {\n    public static void main(String[] args) {\n        SwingUtilities.invokeLater(() -> {\n            JFrame frame = new JFrame(\"Swing Counter\");\n            JLabel label = new JLabel(\"Value: 0\");\n            JButton btn = new JButton(\"Increment\");\n            int[] count = {0}; // Model\n            btn.addActionListener(e -> label.setText(\"Value: \" + (++count[0]))); // Controller updates Model & View\n            frame.setLayout(new FlowLayout());\n            frame.add(label); frame.add(btn);\n            frame.setSize(240, 110);\n            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n            frame.setVisible(true);\n        });\n    }\n}\n```"
     }
   ]
 }
@@ -8806,7 +8806,6 @@ const NOTE_SUMMARIES = {
 
 if (typeof window !== 'undefined') {
   window.NOTE_SUMMARIES = NOTE_SUMMARIES;
-  window.NOTES_CONTENT_INDEX = NOTE_SUMMARIES;
 }
 
 if (typeof module !== 'undefined' && module.exports) {

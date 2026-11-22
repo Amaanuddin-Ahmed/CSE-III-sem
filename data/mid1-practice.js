@@ -2404,7 +2404,7 @@ const MID1_PRACTICE = {
         "answerIndex": 1,
         "difficulty": "easy",
         "source": "syllabus",
-        "explanation": "Waterfall works well for stable projects where requirements are locked in stone and changes are minimal."
+        "explanation": "The Classical Waterfall model relies on the foundational assumption that requirements are stable and the cost of changing requirements later in the lifecycle is prohibitively high."
       },
       {
         "id": "SE-SEM-001",
@@ -2928,7 +2928,7 @@ const MID1_PRACTICE = {
         "unit": 1,
         "scope": "mid1",
         "topic": "Ecosystem Trophic Levels",
-        "question": "In a terrestrial ecosystem, green plants and phytoplankton occupy which trophic level?",
+        "question": "Across terrestrial and aquatic ecosystems, green plants and phytoplankton occupy which trophic level?",
         "options": [
           "Secondary Consumers",
           "Decomposers",

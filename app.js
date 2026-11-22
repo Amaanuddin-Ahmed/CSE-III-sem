@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.19-oopj-ai-notes-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-1%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -34,6 +34,23 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.19-oopj-ai-notes-1%c', 'background
   // -------------------------------------------------------------
   // Application State
   // -------------------------------------------------------------
+  
+  function safeLoadJson(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return fallback;
+      const parsed = JSON.parse(raw);
+      return (parsed !== null && parsed !== undefined) ? parsed : fallback;
+    } catch (err) {
+      console.warn(`[Storage] Failed to parse ${key}:`, err);
+      return fallback;
+    }
+  }
+
+  const solutionsInFlight = {};
+  let currentSolutionRequestId = 0;
+  let activeSolutionAbortController = null;
+
   const state = {
     currentSubject: null,
     currentMode: null, // 'notes' or 'pyqs'
@@ -66,7 +83,7 @@ console.log('%cMGIT PYQ Hub Version: v2026.11.19-oopj-ai-notes-1%c', 'background
 
     // AI Chat & Sessions State
     activeChatId: null,
-    geminiChats: JSON.parse(localStorage.getItem('mgit_gemini_chats') || '[]'),
+    geminiChats: safeLoadJson('mgit_gemini_chats', []),
     pendingGeminiImage: null,
     aiBusy: false,
     isSpeechListening: false,
@@ -523,30 +540,38 @@ Instructions for complete examination answer:
     if (!q || !q.subjectId) return null;
     const subId = q.subjectId.toUpperCase();
 
-    // 1. Check in-memory cache (with cache buster query string to bypass stale SW/browser cache)
+    // 1. Check in-memory cache with in-flight request sharing and standard caching
     if (!solutionsCache[subId]) {
-      try {
-        const res = await fetch(`data/solutions/${subId}.json?v=${Date.now()}`, { cache: 'no-cache' });
-        if (res.ok) {
-          const json = await res.json();
-          solutionsCache[subId] = json.solutions || json || {};
-        } else {
-          solutionsCache[subId] = {};
-        }
-      } catch (e) {
-        solutionsCache[subId] = {};
+      if (!solutionsInFlight[subId]) {
+        solutionsInFlight[subId] = fetch(`data/solutions/${subId}.json`)
+          .then(res => {
+            if (res.ok) return res.json();
+            throw new Error(`HTTP ${res.status}`);
+          })
+          .then(json => {
+            solutionsCache[subId] = json.solutions || json || {};
+            return solutionsCache[subId];
+          })
+          .catch(err => {
+            console.warn(`[Solutions Cache] Failed to load solutions for ${subId}:`, err);
+            return null;
+          })
+          .finally(() => {
+            delete solutionsInFlight[subId];
+          });
       }
+      await solutionsInFlight[subId];
     }
 
     const subSolutions = solutionsCache[subId] || {};
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
     
-    // Support both preSolution object with .answerMd and direct markdown strings
-    const candidate = subSolutions[normKey] || subSolutions[q.id];
+    // Priority P0: Check exact ID first, then fall back to normalized text key
+    const candidate = (q.id && subSolutions[q.id]) ? subSolutions[q.id] : (subSolutions[normKey] || null);
     if (candidate) {
       const text = typeof candidate === 'string' ? candidate : (candidate.answerMd || candidate.solution || candidate.answer || '');
       if (text && !isStaleFallbackSolution(text)) {
-        return { answerMd: text, question: q.question, subjectId: q.subjectId };
+        return { answerMd: text, question: q.question, subjectId: q.subjectId, isModelAcademic: true };
       }
     }
 
@@ -557,7 +582,7 @@ Instructions for complete examination answer:
         const parsed = JSON.parse(localStored);
         const text = parsed ? (typeof parsed === 'string' ? parsed : (parsed.answerMd || parsed.solution || parsed.answer || '')) : '';
         if (text && !isStaleFallbackSolution(text)) {
-          return { answerMd: text, question: q.question, subjectId: q.subjectId };
+          return { answerMd: text, question: q.question, subjectId: q.subjectId, isModelAcademic: false };
         } else {
           localStorage.removeItem('mgit_sol_' + normKey);
         }
@@ -572,6 +597,12 @@ Instructions for complete examination answer:
     if (!modal || !q) return;
     lockModalScroll();
 
+    const reqId = ++currentSolutionRequestId;
+    if (activeSolutionAbortController) {
+      try { activeSolutionAbortController.abort(); } catch (_) {}
+    }
+    activeSolutionAbortController = new AbortController();
+
     const subBadge = document.getElementById('solSubjectBadge');
     const marksBadge = document.getElementById('solMarksBadge');
     const unitBadge = document.getElementById('solUnitBadge');
@@ -585,7 +616,7 @@ Instructions for complete examination answer:
     if (marksBadge) marksBadge.textContent = marksLabel(q.marks);
     if (unitBadge) unitBadge.textContent = 'Unit ' + (q.chapter || 1);
     if (titleEl) titleEl.innerHTML = cleanHumanFriendlyQuestion(q.question);
-    if (statusChip) statusChip.textContent = 'Model Academic Solution';
+    if (statusChip) statusChip.textContent = 'Model Academic Solution (Reviewed)';
     if (paperNotice) paperNotice.style.display = 'none';
 
     modal.style.display = 'flex';
@@ -629,7 +660,6 @@ Instructions for complete examination answer:
       };
     }
 
-
     const subId = (q.subjectId || 'CSE').toUpperCase();
     const normKey = subId.toLowerCase() + '|' + (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -641,10 +671,17 @@ Instructions for complete examination answer:
       console.warn('[Solution Library] Lookup error:', err);
     }
 
+    // Guard against race condition: student navigated to another question while loading
+    if (reqId !== currentSolutionRequestId) return;
+
     const solutionText = preSolution ? (preSolution.answerMd || (typeof preSolution === 'string' ? preSolution : '')) : '';
     if (solutionText && !isStaleFallbackSolution(solutionText)) {
       if (bodyEl) bodyEl.innerHTML = formatGeminiResponse(solutionText);
-      if (statusChip) statusChip.textContent = 'Model Academic Solution';
+      if (statusChip) {
+        statusChip.textContent = preSolution.isModelAcademic
+          ? 'Model Academic Solution (Reviewed)'
+          : 'AI-Assisted Solution';
+      }
       return;
     }
 
@@ -675,15 +712,19 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       const res = await fetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: prompt, history: [] })
+        body: JSON.stringify({ query: prompt, history: [] }),
+        signal: activeSolutionAbortController ? activeSolutionAbortController.signal : undefined
       });
+
+      if (reqId !== currentSolutionRequestId) return;
 
       if (res.ok) {
         const data = await res.json();
+        if (reqId !== currentSolutionRequestId) return;
         const text = data.text || (data.candidates && data.candidates[0]?.content?.parts[0]?.text);
         if (text && bodyEl) {
           bodyEl.innerHTML = formatGeminiResponse(text);
-          if (statusChip) statusChip.textContent = 'Model Academic Solution';
+          if (statusChip) statusChip.textContent = 'AI-Assisted Solution';
           // Cache in local memory for instant future loads
           try {
             localStorage.setItem('mgit_sol_' + normKey, JSON.stringify({ answerMd: text, question: q.question, subjectId: q.subjectId, chapter: q.chapter, marks: q.marks }));
@@ -694,8 +735,11 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         }
       }
     } catch (err) {
+      if (err.name === 'AbortError') return;
       console.warn('[Solution Solver] On-demand solve failed:', err);
     }
+
+    if (reqId !== currentSolutionRequestId) return;
 
     // 3. Fallback if API offline: show Ask with AI pop-up directly so student can open ChatGPT or Gemini seamlessly
     closeSolutionModal();
@@ -703,6 +747,11 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
   }
 
   function closeSolutionModal() {
+    currentSolutionRequestId++;
+    if (activeSolutionAbortController) {
+      try { activeSolutionAbortController.abort(); } catch (_) {}
+      activeSolutionAbortController = null;
+    }
     const modal = document.getElementById('solutionModal');
     if (modal) modal.style.display = 'none';
     unlockModalScroll();
@@ -1457,7 +1506,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         opts += `<option value="${ch}">Unit ${ch}</option>`;
       });
       el.notesChapterSelect.innerHTML = opts;
-      if (false && !availableUnits.has(Number(state.notesChapterFilter))) {
+      if (state.notesChapterFilter !== 'all' && !availableUnits.has(Number(state.notesChapterFilter))) {
         state.notesChapterFilter = 'all';
       }
       el.notesChapterSelect.value = state.notesChapterFilter;
@@ -1465,7 +1514,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     // If filtered by specific chapter dropdown
     let filteredNotes = notes;
-    if (false) {
+    if (state.notesChapterFilter !== 'all') {
       const chNum = parseInt(state.notesChapterFilter, 10);
       filteredNotes = notes.filter(n => {
         const units = window.getNoteUnits ? window.getNoteUnits(n) : [Number(n.chapter)];
@@ -1479,7 +1528,16 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         <div class="empty-notes-card">
           <i class="fa-regular fa-folder-open empty-icon"></i>
           <h5>No notes uploaded yet for ${escapeHtml(chLabel)}</h5>
-          <p>Be the first to share verified lecture notes or question bank answers! Tap the contribute button below to upload study material.</p>
+          <p>Don't worry—you can still practice high-yield questions, or switch exam scope to view notes from all units.</p>
+          <div class="empty-notes-actions" style="margin-top: 16px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-outline-primary empty-act-btn" onclick="switchSubjectTab('practice')">
+              <i class="fa-solid fa-bolt"></i> Practice Quiz &amp; Flashcards
+            </button>
+            ${examKey !== 'sem' ? `
+            <button type="button" class="btn btn-primary empty-act-btn" onclick="setExamMode('sem')">
+              <i class="fa-solid fa-book-open"></i> View All Syllabus Notes
+            </button>` : ''}
+          </div>
         </div>
       `;
       return;
@@ -1684,7 +1742,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       el.notesListContainer.appendChild(tejaWrapper);
     }
 
-    const activeUnits = false
+    const activeUnits = (state.notesChapterFilter !== 'all')
       ? [parseInt(state.notesChapterFilter, 10)]
       : inScopeChapters.filter(u => unitGroups[u] && unitGroups[u].length > 0);
 
@@ -1693,7 +1751,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       const uNotes = unitGroups[u] || [];
       if (uNotes.length === 0) return;
 
-      const isExpanded = false ? true : Boolean(state.expandedNotesUnits[u]);
+      const isExpanded = (state.notesChapterFilter !== 'all') ? true : Boolean(state.expandedNotesUnits[u]);
       const subChapters = (sub && sub.chapters) || {};
       const unitTitle = subChapters[u] || `Unit ${u}`;
 
@@ -1828,7 +1886,12 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     el.notesReaderBadge.textContent = `${sub.shortName || note.subjectId} · ${unitLabel}`;
     el.notesReaderTitle.textContent = note.title;
-    el.notesReaderMeta.textContent = `${note.fileName} · ${note.fileSize}${index ? ` · ${index.pages} page${index.pages === 1 ? '' : 's'}` : ''}`;
+    const rawPageCount = (index && (index.pages || index.pageCount)) || note.pages || (instantSummary && instantSummary.pageCount) || null;
+    const pageCountNum = Number(rawPageCount);
+    const pagesMeta = (Number.isFinite(pageCountNum) && pageCountNum > 0)
+      ? ` · ${pageCountNum} page${pageCountNum === 1 ? '' : 's'}`
+      : '';
+    el.notesReaderMeta.textContent = `${note.fileName} · ${note.fileSize}${pagesMeta}`;
     el.notesReaderDriveLink.href = driveLink;
     if (el.notesReaderWarning) el.notesReaderWarning.hidden = true;
     el.notesReaderSearch.value = '';
@@ -1957,39 +2020,61 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       : (Array.isArray(summary.mustKnowQuestions) ? summary.mustKnowQuestions : []);
     const formulas = Array.isArray(summary.formulas) ? summary.formulas.filter(Boolean) : [];
     const examTips = Array.isArray(summary.examTips) ? summary.examTips.filter(Boolean) : [];
+    const noteDescription = summary.summary || summary.description || summary.overview || '';
 
-    const topicHtml = topics.map((topic, i) => {
-      const topicTitle = topic.title || topic.name || `Key Concept ${i + 1}`;
-      const topicSummary = topic.summary || topic.keyTakeaway || '';
-      const points = (topic.points || topic.subtopics || []).filter(Boolean);
-      const topicFormulas = (topic.formulas || []).filter(Boolean);
-      return `
-        <section class="note-summary-topic note-topic-${i % 5}">
-          <h3><span class="note-topic-number">${String(i + 1).padStart(2, '0')}</span>${escapeHtml(topicTitle)}</h3>
-          ${topicSummary ? `<p>${escapeHtml(topicSummary)}</p>` : ''}
-          ${points.length ? `<ul>${points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
-          ${topicFormulas.length ? `<div class="note-summary-formulas">${topicFormulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
-          ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${escapeHtml(topic.example)}</div>` : ''}
-        </section>`;
-    }).join('');
+    let topicsOrBriefHtml = '';
+    if (topics.length > 0) {
+      topicsOrBriefHtml = `<div class="note-summary-topics">` + topics.map((topic, i) => {
+        const topicTitle = topic.title || topic.name || `Key Concept ${i + 1}`;
+        const topicSummary = topic.summary || topic.keyTakeaway || '';
+        const points = (topic.points || topic.subtopics || []).filter(Boolean);
+        const topicFormulas = (topic.formulas || []).filter(Boolean);
+        return `
+          <section class="note-summary-topic note-topic-${i % 5}">
+            <h3><span class="note-topic-number">${String(i + 1).padStart(2, '0')}</span>${escapeHtml(topicTitle)}</h3>
+            ${topicSummary ? `<p>${escapeHtml(topicSummary)}</p>` : ''}
+            ${points.length ? `<ul>${points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
+            ${topicFormulas.length ? `<div class="note-summary-formulas">${topicFormulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
+            ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${escapeHtml(topic.example)}</div>` : ''}
+          </section>`;
+      }).join('') + `</div>`;
+    } else if (noteDescription) {
+      topicsOrBriefHtml = `
+        <div class="note-summary-brief-card">
+          <h3><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About this Study Material</h3>
+          <p>${escapeHtml(noteDescription)}</p>
+        </div>`;
+    } else {
+      topicsOrBriefHtml = `<div class="note-summary-topics"><p class="note-summary-empty">No structured topics could be loaded for this note. Open the original PDF to read it.</p></div>`;
+    }
 
     el.notesReaderBody.innerHTML = `
       <div class="note-summary">
         <div class="note-summary-hero">
           <span class="note-summary-kicker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Exam High-Yield Summary</span>
           <h3>${escapeHtml(summary.title || 'Core Syllabus Breakdown')}</h3>
-          <p>${escapeHtml(summary.overview || 'Comprehensive structured summary covering definitions, formulas, and examination principles.')}</p>
+          <p>${escapeHtml(summary.overview || summary.summary || 'Comprehensive structured summary covering definitions, formulas, and examination principles.')}</p>
           <div class="note-summary-meta">
             ${summary.pageCount ? `<span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> ${summary.pageCount} pages</span>` : ''}
-            <span><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${topics.length} key topic${topics.length === 1 ? '' : 's'}</span>
+            ${topics.length > 0 ? `<span><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${topics.length} key topic${topics.length === 1 ? '' : 's'}</span>` : ''}
             <span><i class="fa-solid fa-certificate" aria-hidden="true"></i> MR-25 Blueprint Aligned</span>
           </div>
         </div>
-        <div class="note-summary-topics">${topicHtml || '<p class="note-summary-empty">No structured topics could be loaded for this note. Open the original PDF to read it.</p>'}</div>
+        ${topicsOrBriefHtml}
+        ${formulas.length ? `
+          <div class="note-summary-formulas-block">
+            <h3><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i> Core Formulas &amp; Principles</h3>
+            <ul>${formulas.map(f => `<li><code>${escapeHtml(f)}</code></li>`).join('')}</ul>
+          </div>` : ''}
         ${mustKnow.length ? `
           <div class="note-summary-mustknow">
             <h3><i class="fa-solid fa-star" aria-hidden="true"></i> Exam Must-Know Principles</h3>
             <ul>${mustKnow.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          </div>` : ''}
+        ${examTips.length ? `
+          <div class="note-summary-tips-block">
+            <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> High-Scoring Exam Tips</h3>
+            <ul>${examTips.map(tip => `<li>${escapeHtml(tip)}</li>`).join('')}</ul>
           </div>` : ''}
         <div class="note-summary-cta">
           <a class="note-open-btn note-summary-drive" href="${driveLink}" target="_blank" rel="noopener noreferrer">

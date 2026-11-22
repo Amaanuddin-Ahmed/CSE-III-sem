@@ -2612,7 +2612,7 @@ const MID2_PRACTICE = {
         "unit": 3,
         "scope": "mid2",
         "topic": "Dependency Preservation",
-        "question": "Which of the following normal forms guarantees both lossless-join decomposition AND dependency preservation simultaneously?",
+        "question": "Under functional dependencies, which target normal form is always guaranteed to admit a decomposition that is simultaneously lossless-join AND dependency-preserving (via 3NF synthesis)?",
         "options": [
           "4NF",
           "5NF",
@@ -2698,7 +2698,7 @@ const MID2_PRACTICE = {
         ],
         "difficulty": "easy",
         "source": "syllabus",
-        "explanation": "2NF eliminates partial dependencies where a non-prime attribute depends on a proper subset of any candidate key."
+        "explanation": "In 2NF, every non-prime attribute must be fully functionally dependent on every candidate key (no non-prime attribute can depend on a proper subset of any candidate key). In a relation with overlapping candidate keys {A, B} and {B, C}, non-prime attribute D cannot depend on A, B, or C alone."
       },
       {
         "id": "DBMS-M2-005",
@@ -4096,7 +4096,7 @@ const MID2_PRACTICE = {
         "answerIndex": 1,
         "difficulty": "medium",
         "source": "syllabus",
-        "explanation": "ISO 9126 defines six top-level software characteristics: Functionality, Reliability, Usability, Efficiency, Maintainability, and Portability."
+        "explanation": "ISO 9126 defines six top-level software product quality characteristics: Functionality, Reliability, Usability, Efficiency, Maintainability, and Portability. Note: ISO/IEC 9126-1:2001 was formally superseded by ISO/IEC 25010:2023 (SQuaRE), which expands product quality to nine characteristics."
       },
       {
         "id": "SE-SEM-066",
@@ -4224,7 +4224,7 @@ const MID2_PRACTICE = {
         "unit": 5,
         "scope": "mid2",
         "topic": "SEI CMM Levels",
-        "question": "The SEI Capability Maturity Model (CMM/CMMI) defines exactly _______ levels of process maturity.",
+        "question": "The staged representation of the SEI Capability Maturity Model (CMM/CMMI) defines exactly _______ levels of process maturity (Levels 1 to 5).",
         "accepted": [
           "5",
           "five"
@@ -5808,7 +5808,7 @@ const MID2_PRACTICE = {
         "answerIndex": 0,
         "difficulty": "medium",
         "source": "syllabus",
-        "explanation": "For literary, musical, dramatic, and artistic works (including software source code), copyright subsists during the author's lifetime plus 60 years counted from the year following death."
+        "explanation": "Under Section 22 of the Indian Copyright Act, 1957, copyright in published literary, dramatic, musical and artistic works subsists for the lifetime of the author plus 60 calendar years, calculated from the beginning of the calendar year next following the year in which the author dies."
       },
       {
         "id": "IE-M2-024",

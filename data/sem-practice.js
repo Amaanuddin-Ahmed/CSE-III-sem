@@ -187,7 +187,7 @@ const SEM_PRACTICE = {
         "unit": 1,
         "scope": "sem",
         "topic": "PDNF",
-        "question": "The principal disjunctive normal form of $p \\to q$ is:",
+        "question": "With standard variable order (p, q) where p is the high bit, the principal disjunctive normal form (PDNF) of $p \to q$ is:",
         "options": [
           "$\\Sigma m(1,2,3)$",
           "$\\Sigma m(0,1,3)$",
@@ -196,7 +196,7 @@ const SEM_PRACTICE = {
         ],
         "answerIndex": 1,
         "difficulty": "medium",
-        "explanation": "$p \\to q \\equiv \\neg p \\lor q$ is true for assignments 00, 01 and 11, that is minterms 0, 1 and 3.",
+        "explanation": "$p \to q \equiv \neg p \lor q$ evaluates to true for variable assignments (p=0, q=0) -> m0, (p=0, q=1) -> m1, and (p=1, q=1) -> m3, giving minterm sum \Sigma m(0, 1, 3).",
         "source": "syllabus"
       },
       {
@@ -3277,7 +3277,7 @@ const SEM_PRACTICE = {
         ],
         "answerIndex": 1,
         "difficulty": "medium",
-        "explanation": "An abstract class may mix abstract and concrete members and can declare constructors, but it cannot be instantiated.",
+        "explanation": "In Java, an abstract class can declare both abstract methods (without body) and concrete methods (with implementation), and can declare constructors and member fields. Example (Java 8+): `abstract class Shape { int color; Shape(int c) { this.color = c; } abstract double area(); void display() { System.out.println(color); } }`",
         "source": "syllabus"
       },
       {
@@ -5819,11 +5819,11 @@ const SEM_PRACTICE = {
         "unit": 1,
         "scope": "sem",
         "topic": "Waterfall vs Agile",
-        "question": "Which software process model is most appropriate when requirements are highly dynamic, ambiguous, and rapidly evolving?",
+        "question": "Which software development methodology is most appropriate when requirements are highly dynamic, ambiguous, and rapidly evolving through iterative sprints?",
         "options": [
           "Cleanroom Engineering",
           "V-Model",
-          "Agile / Scrum Model",
+          "Agile methodology (e.g., Scrum framework)",
           "Classical Waterfall Model"
         ],
         "answerIndex": 2,
@@ -5918,7 +5918,7 @@ const SEM_PRACTICE = {
         ],
         "answerIndex": 0,
         "difficulty": "easy",
-        "explanation": "CMMI has five levels: initial, managed, defined, quantitatively managed and optimizing.",
+        "explanation": "The staged representation of CMMI defines 5 maturity levels: Level 1 (Initial), Level 2 (Managed), Level 3 (Defined), Level 4 (Quantitatively Managed), and Level 5 (Optimizing) [with Level 0 Incomplete in continuous representation].",
         "source": "syllabus"
       },
       {
@@ -6228,11 +6228,8 @@ const SEM_PRACTICE = {
         "unit": 2,
         "scope": "sem",
         "topic": "SRS Document Standard",
-        "question": "The Software Requirements Specification (SRS) document standard is defined by IEEE Standard _______.",
-        "accepted": [
-          "830",
-          "ieee 830"
-        ],
+        "question": "Which 1998 IEEE recommended practice described the format and content of Software Requirements Specification (SRS) documents (superseded by ISO/IEC/IEEE 29148)?",
+        "accepted": ["830", "ieee 830", "29148", "ieee 29148"],
         "difficulty": "medium",
         "source": "syllabus",
         "explanation": "IEEE 830 (now ISO/IEC/IEEE 29148) provides standard guidelines for drafting complete, unambiguous SRS documents."
@@ -9798,7 +9795,7 @@ const SEM_PRACTICE = {
         ],
         "answerIndex": 2,
         "difficulty": "medium",
-        "explanation": "Indian patents are granted for 20 years from the date of filing, subject to renewal fees.",
+        "explanation": "Under Section 53 of the Indian Patents Act, 1970, the term of every patent granted in India is 20 years from the date of filing of the patent application (or international filing date under PCT), subject to payment of renewal fees.",
         "source": "syllabus"
       },
       {
