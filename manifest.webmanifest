@@ -10,6 +10,7 @@
   "orientation": "portrait",
   "background_color": "#f8fafc",
   "theme_color": "#1e3a8a",
+  "prefer_related_applications": false,
   "categories": [
     "education",
     "reference"
@@ -38,6 +39,47 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Practice & Quizzes",
+      "short_name": "Practice",
+      "description": "Start an exam practice test or quiz",
+      "url": "/",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Notes & Resources",
+      "short_name": "Notes",
+      "description": "Read syllabus notes and study materials",
+      "url": "/",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "PYQ Question Bank",
+      "short_name": "Questions",
+      "description": "Browse previous year university exam questions",
+      "url": "/",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }

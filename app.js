@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.23-ai-notes-dbms-se%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.23-pwa-a2hs-fix%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -4779,6 +4779,7 @@ function formatGeminiResponse(rawText) {
     }
     return { close: closeToast, element: toast };
   }
+  window.showToast = showToast;
 
   // The revision hint is deliberately rate-limited: it may appear at most
   // twice per browser session. Leaving the subject list pauses its remaining

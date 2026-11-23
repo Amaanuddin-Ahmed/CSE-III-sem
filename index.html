@@ -63,12 +63,13 @@
     window.__deferredInstall = null;
     window.__pwaInstalled = (function () {
       try {
-        return localStorage.getItem('mgit_pwa_installed') === '1' ||
-               localStorage.getItem('mgit_pwa_added') === '1';
+        return window.matchMedia('(display-mode: standalone)').matches ||
+               window.matchMedia('(display-mode: fullscreen)').matches ||
+               window.navigator.standalone === true ||
+               document.referrer.includes('android-app://');
       } catch (e) { return false; }
     })();
     window.addEventListener('beforeinstallprompt', function (event) {
-      if (window.__pwaInstalled) return;
       event.preventDefault();
       window.__deferredInstall = event;
       window.dispatchEvent(new Event('mgit-installable'));
@@ -497,6 +498,10 @@
           </a>
         </div>
         <div class="footer-rate-box">
+          <button type="button" class="footer-rate-link" id="footerInstallBtn" title="Add to Home Screen" style="cursor: pointer; border: none; background: transparent; font-family: inherit;">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>Add to Home Screen</span>
+          </button>
           <a href="https://tally.so/r/8N1QaP" target="_blank" rel="noopener noreferrer" class="footer-rate-link" id="footerRateBtn" title="Rate MGIT PYQ Hub">
             <i class="fa-solid fa-star"></i>
             <span>Rate now</span>
@@ -1424,6 +1429,24 @@
       <div class="notes-reader-footer">
         <span id="notesReaderFooterMeta"></span>
         <button type="button" class="notes-reader-top" id="notesReaderTopBtn">Back to top</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add to Home Screen Instructions Modal -->
+  <div class="modal-backdrop a2hs-modal-backdrop" id="a2hsModal" style="display: none; z-index: 100006;" role="dialog" aria-modal="true" aria-labelledby="a2hsModalTitle">
+    <div class="modal-dialog small-dialog a2hs-dialog">
+      <div class="modal-header">
+        <h4 class="modal-dialog-title" id="a2hsModalTitle">
+          <i class="fa-solid fa-mobile-screen-button" style="color: #4f46e5; margin-right: 6px;"></i> Add to Home Screen
+        </h4>
+        <button type="button" class="modal-close-btn" id="closeA2hsModalBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="a2hsModalBody" style="padding: 20px;"></div>
+      <div class="modal-footer" style="padding: 12px 20px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: flex-end; background: #fafbfc;">
+        <button type="button" class="btn-action-primary" id="a2hsGotItBtn" style="padding: 8px 22px; border-radius: 8px; font-weight: 600; cursor: pointer; background: #4f46e5; color: #fff; border: none;">
+          Got it
+        </button>
       </div>
     </div>
   </div>

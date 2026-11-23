@@ -1,5 +1,5 @@
 /**
- * MGIT PYQ Hub - PWA Registration & 15-Second Install Prompt (Feature 1)
+ * MGIT PYQ Hub - PWA Registration & Universal Add to Home Screen Controller
  */
 
 (function() {
@@ -18,7 +18,7 @@
     });
   }
 
-  // 2. 15-Second Active Usage Install Prompt
+  // 2. State & Detection
   const PWA_DELAY_MS = 15000;
   let activeTimeAccumulated = 0;
   let lastActiveTimestamp = null;
@@ -29,42 +29,214 @@
   const DISMISS_COUNT_KEY = 'mgit_pwa_dismiss_count';
 
   function isStandalone() {
-    return window.matchMedia('(display-mode: standalone)').matches ||
-           window.navigator.standalone === true ||
-           document.referrer.includes('android-app://');
+    return Boolean(
+      (window.matchMedia && (
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.matchMedia('(display-mode: fullscreen)').matches
+      )) ||
+      window.navigator.standalone === true ||
+      (document.referrer && document.referrer.includes('android-app://'))
+    );
   }
 
   function isDismissed() {
-    const until = parseInt(localStorage.getItem(DISMISSED_KEY) || '0', 10);
-    return Date.now() < until;
-  }
-
-  function isInstalled() {
-    if (window.__pwaInstalled) return true;
     try {
-      return localStorage.getItem('mgit_pwa_installed') === '1' ||
-             localStorage.getItem('mgit_pwa_added') === '1';
+      const until = parseInt(localStorage.getItem(DISMISSED_KEY) || '0', 10);
+      return Date.now() < until;
     } catch (e) {
       return false;
     }
   }
 
-  function updateInstallEntry() {
-    const btn = document.getElementById('headerInstallBtn');
-    if (!btn) return;
-    const canOffer = !isStandalone() && !isInstalled();
-    btn.hidden = !canOffer;
+  function safeToast(msg) {
+    if (typeof window.showToast === 'function') {
+      window.showToast(msg);
+    } else {
+      console.log('[PWA]', msg);
+    }
   }
 
-  function dismissPrompt() {
-    const currentCount = parseInt(localStorage.getItem(DISMISS_COUNT_KEY) || '0', 10);
-    const newCount = currentCount + 1;
-    localStorage.setItem(DISMISS_COUNT_KEY, newCount);
+  function updateInstallEntry() {
+    const standalone = isStandalone();
+    const headerBtn = document.getElementById('headerInstallBtn');
+    if (headerBtn) {
+      headerBtn.hidden = standalone;
+    }
+    const footerBtn = document.getElementById('footerInstallBtn');
+    if (footerBtn) {
+      footerBtn.hidden = standalone;
+    }
+  }
 
-    // First dismissal: 3 days, Second+: 30 days
-    const delayDays = newCount === 1 ? 3 : 30;
-    const suppressUntil = Date.now() + (delayDays * 24 * 60 * 60 * 1000);
-    localStorage.setItem(DISMISSED_KEY, suppressUntil);
+  // 3. User Gesture Direct Install & Instruction Modal
+  function handleInstallClick() {
+    if (isStandalone()) {
+      safeToast('MGIT PYQ Hub is already installed and running on your device.');
+      return;
+    }
+
+    const deferred = window.__deferredInstall;
+    if (deferred) {
+      try {
+        deferred.prompt();
+        deferred.userChoice.then((choice) => {
+          if (choice && choice.outcome === 'accepted') {
+            window.__pwaInstalled = true;
+            try { localStorage.setItem('mgit_pwa_installed', '1'); } catch (e) {}
+            window.__deferredInstall = null;
+            updateInstallEntry();
+            safeToast('MGIT PYQ Hub added to your Home Screen!');
+            const banner = document.getElementById('pwaInstallPrompt');
+            if (banner) banner.remove();
+          }
+        }).catch(() => {
+          openA2hsModal();
+        });
+      } catch (err) {
+        openA2hsModal();
+      }
+    } else {
+      openA2hsModal();
+    }
+  }
+
+  function openA2hsModal() {
+    const modal = document.getElementById('a2hsModal');
+    const body = document.getElementById('a2hsModalBody');
+    if (!modal || !body) return;
+
+    const ua = (navigator.userAgent || '').toLowerCase();
+    const isIos = /iphone|ipad|ipod/.test(ua) || 
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isAndroid = /android/.test(ua);
+
+    let instructionsHtml = '';
+
+    if (isIos) {
+      instructionsHtml = `
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle, #f1f5f9);">
+          <img src="assets/icons/icon-192.png" alt="MGIT PYQ Hub" style="width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <div>
+            <div style="font-weight: 700; font-size: 15px; color: var(--text-primary, #0f172a);">MGIT PYQ Hub</div>
+            <div style="font-size: 12.5px; color: var(--text-secondary, #64748b);">Install shortcut on your iPhone or iPad</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">1</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket" style="color: #2563eb; margin: 0 4px;"></i> in Safari's toolbar at the bottom of the screen.</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">2</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Scroll down in the menu and tap <strong>Add to Home Screen</strong> <i class="fa-regular fa-square-plus" style="color: #2563eb; margin: 0 4px;"></i>.</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">3</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Tap <strong>Add</strong> in the top-right corner to place the app on your home screen.</span>
+          </div>
+        </div>
+      `;
+    } else if (isAndroid) {
+      instructionsHtml = `
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle, #f1f5f9);">
+          <img src="assets/icons/icon-192.png" alt="MGIT PYQ Hub" style="width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <div>
+            <div style="font-weight: 700; font-size: 15px; color: var(--text-primary, #0f172a);">MGIT PYQ Hub</div>
+            <div style="font-size: 12.5px; color: var(--text-secondary, #64748b);">Install shortcut on your Android device</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">1</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Tap the browser menu (<strong style="font-size: 16px;">⋮</strong> three dots in the top-right corner).</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">2</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Tap <strong>Install app</strong> or <strong>Add to Home screen</strong>.</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">3</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Confirm by tapping <strong>Install</strong> or <strong>Add</strong>.</span>
+          </div>
+        </div>
+      `;
+    } else {
+      instructionsHtml = `
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle, #f1f5f9);">
+          <img src="assets/icons/icon-192.png" alt="MGIT PYQ Hub" style="width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <div>
+            <div style="font-weight: 700; font-size: 15px; color: var(--text-primary, #0f172a);">MGIT PYQ Hub</div>
+            <div style="font-size: 12.5px; color: var(--text-secondary, #64748b);">Install shortcut on your Desktop</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">1</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Click the <strong>Install</strong> icon <i class="fa-solid fa-desktop" style="color: #4f46e5; margin: 0 4px;"></i> on the right side of the address bar.</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; background: var(--bg-hover, #f8fafc); border: 1px solid var(--border-subtle, #e2e8f0);">
+            <span style="background: #e0e7ff; color: #4338ca; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px;">2</span>
+            <span style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary, #1e293b);">Or click browser menu (<strong>⋮</strong>) &rarr; <strong>Save and share</strong> &rarr; <strong>Install MGIT PYQ Hub</strong>.</span>
+          </div>
+        </div>
+      `;
+    }
+
+    body.innerHTML = instructionsHtml;
+    modal.style.display = 'flex';
+  }
+
+  function closeA2hsModal() {
+    const modal = document.getElementById('a2hsModal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  // Hook modal buttons
+  const closeBtn = document.getElementById('closeA2hsModalBtn');
+  if (closeBtn) closeBtn.addEventListener('click', closeA2hsModal);
+  const gotItBtn = document.getElementById('a2hsGotItBtn');
+  if (gotItBtn) gotItBtn.addEventListener('click', closeA2hsModal);
+
+  const modalBackdrop = document.getElementById('a2hsModal');
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) closeA2hsModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeA2hsModal();
+  });
+
+  // Attach click handlers to buttons
+  const headerBtn = document.getElementById('headerInstallBtn');
+  if (headerBtn) {
+    headerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      handleInstallClick();
+    });
+  }
+
+  const footerBtn = document.getElementById('footerInstallBtn');
+  if (footerBtn) {
+    footerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      handleInstallClick();
+    });
+  }
+
+  // 4. Background 15-second promo banner
+  function dismissPrompt() {
+    try {
+      const currentCount = parseInt(localStorage.getItem(DISMISS_COUNT_KEY) || '0', 10);
+      const newCount = currentCount + 1;
+      localStorage.setItem(DISMISS_COUNT_KEY, newCount);
+
+      const delayDays = newCount === 1 ? 3 : 30;
+      const suppressUntil = Date.now() + (delayDays * 24 * 60 * 60 * 1000);
+      localStorage.setItem(DISMISSED_KEY, suppressUntil);
+    } catch (e) {}
 
     const banner = document.getElementById('pwaInstallPrompt');
     if (banner) {
@@ -77,14 +249,12 @@
     if (window.MGITPopups) window.MGITPopups.closed('a2hs');
   }
 
-  function showInstallPrompt(force) {
+  function showPassivePrompt() {
     if (document.getElementById('pwaInstallPrompt')) return;
-    if (isInstalled() || isStandalone()) return;
-    if (!force && (installPromptShown || isDismissed())) return;
+    if (isStandalone() || installPromptShown || isDismissed()) return;
 
-    // Do NOT interrupt the tour, modals, AI chat or an active practice session.
     if (window.MGITPopups && !window.MGITPopups.canShow('a2hs')) {
-      return; // The 1-second tracker will retry once the screen is free.
+      return;
     }
 
     const opened = window.MGITPopups
@@ -137,89 +307,21 @@
     const installNowBtn = document.getElementById('pwaInstallNowBtn');
     if (installNowBtn) {
       installNowBtn.addEventListener('click', (event) => {
-        // Keep the click away from any outside-click / swipe dismiss handler.
         event.preventDefault();
         event.stopPropagation();
-
-        const deferred = window.__deferredInstall;
-        if (!deferred) {
-          showFallbackInstructions(promptCard);
-          return;
-        }
-
-        // prompt() must be called synchronously inside the user gesture.
-        // It is single-use, so discard it immediately.
-        window.__deferredInstall = null;
-        try {
-          deferred.prompt();
-        } catch (err) {
-          showFallbackInstructions(promptCard);
-          return;
-        }
-
-        deferred.userChoice.then((choice) => {
-          if (choice && choice.outcome === 'accepted') {
-            window.__pwaInstalled = true;
-            try { localStorage.setItem('mgit_pwa_installed', '1'); } catch (e) {}
-            installPromptShown = true;
-            if (timerInterval) clearInterval(timerInterval);
-            promptCard.classList.remove('visible');
-            setTimeout(() => promptCard.remove(), 300);
-            updateInstallEntry();
-            if (window.MGITPopups) window.MGITPopups.closed('a2hs');
-            return;
-          }
-          // Dismissed in the browser: treat it as "Later" (3-day rule).
-          dismissPrompt();
-        }).catch(() => {
-          showFallbackInstructions(promptCard);
-        });
+        handleInstallClick();
       });
     }
 
     const laterBtn = document.getElementById('pwaInstallLaterBtn');
     if (laterBtn) laterBtn.addEventListener('click', dismissPrompt);
-    const closeBtn = document.getElementById('pwaCloseIconBtn');
-    if (closeBtn) closeBtn.addEventListener('click', dismissPrompt);
+    const pwaCloseBtn = document.getElementById('pwaCloseIconBtn');
+    if (pwaCloseBtn) pwaCloseBtn.addEventListener('click', dismissPrompt);
   }
 
-  function showFallbackInstructions(promptCard) {
-    const contentEl = promptCard.querySelector('.pwa-prompt-content');
-    if (!contentEl) return;
-    const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-    contentEl.innerHTML = `
-      <h4 class="pwa-prompt-title" style="color: #4338ca;">Add MGIT PYQ Hub to your device</h4>
-      <p class="pwa-prompt-desc" style="font-size: 13px; line-height: 1.55; color: #1e293b; margin: 8px 0 12px;">
-        ${isIos
-          ? '1. Tap the <strong>Share</strong> button <i class="fa-solid fa-arrow-up-from-bracket"></i> at the bottom of Safari.<br>2. Scroll and tap <strong>Add to Home Screen</strong>.<br>3. Tap <strong>Add</strong> to finish.'
-          : '1. Open the browser menu (<strong>⋮</strong>).<br>2. Choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.<br>3. Confirm to install.'}
-      </p>
-      <div class="pwa-prompt-actions">
-        <button type="button" class="btn-pwa-install" id="pwaDoneBtn" style="padding: 7px 18px; font-size: 12.5px;">
-          <i class="fa-solid fa-check"></i> <span>Got it</span>
-        </button>
-      </div>
-    `;
-    const doneBtn = document.getElementById('pwaDoneBtn');
-    if (doneBtn) {
-      doneBtn.addEventListener('click', () => {
-        window.__pwaInstalled = true;
-        try {
-          localStorage.setItem('mgit_pwa_installed', '1');
-          localStorage.setItem('mgit_pwa_added', '1');
-        } catch (e) {}
-        dismissPrompt();
-        updateInstallEntry();
-      });
-    }
-  }
-
-  // The inline head script captures the event; this listener keeps the UI in sync.
+  // Keep in sync with install events
   window.addEventListener('mgit-installable', () => {
     updateInstallEntry();
-    if (!isDismissed()) {
-      // The scheduled 15-second timer will show the friendly prompt.
-    }
   });
 
   window.addEventListener('mgit-installed', () => {
@@ -228,17 +330,9 @@
     updateInstallEntry();
   });
 
-  const installEntry = document.getElementById('headerInstallBtn');
-  if (installEntry) {
-    installEntry.addEventListener('click', (event) => {
-      event.stopPropagation();
-      showInstallPrompt(true);
-    });
-  }
-
   updateInstallEntry();
 
-  // Track active time
+  // Active time tracking for passive prompt
   function startActiveTracking() {
     if (isStandalone() || isDismissed()) return;
 
@@ -267,12 +361,11 @@
       }
 
       if (total >= PWA_DELAY_MS) {
-        showInstallPrompt();
+        showPassivePrompt();
       }
     }, 1000);
   }
 
-  // Trigger tracking on first user interaction
   const startEvents = ['click', 'keydown', 'scroll', 'touchstart'];
   let started = false;
   function onFirstInteraction() {
