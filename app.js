@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.23-exam-week-audit-repair-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.23-ai-notes-dbms-se%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1665,7 +1665,11 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         ? 'https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR'
         : (subId === 'OOPJ'
           ? 'https://drive.google.com/drive/folders/1WbWPKT2RWOdEQttkny0cwTHYTM4g62vP'
-          : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-');
+          : (subId === 'DBMS'
+            ? 'https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR'
+            : (subId === 'SE'
+              ? 'https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01'
+              : 'https://drive.google.com/drive/folders/1SIdYzFzxSrILh9REOUlz6cRV5K7P1AH-')));
 
       tejaWrapper.innerHTML = `
         <div class="teja-main-row" id="tejaMainRow" role="button" tabindex="0" aria-expanded="${isMainOpen}">
@@ -1713,9 +1717,9 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           return ch === u && (n.id.includes('QB') || (n.fileName || '').toLowerCase().includes('question bank'));
         });
 
-        // Fallback for COA: assign comprehensive Question Bank if no unit-specific QB
-        if (!uQbNote && subId === 'COA') {
-          uQbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
+        // Fallback for COA, DBMS, SE: assign comprehensive Question Bank if no unit-specific QB
+        if (!uQbNote && (subId === 'COA' || subId === 'DBMS' || subId === 'SE')) {
+          uQbNote = tejaNotes.find(n => n.id === `NOTE-${subId}-TEJA-QB`);
         }
 
         const unitNotesList = [uNormalNote, uQbNote].filter(Boolean);
@@ -1761,11 +1765,31 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         rowsList.appendChild(chapterItem);
       });
 
-      // If COA has Crash Pack, add Semester End row
-      if (subId === 'COA' && examKey === 'sem') {
-        const crashNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-CRASH');
-        const qbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
-        if (crashNote) {
+      // Semester End special crash pack / revision materials row
+      if (examKey === 'sem') {
+        let semNotes = [];
+        let semTitle = 'Semester Crash Pack &amp; Question Bank';
+        if (subId === 'COA') {
+          const crashNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-CRASH');
+          const qbNote = tejaNotes.find(n => n.id === 'NOTE-COA-TEJA-QB');
+          semNotes = [crashNote, qbNote].filter(Boolean);
+        } else if (subId === 'DBMS') {
+          const passNote = tejaNotes.find(n => n.id === 'NOTE-DBMS-TEJA-PASS');
+          const revNote = tejaNotes.find(n => n.id === 'NOTE-DBMS-TEJA-REV');
+          const notesNote = tejaNotes.find(n => n.id === 'NOTE-DBMS-TEJA-NOTES');
+          const qbNote = tejaNotes.find(n => n.id === 'NOTE-DBMS-TEJA-QB');
+          semNotes = [passNote, revNote, notesNote, qbNote].filter(Boolean);
+          semTitle = 'Semester Crash Pack &amp; Special Materials';
+        } else if (subId === 'SE') {
+          const passNote = tejaNotes.find(n => n.id === 'NOTE-SE-TEJA-PASS');
+          const revNote = tejaNotes.find(n => n.id === 'NOTE-SE-TEJA-REV');
+          const notesNote = tejaNotes.find(n => n.id === 'NOTE-SE-TEJA-NOTES');
+          const qbNote = tejaNotes.find(n => n.id === 'NOTE-SE-TEJA-QB');
+          semNotes = [passNote, revNote, notesNote, qbNote].filter(Boolean);
+          semTitle = 'Semester Crash Pack &amp; Special Materials';
+        }
+
+        if (semNotes.length > 0) {
           const isCrashOpen = Boolean(state.tejaOpenChapters['sem']);
           const semItem = document.createElement('div');
           semItem.className = 'teja-chapter-item' + (isCrashOpen ? ' open' : '');
@@ -1775,10 +1799,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
             <div class="teja-chapter-row" role="button" tabindex="0" data-chapter="sem" aria-expanded="${isCrashOpen}">
               <div class="teja-chapter-left">
                 <span class="teja-chapter-num" style="background: #fdf2f8; color: #db2777;">All Units</span>
-                <span class="teja-chapter-name">Semester Crash Pack &amp; Question Bank</span>
+                <span class="teja-chapter-name">${semTitle}</span>
               </div>
               <div class="teja-chapter-right">
-                <span class="teja-chapter-count">2 Notes</span>
+                <span class="teja-chapter-count">${semNotes.length} Notes</span>
                 <i class="fa-solid fa-chevron-down teja-chapter-chevron"></i>
               </div>
             </div>
@@ -1786,7 +1810,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           `;
 
           const semBody = semItem.querySelector('#tejaChapterBody-sem');
-          [crashNote, qbNote].filter(Boolean).forEach(note => {
+          semNotes.forEach(note => {
             semBody.appendChild(createNoteItemCard(note));
           });
 

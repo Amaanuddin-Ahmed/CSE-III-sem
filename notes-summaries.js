@@ -8801,6 +8801,759 @@ const NOTE_SUMMARIES = {
       "example": "Syntax template: interface remains usable and visually consistent across different screen sizes and resolutions. Layout managers also ensure platform independence, as components adjust themselves without relying on pixel values. More adv"
     }
   ]
+},
+  "NOTE-DBMS-TEJA-U1": {
+  "noteId": "NOTE-DBMS-TEJA-U1",
+  "subjectId": "DBMS",
+  "chapter": 1,
+  "title": "DBMS Unit 1: Introduction to Database Systems & ER Model",
+  "pageCount": 10,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Unit 1: Introduction to Database Systems & ER Model \u00b7 Verified study material \u00b7 10 pages \u00b7 File systems vs DBMS, three-schema architecture, data independence, and ER conceptual modeling.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Unit 1: Introduction to Database Systems & ER Model identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Design an ER diagram for an enterprise application (Online Shopping or University) and explain its conceptual design.",
+        "Explain the three-schema architecture (levels of data abstraction) in a DBMS and discuss the mappings between levels.",
+        "Explain the fundamental components of the Entity-Relationship (ER) model including entity sets, attributes, and relationship sets.",
+        "Explain additional features of the ER model including key constraints, participation constraints, weak entity sets, and class hierarchies.",
+        "Explain the advantages of DBMS over traditional File Processing Systems in detail.",
+        "Compare hierarchical, network, and relational data models with respect to structure, data independence, and query capabilities."
+      ],
+      "formulas": [
+        "Physical Data Independence: Immunity of conceptual schema to changes in physical storage structure.",
+        "Logical Data Independence: Immunity of external schemas to changes in the conceptual schema.",
+        "Weak Entity Set: Must have total participation and depends on an identifying owner entity set via identifying relationship."
+      ],
+      "example": "Standard university question: Design an ER diagram for an enterprise application (Online Shopping or University) and explain its conceptual design."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 1.",
+      "points": [
+        "Levels of data abstraction: Physical level (storage), Conceptual level (logical entities & relationships), External level (user views).",
+        "ER Model constructs: Entities, Attributes (simple, composite, multi-valued, derived), Primary keys, and Relationships (1:1, 1:N, M:N).",
+        "Specialization and Generalization: Top-down design vs bottom-up synthesis with disjoint/overlap and total/partial constraints."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-U2": {
+  "noteId": "NOTE-DBMS-TEJA-U2",
+  "subjectId": "DBMS",
+  "chapter": 2,
+  "title": "DBMS Unit 2: Relational Model, Integrity Constraints & Query Languages",
+  "pageCount": 8,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Unit 2: Relational Model, Integrity Constraints & Query Languages \u00b7 8 pages \u00b7 Relational algebra, domain/key/entity/referential integrity constraints, and calculus.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Unit 2: Relational Model, Integrity Constraints & Query Languages identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain integrity constraints over relations including domain constraints, key constraints, entity integrity, and referential integrity with SQL examples.",
+        "Explain the fundamental and additional operations of Relational Algebra with suitable syntax and examples.",
+        "Explain Views in SQL including creating views, querying views, updating views, and destroying views.",
+        "Differentiate between Tuple Relational Calculus (TRC) and Domain Relational Calculus (DRC) with suitable query examples.",
+        "Explain how an ER diagram is converted into relational database schemas with mapping rules for entities, weak entities, and relationships."
+      ],
+      "formulas": [
+        "Selection: \u03c3_condition(R) - filters rows satisfying condition.",
+        "Projection: \u03c0_attributes(R) - eliminates duplicate rows and selects columns.",
+        "Natural Join: R \u22c8 S = \u03c0(\u03c3_{R.A = S.A}(R \u00d7 S))",
+        "Referential Integrity: Foreign Key FK in R referencing Primary Key PK in S implies \u2200t \u2208 R, t[FK] \u2208 \u03c0_{PK}(S) or t[FK] is NULL."
+      ],
+      "example": "Standard university question: Explain integrity constraints over relations including domain constraints, key constraints, entity integrity, and referential integrity with SQL examples."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 2.",
+      "points": [
+        "Integrity Constraints: Domain constraints (data types, check conditions), Key constraints (unique, primary key), Entity integrity (PK cannot be NULL), Referential integrity (foreign key references valid PK).",
+        "Relational Algebra fundamental operators: Select (\u03c3), Project (\u03c0), Union (\u222a), Set Difference (-), Cartesian Product (\u00d7), Rename (\u03c1).",
+        "ER to Relational Schema mapping: Strong entity sets \u2192 relation; Weak entity sets \u2192 relation with owner's PK as foreign key; M:N relationships \u2192 separate junction table."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-U3": {
+  "noteId": "NOTE-DBMS-TEJA-U3",
+  "subjectId": "DBMS",
+  "chapter": 3,
+  "title": "DBMS Unit 3: SQL Queries, Triggers & Schema Refinement (Normalization)",
+  "pageCount": 13,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Unit 3: SQL Queries, Triggers & Schema Refinement (Normalization) \u00b7 13 pages \u00b7 Normal forms (1NF, 2NF, 3NF, BCNF, 4NF), functional dependencies, triggers, and nested subqueries.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Unit 3: SQL Queries, Triggers & Schema Refinement (Normalization) identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain the concept of Functional Dependency (FD) and derive Armstrong's Axioms for FD inference.",
+        "Explain Boyce-Codd Normal Form (BCNF) and Third Normal Form (3NF). Compare their strengths and limitations.",
+        "Explain the problems caused by data redundancy in relational schemas (insertion, deletion, and update anomalies).",
+        "Explain the algorithm to test whether a relational decomposition is Lossless-Join and Dependency-Preserving.",
+        "Explain the structure, components, and execution of active database Triggers in SQL (ECA rule).",
+        "Write and explain SQL queries involving complex joins, GROUP BY, HAVING, and correlated nested subqueries."
+      ],
+      "formulas": [
+        "Armstrong's Axioms: Reflexivity (Y \u2286 X \u21d2 X \u2192 Y), Augmentation (X \u2192 Y \u21d2 XZ \u2192 YZ), Transitivity (X \u2192 Y \u2227 Y \u2192 Z \u21d2 X \u2192 Z).",
+        "Lossless-Join Decomposition Condition for R into R1, R2: (R1 \u2229 R2 \u2192 R1) OR (R1 \u2229 R2 \u2192 R2).",
+        "BCNF: For every nontrivial FD X \u2192 Y, X must be a superkey.",
+        "3NF: For every nontrivial FD X \u2192 Y, either X is a superkey OR Y is a prime attribute."
+      ],
+      "example": "Standard university question: Explain the concept of Functional Dependency (FD) and derive Armstrong's Axioms for FD inference."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 3.",
+      "points": [
+        "Schema Refinement: Normalization decomposes schemas to eliminate redundancy and update/delete anomalies while preserving dependencies.",
+        "Normal Form Hierarchy: 1NF (atomic attributes) \u2282 2NF (no partial dependency) \u2282 3NF (no transitive dependency) \u2282 BCNF (every determinant is superkey).",
+        "Triggers (Event-Condition-Action): BEFORE/AFTER trigger execution on INSERT, UPDATE, or DELETE events with FOR EACH ROW granularity."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-U4": {
+  "noteId": "NOTE-DBMS-TEJA-U4",
+  "subjectId": "DBMS",
+  "chapter": 4,
+  "title": "DBMS Unit 4: Transaction Management, Concurrency Control & Recovery",
+  "pageCount": 12,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Unit 4: Transaction Management, Concurrency Control & Recovery \u00b7 12 pages \u00b7 ACID properties, serializability, two-phase locking (2PL), deadlock handling, and ARIES crash recovery.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Unit 4: Transaction Management, Concurrency Control & Recovery identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain the ACID properties of transactions and the role of DBMS components in enforcing each property.",
+        "Explain Conflict Serializability and View Serializability with testing precedence graphs.",
+        "Explain the Two-Phase Locking (2PL) protocol, Strict 2PL, and Rigorous 2PL with concurrency guarantees.",
+        "Discuss Deadlock Handling in DBMS: prevention schemes (Wait-Die, Wound-Wait) and detection using Wait-For Graphs.",
+        "Explain the ARIES recovery algorithm detailing the Analysis, Redo, and Undo phases with write-ahead logging (WAL).",
+        "Describe concurrency anomalies: Dirty Read (WR), Unrepeatable Read (RW), and Lost Update (WW)."
+      ],
+      "formulas": [
+        "Conflict Serializability: Precedence graph G contains no cycles \u21d4 schedule S is conflict serializable.",
+        "Wait-Die (Non-preemptive): If T_old requests resource held by T_young, T_old waits; if T_young requests, T_young dies.",
+        "Wound-Wait (Preemptive): If T_old requests resource held by T_young, T_young is aborted (wounded); if T_young requests, T_young waits.",
+        "WAL Protocol: Log record for an update must be flushed to stable storage before the dirty page is written to disk."
+      ],
+      "example": "Standard university question: Explain the ACID properties of transactions and the role of DBMS components in enforcing each property."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 4.",
+      "points": [
+        "ACID: Atomicity (all or nothing, recovery manager), Consistency (preserves database state), Isolation (concurrency control), Durability (committed changes persist).",
+        "Two-Phase Locking: Growing phase (locks acquired, none released) followed by shrinking phase (locks released, none acquired).",
+        "ARIES Recovery Phases: 1. Analysis (determines dirty pages & active transactions at crash), 2. Redo (repeats history starting from oldest unwritten log record), 3. Undo (rolls back uncommitted transactions)."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-U5": {
+  "noteId": "NOTE-DBMS-TEJA-U5",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "title": "DBMS Unit 5: Storage, Indexing & B+ Trees",
+  "pageCount": 10,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Unit 5: Storage, Indexing & B+ Trees \u00b7 10 pages \u00b7 File organization, clustered vs unclustered indexing, ISAM, and B+ tree insertion/deletion.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Unit 5: Storage, Indexing & B+ Trees identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain the structure, node properties, and search procedure of a B+ Tree index.",
+        "Demonstrate step-by-step insertion and deletion operations in a B+ Tree with node splits and key redistribution.",
+        "Compare Primary, Secondary, Clustered, and Unclustered indexes with schematic diagrams.",
+        "Explain ISAM (Indexed Sequential Access Method) and compare its static structure with dynamic B+ Trees.",
+        "Explain physical storage hierarchy and buffer pool management strategies (LRU, Clock replacement)."
+      ],
+      "formulas": [
+        "B+ Tree Node Capacity (fan-out p): Max keys = p - 1, Max pointers = p.",
+        "Non-root Node Minimum: Min keys = \u2308p/2\u2309 - 1, Min pointers = \u2308p/2\u2309.",
+        "Search Cost: O(log_p N) disk I/Os to reach leaf level.",
+        "Range Scan Cost: O(log_p N) initial search + O(K) leaves/records visited via sequential leaf pointers."
+      ],
+      "example": "Standard university question: Explain the structure, node properties, and search procedure of a B+ Tree index."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 5.",
+      "points": [
+        "B+ Tree properties: Balanced tree (all leaf nodes at identical depth), internal nodes store index keys and pointers, leaf nodes contain data pointers linked in a doubly-linked chain.",
+        "Indexing Types: Clustered (data records ordered on disk by search key; max 1 per file), Unclustered (data records not sorted by index key), Dense (index record for every search key), Sparse (index record for data blocks).",
+        "Buffer Management: Retains disk blocks in main memory frame buffer pool, tracking pin count and dirty bits before flushing to disk."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-QB": {
+  "noteId": "NOTE-DBMS-TEJA-QB",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "title": "DBMS Semester End Question Bank",
+  "pageCount": 5,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Semester End Question Bank \u00b7 5 pages \u00b7 Comprehensive question bank covering high-yield exam questions across Units 1\u20135 with priority star ratings.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Semester End Question Bank identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Design an ER diagram for an enterprise application (Online Shopping or University) and explain its conceptual design. \u2605\u2605\u2605",
+        "Explain integrity constraints over relations including domain constraints, key constraints, entity integrity, and referential integrity. \u2605\u2605\u2605",
+        "Explain Boyce-Codd Normal Form (BCNF) and Third Normal Form (3NF) with comparison. \u2605\u2605\u2605",
+        "Explain Conflict Serializability and View Serializability with testing precedence graphs. \u2605\u2605\u2605",
+        "Construct a B+ Tree of order 3 for key values: 5, 15, 25, 35, 45 with node splits. \u2605\u2605\u2605",
+        "Explain the ACID properties of transactions and the role of DBMS components. \u2605\u2605\u2605",
+        "Explain the Two-Phase Locking (2PL) protocol, Strict 2PL, and Rigorous 2PL. \u2605\u2605\u2605",
+        "Explain the ARIES recovery algorithm detailing Analysis, Redo, and Undo phases. \u2605\u2605\u2605"
+      ],
+      "formulas": [
+        "Conflict Serializability: Precedence graph contains no cycles.",
+        "Lossless-join test: (R1 \u2229 R2 \u2192 R1) OR (R1 \u2229 R2 \u2192 R2).",
+        "B+ Tree Order p: Max keys = p-1, Min keys = \u2308p/2\u2309 - 1."
+      ],
+      "example": "Standard university question: Design an ER diagram for an enterprise application (Online Shopping or University) and explain its conceptual design. \u2605\u2605\u2605"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 5.",
+      "points": [
+        "Unit 1: ER modeling, components, mapping to relations, file systems vs DBMS.",
+        "Unit 2: Relational algebra operators, views, constraints, relational calculus.",
+        "Unit 3: Normalization 1NF-BCNF, functional dependencies, Armstrong's axioms, triggers.",
+        "Unit 4: Transaction ACID properties, 2PL, deadlock prevention/detection, WAL recovery.",
+        "Unit 5: B+ tree construction/deletion, ISAM, primary vs secondary indexes."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-PASS": {
+  "noteId": "NOTE-DBMS-TEJA-PASS",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "title": "DBMS Pass Guarantee (21+ Marks)",
+  "pageCount": 2,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Pass Guarantee (21+ Marks) \u00b7 2 pages \u00b7 Highly curated minimum-effort passing questions guaranteed for university semester examinations.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Pass Guarantee (21+ Marks) identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Design an ER diagram for an enterprise application (Online Shopping or University) and explain conceptual design. (Unit 1)",
+        "Explain integrity constraints over relations with SQL examples. (Unit 2)",
+        "Explain fundamental operations of Relational Algebra with suitable syntax and examples. (Unit 2)",
+        "Explain Boyce-Codd Normal Form (BCNF) and Third Normal Form (3NF) with comparison. (Unit 3)",
+        "Explain ACID properties of transactions and the role of DBMS components. (Unit 4)",
+        "Construct a B+ tree of order 3 with step-by-step node splits and leaf links. (Unit 5)"
+      ],
+      "formulas": [
+        "Focus on ER diagram drawing + Relational Algebra syntax + Normalization conditions + ACID table + B+ tree split derivation."
+      ],
+      "example": "Standard university question: Design an ER diagram for an enterprise application (Online Shopping or University) and explain conceptual design. (Unit 1)"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 5.",
+      "points": [
+        "High-priority scoring topics guaranteed to appear across Sections A & B in end-semester exam papers.",
+        "Diagrammatic questions yield maximum marks: ER notation, precedence graphs, B+ tree leaf chains."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-REV": {
+  "noteId": "NOTE-DBMS-TEJA-REV",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "title": "DBMS Revision Sheet",
+  "pageCount": 8,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Revision Sheet \u00b7 8 pages \u00b7 One-line syllabus keywords, comparison tables, and quick formulas for rapid exam revision.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Revision Sheet identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "File Systems vs DBMS: Redundancy, concurrent access, crash recovery, security.",
+        "Three-schema architecture: Internal, Conceptual, External views with physical & logical data independence.",
+        "Relational Algebra Operators: \u03c3, \u03c0, \u222a, -, \u00d7, \u22c8, \u03c1.",
+        "Normal Forms: 1NF (atomic), 2NF (no partial FD), 3NF (no transitive FD), BCNF (superkey determinants).",
+        "Transaction Schedules: Conflict serializable (no cycle in precedence graph), Recoverable, Cascadeless.",
+        "Locking Protocols: 2PL (growing/shrinking), Strict 2PL (exclusive locks held till commit), Rigorous 2PL (all locks held)."
+      ],
+      "formulas": [
+        "\u03c3_C(R), \u03c0_A(R), R \u22c8_C S = \u03c3_C(R \u00d7 S)",
+        "BCNF: X \u2192 Y nontrivial \u21d2 X is superkey",
+        "Wait-Die: Older waits, Younger dies; Wound-Wait: Older preempts, Younger waits"
+      ],
+      "example": "Standard university question: File Systems vs DBMS: Redundancy, concurrent access, crash recovery, security."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 5.",
+      "points": [
+        "Comprehensive rapid revision tables comparing hierarchical, network, and relational models.",
+        "Quick reference comparison of 3NF vs BCNF (dependency preservation vs zero redundancy)."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-DBMS-TEJA-NOTES": {
+  "noteId": "NOTE-DBMS-TEJA-NOTES",
+  "subjectId": "DBMS",
+  "chapter": 5,
+  "title": "DBMS Structured Notes (Full Syllabus)",
+  "pageCount": 39,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "DBMS Structured Notes \u00b7 39 pages \u00b7 Comprehensive syllabus order textbook notes covering Units 1 to 5 completely.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for DBMS Structured Notes (Full Syllabus) identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain DBMS architecture, file systems vs DBMS, data models, and ER conceptual design. (Unit 1)",
+        "Explain Relational Model, constraints, Relational Algebra, and Calculus in detail. (Unit 2)",
+        "Explain Schema Refinement, functional dependencies, 1NF to BCNF decomposition, and SQL triggers. (Unit 3)",
+        "Explain Transaction processing, ACID, conflict serializability, 2PL, and ARIES recovery. (Unit 4)",
+        "Explain Physical file organizations, buffer management, indexing, and B+ Trees. (Unit 5)"
+      ],
+      "formulas": [
+        "Syllabus-complete reference covering all textbook topics from Ramakrishnan & Gehrke / Silberschatz."
+      ],
+      "example": "Standard university question: Explain DBMS architecture, file systems vs DBMS, data models, and ER conceptual design. (Unit 1)"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for DBMS Unit 5.",
+      "points": [
+        "Detailed textbook walkthrough for in-depth conceptual study and comprehensive exam preparation.",
+        "Every syllabus unit structured with diagrams, mathematical definitions, SQL code listings, and algorithms."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-U1": {
+  "noteId": "NOTE-SE-TEJA-U1",
+  "subjectId": "SE",
+  "chapter": 1,
+  "title": "SE Unit 1: Introduction to Software Engineering & Process Models",
+  "pageCount": 14,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Unit 1: Introduction to Software Engineering & Process Models \u00b7 14 pages \u00b7 Software myths, CMMI maturity levels, process framework, Agile manifesto, Waterfall vs Spiral models.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Unit 1: Introduction to Software Engineering & Process Models identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Discuss common software myths (management myths, customer myths, practitioner myths) and explain the realities behind them.",
+        "Explain Capability Maturity Model Integration (CMMI) with its 5 staged maturity levels and a neat sketch.",
+        "Explain the generic process framework activities (Communication, Planning, Modeling, Construction, Deployment) and umbrella activities.",
+        "Explain the principles of Agile software development and discuss why agile has become preferred in modern projects.",
+        "Explain the Spiral model in detail and compare it with the Waterfall model.",
+        "Explain the changing nature of software and the characteristics of modern software systems.",
+        "Describe the evolving role of software as both a product and a vehicle for delivering a product."
+      ],
+      "formulas": [
+        "CMMI Staged Maturity Levels: Level 1 (Initial), Level 2 (Managed), Level 3 (Defined), Level 4 (Quantitatively Managed), Level 5 (Optimizing).",
+        "Boehm's Cost of Change: Cost to fix a defect rises exponentially from requirements to deployment.",
+        "Agile Values: Individuals & interactions over processes/tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan."
+      ],
+      "example": "Standard university question: Discuss common software myths (management myths, customer myths, practitioner myths) and explain the realities behind them."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 1.",
+      "points": [
+        "Software Engineering Definition: Systematic, disciplined, quantifiable approach to development, operation, and maintenance of software.",
+        "Process Framework: Framework activities + Umbrella activities (Software project tracking, Risk management, SQA, Formal technical reviews, Measurement).",
+        "Process Models: Waterfall (linear sequential), Prototyping (iterative mockups), Incremental (usable subsets), Spiral (risk-driven iterative)."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-U2": {
+  "noteId": "NOTE-SE-TEJA-U2",
+  "subjectId": "SE",
+  "chapter": 2,
+  "title": "SE Unit 2: Software Requirements & Requirements Engineering Process",
+  "pageCount": 9,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Unit 2: Software Requirements & Requirements Engineering Process \u00b7 9 pages \u00b7 Functional vs non-functional requirements, SRS IEEE standards, elicitation techniques, validation.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Unit 2: Software Requirements & Requirements Engineering Process identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Differentiate between functional requirements and non-functional requirements with suitable examples.",
+        "Explain the structure of a typical Software Requirements Specification (SRS) document and evaluate the qualities of a good SRS.",
+        "List and explain the various requirements elicitation techniques used in software development (interviews, FAST/JAD, questionnaires, observation).",
+        "Distinguish between user requirements and system requirements with suitable examples.",
+        "Analyse the challenges involved in requirements management and explain requirements management activities (traceability, change control).",
+        "Explain the requirements validation process and discuss common techniques (requirements reviews, prototyping, test-case generation)."
+      ],
+      "formulas": [
+        "Qualities of Good SRS: Correct, Unambiguous, Complete, Consistent, Ranked for importance/stability, Verifiable, Modifiable, Traceable.",
+        "Traceability Matrix: Bi-directional linkage between customer requirements, architecture, code, and test cases."
+      ],
+      "example": "Standard university question: Differentiate between functional requirements and non-functional requirements with suitable examples."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 2.",
+      "points": [
+        "Requirements Engineering Process: Inception, Elicitation, Elaboration, Negotiation, Specification, Validation, Management.",
+        "Non-Functional Requirements (FURPS+): Performance, Reliability, Availability, Security, Usability, Maintainability, Portability.",
+        "Formal Requirements Reviews: Structured peer inspections to detect omissions, ambiguities, and inconsistencies prior to system design."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-U3": {
+  "noteId": "NOTE-SE-TEJA-U3",
+  "subjectId": "SE",
+  "chapter": 3,
+  "title": "SE Unit 3: Design Engineering & UML Diagrams",
+  "pageCount": 15,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Unit 3: Design Engineering & UML Diagrams \u00b7 15 pages \u00b7 Architectural styles/patterns, UML structural and behavioral modeling, Use Case, Sequence, and Statechart diagrams.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Unit 3: Design Engineering & UML Diagrams identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Define UML and explain its conceptual model in detail (building blocks, rules, common mechanisms).",
+        "Distinguish between sequence diagrams and collaboration diagrams (interaction diagrams) with examples.",
+        "Explain design quality and its importance in software development and how design produces quality (cohesion, coupling).",
+        "List and explain the different Architectural Styles and patterns used in software design (Data-centered, Data-flow, Call-and-return, Layered, MVC).",
+        "Illustrate the Behavioural Model and explain state machine diagrams in software modeling.",
+        "Explain Use Case diagrams with standard notation, relationships (include, extend, generalization), and a practical illustration."
+      ],
+      "formulas": [
+        "Cohesion (Desirable: High): Measure of relative functional strength of a module.",
+        "Coupling (Desirable: Low): Measure of relative interdependence among modules.",
+        "Information Hiding: Modules characterized by design decisions hidden from all other modules (David Parnas)."
+      ],
+      "example": "Standard university question: Define UML and explain its conceptual model in detail (building blocks, rules, common mechanisms)."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 3.",
+      "points": [
+        "Design Engineering Concepts: Abstraction, Refinement, Modularity, Software Architecture, Information Hiding, Functional Independence.",
+        "UML Diagrams Classification: Structural diagrams (Class, Object, Component, Deployment) vs Behavioral diagrams (Use Case, Activity, State Machine, Sequence, Communication).",
+        "Architectural Styles: Pipes and Filters (Data-flow), Repository (Data-centered), Client-Server / Layered, Model-View-Controller (MVC)."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-U4": {
+  "noteId": "NOTE-SE-TEJA-U4",
+  "subjectId": "SE",
+  "chapter": 4,
+  "title": "SE Unit 4: Testing Strategies & Metrics for Process and Products",
+  "pageCount": 12,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Unit 4: Testing Strategies & Metrics for Process and Products \u00b7 12 pages \u00b7 Black-box vs white-box testing, unit/integration/system testing, debugging, and software metrics.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Unit 4: Testing Strategies & Metrics for Process and Products identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Compare black-box testing and white-box testing with suitable examples and test-case design techniques.",
+        "Discuss the various test strategies used for testing conventional software (Unit Testing, Integration Testing: Top-down, Bottom-up, Sandwich).",
+        "Explain Validation Testing (Alpha/Beta testing) and System Testing (Recovery, Security, Stress, Performance) in detail.",
+        "Explain software measurement, metrics classification, and the framework for process and product metrics.",
+        "Explain Basis Path Testing, Control Structure Testing, and Cyclomatic Complexity computation with a flow graph.",
+        "Distinguish between verification and validation in software engineering (Boehm: 'Are we building the product right?' vs 'Are we building the right product?').",
+        "Examine the Art of Debugging with suitable approaches (Brute force, Backtracking, Cause elimination) and distinguish testing from debugging."
+      ],
+      "formulas": [
+        "Cyclomatic Complexity: V(G) = E - N + 2 = P + 1 (where E = edges, N = nodes, P = predicate nodes).",
+        "Verification: 'Are we building the product right?' (Conformity to specification).",
+        "Validation: 'Are we building the right product?' (Meeting customer expectations)."
+      ],
+      "example": "Standard university question: Compare black-box testing and white-box testing with suitable examples and test-case design techniques."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 4.",
+      "points": [
+        "White-Box Testing: Basis path testing, Condition testing, Data flow testing, Loop testing.",
+        "Black-Box Testing: Equivalence partitioning, Boundary value analysis (BVA), Cause-effect graphing, Orthogonal array testing.",
+        "Integration Testing Strategies: Big bang vs incremental (Top-down using stubs, Bottom-up using drivers, Sandwich approach)."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-U5": {
+  "noteId": "NOTE-SE-TEJA-U5",
+  "subjectId": "SE",
+  "chapter": 5,
+  "title": "SE Unit 5: Risk Management & Quality Management",
+  "pageCount": 14,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Unit 5: Risk Management & Quality Management \u00b7 14 pages \u00b7 RMMM plans, Reactive vs Proactive risk strategies, ISO 9000 & Six Sigma, SQA activities, and Formal Technical Reviews.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Unit 5: Risk Management & Quality Management identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Explain the RMMM plan with its components (Risk Mitigation, Monitoring, and Management) and provide an example.",
+        "Discuss the ISO 9000 quality standards and explain their significance in software engineering certification.",
+        "Explain the role and objectives of Formal Technical Reviews (FTR) in achieving quality software.",
+        "Summarize Software Quality Assurance (SQA) and its core activities throughout the software lifecycle.",
+        "Differentiate between Reactive and Proactive Risk Strategies in software risk management.",
+        "Summarize Six Sigma principles and explain Statistical Software Quality Assurance with error tracking.",
+        "Explain Risk Projection (Risk Estimation) using risk impact tables and risk exposure calculations."
+      ],
+      "formulas": [
+        "Risk Exposure: RE = P \u00d7 C (where P = probability of occurrence, C = cost/impact to the project).",
+        "Six Sigma Metric: 3.4 defects per million opportunities (DPMO).",
+        "RMMM: Risk Mitigation (avoidance), Risk Monitoring (tracking symptoms), Risk Management (contingency response)."
+      ],
+      "example": "Standard university question: Explain the RMMM plan with its components (Risk Mitigation, Monitoring, and Management) and provide an example."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 5.",
+      "points": [
+        "Risk Categories: Project risks (budget, schedule, resources), Technical risks (design, implementation, interface), Business risks (market, sales, management).",
+        "Formal Technical Review (FTR): Objectives, review meeting guidelines (focus on defect discovery not fixing, advance preparation, time limit 2 hours, unanimous review report).",
+        "Software Quality Dimensions: McCall's quality factors (Product operation, Product revision, Product transition) and ISO 9126 / ISO 25010 models."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-QB": {
+  "noteId": "NOTE-SE-TEJA-QB",
+  "subjectId": "SE",
+  "chapter": 5,
+  "title": "SE Semester End Question Bank",
+  "pageCount": 5,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Semester End Question Bank \u00b7 5 pages \u00b7 Comprehensive question bank covering high-yield exam questions across Units 1\u20135 with priority star ratings.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Semester End Question Bank identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Discuss common software myths and explain the realities behind them. \u2605\u2605\u2605",
+        "Explain Capability Maturity Model Integration (CMMI) with its 5 maturity levels and a neat sketch. \u2605\u2605\u2605",
+        "Differentiate between functional requirements and non-functional requirements with examples. \u2605\u2605\u2605",
+        "Explain the structure of a typical Software Requirements Specification (SRS) document. \u2605\u2605\u2605",
+        "Define UML and explain its conceptual model in detail. \u2605\u2605\u2605",
+        "Compare black-box testing and white-box testing with suitable examples. \u2605\u2605\u2605",
+        "Discuss the various test strategies used for testing conventional software. \u2605\u2605\u2605",
+        "Explain the RMMM plan with its components (Mitigation, Monitoring, Management). \u2605\u2605\u2605",
+        "Discuss the ISO 9000 quality standards and explain their significance. \u2605\u2605\u2605"
+      ],
+      "formulas": [
+        "Cyclomatic Complexity: V(G) = E - N + 2 = P + 1",
+        "Risk Exposure: RE = P \u00d7 C",
+        "CMMI: Initial \u2192 Managed \u2192 Defined \u2192 Quantitatively Managed \u2192 Optimizing"
+      ],
+      "example": "Standard university question: Discuss common software myths and explain the realities behind them. \u2605\u2605\u2605"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 5.",
+      "points": [
+        "Unit 1: Myths, CMMI, process framework, Agile manifesto, Spiral vs Waterfall.",
+        "Unit 2: Functional vs NFR, SRS qualities, elicitation, traceability, validation.",
+        "Unit 3: UML conceptual model, Use Case, Sequence, State Machine, architecture styles.",
+        "Unit 4: Black-box vs white-box, unit/integration/system testing, basis path, metrics.",
+        "Unit 5: Reactive vs proactive risk, RMMM plan, SQA activities, FTR, ISO 9000, Six Sigma."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-PASS": {
+  "noteId": "NOTE-SE-TEJA-PASS",
+  "subjectId": "SE",
+  "chapter": 5,
+  "title": "SE Pass Guarantee (21+ Marks)",
+  "pageCount": 2,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Pass Guarantee (21+ Marks) \u00b7 2 pages \u00b7 Highly curated minimum-effort passing questions guaranteed for university semester examinations.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Pass Guarantee (21+ Marks) identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Discuss common software myths and explain the realities behind them. (Unit 1)",
+        "Explain CMMI maturity levels with a neat sketch. (Unit 1)",
+        "Differentiate between functional and non-functional requirements with examples. (Unit 2)",
+        "Define UML and explain its conceptual model in detail. (Unit 3)",
+        "Compare black-box testing and white-box testing with examples. (Unit 4)",
+        "Explain the RMMM plan with its components (Mitigation, Monitoring, Management). (Unit 5)"
+      ],
+      "formulas": [
+        "Master the high-yield questions: Software Myths + CMMI 5 Levels + SRS Structure + UML Conceptual Model + Black/White Box Testing + RMMM Plan."
+      ],
+      "example": "Standard university question: Discuss common software myths and explain the realities behind them. (Unit 1)"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 5.",
+      "points": [
+        "Essential examination questions with maximum probability of appearance in MGIT semester end papers.",
+        "Covers both Part A definitions and Part B comprehensive 5-mark and 10-mark questions."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-REV": {
+  "noteId": "NOTE-SE-TEJA-REV",
+  "subjectId": "SE",
+  "chapter": 5,
+  "title": "SE Revision Sheet",
+  "pageCount": 8,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Revision Sheet \u00b7 8 pages \u00b7 One-line syllabus keywords, comparison tables, and quick formulas for rapid exam revision.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Revision Sheet identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Software Engineering Layers: Tools, Methods, Process, Quality Focus.",
+        "CMMI Levels: 1 (Initial), 2 (Managed), 3 (Defined), 4 (Quantitatively Managed), 5 (Optimizing).",
+        "Waterfall vs Spiral: Sequential vs risk-driven iterative development.",
+        "Requirements: Functional (system behavior) vs Non-functional (FURPS quality constraints).",
+        "Design Principles: High cohesion, Low coupling, Information hiding, Modularity.",
+        "Testing: White-box (internal logic, cyclomatic complexity) vs Black-box (input/output boundaries, equivalence partitions)."
+      ],
+      "formulas": [
+        "V(G) = E - N + 2",
+        "RE = P \u00d7 Impact",
+        "High Cohesion + Low Coupling = Robust Maintainable Software"
+      ],
+      "example": "Standard university question: Software Engineering Layers: Tools, Methods, Process, Quality Focus."
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 5.",
+      "points": [
+        "Rapid revision checklist organized by syllabus topic with micro-definitions and concise summaries.",
+        "Ideal for the final 2 hours of review before entering the examination hall."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
+},
+  "NOTE-SE-TEJA-NOTES": {
+  "noteId": "NOTE-SE-TEJA-NOTES",
+  "subjectId": "SE",
+  "chapter": 5,
+  "title": "SE Structured Notes (Full Syllabus)",
+  "pageCount": 43,
+  "quality": "good",
+  "limited": false,
+  "limitedReason": "",
+  "overview": "SE Structured Notes \u00b7 43 pages \u00b7 Comprehensive syllabus order textbook notes covering Units 1 to 5 completely.",
+  "topics": [
+    {
+      "title": "\u2605\u2605\u2605 High-Yield Exam Questions (Most Likely)",
+      "summary": "Crucial university examination questions for SE Structured Notes (Full Syllabus) identified with maximum historical recurrence and 3-star rating.",
+      "points": [
+        "Introduction to Software Engineering, Process Models, CMMI, and Agile development. (Unit 1)",
+        "Requirements Engineering, Functional/NFR, SRS specifications, elicitation, and validation. (Unit 2)",
+        "Design Engineering, Architectural styles, UML structural & behavioral modeling. (Unit 3)",
+        "Software Testing strategies, conventional testing, verification & validation, metrics. (Unit 4)",
+        "Risk Management, RMMM plan, Software Quality Assurance (SQA), FTR, ISO 9000, Six Sigma. (Unit 5)"
+      ],
+      "formulas": [
+        "Complete textbook reference aligned with Roger S. Pressman / Ian Sommerville."
+      ],
+      "example": "Standard university question: Introduction to Software Engineering, Process Models, CMMI, and Agile development. (Unit 1)"
+    },
+    {
+      "title": "Core Technical Principles & Syllabus Breakdown",
+      "summary": "Detailed academic reference and syllabus concepts from verified lecture notes for SE Unit 5.",
+      "points": [
+        "Comprehensive 43-page textbook guide containing all diagrams, process model workflows, UML notations, test case design algorithms, and SQA quality standards.",
+        "Structured in exact university syllabus sequence for thorough academic preparation."
+      ],
+      "formulas": [],
+      "example": "Key concept application tested in end-semester exams."
+    }
+  ]
 }
 };
 
