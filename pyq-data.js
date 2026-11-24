@@ -1356,7 +1356,7 @@ const NOTES_DATA = [
     "title": "COA Unit 1: Boolean Algebra, Data Representation & Digital Computers",
     "fileName": "COA Unit 1 - Boolean Algebra, Data Representation & Digital Computers.pdf",
     "fileSize": "512 KB",
-    "driveFileId": "169KY1-9IjRSiTMyJWANinmTnxlthGgeP",
+    "driveFileId": "1JAUGUWJLP8k2LdZfuqQFsF2hoy9bHaJv",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1368,7 +1368,7 @@ const NOTES_DATA = [
     "title": "COA Unit 2: Combinational & Sequential Logic",
     "fileName": "COA Unit 2 - Combinational & Sequential Logic.pdf",
     "fileSize": "654 KB",
-    "driveFileId": "1UtfCcH10x-WzyCMJzWwfiwMdJ6zXQQOq",
+    "driveFileId": "1SYEgDRyhmL4ihdaj9z3atj0uAxjhUH3x",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1380,7 +1380,7 @@ const NOTES_DATA = [
     "title": "COA Unit 3: Register Transfer & Basic Computer Organization",
     "fileName": "COA Unit 3 - Register Transfer & Basic Computer Organization.pdf",
     "fileSize": "511 KB",
-    "driveFileId": "132cGG9YWN_lVflXIcmzTG8pC0Qs_C96z",
+    "driveFileId": "1vGrgHJvVzr-FFCXwVkYGd6TV0EZOFTJe",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1392,7 +1392,7 @@ const NOTES_DATA = [
     "title": "COA Unit 4: Microprogrammed Control, CPU & Computer Arithmetic",
     "fileName": "COA Unit 4 - Microprogrammed Control, CPU & Computer Arithmetic.pdf",
     "fileSize": "534 KB",
-    "driveFileId": "1DA1PcdK4g9IX-CDmeGKRUntCHfBHgnWV",
+    "driveFileId": "14XH8UTFYaGU9tiOzrgF1LTZ0bMs0GqYJ",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1404,7 +1404,7 @@ const NOTES_DATA = [
     "title": "COA Unit 5: Input-Output & Memory Organization",
     "fileName": "COA Unit 5 - Input-Output & Memory Organization.pdf",
     "fileSize": "442 KB",
-    "driveFileId": "1c7VLXcxmbpb8dv1hMhIVUJfm54fLPdlk",
+    "driveFileId": "14obuWbUE9byfbALq1zvdjGtfX0p29WS6",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1417,7 +1417,7 @@ const NOTES_DATA = [
     "title": "COA Semester End Crash Pack",
     "fileName": "COA Sem - Crash Pack.pdf",
     "fileSize": "1.5 MB",
-    "driveFileId": "1zCjRZ_srKuwEs3xj7lztDRCh7FpSHcUH",
+    "driveFileId": "19EEgkOpwynffpK8ba-Ionusk3B8tif6J",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1430,7 +1430,7 @@ const NOTES_DATA = [
     "title": "COA Semester End Question Bank",
     "fileName": "COA Sem - Question Bank.pdf",
     "fileSize": "119 KB",
-    "driveFileId": "1cwwUreIjH9CA4nCoZ0M8SpI0Fhdoausm",
+    "driveFileId": "1494pSLCKbf7_MTo2mz4YJP8Ychn5j5ca",
     "folderUrl": "https://drive.google.com/drive/folders/1g3o9Z2snd_926HhKk0Hd7Xl5rfNfFQHR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1563,7 +1563,7 @@ const NOTES_DATA = [
       "title": "OOPJ Unit 1: Object Oriented Thinking and Java Basics",
       "fileName": "OOPJ Unit 1 - Object Oriented Thinking and Java Basics.pdf",
       "fileSize": "1.1 MB",
-      "driveFileId": "1TnYgU31PF5ZiaXoDaK2Uq0fPfb-v3-Mz",
+      "driveFileId": "1JFM1H3GKD2iD3NROQZrIIu2jo3_DSPvO",
       "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
       "isTejaAiNotes": true,
       "description": ""
@@ -1575,7 +1575,7 @@ const NOTES_DATA = [
       "title": "OOPJ Unit 2: Inheritance, Packages and Interfaces",
       "fileName": "OOPJ Unit 2 - Inheritance, Packages and Interfaces.pdf",
       "fileSize": "898 KB",
-      "driveFileId": "1WN-MAcgOm7tXhREcdig4SMIOr3fjUwDJ",
+      "driveFileId": "1ZmptqTKymY8a5OIFGhvwpvyIQEwX17Rg",
       "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
       "isTejaAiNotes": true,
       "description": ""
@@ -1587,7 +1587,7 @@ const NOTES_DATA = [
       "title": "OOPJ Unit 3: Exception Handling and Multithreading",
       "fileName": "OOPJ Unit 3 - Exception Handling and Multithreading.pdf",
       "fileSize": "833 KB",
-      "driveFileId": "1blRyljFoproi2WGFCSXdk29XlKfy-TP4",
+      "driveFileId": "1A2pcyRxNL5rrNr0sOqD1eTV4RGqE4GGb",
       "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
       "isTejaAiNotes": true,
       "description": ""
@@ -1599,7 +1599,7 @@ const NOTES_DATA = [
       "title": "OOPJ Unit 4: Library Classes, Event Handling and Layout Managers",
       "fileName": "OOPJ Unit 4 - Library Classes, Event Handling and Layout Managers.pdf",
       "fileSize": "1.1 MB",
-      "driveFileId": "1dTtjFoI-gGITjWOiR2g24dtQ4YnmYtWq",
+      "driveFileId": "1B1fPLYotntnrba9ConBaGflK5q20IxIR",
       "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
       "isTejaAiNotes": true,
       "description": ""
@@ -1611,7 +1611,7 @@ const NOTES_DATA = [
       "title": "OOPJ Unit 5: Swing",
       "fileName": "OOPJ Unit 5 - Swing.pdf",
       "fileSize": "562 KB",
-      "driveFileId": "1ncOx9xgc94jX7lUw_CoVuTY1R013-bAK",
+      "driveFileId": "1HxMi9oMbaHmFUQbhuBaetwsD0Sn3e6-2",
       "folderUrl": "https://drive.google.com/drive/folders/1mYVOcDAF60tbJ-RA1cz5atZ3ed5kI3cX",
       "isTejaAiNotes": true,
       "description": ""
@@ -1683,7 +1683,7 @@ const NOTES_DATA = [
     "title": "DBMS Unit 1: Introduction to Database Systems & ER Model",
     "fileName": "DBMS Unit 1 - Introduction to Database Systems and Database Design (ER Model).pdf",
     "fileSize": "530 KB",
-    "driveFileId": "1qIyMmFhpJyYx-RAjTr1-itPRhzGAdjNC",
+    "driveFileId": "1WyDD6Gy4GDTwLGVkyC3DzWcx2luKGRfh",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1695,7 +1695,7 @@ const NOTES_DATA = [
     "title": "DBMS Unit 2: Relational Model, Integrity Constraints & Query Languages",
     "fileName": "DBMS Unit 2 - Relational Model, Integrity Constraints and Relational Query Languages.pdf",
     "fileSize": "508 KB",
-    "driveFileId": "1O9nmkJm5JT-W54jNmr96ksqY_HqHdX3r",
+    "driveFileId": "1OE9izifUv01k8LwLi46Ey8tkw8T9RG36",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1707,7 +1707,7 @@ const NOTES_DATA = [
     "title": "DBMS Unit 3: SQL Queries, Triggers & Schema Refinement (Normalization)",
     "fileName": "DBMS Unit 3 - SQL Queries, Constraints, Triggers and Schema Refinement (Normalization).pdf",
     "fileSize": "729 KB",
-    "driveFileId": "1Fi8rALLGjU3MvA_-H6MIp6aQOOSuWA2e",
+    "driveFileId": "1h96lM9Bar7gF9MFT56GGrjSecYdJS9SZ",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1719,7 +1719,7 @@ const NOTES_DATA = [
     "title": "DBMS Unit 4: Transaction Management, Concurrency Control & Recovery",
     "fileName": "DBMS Unit 4 - Transaction Management, Concurrency Control and Recovery Systems.pdf",
     "fileSize": "653 KB",
-    "driveFileId": "16_i-__4Sn1kWR1vcxFAa3gr8gAH5dXSH",
+    "driveFileId": "1XWYTvHJYFkSQq70o-6k4L5lKmQP-I6u9",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1731,7 +1731,7 @@ const NOTES_DATA = [
     "title": "DBMS Unit 5: Storage, Indexing & B+ Trees",
     "fileName": "DBMS Unit 5 - Storage, File Organizations, Indexing and B+ Trees.pdf",
     "fileSize": "534 KB",
-    "driveFileId": "1em2pryA8hxtJ2aZCDOWbPH5k40VPRDxN",
+    "driveFileId": "1rWUJ6q333u8O892i4XuNpcgljTQPX1X7",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1743,7 +1743,7 @@ const NOTES_DATA = [
     "title": "DBMS Semester End Question Bank",
     "fileName": "DBMS Question Bank.pdf",
     "fileSize": "121 KB",
-    "driveFileId": "1pHv81EMf9gdcHVp26KaLfYFcZ4VT2IFo",
+    "driveFileId": "1NxwhMsBqKQC4-3rN5OVE54A74dNRKcUa",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1755,7 +1755,7 @@ const NOTES_DATA = [
     "title": "DBMS Pass Guarantee (21+ Marks)",
     "fileName": "DBMS Pass Guarantee (21+ Marks).pdf",
     "fileSize": "205 KB",
-    "driveFileId": "1ZggX4BzStxcPkvIK8FMxNwt12YEjsNez",
+    "driveFileId": "1m_e6kIKzjQTd4XZXn_EPXNDxfd1-NHvI",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1767,7 +1767,7 @@ const NOTES_DATA = [
     "title": "DBMS Revision Sheet",
     "fileName": "DBMS Revision Sheet.pdf",
     "fileSize": "477 KB",
-    "driveFileId": "1yieSt2ZbjVTJEvDw8Fc0qpUIUTkDI3hb",
+    "driveFileId": "1BKz35IoBGdC1OkEtGLMEgnDRBzf_LkxB",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1779,7 +1779,7 @@ const NOTES_DATA = [
     "title": "DBMS Structured Notes (Full Syllabus)",
     "fileName": "DBMS Structured Notes.pdf",
     "fileSize": "1.36 MB",
-    "driveFileId": "1fnKnGTkBvif95-Bn-6uUXRCgTzti6_Mm",
+    "driveFileId": "1wA-ywASMc9ZiGMR8qmJv22eSOXlZLdO-",
     "folderUrl": "https://drive.google.com/drive/folders/186QkqSUssu2X8rcUtet0YGgh1YIcVziR",
     "isTejaAiNotes": true,
     "description": ""
@@ -1791,7 +1791,7 @@ const NOTES_DATA = [
     "title": "SE Unit 1: Introduction to Software Engineering & Process Models",
     "fileName": "SE Unit 1 - Introduction to Software Engineering and Process Models.pdf",
     "fileSize": "589 KB",
-    "driveFileId": "1UeJe6GIUR_oEijs_mmHgHSXzn0WBR7KH",
+    "driveFileId": "1G_iZfRpXhoUDmkRPQeXsi1qlZ9_Duco9",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1803,7 +1803,7 @@ const NOTES_DATA = [
     "title": "SE Unit 2: Software Requirements & Requirements Engineering Process",
     "fileName": "SE Unit 2 - Software Requirements and Requirements Engineering Process.pdf",
     "fileSize": "471 KB",
-    "driveFileId": "1RwrtXtBsROCgy7o7ZrF0siLqpqlnDJJs",
+    "driveFileId": "1lLnw9KWShJcmtopVezeCY318aZuJ-rTJ",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1815,7 +1815,7 @@ const NOTES_DATA = [
     "title": "SE Unit 3: Design Engineering & UML Diagrams",
     "fileName": "SE Unit 3 - Design Engineering and UML Diagrams.pdf",
     "fileSize": "661 KB",
-    "driveFileId": "1b9IgAF0R1PLntYhSjVFy8VpdqZVqMt72",
+    "driveFileId": "12OB7vOZKRJlt0CGm-QFoxyEQEB91Ycl7",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1827,7 +1827,7 @@ const NOTES_DATA = [
     "title": "SE Unit 4: Testing Strategies & Metrics for Process and Products",
     "fileName": "SE Unit 4 - Testing Strategies and Metrics for Process and Products.pdf",
     "fileSize": "581 KB",
-    "driveFileId": "1JcszBlirro_IRD3b5SCR-CMHOZMe1elI",
+    "driveFileId": "1XOco0RzGvTcqZuqTHc5bs_7Wcyqv9N7l",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1839,7 +1839,7 @@ const NOTES_DATA = [
     "title": "SE Unit 5: Risk Management & Quality Management",
     "fileName": "SE Unit 5 - Risk Management and Quality Management.pdf",
     "fileSize": "633 KB",
-    "driveFileId": "1eOqeKOotcPtAe71rKNdy9AXHPVtsIZtF",
+    "driveFileId": "1s-gUrTGWykLQDHU_rAgczVNmFx3oELNZ",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1851,7 +1851,7 @@ const NOTES_DATA = [
     "title": "SE Semester End Question Bank",
     "fileName": "SE Question Bank.pdf",
     "fileSize": "117 KB",
-    "driveFileId": "1quLDDevBsHuZJZdHwtyo2FyVg7rfPivD",
+    "driveFileId": "1kYivMBzEmX6ejQR7OaD3Qj4MKQ3f-Kwg",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1863,7 +1863,7 @@ const NOTES_DATA = [
     "title": "SE Pass Guarantee (21+ Marks)",
     "fileName": "SE Pass Guarantee (21+ Marks).pdf",
     "fileSize": "202 KB",
-    "driveFileId": "1Cb9bBVuKXk-e1h1FK4SLG2M_z0_-7nkH",
+    "driveFileId": "1AYsBY3F8yBFmnCYuPIikrifHsOcm_KGZ",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1875,7 +1875,7 @@ const NOTES_DATA = [
     "title": "SE Revision Sheet",
     "fileName": "SE Revision Sheet.pdf",
     "fileSize": "469 KB",
-    "driveFileId": "1ZyRKZaaEBMhvnzMWMxneF1Rk1TFyGz2H",
+    "driveFileId": "1jQqFzR-dJAFiwzKMd7Am4t1k39N0Hj0N",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""
@@ -1887,7 +1887,7 @@ const NOTES_DATA = [
     "title": "SE Structured Notes (Full Syllabus)",
     "fileName": "SE Structured Notes.pdf",
     "fileSize": "1.36 MB",
-    "driveFileId": "1JYD8pXNLmoRrbJ05nJlj3paJ3qmqwxD6",
+    "driveFileId": "1ggC4lYzIWVsdaecW2vZRiAilnqJUA4Gx",
     "folderUrl": "https://drive.google.com/drive/folders/1xa0RAH4SOgujfOH784T5BhVQdS7IBv01",
     "isTejaAiNotes": true,
     "description": ""

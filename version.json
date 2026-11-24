@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.23-pwa-a2hs-fix",
-  "commit": "fix(pwa): resolve add to homescreen shortcut button, capture beforeinstallprompt, add a2hs instructions modal and manifest shortcuts",
-  "generatedAt": "2026-11-23T12:22:00.000Z"
+  "version": "v2026.11.24-se-refresh-clean",
+  "commit": "fix(se): refresh all SE drive IDs to active non-trashed files, remove orange dots from pyqs, exclude AI notes from chapter-wise accordions, keep clean AI Notes header",
+  "generatedAt": "2026-11-24T18:22:00.000Z"
 }

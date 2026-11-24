@@ -3452,8 +3452,10 @@ html[data-theme="dark"] .notes-unit-accordion-card.open .chapter-accordion-heade
 }
 
 
-/* Dark Mode styles for Question Importance Dot */
+/* Dark Mode styles for Question Importance Dot (Disabled) */
+[data-theme="dark"] .q-importance-dot {
+  display: none !important;
+}
 [data-theme="dark"] .q-importance-dot.dot-red {
-  background-color: #f87171;
-  box-shadow: 0 0 6px rgba(248, 113, 113, 0.7);
+  display: none !important;
 }

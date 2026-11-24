@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.23-pwa-a2hs-fix%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.24-se-refresh-clean%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1543,6 +1543,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     // Sem: All units 1-5
     let notes = NOTES_DATA.filter(n => {
       if (n.subjectId !== subId) return false;
+      if (n.isTejaAiNotes) return false; // Keep AI notes strictly in their dedicated section, not duplicated in chapter-wise notes
       return typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true;
     });
 
@@ -2779,17 +2780,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const cleanText = cleanHumanFriendlyQuestion(q.question);
     const qNum = q.questionNumber || 'Q';
 
-    const freq = q.frequency || (q.years ? q.years.length : 1);
-    let importanceDot = '';
-    if (freq > 5) {
-      importanceDot = `<span class="q-importance-dot dot-red" title="Repeated ${freq} times in exams" aria-label="Repeated ${freq} times"></span>`;
-    }
-
     row.innerHTML = `
       <div class="q-compact-header" role="button" tabindex="0" aria-expanded="false" title="Click to view question options">
         <span class="q-compact-num">${escapeHtml(qNum)}</span>
         <div class="q-compact-text">${escapeHtml(cleanText)}</div>
-        ${importanceDot}
         <div class="q-compact-toggle">
           <i class="fa-solid fa-chevron-down q-compact-chevron" aria-hidden="true"></i>
         </div>

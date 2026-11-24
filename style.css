@@ -11390,23 +11390,14 @@ body.notes-reader-open {
 
 
 /* -------------------------------------------------------------
- * Question Importance Dot (Repeated > 5 times, right-aligned)
+ * Question Importance Dot (Disabled / Removed per user specification)
  * ------------------------------------------------------------- */
 .q-importance-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  min-width: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background-color: #ef4444;
-  box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
-  pointer-events: none;
+  display: none !important;
 }
 
 .q-importance-dot.dot-red {
-  background-color: #ef4444;
-  box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -11641,7 +11632,7 @@ html {
 
 
 /* ==============================================================
-   AI Notes (by Teja) Hierarchical Dropdown Component
+   AI Notes Hierarchical Dropdown Component
    ============================================================== */
 
 .teja-ai-wrapper {
@@ -11697,11 +11688,6 @@ html {
   font-weight: 800 !important;
   color: #1e1b4b !important;
   letter-spacing: -0.3px !important;
-}
-
-/* Author text hidden */
-.teja-author-text {
-  display: none !important;
 }
 
 .teja-main-chevron {
