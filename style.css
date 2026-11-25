@@ -12026,6 +12026,54 @@ body.notes-reader-open #floatingGeminiBtn {
     line-height: 1.35 !important;
   }
 
+  .notes-unit-accordion-card .chapter-accordion-header {
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .notes-unit-accordion-card .ch-header-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+    flex: 1 1 auto !important;
+  }
+
+  .notes-unit-accordion-card .ch-header-right {
+    margin-top: 2px !important;
+  }
+
+  /* Keep breadcrumb legible on 360px phones (Home > Sem End > SE > Notes) */
+  .site-header .mobile-header-history {
+    gap: 6px !important;
+    padding: 0 10px 8px !important;
+  }
+
+  .site-header .header-arrow-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .app-breadcrumb {
+    gap: 2px !important;
+    font-size: 11.5px !important;
+  }
+
+  .app-breadcrumb .crumb-link {
+    padding: 6px 3px !important;
+    min-height: 34px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .app-breadcrumb .crumb-link.crumb-exam {
+    flex-shrink: 1 !important;
+  }
+
+  .app-breadcrumb .crumb-current {
+    flex-shrink: 0 !important;
+  }
+
   .teja-chapter-row {
     padding: 12px 12px !important;
     gap: 10px !important;

@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.26-ui-mobile-vercel-cleanup",
-  "commit": "fix(ui,pwa,vercel): add .vercelignore, fix AI Notes dark mode & mobile wrapping, fix solution modal mobile grid/overflow & Ask-AI links, fix Quiz Time step overlap & Sem End scoping, guard rating storage, stop boilerplate solutions posing as reviewed",
-  "generatedAt": "2026-11-26T00:48:00.000Z"
+  "version": "v2026.11.26-ui-mobile-vercel-cleanup-2",
+  "commit": "fix(vercel,ui): restore data/solutions/*.json via /solutions/ in .vercelignore, refresh Fast Recap/Quiz Time card on exam switches, polish mobile unit wrapping and breadcrumbs",
+  "generatedAt": "2026-11-26T01:11:00.000Z"
 }

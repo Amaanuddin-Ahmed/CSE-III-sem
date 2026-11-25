@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.26-ui-mobile-vercel-cleanup';
+const CACHE_NAME = 'mgit-hub-v2026.11.26-ui-mobile-vercel-cleanup-2';
 
 const STATIC_ASSETS = [
   './',

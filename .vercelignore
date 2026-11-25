@@ -34,13 +34,13 @@ temp/
 tmp/
 
 # Non-runtime source trees & tooling (keep Vercel bundle minimal)
-solutions/
-content-audit/
-docs/
-scripts/
-scratch/
-tools/
-tests/
+/solutions/
+/content-audit/
+/docs/
+/scripts/
+/scratch/
+/tools/
+/tests/
 qa-*.js
 qa-*.html
 qa-*.png

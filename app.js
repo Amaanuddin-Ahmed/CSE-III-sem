@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.26-ui-mobile-vercel-cleanup%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.26-ui-mobile-vercel-cleanup-2%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -1151,7 +1151,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       if (quizBtn) quizBtn.style.display = 'flex';
       if (funTitle) funTitle.textContent = 'Quiz Time';
       if (funHook) funHook.textContent = 'Learn it. Play it. Remember it.';
-      if (funSub) funSub.textContent = 'Covers fundamentals, MCQs, fill in the blanks, formulas &amp; more, in an interactive way.';
+      if (funSub) funSub.textContent = 'Covers fundamentals, MCQs, fill in the blanks, formulas & more, in an interactive way.';
       if (hintTag) hintTag.textContent = 'Practice with interactive quiz games to memorize your fundamentals';
       if (flashBtn) {
         flashBtn.innerHTML = `
@@ -1193,7 +1193,8 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       }
     });
 
-    // Show Practice Fun Card
+    // Update Practice Fun Card for active exam scope (Fast Recap in Sem End vs Quiz Time in Mids)
+    updatePracticeButtonsForExam(examId);
     if (el.practiceFunDivision) {
       el.practiceFunDivision.style.display = 'block';
     }
