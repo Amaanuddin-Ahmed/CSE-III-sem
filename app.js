@@ -15,7 +15,7 @@
   }
 
 // Version Stamp
-console.log('%cMGIT PYQ Hub Version: v2026.11.24-se-refresh-clean%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
+console.log('%cMGIT PYQ Hub Version: v2026.11.26-ui-mobile-vercel-cleanup%c', 'background: #4f46e5; color: #fff; padding: 2px 6px; border-radius: 4px;', '');
 /**
  * MGIT PYQ Hub - Client Application Logic
  * Adheres strictly to Master Specification & User Requirements:
@@ -523,7 +523,11 @@ Instructions for complete examination answer:
            text.includes('State boundary conditions or edge cases') ||
            text.includes('Step 1: Establish the given mathematical') ||
            text.includes('Core Engineering Definition & Architectural Principle') ||
-           text.includes('Adhering to structured architectural design ensures optimal throughput');
+           text.includes('Adhering to structured architectural design ensures optimal throughput') ||
+           text.includes('Direct Meaning: Precise operational behavior as dictated by standard') ||
+           text.includes('Methodological Rigor: Adheres to established engineering standards') ||
+           text.includes('Applying standard software engineering paradigms guarantees') ||
+           text.includes('Verified Academic Examination Solution for');
   }
 
   // Purge any stale generic fallback solutions from localStorage immediately
@@ -790,9 +794,28 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
 
     if (reqId !== currentSolutionRequestId) return;
 
-    // 3. Fallback if API offline: show Ask with AI pop-up directly so student can open ChatGPT or Gemini seamlessly
-    closeSolutionModal();
-    openAskWithModal(q);
+    // 3. Fallback if AI API unavailable/rate-limited: keep modal open with Retry & Ask AI choices
+    if (statusChip) statusChip.textContent = 'AI unavailable offline / busy';
+    if (bodyEl) {
+      bodyEl.innerHTML = `
+        <div class="sol-missing-box">
+          <div class="sol-missing-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+          <h4>Answer not cached yet</h4>
+          <p>Could not generate an AI answer right now (connection issue or temporary rate limit). You can retry below or ask directly using ChatGPT, Google Gemini, or the In-Built Assistant.</p>
+          <div class="sol-missing-actions">
+            <button type="button" class="btn-action-primary" id="solRetryAiBtn">
+              <i class="fa-solid fa-rotate-right"></i> <span>Retry AI Answer</span>
+            </button>
+            <button type="button" class="btn-secondary-flat" id="solOpenAskAiFromFallbackBtn">
+              <i class="fa-solid fa-up-right-from-square"></i> <span>Open ChatGPT / Gemini</span>
+            </button>
+          </div>
+        </div>`;
+      const retryBtn = bodyEl.querySelector('#solRetryAiBtn');
+      if (retryBtn) retryBtn.addEventListener('click', () => openSolutionModal(q));
+      const askBtn = bodyEl.querySelector('#solOpenAskAiFromFallbackBtn');
+      if (askBtn) askBtn.addEventListener('click', () => openAskWithModal(q));
+    }
   }
 
   function closeSolutionModal() {
@@ -1042,7 +1065,9 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       items.push({ label: 'Choose category' });
     } else {
       const cfg = getExamConfig(state.activeExam);
-      items.push({ label: cfg.name, action: () => showExamSelector(), crumbClass: 'crumb-exam' });
+      const isNarrowViewport = window.innerWidth <= 480;
+      const examCrumbLabel = (isNarrowViewport && cfg.id === 'sem' && state.currentSubject) ? 'Sem End' : cfg.name;
+      items.push({ label: examCrumbLabel, action: () => showExamSelector(), crumbClass: 'crumb-exam' });
       if (state.currentSubject) {
         items.push({
           label: state.currentSubject.shortName,
@@ -1581,20 +1606,28 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       });
     }
 
-    if (filteredNotes.length === 0) {
+    // Pre-compute scoped AI Notes before empty check so AI Notes aren't hidden when regular notes are empty
+    const tejaNotes = NOTES_DATA.filter(n =>
+      n.subjectId === subId &&
+      n.isTejaAiNotes &&
+      (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true)
+    );
+
+    if (filteredNotes.length === 0 && tejaNotes.length === 0) {
       const chLabel = state.notesChapterFilter === 'all' ? 'this subject' : `Unit ${state.notesChapterFilter}`;
+      const practiceBtnLabel = examKey === 'sem' ? 'Practice Flashcards' : 'Practice Quiz &amp; Flashcards';
       el.notesListContainer.innerHTML = `
         <div class="empty-notes-card">
           <i class="fa-regular fa-folder-open empty-icon"></i>
           <h5>No notes uploaded yet for ${escapeHtml(chLabel)}</h5>
           <p>Don't worry—you can still practice high-yield questions, or switch exam scope to view notes from all units.</p>
-          <div class="empty-notes-actions" style="margin-top: 16px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            <button type="button" class="btn btn-outline-primary empty-act-btn" id="emptyNotesPracticeBtn">
-              <i class="fa-solid fa-bolt"></i> Practice Quiz &amp; Flashcards
+          <div class="empty-notes-actions">
+            <button type="button" class="empty-act-btn empty-act-secondary" id="emptyNotesPracticeBtn">
+              <i class="fa-solid fa-bolt"></i> <span>${practiceBtnLabel}</span>
             </button>
             ${examKey !== 'sem' ? `
-            <button type="button" class="btn btn-primary empty-act-btn" id="emptyNotesAllSyllabusBtn">
-              <i class="fa-solid fa-book-open"></i> View All Syllabus Notes
+            <button type="button" class="empty-act-btn empty-act-primary" id="emptyNotesAllSyllabusBtn">
+              <i class="fa-solid fa-book-open"></i> <span>View All Syllabus Notes</span>
             </button>` : ''}
           </div>
         </div>
@@ -1604,9 +1637,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
       if (practiceBtn) {
         practiceBtn.addEventListener('click', () => {
           if (window.PracticeRunner) {
-            window.PracticeRunner.openSelectorModal();
-            if (state.currentSubject) {
-              window.PracticeRunner.goToUnitSelection(state.currentSubject.id);
+            if (state.currentSubject && typeof window.PracticeRunner.openSubjectPractice === 'function') {
+              window.PracticeRunner.openSubjectPractice(state.currentSubject.id);
+            } else {
+              window.PracticeRunner.openSelectorModal();
             }
           }
         });
@@ -1645,13 +1679,6 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         });
       }
     });
-
-    // Render "AI Notes" Hierarchical Dropdown Component - SCOPED TO ACTIVE EXAM
-    const tejaNotes = NOTES_DATA.filter(n =>
-      n.subjectId === subId &&
-      n.isTejaAiNotes &&
-      (typeof window.isNoteInScope === 'function' ? window.isNoteInScope(n, examKey) : true)
-    );
 
     if (tejaNotes.length > 0) {
       if (!state.tejaOpenChapters) state.tejaOpenChapters = {};
@@ -1724,6 +1751,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         }
 
         const unitNotesList = [uNormalNote, uQbNote].filter(Boolean);
+        if (unitNotesList.length === 0) return;
         const isChapterOpen = Boolean(state.tejaOpenChapters[u]);
 
         const chapterItem = document.createElement('div');
@@ -2020,7 +2048,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     notesReaderState.currentId = noteId;
 
     if (instantSummary) {
-      renderNoteSummary(instantSummary, driveLink);
+      renderNoteSummary(instantSummary, driveLink, pageCountNum);
       return;
     }
 
@@ -2037,7 +2065,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
         const entry = content && content[noteId];
         const summary = (window.NOTE_SUMMARIES || {})[noteId];
         if (summary) {
-          renderNoteSummary(summary, driveLink);
+          renderNoteSummary(summary, driveLink, pageCountNum);
           return;
         }
         if (!entry || !Array.isArray(entry.pages) || entry.pages.length === 0) {
@@ -2127,7 +2155,22 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     if (el.notesReaderSearchCount) el.notesReaderSearchCount.textContent = '';
   }
 
-  function renderNoteSummary(summary, driveLink) {
+  function formatSummaryExample(rawText) {
+    if (!rawText) return '';
+    const parts = String(rawText).split(/```([a-zA-Z0-9_-]*)\n?([\s\S]*?)```/g);
+    let html = '';
+    for (let i = 0; i < parts.length; i += 3) {
+      const prose = (parts[i] || '').trim();
+      if (prose) html += `<span class="note-example-prose">${escapeHtml(prose)}</span>`;
+      if (i + 2 < parts.length) {
+        const code = (parts[i + 2] || '').replace(/^\n+|\n+$/g, '');
+        if (code) html += `<pre class="note-example-code"><code>${escapeHtml(code)}</code></pre>`;
+      }
+    }
+    return html;
+  }
+
+  function renderNoteSummary(summary, driveLink, verifiedPageCount) {
     const topics = Array.isArray(summary.topics) ? summary.topics : [];
     const mustKnow = Array.isArray(summary.mustKnow)
       ? summary.mustKnow
@@ -2135,6 +2178,10 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
     const formulas = Array.isArray(summary.formulas) ? summary.formulas.filter(Boolean) : [];
     const examTips = Array.isArray(summary.examTips) ? summary.examTips.filter(Boolean) : [];
     const noteDescription = summary.summary || summary.description || summary.overview || '';
+
+    const resolvedPageCount = (Number.isFinite(verifiedPageCount) && verifiedPageCount > 0)
+      ? verifiedPageCount
+      : (parseInt(summary.pageCount, 10) > 0 ? parseInt(summary.pageCount, 10) : null);
 
     let topicsOrBriefHtml = '';
     let heroOverviewText = summary.overview || '';
@@ -2154,12 +2201,12 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
             ${topicSummary ? `<p>${escapeHtml(topicSummary)}</p>` : ''}
             ${points.length ? `<ul>${points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
             ${topicFormulas.length ? `<div class="note-summary-formulas">${topicFormulas.map(f => `<div class="note-summary-formula"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span>${escapeHtml(f)}</span></div>`).join('')}</div>` : ''}
-            ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${escapeHtml(topic.example)}</div>` : ''}
+            ${topic.example ? `<div class="note-summary-example"><span class="note-example-label">Example</span>${formatSummaryExample(topic.example)}</div>` : ''}
           </section>`;
       }).join('') + `</div>`;
     } else if (noteDescription) {
-      // Brief-only note: Render brief text once in About card, keep hero subtitle concise
-      if (!heroOverviewText) {
+      // Brief-only note: Render brief text once in About card, keep hero subtitle distinct & concise
+      if (!heroOverviewText || heroOverviewText.trim() === noteDescription.trim()) {
         heroOverviewText = 'High-yield syllabus reference and examination study material.';
       }
       topicsOrBriefHtml = `
@@ -2181,7 +2228,7 @@ Do not provide meta-advice, revision hints, or disclaimers—write the actual wo
           <h3>${escapeHtml(summary.title || 'Core Syllabus Breakdown')}</h3>
           <p>${escapeHtml(heroOverviewText)}</p>
           <div class="note-summary-meta">
-            ${summary.pageCount ? `<span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> ${summary.pageCount} pages</span>` : ''}
+            ${resolvedPageCount ? `<span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> ${resolvedPageCount} page${resolvedPageCount === 1 ? '' : 's'}</span>` : ''}
             ${topics.length > 0 ? `<span><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${topics.length} key topic${topics.length === 1 ? '' : 's'}</span>` : ''}
             <span><i class="fa-solid fa-certificate" aria-hidden="true"></i> MR-25 Blueprint Aligned</span>
           </div>
@@ -4935,18 +4982,25 @@ function formatGeminiResponse(rawText) {
     const DISMISS_KEY = 'mgit_rating_dismissed';
     const RATED_KEY = 'mgit_site_rated';
 
+    const safeGet = (store, key) => {
+      try { return store.getItem(key); } catch (_) { return null; }
+    };
+    const safeSet = (store, key, val) => {
+      try { store.setItem(key, val); } catch (_) {}
+    };
+
     // Hook up the footer "Rate now" button permanently
     const footerRateBtn = document.getElementById('footerRateBtn');
     if (footerRateBtn) {
       footerRateBtn.addEventListener('click', () => {
-        localStorage.setItem(RATED_KEY, '1');
-        sessionStorage.setItem(DISMISS_KEY, '1');
+        safeSet(localStorage, RATED_KEY, '1');
+        safeSet(sessionStorage, DISMISS_KEY, '1');
         dismissPopup();
       });
     }
 
     // If user already rated or dismissed during session, do not show popup
-    if (localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') {
+    if (safeGet(localStorage, RATED_KEY) === '1' || safeGet(sessionStorage, DISMISS_KEY) === '1') {
       return;
     }
 
@@ -4957,7 +5011,7 @@ function formatGeminiResponse(rawText) {
     let isShowing = false;
 
     function dismissPopup() {
-      sessionStorage.setItem(DISMISS_KEY, '1');
+      safeSet(sessionStorage, DISMISS_KEY, '1');
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
@@ -4972,13 +5026,13 @@ function formatGeminiResponse(rawText) {
     }
 
     function recordRated() {
-      localStorage.setItem(RATED_KEY, '1');
-      sessionStorage.setItem(DISMISS_KEY, '1');
+      safeSet(localStorage, RATED_KEY, '1');
+      safeSet(sessionStorage, DISMISS_KEY, '1');
       dismissPopup();
     }
 
     function showPopup() {
-      if (isShowing || localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') return;
+      if (isShowing || safeGet(localStorage, RATED_KEY) === '1' || safeGet(sessionStorage, DISMISS_KEY) === '1') return;
       if (document.getElementById('ratingPopup')) return;
 
       // Never interrupt the tour, a modal, the AI chat or practice.
@@ -5055,7 +5109,7 @@ function formatGeminiResponse(rawText) {
     }
 
     function startTimer() {
-      if (hasStarted || localStorage.getItem(RATED_KEY) === '1' || sessionStorage.getItem(DISMISS_KEY) === '1') return;
+      if (hasStarted || safeGet(localStorage, RATED_KEY) === '1' || safeGet(sessionStorage, DISMISS_KEY) === '1') return;
       hasStarted = true;
       lastActiveTime = Date.now();
 

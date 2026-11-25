@@ -74,7 +74,7 @@ export default async function handler(req, res) {
     });
   }
 
-  // Small best-effort rate limit: 5 requests per minute per IP to protect quota
+  // Small best-effort rate limit: 20 requests per minute per IP to protect quota
   const ip = String(req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown')
     .split(',')[0]
     .trim();
@@ -86,7 +86,7 @@ export default async function handler(req, res) {
   if (hits.length >= MAX_REQUESTS) {
     return res.status(429).json({
       error: 'AI_RATE_LIMITED',
-      message: 'You have reached the limit of 5 requests per minute. You can continue using your own Gemini or ChatGPT.',
+      message: 'You have reached the limit of 20 requests per minute. Please wait a minute or continue using your own Gemini or ChatGPT.',
     });
   }
   hits.push(now);

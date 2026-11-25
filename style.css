@@ -10650,6 +10650,8 @@ body.notes-reader-open {
   border-radius: 14px;
   border: 1.5px solid #e2e8f0;
   background: #ffffff;
+  color: inherit;
+  text-decoration: none !important;
   cursor: pointer;
   text-align: left;
   width: 100%;
@@ -10657,10 +10659,16 @@ body.notes-reader-open {
   position: relative;
 }
 
-.ask-with-card:hover {
+.ask-with-card:hover,
+.ask-with-card:focus-visible {
   border-color: #6366f1;
   background: #f8fafc;
+  text-decoration: none !important;
   transform: translateY(-1px);
+}
+
+.ask-with-card * {
+  text-decoration: none !important;
 }
 
 .ask-with-card.builtin-ai {
@@ -11612,21 +11620,33 @@ html {
 
 @media (max-width: 640px) {
   .solution-actions-row {
-    flex-direction: column !important;
-    gap: 10px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr auto !important;
+    gap: 8px !important;
+    align-items: center !important;
   }
   .solution-actions-row .sol-ask-ai-btn.sol-center-ai-btn {
+    grid-column: 1 / -1 !important;
     width: 100% !important;
     order: 1 !important;
   }
   .solution-actions-row .sol-prev-btn {
     order: 2 !important;
-    flex: 1 !important;
+    width: 100% !important;
+    justify-content: center !important;
   }
   .solution-actions-row .sol-right-group {
+    display: contents !important;
+  }
+  .solution-actions-row .sol-next-btn {
     order: 3 !important;
     width: 100% !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
+  }
+  .solution-actions-row .sol-close-btn {
+    order: 4 !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -12004,5 +12024,134 @@ body.notes-reader-open #floatingGeminiBtn {
     overflow: visible !important;
     text-overflow: clip !important;
     line-height: 1.35 !important;
+  }
+
+  .teja-chapter-row {
+    padding: 12px 12px !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+
+  .teja-chapter-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+    flex: 1 1 auto !important;
+  }
+
+  .teja-chapter-right {
+    margin-top: 2px !important;
+    gap: 6px !important;
+  }
+
+  .teja-chapters-container {
+    padding: 12px 10px 14px !important;
+  }
+
+  .teja-chapter-notes-body {
+    padding: 10px !important;
+  }
+}
+
+/* Solution modal horizontal overflow prevention & clean KaTeX scrolling */
+.solution-dialog .modal-body,
+.solution-model-answer {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+.solution-model-answer .katex-display {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 2px !important;
+  margin: 10px 0 !important;
+}
+
+.solution-model-answer .katex-display .mord.text {
+  white-space: normal !important;
+}
+
+.sol-missing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Empty Notes State Action Buttons */
+.empty-notes-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.empty-act-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.empty-act-btn.empty-act-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.empty-act-btn.empty-act-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+.empty-act-btn.empty-act-secondary {
+  background: #f8fafc;
+  color: #3730a3;
+  border: 1.5px solid #c7d2fe;
+}
+
+.empty-act-btn.empty-act-secondary:hover {
+  background: #eef2ff;
+  border-color: #818cf8;
+  transform: translateY(-1px);
+}
+
+/* Code blocks inside Note Summary examples */
+.note-example-prose {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.note-example-code {
+  margin: 8px 0 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Keep mobile footer buttons clear of fixed floating AI button at bottom scroll */
+@media (max-width: 640px) {
+  .bottom-footer {
+    padding-bottom: calc(84px + var(--safe-bottom)) !important;
   }
 }

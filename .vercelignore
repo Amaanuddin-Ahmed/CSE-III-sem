@@ -1,0 +1,60 @@
+# ===================================================================
+# MGIT PYQ Hub - Vercel Deployment Ignore Rules
+# Ensures only runtime-required web app files & API functions deploy.
+# ===================================================================
+
+# Git & Vercel metadata
+.git/
+.vercel/
+.agents/
+
+# Secrets & local environment
+.env
+.env*
+.env*.local
+credentials.json
+service-account*.json
+token.json
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependencies & Build Caches
+node_modules/
+.cache/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+temp/
+tmp/
+
+# Non-runtime source trees & tooling (keep Vercel bundle minimal)
+solutions/
+content-audit/
+docs/
+scripts/
+scratch/
+tools/
+tests/
+qa-*.js
+qa-*.html
+qa-*.png
+
+# Non-runtime raw PDFs / intermediate files inside data/
+data/es_notes_files/
+data/es_pyq_files/
+data/coa-unit-3-4-5-questions.json
+data/es_end_model_questions.json
+data/solutions/.progress.json
+
+# Repo documentation & local dev server
+*.md
+*.txt
+LICENSE
+server.js
+package-lock.json

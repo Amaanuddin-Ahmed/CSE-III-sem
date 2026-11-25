@@ -1,5 +1,5 @@
 {
-  "version": "v2026.11.24-se-refresh-clean",
-  "commit": "fix(se): refresh all SE drive IDs to active non-trashed files, remove orange dots from pyqs, exclude AI notes from chapter-wise accordions, keep clean AI Notes header",
-  "generatedAt": "2026-11-24T18:22:00.000Z"
+  "version": "v2026.11.26-ui-mobile-vercel-cleanup",
+  "commit": "fix(ui,pwa,vercel): add .vercelignore, fix AI Notes dark mode & mobile wrapping, fix solution modal mobile grid/overflow & Ask-AI links, fix Quiz Time step overlap & Sem End scoping, guard rating storage, stop boilerplate solutions posing as reviewed",
+  "generatedAt": "2026-11-26T00:48:00.000Z"
 }

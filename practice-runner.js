@@ -6,6 +6,15 @@
 (function() {
   'use strict';
 
+  function safeGetActiveExam() {
+    try {
+      const saved = localStorage.getItem('mgit_active_exam');
+      return ['mid1', 'mid2', 'sem'].includes(saved) ? saved : 'sem';
+    } catch (e) {
+      return 'sem';
+    }
+  }
+
   const PracticeRunner = {
     // Current Session State
     mode: null,              // 'quiz' or 'flashcards'
@@ -102,7 +111,7 @@
       const backToModeBtn = document.getElementById('backToModeBtn');
       if (backToModeBtn) {
         backToModeBtn.addEventListener('click', () => {
-          const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+          const activeExam = safeGetActiveExam();
           if (activeExam === 'sem') {
             this.closeSelectorModal();
           } else {
@@ -116,7 +125,14 @@
       }
       const changeModeFromUnitsBtn = document.getElementById('changeModeFromUnitsBtn');
       if (changeModeFromUnitsBtn) {
-        changeModeFromUnitsBtn.addEventListener('click', () => this.goToModeSelection());
+        changeModeFromUnitsBtn.addEventListener('click', () => {
+          const activeExam = safeGetActiveExam();
+          if (activeExam === 'sem') {
+            this.closeSelectorModal();
+          } else {
+            this.goToModeSelection();
+          }
+        });
       }
 
       // 5. Exit Session Buttons
@@ -294,7 +310,7 @@
 
     // Modal Navigation
     openSelectorModal() {
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+      const activeExam = safeGetActiveExam();
       if (activeExam === 'sem') {
         this.openSelectorModalFor('flashcards');
         return;
@@ -318,9 +334,23 @@
           document.contains(active) && active.getClientRects().length) {
         this._returnFocus = active;
       }
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'sem';
+      const activeExam = safeGetActiveExam();
       const actualMode = (activeExam === 'sem') ? 'flashcards' : mode;
       this.goToSubjectSelection(actualMode);
+      modal.style.display = 'flex';
+    },
+
+    openSubjectPractice(subjectId) {
+      const modal = document.getElementById('practiceSelectorModal');
+      if (!modal) return;
+      const active = document.activeElement;
+      if (active && active !== document.body && active !== document.documentElement &&
+          document.contains(active) && active.getClientRects().length) {
+        this._returnFocus = active;
+      }
+      const activeExam = safeGetActiveExam();
+      this.mode = activeExam === 'sem' ? 'flashcards' : 'quiz';
+      this.goToUnitSelection(subjectId);
       modal.style.display = 'flex';
     },
 
@@ -348,25 +378,26 @@
     },
 
     goToModeSelection() {
+      const activeExam = safeGetActiveExam();
+      if (activeExam === 'sem') {
+        this.goToSubjectSelection('flashcards');
+        return;
+      }
       const stepMode = document.getElementById('practiceStepMode');
       const stepSubject = document.getElementById('practiceStepSubject');
       const stepUnit = document.getElementById('practiceStepUnit');
+      const modeQuiz = document.getElementById('modeCardQuiz');
+      if (modeQuiz) modeQuiz.style.display = '';
       if (stepMode) stepMode.style.display = 'block';
       if (stepSubject) stepSubject.style.display = 'none';
       if (stepUnit) stepUnit.style.display = 'none';
 
       // Adapt title for active exam
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
       const titleEl = document.getElementById('modeCardQuizTitle');
       const descEl = document.getElementById('modeCardQuizDesc');
       if (titleEl && descEl) {
-        if (activeExam === 'sem') {
-          titleEl.textContent = 'Quick Interactive Test & Theory Recall';
-          descEl.textContent = 'Test core theoretical questions across Units 1–5 with instant model answers.';
-        } else {
-          titleEl.textContent = 'Practice MCQs & Quick Questions';
-          descEl.textContent = 'Test your speed with objective questions, fill in the blanks, and instant feedback.';
-        }
+        titleEl.textContent = 'Practice MCQs & Quick Questions';
+        descEl.textContent = 'Test your speed with objective questions, fill in the blanks, and instant feedback.';
       }
     },
 
@@ -443,13 +474,24 @@
 
     goToUnitSelection(subjectId) {
       this.subjectId = subjectId;
+      const activeExam = safeGetActiveExam();
+      if (activeExam === 'sem') {
+        this.mode = 'flashcards';
+      } else if (!this.mode) {
+        this.mode = 'quiz';
+      }
+
+      const stepMode = document.getElementById('practiceStepMode');
       const stepSubject = document.getElementById('practiceStepSubject');
       const stepUnit = document.getElementById('practiceStepUnit');
       const subLabel = document.getElementById('practiceSelectedSubjectLabel');
+      const changeModeBtn = document.getElementById('changeModeFromUnitsBtn');
       const list = document.getElementById('practiceUnitsList');
 
+      if (stepMode) stepMode.style.display = 'none';
       if (stepSubject) stepSubject.style.display = 'none';
       if (stepUnit) stepUnit.style.display = 'block';
+      if (changeModeBtn) changeModeBtn.style.display = activeExam === 'sem' ? 'none' : '';
       if (subLabel) {
         const label = subjectId === 'MIXED' ? 'Mixed practice' : subjectId;
         subLabel.textContent = `${label} · ${this.mode === 'quiz' ? 'Quiz Mode' : 'Flashcards'}`;
@@ -498,7 +540,6 @@
 
       // Only offer units that belong to the active exam. Mid-2, for example,
       // must not imply that Units 1–2 are "missing" when they are simply out of scope.
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
       const examCfg = window.EXAM_CONFIG ? window.EXAM_CONFIG[activeExam] : null;
       const scopedUnits = (examCfg && Array.isArray(examCfg.units) && examCfg.units.length)
         ? examCfg.units.slice()
@@ -608,7 +649,7 @@
     },
 
     getActiveDataSource() {
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const activeExam = safeGetActiveExam();
       if (activeExam === 'sem' && window.SEM_PRACTICE) return window.SEM_PRACTICE;
       if (activeExam === 'mid1' && window.MID1_PRACTICE) return window.MID1_PRACTICE;
       return window.MID2_PRACTICE || {};
@@ -776,7 +817,7 @@
       if (nav) nav.style.display = '';
 
       if (window.ActivityTracker && q.id) {
-        const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+        const activeExam = safeGetActiveExam();
         if (typeof window.ActivityTracker.recordQuestionViewed === 'function') {
           window.ActivityTracker.recordQuestionViewed(activeExam, q.subjectId || this.subjectId, q.id);
         }
@@ -1181,7 +1222,7 @@
       if (liveRegion) liveRegion.textContent = '';
 
       // Count the card as viewed as soon as it is shown.
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const activeExam = safeGetActiveExam();
       const subId = card.subjectId || this.subjectId;
       if (window.ActivityTracker && card.id) {
         if (typeof window.ActivityTracker.recordCardViewed === 'function') {
@@ -1258,7 +1299,7 @@
         return;
       }
 
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const activeExam = safeGetActiveExam();
       const card = this.activeDeck[this.currentCardIndex];
       const subId = (card && card.subjectId) || this.subjectId;
       if (window.ActivityTracker && card && card.id) {
@@ -1276,7 +1317,7 @@
     getNextUnitInScope(currentUnit) {
       const cur = Number(currentUnit);
       if (!Number.isFinite(cur) || this.unit === 'all') return null;
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const activeExam = safeGetActiveExam();
       let inScopeUnits = [1, 2, 3, 4, 5];
       if (activeExam === 'mid1') inScopeUnits = [1, 2, 3];
       else if (activeExam === 'mid2') inScopeUnits = [3, 4, 5];
@@ -1366,7 +1407,7 @@
 
     markFlashcard(gotIt) {
       const card = this.activeDeck[this.currentCardIndex];
-      const activeExam = localStorage.getItem('mgit_active_exam') || 'mid2';
+      const activeExam = safeGetActiveExam();
       const subId = (card && card.subjectId) || this.subjectId;
       if (window.ActivityTracker && card) {
         window.ActivityTracker.recordFlashcardLearned(activeExam, subId, card.id, gotIt);

@@ -8,7 +8,7 @@
  * - External Drive, Gemini and Tally requests always go straight to the network.
  */
 
-const CACHE_NAME = 'mgit-hub-v2026.11.24-se-refresh-clean';
+const CACHE_NAME = 'mgit-hub-v2026.11.26-ui-mobile-vercel-cleanup';
 
 const STATIC_ASSETS = [
   './',
@@ -30,12 +30,6 @@ const STATIC_ASSETS = [
   'data/mid2-practice.js',
   'data/sem-practice.js',
   'data/mid1-practice.js',
-  'data/solutions/DM.json',
-  'data/solutions/COA.json',
-  'data/solutions/OOPJ.json',
-  'data/solutions/DBMS.json',
-  'data/solutions/SE.json',
-  'data/solutions/ES.json',
   'manifest.webmanifest',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',
@@ -43,20 +37,37 @@ const STATIC_ASSETS = [
   'assets/icons/icon-maskable-512.png'
 ];
 
+const CORE_SHELL_URLS = new Set([
+  './',
+  'index.html',
+  'style.css',
+  'css/theme-dark.css',
+  'app.js',
+  'scope-map.js'
+]);
+
 const NETWORK_FIRST_DESTINATIONS = new Set(['document', 'script', 'style']);
 
 // Install Event
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return Promise.allSettled(
-        STATIC_ASSETS.map((url) =>
-          cache.add(url).catch((err) => {
-            console.warn('[SW Precache Failed]', url, err);
-          })
-        )
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const results = await Promise.allSettled(
+        STATIC_ASSETS.map(async (url) => {
+          await cache.add(url);
+          return url;
+        })
       );
+      results.forEach((res, idx) => {
+        if (res.status === 'rejected') {
+          const failedUrl = STATIC_ASSETS[idx];
+          if (CORE_SHELL_URLS.has(failedUrl)) {
+            throw res.reason;
+          }
+          console.warn('[SW Optional Precache Failed]', failedUrl, res.reason);
+        }
+      });
     })
   );
 });
